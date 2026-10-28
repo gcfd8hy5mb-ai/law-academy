@@ -1,0 +1,122 @@
+{
+  "version": "2026-10-28",
+  "purpose": "Independent U.S. legal education. Institution curricula are benchmarks, not affiliated or credited courses.",
+  "schools": [
+    {
+      "name": "Harvard Law School",
+      "focus": "First-year doctrinal breadth; experiential legal research and writing",
+      "url": "https://hls.harvard.edu/academics/degree-programs/jd-program/"
+    },
+    {
+      "name": "Yale Law School",
+      "focus": "Constitutional law; contracts; procedure; torts and regulation; legal analysis",
+      "url": "https://catalog.yale.edu/law/academic-requirements-options/"
+    },
+    {
+      "name": "Stanford Law School",
+      "focus": "Foundational doctrine; litigation; small-group legal writing",
+      "url": "https://law.stanford.edu/office-of-student-affairs/the-doctor-of-jurisprudence-jd-degree/"
+    }
+  ],
+  "openResources": [
+    {
+      "name": "Harvard H2O Open Casebook",
+      "url": "https://opencasebook.org/",
+      "use": "Link to specific open casebooks; check individual license and source provenance before importing content",
+      "licenseNote": "H2O platform materials generally CC BY-NC-SA 3.0; requires attribution and noncommercial/share-alike compliance"
+    },
+    {
+      "name": "Cornell Legal Information Institute",
+      "url": "https://www.law.cornell.edu/",
+      "use": "Definitions and legal reference links; do not assume redistribution rights"
+    },
+    {
+      "name": "U.S. Constitution Annotated",
+      "url": "https://constitution.congress.gov/",
+      "use": "Constitutional text and congressional analysis"
+    },
+    {
+      "name": "Supreme Court opinions",
+      "url": "https://www.supremecourt.gov/opinions/opinions.aspx",
+      "use": "Official opinions for case-study readings"
+    }
+  ],
+  "levels": [
+    {
+      "number": 1,
+      "name": "Pre-Law Foundations",
+      "courses": [
+        "Introduction to American Law",
+        "Constitutional Foundations",
+        "Legal Research & Citation",
+        "Legal Writing & Argument",
+        "Everyday Legal Problems",
+        "Introduction to Legal Ethics"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "First-Year Law School (1L)",
+      "courses": [
+        "Contracts",
+        "Torts",
+        "Civil Procedure",
+        "Criminal Law",
+        "Constitutional Law",
+        "Property",
+        "Legislation & Regulation",
+        "Legal Research and Writing I"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Second-Year Law School (2L)",
+      "courses": [
+        "Evidence",
+        "Criminal Procedure",
+        "Business Associations",
+        "Administrative Law",
+        "Professional Responsibility",
+        "Federal Courts",
+        "Legal Research and Writing II"
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Third-Year Law School (3L)",
+      "courses": [
+        "Trial Advocacy",
+        "Appellate Advocacy",
+        "Negotiation",
+        "Clinics and Simulated Client Work",
+        "Advanced Legal Research",
+        "Specialization Electives"
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Bar Exam Preparation",
+      "courses": [
+        "Jurisdiction Selection",
+        "Multistate Doctrinal Review",
+        "Timed Multiple Choice",
+        "Essay Writing",
+        "Performance Tests",
+        "Full-Length Mock Exams"
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Advanced Legal Practice",
+      "courses": [
+        "Complex Litigation",
+        "Corporate Transactions",
+        "Constitutional Litigation",
+        "Technology and Privacy",
+        "International and Comparative Law",
+        "Practice Capstone"
+      ]
+    }
+  ],
+  "qualityPolicy": "Do not count planned courses as delivered; lessons require source checks, meaningful doctrine, hypotheticals, assessment and reasoning feedback. All case excerpts require provenance and license verification. This app cannot confer a law degree or eligibility for licensure."
+}
