@@ -27,3 +27,32 @@ for(const course of courses){
 }
 for(const token of ['law-academy-progress-v1','law-academy-research-capstone-v1','law-academy-oral-defense-v1']) assert.ok(source.includes(token),'Missing saved-data namespace: '+token);
 console.log('PASS: JavaScript parses, 6 courses, 85 unique lessons, valid reading sections and quiz indices, saved-data keys preserved.');
+
+
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+assert.match(html,/id="app"/,'Missing app root');
+assert.match(html,/src="\.\/app\.js"/,'Missing application entrypoint');
+for(const [name,fragment] of [
+ ['Home navigation','function renderHome()'],
+ ['Course catalog','function renderCatalog()'],
+ ['Lesson quiz','function renderLesson(c,l)'],
+ ['Exams','function renderExams()'],
+ ['Progress','function renderProgress()'],
+ ['Case simulations','function renderCaseSimulation('],
+ ['Oral practice','function renderOralDefense()'],
+ ['Research portfolio','function renderResearchCapstone()'],
+ ['Reasoning labs','function renderReasoningLab('],
+ ['Study guide','function renderFinalStudyGuide()'],
+ ['Saved answer action','localStorage.setItem(']
+]) assert.ok(source.includes(fragment),'Missing key app feature: '+name);
+for(const key of [
+ 'law-academy-progress-v1',
+ 'law-academy-writing-v1',
+ 'law-academy-sim-v1',
+ 'law-academy-sim-branches-v1',
+ 'law-academy-research-capstone-v1',
+ 'law-academy-capstone-audit-v1',
+ 'law-academy-oral-defense-v1',
+ 'law-academy-reasoning-v1'
+]) assert.ok(source.includes(key),'Persisted-data namespace missing: '+key);
+console.log('PASS: app entrypoint, core screens, and persisted-data identifiers present.');
