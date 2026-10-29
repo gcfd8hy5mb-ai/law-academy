@@ -1,0 +1,38 @@
+name: Validate Law Academy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'scripts/**'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'scripts/**'
+      - '.github/workflows/validate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  content-and-runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate curricula, quiz integrity, and script syntax
+        run: node scripts/validate-content.mjs
+      - name: Check HTML entrypoint and app assets
+        run: |
+          test -f index.html
+          test -f app.js
+          test -f styles.css
+          node --check app.js
