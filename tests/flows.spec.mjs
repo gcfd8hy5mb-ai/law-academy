@@ -122,3 +122,12 @@ test('Level 1 readiness tracks written final drafting without unlocking graduati
  await page.getByRole('button',{name:/Draft all six written final responses/}).click();
  await expect(page.locator('#finalEssayText')).toBeVisible();
 });
+
+test('academic sign-off explicitly requires independent and supervised assessment',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('Academic sign-off standards')).toBeVisible();
+ await expect(page.getByText(/qualified independent reviewer must examine/)).toBeVisible();
+ await expect(page.getByText(/Current decision:.*Not signed off/)).toBeVisible();
+ await expect(page.getByText('Graduation remains locked')).toBeVisible();
+});
