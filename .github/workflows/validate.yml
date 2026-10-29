@@ -7,6 +7,8 @@ on:
       - 'app.js'
       - 'index.html'
       - 'scripts/**'
+      - 'tests/**'
+      - 'playwright.config.mjs'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
@@ -36,3 +38,18 @@ jobs:
           test -f app.js
           test -f styles.css
           node --check app.js
+
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test runner
+        run: |
+          npm install --no-save @playwright/test
+          npx playwright install --with-deps webkit
+      - name: Test iPhone-sized WebKit interactions
+        run: npx playwright test
