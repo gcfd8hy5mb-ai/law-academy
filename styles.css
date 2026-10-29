@@ -13,3 +13,6 @@
 
 /* Writing professor feedback */
 #reviewDraft{display:inline-block;margin:12px 0 16px;width:auto}.feedback-points{padding-left:22px;color:#e5dfd4;line-height:1.65}.feedback-points li{padding:5px 0}#guidedFeedback .review-item{margin-top:14px}
+
+/* Five-criterion writing rubric */
+.rubric-row{display:block;padding:12px 0;border-bottom:1px solid #4e504a}.rubric-row strong{display:block;font:17px Georgia,serif;color:#f3d49f}.rubric-row small{display:block;color:#c5cbc8;line-height:1.5;padding:6px 0}.rubric-row select{display:block;width:100%;background:#0c1b2a;color:#f5e8d4;border:1px solid #92764d;border-radius:10px;padding:11px;font-size:15px}#rubricStatus{margin-top:10px;font-size:13px;color:#e5ca95}
