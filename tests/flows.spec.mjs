@@ -112,3 +112,13 @@ test('Level 1 academic readiness does not claim graduation from practice alone',
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
  await expect(page.getByText(/Independent evaluation of source accuracy/)).toBeVisible();
 });
+
+test('Level 1 readiness tracks written final drafting without unlocking graduation',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('Draft all six written final responses')).toBeVisible();
+ await expect(page.getByText('Develop substantive written final answers')).toBeVisible();
+ await expect(page.getByText('Graduation remains locked')).toBeVisible();
+ await page.getByRole('button',{name:/Draft all six written final responses/}).click();
+ await expect(page.locator('#finalEssayText')).toBeVisible();
+});
