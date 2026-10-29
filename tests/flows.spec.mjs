@@ -84,7 +84,7 @@ test('six-subject written final saves its first essay after reload',async({page}
 });
 
 test('written final review checklist persists and essay portfolio copies',async({page,context})=>{
- await context.grantPermissions(['clipboard-read','clipboard-write']);
+ await page.addInitScript(() => { Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value=>{window.__copiedPortfolio=value},readText:async()=>window.__copiedPortfolio||''}}); });
  await page.goto('/');
  await page.getByRole('button',{name:/Practice Exams/}).first().click();
  await page.locator('#writtenFinalLaunch').click();
