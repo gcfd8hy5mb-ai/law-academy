@@ -82,3 +82,33 @@ test('six-subject written final saves its first essay after reload',async({page}
  await page.locator('#writtenFinalLaunch').click();
  await expect(page.locator('#finalEssayText')).toHaveValue('Written final test: analyze the issue, authority, competing claims and remedy.');
 });
+
+test('written final review checklist persists and essay portfolio copies',async({page,context})=>{
+ await context.grantPermissions(['clipboard-read','clipboard-write']);
+ await page.goto('/');
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#writtenFinalLaunch').click();
+ await page.locator('#finalEssayText').fill('Issue: statutory authority. Rule: governing law requires verification. Application: both sides dispute the record. Conclusion: further research is necessary.');
+ await page.locator('#finalEssayNext').click();
+ for(let i=1;i<6;i++) await page.locator('#finalEssayNext').click();
+ await expect(page.getByRole('heading',{name:'Written Final Review'})).toBeVisible();
+ const boxes=page.locator('#finalReviewChecks input[type=checkbox]');
+ await expect(boxes).toHaveCount(30);
+ await boxes.first().check();
+ await page.reload();
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#writtenFinalLaunch').click();
+ for(let i=0;i<6;i++) await page.locator('#finalEssayNext').click();
+ await expect(page.locator('#finalReviewChecks input[type=checkbox]').first()).toBeChecked();
+ await page.locator('#finalEssayCopy').click();
+ await expect(page.locator('#finalCopyStatus')).toContainText('copied');
+ const clipboard=await page.evaluate(()=>navigator.clipboard.readText());
+ expect(clipboard).toContain('LEVEL 1 WRITTEN FINAL');
+ expect(clipboard).toContain('Issue: statutory authority');
+});
+test('Level 1 academic readiness does not claim graduation from practice alone',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('Graduation remains locked')).toBeVisible();
+ await expect(page.getByText(/Independent evaluation of source accuracy/)).toBeVisible();
+});
