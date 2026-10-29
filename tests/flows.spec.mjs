@@ -34,7 +34,7 @@ test('case studies and study labs open',async({page})=>{
 test('course practice examination presents questions and selectable answers',async({page})=>{
  await page.goto('/');
  await page.getByRole('button',{name:/Practice Exams/}).first().click();
- await expect(page.getByRole('heading',{name:'Practice Exams'})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Practice Exams',exact:true})).toBeVisible();
  await page.locator('[data-exam]').first().click();
  await expect(page.locator('[data-exam-choice]')).toHaveCount(4);
  await page.locator('[data-exam-choice]').first().click();
