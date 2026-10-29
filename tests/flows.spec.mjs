@@ -69,3 +69,16 @@ test('research portfolio stage and saved writing survive reload',async({page})=>
  await page.locator('#capstoneNext').click();
  await expect(page.locator('#capstoneWriting')).toBeVisible();
 });
+
+test('six-subject written final saves its first essay after reload',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#writtenFinalLaunch').click();
+ await expect(page.locator('#finalEssayText')).toBeVisible();
+ await page.locator('#finalEssayText').fill('Written final test: analyze the issue, authority, competing claims and remedy.');
+ await page.locator('#finalEssaySave').click();
+ await page.reload();
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#writtenFinalLaunch').click();
+ await expect(page.locator('#finalEssayText')).toHaveValue('Written final test: analyze the issue, authority, competing claims and remedy.');
+});
