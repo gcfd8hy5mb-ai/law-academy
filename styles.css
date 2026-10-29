@@ -7,3 +7,6 @@
 
 /* Multi-question exam and guided professor */
 .exam-question h2{font:21px/1.4 Georgia,serif;color:#f4e3c3;margin:14px 0 20px}.exam-question .option{min-height:48px;cursor:pointer}.exam-question .button:disabled{opacity:.45;cursor:not-allowed}.review-list{display:grid;gap:14px;margin:18px 0}.review-item{border:1px solid #756141;background:linear-gradient(135deg,#122236,#091321);border-radius:14px;padding:18px}.review-item h3{font:18px/1.4 Georgia,serif;margin:10px 0;color:#f6e0b5}.review-item p{line-height:1.55;color:#d7d8d5;font-size:14px}.review-item strong{color:#f1ca88}.question #profFeedback{margin-top:14px}.question #profNext{margin-top:18px}
+
+/* Legal writing lab */
+.writing-field{display:block;width:100%;margin:12px 0 6px;border:1px solid #9b804f;background:#0d1929;color:#f8ead5;border-radius:13px;padding:16px;font:16px/1.65 Georgia,serif;resize:vertical;min-height:230px}.writing-field:focus{outline:2px solid #e6c27d;outline-offset:2px}.check-line{display:block;padding:9px 0;color:#e4dece;font-size:14px;line-height:1.45}.check-line input{accent-color:#cfad70;width:17px;height:17px;vertical-align:middle}#draftStatus{display:inline-block;margin-left:12px;font-size:12px}
