@@ -242,13 +242,14 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       if(!currentUser){
         openAuthDialog();return;
       }
-      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION');
+      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID');
       if(action==='1')await upload();
       else if(action==='2')await download();
       else if(action==='3')await backUp();
       else if(action==='4')await signOut(auth);
       else if(action==='5')await startAuto();
       else if(action==='6')await testCloudConnection();
+      else if(action==='7'){const id=currentUser.uid;notice('Your Firebase User UID (not a password): '+id);}
     }catch(e){
       const code=e?.code||'';
       const message=code==='permission-denied'
