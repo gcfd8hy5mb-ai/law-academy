@@ -11,7 +11,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     ]);
   const app=initializeApp(cfg), auth=getAuth(app), db=getFirestore(app);
   const keys = academy==='business' ? ['business-academy-v1'] :
-    ['law-academy-progress-v1','law-academy-exam-results-v1','law-academy-capstone-v1'];
+    ['law-academy-progress-v1','law-academy-exam-results-v1','law-academy-capstone-v1','law-academy-oral-defense-v1','law-academy-final-essays-v1','law-academy-final-review-v1','law-academy-research-capstone-v1','law-academy-rubric-v1','law-academy-writing-v1','law-academy-sim-v1','law-academy-sim-branches-v1','law-academy-reasoning-v1','law-academy-capstone-audit-v1'];
   let currentUser=null, busy=false;
   const button=document.createElement('button');
   button.type='button'; button.textContent='Cloud save: Sign in';
@@ -41,7 +41,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
         const existing=await getDoc(ref(key));
         if(existing.exists()){
           const remote=existing.data().raw;
-          if(remote!==raw && !confirm('Cloud record for '+key+' already exists and differs. Replace it with this device\'s progress? Cancel preserves the cloud version.'))continue;
+          if(remote!==raw){notice('Cloud record for '+key+' differs. Keeping both versions unchanged. Restore the cloud version or resolve the conflict before uploading.');continue;}
         }
         await setDoc(ref(key),{raw,schemaVersion:1,updatedAt:serverTimestamp(),academy},{merge:false});count++;
       }
