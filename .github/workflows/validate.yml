@@ -15,6 +15,8 @@ on:
       - 'app.js'
       - 'index.html'
       - 'scripts/**'
+      - 'tests/**'
+      - 'playwright.config.mjs'
       - '.github/workflows/validate.yml'
   workflow_dispatch:
 
