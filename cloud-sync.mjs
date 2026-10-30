@@ -56,6 +56,18 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   document.head.append(styles);
   const button=document.createElement('button');button.type='button';button.id='academy-account-button';button.textContent='Account';button.setAttribute('aria-label','Open academy account');
   document.body.append(button);
+  // Attach the account entry to the academy header after each app redraw.
+  // Existing course code can redraw the header without destroying the control.
+  const mountAccount=()=>{
+    const header=document.querySelector('.masthead, header');
+    if(!header)return;
+    if(button.parentElement!==header)header.append(button);
+    header.style.position='relative';
+    button.style.cssText='position:absolute;right:10px;top:8px;bottom:auto;z-index:25;border:1px solid #dfb978;background:#0b192a;color:#f4e7d0;border-radius:24px;padding:8px 12px;font:600 12px system-ui;box-shadow:none;';
+  };
+  const mountObserver=new MutationObserver(()=>mountAccount());
+  mountObserver.observe(document.body,{childList:true,subtree:true});
+  mountAccount();
   const welcome=document.createElement('section');welcome.id='academy-welcome';welcome.hidden=true;
   const welcomeInner=document.createElement('div');welcomeInner.className='academy-welcome-inner';
   const seal=document.createElement('div');seal.className='academy-seal';seal.textContent='⚖';seal.setAttribute('aria-hidden','true');
