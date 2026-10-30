@@ -138,7 +138,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
         const address=email.value.trim();
         const result=create?await createUserWithEmailAndPassword(auth,address,password.value):await signInWithEmailAndPassword(auth,address,password.value);
         if(create){await sendEmailVerification(result.user);feedback.textContent='Account created. Check your email to verify your account before enabling cloud saving.';}
-        else{await result.user.reload();feedback.textContent=result.user.emailVerified?'Signed in. Use Cloud save to import your progress.':'Signed in. Verify your email before enabling cloud saving.';}
+        else{await result.user.reload();feedback.textContent=result.user.emailVerified?'Signed in. Preparing your academy and cloud progress…':'Signed in. Verify your email to enable cloud saving.';if(result.user.emailVerified){overlay.remove();welcome.hidden=true;}}
         password.value='';
       }catch(e){feedback.textContent='Authentication failed: '+(e.code||'Please try again.');}
       finally{submit.disabled=false;}
@@ -317,7 +317,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       }
       if(restored){
         status('Cloud save: Restored; reload required');
-        notice('Cloud progress downloaded. The academy must reload before autosave can begin.');
+        notice('Your saved academy progress was restored. The academy will reload to display it.');
         location.reload();
         return;
       }
@@ -325,7 +325,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       if(syncTimer)clearInterval(syncTimer);
       syncTimer=setInterval(()=>{void syncChanges()},5000);
       status('Cloud save: Autosave on');
-      notice('Autosave enabled for this session. Your existing local and cloud records matched.');
+      status('Cloud save: Automatic saving on');
     }finally{busy=false}
   }
   async function syncChanges(){
@@ -374,11 +374,27 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       console.error('Academy sync paused:',err);
     }finally{busy=false}
   }
-  onAuthStateChanged(auth,u=>{
+  let authSequence=0;
+  onAuthStateChanged(auth,async u=>{
+    const sequence=++authSequence;
     stopAuto();currentUser=u;menu.hidden=true;
     button.textContent=u?'Account':'Sign in';
     welcome.hidden=Boolean(u);
+    statusMessage=u?'Checking cloud progress…':'Sign in to sync progress';
     updateAccount();
+    if(!u)return;
+    try{
+      await u.reload();
+      if(sequence!==authSequence||currentUser?.uid!==u.uid)return;
+      if(!u.emailVerified){status('Verify your email to enable cloud saving');return;}
+      // Refuse to merge or overwrite disagreements. The student can review them in Account.
+      await startAuto();
+      updateAccount();
+    }catch(error){
+      if(sequence!==authSequence)return;
+      stopAuto();status('Cloud save: Review required');
+      console.error('Automatic cloud sync could not start:',error);
+    }
   });
   // Diagnostic actions remain available only in development through console;
   // they are not part of the student-facing account menu.
