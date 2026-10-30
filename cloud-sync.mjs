@@ -37,6 +37,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   }
   async function upload(){
     if(!currentUser || busy)return;busy=true;
+    if(autoEnabled){stopAuto();status('Cloud save: Paused for manual upload');}
     try {
       let count=0;
       for(const key of keys){
@@ -53,6 +54,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   }
   async function download(){
     if(!currentUser||busy)return;busy=true;
+    if(autoEnabled){stopAuto();status('Cloud save: Paused for restore');}
     try{
       await backUp();
       let count=0;
@@ -83,6 +85,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
         }
         initial.set(key,{local,remote});
       }
+      let restored=0;
       for(const [key,{local,remote}] of initial){
         if(remote===null && local!==null){
           // Creating a missing record cannot overwrite one created concurrently.
@@ -93,8 +96,15 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
           });
         }else if(local===null && remote!==null){
           localStorage.setItem(key,remote);
+          restored++;
         }
         baseline.set(key,local??remote);
+      }
+      if(restored){
+        status('Cloud save: Restored; reload required');
+        notice('Cloud progress downloaded. The academy must reload before autosave can begin.');
+        location.reload();
+        return;
       }
       autoEnabled=true;
       if(syncTimer)clearInterval(syncTimer);
