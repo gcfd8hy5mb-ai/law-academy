@@ -19,7 +19,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   function stopAuto(){autoEnabled=false;baseline.clear();if(syncTimer)clearInterval(syncTimer);syncTimer=null;}
   const theme=academy==='business'
     ? {bg:'#222529',paper:'#f4f0e9',accent:'#b99350',ink:'#25282a',muted:'#756b5c'}
-    : {bg:'#182627',paper:'#f5f0e5',accent:'#ad8b50',ink:'#192a29',muted:'#6f756e'};
+    : {bg:'#091525',paper:'#f6f0e5',accent:'#bd9459',ink:'#101d30',muted:'#5a6370'};
   const styles=document.createElement('style');
   styles.textContent=`
   #academy-account-button{position:fixed;top:calc(env(safe-area-inset-top) + 12px);right:14px;z-index:9998;border:1px solid ${theme.accent};background:${theme.paper};color:${theme.ink};font:600 12px system-ui,sans-serif;padding:10px 15px;border-radius:40px;box-shadow:0 3px 14px #0002;cursor:pointer}
@@ -70,18 +70,18 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     const overlay=document.createElement('div');
     overlay.id='academy-auth-dialog';
     overlay.setAttribute('role','presentation');
-    overlay.style.cssText='position:fixed;inset:0;z-index:2147483647;background:#000b;display:flex;align-items:center;justify-content:center;padding:18px;';
+    overlay.style.cssText='position:fixed;inset:0;z-index:2147483647;background:#081322d9;display:flex;align-items:center;justify-content:center;padding:18px;';
     const panel=document.createElement('section');
     panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');
     panel.setAttribute('aria-label','Academy account');
-    panel.style.cssText='width:min(100%,400px);max-height:90dvh;overflow:auto;background:#25282b;color:#f5f0e9;border:1px solid #a99257;border-radius:18px;padding:22px;font:15px system-ui;box-sizing:border-box;';
+    panel.style.cssText='width:min(100%,400px);max-height:90dvh;overflow:auto;background:#f6f0e5;color:#101d30;border:1px solid #bd9459;border-radius:18px;padding:22px;font:15px system-ui;box-sizing:border-box;';
     const heading=document.createElement('h2');heading.textContent='Your Academy Account';heading.style.cssText='margin:0 0 8px;font-size:22px;';
-    const subtitle=document.createElement('p');subtitle.textContent='Sign in to prepare cloud progress syncing. Current on-device lessons are preserved.';subtitle.style.cssText='font-size:13px;line-height:1.5;color:#d1c9bc;';
+    const subtitle=document.createElement('p');subtitle.textContent='Sign in to prepare cloud progress syncing. Current on-device lessons are preserved.';subtitle.style.cssText='font-size:13px;line-height:1.5;color:#556174;';
     const form=document.createElement('form');form.style.cssText='display:grid;gap:12px;';
     const email=document.createElement('input');email.type='email';email.autocomplete='email';email.required=true;email.placeholder='Email address';
     const password=document.createElement('input');password.type='password';password.autocomplete='current-password';password.required=true;password.placeholder='Password';password.minLength=6;
-    for(const field of [email,password])field.style.cssText='width:100%;box-sizing:border-box;padding:13px;border-radius:9px;border:1px solid #8a8272;background:#17191b;color:#fff;font-size:16px;';
-    const feedback=document.createElement('p');feedback.setAttribute('role','status');feedback.style.cssText='min-height:20px;margin:0;color:#ddc895;font-size:13px;';
+    for(const field of [email,password])field.style.cssText='width:100%;box-sizing:border-box;padding:13px;border-radius:9px;border:1px solid #b9ac99;background:#fffdfa;color:#101d30;font-size:16px;';
+    const feedback=document.createElement('p');feedback.setAttribute('role','status');feedback.style.cssText='min-height:20px;margin:0;color:#845d29;font-size:13px;';
     const submit=document.createElement('button');submit.type='submit';
     const toggle=document.createElement('button');toggle.type='button';
     const forgot=document.createElement('button');forgot.type='button';forgot.textContent='Forgot password?';
@@ -89,8 +89,8 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     const close=document.createElement('button');close.type='button';close.textContent='Close';
     let create=false;
     const buttonStyle='padding:12px;border-radius:10px;font:600 14px system-ui;cursor:pointer;';
-    submit.style.cssText=buttonStyle+'background:#d0ac66;color:#181819;border:0;';
-    for(const secondary of [toggle,forgot,resend,close])secondary.style.cssText=buttonStyle+'background:transparent;color:#ead7a9;border:1px solid #807459;';
+    submit.style.cssText=buttonStyle+'background:#101d30;color:#f6f0e5;border:0;';
+    for(const secondary of [toggle,forgot,resend,close])secondary.style.cssText=buttonStyle+'background:transparent;color:#101d30;border:1px solid #bd9459;';
     const render=()=>{submit.textContent=create?'Create account':'Sign in';toggle.textContent=create?'Already have an account? Sign in':'New student? Create account';password.autocomplete=create?'new-password':'current-password';feedback.textContent='';};
     render();
     toggle.addEventListener('click',()=>{create=!create;render();});
