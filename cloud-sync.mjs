@@ -249,6 +249,14 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       else if(action==='4')await signOut(auth);
       else if(action==='5')await startAuto();
       else if(action==='6')await testCloudConnection();
-    }catch(e){notice('Cloud operation failed: '+(e?.code||e?.message||'unknown error'))}
+    }catch(e){
+      const code=e?.code||'';
+      const message=code==='permission-denied'
+        ? 'Firebase blocked this request. Your account is signed in, but Firestore security rules have not authorized cloud saving yet.'
+        : code==='auth/requires-recent-login'
+          ? 'Please sign out and sign in again, then retry.'
+          : 'Cloud operation failed: '+(code||e?.message||'unknown error');
+      notice(message);
+    }
   });
 }
