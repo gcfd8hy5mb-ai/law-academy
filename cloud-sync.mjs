@@ -142,6 +142,21 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       notice('Firebase write and read succeeded for '+academy+'. No coursework was changed.');
     }finally{busy=false}
   }
+  async function diagnoseAccess(){
+    if(!currentUser)return notice('Sign in first.');
+    await currentUser.reload();
+    const token=await currentUser.getIdTokenResult(true);
+    const verified=token.claims.email_verified===true;
+    const target=ref('cloud-connection-test-v1');
+    let read='unknown';
+    try{await getDoc(target);read='allowed';}
+    catch(e){read=e?.code||'failed';}
+    notice('Firebase diagnostic: project='+cfg.projectId+
+      '; email verified='+verified+
+      '; signed-in UID='+currentUser.uid+
+      '; Firestore read='+read+
+      '. Compare the UID with the published rule and Authentication user record.');
+  }
   async function startAuto(){
     if(!currentUser || busy)return;
     await currentUser.reload();
@@ -242,7 +257,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       if(!currentUser){
         openAuthDialog();return;
       }
-      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID');
+      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID, 8 DIAGNOSE FIREBASE ACCESS');
       if(action==='1')await upload();
       else if(action==='2')await download();
       else if(action==='3')await backUp();
@@ -250,6 +265,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       else if(action==='5')await startAuto();
       else if(action==='6')await testCloudConnection();
       else if(action==='7'){const id=currentUser.uid;notice('Your Firebase User UID (not a password): '+id);}
+      else if(action==='8')await diagnoseAccess();
     }catch(e){
       const code=e?.code||'';
       const message=code==='permission-denied'
