@@ -14,12 +14,50 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     ['law-academy-progress-v1','law-academy-exam-results-v1','law-academy-capstone-v1','law-academy-oral-defense-v1','law-academy-final-essays-v1','law-academy-final-review-v1','law-academy-research-capstone-v1','law-academy-rubric-v1','law-academy-writing-v1','law-academy-sim-v1','law-academy-sim-branches-v1','law-academy-reasoning-v1','law-academy-capstone-audit-v1'];
   let currentUser=null, busy=false, autoEnabled=false, syncTimer=null;
   const baseline=new Map();
-  const status=(message)=>{button.textContent=message;};
+  let statusMessage='Cloud sync ready';
+  const status=(message)=>{statusMessage=message;accountStatus.textContent=message;};
   function stopAuto(){autoEnabled=false;baseline.clear();if(syncTimer)clearInterval(syncTimer);syncTimer=null;}
-  const button=document.createElement('button');
-  button.type='button'; button.textContent='Cloud save: Sign in';
-  Object.assign(button.style,{position:'fixed',bottom:'max(12px,env(safe-area-inset-bottom))',right:'12px',zIndex:'10000',padding:'10px 14px',background:'#202d32',color:'#f9e6b5',border:'1px solid #9b864f',borderRadius:'12px',font:'600 12px system-ui',boxShadow:'0 4px 16px #0005'});
-  document.body.appendChild(button);
+  const theme=academy==='business'
+    ? {bg:'#222529',paper:'#f4f0e9',accent:'#b99350',ink:'#25282a',muted:'#756b5c'}
+    : {bg:'#182627',paper:'#f5f0e5',accent:'#ad8b50',ink:'#192a29',muted:'#6f756e'};
+  const styles=document.createElement('style');
+  styles.textContent=`
+  #academy-account-button{position:fixed;top:calc(env(safe-area-inset-top) + 12px);right:14px;z-index:9998;border:1px solid ${theme.accent};background:${theme.paper};color:${theme.ink};font:600 12px system-ui,sans-serif;padding:10px 15px;border-radius:40px;box-shadow:0 3px 14px #0002;cursor:pointer}
+  #academy-welcome{position:fixed;inset:0;z-index:9999;background:${theme.paper};color:${theme.ink};display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top) + 24px) 24px calc(env(safe-area-inset-bottom) + 24px);box-sizing:border-box;font-family:system-ui,sans-serif;overflow:auto}
+  #academy-welcome[hidden]{display:none}
+  #academy-welcome .academy-welcome-inner{width:min(100%,420px)}
+  #academy-welcome .academy-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:750;color:${theme.muted}}
+  #academy-welcome h1{font-family:Georgia,serif;font-size:clamp(32px,9vw,44px);font-weight:500;line-height:1.1;margin:16px 0}
+  #academy-welcome p{font-size:15px;line-height:1.65;color:${theme.muted};margin:0 0 30px}
+  #academy-welcome button{width:100%;padding:16px;border-radius:10px;font:650 15px system-ui;cursor:pointer}
+  #academy-welcome .academy-primary{background:${theme.bg};color:${theme.paper};border:1px solid ${theme.bg}}
+  #academy-welcome .academy-secondary{background:transparent;border:1px solid ${theme.accent};color:${theme.ink};margin-top:12px}
+  #academy-account-menu{position:fixed;top:calc(env(safe-area-inset-top) + 62px);right:14px;width:min(320px,calc(100vw - 28px));z-index:9999;background:${theme.paper};color:${theme.ink};border:1px solid ${theme.accent};border-radius:16px;box-shadow:0 14px 40px #0003;padding:18px;box-sizing:border-box;font:14px system-ui,sans-serif}
+  #academy-account-menu[hidden]{display:none}
+  #academy-account-menu button{display:block;width:100%;margin-top:10px;text-align:left;padding:12px;border:1px solid ${theme.accent};border-radius:9px;background:transparent;color:inherit;font:600 13px system-ui;cursor:pointer}
+  `;
+  document.head.append(styles);
+  const button=document.createElement('button');button.type='button';button.id='academy-account-button';button.textContent='Account';button.setAttribute('aria-label','Open academy account');
+  document.body.append(button);
+  const welcome=document.createElement('section');welcome.id='academy-welcome';welcome.hidden=true;
+  const welcomeInner=document.createElement('div');welcomeInner.className='academy-welcome-inner';
+  const kicker=document.createElement('div');kicker.className='academy-kicker';kicker.textContent='PRIVATE STUDENT PORTAL';
+  const welcomeHeading=document.createElement('h1');welcomeHeading.textContent=academy==='business'?'Business Academy':'Law Academy';
+  const welcomeText=document.createElement('p');welcomeText.textContent='A dedicated place for your coursework, assessments and learning progress. Sign in using your Academy account.';
+  const signInButton=document.createElement('button');signInButton.type='button';signInButton.className='academy-primary';signInButton.textContent='Sign in or create account';signInButton.addEventListener('click',()=>openAuthDialog());
+  const guestButton=document.createElement('button');guestButton.type='button';guestButton.className='academy-secondary';guestButton.textContent='Preview academy without signing in';guestButton.addEventListener('click',()=>{welcome.hidden=true;});
+  welcomeInner.append(kicker,welcomeHeading,welcomeText,signInButton,guestButton);welcome.append(welcomeInner);document.body.append(welcome);
+  const menu=document.createElement('section');menu.id='academy-account-menu';menu.hidden=true;menu.setAttribute('aria-label','Account settings');
+  const accountHeading=document.createElement('strong');accountHeading.textContent='Student account';
+  const accountEmail=document.createElement('p');accountEmail.style.cssText='overflow-wrap:anywhere;margin:10px 0;color:inherit';
+  const accountStatus=document.createElement('p');accountStatus.setAttribute('role','status');accountStatus.style.cssText='font-size:12px;opacity:.75;margin:10px 0';
+  const enableButton=document.createElement('button');enableButton.textContent='Enable safe cloud autosave';enableButton.addEventListener('click',async()=>{try{await startAuto();}catch(e){notice('Sync could not start: '+(e.code||e.message));}updateAccount();});
+  const exportButton=document.createElement('button');exportButton.textContent='Export progress backup';exportButton.addEventListener('click',()=>{void backUp();});
+  const signOutButton=document.createElement('button');signOutButton.textContent='Sign out';signOutButton.addEventListener('click',async()=>{await signOut(auth);menu.hidden=true;});
+  const closeMenuButton=document.createElement('button');closeMenuButton.textContent='Close';closeMenuButton.addEventListener('click',()=>{menu.hidden=true;});
+  menu.append(accountHeading,accountEmail,accountStatus,enableButton,exportButton,signOutButton,closeMenuButton);document.body.append(menu);
+  button.addEventListener('click',()=>{menu.hidden=!menu.hidden;updateAccount();});
+  function updateAccount(){accountEmail.textContent=currentUser?.email||'Not signed in';accountStatus.textContent=statusMessage;enableButton.disabled=!currentUser||autoEnabled;enableButton.textContent=autoEnabled?'Cloud autosave active':'Enable safe cloud autosave';}
   const notice=(msg)=>alert(msg);
   function ref(key){return doc(db,'users',currentUser.uid,'academies',academy,'snapshots',key)}
   async function requireVerifiedAccount(){
@@ -314,32 +352,12 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       console.error('Academy sync paused:',err);
     }finally{busy=false}
   }
-  onAuthStateChanged(auth,u=>{stopAuto();currentUser=u;button.textContent=u?'Cloud save: '+(u.email||'Signed in'):'Cloud save: Sign in'});
-  button.addEventListener('click',async()=>{
-    if(busy)return;
-    try{
-      if(!currentUser){
-        openAuthDialog();return;
-      }
-      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID, 8 DIAGNOSE FIREBASE ACCESS, 9 TEST CONFLICT PROTECTION, 10 TEST AUTOSAVE ROUND TRIP');
-      if(action==='1')await upload();
-      else if(action==='2')await download();
-      else if(action==='3')await backUp();
-      else if(action==='4')await signOut(auth);
-      else if(action==='5')await startAuto();
-      else if(action==='6')await testCloudConnection();
-      else if(action==='7'){const id=currentUser.uid;notice('Your Firebase User UID (not a password): '+id);}
-      else if(action==='8')await diagnoseAccess();
-      else if(action==='9')await testConflictProtection();
-      else if(action==='10')await testAutosaveRoundTrip();
-    }catch(e){
-      const code=e?.code||'';
-      const message=code==='permission-denied'
-        ? 'Firebase blocked this request. Your account is signed in, but Firestore security rules have not authorized cloud saving yet.'
-        : code==='auth/requires-recent-login'
-          ? 'Please sign out and sign in again, then retry.'
-          : 'Cloud operation failed: '+(code||e?.message||'unknown error');
-      notice(message);
-    }
+  onAuthStateChanged(auth,u=>{
+    stopAuto();currentUser=u;menu.hidden=true;
+    button.textContent=u?'Account':'Sign in';
+    welcome.hidden=Boolean(u);
+    updateAccount();
   });
+  // Diagnostic actions remain available only in development through console;
+  // they are not part of the student-facing account menu.
 }
