@@ -131,3 +131,24 @@ test('academic sign-off explicitly requires independent and supervised assessmen
  await expect(page.getByText(/Current decision:.*Not signed off/)).toBeVisible();
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
 });
+
+test('written final autosaves when page reloads without pressing Save',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#writtenFinalLaunch').click();
+ await page.locator('#finalEssayText').fill('Autosaved draft without explicit save.');
+ await page.reload();
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#writtenFinalLaunch').click();
+ await expect(page.locator('#finalEssayText')).toHaveValue('Autosaved draft without explicit save.');
+});
+test('research capstone autosaves without pressing Save',async({page})=>{
+ await page.goto('/');
+ await page.locator('#caseStudiesHome').click();
+ await page.locator('#researchCapstoneLaunch').click();
+ await page.locator('#capstoneWriting').fill('Research answer saved as typed.');
+ await page.reload();
+ await page.locator('#caseStudiesHome').click();
+ await page.locator('#researchCapstoneLaunch').click();
+ await expect(page.locator('#capstoneWriting')).toHaveValue('Research answer saved as typed.');
+});
