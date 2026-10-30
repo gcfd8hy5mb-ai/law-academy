@@ -23,15 +23,22 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   const styles=document.createElement('style');
   styles.textContent=`
   #academy-account-button{position:fixed;top:calc(env(safe-area-inset-top) + 12px);right:14px;z-index:9998;border:1px solid ${theme.accent};background:${theme.paper};color:${theme.ink};font:600 12px system-ui,sans-serif;padding:10px 15px;border-radius:40px;box-shadow:0 3px 14px #0002;cursor:pointer}
-  #academy-welcome{position:fixed;inset:0;z-index:9999;background:${theme.paper};color:${theme.ink};display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top) + 24px) 24px calc(env(safe-area-inset-bottom) + 24px);box-sizing:border-box;font-family:system-ui,sans-serif;overflow:auto}
+  #academy-welcome{position:fixed;inset:0;z-index:9999;background:${theme.paper};color:${theme.ink};display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top) + 24px) 24px calc(env(safe-area-inset-bottom) + 32px);box-sizing:border-box;font-family:system-ui,sans-serif;overflow:auto}
   #academy-welcome[hidden]{display:none}
-  #academy-welcome .academy-welcome-inner{width:min(100%,420px)}
-  #academy-welcome .academy-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:750;color:${theme.muted}}
-  #academy-welcome h1{font-family:Georgia,serif;font-size:clamp(32px,9vw,44px);font-weight:500;line-height:1.1;margin:16px 0}
-  #academy-welcome p{font-size:15px;line-height:1.65;color:${theme.muted};margin:0 0 30px}
-  #academy-welcome button{width:100%;padding:16px;border-radius:10px;font:650 15px system-ui;cursor:pointer}
+  #academy-welcome .academy-welcome-inner{width:min(100%,440px);padding:32px 0;display:flex;flex-direction:column;align-items:stretch}
+  #academy-welcome .academy-seal{width:60px;height:60px;display:grid;place-items:center;border:1.5px solid ${theme.accent};border-radius:50%;font:30px Georgia,serif;color:${theme.accent};margin-bottom:25px;background:color-mix(in srgb,${theme.accent} 9%,transparent)}
+  #academy-welcome .academy-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:750;color:${theme.muted};margin-bottom:12px}
+  #academy-welcome h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(35px,9vw,46px);font-weight:500;line-height:1.08;margin:0 0 18px;letter-spacing:-.03em}
+  #academy-welcome .academy-rule{width:56px;height:2px;background:${theme.accent};margin:0 0 22px}
+  #academy-welcome p{font-size:15px;line-height:1.65;color:${theme.muted};margin:0 0 24px;max-width:355px}
+  #academy-welcome .academy-benefits{border-top:1px solid ${theme.accent}66;border-bottom:1px solid ${theme.accent}66;padding:15px 0;margin:0 0 27px;display:grid;gap:11px}
+  #academy-welcome .academy-benefits span{font-size:13px;color:${theme.ink};display:flex;gap:11px;align-items:center}
+  #academy-welcome .academy-benefits b{font:16px Georgia,serif;color:${theme.accent}}
+  #academy-welcome button{width:100%;min-height:53px;padding:14px;border-radius:9px;font:650 15px system-ui;cursor:pointer}
   #academy-welcome .academy-primary{background:${theme.bg};color:${theme.paper};border:1px solid ${theme.bg}}
   #academy-welcome .academy-secondary{background:transparent;border:1px solid ${theme.accent};color:${theme.ink};margin-top:12px}
+  #academy-welcome .academy-footnote{font-size:11px;line-height:1.6;margin-top:23px;color:${theme.muted};text-align:center}
+  @media(max-height:680px){#academy-welcome{align-items:flex-start}#academy-welcome .academy-welcome-inner{padding:14px 0}#academy-welcome .academy-seal{margin-bottom:12px}#academy-welcome .academy-benefits{margin-bottom:15px}}
   #academy-account-menu{position:fixed;top:calc(env(safe-area-inset-top) + 62px);right:14px;width:min(320px,calc(100vw - 28px));z-index:9999;background:${theme.paper};color:${theme.ink};border:1px solid ${theme.accent};border-radius:16px;box-shadow:0 14px 40px #0003;padding:18px;box-sizing:border-box;font:14px system-ui,sans-serif}
   #academy-account-menu[hidden]{display:none}
   #academy-account-menu button{display:block;width:100%;margin-top:10px;text-align:left;padding:12px;border:1px solid ${theme.accent};border-radius:9px;background:transparent;color:inherit;font:600 13px system-ui;cursor:pointer}
@@ -41,12 +48,17 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   document.body.append(button);
   const welcome=document.createElement('section');welcome.id='academy-welcome';welcome.hidden=true;
   const welcomeInner=document.createElement('div');welcomeInner.className='academy-welcome-inner';
-  const kicker=document.createElement('div');kicker.className='academy-kicker';kicker.textContent='PRIVATE STUDENT PORTAL';
-  const welcomeHeading=document.createElement('h1');welcomeHeading.textContent=academy==='business'?'Business Academy':'Law Academy';
-  const welcomeText=document.createElement('p');welcomeText.textContent='A dedicated place for your coursework, assessments and learning progress. Sign in using your Academy account.';
+  const seal=document.createElement('div');seal.className='academy-seal';seal.textContent='⚖';seal.setAttribute('aria-hidden','true');
+  const kicker=document.createElement('div');kicker.className='academy-kicker';kicker.textContent='THE STUDENT LAW PORTAL';
+  const welcomeHeading=document.createElement('h1');welcomeHeading.textContent='Law Academy';
+  const rule=document.createElement('div');rule.className='academy-rule';rule.setAttribute('aria-hidden','true');
+  const welcomeText=document.createElement('p');welcomeText.textContent='Study legal principles, analyze landmark cases, and develop the reasoning of a legal professional.';
+  const benefits=document.createElement('div');benefits.className='academy-benefits';
+  for(const value of ['Structured academic coursework','Your progress, securely saved','Continue learning across devices']){const item=document.createElement('span');const mark=document.createElement('b');mark.textContent='✓';item.append(mark,document.createTextNode(value));benefits.append(item);}
   const signInButton=document.createElement('button');signInButton.type='button';signInButton.className='academy-primary';signInButton.textContent='Sign in or create account';signInButton.addEventListener('click',()=>openAuthDialog());
   const guestButton=document.createElement('button');guestButton.type='button';guestButton.className='academy-secondary';guestButton.textContent='Preview academy without signing in';guestButton.addEventListener('click',()=>{welcome.hidden=true;});
-  welcomeInner.append(kicker,welcomeHeading,welcomeText,signInButton,guestButton);welcome.append(welcomeInner);document.body.append(welcome);
+  const footnote=document.createElement('div');footnote.className='academy-footnote';footnote.textContent='Your existing Academy account works here. No new registration required.';
+  welcomeInner.append(seal,kicker,welcomeHeading,rule,welcomeText,benefits,signInButton,guestButton,footnote);welcome.append(welcomeInner);document.body.append(welcome);
   const menu=document.createElement('section');menu.id='academy-account-menu';menu.hidden=true;menu.setAttribute('aria-label','Account settings');
   const accountHeading=document.createElement('strong');accountHeading.textContent='Student account';
   const accountEmail=document.createElement('p');accountEmail.style.cssText='overflow-wrap:anywhere;margin:10px 0;color:inherit';
