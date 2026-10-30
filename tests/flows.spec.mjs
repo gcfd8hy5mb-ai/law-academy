@@ -152,3 +152,26 @@ test('research capstone autosaves without pressing Save',async({page})=>{
  await page.locator('#researchCapstoneLaunch').click();
  await expect(page.locator('#capstoneWriting')).toHaveValue('Research answer saved as typed.');
 });
+
+test('reasoning lab autosaves without pressing Save',async({page})=>{
+ await page.goto('/');
+ await page.locator('#caseStudiesHome').click();
+ await page.locator('[data-reason]').first().click();
+ await page.locator('#reasonText').fill('Unsubmitted reasoning draft retained on reload.');
+ await page.reload();
+ await page.locator('#caseStudiesHome').click();
+ await page.locator('[data-reason]').first().click();
+ await expect(page.locator('#reasonText')).toHaveValue('Unsubmitted reasoning draft retained on reload.');
+});
+test('oral defense notes autosave without pressing Save',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#oralLaunch').click();
+ await page.locator('[data-hearing]').first().click();
+ await page.locator('#oralNotes').fill('Oral argument notes retained automatically.');
+ await page.reload();
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#oralLaunch').click();
+ await page.locator('[data-hearing]').first().click();
+ await expect(page.locator('#oralNotes')).toHaveValue('Oral argument notes retained automatically.');
+});
