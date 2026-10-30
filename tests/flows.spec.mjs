@@ -186,3 +186,18 @@ test('writing assignment autosaves without pressing Save',async({page})=>{
  await page.locator('[data-write]').first().click();
  await expect(page.locator('#writingDraft')).toHaveValue('A factual summary and a qualified legal conclusion.');
 });
+
+test('failed progress storage offers retry instead of marking a lesson complete',async({page})=>{
+ await page.addInitScript(()=>{
+  const original=Storage.prototype.setItem;
+  Storage.prototype.setItem=function(key,value){if(key==='law-academy-progress-v1')throw new DOMException('Storage unavailable','QuotaExceededError');return original.call(this,key,value)};
+ });
+ await page.goto('/');
+ await page.getByRole('button',{name:/Continue Learning/}).click();
+ await page.locator('[data-choice="1"]').click();
+ await page.locator('#submit').click();
+ await expect(page.getByRole('alert')).toContainText('Progress could not be saved');
+ await expect(page.locator('#submit')).toHaveText('Retry saving');
+ await page.locator('#submit').click();
+ await expect(page.getByRole('alert')).toContainText('Still unable to save progress');
+});
