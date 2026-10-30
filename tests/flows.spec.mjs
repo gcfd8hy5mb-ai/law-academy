@@ -175,3 +175,14 @@ test('oral defense notes autosave without pressing Save',async({page})=>{
  await page.locator('[data-hearing]').first().click();
  await expect(page.locator('#oralNotes')).toHaveValue('Oral argument notes retained automatically.');
 });
+
+test('writing assignment autosaves without pressing Save',async({page})=>{
+ await page.goto('/');
+ await page.locator('#caseStudiesHome').click();
+ await page.locator('[data-write]').first().click();
+ await page.locator('#writingDraft').fill('A factual summary and a qualified legal conclusion.');
+ await page.reload();
+ await page.locator('#caseStudiesHome').click();
+ await page.locator('[data-write]').first().click();
+ await expect(page.locator('#writingDraft')).toHaveValue('A factual summary and a qualified legal conclusion.');
+});
