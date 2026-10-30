@@ -201,3 +201,25 @@ test('failed progress storage offers retry instead of marking a lesson complete'
  await page.locator('#submit').click();
  await expect(page.getByRole('alert')).toContainText('Still unable to save progress');
 });
+
+test('lesson saving can recover after storage becomes available again',async({page})=>{
+ await page.addInitScript(()=>{
+  window.__blockProgressWrites=true;
+  const original=Storage.prototype.setItem;
+  Storage.prototype.setItem=function(key,value){
+   if(key==='law-academy-progress-v1'&&window.__blockProgressWrites)throw new DOMException('Quota exceeded','QuotaExceededError');
+   return original.call(this,key,value);
+  };
+ });
+ await page.goto('/');
+ await page.getByRole('button',{name:/Continue Learning/}).click();
+ await page.locator('[data-choice="1"]').click();
+ await page.locator('#submit').click();
+ await expect(page.locator('#submit')).toHaveText('Retry saving');
+ await page.evaluate(()=>{window.__blockProgressWrites=false});
+ await page.locator('#submit').click();
+ await expect(page.getByText('Introduction to American Law').first()).toBeVisible();
+ await page.reload();
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('1 / 85 completed')).toBeVisible();
+});
