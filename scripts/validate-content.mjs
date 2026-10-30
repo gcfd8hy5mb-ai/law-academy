@@ -79,14 +79,14 @@ console.log('PASS: Level 1 written final, external review, readiness checklist a
 const teachingParagraphs=lessons.flatMap(lesson=>lesson.sections.map(([heading,body])=>({lesson:lesson.id,heading,body})));
 const byText=new Map();
 for(const row of teachingParagraphs){
- const normalized=row.body.toLowerCase().replace(/\\s+/g,' ').trim();
+ const normalized=row.body.toLowerCase().replace(/\s+/g,' ').trim();
  if(normalized.length<100)continue;
  const matches=byText.get(normalized)||[];
  matches.push(row.lesson);
  byText.set(normalized,matches);
 }
 const repeated=[...byText.entries()].filter(([,ids])=>new Set(ids).size>=3).sort((a,b)=>b[1].length-a[1].length);
-const wordCounts=lessons.map(l=>l.sections.reduce((total,[heading,body])=>total+body.trim().split(/\\s+/).length,0));
+const wordCounts=lessons.map(l=>l.sections.reduce((total,[heading,body])=>total+body.trim().split(/\s+/).length,0));
 const sorted=[...wordCounts].sort((a,b)=>a-b);
 const median=sorted[Math.floor(sorted.length/2)];
 console.log('CONTENT DEPTH AUDIT: '+teachingParagraphs.length+' teaching sections across '+lessons.length+' lessons; median '+median+' instructional words; minimum '+sorted[0]+'; maximum '+sorted.at(-1)+'.');
