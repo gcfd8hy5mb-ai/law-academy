@@ -103,7 +103,8 @@ test('written final review checklist persists and essay portfolio copies',async(
  await page.locator('#finalEssayCopy').click();
  await expect(page.locator('#finalCopyStatus')).toContainText('copied');
  const clipboard=await page.evaluate(()=>navigator.clipboard.readText());
- expect(clipboard).toContain('LEVEL 1 WRITTEN FINAL');
+ expect(clipboard).toContain('LAW ACADEMY — LEVEL 1 EXTERNAL REVIEW BRIEF');
+ expect(clipboard).toContain('\nREVIEWER INSTRUCTIONS\n');
  expect(clipboard).toContain('Issue: statutory authority');
 });
 test('Level 1 academic readiness does not claim graduation from practice alone',async({page})=>{
