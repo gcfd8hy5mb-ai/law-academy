@@ -3,7 +3,7 @@
 const cfg = window.ACADEMY_FIREBASE_CONFIG;
 const academy = 'law';
 if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethical-hacking'].includes(academy)) {
-  const [{initializeApp},{getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut},{getFirestore,doc,getDoc,setDoc,serverTimestamp,runTransaction}] =
+  const [{initializeApp},{getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,sendPasswordResetEmail,sendEmailVerification},{getFirestore,doc,getDoc,setDoc,serverTimestamp,runTransaction}] =
     await Promise.all([
       import('https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'),
       import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js'),
@@ -27,6 +27,55 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     const password=prompt('Academy password (not stored on this device by this form)');if(!password)return;
     if(create)await createUserWithEmailAndPassword(auth,email,password);
     else await signInWithEmailAndPassword(auth,email,password);
+  }
+  function openAuthDialog(){
+    if(document.getElementById('academy-auth-dialog'))return;
+    const overlay=document.createElement('div');
+    overlay.id='academy-auth-dialog';
+    overlay.setAttribute('role','presentation');
+    overlay.style.cssText='position:fixed;inset:0;z-index:2147483647;background:#000b;display:flex;align-items:center;justify-content:center;padding:18px;';
+    const panel=document.createElement('section');
+    panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');
+    panel.setAttribute('aria-label','Academy account');
+    panel.style.cssText='width:min(100%,400px);max-height:90dvh;overflow:auto;background:#25282b;color:#f5f0e9;border:1px solid #a99257;border-radius:18px;padding:22px;font:15px system-ui;box-sizing:border-box;';
+    const heading=document.createElement('h2');heading.textContent='Your Academy Account';heading.style.cssText='margin:0 0 8px;font-size:22px;';
+    const subtitle=document.createElement('p');subtitle.textContent='Sign in to prepare cloud progress syncing. Current on-device lessons are preserved.';subtitle.style.cssText='font-size:13px;line-height:1.5;color:#d1c9bc;';
+    const form=document.createElement('form');form.style.cssText='display:grid;gap:12px;';
+    const email=document.createElement('input');email.type='email';email.autocomplete='email';email.required=true;email.placeholder='Email address';
+    const password=document.createElement('input');password.type='password';password.autocomplete='current-password';password.required=true;password.placeholder='Password';password.minLength=6;
+    for(const field of [email,password])field.style.cssText='width:100%;box-sizing:border-box;padding:13px;border-radius:9px;border:1px solid #8a8272;background:#17191b;color:#fff;font-size:16px;';
+    const feedback=document.createElement('p');feedback.setAttribute('role','status');feedback.style.cssText='min-height:20px;margin:0;color:#ddc895;font-size:13px;';
+    const submit=document.createElement('button');submit.type='submit';
+    const toggle=document.createElement('button');toggle.type='button';
+    const forgot=document.createElement('button');forgot.type='button';forgot.textContent='Forgot password?';
+    const close=document.createElement('button');close.type='button';close.textContent='Close';
+    let create=false;
+    const buttonStyle='padding:12px;border-radius:10px;font:600 14px system-ui;cursor:pointer;';
+    submit.style.cssText=buttonStyle+'background:#d0ac66;color:#181819;border:0;';
+    for(const secondary of [toggle,forgot,close])secondary.style.cssText=buttonStyle+'background:transparent;color:#ead7a9;border:1px solid #807459;';
+    const render=()=>{submit.textContent=create?'Create account':'Sign in';toggle.textContent=create?'Already have an account? Sign in':'New student? Create account';password.autocomplete=create?'new-password':'current-password';feedback.textContent='';};
+    render();
+    toggle.addEventListener('click',()=>{create=!create;render();});
+    close.addEventListener('click',()=>overlay.remove());
+    forgot.addEventListener('click',async()=>{
+      if(!email.value.trim()){feedback.textContent='Enter your email address first.';email.focus();return;}
+      feedback.textContent='Sending password reset instructions…';
+      try{await sendPasswordResetEmail(auth,email.value.trim());feedback.textContent='If this account exists, check your email for reset instructions.';}
+      catch(e){feedback.textContent='Could not request reset: '+(e.code||'Please try again.');}
+    });
+    form.addEventListener('submit',async(event)=>{
+      event.preventDefault();submit.disabled=true;feedback.textContent=create?'Creating account…':'Signing in…';
+      try{
+        const address=email.value.trim();
+        const result=create?await createUserWithEmailAndPassword(auth,address,password.value):await signInWithEmailAndPassword(auth,address,password.value);
+        if(create){await sendEmailVerification(result.user);feedback.textContent='Account created. Check your email to verify your account before enabling cloud saving.';}
+        else{await result.user.reload();feedback.textContent=result.user.emailVerified?'Signed in. Use Cloud save to import your progress.':'Signed in. Verify your email before enabling cloud saving.';}
+        password.value='';
+      }catch(e){feedback.textContent='Authentication failed: '+(e.code||'Please try again.');}
+      finally{submit.disabled=false;}
+    });
+    form.append(email,password,submit,toggle,forgot,feedback,close);
+    panel.append(heading,subtitle,form);overlay.append(panel);document.body.append(overlay);
   }
   async function backUp(){
     if(!currentUser)return;
@@ -70,6 +119,8 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   }
   async function startAuto(){
     if(!currentUser || busy)return;
+    await currentUser.reload();
+    if(!currentUser.emailVerified){notice('Verify your email address before starting cloud sync.');return;}
     // Explicit user action required: never merge differing device and cloud progress.
     busy=true;
     try{
@@ -144,7 +195,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     if(busy)return;
     try{
       if(!currentUser){
-        const action=prompt('Enter 1 to SIGN IN or 2 to CREATE ACCOUNT');if(action==='1')await login(false);else if(action==='2')await login(true);return;
+        openAuthDialog();return;
       }
       const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE');
       if(action==='1')await upload();
