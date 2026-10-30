@@ -131,15 +131,21 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     await requireVerifiedAccount();
     busy=true;
     try{
-      // Dedicated test record, never a lesson, grade or student progress key.
-      const id='cloud-connection-test-v1';
-      const target=ref(id);
-      const raw=JSON.stringify({test:true,academy,uid:currentUser.uid});
-      await setDoc(target,{raw,schemaVersion:1,updatedAt:serverTimestamp(),academy});
-      const verified=await getDoc(target);
+      // Dedicated diagnostic only. Never touches a student lesson or grade.
+      const target=ref('cloud-connection-test-v1');
+      const raw=JSON.stringify({test:true,academy,uid:currentUser.uid,nonce:Date.now()});
+      // The transaction exercises the same concurrency-safe write used by autosave.
+      await runTransaction(db,async tx=>{
+        const existing=await tx.get(target);
+        if(existing.exists() && existing.data().academy!==academy)
+          throw Error('Test record belongs to another academy.');
+        tx.set(target,{raw,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+      });
+      // Force server access so the result cannot come from cached browser data.
+      const verified=await getDocFromServer(target);
       if(!verified.exists()||verified.data().raw!==raw)
-        throw Error('Cloud returned a different test record.');
-      notice('Firebase write and read succeeded for '+academy+'. No coursework was changed.');
+        throw Error('Server returned a different test record.');
+      notice('Cloud transaction and server restore passed for '+academy+'. No coursework changed.');
     }finally{busy=false}
   }
   async function diagnoseAccess(){
