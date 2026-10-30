@@ -22,11 +22,10 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   document.body.appendChild(button);
   const notice=(msg)=>alert(msg);
   function ref(key){return doc(db,'users',currentUser.uid,'academies',academy,'snapshots',key)}
-  async function login(create){
-    const email=prompt('Academy email address');if(!email)return;
-    const password=prompt('Academy password (not stored on this device by this form)');if(!password)return;
-    if(create)await createUserWithEmailAndPassword(auth,email,password);
-    else await signInWithEmailAndPassword(auth,email,password);
+  async function requireVerifiedAccount(){
+    if(!currentUser)throw Error('Sign in first.');
+    await currentUser.reload();
+    if(!currentUser.emailVerified)throw Error('Please verify your email before cloud saving.');
   }
   function openAuthDialog(){
     if(document.getElementById('academy-auth-dialog'))return;
@@ -48,15 +47,25 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     const submit=document.createElement('button');submit.type='submit';
     const toggle=document.createElement('button');toggle.type='button';
     const forgot=document.createElement('button');forgot.type='button';forgot.textContent='Forgot password?';
+    const resend=document.createElement('button');resend.type='button';resend.textContent='Resend verification email';
     const close=document.createElement('button');close.type='button';close.textContent='Close';
     let create=false;
     const buttonStyle='padding:12px;border-radius:10px;font:600 14px system-ui;cursor:pointer;';
     submit.style.cssText=buttonStyle+'background:#d0ac66;color:#181819;border:0;';
-    for(const secondary of [toggle,forgot,close])secondary.style.cssText=buttonStyle+'background:transparent;color:#ead7a9;border:1px solid #807459;';
+    for(const secondary of [toggle,forgot,resend,close])secondary.style.cssText=buttonStyle+'background:transparent;color:#ead7a9;border:1px solid #807459;';
     const render=()=>{submit.textContent=create?'Create account':'Sign in';toggle.textContent=create?'Already have an account? Sign in':'New student? Create account';password.autocomplete=create?'new-password':'current-password';feedback.textContent='';};
     render();
     toggle.addEventListener('click',()=>{create=!create;render();});
     close.addEventListener('click',()=>overlay.remove());
+    resend.addEventListener('click',async()=>{
+      if(!auth.currentUser){feedback.textContent='Sign in before requesting verification.';return;}
+      try{
+        await auth.currentUser.reload();
+        if(auth.currentUser.emailVerified){feedback.textContent='Your email is already verified.';return;}
+        await sendEmailVerification(auth.currentUser);
+        feedback.textContent='Verification message sent. Check your email.';
+      }catch(e){feedback.textContent='Verification request failed: '+(e.code||'Please try later.');}
+    });
     forgot.addEventListener('click',async()=>{
       if(!email.value.trim()){feedback.textContent='Enter your email address first.';email.focus();return;}
       feedback.textContent='Sending password reset instructions…';
@@ -74,7 +83,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       }catch(e){feedback.textContent='Authentication failed: '+(e.code||'Please try again.');}
       finally{submit.disabled=false;}
     });
-    form.append(email,password,submit,toggle,forgot,feedback,close);
+    form.append(email,password,submit,toggle,forgot,resend,feedback,close);
     panel.append(heading,subtitle,form);overlay.append(panel);document.body.append(overlay);
   }
   async function backUp(){
@@ -85,7 +94,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=academy+'-progress-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
   }
   async function upload(){
-    if(!currentUser || busy)return;busy=true;
+    if(!currentUser || busy)return;await requireVerifiedAccount();busy=true;
     if(autoEnabled){stopAuto();status('Cloud save: Paused for manual upload');}
     try {
       let count=0;
@@ -102,7 +111,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     }finally{busy=false}
   }
   async function download(){
-    if(!currentUser||busy)return;busy=true;
+    if(!currentUser||busy)return;await requireVerifiedAccount();busy=true;
     if(autoEnabled){stopAuto();status('Cloud save: Paused for restore');}
     try{
       await backUp();
