@@ -3,7 +3,7 @@
 const cfg = window.ACADEMY_FIREBASE_CONFIG;
 const academy = 'law';
 if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethical-hacking'].includes(academy)) {
-  const [{initializeApp},{getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,sendPasswordResetEmail,sendEmailVerification},{getFirestore,doc,getDoc,setDoc,serverTimestamp,runTransaction}] =
+  const [{initializeApp},{getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,sendPasswordResetEmail,sendEmailVerification},{getFirestore,doc,getDoc,getDocFromServer,setDoc,serverTimestamp,runTransaction}] =
     await Promise.all([
       import('https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'),
       import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js'),
@@ -149,12 +149,14 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
     const verified=token.claims.email_verified===true;
     const target=ref('cloud-connection-test-v1');
     let read='unknown';
-    try{await getDoc(target);read='allowed';}
+    try{await getDocFromServer(target);read='allowed';}
     catch(e){read=e?.code||'failed';}
     notice('Firebase diagnostic: project='+cfg.projectId+
       '; email verified='+verified+
       '; signed-in UID='+currentUser.uid+
-      '; Firestore read='+read+
+      '; token UID='+token.claims.user_id+
+      '; document path='+target.path+
+      '; Firestore server read='+read+
       '. Compare the UID with the published rule and Authentication user record.');
   }
   async function startAuto(){
