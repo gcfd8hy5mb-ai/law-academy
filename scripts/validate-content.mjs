@@ -56,3 +56,22 @@ for(const key of [
  'law-academy-reasoning-v1'
 ]) assert.ok(source.includes(key),'Persisted-data namespace missing: '+key);
 console.log('PASS: app entrypoint, core screens, and persisted-data identifiers present.');
+
+const readinessStart=source.indexOf('function renderProgress()');
+const readinessEnd=source.indexOf('function renderResources()',readinessStart);
+assert.ok(readinessStart>=0 && readinessEnd>readinessStart,'Missing progress checklist');
+const readiness=source.slice(readinessStart,readinessEnd);
+for(const milestone of [
+ 'Draft all six written final responses',
+ 'Develop substantive written final answers',
+ 'Independent evaluation of source accuracy and reasoning',
+ 'Final supervised oral / issue-spotting assessment',
+ 'Graduation remains locked'
+]) assert.ok(readiness.includes(milestone),'Missing Level 1 readiness safeguard: '+milestone);
+assert.match(readiness,/Independent evaluation of source accuracy and reasoning",ready:false/,'Independent evaluation must not auto-complete');
+assert.match(readiness,/Final supervised oral \/ issue-spotting assessment",ready:false/,'Supervised assessment must not auto-complete');
+for(const key of ['law-academy-final-essays-v1','law-academy-final-review-v1']) assert.ok(source.includes(key),'Written final data namespace missing: '+key);
+assert.ok(source.includes('function finalReviewerPacket('),'Missing external-review export');
+assert.ok(source.includes('FINAL_REVIEW_CRITERIA'),'Missing written-final review criteria');
+assert.ok(source.includes('Copy all six essays for external evaluation'),'Missing written-final export control');
+console.log('PASS: Level 1 written final, external review, readiness checklist and academic graduation locks present.');
