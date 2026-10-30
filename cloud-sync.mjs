@@ -148,6 +148,37 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       notice('Cloud transaction and server restore passed for '+academy+'. No coursework changed.');
     }finally{busy=false}
   }
+  async function testConflictProtection(){
+    if(!currentUser||busy)return;
+    await requireVerifiedAccount();
+    busy=true;
+    try{
+      // Separate diagnostic document, never a lesson, grade, or autosave key.
+      const target=ref('cloud-conflict-test-v1');
+      const original=JSON.stringify({test:'before',academy});
+      const newer=JSON.stringify({test:'after',academy});
+      await setDoc(target,{raw:original,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+      // Simulate another session saving a newer version.
+      await setDoc(target,{raw:newer,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+      let conflictRejected=false;
+      try{
+        await runTransaction(db,async tx=>{
+          const snapshot=await tx.get(target);
+          if(!snapshot.exists()||snapshot.data().raw!==original)
+            throw Error('Cloud conflict detected; newer data protected.');
+          tx.set(target,{raw:original,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+        });
+      }catch(error){
+        if(error?.message==='Cloud conflict detected; newer data protected.')
+          conflictRejected=true;
+        else throw error;
+      }
+      const finalRecord=await getDocFromServer(target);
+      if(!conflictRejected||finalRecord.data()?.raw!==newer)
+        throw Error('Cloud conflict protection test did not pass.');
+      notice('Conflict protection passed for '+academy+'. Newer cloud data was preserved.');
+    }finally{busy=false}
+  }
   async function diagnoseAccess(){
     if(!currentUser)return notice('Sign in first.');
     await currentUser.reload();
@@ -265,7 +296,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       if(!currentUser){
         openAuthDialog();return;
       }
-      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID, 8 DIAGNOSE FIREBASE ACCESS');
+      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID, 8 DIAGNOSE FIREBASE ACCESS, 9 TEST CONFLICT PROTECTION');
       if(action==='1')await upload();
       else if(action==='2')await download();
       else if(action==='3')await backUp();
@@ -274,6 +305,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       else if(action==='6')await testCloudConnection();
       else if(action==='7'){const id=currentUser.uid;notice('Your Firebase User UID (not a password): '+id);}
       else if(action==='8')await diagnoseAccess();
+      else if(action==='9')await testConflictProtection();
     }catch(e){
       const code=e?.code||'';
       const message=code==='permission-denied'
