@@ -19,7 +19,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   function stopAuto(){autoEnabled=false;baseline.clear();if(syncTimer)clearInterval(syncTimer);syncTimer=null;}
   const theme=academy==='business'
     ? {bg:'#222529',paper:'#f4f0e9',accent:'#b99350',ink:'#25282a',muted:'#756b5c'}
-    : {bg:'#091525',paper:'#f6f0e5',accent:'#bd9459',ink:'#101d30',muted:'#5a6370'};
+    : {bg:'#071221',paper:'#0b192a',accent:'#dfb978',ink:'#f4e7d0',muted:'#bdc0c4'};
   const styles=document.createElement('style');
   styles.textContent=`
   #academy-account-button{position:fixed;top:calc(env(safe-area-inset-top) + 12px);right:14px;z-index:9998;border:1px solid ${theme.accent};background:${theme.paper};color:${theme.ink};font:600 12px system-ui,sans-serif;padding:10px 15px;border-radius:40px;box-shadow:0 3px 14px #0002;cursor:pointer}
@@ -40,6 +40,16 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   #academy-welcome .academy-footnote{font-size:11px;line-height:1.6;margin-top:23px;color:${theme.muted};text-align:center}
   @media(max-height:680px){#academy-welcome{align-items:flex-start}#academy-welcome .academy-welcome-inner{padding:14px 0}#academy-welcome .academy-seal{margin-bottom:12px}#academy-welcome .academy-benefits{margin-bottom:15px}}
   #academy-account-menu{position:fixed;top:calc(env(safe-area-inset-top) + 62px);right:14px;width:min(320px,calc(100vw - 28px));z-index:9999;background:${theme.paper};color:${theme.ink};border:1px solid ${theme.accent};border-radius:16px;box-shadow:0 14px 40px #0003;padding:18px;box-sizing:border-box;font:14px system-ui,sans-serif}
+  #academy-welcome{background:radial-gradient(circle at 80% 15%,#b58c4027,transparent 45%),linear-gradient(160deg,#07111d,#0c1a2a 65%,#07111d)}
+  #academy-welcome .academy-welcome-inner{padding:30px 23px;border:1px solid #b9976075;border-radius:20px;background:#ffffff06;box-shadow:0 18px 45px #0004}
+  #academy-welcome h1{color:#eac78e;letter-spacing:.015em;text-transform:uppercase;font-size:clamp(32px,8.2vw,43px)}
+  #academy-welcome .academy-kicker{color:#dfb978}
+  #academy-welcome .academy-primary{background:linear-gradient(100deg,#bf944e,#f0d28d,#bf944e);color:#091524;border-color:#e4bf78}
+  #academy-welcome .academy-secondary{background:#ffffff07}
+  #academy-auth-dialog section[role="dialog"]{background:#0b192a!important;color:#f4e7d0!important;border-color:#dfb978!important}
+  #academy-auth-dialog input{background:#071221!important;color:#f4e7d0!important;border-color:#a88d60!important}
+  #academy-auth-dialog button[type="submit"]{background:#dfb978!important;color:#081526!important}
+  #academy-auth-dialog button:not([type="submit"]){color:#f4e7d0!important;border-color:#a88d60!important}
   #academy-account-menu[hidden]{display:none}
   #academy-account-menu button{display:block;width:100%;margin-top:10px;text-align:left;padding:12px;border:1px solid ${theme.accent};border-radius:9px;background:transparent;color:inherit;font:600 13px system-ui;cursor:pointer}
   `;
