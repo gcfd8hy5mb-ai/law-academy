@@ -93,10 +93,10 @@ console.log('CONTENT DEPTH AUDIT: '+teachingParagraphs.length+' teaching section
 console.log('CONTENT REPETITION AUDIT: '+repeated.length+' paragraphs repeated across three or more lessons.');
 for(const [paragraph,ids] of repeated.slice(0,10)) console.log('REPEATED x'+ids.length+': '+ids.slice(0,5).join(', ')+' — '+paragraph.slice(0,110));
 console.log('These diagnostics measure volume and repetition only; they do not certify doctrinal accuracy or academic rigor.');
-const expansionIds=['sources','courts','law102-structure','law102-federalism','law103-1','law103-2','law104-1','law104-2','law105-1','law105-2','law106-1','law106-2'];
+const expansionIds=['sources','courts','civilcriminal','cases','reasoning','law102-structure','law102-federalism','law102-rights','law102-marbury','law102-expanded-3','law103-1','law103-2','law103-3','law103-4','law103-expanded-5','law104-1','law104-2','law104-3','law104-4','law104-expanded-7','law105-1','law105-2','law105-3','law105-4','law105-expanded-9','law106-1','law106-2','law106-3','law106-4','law106-expanded-11'];
 for(const id of expansionIds){
  const lesson=lessons.find(x=>x.id===id);
  assert.ok(lesson && lesson.sections.length>=6,'Academic expansion missing from '+id);
 }
-console.log('PASS: 12 foundational lessons include two additional analysis and application sections.');
+console.log('PASS: 30 foundational lessons include two additional analysis and application sections.');
 
