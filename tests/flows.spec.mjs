@@ -224,3 +224,19 @@ test('lesson saving can recover after storage becomes available again',async({pa
  await page.getByRole('button',{name:/My Progress/}).first().click();
  await expect(page.getByText('1 / 85 completed')).toBeVisible();
 });
+
+test('six written-final answers are reflected in readiness without academic sign-off',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/Practice Exams/}).first().click();
+ await page.locator('#writtenFinalLaunch').click();
+ for(let i=0;i<6;i++){
+   await page.locator('#finalEssayText').fill('Draft '+(i+1)+': legal issues, primary authority to verify, factual application, and opposing arguments.');
+   await page.locator('#finalEssayNext').click();
+ }
+ await expect(page.getByRole('heading',{name:'Written Final Review'})).toBeVisible();
+ await expect(page.getByText('6 of 6 responses drafted.')).toBeVisible();
+ await page.reload();
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('6 / 6 essays drafted (not graded)')).toBeVisible();
+ await expect(page.getByText('Graduation remains locked')).toBeVisible();
+});
