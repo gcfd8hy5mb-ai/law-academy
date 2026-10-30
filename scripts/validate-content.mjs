@@ -75,3 +75,21 @@ assert.ok(source.includes('function finalReviewerPacket('),'Missing external-rev
 assert.ok(source.includes('FINAL_REVIEW_CRITERIA'),'Missing written-final review criteria');
 assert.ok(source.includes('Copy all six essays for external evaluation'),'Missing written-final export control');
 console.log('PASS: Level 1 written final, external review, readiness checklist and academic graduation locks present.');
+
+const teachingParagraphs=lessons.flatMap(lesson=>lesson.sections.map(([heading,body])=>({lesson:lesson.id,heading,body})));
+const byText=new Map();
+for(const row of teachingParagraphs){
+ const normalized=row.body.toLowerCase().replace(/\\s+/g,' ').trim();
+ if(normalized.length<100)continue;
+ const matches=byText.get(normalized)||[];
+ matches.push(row.lesson);
+ byText.set(normalized,matches);
+}
+const repeated=[...byText.entries()].filter(([,ids])=>new Set(ids).size>=3).sort((a,b)=>b[1].length-a[1].length);
+const wordCounts=lessons.map(l=>l.sections.reduce((total,[heading,body])=>total+body.trim().split(/\\s+/).length,0));
+const sorted=[...wordCounts].sort((a,b)=>a-b);
+const median=sorted[Math.floor(sorted.length/2)];
+console.log('CONTENT DEPTH AUDIT: '+teachingParagraphs.length+' teaching sections across '+lessons.length+' lessons; median '+median+' instructional words; minimum '+sorted[0]+'; maximum '+sorted.at(-1)+'.');
+console.log('CONTENT REPETITION AUDIT: '+repeated.length+' paragraphs repeated across three or more lessons.');
+for(const [paragraph,ids] of repeated.slice(0,10)) console.log('REPEATED x'+ids.length+': '+ids.slice(0,5).join(', ')+' — '+paragraph.slice(0,110));
+console.log('These diagnostics measure volume and repetition only; they do not certify doctrinal accuracy or academic rigor.');
