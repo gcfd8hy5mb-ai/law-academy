@@ -179,6 +179,31 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       notice('Conflict protection passed for '+academy+'. Newer cloud data was preserved.');
     }finally{busy=false}
   }
+  async function testAutosaveRoundTrip(){
+    if(!currentUser||busy)return;
+    await requireVerifiedAccount();
+    busy=true;
+    try{
+      // Exercise the real compare-and-set autosave pattern on a disposable record.
+      const target=ref('cloud-autosave-test-v1');
+      const initial=JSON.stringify({phase:'initial',academy});
+      const changed=JSON.stringify({phase:'saved',academy});
+      await runTransaction(db,async tx=>{
+        const previous=await tx.get(target);
+        tx.set(target,{raw:initial,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+      });
+      await runTransaction(db,async tx=>{
+        const previous=await tx.get(target);
+        if(!previous.exists()||previous.data().raw!==initial)
+          throw Error('Autosave baseline changed unexpectedly.');
+        tx.set(target,{raw:changed,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+      });
+      const restored=await getDocFromServer(target);
+      if(!restored.exists()||restored.data().raw!==changed)
+        throw Error('Autosaved test data was not restored from server.');
+      notice('Autosave round-trip passed for '+academy+'. Sample progress was saved and restored; coursework untouched.');
+    }finally{busy=false}
+  }
   async function diagnoseAccess(){
     if(!currentUser)return notice('Sign in first.');
     await currentUser.reload();
@@ -296,7 +321,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       if(!currentUser){
         openAuthDialog();return;
       }
-      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID, 8 DIAGNOSE FIREBASE ACCESS, 9 TEST CONFLICT PROTECTION');
+      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION, 7 SHOW MY ACCOUNT ID, 8 DIAGNOSE FIREBASE ACCESS, 9 TEST CONFLICT PROTECTION, 10 TEST AUTOSAVE ROUND TRIP');
       if(action==='1')await upload();
       else if(action==='2')await download();
       else if(action==='3')await backUp();
@@ -306,6 +331,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       else if(action==='7'){const id=currentUser.uid;notice('Your Firebase User UID (not a password): '+id);}
       else if(action==='8')await diagnoseAccess();
       else if(action==='9')await testConflictProtection();
+      else if(action==='10')await testAutosaveRoundTrip();
     }catch(e){
       const code=e?.code||'';
       const message=code==='permission-denied'
