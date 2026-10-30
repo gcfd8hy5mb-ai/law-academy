@@ -181,7 +181,27 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       for(const key of keys){
         const local=localStorage.getItem(key);
         const previous=baseline.get(key)??null;
-        if(local===previous)continue;
+        if(local===previous){
+          // A second device may have saved newer progress. Adopt it only when
+          // this device still equals the version last confirmed by Firebase.
+          const cloud=await getDoc(ref(key));
+          const remote=cloud.exists()?cloud.data().raw:null;
+          if(remote!==previous){
+            if(typeof remote!=='string'){
+              stopAuto();status('Cloud save: Review required');return;
+            }
+            // Read the device again after the network request: never replace a
+            // lesson that was edited while waiting for the cloud response.
+            if(localStorage.getItem(key)!==previous){
+              stopAuto();status('Cloud save: Conflict detected');return;
+            }
+            localStorage.setItem(key,remote);
+            stopAuto();status('Cloud save: Updated on another device');
+            notice('Newer cloud progress was found and loaded. Reloading the academy.');
+            location.reload();return;
+          }
+          continue;
+        }
         if(local===null){stopAuto();status('Cloud save: Review required');return;}
         await runTransaction(db,async tx=>{
           const docRef=ref(key);
