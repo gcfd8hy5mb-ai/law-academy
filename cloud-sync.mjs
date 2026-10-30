@@ -126,6 +126,22 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       notice('Restored '+count+' record(s). Reloading to show changes.');location.reload();
     }finally{busy=false}
   }
+  async function testCloudConnection(){
+    if(!currentUser||busy)return;
+    await requireVerifiedAccount();
+    busy=true;
+    try{
+      // Dedicated test record, never a lesson, grade or student progress key.
+      const id='cloud-connection-test-v1';
+      const target=ref(id);
+      const raw=JSON.stringify({test:true,academy,uid:currentUser.uid});
+      await setDoc(target,{raw,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+      const verified=await getDoc(target);
+      if(!verified.exists()||verified.data().raw!==raw)
+        throw Error('Cloud returned a different test record.');
+      notice('Firebase write and read succeeded for '+academy+'. No coursework was changed.');
+    }finally{busy=false}
+  }
   async function startAuto(){
     if(!currentUser || busy)return;
     await currentUser.reload();
@@ -226,12 +242,13 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       if(!currentUser){
         openAuthDialog();return;
       }
-      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE');
+      const action=prompt('Cloud save: 1 UPLOAD device progress, 2 RESTORE cloud progress, 3 EXPORT backup, 4 SIGN OUT, 5 ENABLE SAFE AUTOSAVE, 6 TEST FIREBASE CONNECTION');
       if(action==='1')await upload();
       else if(action==='2')await download();
       else if(action==='3')await backUp();
       else if(action==='4')await signOut(auth);
       else if(action==='5')await startAuto();
+      else if(action==='6')await testCloudConnection();
     }catch(e){notice('Cloud operation failed: '+(e?.code||e?.message||'unknown error'))}
   });
 }
