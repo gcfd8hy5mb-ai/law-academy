@@ -201,6 +201,9 @@ test('failed progress storage offers retry instead of marking a lesson complete'
  await expect(page.locator('#submit')).toHaveText('Retry saving');
  await page.locator('#submit').click();
  await expect(page.getByRole('alert')).toContainText('Still unable to save progress');
+ await page.reload();
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('0 / 85 completed')).toBeVisible();
 });
 
 test('lesson saving can recover after storage becomes available again',async({page})=>{
