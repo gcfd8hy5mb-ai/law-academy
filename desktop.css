@@ -1,0 +1,16 @@
+/* Desktop Academy foundation — preserves approved Supreme Court / Ivy palette. */
+@media (min-width: 900px) {
+ .shell,.app-shell {max-width:1380px;padding:30px clamp(28px,5vw,76px) 90px;margin-inline:auto;}
+ .court-hero {height:310px;margin-inline:0;padding:45px 46px 24px;border-radius:22px;}
+ .court-hero:after {right:48px;opacity:.18;}
+ .brandtitle {font-size:48px;}
+ .hero-copy {max-width:650px;font-size:20px;}
+ .progress-panel {margin-top:20px;padding:26px;grid-template-columns:minmax(0,1fr) 120px;}
+ .quick-grid {gap:14px;}
+ .quick-card {min-height:112px;padding:18px 10px;}
+ .quick-card small {font-size:14px;}
+ .grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+ .card,.lesson {padding:24px;}
+ .reading {max-width:880px;font-size:18px;line-height:1.85;}
+ .question {max-width:920px;}
+}
