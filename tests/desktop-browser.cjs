@@ -31,7 +31,9 @@ const root=path.resolve(__dirname,'..');
    await launch.click();
    assert.equal(await page.locator('#desk-facts').inputValue(),'Illustrative agreement was signed.','draft persists after reopening');
 
-   assert.equal(await dialog.isVisible(),false,'Escape should close workspace');
+   assert.equal(await dialog.isVisible(),true,'workspace should be open after reopening');
+   await page.keyboard.press('Escape');
+   assert.equal(await dialog.isVisible(),false,'Escape should close reopened workspace');
    assert.equal(await launch.getAttribute('aria-expanded'),'false');
    await page.close();
   }
