@@ -138,3 +138,9 @@ assert.match(graduationStandards,/85 authored lessons/,'Pre-Law graduation stand
 assert.match(graduationStandards,/Graduation:?.*locked/i,'Graduation safeguard must remain explicit in standards');
 assert.match(graduationStandards,/six applied/i,'Graduation standards must include six applied cases');
 console.log('PASS: Graduation policy aligns with the current 85-lesson, six-assessment Pre-Law curriculum.');
+
+
+const expanded=lessons.filter(l=>/-expanded-/.test(l.id));
+const positions=new Set(expanded.slice(0,12).map(l=>l.quiz.answer));
+assert.ok(positions.size>=3,'Expanded quizzes need varied correct-answer positions');
+console.log('PASS: Expanded assessment answer positions vary across the first twelve cases.');
