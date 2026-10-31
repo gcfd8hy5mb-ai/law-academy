@@ -291,7 +291,7 @@ test('six applied Pre-Law assessments open and retain writing after reload',asyn
  await page.reload();
  await page.locator('#appliedLaunch').click();
  await page.locator('[data-applied="0"]').click();
- await expect(page.locator('#appliedDraft')).toContainText('disputed local law');
+ await expect(page.locator('#appliedDraft')).toHaveValue(/disputed local law/);
  await page.locator('#appliedBack').click();
  await expect(page.locator('[data-applied="0"]')).toContainText('Draft saved');
 });
