@@ -131,3 +131,10 @@ for(const token of ['law-academy-applied-v1','prelawReviewHints','PRELAW_REVIEW_
 assert.match(html,/prelaw-applied\.js/,'Missing applied-assessment script load');
 assert.ok(html.indexOf('src="./prelaw-applied.js"')<html.indexOf('src="./app.js"'),'Assessment module must load before main app starts');
 console.log('PASS: Six fact-rich Pre-Law assessments, learning guides, feedback and saved-draft namespace.');
+
+
+const graduationStandards=readFileSync(new URL('../curriculum/LEVEL1-GRADUATION-STANDARDS.md',import.meta.url),'utf8');
+assert.match(graduationStandards,/85 authored lessons/,'Pre-Law graduation standards must reflect all 85 lessons');
+assert.match(graduationStandards,/Graduation:?.*locked/i,'Graduation safeguard must remain explicit in standards');
+assert.match(graduationStandards,/six applied/i,'Graduation standards must include six applied cases');
+console.log('PASS: Graduation policy aligns with the current 85-lesson, six-assessment Pre-Law curriculum.');
