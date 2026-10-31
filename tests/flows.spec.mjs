@@ -317,3 +317,18 @@ test('each applied assessment displays its subject-specific reasoning guide',asy
    await page.locator('#appliedBack').click();
  }
 });
+
+test('applied writing feedback flags missing topics but never awards a grade',async({page})=>{
+ await page.goto('/');
+ await page.locator('#appliedLaunch').click();
+ await page.locator('[data-applied="3"]').click();
+ await page.locator('#appliedDraft').fill('A customer fell on a slippery floor.');
+ await page.locator('#appliedFeedback').click();
+ await expect(page.getByRole('heading',{name:'Draft structure feedback — not a grade'})).toBeVisible();
+ await expect(page.locator('#appliedFeedbackResult')).toContainText('Keyword detection does not evaluate correctness');
+ await expect(page.locator('#appliedFeedbackResult li').first()).toBeVisible();
+ await page.reload();
+ await page.locator('#appliedLaunch').click();
+ await page.locator('[data-applied="3"]').click();
+ await expect(page.locator('#appliedDraft')).toHaveValue('A customer fell on a slippery floor.');
+});
