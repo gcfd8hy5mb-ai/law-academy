@@ -243,3 +243,13 @@ test('six written-final answers are reflected in readiness without academic sign
  await expect(page.getByText('6 / 6 essays drafted (not graded)')).toBeVisible();
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
 });
+
+test('Pre-Law closeout distinguishes authored curriculum from student performance',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('Pre-Law closeout overview')).toBeVisible();
+ await expect(page.getByText(/Six courses and 85 expanded lessons/)).toBeVisible();
+ await expect(page.getByText(/0 \/ 9 formative checkpoints met/)).toBeVisible();
+ await expect(page.getByText(/Pending independent written-work evaluation/)).toBeVisible();
+ await expect(page.getByText('Graduation remains locked')).toBeVisible();
+});
