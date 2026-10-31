@@ -279,3 +279,29 @@ test('completed lesson is retained after reopening and retrying its knowledge ch
  await page.getByRole('button',{name:/My Progress/}).first().click();
  await expect(page.getByText('1 / 85 completed')).toBeVisible();
 });
+
+test('six applied Pre-Law assessments open and retain writing after reload',async({page})=>{
+ await page.goto('/');
+ await page.locator('#appliedLaunch').click();
+ await expect(page.getByText('Pre-Law Applied Assessments')).toBeVisible();
+ await expect(page.locator('[data-applied]')).toHaveCount(6);
+ await page.locator('[data-applied="0"]').click();
+ await page.locator('#appliedDraft').fill('Issue: disputed local law. Rule and jurisdiction require primary source verification. Both sides have arguments.');
+ await expect(page.locator('#appliedStatus')).toContainText('Saved on this device');
+ await page.reload();
+ await page.locator('#appliedLaunch').click();
+ await page.locator('[data-applied="0"]').click();
+ await expect(page.locator('#appliedDraft')).toContainText('disputed local law');
+ await page.locator('#appliedBack').click();
+ await expect(page.locator('[data-applied="0"]')).toContainText('Draft saved');
+});
+test('applied Pre-Law assignments do not unlock academic graduation',async({page})=>{
+ await page.goto('/');
+ await page.locator('#appliedLaunch').click();
+ await page.locator('[data-applied="5"]').click();
+ await expect(page.getByText('Only a qualified independent reviewer')).toBeVisible();
+ await page.locator('#appliedBack').click();
+ await page.locator('#appliedClose').click();
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('Graduation remains locked')).toBeVisible();
+});
