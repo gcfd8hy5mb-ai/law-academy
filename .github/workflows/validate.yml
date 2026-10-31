@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'app.js'
+      - 'prelaw-applied.js'
       - 'index.html'
       - 'styles.css'
       - 'scripts/**'
@@ -14,6 +15,7 @@ on:
   pull_request:
     paths:
       - 'app.js'
+      - 'prelaw-applied.js'
       - 'index.html'
       - 'styles.css'
       - 'scripts/**'
@@ -42,6 +44,7 @@ jobs:
           test -f app.js
           test -f styles.css
           node --check app.js
+          node --check prelaw-applied.js
 
   browser-smoke:
     runs-on: ubuntu-24.04
