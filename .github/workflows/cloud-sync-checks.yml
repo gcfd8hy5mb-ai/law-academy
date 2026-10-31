@@ -1,0 +1,34 @@
+name: Cloud sync checks
+on:
+  pull_request:
+    paths:
+      - 'cloud-sync.mjs'
+      - 'firebase-config.js'
+      - 'index.html'
+      - '.github/workflows/cloud-sync-checks.yml'
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check cloud-sync syntax
+        run: node --check cloud-sync.mjs
+      - name: Check Firebase config syntax
+        run: node --check firebase-config.js
+      - name: Verify loading order and safeguards
+        run: |
+          node - <<'NODE'
+          const fs=require('node:fs');
+          const html=fs.readFileSync('index.html','utf8');
+          const code=fs.readFileSync('cloud-sync.mjs','utf8');
+          const config=html.indexOf('src="./firebase-config.js"');
+          const sync=html.indexOf('src="./cloud-sync.mjs"');
+          if(config<0||sync<0||config>=sync)throw Error('Firebase config must load before sync');
+          for(const required of ['runTransaction','onAuthStateChanged','stopAuto','baseline','localStorage','location.reload()']) {
+            if(!code.includes(required))throw Error('Missing safeguard '+required);
+          }
+          console.log('Cloud sync static checks passed');
+          NODE
