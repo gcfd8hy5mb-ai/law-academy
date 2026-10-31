@@ -129,4 +129,5 @@ for(const token of ['law-academy-applied-v1','prelawReviewHints','PRELAW_REVIEW_
  assert.ok(applied.includes(token),'Missing applied assessment feature: '+token);
 }
 assert.match(html,/prelaw-applied\.js/,'Missing applied-assessment script load');
+assert.ok(html.indexOf('src="./prelaw-applied.js"')<html.indexOf('src="./app.js"'),'Assessment module must load before main app starts');
 console.log('PASS: Six fact-rich Pre-Law assessments, learning guides, feedback and saved-draft namespace.');
