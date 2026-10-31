@@ -129,7 +129,7 @@ test('academic sign-off explicitly requires independent and supervised assessmen
  await page.getByRole('button',{name:/My Progress/}).first().click();
  await expect(page.getByText('Academic sign-off standards')).toBeVisible();
  await expect(page.getByText(/qualified independent reviewer must examine/)).toBeVisible();
- await expect(page.getByText(/Current decision:/)).toContainText('Not signed off');
+ await expect(page.locator('.review-item p').filter({hasText:'Current decision:'})).toContainText('Not signed off');
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
 });
 
@@ -272,9 +272,9 @@ test('completed lesson is retained after reopening and retrying its knowledge ch
  await page.getByRole('button',{name:/Continue Learning/}).click();
  await page.locator('[data-choice="1"]').click();
  await page.locator('#submit').click();
+ await expect(page.locator('#submit')).toHaveText('Back to course');
  await page.locator('#submit').click();
- await page.getByRole('button',{name:/My Progress/}).first().click();
- await expect(page.getByText('1 / 85 completed')).toBeVisible();
+ await expect(page.getByText('Introduction to American Law').first()).toBeVisible();
  await page.reload();
  await page.getByRole('button',{name:/My Progress/}).first().click();
  await expect(page.getByText('1 / 85 completed')).toBeVisible();
