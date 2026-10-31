@@ -3,6 +3,8 @@ const assert=require('node:assert/strict');
 const {spawn}=require('node:child_process');
 const {setTimeout:delay}=require('node:timers/promises');
 const {chromium}=require('playwright');
+const fs=require('node:fs');
+fs.mkdirSync(require('node:path').resolve(__dirname,'../desktop-test-artifacts'),{recursive:true});
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 (async()=>{
@@ -26,6 +28,7 @@ const root=path.resolve(__dirname,'..');
    assert.match(await page.locator('#desk-result').innerText(),/enforceable offer/);
    await page.locator('#desk-save').click();
    assert.match(await page.locator('#desk-status').innerText(),/saved/i);
+   await page.screenshot({path:path.resolve(root,'desktop-test-artifacts',width+'-workspace.png'),fullPage:true});
    await page.keyboard.press('Escape');
    assert.equal(await dialog.isVisible(),false,'Escape should close workspace');
    await launch.click();
