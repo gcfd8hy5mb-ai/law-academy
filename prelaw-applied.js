@@ -1,10 +1,40 @@
 window.PRELAW_APPLIED=[
-["LAW 101","Sources and Courts","A city noise ordinance is challenged after a procedural dismissal.","Identify legal authority, procedural posture, missing facts and possible appellate issues."],
-["LAW 102","University Speech","A public university denies a meeting-room request after controversial speech.","Analyze state action, forum classification, competing arguments and missing evidence."],
-["LAW 103","Lease Research","A renter asks about a lease notice clause without identifying the state.","Plan primary-source research, record citations, verify currentness and explain uncertainty."],
-["LAW 104","Negligence Memo","A retail employee reports a spill before a customer slips.","Write an objective IRAC memorandum analyzing elements and both sides."],
-["LAW 105","Contractor Dispute","A contractor misses a proposed start date after receiving a deposit.","Analyze agreement terms, possible remedies, and dispute-resolution questions."],
-["LAW 106","Conflicts of Interest","A prospective client's interests may be adverse to an existing client's.","Identify conflicts, confidentiality concerns and jurisdiction-specific safeguards."]
+ [
+  "LAW 101",
+  "Sources and Courts",
+  "A city fines a neighborhood association for an outdoor weekend event under a municipal noise ordinance. The association argues that a state statute authorizes public gatherings and claims the ordinance infringes freedom of expression. A trial court dismissed the association's complaint without reaching whether the ordinance violates the Constitution. The record does not explain which procedural rule supported dismissal or whether the gathering involved expressive conduct.",
+  "Identify legal authority, procedural posture, missing facts and possible appellate issues."
+ ],
+ [
+  "LAW 102",
+  "University Speech",
+  "A public university regularly allows student organizations to reserve a meeting room. Administrators reject one organization's application after speakers criticized university policy, while approving a different organization for a similar event. Administrators say insufficient staffing, rather than disagreement with the group's views, explains the denial. The university's written room policy, room classification, booking history, and correspondence have not been provided.",
+  "Analyze state action, forum classification, competing arguments and missing evidence."
+ ],
+ [
+  "LAW 103",
+  "Lease Research",
+  "A tenant asks whether a lease clause requiring a thirty-day written notice before moving out is enforceable. Neither the state nor the lease date has been identified. The landlord relies on a five-year-old online article, and the tenant points to a newer secondary blog post. You do not have the current state landlord-tenant statute, local ordinance, or relevant appellate decisions.",
+  "Plan primary-source research, record citations, verify currentness and explain uncertainty."
+ ],
+ [
+  "LAW 104",
+  "Negligence Memo",
+  "A store employee saw liquid on an aisle floor at 1:05 p.m. but did not immediately mark or clean the spill. At 1:20 p.m. a customer slipped, fell, and reported an injury. A surveillance recording may show the customer looking at a phone. The state, floor conditions, injury records, employee testimony, and applicable comparative-fault rules are not supplied.",
+  "Write an objective IRAC memorandum analyzing elements and both sides."
+ ],
+ [
+  "LAW 105",
+  "Contractor Dispute",
+  "A homeowner paid a contractor a deposit for repairs under a document listing an estimated start date. The contractor missed that date and cited supply-chain problems. The agreement includes an ambiguous cancellation fee and an arbitration clause. The parties disagree about whether the contractor gave notice, whether the start date was guaranteed, and which state law controls.",
+  "Analyze agreement terms, possible remedies, and dispute-resolution questions."
+ ],
+ [
+  "LAW 106",
+  "Conflicts of Interest",
+  "A lawyer has an ongoing attorney-client relationship with Company A. A prospective client consults the lawyer about a transaction potentially adverse to Company A and reveals sensitive business information. The lawyer has not agreed to representation, and the relevant jurisdiction, scope of the current engagement, relationship between the transactions, and possible consent are unresolved.",
+  "Identify conflicts, confidentiality concerns and jurisdiction-specific safeguards."
+ ]
 ];
 const PRELAW_APPLIED_SOURCES=[
 ["U.S. Constitution (Congress)","https://constitution.congress.gov/"],
