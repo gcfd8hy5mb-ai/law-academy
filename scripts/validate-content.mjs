@@ -144,3 +144,16 @@ const expanded=lessons.filter(l=>/-expanded-/.test(l.id));
 const positions=new Set(expanded.slice(0,12).map(l=>l.quiz.answer));
 assert.ok(positions.size>=3,'Expanded quizzes need varied correct-answer positions');
 console.log('PASS: Expanded assessment answer positions vary across the first twelve cases.');
+
+
+for(const [lessonId,terms] of [
+ ['law105-1',['capacity','lawful purpose']],
+ ['law102-advanced-4',['Riley v. California','warrant']],
+ ['law105-advanced-9',['180 calendar days','300 days','Equal Pay Act']]
+]){
+ const lesson=lessons.find(x=>x.id===lessonId);
+ assert.ok(lesson,'Missing accuracy-corrected lesson '+lessonId);
+ const body=lesson.sections.map(x=>x[1]).join(' ');
+ for(const term of terms)assert.ok(body.includes(term),'Missing accuracy correction '+term+' in '+lessonId);
+}
+console.log('PASS: Three targeted Pre-Law legal accuracy improvements are present.');
