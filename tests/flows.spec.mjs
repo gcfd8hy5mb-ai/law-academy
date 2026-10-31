@@ -305,3 +305,15 @@ test('applied Pre-Law assignments do not unlock academic graduation',async({page
  await page.getByRole('button',{name:/My Progress/}).first().click();
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
 });
+
+test('each applied assessment displays its subject-specific reasoning guide',async({page})=>{
+ await page.goto('/');
+ await page.locator('#appliedLaunch').click();
+ for(let i=0;i<6;i++){
+   await page.locator('[data-applied="'+i+'"]').click();
+   await expect(page.getByRole('heading',{name:'Reasoning guide'})).toBeVisible();
+   await expect(page.locator('.review-item ol li')).toHaveCount(3);
+   await expect(page.getByRole('heading',{name:'Research starting point'})).toBeVisible();
+   await page.locator('#appliedBack').click();
+ }
+});
