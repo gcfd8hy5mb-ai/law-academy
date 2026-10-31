@@ -332,3 +332,14 @@ test('applied writing feedback flags missing topics but never awards a grade',as
  await page.locator('[data-applied="3"]').click();
  await expect(page.locator('#appliedDraft')).toHaveValue('A customer fell on a slippery floor.');
 });
+
+test('each applied assessment has substantive review criteria',async({page})=>{
+ await page.goto('/');
+ await page.locator('#appliedLaunch').click();
+ for(let i=0;i<6;i++){
+  await page.locator('[data-applied="'+i+'"]').click();
+  await expect(page.getByRole('heading',{name:'Substantive reviewer checklist'})).toBeVisible();
+  await expect(page.locator('.review-item').filter({has:page.getByRole('heading',{name:'Substantive reviewer checklist'})}).locator('li')).toHaveCount(3);
+  await page.locator('#appliedBack').click();
+ }
+});
