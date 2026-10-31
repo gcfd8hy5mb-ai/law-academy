@@ -114,3 +114,19 @@ for(const id of expansionIds){
 }
 console.log('PASS: 85 foundational lessons include two additional analysis and application sections.');
 
+
+
+const applied=readFileSync(new URL('../prelaw-applied.js',import.meta.url),'utf8');
+new Script(applied,{filename:'prelaw-applied.js'});
+const assessments=runInNewContext(applied.slice(0,applied.indexOf('const PRELAW_APPLIED_SOURCES='))+'\nPRELAW_APPLIED');
+assert.equal(assessments.length,6,'Six applied Pre-Law cases required');
+assert.deepEqual(Array.from(assessments,x=>x[0]),['LAW 101','LAW 102','LAW 103','LAW 104','LAW 105','LAW 106']);
+for(const item of assessments){
+ assert.ok(item[2].trim().split(/\s+/).length>=45,'Applied case lacks adequate facts: '+item[0]);
+ assert.ok(item[3].trim().length>=60,'Applied assignment lacks analytical instructions: '+item[0]);
+}
+for(const token of ['law-academy-applied-v1','prelawReviewHints','PRELAW_REVIEW_CRITERIA','PRELAW_SOURCE_NOTES','PRELAW_REASONING_GUIDES']){
+ assert.ok(applied.includes(token),'Missing applied assessment feature: '+token);
+}
+assert.match(html,/prelaw-applied\.js/,'Missing applied-assessment script load');
+console.log('PASS: Six fact-rich Pre-Law assessments, learning guides, feedback and saved-draft namespace.');
