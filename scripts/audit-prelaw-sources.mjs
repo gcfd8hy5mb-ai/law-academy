@@ -20,6 +20,7 @@ for(const c of courses){for(const l of c.lessons){
  const words=l.sections.reduce((n,p)=>n+p[1].trim().split(/\s+/).length,0);
  rows.push([c.id,c.title,l.id,l.title,words,l.quiz.question,startingPoints[c.id]||'', 'PENDING','PENDING','PENDING','','','']);
 }}
+if(rows.length!==86)throw Error('Expected exactly 85 lessons; found '+(rows.length-1));
 const output=rows.map(row=>row.map(esc).join(',')).join('\n')+'\n';
 mkdirSync(new URL('../audit/',import.meta.url),{recursive:true});
 writeFileSync(new URL('../audit/prelaw-85-source-review.csv',import.meta.url),output);
