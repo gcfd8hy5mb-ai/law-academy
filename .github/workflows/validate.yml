@@ -38,6 +38,14 @@ jobs:
           node-version: '22'
       - name: Validate curricula, quiz integrity, and script syntax
         run: node scripts/validate-content.mjs
+      - name: Generate 85-lesson legal-source review inventory
+        run: node scripts/audit-prelaw-sources.mjs
+      - name: Upload source audit inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: prelaw-source-review-inventory
+          path: audit/prelaw-85-source-review.csv
+          retention-days: 30
       - name: Check HTML entrypoint and app assets
         run: |
           test -f index.html
