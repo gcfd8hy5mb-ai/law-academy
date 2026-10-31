@@ -129,7 +129,7 @@ test('academic sign-off explicitly requires independent and supervised assessmen
  await page.getByRole('button',{name:/My Progress/}).first().click();
  await expect(page.getByText('Academic sign-off standards')).toBeVisible();
  await expect(page.getByText(/qualified independent reviewer must examine/)).toBeVisible();
- await expect(page.getByText(/Current decision:.*Not signed off/)).toBeVisible();
+ await expect(page.getByText(/Current decision:/)).toContainText('Not signed off');
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
 });
 
