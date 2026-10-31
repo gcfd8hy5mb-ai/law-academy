@@ -118,7 +118,7 @@ console.log('PASS: 85 foundational lessons include two additional analysis and a
 
 const applied=readFileSync(new URL('../prelaw-applied.js',import.meta.url),'utf8');
 new Script(applied,{filename:'prelaw-applied.js'});
-const assessments=runInNewContext(applied.slice(0,applied.indexOf('const PRELAW_APPLIED_SOURCES='))+'\nPRELAW_APPLIED');
+const assessments=runInNewContext('const window={};'+applied.slice(0,applied.indexOf('const PRELAW_APPLIED_SOURCES='))+'\nwindow.PRELAW_APPLIED');
 assert.equal(assessments.length,6,'Six applied Pre-Law cases required');
 assert.deepEqual(Array.from(assessments,x=>x[0]),['LAW 101','LAW 102','LAW 103','LAW 104','LAW 105','LAW 106']);
 for(const item of assessments){
