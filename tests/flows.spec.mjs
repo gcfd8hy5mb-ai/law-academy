@@ -237,7 +237,7 @@ test('six written-final answers are reflected in readiness without academic sign
    await page.locator('#finalEssayNext').click();
  }
  await expect(page.getByRole('heading',{name:'Written Final Review'})).toBeVisible();
- await expect(page.getByText('6 of 6 responses drafted.')).toBeVisible();
+ await expect(page.getByText(/6 of 6 responses drafted/)).toBeVisible();
  await page.reload();
  await page.getByRole('button',{name:/My Progress/}).first().click();
  await expect(page.getByText('6 / 6 essays drafted (not graded)')).toBeVisible();
