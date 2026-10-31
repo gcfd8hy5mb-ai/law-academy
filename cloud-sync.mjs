@@ -303,7 +303,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       const initial=new Map();
       for(const key of keys){
         const local=localStorage.getItem(key);
-        const cloud=await getDoc(ref(key));
+        const cloud=await getDocFromServer(ref(key));
         const remote=cloud.exists()?cloud.data().raw:null;
         if(cloud.exists() && typeof remote!=='string')throw Error('Invalid cloud record: '+key);
         if(local!==null && remote!==null && local!==remote){
@@ -312,6 +312,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
         }
         initial.set(key,{local,remote});
       }
+      // All snapshots were checked against the server before any progress is applied.
       let restored=0;
       for(const [key,{local,remote}] of initial){
         if(remote===null && local!==null){
@@ -336,7 +337,6 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
       autoEnabled=true;
       if(syncTimer)clearInterval(syncTimer);
       syncTimer=setInterval(()=>{void syncChanges()},5000);
-      status('Cloud save: Autosave on');
       status('Cloud save: Automatic saving on');
     }finally{busy=false}
   }
@@ -351,7 +351,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
         if(local===previous){
           // A second device may have saved newer progress. Adopt it only when
           // this device still equals the version last confirmed by Firebase.
-          const cloud=await getDoc(ref(key));
+          const cloud=await getDocFromServer(ref(key));
           const remote=cloud.exists()?cloud.data().raw:null;
           if(remote!==previous){
             if(typeof remote!=='string'){
@@ -380,7 +380,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
         baseline.set(key,local);
         changed++;
       }
-      if(changed)status('Cloud save: Synced');
+      if(changed)status('Cloud save: Automatic saving on');
     }catch(err){
       stopAuto();status('Cloud save: Needs attention');
       console.error('Academy sync paused:',err);
