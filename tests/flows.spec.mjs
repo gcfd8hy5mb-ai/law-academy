@@ -253,3 +253,16 @@ test('Pre-Law closeout distinguishes authored curriculum from student performanc
  await expect(page.getByText(/Pending independent written-work evaluation/)).toBeVisible();
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
 });
+
+test('lesson completion remains credited after revisiting a previously passed lesson',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/Continue Learning/}).click();
+ await page.locator('[data-choice="1"]').click();
+ await page.locator('#submit').click();
+ await expect(page.locator('#submit')).toHaveText('Back to course');
+ await page.locator('#submit').click();
+ await page.reload();
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('1 / 85 completed')).toBeVisible();
+ await expect(page.getByText('Graduation remains locked')).toBeVisible();
+});
