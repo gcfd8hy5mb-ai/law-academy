@@ -266,3 +266,16 @@ test('lesson completion remains credited after revisiting a previously passed le
  await expect(page.getByText('1 / 85 completed')).toBeVisible();
  await expect(page.getByText('Graduation remains locked')).toBeVisible();
 });
+
+test('completed lesson is retained after reopening and retrying its knowledge check',async({page})=>{
+ await page.goto('/');
+ await page.getByRole('button',{name:/Continue Learning/}).click();
+ await page.locator('[data-choice="1"]').click();
+ await page.locator('#submit').click();
+ await page.locator('#submit').click();
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('1 / 85 completed')).toBeVisible();
+ await page.reload();
+ await page.getByRole('button',{name:/My Progress/}).first().click();
+ await expect(page.getByText('1 / 85 completed')).toBeVisible();
+});
