@@ -343,3 +343,14 @@ test('each applied assessment has substantive review criteria',async({page})=>{
   await page.locator('#appliedBack').click();
  }
 });
+
+test('Pre-Law source guidance identifies controlling law limitations',async({page})=>{
+ await page.goto('/');
+ await page.locator('#appliedLaunch').click();
+ await page.locator('[data-applied="5"]').click();
+ await expect(page.getByText(/ABA Model Rule 1.18 discusses prospective-client/)).toBeVisible();
+ await expect(page.locator('a[href*="rule_1_18_duties_of_prospective_client"]')).toBeVisible();
+ await page.locator('#appliedBack').click();
+ await page.locator('[data-applied="2"]').click();
+ await expect(page.getByText(/Identify the state before selecting binding statutes/)).toBeVisible();
+});
