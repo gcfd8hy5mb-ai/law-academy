@@ -207,3 +207,6 @@ console.log('PASS: 79 Level 2 lessons and linked Rule 23/criminal burden precede
 
 assert.ok(level2Source.includes('CURRENT_CASES')&&level2Source.includes('New York Times Co. v. Sullivan')&&level2Source.includes('Kennedy v. Bremerton School District'),'New relevant real court decisions missing');
 console.log('PASS: 86 authored Level 2 lessons and attached current case examples.');
+
+assert.ok(level2Source.includes('COMPANION_CASES.find(c=>c.course===courses[i].title&&c.lesson===j)'),'Real-case routing must follow the taught course and lesson');
+console.log('PASS: Vosburg and Mathews integrated into matching 1L lessons.');
