@@ -157,6 +157,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Equity focuses on whether money damages adequately protect the interest."
+      },
+      {
+        "id": "L2-1-12",
+        "title": "Mistake, risk allocation and impracticability",
+        "reading": "Mutual mistake may justify avoidance when both parties shared a mistaken basic assumption that materially affects the exchange and the adversely affected party did not bear the risk. Impracticability and frustration doctrines examine later events, foreseeability, allocation of risk and remaining performance. Analyze contract language and governing state law before assuming hardship excuses a promise.",
+        "problem": "After signing for a specific rare item, both parties learn it was destroyed before signing. Contrast mutual mistake with supervening impossibility, identify who bore the risk, and consider rescission, restitution and warranties.",
+        "question": "What distinction is crucial?",
+        "options": [
+          "Whether the parties were friends",
+          "Whether the relevant event existed at formation or arose afterward",
+          "Whether the item had photographs"
+        ],
+        "answer": 1,
+        "why": "Mistake and supervening impracticability involve different timing and elements."
       }
     ]
   },
@@ -317,6 +331,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Conversion requires sufficiently serious interference with possessory rights."
+      },
+      {
+        "id": "L2-2-12",
+        "title": "Defamation: fact, opinion and public officials",
+        "reading": "Defamation law requires analyzing publication, factual falsity, reputational harm, the applicable level of fault, privileges and damages. Under New York Times Co. v. Sullivan, a public official alleging defamation concerning official conduct ordinarily must prove actual malice—knowledge of falsity or reckless disregard—not merely spite. Pure opinion and substantial truth may also affect liability.",
+        "problem": "A city official sues a newspaper for a factual assertion about official conduct. Analyze evidence of falsity and editorial knowledge, distinguish rhetorical opinion, and identify the constitutional fault standard.",
+        "question": "What does actual malice mean here?",
+        "options": [
+          "Personal hatred alone",
+          "Negligence in all circumstances",
+          "Knowledge of falsity or reckless disregard of truth"
+        ],
+        "answer": 2,
+        "why": "The constitutional actual-malice test concerns the publisher's knowledge or recklessness about falsity."
       }
     ]
   },
@@ -477,6 +505,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Rule 23 requires meaningful commonality and other independent elements."
+      },
+      {
+        "id": "L2-3-12",
+        "title": "Federal subject-matter jurisdiction: supplemental claims",
+        "reading": "Under 28 U.S.C. § 1367, supplemental jurisdiction may extend to qualifying claims sharing a common nucleus of operative fact with a claim invoking original federal jurisdiction, subject to statutory exceptions and discretionary decline grounds. Distinguish supplemental subject-matter jurisdiction from personal jurisdiction, venue and joinder.",
+        "problem": "A federal discrimination case includes a related state tort claim and a separate unrelated lease dispute. Analyze original jurisdiction, common facts, § 1367 limits, and what happens if federal claims are dismissed.",
+        "question": "Which additional claim most plausibly qualifies?",
+        "options": [
+          "An unrelated dispute about a car loan",
+          "A state claim arising from the same events as the federal claim",
+          "Any claim filed by the same plaintiff"
+        ],
+        "answer": 1,
+        "why": "Supplemental jurisdiction generally requires a sufficiently related factual nucleus."
       }
     ]
   },
@@ -637,6 +679,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Due process requires proof beyond a reasonable doubt of each element."
+      },
+      {
+        "id": "L2-4-12",
+        "title": "Search warrants and the particularity requirement",
+        "reading": "The Fourth Amendment generally requires warrants to be supported by probable cause and to particularly describe the place to be searched and the persons or things to be seized. Evaluate magistrate authorization, nexus, staleness, execution and recognized exceptions. A broad category such as all records may raise overbreadth questions depending on supported facts.",
+        "problem": "Officers seek permission to search every electronic device in a business after evidence concerns a single employee's accounting records. Evaluate probable cause, particularity, scope, practical execution and motions challenging seized material.",
+        "question": "Which issue is central to the warrant's scope?",
+        "options": [
+          "Whether the officers prefer digital files",
+          "Whether the place and things are particularly described based on probable cause",
+          "Whether the owner runs a corporation"
+        ],
+        "answer": 1,
+        "why": "Particularity and a sufficient nexus limit generalized searches."
       }
     ]
   },
@@ -811,6 +867,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Neutrality and general applicability guide Free Exercise analysis."
+      },
+      {
+        "id": "L2-5-13",
+        "title": "Establishment Clause and historical analysis",
+        "reading": "The Establishment Clause constrains government involvement in religion. In Kennedy v. Bremerton School District the Supreme Court rejected reliance on the Lemon and endorsement tests and directed analysis informed by historical practices and understandings. Students must identify the precise governmental conduct, coercion concerns and later developments rather than applying superseded formulas mechanically.",
+        "problem": "A school district adopts a policy that officials may lead students in a mandatory religious exercise. Evaluate government involvement, coercion and the difference between private individual expression and official school activity.",
+        "question": "What distinction is central?",
+        "options": [
+          "Private protected religious expression versus government-directed religious activity",
+          "The popularity of the religion",
+          "Only whether activities take place outdoors"
+        ],
+        "answer": 0,
+        "why": "Government sponsorship and coercion differ from genuine private expression."
       }
     ]
   },
@@ -985,6 +1055,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Servitude enforcement depends on the legal interest and controlling jurisdiction."
+      },
+      {
+        "id": "L2-6-13",
+        "title": "Land use regulation and regulatory takings",
+        "reading": "Regulatory-takings claims are different from physical appropriation. Penn Central provides an ad hoc framework examining economic impact, investment-backed expectations and character of government action. Lucas and other doctrines address specific contexts. Zoning restrictions are not automatically unconstitutional merely because they reduce value.",
+        "problem": "A city rezones a parcel to restrict height and the owner alleges a large decline in resale value. Analyze economic impact, expectations, governmental action, remaining uses and applicable state takings law.",
+        "question": "Which statement best characterizes Penn Central?",
+        "options": [
+          "Every zoning change requires full compensation",
+          "Loss in resale value automatically proves a taking",
+          "An individualized, multi-factor regulatory-takings analysis"
+        ],
+        "answer": 2,
+        "why": "Penn Central uses contextual factors rather than a categorical price-drop rule."
       }
     ]
   },
@@ -1145,6 +1229,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Direct verification avoids misleading quotations and inaccurate authority."
+      },
+      {
+        "id": "L2-7-12",
+        "title": "Negotiation ethics and candid legal advice",
+        "reading": "Lawyers must distinguish permissible advocacy from knowingly false representations of material fact or law. ABA Model Rule 4.1 addresses truthfulness to third persons, while Rule 1.4 and Rule 2.1 inform client communication and candid professional advice. Jurisdiction-specific adopted rules, exceptions and confidentiality duties require checking.",
+        "problem": "A client directs counsel to tell an opposing party an important document does not exist, even though counsel has reviewed it. Analyze duties of truthfulness, confidentiality and options for lawful negotiation.",
+        "question": "Which is the sound first response?",
+        "options": [
+          "Follow any client instruction without analysis",
+          "Verify governing ethics rules and avoid a knowingly false statement of material fact or law",
+          "Disclose every client secret publicly"
+        ],
+        "answer": 1,
+        "why": "Client advocacy does not authorize knowing material misrepresentation."
       }
     ]
   }
