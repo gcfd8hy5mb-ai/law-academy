@@ -59,6 +59,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "An unsatisfied condition can affect when a duty becomes due."
+      },
+      {
+        "id": "L2-1-5",
+        "title": "Integrated case: Contract repudiation and cover",
+        "reading": "UCC Article 2 repudiation and cover; distinguish notice, good faith and commercially reasonable replacement from an assumed automatic recovery.",
+        "problem": "An equipment distributor agrees in writing to deliver 200 standard machines for $600 each on June 1. On May 20 it announces it will not ship. The buyer obtains replacement goods at $670 each after requesting quotes from three suppliers. The seller contends the buyer did not wait for the delivery date.\n\nWritten assignment: Identify whether the governing law treats the transaction as a sale of goods, determine whether a clear repudiation occurred, analyze reasonable cover and potential damages, and develop the seller's strongest rebuttal. State missing facts and the controlling statutory provisions.",
+        "question": "What is the strongest first step in analyzing this scenario?",
+        "options": [
+          "Choose the outcome that favors your client",
+          "Identify governing rules, disputed facts and the opposing argument",
+          "Assume the facts not in evidence"
+        ],
+        "answer": 1,
+        "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
       }
     ]
   },
@@ -121,6 +135,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Public-official claims implicate constitutional actual-malice doctrine."
+      },
+      {
+        "id": "L2-2-5",
+        "title": "Integrated case: Negligence and multiple causes",
+        "reading": "State tort law controls; separate evidence from competing causal inferences and evaluate both parties.",
+        "problem": "A supermarket received a written warning about a freezer leaking at 1 p.m. At 2 p.m. a customer fell nearby. The camera has a six-minute gap, and the customer wore worn shoes. The store alleges the fall was caused by the shoes rather than the liquid.\n\nWritten assignment: Identify duty, breach, notice, factual causation, scope of liability, damages and any comparative fault issue. Do not equate injury with proof of negligence.",
+        "question": "What is the strongest first step in analyzing this scenario?",
+        "options": [
+          "Choose the outcome that favors your client",
+          "Identify governing rules, disputed facts and the opposing argument",
+          "Assume the facts not in evidence"
+        ],
+        "answer": 1,
+        "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
       }
     ]
   },
@@ -183,6 +211,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Adequacy is one of Rule 23(a)'s prerequisites, but it alone does not justify certification."
+      },
+      {
+        "id": "L2-3-5",
+        "title": "Integrated case: Removal and remand",
+        "reading": "28 U.S.C. §§ 1332, 1441 and 1447; do not treat removal as creating jurisdiction.",
+        "problem": "A consumer files a state-law complaint in a Texas court seeking $60,000 from a Texas-incorporated and Texas-principal-place-of-business company. The company removes the suit to federal court and asserts diversity jurisdiction without another federal claim.\n\nWritten assignment: Analyze subject-matter jurisdiction and removal, identifying complete diversity, amount in controversy, and the forum-defendant rule when relevant. Explain how the plaintiff may challenge improper removal.",
+        "question": "What is the strongest first step in analyzing this scenario?",
+        "options": [
+          "Choose the outcome that favors your client",
+          "Identify governing rules, disputed facts and the opposing argument",
+          "Assume the facts not in evidence"
+        ],
+        "answer": 1,
+        "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
       }
     ]
   },
@@ -245,6 +287,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Self-defense turns on legally relevant necessity and proportionality."
+      },
+      {
+        "id": "L2-4-5",
+        "title": "Integrated case: Attempt versus preparation",
+        "reading": "Analyze mens rea, corroborative conduct, state attempt test and any statutory defense.",
+        "problem": "A defendant purchases tools, surveys a warehouse, and drives to the location to commit theft, but is stopped before entering. The state statute defines attempt as intent plus a substantial step. Police find a text stating the defendant planned to back out.\n\nWritten assignment: Argue whether the conduct qualifies as a substantial step and whether abandonment or renunciation can be raised. Separate statutory elements from disputed facts; do not assume abandonment applies in every jurisdiction.",
+        "question": "What is the strongest first step in analyzing this scenario?",
+        "options": [
+          "Choose the outcome that favors your client",
+          "Identify governing rules, disputed facts and the opposing argument",
+          "Assume the facts not in evidence"
+        ],
+        "answer": 1,
+        "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
       }
     ]
   },
@@ -307,6 +363,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Process protections require qualifying governmental deprivation of a protected interest."
+      },
+      {
+        "id": "L2-5-5",
+        "title": "Integrated case: Public forum and expressive permits",
+        "reading": "First Amendment forum doctrine; assess the real reason for denial and distinguish viewpoint discrimination from neutral time-place-manner regulation.",
+        "problem": "A municipality permits public-park demonstrations but requires applications for groups larger than 50. A group receives a denial referencing the group's political message; the city later claims staff shortages. Another group of comparable size received a permit that day.\n\nWritten assignment: Identify government action, public-forum status, viewpoint discrimination concerns, legitimate neutral interests and comparator evidence. Analyze likely constitutional challenges while acknowledging open facts.",
+        "question": "What is the strongest first step in analyzing this scenario?",
+        "options": [
+          "Choose the outcome that favors your client",
+          "Identify governing rules, disputed facts and the opposing argument",
+          "Assume the facts not in evidence"
+        ],
+        "answer": 1,
+        "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
       }
     ]
   },
@@ -369,6 +439,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "An easement by necessity commonly depends on unity of ownership and necessity when parcels were separated."
+      },
+      {
+        "id": "L2-6-5",
+        "title": "Integrated case: Competing deeds and notice",
+        "reading": "Recording-act priority requires careful local-law and fact analysis; signing later does not alone settle title.",
+        "problem": "Owner sells Blackacre to Buyer A, who does not record. Owner then signs a second deed to Buyer B, who pays value without actual knowledge, and B records first. The jurisdiction uses a race-notice recording statute; A alleges B should have known about visible occupation.\n\nWritten assignment: Determine whether Buyer B qualifies as a bona fide purchaser under the statute. Analyze notice (actual, inquiry, record), timing and recording. Explain how occupation may change the outcome.",
+        "question": "What is the strongest first step in analyzing this scenario?",
+        "options": [
+          "Choose the outcome that favors your client",
+          "Identify governing rules, disputed facts and the opposing argument",
+          "Assume the facts not in evidence"
+        ],
+        "answer": 1,
+        "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
       }
     ]
   },
@@ -431,6 +515,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Responsible research verifies authority and candidly addresses uncertainty."
+      },
+      {
+        "id": "L2-7-5",
+        "title": "Integrated case: Predictive memo from conflicting authorities",
+        "reading": "Assess predictive reasoning, adverse authority, citation accuracy, procedural posture and facts that would change advice.",
+        "problem": "A client wants to terminate a service contract after a missed estimated deadline. Two appellate cases applying similar contract language reached different results because one contract treated time as essential and the other did not. The full signed agreement and jurisdiction are missing.\n\nWritten assignment: Draft an objective memorandum with question presented, brief answer, facts, governing rules, case synthesis, both parties' arguments, and a source-check log. Explain why neither decision can be declared controlling yet.",
+        "question": "What is the strongest first step in analyzing this scenario?",
+        "options": [
+          "Choose the outcome that favors your client",
+          "Identify governing rules, disputed facts and the opposing argument",
+          "Assume the facts not in evidence"
+        ],
+        "answer": 1,
+        "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
       }
     ]
   }
