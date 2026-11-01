@@ -421,3 +421,16 @@ test('Real court cases require reasoned prediction before revealing verified out
  await expect(page.locator('#realcaseResult0')).toContainText('Virginia Supreme Court');
  await expect(page.locator('#realcaseResult0 a')).toHaveAttribute('href',/law.justia.com/);
 });
+
+
+test('Real precedent is taught within its specific 1L subject lesson',async({page})=>{
+ await page.goto('/');await page.locator('[data-level="1"]').click();
+ await page.locator('[data-l2course="0"]').click();await page.locator('[data-l2lesson="0"]').click();
+ await expect(page.getByText('Real case: Lucy v. Zehmer')).toBeVisible();
+ await page.locator('#inlineCaseReveal').click();await expect(page.locator('#inlineCaseResult')).toContainText('at least 35 characters');
+ await page.locator('#inlineCaseReason').fill('The outward signatures and conduct suggest objective agreement regardless of any private joke.');
+ await page.locator('#inlineCaseReveal').click();await expect(page.locator('#inlineCaseResult')).toContainText('court');
+ await page.locator('#l2back').click();await page.locator('#l2back').click();
+ await page.locator('[data-l2course="4"]').click();await page.locator('[data-l2lesson="5"]').click();
+ await expect(page.getByText('Real case: Riley v. California')).toBeVisible();
+});
