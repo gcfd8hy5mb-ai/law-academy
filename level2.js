@@ -227,6 +227,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Formation depends on reasonable notice and objective assent under governing law."
+      },
+      {
+        "id": "L2-1-17",
+        "title": "Capstone: Commercial agreement and breach",
+        "reading": "CAPSTONE METHOD: Classify the contract, prove formation, identify parties and relevant terms, assess defenses, determine breach and materiality, then select remedies. Use UCC Article 2 where the dominant purpose is sale of goods; cite relevant state enactments. Analyze disputed evidence and write both parties' arguments. A correct answer must not assume a result from one fact alone. RUBRIC (20 points): governing law 3, formation and terms 4, performance/breach 4, defenses 3, damage proof and mitigation 4, balanced conclusion 2.",
+        "problem": "Two merchants negotiate sale of 600 refrigerators. A seller's acknowledgement modifies delivery and adds an arbitration term; the buyer proceeds with partial shipments, later rejects several damaged units and claims lost profits. Draft 800–1,200 words identifying applicable law, contract terms, acceptance or rejection, cover, proof of consequential loss, defenses and alternative outcomes.",
+        "question": "Which should be determined before calculating damages?",
+        "options": [
+          "Whether contract terms and legally actionable breach are established",
+          "Whether the business is large",
+          "Whether damages sound fair"
+        ],
+        "answer": 0,
+        "why": "The legal rights and breach theory determine available remedies."
       }
     ]
   },
@@ -457,6 +471,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "An adverse outcome alone is not sufficient proof of professional negligence."
+      },
+      {
+        "id": "L2-2-17",
+        "title": "Capstone: Multi-party tort litigation",
+        "reading": "CAPSTONE METHOD: Identify distinct claims and defendants; analyze duty, breach, factual cause, scope of liability, injuries, intentional conduct, comparative fault and multiple-actor allocation. Distinguish strict products liability from ordinary negligence. Treat defendant responsibility and damages as separate inquiries. RUBRIC (20): claims 3, duty and breach 4, factual and legal causation 4, defenses/allocation 4, damages/evidence 3, balanced reasoning 2.",
+        "problem": "A restaurant patron slips on a leaking refrigeration unit, collides with a delivery employee, and is injured by a defective rack. Maintenance records and witness accounts conflict. Draft a 900-word plaintiff and defense memorandum, addressing property operator, employee and manufacturer separately.",
+        "question": "What is the strongest analytical structure?",
+        "options": [
+          "Assume each party is equally responsible",
+          "Analyze each actor, claim, causation and defense separately",
+          "Assume a defect proves every defendant negligent"
+        ],
+        "answer": 1,
+        "why": "Multiple defendants require individualized liability analysis."
       }
     ]
   },
@@ -687,6 +715,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Removal requires statutory grounds and compliance with applicable limitations."
+      },
+      {
+        "id": "L2-3-17",
+        "title": "Capstone: Federal litigation roadmap",
+        "reading": "CAPSTONE METHOD: Assess subject-matter jurisdiction, personal jurisdiction, venue and service; pleadings and responsive motions; Erie and choice of law; joinder, discovery, summary judgment, trial, preclusion and appeal. State the legal rule at each stage and avoid conflating threshold and merits decisions. RUBRIC (20): original jurisdiction 4, personal jurisdiction 3, pleading 3, discovery/motions 4, trial or preclusion 3, case strategy and accuracy 3.",
+        "problem": "A Texas corporation sues an Oregon supplier and a Texas distributor for $120,000 following a product failure. Claims include state contracts and negligence; a later class complaint seeks to join purchasers. Write a federal-court litigation plan, identifying disputed diversity and joinder issues, removability, discovery and dispositive-motion choices.",
+        "question": "Which comes before evaluating summary judgment?",
+        "options": [
+          "Confirm the court's authority and procedural posture",
+          "Assume trial is mandatory",
+          "Ignore diversity when multiple defendants appear"
+        ],
+        "answer": 0,
+        "why": "Jurisdiction and procedure are threshold issues."
       }
     ]
   },
@@ -917,6 +959,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Booker made the federal Sentencing Guidelines advisory, subject to statutory rules."
+      },
+      {
+        "id": "L2-4-17",
+        "title": "Capstone: Criminal liability and constitutional safeguards",
+        "reading": "CAPSTONE METHOD: Parse statutory elements and mental states, separate parties and offenses, then assess attempt, accomplice liability, conspiracy and defenses. Evaluate warrant requirements, interrogation and evidence suppression without treating every violation as automatic dismissal. RUBRIC (20): statutory elements 4, intent/evidence 4, parties and inchoate crimes 3, constitutional issues 4, defenses and burdens 3, balanced result 2.",
+        "problem": "Three people plan a warehouse theft; one withdraws, one enters, one drives, and officers recover a phone after a contested search. One suspect made a statement during questioning. Draft separate charge, defense and suppression analyses with alternative findings.",
+        "question": "What must the prosecution prove?",
+        "options": [
+          "The accusation's popularity",
+          "Each required criminal element beyond a reasonable doubt",
+          "That the defense has no witnesses"
+        ],
+        "answer": 1,
+        "why": "The prosecution carries the constitutional element burden."
       }
     ]
   },
@@ -1161,6 +1217,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Message-based distinctions are central to content-based review."
+      },
+      {
+        "id": "L2-5-18",
+        "title": "Capstone: Government power and individual rights",
+        "reading": "CAPSTONE METHOD: Identify state action, standing and reviewability; distinguish federal enumerated powers from state authority; identify the implicated right, applicable scrutiny or doctrine, and possible remedy. Avoid using one constitutional test for all clauses. RUBRIC (20): threshold 3, government authority 3, precise right 4, standard of review 4, fact application 4, remedy and uncertainty 2.",
+        "problem": "A city restricts signs by message category, denies permits to religious gatherings but exempts several comparable secular groups, and records phone location data in an investigation. Draft separate analyses of speech, religion and search issues, including government defenses.",
+        "question": "What is necessary before selecting the constitutional scrutiny standard?",
+        "options": [
+          "Identify government conduct and the specific constitutional claim",
+          "Assume strict scrutiny always applies",
+          "Treat all private speech as government speech"
+        ],
+        "answer": 0,
+        "why": "The relevant right and governmental action determine the doctrine."
       }
     ]
   },
@@ -1405,6 +1475,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Scope turns on the easement's legal basis and permissible burden."
+      },
+      {
+        "id": "L2-6-18",
+        "title": "Capstone: Complex land ownership dispute",
+        "reading": "CAPSTONE METHOD: Trace the chain of title and present/future estates; evaluate deed delivery, recordation, notice and priority; then assess easements, covenants, possession, lease obligations, zoning and takings claims. Explain which facts and state statutes could change priority. RUBRIC (20): estates/title 4, recording priority 4, land-use rights 4, possession/lease 3, remedies 3, alternative reasoning 2.",
+        "problem": "An owner conveys land to a buyer but later records a conflicting deed, while a neighbor claims a path easement and tenants complain of unsafe conditions. A municipality announces a new zoning limit. Prepare a fact chronology and a 1,000-word issue-spotted memorandum.",
+        "question": "Which evidence is essential for a recording dispute?",
+        "options": [
+          "The deeds, dates, notice and governing recording statute",
+          "Only the last buyer's opinion",
+          "The property's paint color"
+        ],
+        "answer": 0,
+        "why": "Recordation and notice determine priority under the governing regime."
       }
     ]
   },
@@ -1635,6 +1719,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Fact-sensitive application earns more analytical value than unsupported conclusions."
+      },
+      {
+        "id": "L2-7-17",
+        "title": "Capstone: Research memorandum and oral defense",
+        "reading": "CAPSTONE METHOD: Frame an answerable question, identify jurisdiction, use authoritative statutes and decisions, verify continuing validity, distinguish factual and procedural posture, and evaluate unfavorable law candidly. Present an objective memorandum and then a persuasive oral defense for the other side. RUBRIC (20): issue 2, sources 4, case briefs and treatment 4, rule synthesis 3, fact application 4, citation and candor 3.",
+        "problem": "Using an assigned multi-jurisdictional dispute involving contract notice and tort injury, identify at least four primary authorities, brief two, verify subsequent history, write an 800-word objective memo and prepare a three-minute opposing argument.",
+        "question": "Which submission demonstrates reliable research?",
+        "options": [
+          "An uncited confident prediction",
+          "A list of titles without reading the decisions",
+          "Verified controlling sources with adverse authority and qualified reasoning"
+        ],
+        "answer": 2,
+        "why": "Sound legal work requires verification and balanced application."
       }
     ]
   }
