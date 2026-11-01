@@ -163,7 +163,7 @@ const level2Source=readFileSync(new URL('../level2.js',import.meta.url),'utf8');
 new Script(level2Source,{filename:'level2.js'});
 const level2Courses=runInNewContext('const window={};'+level2Source.slice(0,level2Source.indexOf('const L2_KEY='))+'\nwindow.LAW_LEVEL2');
 assert.equal(level2Courses.length,7,'Level 2 must launch with seven academic subjects');
-assert.equal(level2Courses.flatMap(c=>c.lessons).length,58,'Level 2 must include fifty-eight authored lessons');
+assert.equal(level2Courses.flatMap(c=>c.lessons).length,65,'Level 2 must include sixty-five authored lessons');
 for(const l of level2Courses.flatMap(c=>c.lessons)){
  assert.ok(l.reading.length>170&&l.problem.length>100,'Incomplete 1L doctrine or application: '+l.id);
  assert.ok(Number.isInteger(l.answer)&&l.answer>=0&&l.answer<l.options.length,'Invalid 1L answer: '+l.id);
@@ -195,3 +195,6 @@ console.log('PASS: 51 first-year law lessons and matching historical case exampl
 
 assert.ok(level2Source.includes('DOCTRINE_CASES')&&level2Source.includes('Bell Atlantic Corp. v. Twombly')&&level2Source.includes('United States v. Lopez'),'Pleading and commerce precedents missing');
 console.log('PASS: 58 Level 2 lessons and doctrine-linked pleading and commerce cases.');
+
+assert.ok(level2Source.includes('NEXT_CASES')&&level2Source.includes('Celotex Corp. v. Catrett')&&level2Source.includes('Miranda v. Arizona'),'New lesson-linked cases are absent');
+console.log('PASS: 65 authored 1L lessons with Celotex/Miranda examples.');
