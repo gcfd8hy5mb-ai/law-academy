@@ -1,4 +1,4 @@
-// First-year law (Level 2) authored launch batch. Separate local progress from Pre-Law.
+// Level 2 first-year law curriculum
 window.LAW_LEVEL2=[
   {
     "id": "L2-1",
@@ -31,6 +31,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Contractual terms and material performance determine breach and available remedies."
+      },
+      {
+        "id": "L2-1-3",
+        "title": "Promissory estoppel and reliance",
+        "reading": "A promise may be enforceable without conventional consideration when reasonably foreseeable reliance occurs and injustice can be avoided only by enforcement; the remedy depends on applicable law.",
+        "problem": "An employer promises relocation reimbursement and an applicant moves before the offer is withdrawn. Identify promise, reasonable reliance, detriment and possible remedies.",
+        "question": "Which factor is central to promissory estoppel?",
+        "options": [
+          "Whether the promise was printed",
+          "Reasonable, detrimental reliance on a promise",
+          "Whether the parties are relatives"
+        ],
+        "answer": 1,
+        "why": "Promissory estoppel turns on qualifying reliance and the demands of justice."
       }
     ]
   },
@@ -65,6 +79,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Consent is evaluated based on its legally relevant scope."
+      },
+      {
+        "id": "L2-2-3",
+        "title": "Strict liability and products",
+        "reading": "Products liability can involve manufacturing defects, design defects and inadequate warnings. Liability tests and defenses differ by state, and strict liability does not mean every product-caused injury is compensable.",
+        "problem": "A sealed appliance sparks during normal use. Compare manufacturing defect, design defect, warnings, causation and misuse.",
+        "question": "What must ordinarily be established in a product defect claim?",
+        "options": [
+          "A legally relevant defect and causation",
+          "Only that an injury happened",
+          "That the maker intended harm"
+        ],
+        "answer": 0,
+        "why": "A product injury requires proof fitting the governing liability theory."
       }
     ]
   },
@@ -99,6 +127,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Rule 26 applies relevance, privilege and proportionality limits."
+      },
+      {
+        "id": "L2-3-3",
+        "title": "Preclusion and final judgments",
+        "reading": "Claim preclusion can prevent relitigation of claims resolved by a valid final judgment, while issue preclusion can prevent relitigation of particular issues actually litigated and necessarily decided. Governing jurisdiction and exceptions matter.",
+        "problem": "A claimant loses a contract action and files a second suit about the same transaction. Examine identity of parties, finality, claim scope and available exceptions.",
+        "question": "Which doctrine addresses relitigation of the same claim after final judgment?",
+        "options": [
+          "Personal jurisdiction",
+          "Issue preservation",
+          "Claim preclusion"
+        ],
+        "answer": 2,
+        "why": "Claim preclusion concerns qualifying claims previously resolved by final judgment."
       }
     ]
   },
@@ -133,6 +175,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Charges cannot be accurately classified without the statutory elements and causation."
+      },
+      {
+        "id": "L2-4-3",
+        "title": "Attempt and accomplice liability",
+        "reading": "Attempt often requires intent to commit a target crime plus conduct beyond mere preparation, under the governing test. Accomplice liability typically requires purposeful assistance or encouragement under the jurisdiction's standard.",
+        "problem": "Someone buys equipment but abandons a plan before confronting the target. Identify the jurisdiction's attempt test, acts, intent and abandonment rules.",
+        "question": "Why is preparation versus substantial step important?",
+        "options": [
+          "It determines courtroom seating",
+          "Attempt statutes distinguish preparation from punishable conduct",
+          "It automatically proves the completed offense"
+        ],
+        "answer": 1,
+        "why": "Attempt hinges on intent and legally sufficient conduct."
       }
     ]
   },
@@ -167,6 +223,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Government viewpoint discrimination is central to the analysis."
+      },
+      {
+        "id": "L2-5-3",
+        "title": "Equal protection and scrutiny",
+        "reading": "Equal protection analysis identifies government action, the classification, the relevant standard of review and the fit between governmental ends and chosen means. The level of review depends on doctrine and facts.",
+        "problem": "A city treats similarly situated applicants differently under a permit policy. Identify classification, government rationale, comparators and relevant standard.",
+        "question": "What should the analysis determine before deciding validity?",
+        "options": [
+          "The applicable classification and standard of scrutiny",
+          "The applicant's popularity",
+          "Only the date of the ordinance"
+        ],
+        "answer": 0,
+        "why": "Classification and governing scrutiny shape equal protection review."
       }
     ]
   },
@@ -201,6 +271,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Housing protections and eviction procedures vary substantially by location."
+      },
+      {
+        "id": "L2-6-3",
+        "title": "Recording acts and competing purchasers",
+        "reading": "Recording statutes can determine priority among competing claimants to land. Notice, race and race-notice approaches differ by state; a purchaser's notice and timing can change the result.",
+        "problem": "An owner deeds the same property to two buyers. Compare notice, recordation timing and whether each buyer paid value.",
+        "question": "What information is essential?",
+        "options": [
+          "Only which deed is longer",
+          "Only the street address",
+          "Governing recording act, notice and recording chronology"
+        ],
+        "answer": 2,
+        "why": "Priority depends on the applicable statute and buyers' facts."
       }
     ]
   },
@@ -235,6 +319,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Objective legal writing must disclose material uncertainty and adverse authority."
+      },
+      {
+        "id": "L2-7-3",
+        "title": "Legal memorandum synthesis",
+        "reading": "A persuasive research product accurately states binding rules, distinguishes adverse cases and applies them to each material fact. A law student's memo should separate objective risk prediction from client advocacy.",
+        "problem": "Write a neutral memorandum assessing two conflicting authorities on a consumer transaction, including citation verification and missing facts.",
+        "question": "What improves credibility in a predictive memorandum?",
+        "options": [
+          "Ignoring bad facts",
+          "Accurately considering unfavorable controlling authority",
+          "Assuming citations are valid"
+        ],
+        "answer": 1,
+        "why": "Objective writing requires honest treatment of material adverse authority."
       }
     ]
   }
