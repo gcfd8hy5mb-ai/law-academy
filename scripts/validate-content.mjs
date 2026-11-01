@@ -163,7 +163,7 @@ const level2Source=readFileSync(new URL('../level2.js',import.meta.url),'utf8');
 new Script(level2Source,{filename:'level2.js'});
 const level2Courses=runInNewContext('const window={};'+level2Source.slice(0,level2Source.indexOf('const L2_KEY='))+'\nwindow.LAW_LEVEL2');
 assert.equal(level2Courses.length,7,'Level 2 must launch with seven academic subjects');
-assert.equal(level2Courses.flatMap(c=>c.lessons).length,86,'Level 2 must include eighty-six authored lessons');
+assert.equal(level2Courses.flatMap(c=>c.lessons).length,93,'Level 2 must include ninety-three authored lessons');
 for(const l of level2Courses.flatMap(c=>c.lessons)){
  assert.ok(l.reading.length>170&&l.problem.length>100,'Incomplete 1L doctrine or application: '+l.id);
  assert.ok(Number.isInteger(l.answer)&&l.answer>=0&&l.answer<l.options.length,'Invalid 1L answer: '+l.id);
