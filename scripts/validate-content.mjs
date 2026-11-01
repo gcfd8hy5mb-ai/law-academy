@@ -216,3 +216,6 @@ assert.ok(level2Source.includes('PRIVACY_LESSON_CASES')&&level2Source.includes('
 assert.equal(level2Courses.filter(c=>c.lessons.some(l=>l.title.startsWith('Capstone:'))).length,7,'Each Level 2 course requires a capstone');
 assert.ok(level2Courses.every(c=>c.lessons[0].reading.includes('DETAILED METHOD')),'Each foundational 1L lesson requires worked analysis');
 console.log('PASS: Seven 1L capstones and detailed foundational worked examples.');
+
+assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(1,4).filter(l=>l.reading.includes('ADVANCED REASONING LAB')&&l.problem.includes('WRITTEN DELIVERABLE')).length,0),21,'21 early 1L lessons require advanced reasoning labs and written deliverables');
+console.log('PASS: 21 enhanced early-course lessons retain written legal analysis tasks.');
