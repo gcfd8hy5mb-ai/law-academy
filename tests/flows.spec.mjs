@@ -354,3 +354,22 @@ test('Pre-Law source guidance identifies controlling law limitations',async({pag
  await page.locator('[data-applied="2"]').click();
  await expect(page.getByText(/Identify the state before selecting binding statutes/)).toBeVisible();
 });
+
+
+test('Level 2 first-year law lessons open and save a knowledge check',async({page})=>{
+ await page.goto('/');
+ await page.locator('[data-level="1"]').click();
+ await expect(page.getByRole('heading',{name:'1L Core Curriculum'})).toBeVisible();
+ await page.locator('[data-l2course="0"]').click();
+ await page.locator('[data-l2lesson="0"]').click();
+ await expect(page.getByRole('heading',{name:'Offer, acceptance and consideration'})).toBeVisible();
+ await page.locator('#l2draft').fill('The changed terms may be a counteroffer, depending on governing law.');
+ await page.locator('input[name="l2choice"][value="0"]').check();
+ await page.locator('#l2submit').click();
+ await expect(page.locator('#l2result')).toContainText('Correct.');
+ await page.reload();
+ await page.locator('[data-level="1"]').click();
+ await page.locator('[data-l2course="0"]').click();
+ await page.locator('[data-l2lesson="0"]').click();
+ await expect(page.locator('#l2draft')).toHaveValue(/changed terms may be a counteroffer/);
+});
