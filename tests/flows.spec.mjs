@@ -405,3 +405,19 @@ test('Level 2 practice exam requires seven responses before submitting',async({p
  await expect(page.locator('#l2exam0')).toBeDisabled();
  await expect(page.locator('#l2examClock')).toContainText('submitted');
 });
+
+
+test('Real court cases require reasoned prediction before revealing verified outcome',async({page})=>{
+ await page.goto('/');
+ await page.locator('[data-level="1"]').click();
+ await page.locator('#l2realcases').click();
+ await expect(page.getByRole('heading',{name:'Decide the Real Case'})).toBeVisible();
+ await expect(page.locator('[data-reveal]')).toHaveCount(5);
+ await page.locator('[data-reveal="0"]').click();
+ await expect(page.locator('#realcaseResult0')).toContainText('Select a prediction');
+ await page.locator('input[name="realcase0"][value="1"]').check();
+ await page.locator('#realcaseDraft0').fill('A reasonable person would view signed words as objective assent.');
+ await page.locator('[data-reveal="0"]').click();
+ await expect(page.locator('#realcaseResult0')).toContainText('Virginia Supreme Court');
+ await expect(page.locator('#realcaseResult0 a')).toHaveAttribute('href',/law.justia.com/);
+});
