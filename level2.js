@@ -213,6 +213,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Remedies compensate distinct interests without automatically cumulating duplicative awards."
+      },
+      {
+        "id": "L2-1-16",
+        "title": "Offer, acceptance and electronic contracting",
+        "reading": "Online contract formation requires a legally meaningful manifestation of assent. Courts examine notice of terms, placement of hyperlinks, button language and the user's affirmative conduct. Browsewrap, clickwrap and sign-in-wrap labels describe patterns, not automatic outcomes. Apply state formation law, applicable electronic-signature statutes and the evidence of the actual interface.",
+        "problem": "An online customer clicks a button labeled Continue below a faint hyperlink to an arbitration clause. Identify notice, assent, interface evidence, and arguments about enforceability. Contrast a conspicuous checkbox requiring agreement.",
+        "question": "Which evidence most directly tests formation?",
+        "options": [
+          "The interface's notice and user's manifestation of assent",
+          "The site's advertising budget",
+          "Whether the customer owns a smartphone"
+        ],
+        "answer": 0,
+        "why": "Formation depends on reasonable notice and objective assent under governing law."
       }
     ]
   },
@@ -429,6 +443,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Breach focuses on the reasonableness of conduct given known or knowable hazards."
+      },
+      {
+        "id": "L2-2-16",
+        "title": "Medical negligence and expert proof",
+        "reading": "Medical negligence generally applies professional standards of care rather than assuming an adverse result proves wrongdoing. Jurisdictions differ in expert-witness, certificate-of-merit and informed-consent requirements. Analyze the provider-patient relationship, breach, actual and legally relevant causation, comparative defenses and damages.",
+        "problem": "A patient experiences a recognized complication after a procedure. Records show disputed disclosures and differing expert views about treatment. Separate malpractice from informed-consent theories and identify what evidence is needed.",
+        "question": "Which statement best reflects malpractice analysis?",
+        "options": [
+          "A bad outcome automatically proves negligence",
+          "Expert and factual evidence may be required to establish breach and causation",
+          "Every complication is a strict-liability claim"
+        ],
+        "answer": 1,
+        "why": "An adverse outcome alone is not sufficient proof of professional negligence."
       }
     ]
   },
@@ -645,6 +673,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Online accessibility alone does not ordinarily establish universal general jurisdiction."
+      },
+      {
+        "id": "L2-3-16",
+        "title": "Removal and remand of civil cases",
+        "reading": "Removal permits certain defendants to transfer qualifying state-court actions to federal court under federal statutes. Federal-question and diversity pathways have different restrictions. Analyze the notice deadline, unanimity, forum-defendant rule, amount in controversy where applicable, and procedural versus jurisdictional remand objections.",
+        "problem": "A citizen of Texas sues a Texas corporation and an out-of-state corporation in Texas state court for a state-law contract claim. Analyze whether diversity removal is possible, how the forum-defendant rule applies, and what deadlines must be checked.",
+        "question": "What is the first analytical step?",
+        "options": [
+          "Assume any defendant can remove any state case",
+          "Determine a statutory basis for original federal jurisdiction and removal",
+          "Ask which courthouse is newer"
+        ],
+        "answer": 1,
+        "why": "Removal requires statutory grounds and compliance with applicable limitations."
       }
     ]
   },
@@ -861,6 +903,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Liability requires the jurisdiction's defined participation and culpability."
+      },
+      {
+        "id": "L2-4-16",
+        "title": "Sentencing and proportionality",
+        "reading": "Criminal sentencing follows governing statutes, constitutional constraints, and—in federal cases—consideration of the advisory Sentencing Guidelines and 18 U.S.C. § 3553(a). Distinguish statutory maximums, mandatory minimums, procedural reasonableness, substantive reasonableness and the limited reach of Eighth Amendment proportionality doctrines.",
+        "problem": "A federal judge treats the recommended Guidelines range as binding and refuses to consider an individualized defendant history. Analyze the source of sentencing authority, advisory status and potential procedural errors.",
+        "question": "Which statement correctly describes the federal Guidelines after Booker?",
+        "options": [
+          "They are generally advisory, not mandatory",
+          "They have been abolished",
+          "They always determine the precise sentence"
+        ],
+        "answer": 0,
+        "why": "Booker made the federal Sentencing Guidelines advisory, subject to statutory rules."
       }
     ]
   },
@@ -1091,6 +1147,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Katz rejected a purely physical-trespass conception of a Fourth Amendment search."
+      },
+      {
+        "id": "L2-5-17",
+        "title": "Freedom of speech and content-based restrictions",
+        "reading": "Speech restrictions targeting subject matter or viewpoint can trigger heightened First Amendment scrutiny. Analyze whether government action regulates speech, the forum, relevant exceptions and applicable standards. Reed v. Town of Gilbert illustrates a content-based sign code, but later cases address how to analyze particular regulatory contexts.",
+        "problem": "A town allows political signs for 30 days but religious-event signs for only two days. Determine how the categories operate, whether they are content-based and what justification and tailoring the government must show.",
+        "question": "Which feature especially suggests a content-based rule?",
+        "options": [
+          "Different limits depending on the message's subject",
+          "Uniform limits on sign dimensions",
+          "A rule applying to all signs regardless of topic"
+        ],
+        "answer": 0,
+        "why": "Message-based distinctions are central to content-based review."
       }
     ]
   },
@@ -1321,6 +1391,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Co-owner financial rights depend on the estate and applicable local law."
+      },
+      {
+        "id": "L2-6-17",
+        "title": "Easements: creation, scope and termination",
+        "reading": "An easement grants a nonpossessory land-use right. Creation may occur by express grant, implication, necessity or prescription under differing legal tests. Determine benefiting and burdened estates, scope, reasonable use, overburdening, relocation rights and termination by release, merger, abandonment or other recognized doctrines.",
+        "problem": "A deed grants access for a farm lane, but the dominant owner later opens a commercial event venue increasing traffic. Analyze language, foreseeable evolution, burdens and possible remedies.",
+        "question": "What matters most to scope?",
+        "options": [
+          "The easement's creation terms and governing interpretation",
+          "The dominant owner's popularity",
+          "The age of the neighbor's car"
+        ],
+        "answer": 0,
+        "why": "Scope turns on the easement's legal basis and permissible burden."
       }
     ]
   },
@@ -1537,6 +1621,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Competent legal work requires correction of material authority errors."
+      },
+      {
+        "id": "L2-7-16",
+        "title": "Building an issue-spotting answer under time pressure",
+        "reading": "Use a disciplined IRAC or CREAC structure: identify each claim, state the governing rule and relevant jurisdiction, apply both favorable and adverse facts, and reach a qualified conclusion. Allocate time by legal significance, distinguish threshold procedural issues from merits, and avoid reciting doctrine without applying it.",
+        "problem": "A hypothetical combines an online contract, an injury during delivery and a dispute about federal court jurisdiction. Prepare an issue checklist before drafting three concise analyses with a counterargument in each.",
+        "question": "What most improves an issue-spotting exam?",
+        "options": [
+          "Listing every doctrine regardless of facts",
+          "Applying governing elements to specific facts and counterarguments",
+          "Writing only a confident conclusion"
+        ],
+        "answer": 1,
+        "why": "Fact-sensitive application earns more analytical value than unsupported conclusions."
       }
     ]
   }
