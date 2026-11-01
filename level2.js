@@ -87,6 +87,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Each alleged defense requires elements, proof and legally available relief."
+      },
+      {
+        "id": "L2-1-7",
+        "title": "Third-party beneficiaries and assignment",
+        "reading": "Contract rights may be enforced by qualifying intended beneficiaries, while incidental beneficiaries generally lack enforcement rights. Assignment of rights differs from delegation of performance and may be limited by contract, statute, public policy, or material alteration of risk. Analyze vesting, defenses, and consent under the applicable law.",
+        "problem": "A developer promises a contractor to pay an identified supplier directly, then assigns payment duties to another company. Determine whether the supplier is intended to benefit, whether rights vested, and whether assignment or delegation changes anyone's obligations.",
+        "question": "Which distinction matters first?",
+        "options": [
+          "Whether every beneficiary is automatically entitled to sue",
+          "Intended versus incidental beneficiary status",
+          "Whether the contract was emailed"
+        ],
+        "answer": 1,
+        "why": "Only qualifying intended beneficiaries ordinarily have enforcement rights."
       }
     ]
   },
@@ -177,6 +191,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Legal fault assessment requires causation and scope-of-liability analysis."
+      },
+      {
+        "id": "L2-2-7",
+        "title": "Duty and negligence per se",
+        "reading": "A safety statute may supply a duty or standard of care under negligence-per-se doctrine when the plaintiff belongs to the protected class and suffers the type of harm the statute seeks to prevent. Excuses, causation, and state-law treatment remain important; statutory violation is not automatically full liability.",
+        "problem": "A building operator violates a fire-exit regulation and a visitor is injured in an unrelated fall. Identify the regulatory purpose, protected class, causal relationship, excuses and common-law duties.",
+        "question": "Which is most important before applying negligence per se?",
+        "options": [
+          "The statutory purpose and its relationship to the injury",
+          "Whether the operator earns a profit",
+          "Whether the plaintiff has a lawyer"
+        ],
+        "answer": 0,
+        "why": "The statute's protective purpose and causation constrain the theory."
       }
     ]
   },
@@ -267,6 +295,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "The two jurisdictional categories use distinct tests."
+      },
+      {
+        "id": "L2-3-7",
+        "title": "Federal-state choice of law and Erie",
+        "reading": "Erie requires federal diversity courts to apply state substantive law and federal procedural rules, subject to the Rules Enabling Act, valid Federal Rules, and doctrinal refinements. Avoid the categorical claim that any state rule labeled procedural must apply; determine whether federal and state directives conflict and which legal source controls.",
+        "problem": "A diversity action involves a federal pleading rule and a stricter state requirement. Analyze whether a Federal Rule answers the disputed question, its validity, and potential forum shopping and inequitable administration concerns.",
+        "question": "Which is the correct starting point?",
+        "options": [
+          "Assume federal courts can invent general common law",
+          "Ignore any Federal Rule",
+          "Identify the conflicting rule sources and governing Erie framework"
+        ],
+        "answer": 2,
+        "why": "Erie and its progeny require source-specific analysis."
       }
     ]
   },
@@ -357,6 +399,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "The prosecution must demonstrate inevitable lawful discovery under the applicable standard."
+      },
+      {
+        "id": "L2-4-7",
+        "title": "Fourth Amendment exceptions and warrant requirements",
+        "reading": "The Fourth Amendment generally prefers warrants for searches but recognizes carefully defined exceptions, such as consent, exigent circumstances, automobile searches, and some searches incident to lawful arrest. Each requires factual predicates. A valid arrest alone does not generally authorize searching cellphone digital content under Riley.",
+        "problem": "Police enter a home without a warrant claiming urgent danger and later search a laptop. Analyze the facts allegedly supporting exigency, the limits of the entry, and whether a separate exception permits searching stored data.",
+        "question": "Which method avoids overgeneralizing exceptions?",
+        "options": [
+          "Treat every arrest as consent",
+          "Analyze each exception's elements and scope separately",
+          "Assume all electronic evidence is exempt"
+        ],
+        "answer": 1,
+        "why": "Different intrusions require different justifications."
       }
     ]
   },
@@ -461,6 +517,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Tinker evaluated material and substantial disruption rather than mere disagreement."
+      },
+      {
+        "id": "L2-5-8",
+        "title": "Equal protection: classifications and intent",
+        "reading": "Equal protection analysis requires identifying a governmental classification, whether a protected class or fundamental right is implicated, and the applicable level of scrutiny. Facially neutral laws with unequal impacts ordinarily require additional proof to establish discriminatory purpose under constitutional doctrine; statutory protections can differ.",
+        "problem": "A neutral municipal policy disproportionately burdens one group. Investigate decision history, comparators, stated and actual purposes, available statutory claims and the proper constitutional test.",
+        "question": "Which claim needs careful proof beyond disparate impact alone?",
+        "options": [
+          "A constitutional discriminatory-purpose theory under a neutral rule",
+          "A statute's existence",
+          "Whether the municipality is incorporated"
+        ],
+        "answer": 0,
+        "why": "Disparate impact alone ordinarily does not establish purposeful discrimination under equal protection."
       }
     ]
   },
@@ -565,6 +635,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Federal constitutional standards do not eliminate independent state-law limits."
+      },
+      {
+        "id": "L2-6-8",
+        "title": "Concurrent estates and partition",
+        "reading": "Co-owners can hold tenancy in common, joint tenancy, or tenancy by the entirety where recognized. Survivorship depends on the estate and governing state law; partition may be in kind or by sale. Analyze deeds, contributions, possession, ouster, accounting and statutory protections.",
+        "problem": "Two siblings inherit an undivided property interest, and one wants to sell while the other wants to live there. Identify ownership form, partition options, occupancy issues and potential accounting.",
+        "question": "What document is central to identifying co-ownership rights?",
+        "options": [
+          "The last property listing",
+          "A neighbor's opinion",
+          "The deed, probate instrument, and relevant law"
+        ],
+        "answer": 2,
+        "why": "Ownership instruments and state law identify estates and remedies."
       }
     ]
   },
@@ -655,6 +739,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Useful case synthesis requires a rule-centered comparison and source validation."
+      },
+      {
+        "id": "L2-7-7",
+        "title": "Professional case briefing and adverse precedent",
+        "reading": "A complete case brief records citation, court, procedural history, relevant facts, question, holding, reasoning and judgment. In legal analysis, distinguish binding precedent from persuasive material and research the effect of later opinions. Student answers should directly address controlling adverse authority rather than omitting unfavorable rules.",
+        "problem": "Prepare paired briefs of International Shoe and a later personal-jurisdiction decision. Identify what changed, the facts material to each holding, the forum, and subsequent citations requiring verification.",
+        "question": "What is necessary before declaring an older case overruled?",
+        "options": [
+          "An online comment",
+          "Authoritative subsequent history and controlling authority",
+          "That a modern case uses new terminology"
+        ],
+        "answer": 1,
+        "why": "Only verified later authority establishes precedential treatment."
       }
     ]
   }
