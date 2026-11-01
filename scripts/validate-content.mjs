@@ -183,3 +183,6 @@ console.log('PASS: Seven Level 2 integrated cases include substantive writing ta
 
 assert.ok(level2Source.includes('INLINE_CASES')&&level2Source.includes('inlineCaseReveal'),'Course-linked real case learning missing');
 console.log('PASS: Real decisions embedded in subject-matched 1L lessons.');
+
+assert.ok(level2Source.includes('MORE_LESSON_CASES')&&level2Source.includes('MORE_LESSON_CASES.find(c=>c.course==='),'Second-wave real cases must be routed into matching lessons');
+console.log('PASS: Second-wave real case lesson matching is present.');
