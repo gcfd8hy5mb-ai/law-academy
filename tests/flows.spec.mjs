@@ -386,3 +386,22 @@ test('Level 2 writing examination saves all independent answers',async({page})=>
  await page.locator('#l2exam').click();
  await expect(page.locator('#l2exam0')).toHaveValue(/Discuss UCC goods/);
 });
+
+
+test('Level 2 practice exam requires seven responses before submitting',async({page})=>{
+ await page.goto('/');
+ await page.locator('[data-level="1"]').click();
+ await page.locator('#l2exam').click();
+ await expect(page.locator('#l2examClock')).toContainText('minutes remain');
+ await page.locator('#l2examSubmit').click();
+ await expect(page.locator('#l2examStatus')).toContainText('0/7 present');
+ for(let i=0;i<7;i++)await page.locator('#l2exam'+i).fill('Issue, rule, analysis of the disputed facts, counterargument and qualified conclusion for prompt '+i);
+ await page.locator('#l2examSubmit').click();
+ await expect(page.locator('#l2examStatus')).toContainText('Submitted locally. No score');
+ await expect(page.locator('#l2exam0')).toBeDisabled();
+ await page.reload();
+ await page.locator('[data-level="1"]').click();
+ await page.locator('#l2exam').click();
+ await expect(page.locator('#l2exam0')).toBeDisabled();
+ await expect(page.locator('#l2examClock')).toContainText('submitted');
+});
