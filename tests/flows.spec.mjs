@@ -373,3 +373,16 @@ test('Level 2 first-year law lessons open and save a knowledge check',async({pag
  await page.locator('[data-l2lesson="0"]').click();
  await expect(page.locator('#l2draft')).toHaveValue(/changed terms may be a counteroffer/);
 });
+
+
+test('Level 2 writing examination saves all independent answers',async({page})=>{
+ await page.goto('/');
+ await page.locator('[data-level="1"]').click();
+ await page.locator('#l2exam').click();
+ await expect(page.getByRole('heading',{name:'Timed 1L Writing Exam'})).toBeVisible();
+ await expect(page.locator('textarea[id^="l2exam"]')).toHaveCount(7);
+ await page.locator('#l2exam0').fill('Discuss UCC goods, contract formation, and remedies.');
+ await page.locator('#l2examBack').click();
+ await page.locator('#l2exam').click();
+ await expect(page.locator('#l2exam0')).toHaveValue(/Discuss UCC goods/);
+});
