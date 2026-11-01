@@ -115,6 +115,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Express warranties can arise from affirmations of fact, descriptions or samples forming part of the basis of bargain."
+      },
+      {
+        "id": "L2-1-9",
+        "title": "Contract modification and good faith",
+        "reading": "A modification of a contract for goods can be binding without new consideration under UCC § 2-209, but good faith and any applicable signed-writing requirements matter. Common-law modifications may follow different consideration or reliance standards. Analyze whether pressure, threats, waiver, course of performance or changed circumstances alter enforceability.",
+        "problem": "After a supply shortage, a seller demands a price increase under an existing goods contract. The buyer signs while fearing immediate closure. Analyze applicable modification law, good faith, duress and any written no-modification clause.",
+        "question": "What matters most for a modification under UCC Article 2?",
+        "options": [
+          "That every change has fresh consideration",
+          "That any oral change always binds",
+          "Good faith and statutory/form requirements"
+        ],
+        "answer": 2,
+        "why": "Article 2 modification generally does not require new consideration but must satisfy good faith and other applicable limits."
       }
     ]
   },
@@ -233,6 +247,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "The tort generally requires a demanding threshold and severe injury."
+      },
+      {
+        "id": "L2-2-9",
+        "title": "Vicarious liability and scope of employment",
+        "reading": "Respondeat superior may make an employer liable for torts committed by an employee within the scope of employment, depending on local law. Distinguish employees from independent contractors and exceptions; intentional torts may or may not fall within scope. Direct negligent hiring or supervision remains analytically distinct.",
+        "problem": "A delivery employee detours to shop for personal items and then causes a crash. Identify employment relationship, business purpose, scope factors, frolic versus detour, and potential independent employer fault.",
+        "question": "What is central to respondeat superior?",
+        "options": [
+          "Whether the employee acted within the legally defined scope of employment",
+          "Whether the employer has a logo",
+          "Whether the claimant works nearby"
+        ],
+        "answer": 0,
+        "why": "Vicarious liability generally depends on scope of employment."
       }
     ]
   },
@@ -351,6 +379,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "A motion to dismiss addresses the sufficiency of pleaded claims, not trial proof."
+      },
+      {
+        "id": "L2-3-9",
+        "title": "Summary judgment: evidence and burden",
+        "reading": "Under Federal Rule 56, summary judgment is appropriate where the record shows no genuine dispute of material fact and the movant is entitled to judgment as a matter of law. Courts do not ordinarily weigh competing credible testimony as a trial jury would. Evaluate what facts are material under substantive law and admissible evidentiary support.",
+        "problem": "A discrimination plaintiff offers sworn testimony contradicting the employer's explanation. Examine whether the conflict is genuinely material under the governing legal elements and which evidence can be considered.",
+        "question": "What should the court avoid at summary judgment?",
+        "options": [
+          "Identifying material factual disputes",
+          "Weighing credibility and resolving genuine material conflicts as factfinder",
+          "Applying the governing legal rule"
+        ],
+        "answer": 1,
+        "why": "Genuine disputes of material fact ordinarily require trial resolution."
       }
     ]
   },
@@ -469,6 +511,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "The same-elements test compares statutory requirements, not simply factual overlap."
+      },
+      {
+        "id": "L2-4-9",
+        "title": "Due process, counsel, and custodial questioning",
+        "reading": "The Sixth Amendment right to counsel attaches to qualifying criminal prosecutions at legally defined stages, while Fifth Amendment Miranda protections concern custodial interrogation. Distinguish the constitutional source, timing, waiver and available remedies rather than treating every encounter with police as invoking the same right.",
+        "problem": "A person is questioned at a station before formal charges, later indicted, and interrogated again. Analyze custody, interrogation, warnings, attachment of Sixth Amendment rights and possible suppression.",
+        "question": "Which analysis is most accurate?",
+        "options": [
+          "Counsel rights arise only upon conviction",
+          "Every police conversation triggers identical protections",
+          "Miranda custody/interrogation and Sixth Amendment attachment are distinct inquiries"
+        ],
+        "answer": 2,
+        "why": "Different constitutional protections operate under different conditions."
       }
     ]
   },
@@ -601,6 +657,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Commerce Clause analysis requires a constitutionally adequate connection to congressional power."
+      },
+      {
+        "id": "L2-5-10",
+        "title": "State action and constitutional claims",
+        "reading": "Most constitutional rights constrain government rather than private parties. Identify whether conduct can be fairly attributed to the state under recognized public-function, coercion, joint-action or other doctrines. Mere regulation or government funding generally does not automatically convert a private actor into the state.",
+        "problem": "A private venue receiving a public grant restricts a speaker. Determine who made the decision, public involvement, delegated functions, contractual obligations and potential statutory protections.",
+        "question": "What must be shown for an ordinary First Amendment claim against a private venue?",
+        "options": [
+          "Conduct attributable to government under applicable state-action doctrine",
+          "That the venue is popular",
+          "Any government grant regardless of context"
+        ],
+        "answer": 0,
+        "why": "The First Amendment ordinarily requires governmental action."
       }
     ]
   },
@@ -733,6 +803,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Permissive possession may defeat the hostility element under governing law."
+      },
+      {
+        "id": "L2-6-10",
+        "title": "Landlord-tenant: habitability and eviction process",
+        "reading": "Residential leases are affected by mandatory state and local habitability, repair, retaliation, and eviction-process statutes. Rights and remedies vary; evaluate notice, defects, rent duties, possession, available relief, and procedural protections. Self-help eviction may be restricted or prohibited by governing law.",
+        "problem": "A tenant reports serious plumbing failure and the landlord changes locks without a court order. Examine governing statutes, lease terms, notice, habitability, repair opportunity and eviction procedure.",
+        "question": "What should be verified before advising either party?",
+        "options": [
+          "Only whether rent is late",
+          "Applicable jurisdiction, notice, repair and eviction requirements",
+          "The landlord's preferred outcome"
+        ],
+        "answer": 1,
+        "why": "Residential remedies and due-process requirements are jurisdiction-specific."
       }
     ]
   },
@@ -851,6 +935,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Accurate statutory interpretation starts with controlling enacted law and context."
+      },
+      {
+        "id": "L2-7-9",
+        "title": "Case briefing: distinguishing holdings and dicta",
+        "reading": "A holding is a proposition necessary to the judgment, read in the setting of material facts and procedural posture. Dicta may be persuasive but usually does not carry the same precedential force. A careful brief distinguishes majority, concurrence and dissent, and checks how later courts characterize the decision.",
+        "problem": "Brief a decision containing a broad discussion of constitutional history but deciding a narrow procedural issue. Identify the necessary ruling, factual setting and statements arguably beyond the holding.",
+        "question": "How should a lawyer treat a broad sentence in a judicial opinion?",
+        "options": [
+          "Always treat it as a universally controlling rule",
+          "Ignore it entirely",
+          "Assess whether it was necessary to the holding and check later treatment"
+        ],
+        "answer": 2,
+        "why": "Scope and precedential force depend on what the court actually decided."
       }
     ]
   }
