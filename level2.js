@@ -45,6 +45,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Promissory estoppel turns on qualifying reliance and the demands of justice."
+      },
+      {
+        "id": "L2-1-4",
+        "title": "Contract interpretation and conditions",
+        "reading": "Courts interpret contract language in context, considering integrated terms, ambiguity, performance duties and any conditions precedent. Interpretation rules, parol evidence and good faith can depend on the transaction and governing law.",
+        "problem": "A manufacturer promises delivery after written approval. The buyer withholds approval but claims breach. Analyze whether approval is a condition and whether a party improperly prevented its occurrence.",
+        "question": "Which issue should be resolved before declaring breach?",
+        "options": [
+          "Whether both parties are friends",
+          "Whether a valid condition precedent was satisfied or excused",
+          "Whether the contract uses bold print"
+        ],
+        "answer": 1,
+        "why": "An unsatisfied condition can affect when a duty becomes due."
       }
     ]
   },
@@ -93,6 +107,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "A product injury requires proof fitting the governing liability theory."
+      },
+      {
+        "id": "L2-2-4",
+        "title": "Defamation and privileges",
+        "reading": "Defamation generally concerns a false statement of fact communicated to another that harms reputation, but public-figure rules, fault standards, defenses and privileges vary with constitutional and state law.",
+        "problem": "A blogger posts a disputed factual allegation about an elected official. Evaluate falsity, fact versus opinion, fault, public-official status and potential privilege.",
+        "question": "What makes this claim different from ordinary private-person defamation?",
+        "options": [
+          "Public-official constitutional fault requirements may apply",
+          "Public officials always win",
+          "Opinions always constitute defamation"
+        ],
+        "answer": 0,
+        "why": "Public-official claims implicate constitutional actual-malice doctrine."
       }
     ]
   },
@@ -141,6 +169,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Claim preclusion concerns qualifying claims previously resolved by final judgment."
+      },
+      {
+        "id": "L2-3-4",
+        "title": "Joinder and class actions",
+        "reading": "The Federal Rules of Civil Procedure govern permissive and required party joinder, counterclaims and class actions. Rule 23 requires specific prerequisites, including numerosity, commonality, typicality and adequate representation, and additional criteria depending on the class type.",
+        "problem": "Fifty purchasers challenge a common contract clause but have different damages. Assess whether common questions exist and what else Rule 23 certification would require.",
+        "question": "Which element belongs to Rule 23(a)?",
+        "options": [
+          "An automatic million-dollar minimum",
+          "A unanimous jury",
+          "Adequate class representation"
+        ],
+        "answer": 2,
+        "why": "Adequacy is one of Rule 23(a)'s prerequisites, but it alone does not justify certification."
       }
     ]
   },
@@ -189,6 +231,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Attempt hinges on intent and legally sufficient conduct."
+      },
+      {
+        "id": "L2-4-4",
+        "title": "Self-defense and justification",
+        "reading": "Self-defense ordinarily requires a qualifying threat and reasonable, proportionate response, though retreat rules, initial aggressor rules and deadly force differ across jurisdictions. Statutory text and case law control.",
+        "problem": "A person uses force after a verbal argument escalates. Identify imminent threat, proportionality, possible withdrawal and the governing state's law.",
+        "question": "What fact is central to justification?",
+        "options": [
+          "The person's occupation",
+          "The nature and imminence of the threat",
+          "The weather a week earlier"
+        ],
+        "answer": 1,
+        "why": "Self-defense turns on legally relevant necessity and proportionality."
       }
     ]
   },
@@ -237,6 +293,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Classification and governing scrutiny shape equal protection review."
+      },
+      {
+        "id": "L2-5-4",
+        "title": "Procedural due process and government benefits",
+        "reading": "Procedural due process requires a protected life, liberty or property interest and constitutionally sufficient procedures. The timing and form of notice or hearing depend on the affected interests, error risk and government's interest.",
+        "problem": "An agency ends established benefits without advance opportunity to contest its factual findings. Analyze the claimed entitlement and what process is due.",
+        "question": "What must be established first?",
+        "options": [
+          "A protected interest affected by government action",
+          "A guaranteed jury trial in every agency case",
+          "That the agency is privately owned"
+        ],
+        "answer": 0,
+        "why": "Process protections require qualifying governmental deprivation of a protected interest."
       }
     ]
   },
@@ -285,6 +355,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Priority depends on the applicable statute and buyers' facts."
+      },
+      {
+        "id": "L2-6-4",
+        "title": "Easements and covenants",
+        "reading": "An easement gives a nonpossessory right to use land; creation can occur by express grant, implication, necessity or prescription depending on local law. Running covenants and servitudes impose different requirements.",
+        "problem": "A landlocked parcel's owner has crossed a neighbor's driveway for decades. Consider access documents, prior unity of ownership, necessity, adverse use and jurisdiction.",
+        "question": "Which fact is most relevant to an implied easement by necessity?",
+        "options": [
+          "The buyer's preferred paint",
+          "The neighbor's vehicle model",
+          "Prior common ownership and necessity at severance"
+        ],
+        "answer": 2,
+        "why": "An easement by necessity commonly depends on unity of ownership and necessity when parcels were separated."
       }
     ]
   },
@@ -333,6 +417,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Objective writing requires honest treatment of material adverse authority."
+      },
+      {
+        "id": "L2-7-4",
+        "title": "Researching binding precedent in a client file",
+        "reading": "Research plans start with the claim, forum, parties, date and legal questions; then find primary authorities, trace appellate history and check treatment by later courts. A memo should connect the verified rule to the client's actual record.",
+        "problem": "A client supplies a four-year-old appellate opinion and asks for a guaranteed outcome. Document jurisdiction, subsequent history, factual distinctions, adverse authority and remaining uncertainty.",
+        "question": "What is the best professional response?",
+        "options": [
+          "Promise the client's requested result",
+          "Verify current controlling law and explain uncertainty",
+          "Copy an unverified online summary"
+        ],
+        "answer": 1,
+        "why": "Responsible research verifies authority and candidly addresses uncertainty."
       }
     ]
   }
