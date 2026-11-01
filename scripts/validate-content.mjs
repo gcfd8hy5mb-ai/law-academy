@@ -163,7 +163,7 @@ const level2Source=readFileSync(new URL('../level2.js',import.meta.url),'utf8');
 new Script(level2Source,{filename:'level2.js'});
 const level2Courses=runInNewContext('const window={};'+level2Source.slice(0,level2Source.indexOf('const L2_KEY='))+'\nwindow.LAW_LEVEL2');
 assert.equal(level2Courses.length,7,'Level 2 must launch with seven academic subjects');
-assert.equal(level2Courses.flatMap(c=>c.lessons).length,28,'Level 2 must include twenty-eight authored lessons');
+assert.equal(level2Courses.flatMap(c=>c.lessons).length,35,'Level 2 must include thirty-five authored lessons');
 for(const l of level2Courses.flatMap(c=>c.lessons)){
  assert.ok(l.reading.length>170&&l.problem.length>100,'Incomplete 1L doctrine or application: '+l.id);
  assert.ok(Number.isInteger(l.answer)&&l.answer>=0&&l.answer<l.options.length,'Invalid 1L answer: '+l.id);
@@ -175,5 +175,8 @@ console.log('PASS: Seven 1L courses, fourteen applied lessons, answer indices an
 assert.ok(level2Source.includes('b.onclick=()=>showLesson(i,+b.dataset.l2lesson)'),'Level 2 lesson buttons must defer rendering until click');
 console.log('PASS: Level 2 lesson navigation click handlers are deferred.');
 
-for(const c of level2Courses)assert.equal(c.lessons.length,4,'Each 1L subject needs four lessons: '+c.title);
+for(const c of level2Courses)assert.equal(c.lessons.length,5,'Each 1L subject needs five lessons: '+c.title);
 console.log('PASS: Seven 1L subjects have three authored lessons apiece.');
+
+for(const c of level2Courses){const assigned=c.lessons.find(l=>l.id===c.id+'-5');assert.ok(assigned&&assigned.problem.includes('Written assignment:'),'Integrated case writing task missing: '+c.title)}
+console.log('PASS: Seven Level 2 integrated cases include substantive writing tasks.');
