@@ -219,3 +219,5 @@ console.log('PASS: Seven 1L capstones and detailed foundational worked examples.
 
 assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(1,4).filter(l=>l.reading.includes('ADVANCED REASONING LAB')&&l.problem.includes('WRITTEN DELIVERABLE')).length,0),21,'21 early 1L lessons require advanced reasoning labs and written deliverables');
 console.log('PASS: 21 enhanced early-course lessons retain written legal analysis tasks.');
+
+assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(4,7).filter(l=>l.reading.includes('LEGAL REASONING PRACTICUM')&&l.problem.includes('WRITTEN WORK')).length,0),21,'21 mid-course lessons must have reasoning practicums');
