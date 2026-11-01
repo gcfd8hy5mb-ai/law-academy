@@ -73,6 +73,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
+      },
+      {
+        "id": "L2-1-6",
+        "title": "Defenses to enforceability and restitution",
+        "reading": "Capacity, misrepresentation, duress, unconscionability, illegality and mistake may limit contract enforcement. Rescission and restitution differ from expectation damages and require examining the parties' circumstances, the exchange, and jurisdiction-specific rules. An adhesion contract is not automatically unenforceable merely because it was offered on standard terms.",
+        "problem": "An elderly seller signs a complex contract after pressure and misleading factual representations. Identify the formation and defense issues, remedies, restitution, disputed evidence and what facts might undermine each allegation.",
+        "question": "Which is the strongest method of analyzing enforceability?",
+        "options": [
+          "Assume standardized contracts are invalid",
+          "Identify each alleged defense and its legal elements",
+          "Award damages without analyzing performance"
+        ],
+        "answer": 1,
+        "why": "Each alleged defense requires elements, proof and legally available relief."
       }
     ]
   },
@@ -149,6 +163,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
+      },
+      {
+        "id": "L2-2-6",
+        "title": "Causation, intervening events and comparative fault",
+        "reading": "Actual causation and scope of liability are separate questions. Courts may analyze multiple sufficient causes, intervening actions, foreseeable risk and statutory comparative responsibility. Apply the jurisdiction's particular causal standards, burdens and fault allocation rather than presuming any later event breaks the causal chain.",
+        "problem": "After a negligent driver damages traffic lights, a second driver ignores clear warnings and collides with a pedestrian. Analyze each actor's conduct, but-for or multiple-cause principles, scope of liability, damages and comparative responsibility.",
+        "question": "What must be analyzed before allocating legal responsibility?",
+        "options": [
+          "A factual causal connection and applicable limits on liability",
+          "Only which party has insurance",
+          "The number of witnesses alone"
+        ],
+        "answer": 0,
+        "why": "Legal fault assessment requires causation and scope-of-liability analysis."
       }
     ]
   },
@@ -225,6 +253,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
+      },
+      {
+        "id": "L2-3-6",
+        "title": "Personal jurisdiction: specific and general",
+        "reading": "Due process distinguishes general personal jurisdiction, ordinarily tied to a corporation's place of incorporation or principal place of business, from specific jurisdiction based on defendant-created contacts relating to the claim. Analyze purposeful affiliation, connection between claim and contacts, and fairness under controlling precedent, including later Supreme Court refinements.",
+        "problem": "A corporation incorporated in Delaware and headquartered in Illinois advertises nationally. A Texas customer sues in Texas over an online purchase shipped from Illinois. Identify where general jurisdiction is possible and the Texas contacts relevant to specific jurisdiction.",
+        "question": "Which approach is most accurate?",
+        "options": [
+          "National advertising automatically creates general jurisdiction everywhere",
+          "A sale automatically defeats any objection",
+          "Separate general jurisdiction from claim-connected specific contacts"
+        ],
+        "answer": 2,
+        "why": "The two jurisdictional categories use distinct tests."
       }
     ]
   },
@@ -301,6 +343,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
+      },
+      {
+        "id": "L2-4-6",
+        "title": "Evidence suppression, exclusionary rule and inevitable discovery",
+        "reading": "Constitutional violations may implicate the exclusionary rule, but not all evidence connected to misconduct must necessarily be excluded. The independent-source and inevitable-discovery doctrines have separate factual requirements. Under Nix v. Williams, the government must establish by a preponderance that the evidence would have been discovered lawfully; speculation alone is not sufficient.",
+        "problem": "An officer improperly questions a suspect, leading to a location. Independent search volunteers were already closing in on the same location. Analyze admissibility, whether lawful discovery was truly inevitable, and competing factual arguments.",
+        "question": "Under Nix, what is necessary for inevitable discovery?",
+        "options": [
+          "Police always must be in good faith",
+          "Evidence it would inevitably have been found by lawful means",
+          "A mere unsupported assertion it might be found"
+        ],
+        "answer": 1,
+        "why": "The prosecution must demonstrate inevitable lawful discovery under the applicable standard."
       }
     ]
   },
@@ -391,6 +447,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Riley held that a warrant generally is required to search cellphone digital data seized incident to arrest."
+      },
+      {
+        "id": "L2-5-7",
+        "title": "First Amendment: public-school speech and limits",
+        "reading": "Student speech at public schools is subject to doctrine different from ordinary speech in public parks. Tinker v. Des Moines protected peaceful student expression absent material and substantial disruption, but later decisions address school-sponsored speech, lewd speech and other settings. Identify the school setting and applicable doctrine before announcing a categorical right.",
+        "problem": "A student wears an armband to express a political view and is suspended despite no documented interruption of instruction. Analyze school interests, factual evidence, Tinker and possible distinctions.",
+        "question": "What was central to Tinker's protection?",
+        "options": [
+          "Absent evidence of material and substantial disruption",
+          "Any teacher's subjective dislike",
+          "A school's complete lack of authority"
+        ],
+        "answer": 0,
+        "why": "Tinker evaluated material and substantial disruption rather than mere disagreement."
       }
     ]
   },
@@ -481,6 +551,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "The majority required capture or similarly effective control rather than mere pursuit."
+      },
+      {
+        "id": "L2-6-7",
+        "title": "Takings and public use",
+        "reading": "The Fifth Amendment Takings Clause restricts taking private property for public use without just compensation and applies to states through constitutional doctrine. Public-use interpretation, including Kelo v. City of New London, must be distinguished from state statutes and constitutional provisions that may impose tighter limits. Compensation and public purpose present separate questions.",
+        "problem": "A city plans a redevelopment project involving transfer of acquired parcels for economic development. Compare federal public-use reasoning, state protections, legislative process and compensation.",
+        "question": "What must be distinguished in a takings challenge?",
+        "options": [
+          "Only whether the land is vacant",
+          "Federal public-use minimums and potentially stricter state rules",
+          "Whether the landowner agrees with the mayor"
+        ],
+        "answer": 1,
+        "why": "Federal constitutional standards do not eliminate independent state-law limits."
       }
     ]
   },
@@ -557,6 +641,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Rigorous analysis begins with controlling authority, elements, evidentiary gaps and reasoned arguments on both sides."
+      },
+      {
+        "id": "L2-7-6",
+        "title": "Applying analogies and distinguishing precedent",
+        "reading": "An effective case brief identifies facts, procedural posture, question presented, holding, rule, rationale and disposition. Analogical reasoning compares legally material facts rather than just shared subject labels. A later decision may narrow or distinguish a precedent without overruling it, so check history and treatment before asserting current authority.",
+        "problem": "Compare the minimum-contacts reasoning of International Shoe with a modern online-sales jurisdiction dispute. Draft a two-column facts comparison, distinguish claim-linked contacts from general business presence, and identify what later cases must be researched.",
+        "question": "What is the strongest case comparison?",
+        "options": [
+          "Two cases share a title keyword",
+          "Both involve companies",
+          "The controlling rule and legally material similarities and differences"
+        ],
+        "answer": 2,
+        "why": "Useful case synthesis requires a rule-centered comparison and source validation."
       }
     ]
   }
