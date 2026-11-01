@@ -199,6 +199,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Reasonableness, causation and adequate proof matter to recoverable damages."
+      },
+      {
+        "id": "L2-1-15",
+        "title": "Expectation, reliance and restitution compared",
+        "reading": "Contract remedies serve distinct purposes: expectation seeks the value of promised performance, reliance compensates appropriate expenditures made in reliance, and restitution addresses benefits unjustly retained. Double recovery is generally impermissible. The governing law, proof, foreseeability, limitations and defenses determine which measure is available.",
+        "problem": "A supplier breaches after a buyer spends money preparing a factory, but projected profits are uncertain. Compare recoverable expectation and reliance loss, any conferred benefits, avoided costs and the danger of double recovery.",
+        "question": "Which approach avoids double recovery?",
+        "options": [
+          "Add every measure together",
+          "Select legally supported remedies while accounting for overlapping loss",
+          "Ignore expenditures entirely"
+        ],
+        "answer": 1,
+        "why": "Remedies compensate distinct interests without automatically cumulating duplicative awards."
       }
     ]
   },
@@ -401,6 +415,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Allocation follows legal causation and applicable fault rules."
+      },
+      {
+        "id": "L2-2-15",
+        "title": "Premises liability and foreseeability",
+        "reading": "Premises-liability duties depend on controlling state law, status of the entrant where relevant, notice of a dangerous condition, reasonable inspection and foreseeability. The mere fact of a fall does not establish negligent maintenance. Distinguish open-and-obvious issues from duty, comparative fault and causation.",
+        "problem": "A visitor trips over poorly lit steps outside a restaurant after several written complaints. Analyze notice, maintenance records, warning signs, lighting, causal proof and the state's duty framework.",
+        "question": "Which evidence is most material to breach?",
+        "options": [
+          "Prior notice and reasonable inspection or repair",
+          "The restaurant's cuisine",
+          "The visitor's profession"
+        ],
+        "answer": 0,
+        "why": "Breach focuses on the reasonableness of conduct given known or knowable hazards."
       }
     ]
   },
@@ -603,6 +631,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Privilege is not a blanket shield over relevant underlying facts."
+      },
+      {
+        "id": "L2-3-15",
+        "title": "Personal jurisdiction and internet transactions",
+        "reading": "Specific personal jurisdiction requires defendant-related forum contacts tied sufficiently to the litigation; operating a website accessible everywhere does not by itself create all-purpose jurisdiction. Apply purposeful availment or direction and relatedness using governing Supreme Court and circuit authority.",
+        "problem": "A small seller in Oregon advertises nationally but ships one disputed order into Texas. Evaluate targeted conduct, contract negotiations, fulfillment, claim relation and fairness without assuming the result.",
+        "question": "Which premise is too broad?",
+        "options": [
+          "Claim-connected contacts matter",
+          "Jurisdiction differs from venue",
+          "Any accessible website creates general jurisdiction nationwide"
+        ],
+        "answer": 2,
+        "why": "Online accessibility alone does not ordinarily establish universal general jurisdiction."
       }
     ]
   },
@@ -805,6 +847,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Duress generally turns on the threat and available alternatives."
+      },
+      {
+        "id": "L2-4-15",
+        "title": "Accomplice liability and required intent",
+        "reading": "Accomplice liability generally involves intentional assistance or encouragement of another person's crime, with statutory variations in the mental state and offense elements. Mere presence at the scene or knowledge alone may not be sufficient. Distinguish accomplice liability from conspiracy and accessory-after-the-fact offenses.",
+        "problem": "A passenger knows a driver plans a robbery but says nothing and remains in the vehicle. Assess acts of assistance, purpose, knowledge, withdrawal and statutory definitions.",
+        "question": "Which fact best supports accomplice liability?",
+        "options": [
+          "Mere geographic proximity",
+          "Knowing and purposeful assistance under the governing statute",
+          "Being related to the offender"
+        ],
+        "answer": 1,
+        "why": "Liability requires the jurisdiction's defined participation and culpability."
       }
     ]
   },
@@ -1021,6 +1077,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Proof of a rights violation does not alone determine damages or immunity."
+      },
+      {
+        "id": "L2-5-16",
+        "title": "Fourth Amendment: reasonable expectations and privacy",
+        "reading": "A Fourth Amendment search may involve physical trespass for information or violation of a reasonable expectation of privacy. Katz v. United States addressed recording a private conversation in a public phone booth. Modern digital monitoring requires further research into subsequent cases and statutory privacy rules.",
+        "problem": "Police electronically record a private conversation from outside a closed booth without physically entering it. Analyze government conduct, privacy expectations and potential warrant requirements.",
+        "question": "What principle did Katz emphasize?",
+        "options": [
+          "Fourth Amendment protection is not limited to physical intrusion into property",
+          "Any public location removes privacy",
+          "All recorded conversations are admissible"
+        ],
+        "answer": 0,
+        "why": "Katz rejected a purely physical-trespass conception of a Fourth Amendment search."
       }
     ]
   },
@@ -1237,6 +1307,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Risk before closing depends on the jurisdiction and the parties' valid agreement."
+      },
+      {
+        "id": "L2-6-16",
+        "title": "Concurrent ownership and accounting",
+        "reading": "Co-tenants' rights to possession and contributions can generate disputes over taxes, necessary repairs, exclusive possession, rental receipts, ouster and partition. State law defines accounting rights and when a co-owner may owe occupation rent. Separate ownership percentages from reimbursement and partition outcomes.",
+        "problem": "One co-owner occupies inherited property and pays all taxes while another demands rental value. Identify deed interests, repair records, rental income, ouster and possible partition.",
+        "question": "Which starting point is most reliable?",
+        "options": [
+          "Whether the occupied house is old",
+          "Whether the parties are siblings",
+          "The ownership interests and jurisdiction's accounting rules"
+        ],
+        "answer": 2,
+        "why": "Co-owner financial rights depend on the estate and applicable local law."
       }
     ]
   },
@@ -1439,6 +1523,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Legally meaningful distinctions address the court's operative rule."
+      },
+      {
+        "id": "L2-7-15",
+        "title": "Ethical duties in legal research and writing",
+        "reading": "Competent legal work requires reasonable legal knowledge, preparation and investigation. A student research report should identify authoritative sources, verify quotations, distinguish binding from persuasive law, check subsequent treatment and flag uncertainty rather than inventing authority. Lawyers additionally follow jurisdiction-specific adopted ethics rules.",
+        "problem": "A junior analyst discovers a cited opinion was reversed after a memorandum was sent. Identify correction duties, client communication, source verification and appropriate disclosure procedures.",
+        "question": "What should occur when a cited case is no longer good law?",
+        "options": [
+          "Conceal the problem",
+          "Verify its treatment and promptly correct materially misleading analysis",
+          "Delete the research log"
+        ],
+        "answer": 1,
+        "why": "Competent legal work requires correction of material authority errors."
       }
     ]
   }
