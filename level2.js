@@ -21,8 +21,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-1-2",
         "title": "Breach, materiality and remedies",
-        "reading": "Identify the precise promise, performance due, conditions, material breach, defenses and supported remedy. Expectation damages ordinarily seek the benefit of the bargain, subject to proof, foreseeability, certainty and mitigation; specific performance is not automatic.",
-        "problem": "A contractor misses a delivery date but completes shortly afterwards. Evaluate whether time was essential and whether the buyer can prove foreseeable losses.",
+        "reading": "Identify the precise promise, performance due, conditions, material breach, defenses and supported remedy. Expectation damages ordinarily seek the benefit of the bargain, subject to proof, foreseeability, certainty and mitigation; specific performance is not automatic.\n\nADVANCED REASONING LAB — Start by classifying a transaction as a sale of goods, service, land, or mixed purpose; a single contract can involve multiple legally relevant promises. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A contractor misses a delivery date but completes shortly afterwards. Evaluate whether time was essential and whether the buyer can prove foreseeable losses.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which is the best first step in evaluating breach?",
         "options": [
           "Assume every delay permits rescission",
@@ -35,8 +35,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-1-3",
         "title": "Promissory estoppel and reliance",
-        "reading": "A promise may be enforceable without conventional consideration when reasonably foreseeable reliance occurs and injustice can be avoided only by enforcement; the remedy depends on applicable law.",
-        "problem": "An employer promises relocation reimbursement and an applicant moves before the offer is withdrawn. Identify promise, reasonable reliance, detriment and possible remedies.",
+        "reading": "A promise may be enforceable without conventional consideration when reasonably foreseeable reliance occurs and injustice can be avoided only by enforcement; the remedy depends on applicable law.\n\nADVANCED REASONING LAB — For a breach claim, list each contractual duty, condition, alleged nonperformance, excuse, and available remedy before calculating losses. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "An employer promises relocation reimbursement and an applicant moves before the offer is withdrawn. Identify promise, reasonable reliance, detriment and possible remedies.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which factor is central to promissory estoppel?",
         "options": [
           "Whether the promise was printed",
@@ -49,8 +49,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-1-4",
         "title": "Contract interpretation and conditions",
-        "reading": "Courts interpret contract language in context, considering integrated terms, ambiguity, performance duties and any conditions precedent. Interpretation rules, parol evidence and good faith can depend on the transaction and governing law.",
-        "problem": "A manufacturer promises delivery after written approval. The buyer withholds approval but claims breach. Analyze whether approval is a condition and whether a party improperly prevented its occurrence.",
+        "reading": "Courts interpret contract language in context, considering integrated terms, ambiguity, performance duties and any conditions precedent. Interpretation rules, parol evidence and good faith can depend on the transaction and governing law.\n\nADVANCED REASONING LAB — A letter promising a donation after significant expenditure raises reliance questions: identify the actual promise, reasonable reliance, detriment, and whether enforcement is necessary to prevent injustice. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A manufacturer promises delivery after written approval. The buyer withholds approval but claims breach. Analyze whether approval is a condition and whether a party improperly prevented its occurrence.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which issue should be resolved before declaring breach?",
         "options": [
           "Whether both parties are friends",
@@ -265,8 +265,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-2-2",
         "title": "Intentional torts and defenses",
-        "reading": "Battery commonly concerns intentional harmful or offensive contact; assault concerns reasonable apprehension of imminent harmful or offensive contact. Consent and self-defense may be defenses, depending on governing law.",
-        "problem": "During a sports game a participant makes unexpected contact outside agreed play. Identify the intent, scope of consent and harm.",
+        "reading": "Battery commonly concerns intentional harmful or offensive contact; assault concerns reasonable apprehension of imminent harmful or offensive contact. Consent and self-defense may be defenses, depending on governing law.\n\nADVANCED REASONING LAB — Identify whether the defendant owed a duty to this claimant before discussing breach; distinguish creating a danger from failing to rescue absent a special duty. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "During a sports game a participant makes unexpected contact outside agreed play. Identify the intent, scope of consent and harm.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which question matters to a consent defense?",
         "options": [
           "Whether the conduct fell within consent's scope",
@@ -279,8 +279,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-2-3",
         "title": "Strict liability and products",
-        "reading": "Products liability can involve manufacturing defects, design defects and inadequate warnings. Liability tests and defenses differ by state, and strict liability does not mean every product-caused injury is compensable.",
-        "problem": "A sealed appliance sparks during normal use. Compare manufacturing defect, design defect, warnings, causation and misuse.",
+        "reading": "Products liability can involve manufacturing defects, design defects and inadequate warnings. Liability tests and defenses differ by state, and strict liability does not mean every product-caused injury is compensable.\n\nADVANCED REASONING LAB — For intentional torts, establish volitional conduct and the particular intent standard before defenses such as consent, privilege, and self-defense. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A sealed appliance sparks during normal use. Compare manufacturing defect, design defect, warnings, causation and misuse.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What must ordinarily be established in a product defect claim?",
         "options": [
           "A legally relevant defect and causation",
@@ -293,8 +293,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-2-4",
         "title": "Defamation and privileges",
-        "reading": "Defamation generally concerns a false statement of fact communicated to another that harms reputation, but public-figure rules, fault standards, defenses and privileges vary with constitutional and state law.",
-        "problem": "A blogger posts a disputed factual allegation about an elected official. Evaluate falsity, fact versus opinion, fault, public-official status and potential privilege.",
+        "reading": "Defamation generally concerns a false statement of fact communicated to another that harms reputation, but public-figure rules, fault standards, defenses and privileges vary with constitutional and state law.\n\nADVANCED REASONING LAB — A design-defect claim may use consumer-expectation or risk-utility approaches depending on the state; compare feasible alternatives and warnings without assuming one universal test. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A blogger posts a disputed factual allegation about an elected official. Evaluate falsity, fact versus opinion, fault, public-official status and potential privilege.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What makes this claim different from ordinary private-person defamation?",
         "options": [
           "Public-official constitutional fault requirements may apply",
@@ -509,8 +509,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-3-2",
         "title": "Discovery and summary judgment",
-        "reading": "Federal Rule 26 generally permits discovery of nonprivileged matter relevant to claims or defenses and proportional to case needs. Rule 56 summary judgment turns on whether there is a genuine dispute of material fact and whether the movant is entitled to judgment as a matter of law.",
-        "problem": "A party asks for all emails ever sent by the opposing company's employees. Analyze relevance, proportionality, privilege and the need for a narrower request.",
+        "reading": "Federal Rule 26 generally permits discovery of nonprivileged matter relevant to claims or defenses and proportional to case needs. Rule 56 summary judgment turns on whether there is a genuine dispute of material fact and whether the movant is entitled to judgment as a matter of law.\n\nADVANCED REASONING LAB — For federal court jurisdiction, separate federal question, diversity, amount in controversy, supplemental claims and the independent requirement of personal jurisdiction. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A party asks for all emails ever sent by the opposing company's employees. Analyze relevance, proportionality, privilege and the need for a narrower request.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which discovery request is most defensible?",
         "options": [
           "Every employee's personal messages",
@@ -523,8 +523,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-3-3",
         "title": "Preclusion and final judgments",
-        "reading": "Claim preclusion can prevent relitigation of claims resolved by a valid final judgment, while issue preclusion can prevent relitigation of particular issues actually litigated and necessarily decided. Governing jurisdiction and exceptions matter.",
-        "problem": "A claimant loses a contract action and files a second suit about the same transaction. Examine identity of parties, finality, claim scope and available exceptions.",
+        "reading": "Claim preclusion can prevent relitigation of claims resolved by a valid final judgment, while issue preclusion can prevent relitigation of particular issues actually litigated and necessarily decided. Governing jurisdiction and exceptions matter.\n\nADVANCED REASONING LAB — At discovery, distinguish relevant proportional requests, privilege, protected work product and sanctions. Summary judgment is not a substitute for assessing witness credibility. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A claimant loses a contract action and files a second suit about the same transaction. Examine identity of parties, finality, claim scope and available exceptions.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which doctrine addresses relitigation of the same claim after final judgment?",
         "options": [
           "Personal jurisdiction",
@@ -537,8 +537,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-3-4",
         "title": "Joinder and class actions",
-        "reading": "The Federal Rules of Civil Procedure govern permissive and required party joinder, counterclaims and class actions. Rule 23 requires specific prerequisites, including numerosity, commonality, typicality and adequate representation, and additional criteria depending on the class type.",
-        "problem": "Fifty purchasers challenge a common contract clause but have different damages. Assess whether common questions exist and what else Rule 23 certification would require.",
+        "reading": "The Federal Rules of Civil Procedure govern permissive and required party joinder, counterclaims and class actions. Rule 23 requires specific prerequisites, including numerosity, commonality, typicality and adequate representation, and additional criteria depending on the class type.\n\nADVANCED REASONING LAB — Issue preclusion and claim preclusion require different elements. Identify finality, issue actually litigated and decided, party identity or privity, and a full and fair opportunity. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "Fifty purchasers challenge a common contract clause but have different damages. Assess whether common questions exist and what else Rule 23 certification would require.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which element belongs to Rule 23(a)?",
         "options": [
           "An automatic million-dollar minimum",
@@ -753,8 +753,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-4-2",
         "title": "Homicide distinctions and causation",
-        "reading": "Homicide offenses can distinguish purposeful, knowing, reckless and negligent killings; state statutes, felony-murder rules, defenses and degrees vary. Proximate causation and intervening events may matter.",
-        "problem": "During a fight, a person causes an injury and the victim later dies following an unrelated incident. Analyze mens rea, causal links and jurisdiction-specific charges.",
+        "reading": "Homicide offenses can distinguish purposeful, knowing, reckless and negligent killings; state statutes, felony-murder rules, defenses and degrees vary. Proximate causation and intervening events may matter.\n\nADVANCED REASONING LAB — Identify a voluntary act, each required mental state, attendant circumstances, result and causation; distinguish legal impossibility and mistake depending on the charge. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "During a fight, a person causes an injury and the victim later dies following an unrelated incident. Analyze mens rea, causal links and jurisdiction-specific charges.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What is the best response to an uncertain homicide fact pattern?",
         "options": [
           "Presume murder",
@@ -767,8 +767,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-4-3",
         "title": "Attempt and accomplice liability",
-        "reading": "Attempt often requires intent to commit a target crime plus conduct beyond mere preparation, under the governing test. Accomplice liability typically requires purposeful assistance or encouragement under the jurisdiction's standard.",
-        "problem": "Someone buys equipment but abandons a plan before confronting the target. Identify the jurisdiction's attempt test, acts, intent and abandonment rules.",
+        "reading": "Attempt often requires intent to commit a target crime plus conduct beyond mere preparation, under the governing test. Accomplice liability typically requires purposeful assistance or encouragement under the jurisdiction's standard.\n\nADVANCED REASONING LAB — In homicide, analyze mens rea, causation, statutory grading and defenses separately; do not treat every killing as murder. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "Someone buys equipment but abandons a plan before confronting the target. Identify the jurisdiction's attempt test, acts, intent and abandonment rules.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Why is preparation versus substantial step important?",
         "options": [
           "It determines courtroom seating",
@@ -781,8 +781,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-4-4",
         "title": "Self-defense and justification",
-        "reading": "Self-defense ordinarily requires a qualifying threat and reasonable, proportionate response, though retreat rules, initial aggressor rules and deadly force differ across jurisdictions. Statutory text and case law control.",
-        "problem": "A person uses force after a verbal argument escalates. Identify imminent threat, proportionality, possible withdrawal and the governing state's law.",
+        "reading": "Self-defense ordinarily requires a qualifying threat and reasonable, proportionate response, though retreat rules, initial aggressor rules and deadly force differ across jurisdictions. Statutory text and case law control.\n\nADVANCED REASONING LAB — Attempt requires analysis of intent and conduct going beyond preparation under the governing jurisdiction's test; accomplice participation is a distinct theory. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A person uses force after a verbal argument escalates. Identify imminent threat, proportionality, possible withdrawal and the governing state's law.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What fact is central to justification?",
         "options": [
           "The person's occupation",
@@ -997,8 +997,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-5-2",
         "title": "Speech restrictions and forum analysis",
-        "reading": "First Amendment analysis begins with government action, the nature of the speech, the forum and the regulation. Viewpoint discrimination is especially disfavored; content-neutral time, place and manner requirements depend on applicable doctrine.",
-        "problem": "A city permits rallies in a public park but denies a permit because of a group's political position. Analyze the basis of decision and available evidence.",
+        "reading": "First Amendment analysis begins with government action, the nature of the speech, the forum and the regulation. Viewpoint discrimination is especially disfavored; content-neutral time, place and manner requirements depend on applicable doctrine.\n\nADVANCED REASONING LAB — Begin with the actor, source of government power and reviewability; not every disfavored policy is unconstitutional or justiciable. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A city permits rallies in a public park but denies a permit because of a group's political position. Analyze the basis of decision and available evidence.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which fact raises the strongest First Amendment concern?",
         "options": [
           "Denial because of viewpoint",
@@ -1011,8 +1011,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-5-3",
         "title": "Equal protection and scrutiny",
-        "reading": "Equal protection analysis identifies government action, the classification, the relevant standard of review and the fit between governmental ends and chosen means. The level of review depends on doctrine and facts.",
-        "problem": "A city treats similarly situated applicants differently under a permit policy. Identify classification, government rationale, comparators and relevant standard.",
+        "reading": "Equal protection analysis identifies government action, the classification, the relevant standard of review and the fit between governmental ends and chosen means. The level of review depends on doctrine and facts.\n\nADVANCED REASONING LAB — A speech rule's content, forum and government role determine the standard; a public forum is not automatically identical to government property generally. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A city treats similarly situated applicants differently under a permit policy. Identify classification, government rationale, comparators and relevant standard.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What should the analysis determine before deciding validity?",
         "options": [
           "The applicable classification and standard of scrutiny",
@@ -1025,8 +1025,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-5-4",
         "title": "Procedural due process and government benefits",
-        "reading": "Procedural due process requires a protected life, liberty or property interest and constitutionally sufficient procedures. The timing and form of notice or hearing depend on the affected interests, error risk and government's interest.",
-        "problem": "An agency ends established benefits without advance opportunity to contest its factual findings. Analyze the claimed entitlement and what process is due.",
+        "reading": "Procedural due process requires a protected life, liberty or property interest and constitutionally sufficient procedures. The timing and form of notice or hearing depend on the affected interests, error risk and government's interest.\n\nADVANCED REASONING LAB — Equal protection requires a classification and the appropriate standard of review; discriminatory impact alone does not necessarily prove discriminatory purpose. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "An agency ends established benefits without advance opportunity to contest its factual findings. Analyze the claimed entitlement and what process is due.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What must be established first?",
         "options": [
           "A protected interest affected by government action",
@@ -1255,8 +1255,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-6-2",
         "title": "Landlord-tenant duties and remedies",
-        "reading": "Leases allocate possession and duties, but mandatory state/local housing statutes may override clauses. Analyze notice, habitability, deposits, lawful eviction procedure and remedies by jurisdiction.",
-        "problem": "A landlord attempts to evict a tenant without notice after a repair complaint. Identify lease text, statutes, retaliatory-eviction protections and required process.",
+        "reading": "Leases allocate possession and duties, but mandatory state/local housing statutes may override clauses. Analyze notice, habitability, deposits, lawful eviction procedure and remedies by jurisdiction.\n\nADVANCED REASONING LAB — Distinguish fee simple, life estates, remainders and reversions from modern statutory reforms affecting conveyancing language. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A landlord attempts to evict a tenant without notice after a repair complaint. Identify lease text, statutes, retaliatory-eviction protections and required process.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What is the most responsible first action?",
         "options": [
           "Assume eviction is automatically lawful",
@@ -1269,8 +1269,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-6-3",
         "title": "Recording acts and competing purchasers",
-        "reading": "Recording statutes can determine priority among competing claimants to land. Notice, race and race-notice approaches differ by state; a purchaser's notice and timing can change the result.",
-        "problem": "An owner deeds the same property to two buyers. Compare notice, recordation timing and whether each buyer paid value.",
+        "reading": "Recording statutes can determine priority among competing claimants to land. Notice, race and race-notice approaches differ by state; a purchaser's notice and timing can change the result.\n\nADVANCED REASONING LAB — In landlord-tenant disputes, identify the lease, notice, applicable local housing law, serious defects and authorized judicial eviction procedures. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "An owner deeds the same property to two buyers. Compare notice, recordation timing and whether each buyer paid value.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What information is essential?",
         "options": [
           "Only which deed is longer",
@@ -1283,8 +1283,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-6-4",
         "title": "Easements and covenants",
-        "reading": "An easement gives a nonpossessory right to use land; creation can occur by express grant, implication, necessity or prescription depending on local law. Running covenants and servitudes impose different requirements.",
-        "problem": "A landlocked parcel's owner has crossed a neighbor's driveway for decades. Consider access documents, prior unity of ownership, necessity, adverse use and jurisdiction.",
+        "reading": "An easement gives a nonpossessory right to use land; creation can occur by express grant, implication, necessity or prescription depending on local law. Running covenants and servitudes impose different requirements.\n\nADVANCED REASONING LAB — A recording problem needs a chronological chain of title, purchaser status, value paid, notice and the jurisdiction's race, notice or race-notice rule. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A landlocked parcel's owner has crossed a neighbor's driveway for decades. Consider access documents, prior unity of ownership, necessity, adverse use and jurisdiction.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "Which fact is most relevant to an implied easement by necessity?",
         "options": [
           "The buyer's preferred paint",
@@ -1513,8 +1513,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-7-2",
         "title": "Objective memorandum and performance file",
-        "reading": "An objective memo states question presented, brief answer, relevant facts, discussion of governing law and competing applications, and a qualified conclusion. Do not fill gaps with invented authorities or facts.",
-        "problem": "Draft a 500-word memo analyzing a disputed lease cancellation provision, identify unknown jurisdiction and research tasks, and articulate both parties' best arguments.",
+        "reading": "An objective memo states question presented, brief answer, relevant facts, discussion of governing law and competing applications, and a qualified conclusion. Do not fill gaps with invented authorities or facts.\n\nADVANCED REASONING LAB — A case brief must identify court, date, facts, posture, issue, holding and reasoning; a quotation requires checking the original source. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "Draft a 500-word memo analyzing a disputed lease cancellation provision, identify unknown jurisdiction and research tasks, and articulate both parties' best arguments.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "How should an objective memo handle adverse precedent?",
         "options": [
           "Ignore it if harmful",
@@ -1527,8 +1527,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-7-3",
         "title": "Legal memorandum synthesis",
-        "reading": "A persuasive research product accurately states binding rules, distinguishes adverse cases and applies them to each material fact. A law student's memo should separate objective risk prediction from client advocacy.",
-        "problem": "Write a neutral memorandum assessing two conflicting authorities on a consumer transaction, including citation verification and missing facts.",
+        "reading": "A persuasive research product accurately states binding rules, distinguishes adverse cases and applies them to each material fact. A law student's memo should separate objective risk prediction from client advocacy.\n\nADVANCED REASONING LAB — An objective memo predicts outcomes and discloses adverse authority, unlike a persuasive brief that argues a client's position within candor obligations. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "Write a neutral memorandum assessing two conflicting authorities on a consumer transaction, including citation verification and missing facts.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What improves credibility in a predictive memorandum?",
         "options": [
           "Ignoring bad facts",
@@ -1541,8 +1541,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-7-4",
         "title": "Researching binding precedent in a client file",
-        "reading": "Research plans start with the claim, forum, parties, date and legal questions; then find primary authorities, trace appellate history and check treatment by later courts. A memo should connect the verified rule to the client's actual record.",
-        "problem": "A client supplies a four-year-old appellate opinion and asks for a guaranteed outcome. Document jurisdiction, subsequent history, factual distinctions, adverse authority and remaining uncertainty.",
+        "reading": "Research plans start with the claim, forum, parties, date and legal questions; then find primary authorities, trace appellate history and check treatment by later courts. A memo should connect the verified rule to the client's actual record.\n\nADVANCED REASONING LAB — Synthesize multiple cases into a usable rule: compare material facts, procedural posture, differences in holding, jurisdiction and treatment by later courts. Analyze an argument favoring each side, identify at least two additional facts that would change the conclusion, and draft a short IRAC response that clearly separates legal rule, factual application, counterargument and qualified conclusion. SOURCE CHECK: consult the governing jurisdiction's current statute or controlling opinion before treating an illustrative doctrine as current law.",
+        "problem": "A client supplies a four-year-old appellate opinion and asks for a guaranteed outcome. Document jurisdiction, subsequent history, factual distinctions, adverse authority and remaining uncertainty.\n\nWRITTEN DELIVERABLE: Write 300–500 words. Organize the answer by legal elements, add one opposing argument and one evidentiary uncertainty, and explain what primary authority you would verify.",
         "question": "What is the best professional response?",
         "options": [
           "Promise the client's requested result",
