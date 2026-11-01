@@ -163,7 +163,7 @@ const level2Source=readFileSync(new URL('../level2.js',import.meta.url),'utf8');
 new Script(level2Source,{filename:'level2.js'});
 const level2Courses=runInNewContext('const window={};'+level2Source.slice(0,level2Source.indexOf('const L2_KEY='))+'\nwindow.LAW_LEVEL2');
 assert.equal(level2Courses.length,7,'Level 2 must launch with seven academic subjects');
-assert.equal(level2Courses.flatMap(c=>c.lessons).length,100,'Level 2 must include one hundred authored lessons');
+assert.equal(level2Courses.flatMap(c=>c.lessons).length,107,'Level 2 must include one hundred seven authored lessons');
 for(const l of level2Courses.flatMap(c=>c.lessons)){
  assert.ok(l.reading.length>170&&l.problem.length>100,'Incomplete 1L doctrine or application: '+l.id);
  assert.ok(Number.isInteger(l.answer)&&l.answer>=0&&l.answer<l.options.length,'Invalid 1L answer: '+l.id);
@@ -210,3 +210,5 @@ console.log('PASS: 86 authored Level 2 lessons and attached current case example
 
 assert.ok(level2Source.includes('COMPANION_CASES.find(c=>c.course===courses[i].title&&c.lesson===j)'),'Real-case routing must follow the taught course and lesson');
 console.log('PASS: Vosburg and Mathews integrated into matching 1L lessons.');
+
+assert.ok(level2Source.includes('PRIVACY_LESSON_CASES')&&level2Source.includes('Katz v. United States'),'Privacy case lesson mapping missing');
