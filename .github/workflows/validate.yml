@@ -6,6 +6,7 @@ on:
     paths:
       - 'app.js'
       - 'prelaw-applied.js'
+      - 'level2.js'
       - 'index.html'
       - 'styles.css'
       - 'scripts/**'
@@ -17,6 +18,7 @@ on:
     paths:
       - 'app.js'
       - 'prelaw-applied.js'
+      - 'level2.js'
       - 'index.html'
       - 'styles.css'
       - 'scripts/**'
@@ -55,6 +57,7 @@ jobs:
           test -f styles.css
           node --check app.js
           node --check prelaw-applied.js
+          node --check level2.js
 
   browser-smoke:
     runs-on: ubuntu-24.04
