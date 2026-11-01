@@ -101,6 +101,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Only qualifying intended beneficiaries ordinarily have enforcement rights."
+      },
+      {
+        "id": "L2-1-8",
+        "title": "UCC warranties and limitations",
+        "reading": "The UCC recognizes express warranties, an implied warranty of merchantability where applicable, and a warranty of fitness for a particular purpose under specified conditions. Disclaimers and remedy limitations face statutory constraints. Evaluate descriptions, merchant status, reliance, notice and the specific state enactment.",
+        "problem": "A restaurant buys a commercial freezer after a seller promises it will hold food at a specified temperature. It repeatedly fails. Identify express and implied warranties, the need for notice, available repair obligations and disputed limitations.",
+        "question": "Which evidence directly supports an express warranty claim?",
+        "options": [
+          "A seller's affirmation about a promised product performance",
+          "A random third party's opinion",
+          "The buyer's unrelated lease"
+        ],
+        "answer": 0,
+        "why": "Express warranties can arise from affirmations of fact, descriptions or samples forming part of the basis of bargain."
       }
     ]
   },
@@ -205,6 +219,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "The statute's protective purpose and causation constrain the theory."
+      },
+      {
+        "id": "L2-2-8",
+        "title": "Intentional infliction of emotional distress",
+        "reading": "Intentional infliction of emotional distress ordinarily requires extreme and outrageous conduct and severe emotional distress, with intent or recklessness depending on jurisdiction. Mere insults or ordinary workplace conflict usually do not suffice. The tort must be distinguished from negligence and statutory harassment claims.",
+        "problem": "An employee alleges months of humiliating threats by a supervisor. Evaluate severity, proof, intent or recklessness, other claims and jurisdiction-specific limitations.",
+        "question": "What must be assessed beyond ordinary offensiveness?",
+        "options": [
+          "Whether the remarks were online",
+          "Extreme and outrageous conduct and severe distress",
+          "Whether the defendant apologized"
+        ],
+        "answer": 1,
+        "why": "The tort generally requires a demanding threshold and severe injury."
       }
     ]
   },
@@ -309,6 +337,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Erie and its progeny require source-specific analysis."
+      },
+      {
+        "id": "L2-3-8",
+        "title": "Motions to dismiss and pleading plausibility",
+        "reading": "Federal Rule 12(b)(6) examines legal sufficiency of a complaint. Under Twombly and Iqbal, well-pleaded facts must plausibly support a claim; mere conclusory statements do not receive the same presumption. Distinguish legal sufficiency from proving a case at trial and examine any opportunity to amend.",
+        "problem": "A complaint states only that a company 'violated all laws' without identifying the transaction or actionable acts. Apply Rule 8 and Rule 12(b)(6), distinguish factual allegations from labels, and consider leave to amend.",
+        "question": "What is the correct role of a 12(b)(6) motion?",
+        "options": [
+          "Weigh all witness credibility",
+          "Automatically decide trial facts",
+          "Test whether adequately pleaded facts state a plausible claim"
+        ],
+        "answer": 2,
+        "why": "A motion to dismiss addresses the sufficiency of pleaded claims, not trial proof."
       }
     ]
   },
@@ -413,6 +455,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Different intrusions require different justifications."
+      },
+      {
+        "id": "L2-4-8",
+        "title": "Double jeopardy and successive prosecutions",
+        "reading": "The Fifth Amendment Double Jeopardy Clause protects against multiple prosecutions and punishments for the same offense within its scope. Blockburger compares statutory elements for separate offenses, subject to legislative intent and other doctrine. Separate sovereigns, mistrials and appeals introduce exceptions and nuances.",
+        "problem": "After a jury acquittal, a state prosecutor files a second charge arising from the same episode under another statutory provision. Compare legal elements, sovereign, disposition and any issue-preclusion concerns.",
+        "question": "What comparison is central under Blockburger?",
+        "options": [
+          "Whether the offenses occurred at night",
+          "Whether each offense requires proof of a fact the other does not",
+          "Whether the prosecutors use identical wording"
+        ],
+        "answer": 1,
+        "why": "The same-elements test compares statutory requirements, not simply factual overlap."
       }
     ]
   },
@@ -531,6 +587,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Disparate impact alone ordinarily does not establish purposeful discrimination under equal protection."
+      },
+      {
+        "id": "L2-5-9",
+        "title": "Commerce Clause and limits of federal authority",
+        "reading": "Congress has enumerated powers, including regulation of interstate commerce. United States v. Lopez identified constitutional limits on regulating noneconomic conduct in the Gun-Free School Zones Act as enacted. Later commerce decisions refine the analysis; students must distinguish statutory text, regulated activity and possible jurisdictional connections.",
+        "problem": "Congress criminalizes possession of a particular object near schools without any interstate-commerce requirement. Analyze whether the federal law fits the commerce power and what drafting changes could matter.",
+        "question": "Which fact most directly tests the relevant authority?",
+        "options": [
+          "Whether the regulated activity has a sufficient interstate-commerce relationship",
+          "Whether the school is old",
+          "Whether the law is popular"
+        ],
+        "answer": 0,
+        "why": "Commerce Clause analysis requires a constitutionally adequate connection to congressional power."
       }
     ]
   },
@@ -649,6 +719,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Ownership instruments and state law identify estates and remedies."
+      },
+      {
+        "id": "L2-6-9",
+        "title": "Adverse possession and limitations",
+        "reading": "Adverse possession can transfer title after actual, open and notorious, exclusive, continuous and hostile possession for the statutory period, although specific tests, tolling rules, permissions and taxes vary by state. Hostility often concerns possession without permission rather than personal animosity.",
+        "problem": "A neighbor openly fences and gardens a strip of land for years, but the titled owner says permission was granted. Identify limitations period, possession evidence, permission and any special statute.",
+        "question": "What dispute is especially important for hostility?",
+        "options": [
+          "The fence color",
+          "Whether occupation was permissive",
+          "Whether the neighbor owns a car"
+        ],
+        "answer": 1,
+        "why": "Permissive possession may defeat the hostility element under governing law."
       }
     ]
   },
@@ -753,6 +837,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Only verified later authority establishes precedential treatment."
+      },
+      {
+        "id": "L2-7-8",
+        "title": "Statutory interpretation and textual analysis",
+        "reading": "Legal interpretation begins with governing text and relevant definitions, structure, effective date and applicable interpretive principles. Legislative history and canons play different roles across jurisdictions. A court's interpretation must be distinguished from the statute itself, and later amendments must be verified.",
+        "problem": "Two statutory sections appear to conflict over eligibility for a state benefit. Draft an analysis using definitions, exceptions, chronology, context and controlling court interpretations, without assuming legislative history overrides unambiguous text.",
+        "question": "Which research item should be checked first?",
+        "options": [
+          "A commentary headline",
+          "A blog ranking",
+          "The current official statutory text and effective date"
+        ],
+        "answer": 2,
+        "why": "Accurate statutory interpretation starts with controlling enacted law and context."
       }
     ]
   }
