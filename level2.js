@@ -185,6 +185,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "An enrichment theory must justify restitution rather than simply show a benefit."
+      },
+      {
+        "id": "L2-1-14",
+        "title": "Contract remedies: mitigation and certainty",
+        "reading": "An injured contracting party ordinarily must make reasonable efforts to avoid avoidable losses; expectation damages also require adequate proof and limits on foreseeability and certainty. The duty to mitigate does not generally require unreasonable risk or expense. Distinguish direct losses, incidental losses, consequential damages, reliance, and restitution under the governing law.",
+        "problem": "After a cancelled supply contract, a buyer rejects an available comparable substitute and claims months of business losses. Identify evidence of reasonable substitute purchases, costs saved, foreseeability, and whether the claimed losses can be proved without speculation.",
+        "question": "What is the appropriate mitigation inquiry?",
+        "options": [
+          "Whether the injured party took reasonable steps to avoid avoidable loss",
+          "Whether the defendant feels remorse",
+          "Whether all future projected profit is automatically recoverable"
+        ],
+        "answer": 0,
+        "why": "Reasonableness, causation and adequate proof matter to recoverable damages."
       }
     ]
   },
@@ -373,6 +387,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Consent must cover the type and circumstances of contact."
+      },
+      {
+        "id": "L2-2-14",
+        "title": "Comparative responsibility and joint tortfeasors",
+        "reading": "When several actors may have contributed to an injury, distinguish factual causation, comparative responsibility and allocation of damages. States differ between modified and pure comparative fault, joint and several liability, contribution, and settlement credits. A plaintiff's own fault is not automatically a total bar in every jurisdiction.",
+        "problem": "A driver speeds through a red light after a city contractor leaves an obscured warning sign, while a pedestrian crosses outside the marked crosswalk. Evaluate all actors' roles and research the state allocation rules.",
+        "question": "What must a court examine before distributing percentages of fault?",
+        "options": [
+          "Only the wealth of each defendant",
+          "Causal contribution and the jurisdiction's allocation law",
+          "Which party filed first"
+        ],
+        "answer": 1,
+        "why": "Allocation follows legal causation and applicable fault rules."
       }
     ]
   },
@@ -561,6 +589,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Rule 50 examines legal sufficiency without ordinary jury-style weighing."
+      },
+      {
+        "id": "L2-3-14",
+        "title": "Federal discovery: privilege and work product",
+        "reading": "Attorney-client privilege generally protects qualifying confidential communications for legal advice, not all facts merely known to counsel. Work-product protection under Rule 26(b)(3) has different requirements and exceptions. Waiver, common-interest assertions and privilege logs require context-specific review. Students must distinguish privilege from relevance and proportionality.",
+        "problem": "During discovery, an opposing party seeks internal accident reports, emails with counsel and underlying photographs. Categorize the requested materials, explain a potential privilege log, and assess whether underlying facts remain discoverable.",
+        "question": "Which statement is most accurate?",
+        "options": [
+          "Every document copied to a lawyer is privileged",
+          "Privilege prohibits discovery of all underlying facts",
+          "Legal advice communications and ordinary underlying facts may receive different treatment"
+        ],
+        "answer": 2,
+        "why": "Privilege is not a blanket shield over relevant underlying facts."
       }
     ]
   },
@@ -749,6 +791,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Statutory elements and state-specific defenses control offense grading."
+      },
+      {
+        "id": "L2-4-14",
+        "title": "Criminal defenses: necessity, duress and insanity",
+        "reading": "Necessity generally concerns choosing a lesser harm under narrowly defined circumstances; duress concerns coercive threats. Their elements, limitations and availability vary by jurisdiction and charge. Insanity defenses use different jurisdiction-specific mental-capacity tests and should not be conflated with inability to form mens rea.",
+        "problem": "A defendant transports prohibited supplies after a credible immediate threat against a family member. Analyze the offense elements, imminence, reasonable alternatives, causal relationship and the particular duress statute.",
+        "question": "Which fact is especially relevant to a duress defense?",
+        "options": [
+          "A sufficiently imminent threat and lack of reasonable alternatives",
+          "Whether the defendant has a prior traffic ticket",
+          "Whether the prohibited goods were heavy"
+        ],
+        "answer": 0,
+        "why": "Duress generally turns on the threat and available alternatives."
       }
     ]
   },
@@ -951,6 +1007,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Mathews uses context-sensitive procedural balancing."
+      },
+      {
+        "id": "L2-5-15",
+        "title": "Constitutional remedies and qualified immunity",
+        "reading": "A constitutional violation and the availability of money damages are separate inquiries. Under 42 U.S.C. § 1983, defendants, state action, immunity doctrines, causation and available relief matter. Qualified immunity doctrine for individual officials can require showing a violated federal right was clearly established in the particular context. Different rules apply to municipalities and prospective relief.",
+        "problem": "A municipal employee sues over a search conducted by an officer. Identify the alleged constitutional right, possible defendants, official versus individual capacities, immunity and the requested remedy.",
+        "question": "What must be distinguished in a section 1983 case?",
+        "options": [
+          "The existence of a violation from a defendant's immunity and available remedy",
+          "Only the case filing fee",
+          "Whether the officer is popular"
+        ],
+        "answer": 0,
+        "why": "Proof of a rights violation does not alone determine damages or immunity."
       }
     ]
   },
@@ -1153,6 +1223,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "A signed but undelivered deed may fail to complete conveyance."
+      },
+      {
+        "id": "L2-6-15",
+        "title": "Land sale contracts and equitable conversion",
+        "reading": "Land transactions can involve written-contract requirements, title marketability, contingencies, remedies and the distinction between contract and deed. Equitable conversion is treated differently across jurisdictions, particularly for risk of loss pending closing. Analyze express risk clauses, disclosure, conditions and specific performance before applying a traditional default rule.",
+        "problem": "A buyer signs a purchase agreement for a home, but fire damages the structure before closing. Examine contract terms, state risk-of-loss law, insurance and possible termination or adjustment rights.",
+        "question": "Which issue must be researched before assigning the loss?",
+        "options": [
+          "Whether the seller is older",
+          "The governing risk-of-loss rule and express contract terms",
+          "Whether the neighbors objected to the sale"
+        ],
+        "answer": 1,
+        "why": "Risk before closing depends on the jurisdiction and the parties' valid agreement."
       }
     ]
   },
@@ -1341,6 +1425,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Candid predictive legal analysis depends on uncertainty, verification and balanced reasoning."
+      },
+      {
+        "id": "L2-7-14",
+        "title": "Legal argument: analogies and counterarguments",
+        "reading": "Strong advocacy connects each material fact to a governing element, states unfavorable authority accurately, and explains why the distinction changes the result. Separate an objective risk assessment from a persuasive brief. Evaluate procedural posture and the standard of review so arguments are directed at the decision the court can make.",
+        "problem": "Given two appellate holdings applying similar notice requirements to different commercial communications, construct both parties' arguments, identify the dispositive factual distinction, and explain which additional source would resolve ambiguity.",
+        "question": "Which makes a legal distinction persuasive?",
+        "options": [
+          "Sharing the same general subject",
+          "A material fact connected to the governing rule or holding",
+          "Using more adjectives about fairness"
+        ],
+        "answer": 1,
+        "why": "Legally meaningful distinctions address the court's operative rule."
       }
     ]
   }
