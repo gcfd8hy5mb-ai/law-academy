@@ -129,6 +129,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Article 2 modification generally does not require new consideration but must satisfy good faith and other applicable limits."
+      },
+      {
+        "id": "L2-1-10",
+        "title": "Anticipatory repudiation and adequate assurances",
+        "reading": "Under UCC Article 2, a party facing reasonable grounds for insecurity may demand adequate assurances of due performance in writing; a clear repudiation may permit remedies without waiting for the performance date. Distinguish a doubtful statement, a request to renegotiate, actual repudiation, suspension of performance, and retraction under applicable statutory rules.",
+        "problem": "A seller warns that inventory shortages may prevent delivery, then stops answering requests for confirmation. Analyze whether the buyer has reasonable grounds for insecurity, whether a proper assurance request was made, and whether the response amounts to repudiation.",
+        "question": "Which fact best determines the buyer's next lawful step?",
+        "options": [
+          "Whether reasonable grounds justify a proper request for adequate assurances",
+          "Whether the buyer dislikes the seller",
+          "Whether the product has a logo"
+        ],
+        "answer": 0,
+        "why": "UCC assurance rights depend on reasonable insecurity and compliance with statutory requirements."
       }
     ]
   },
@@ -261,6 +275,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Vicarious liability generally depends on scope of employment."
+      },
+      {
+        "id": "L2-2-10",
+        "title": "Negligence and emotional injury",
+        "reading": "Negligent infliction of emotional distress is not uniformly defined. Jurisdictions may require physical impact, a zone-of-danger showing, bystander relationship, direct-duty circumstances, or other limits. Distinguish emotional distress damages associated with physical injury from stand-alone NIED claims and avoid treating distress alone as automatically compensable.",
+        "problem": "A passenger witnesses a nearby crash involving a family member but is uninjured. Analyze possible emotional injury theories, proximity, perception, relationship, foreseeability and controlling state rules.",
+        "question": "What is essential before predicting recovery?",
+        "options": [
+          "Assuming severe distress always establishes negligence",
+          "Only the defendant's insurance coverage",
+          "Identifying the jurisdiction's specific emotional-injury requirements"
+        ],
+        "answer": 2,
+        "why": "Jurisdictions set different limits for negligent emotional injury."
       }
     ]
   },
@@ -393,6 +421,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Genuine disputes of material fact ordinarily require trial resolution."
+      },
+      {
+        "id": "L2-3-10",
+        "title": "Federal pleading amendments and relation back",
+        "reading": "Federal Rule 15 generally permits certain amendments and provides relation-back rules for claims or party changes arising from the same conduct, transaction or occurrence. Changing defendants has additional notice and mistake requirements under Rule 15(c). Statutes of limitations and service timing can determine whether amendments succeed.",
+        "problem": "A plaintiff sues the wrong corporate entity and discovers the mistake after the limitations deadline. Analyze original allegations, timely notice, knowledge of mistake, prejudice and the Rule 4(m) period.",
+        "question": "Which question is crucial for relation back when changing defendants?",
+        "options": [
+          "Whether the plaintiff prefers the new defendant",
+          "Whether the Rule 15(c) notice and mistake requirements are met",
+          "Whether the lawsuit is popular"
+        ],
+        "answer": 1,
+        "why": "A change of party requires more than similarity between corporate names."
       }
     ]
   },
@@ -525,6 +567,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Different constitutional protections operate under different conditions."
+      },
+      {
+        "id": "L2-4-10",
+        "title": "Conspiracy and criminal agreement",
+        "reading": "Conspiracy ordinarily requires an unlawful agreement plus a culpable mental state, and some jurisdictions require an overt act. Under federal law, the precise conspiracy statute determines elements. Distinguish evidence of agreement from parallel conduct, mere knowledge, withdrawal and liability for acts of coconspirators.",
+        "problem": "Two individuals discuss transporting contraband; one buys packing supplies, while the other claims they never agreed to proceed. Identify an agreement, intent, any overt act, and evidence supporting contrary inferences.",
+        "question": "What should be identified before classifying conspiracy?",
+        "options": [
+          "The governing statute's agreement and intent elements",
+          "Whether the suspects were classmates",
+          "Whether the supplies were expensive"
+        ],
+        "answer": 0,
+        "why": "An unlawful agreement and required mental state must be established under the relevant statute."
       }
     ]
   },
@@ -671,6 +727,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "The First Amendment ordinarily requires governmental action."
+      },
+      {
+        "id": "L2-5-11",
+        "title": "Judicial review: standing and justiciability",
+        "reading": "Federal Article III standing ordinarily requires a concrete and particularized injury, traceability and likely redressability. Mootness, ripeness and political-question considerations may create separate limits. Distinguish Article III federal-court restrictions from state-court standing rules and any statutory cause of action.",
+        "problem": "An advocacy group seeks a federal ruling on a policy it dislikes but identifies no affected members or concrete harm. Analyze organizational and associational standing, the type of injury alleged and potential redress.",
+        "question": "Which is a necessary Article III standing consideration?",
+        "options": [
+          "Whether the group has many followers",
+          "A concrete, particularized injury sufficiently connected to requested relief",
+          "Whether the policy is controversial"
+        ],
+        "answer": 1,
+        "why": "Federal standing requires injury, causation, and redressability."
       }
     ]
   },
@@ -817,6 +887,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Residential remedies and due-process requirements are jurisdiction-specific."
+      },
+      {
+        "id": "L2-6-11",
+        "title": "Nuisance and competing land uses",
+        "reading": "Private nuisance ordinarily addresses substantial and unreasonable interference with another's use and enjoyment of land. Courts consider duration, severity, locality, utility and available remedies. Distinguish trespass, nuisance and negligence; injunctive relief is not automatic and can depend on equitable balancing.",
+        "problem": "A factory's nighttime noise affects adjacent homes, but it predates recent residential development. Analyze reasonableness, damages, locality, possible zoning effects and feasible injunctions.",
+        "question": "What is central to private nuisance?",
+        "options": [
+          "Ownership of every neighboring parcel",
+          "Any noise of any duration",
+          "Substantial and unreasonable interference with land use"
+        ],
+        "answer": 2,
+        "why": "Private nuisance turns on a qualifying interference and contextual reasonableness."
       }
     ]
   },
@@ -949,6 +1033,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Scope and precedential force depend on what the court actually decided."
+      },
+      {
+        "id": "L2-7-10",
+        "title": "Researching appellate standards of review",
+        "reading": "On appeal, questions of law are often reviewed de novo, factual findings may be reviewed for clear error, and many discretionary trial rulings under abuse-of-discretion standards. The precise standard depends on court, procedural setting, and issue. A legal memorandum should connect the standard to the argument rather than assume appeals retry facts.",
+        "problem": "A client challenges a trial judge's fact findings and interpretation of a statute. Separate the appellate standards, identify the record and preservation requirements, and draft distinct arguments.",
+        "question": "Which is most accurate?",
+        "options": [
+          "Different appellate issues may receive different standards of review",
+          "Every appellate issue is decided de novo",
+          "An appeal automatically re-hears witnesses"
+        ],
+        "answer": 0,
+        "why": "The applicable review standard depends on the nature of the issue."
       }
     ]
   }
