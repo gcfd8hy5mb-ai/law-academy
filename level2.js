@@ -171,6 +171,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Mistake and supervening impracticability involve different timing and elements."
+      },
+      {
+        "id": "L2-1-13",
+        "title": "Restitution and unjust enrichment",
+        "reading": "Restitution may require surrender of benefits unjustly retained, distinct from contractual expectation damages. Analyze the benefit conferred, absence of a valid basis for retention, defenses, and applicable law. An express enforceable contract often changes the availability of alternative unjust-enrichment claims.",
+        "problem": "A contractor mistakenly installs expensive materials in the wrong unit and seeks reimbursement. Examine enrichment, notice, opportunity to reject, mistake, contract status and the defendant's strongest objections.",
+        "question": "What is central to unjust enrichment?",
+        "options": [
+          "Whether one party is wealthier",
+          "Whether retention of a benefit is unjust under controlling law",
+          "Whether payment was requested loudly"
+        ],
+        "answer": 1,
+        "why": "An enrichment theory must justify restitution rather than simply show a benefit."
       }
     ]
   },
@@ -345,6 +359,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "The constitutional actual-malice test concerns the publisher's knowledge or recklessness about falsity."
+      },
+      {
+        "id": "L2-2-13",
+        "title": "Battery, assault and consent",
+        "reading": "Civil battery generally concerns intentional harmful or offensive contact, while assault concerns reasonable apprehension of imminent contact. Analyze intent, physical contact, scope of consent, self-defense and applicable state formulations. Mere words without imminent threatened contact may not suffice for civil assault.",
+        "problem": "During a recreational event, one player deliberately strikes another outside the rules, then claims the injured player agreed to all contact. Assess battery, assault, implied consent, and proportionality of any claimed defense.",
+        "question": "Which issue most directly affects the consent defense?",
+        "options": [
+          "Whether the contact was within the consent's scope",
+          "Whether the game was televised",
+          "Whether the parties have the same employer"
+        ],
+        "answer": 0,
+        "why": "Consent must cover the type and circumstances of contact."
       }
     ]
   },
@@ -519,6 +547,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Supplemental jurisdiction generally requires a sufficiently related factual nucleus."
+      },
+      {
+        "id": "L2-3-13",
+        "title": "Trial procedure and judgment as a matter of law",
+        "reading": "Federal civil trials distinguish presentation of evidence, jury instructions, Rule 50 judgment as a matter of law, jury verdicts and post-trial motions. Rule 50 applies when a reasonable jury lacks a legally sufficient evidentiary basis for a required finding; procedural timing and renewed motions matter.",
+        "problem": "After a plaintiff finishes presenting proof, the defendant asks the judge to resolve disputed witness credibility and direct a verdict. Analyze applicable Rule 50 standard, evidence viewed favorably to the nonmovant, and later motion requirements.",
+        "question": "What is generally improper on a Rule 50 motion?",
+        "options": [
+          "Determining whether evidence legally supports a finding",
+          "Resolving disputed witness credibility as an ordinary factfinder",
+          "Examining the substantive elements"
+        ],
+        "answer": 1,
+        "why": "Rule 50 examines legal sufficiency without ordinary jury-style weighing."
       }
     ]
   },
@@ -693,6 +735,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Particularity and a sufficient nexus limit generalized searches."
+      },
+      {
+        "id": "L2-4-13",
+        "title": "Homicide mental states and heat of passion",
+        "reading": "Homicide grading depends on the jurisdiction's statutes and culpable mental states. Traditional voluntary manslaughter doctrines may consider adequate provocation and heat of passion, while modern statutes can use different frameworks. Distinguish intentional, knowing, reckless and negligent killing, and analyze causation and defenses.",
+        "problem": "A heated argument results in a fatal injury after a delay. Analyze the evidence of intent, provocation, cooling-off, causal connection and statutory homicide grades without assuming one universal rule.",
+        "question": "What is necessary before selecting a homicide charge?",
+        "options": [
+          "A media description",
+          "The defendant's age alone",
+          "The governing elements and facts showing the required mens rea"
+        ],
+        "answer": 2,
+        "why": "Statutory elements and state-specific defenses control offense grading."
       }
     ]
   },
@@ -881,6 +937,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "Government sponsorship and coercion differ from genuine private expression."
+      },
+      {
+        "id": "L2-5-14",
+        "title": "Procedural due process and administrative hearings",
+        "reading": "Procedural due process requires a protected interest and procedures appropriate to the risk of erroneous deprivation. Mathews v. Eldridge weighs private interest, risk of error and value of safeguards, and governmental burdens. Particular contexts may require different procedures, including more protection when credibility disputes dominate.",
+        "problem": "An agency ends disability benefits using medical records without a pretermination oral hearing. Assess entitlement, risk of error, available written submissions and later review.",
+        "question": "Which framework addresses the amount of process due?",
+        "options": [
+          "A balancing of private interest, error risk and government burden",
+          "Automatic entitlement to jury trial",
+          "A requirement that every decision be oral"
+        ],
+        "answer": 0,
+        "why": "Mathews uses context-sensitive procedural balancing."
       }
     ]
   },
@@ -1069,6 +1139,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Penn Central uses contextual factors rather than a categorical price-drop rule."
+      },
+      {
+        "id": "L2-6-14",
+        "title": "Deeds, delivery and warranties of title",
+        "reading": "A valid deed generally requires grantor, grantee, sufficiently identified land, operative words, signature and legally effective delivery, with jurisdiction-specific formalities. General and special warranty deeds differ in covenants, while quitclaim deeds usually convey only the grantor's interest without ownership warranties.",
+        "problem": "A seller signs a warranty deed but keeps it in a locked drawer and never authorizes delivery. Identify conveyance requirements and distinguish deed covenants from the underlying sale contract.",
+        "question": "Which issue is central to whether title transferred?",
+        "options": [
+          "Whether the land is rural",
+          "Whether there was legally effective delivery of the deed",
+          "Whether the instrument was notarized in another city"
+        ],
+        "answer": 1,
+        "why": "A signed but undelivered deed may fail to complete conveyance."
       }
     ]
   },
@@ -1243,6 +1327,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Client advocacy does not authorize knowing material misrepresentation."
+      },
+      {
+        "id": "L2-7-13",
+        "title": "Drafting objective legal advice and uncertainty",
+        "reading": "Professional objective advice separates verified law, disputed facts, litigation risk and recommended investigation. Do not state that one isolated favorable opinion guarantees success. Where the jurisdiction or dates are uncertain, explain what authorities and facts must be checked before a recommendation.",
+        "problem": "Write a memo advising a client about a contract clause when one decision supports enforcement and another is distinguishable. State the rule, competing interpretations, practical risk and next evidence needed.",
+        "question": "Which practice makes advice reliable?",
+        "options": [
+          "Guaranteeing success to reassure the client",
+          "Quoting an unverified online summary",
+          "Expressly identifying material uncertainties and adverse authority"
+        ],
+        "answer": 2,
+        "why": "Candid predictive legal analysis depends on uncertainty, verification and balanced reasoning."
       }
     ]
   }
