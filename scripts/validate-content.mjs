@@ -171,3 +171,6 @@ for(const l of level2Courses.flatMap(c=>c.lessons)){
 assert.ok(html.indexOf('src="./level2.js"')<html.indexOf('src="./app.js"'),'Level 2 module must load before app');
 assert.ok(source.includes('renderLevel2();return'),'Level 2 launch routing missing');
 console.log('PASS: Seven 1L courses, fourteen applied lessons, answer indices and launch routing.');
+
+assert.ok(level2Source.includes('b.onclick=()=>showLesson(i,+b.dataset.l2lesson)'),'Level 2 lesson buttons must defer rendering until click');
+console.log('PASS: Level 2 lesson navigation click handlers are deferred.');
