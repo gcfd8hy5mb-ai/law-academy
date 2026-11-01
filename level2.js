@@ -143,6 +143,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "UCC assurance rights depend on reasonable insecurity and compliance with statutory requirements."
+      },
+      {
+        "id": "L2-1-11",
+        "title": "Specific performance and equitable remedies",
+        "reading": "Specific performance is an equitable remedy generally available where damages are inadequate, often for unique real property or goods under appropriate statutory conditions. Courts consider certainty, fairness, feasibility of supervision and equitable defenses. An injunction and restitution have different requirements; an ordinary breach does not automatically warrant an order to perform.",
+        "problem": "A gallery contracts to sell an identified original painting then attempts to sell it to another buyer. Compare damages, specific performance, mutual obligations and equitable defenses, and identify necessary facts.",
+        "question": "Which consideration especially supports specific performance?",
+        "options": [
+          "That all contracts require personal service",
+          "Inadequacy of money damages for the particular subject",
+          "That breach was intentional"
+        ],
+        "answer": 1,
+        "why": "Equity focuses on whether money damages adequately protect the interest."
       }
     ]
   },
@@ -289,6 +303,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Jurisdictions set different limits for negligent emotional injury."
+      },
+      {
+        "id": "L2-2-11",
+        "title": "Conversion and trespass to chattels",
+        "reading": "Conversion is a serious interference with another's possessory rights in personal property, often supporting recovery of the item's value. Trespass to chattels may address lesser interference or actual dispossession, impairment or loss of use depending on jurisdiction. Intent generally concerns doing the act of dominion, not necessarily knowing ownership is wrongful.",
+        "problem": "A repair shop mistakenly sells a customer's stored instrument, while another worker briefly borrows the customer's tool without damage. Evaluate interference severity, ownership, defenses and remedies.",
+        "question": "What distinguishes conversion from lesser interference?",
+        "options": [
+          "Serious interference with dominion over the personal property",
+          "Whether the chattel is expensive",
+          "Whether the plaintiff is a corporation"
+        ],
+        "answer": 0,
+        "why": "Conversion requires sufficiently serious interference with possessory rights."
       }
     ]
   },
@@ -435,6 +463,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "A change of party requires more than similarity between corporate names."
+      },
+      {
+        "id": "L2-3-11",
+        "title": "Class certification and common questions",
+        "reading": "Rule 23 class actions require numerosity, commonality, typicality and adequacy under Rule 23(a), plus the relevant Rule 23(b) pathway. Commonality is not established merely by many people alleging different injuries. Evaluate shared answers capable of resolving common contentions and the demands of Rule 23(b)(3) predominance and superiority when seeking damages.",
+        "problem": "Employees at different facilities allege unfair decisions by different supervisors and seek certification of a nationwide damages class. Identify common policy evidence, individual variation and certification requirements.",
+        "question": "What is needed beyond numerous plaintiffs?",
+        "options": [
+          "An automatic certification for national employers",
+          "One lawyer's assertion of similarity",
+          "A common contention capable of common resolution"
+        ],
+        "answer": 2,
+        "why": "Rule 23 requires meaningful commonality and other independent elements."
       }
     ]
   },
@@ -581,6 +623,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "An unlawful agreement and required mental state must be established under the relevant statute."
+      },
+      {
+        "id": "L2-4-11",
+        "title": "Burden of proof and reasonable doubt",
+        "reading": "In a criminal prosecution, the state must prove every element beyond a reasonable doubt. Jury instructions must avoid improperly shifting the burden to the defendant. Presumptions, affirmative defenses and evidentiary sufficiency involve distinct rules and can vary by jurisdiction.",
+        "problem": "A jury instruction tells jurors to presume intent from the defendant's act unless the defendant proves innocence. Analyze the constitutional concern and a proper elements-based instruction.",
+        "question": "Which rule governs the prosecution's case?",
+        "options": [
+          "Proof of every offense element beyond a reasonable doubt",
+          "Proof only of the prohibited act",
+          "Proof by a simple majority"
+        ],
+        "answer": 0,
+        "why": "Due process requires proof beyond a reasonable doubt of each element."
       }
     ]
   },
@@ -741,6 +797,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 1,
         "why": "Federal standing requires injury, causation, and redressability."
+      },
+      {
+        "id": "L2-5-12",
+        "title": "Freedom of religion and neutral laws",
+        "reading": "The Free Exercise Clause protects religious exercise; neutral and generally applicable laws are ordinarily treated differently from targeted restrictions. Employment Division v. Smith and later statutory and constitutional developments must be distinguished. Government targeting religion, exemptions, and federal or state RFRA statutes can change analysis.",
+        "problem": "A city permits numerous secular exceptions to an assembly restriction but denies similar religious gatherings. Analyze neutrality, general applicability, comparators and relevant statutory protections.",
+        "question": "Which issue is central?",
+        "options": [
+          "Whether the city endorses a faith",
+          "Whether rules are neutral and generally applicable in operation",
+          "Whether the gathering is indoors"
+        ],
+        "answer": 1,
+        "why": "Neutrality and general applicability guide Free Exercise analysis."
       }
     ]
   },
@@ -901,6 +971,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 2,
         "why": "Private nuisance turns on a qualifying interference and contextual reasonableness."
+      },
+      {
+        "id": "L2-6-12",
+        "title": "Servitudes and covenant enforcement",
+        "reading": "Real covenants and equitable servitudes may bind successors under distinct historical requirements, influenced by modern restatements and state statutes. Notice, writing, intent, touch-and-concern doctrine where retained, privity and equitable defenses can matter. Homeowner-association restrictions may also be governed by statute.",
+        "problem": "A deed restriction limits commercial use, but a later buyer claims it was never disclosed. Analyze recording, notice, enforceability, changed conditions and relevant statutory HOA limits.",
+        "question": "What determines whether a successor may be bound?",
+        "options": [
+          "Only whether the original parties are alive",
+          "Only whether the land is valuable",
+          "The covenant type, valid creation and governing successor-enforcement law"
+        ],
+        "answer": 2,
+        "why": "Servitude enforcement depends on the legal interest and controlling jurisdiction."
       }
     ]
   },
@@ -1047,6 +1131,20 @@ window.LAW_LEVEL2=[
         ],
         "answer": 0,
         "why": "The applicable review standard depends on the nature of the issue."
+      },
+      {
+        "id": "L2-7-11",
+        "title": "Legal citation, quotations and source verification",
+        "reading": "Reliable legal citations identify court, year, reporter or public source, pincite and later treatment when required. Do not present paraphrases as quotations or citations to unread cases as verified. Citation manuals vary by forum. Use the actual opinion to distinguish holdings, dicta, posture and jurisdiction.",
+        "problem": "A colleague submits a memorandum citing a case quotation found on a blog. Locate the original decision, verify the quotation and pincite, check subsequent treatment, and correct any misleading paraphrase.",
+        "question": "What must happen before relying on a judicial quotation?",
+        "options": [
+          "Confirm the actual source text and context",
+          "Assume search snippets are authoritative",
+          "Remove all citations"
+        ],
+        "answer": 0,
+        "why": "Direct verification avoids misleading quotations and inaccurate authority."
       }
     ]
   }
