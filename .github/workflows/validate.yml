@@ -51,6 +51,14 @@ jobs:
           node --check level3.js
           node --check level3-ui.js
           node scripts/validate-level3.mjs
+      - name: Generate 70-lesson Level 3 legal-source review inventory
+        run: node scripts/audit-level3-sources.mjs
+      - name: Upload Level 3 source audit inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: level3-source-review-inventory
+          path: audit/level3-source-review-inventory.csv
+          retention-days: 30
       - name: Generate 85-lesson legal-source review inventory
         run: node scripts/audit-prelaw-sources.mjs
       - name: Upload source audit inventory
