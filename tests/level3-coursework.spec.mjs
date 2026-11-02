@@ -118,3 +118,20 @@ test('Final reviewer packet contains the student answer, case facts and 100-poin
  expect(packet).toContain('REVIEWER RUBRIC (100)');
  expect(packet).toContain('Qualified reviewer must check sources');
 });
+
+test('Reviewer packet remains copyable when clipboard permission is unavailable',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{
+   Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('Clipboard blocked');}}});
+   renderLevel3();
+ });
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="9"]').click();
+ await page.locator('#l3draft').fill('Analysis with factual application and opposing arguments.');
+ await page.locator('#l3reviewPacket').click();
+ await expect(page.locator('#l3reviewPacketStatus')).toContainText('complete reviewer packet');
+ await expect(page.locator('#l3reviewPacketFallback')).toBeVisible();
+ await expect(page.locator('#l3reviewPacketFallback')).toContainText('CASE FACTS:');
+ await expect(page.locator('#l3reviewPacketFallback')).toContainText('REVIEWER RUBRIC (100)');
+ await expect(page.locator('#l3reviewPacketFallback')).toContainText('Analysis with factual application');
+});
