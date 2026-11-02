@@ -247,3 +247,14 @@ assert.equal(level2Courses.filter(c=>c.lessons[9].reading.includes('TOPIC-SPECIF
 // Advanced primary-authority extensions must remain available in every course.
 const advancedCaseTopics=['Consequential damages: Hadley and proof','Relational duty and pure economic loss','Erie and the Rules Enabling Act','Searches of smartphones after arrest','Equal protection: sex classifications and neutral policies','Adverse possession and tacking','Authority checking and negative treatment'];
 assert.equal(level2Courses.filter((c,i)=>c.lessons.some(l=>l.title===advancedCaseTopics[i] && l.problem.includes('900–1,200') && l.options.length===3)).length,7,'All seven authority-based case examinations must be present');
+
+// Every supplemental essay must explain its own issue map and non-automated grading criteria.
+const rubricIds=['L2-1-18','L2-2-18','L2-3-18','L2-4-18','L2-5-19','L2-6-19','L2-7-18'];
+for(const [i,id] of rubricIds.entries()){
+ const lesson=level2Courses[i].lessons.find(l=>l.id===id);
+ assert.ok(lesson,'Missing advanced examination '+id);
+ assert.ok(lesson.problem.includes('EXAMINER CHECKLIST '+id),'Issue checklist missing '+id);
+ assert.ok(lesson.problem.includes('SUBSTANTIVE RUBRIC (100 POINTS)'),'100-point rubric missing '+id);
+ assert.ok(lesson.problem.includes('GRADING LIMITATION'),'Independent writing review warning missing '+id);
+}
+console.log('PASS: Seven advanced essay exams include issue checklists, scoring criteria and independent review warnings.');
