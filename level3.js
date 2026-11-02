@@ -4,6 +4,43 @@ window.LAW_LEVEL3=[
     "id": "L3-1",
     "title": "Evidence",
     "lessons": [
+{
+      "id": "L3-1-2",
+      "title": "Authentication of digital and physical exhibits",
+      "authority": "Federal Rules of Evidence 901–902, 104(b)",
+      "scenario": "A party offers a screenshot of a message purportedly sent by a manager, but the phone was shared and its metadata is missing.",
+      "reading": "Authentication requires enough evidence for a reasonable factfinder to determine that an item is what its proponent claims. Under Rule 901(b), identifying a distinctive feature, witness knowledge, or a reliable process may support a foundation; no single method is mandatory. Rule 902 lists self-authenticating categories, but that designation does not by itself resolve hearsay, relevance, or reliability disputes. Rule 104(b) governs preliminary issues dependent on a fact. Digital evidence requires attention to account access, chain of custody, alteration, timestamps, device ownership, and corroborating records. A defect in chain of custody may affect weight rather than automatic admissibility depending on its severity and context. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Proponent relies on distinctive wording and corroborating payment records. Opponent challenges shared access and incomplete logs, and seeks testimony from the device custodian.",
+      "assignment": "Create an exhibit foundation checklist, argue admissibility both ways, and draft a 900-word motion with a conditional ruling.",
+      "question": "Does authentication alone make a message admissible?",
+      "options": [
+            "Yes, it removes every other objection",
+            "No, hearsay and other rules still apply",
+            "Only when sent by a manager"
+      ],
+      "answer": 1,
+      "why": "Authentication addresses identity, not every exclusion rule.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+{
+      "id": "L3-1-3",
+      "title": "Hearsay: purpose, declarants and exceptions",
+      "authority": "Federal Rules of Evidence 801–803, 805",
+      "scenario": "A nurse records a patient's statement that a coworker pushed them, later repeating a bystander's account of the incident.",
+      "reading": "Analyze each out-of-court statement independently. Hearsay generally means a statement offered to prove the truth of its assertion, unless an exclusion or nonhearsay purpose applies. A statement offered to show notice, effect on listener, or state of mind may have a nontruth purpose, but the judge should consider a limiting instruction and pretext risk. Rule 801(d) identifies categories defined as nonhearsay, and Rules 803–804 specify exceptions with distinct foundations. Multiple hearsay under Rule 805 demands a valid route for every layer. The fact a record was created professionally does not automatically validate every embedded accusation. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Proponent contends treatment history and business-record foundations apply; opponent asks whether naming the coworker was pertinent to medical care and points to a second-level witness.",
+      "assignment": "Make a two-layer hearsay chart, propose a limiting instruction, and write competing 1,000-word arguments.",
+      "question": "What is required for multiple hearsay?",
+      "options": [
+            "One hearsay exception for the outer document suffices",
+            "Each relevant hearsay layer must be admissible",
+            "A witness's confidence cures hearsay"
+      ],
+      "answer": 1,
+      "why": "Rule 805 requires an admissibility path for each layer.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+
       {
         "id": "L3-1-1",
         "title": "Relevance, Rule 403 and foundational proof",
@@ -28,6 +65,43 @@ window.LAW_LEVEL3=[
     "id": "L3-2",
     "title": "Business Organizations",
     "lessons": [
+{
+      "id": "L3-2-2",
+      "title": "Board fiduciary duties and business judgment",
+      "authority": "State corporate law; Delaware General Corporation Law §§ 141, 144 where relevant",
+      "scenario": "Directors approve an acquisition after a short meeting using a valuation commissioned by a director's sibling.",
+      "reading": "Separate duty of care, loyalty and good faith rather than assuming a poor business outcome proves wrongdoing. The business judgment presumption generally protects informed, disinterested decisions made in good faith; conflicts or deficient process can change the framework. Identify the relevant incorporation jurisdiction, governing statutes, charter provisions, director exculpation and contemporary case law. A related-party valuation requires investigating financial interests, decision-maker independence, disclosures, advisors, alternatives and minutes. The appropriate standard of review and remedies depend on the transaction structure and controlling law. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Company contends reliance on advisers was reasonable; shareholder challenges adviser independence, timing and material nondisclosure.",
+      "assignment": "Draft a board process improvement memo, a plaintiff complaint outline, and 1,000-word response under a stated jurisdiction.",
+      "question": "Does a disappointing acquisition alone establish breach of fiduciary duty?",
+      "options": [
+            "Always",
+            "No; process, conflicts and governing legal standards matter",
+            "Only if the price exceeds projections"
+      ],
+      "answer": 1,
+      "why": "Results alone do not substitute for proving the applicable duty and breach.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+{
+      "id": "L3-2-3",
+      "title": "Derivative suits and demand",
+      "authority": "Federal Rule of Civil Procedure 23.1; governing state demand law",
+      "scenario": "A shareholder alleges directors favored an affiliated supplier, but the company has not filed suit.",
+      "reading": "A derivative claim asserts an injury to the corporation through a shareholder representative. Distinguish direct shareholder harms from corporate claims before addressing standing. Rule 23.1 sets pleading and procedural requirements in federal court; state law generally determines substantive demand and demand-futility standards. Examine board composition, independence, interested transactions, contemporaneous knowledge and available directors. Making demand may have consequences under the applicable law, so students must not mechanically choose demand or futility. Remedies generally flow to the entity, subject to governing law and fees. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Shareholder asserts futility due to board ties; company argues a disinterested majority could consider demand and allegations are conclusory.",
+      "assignment": "Write a demand decision memo and 900-word factual pleading review with two counterfactual board configurations.",
+      "question": "What should a lawyer classify before arguing demand futility?",
+      "options": [
+            "Whether the injury belongs to the entity or directly to the shareholder",
+            "Only the company's market capitalization",
+            "Only the requested legal fee"
+      ],
+      "answer": 0,
+      "why": "The direct-versus-derivative distinction determines the procedural route.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+
       {
         "id": "L3-2-1",
         "title": "Actual, apparent authority and fiduciary conflicts",
@@ -52,6 +126,43 @@ window.LAW_LEVEL3=[
     "id": "L3-3",
     "title": "Administrative Law",
     "lessons": [
+{
+      "id": "L3-3-2",
+      "title": "Statutory interpretation after Chevron",
+      "authority": "5 U.S.C. § 706; Loper Bright Enterprises v. Raimondo (2024)",
+      "scenario": "An environmental regulator interprets an ambiguous statute to require a new technology not expressly named by Congress.",
+      "reading": "Under APA § 706 a reviewing court decides relevant questions of law and interprets statutory provisions, while respecting lawful policy choices committed to agencies. Loper Bright overruled the Chevron framework of mandatory judicial deference based on ambiguity alone. It did not mean agencies have no discretion or that persuasive expert reasoning is irrelevant. Start with text, structure, context, applicable delegations and governing precedent; distinguish legal meaning from factual or policymaking determinations. Consider reviewability, final agency action, arbitrary-and-capricious review and remedial limits separately. The date of an earlier case may determine the relevance of precedent before and after Loper Bright. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Agency points to technical expertise and delegation; challenger argues Congress specified different technologies and exceeded statutory limits.",
+      "assignment": "Write a 1,000-word bench memorandum identifying legal interpretation, delegated discretion, standards of review and alternative results.",
+      "question": "After Loper Bright, does statutory ambiguity automatically require Chevron deference?",
+      "options": [
+            "Yes",
+            "No",
+            "Only in state courts"
+      ],
+      "answer": 1,
+      "why": "Courts no longer apply Chevron's ambiguity-triggered mandatory deference.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+{
+      "id": "L3-3-3",
+      "title": "Notice-and-comment record and exceptions",
+      "authority": "Administrative Procedure Act 5 U.S.C. §§ 553, 706",
+      "scenario": "An agency issues an emergency workplace rule with a thirty-day effective date and cites urgent conditions.",
+      "reading": "Classify the rule by legal effect, then identify the ordinary notice-and-comment process and any statutory or APA exceptions. The good-cause exception requires a reasoned finding that notice and public procedure are impracticable, unnecessary or contrary to public interest, with a brief supporting statement. Expediency is not enough by itself. Evaluate publication, effective date, agency record, public participation, response to significant comments, and the separate possibility of procedural prejudice. Students should distinguish emergency claims from the substance of the enabling statute and avoid assuming any invalid procedure automatically resolves the merits. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Workers argue immediacy is needed for health; employers insist the record shows years of delay and little evidence of genuine urgency.",
+      "assignment": "Create procedural timeline and competing 900-word motions with a proposed record-remand remedy.",
+      "question": "Can an agency dispense with notice-and-comment simply by using the word emergency?",
+      "options": [
+            "Yes",
+            "No; a statutory exception and its criteria must be met",
+            "Yes, if the rule is unpopular"
+      ],
+      "answer": 1,
+      "why": "A label is not a substitute for the APA's exception requirements.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+
       {
         "id": "L3-3-1",
         "title": "Agency rulemaking and judicial review after Loper Bright",
@@ -76,6 +187,43 @@ window.LAW_LEVEL3=[
     "id": "L3-4",
     "title": "Professional Responsibility",
     "lessons": [
+{
+      "id": "L3-4-2",
+      "title": "Confidentiality and mandatory candor",
+      "authority": "ABA Model Rules 1.6, 3.3, 4.1; adopted state rules control",
+      "scenario": "A client admits that a crucial affidavit already filed in court contains a false claim.",
+      "reading": "Separate client confidentiality from a lawyer's obligations concerning knowingly false evidence and tribunal candor. A lawyer must investigate what is known, avoid fabricating certainty, and consider counseling the client to correct the record. Under Model Rule 3.3, remedial measures may be required and can prevail over confidentiality in specified circumstances, but exact scope and timing depend on adopted law and proceeding. Do not reflexively reveal information to opposing counsel, resign without assessing consequences, or knowingly permit false testimony to stand. Document the sequence of questions, advice and decisions while protecting client confidences. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Client claims the affidavit was merely imprecise; judge has scheduled an evidentiary hearing. Assess knowledge versus suspicion and what steps are reasonable.",
+      "assignment": "Draft a confidential 950-word ethics memorandum and correction decision tree, with jurisdiction-specific rule citations.",
+      "question": "Can confidentiality always be invoked to permit knowingly false evidence to remain before a tribunal?",
+      "options": [
+            "Yes, without exception",
+            "No; candor duties can require remedial measures",
+            "Only if a case is civil"
+      ],
+      "answer": 1,
+      "why": "Candor and confidentiality require careful reconciliation under controlling rules.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+{
+      "id": "L3-4-3",
+      "title": "Client trust accounts and fee disputes",
+      "authority": "ABA Model Rules 1.5, 1.15, 1.16; local trust-account rules",
+      "scenario": "A lawyer deposits a large advance fee into an operating account and later disputes a client's refund request.",
+      "reading": "Identify whether the advance is client property under the jurisdiction's law and fee agreement, distinguish security retainers from other fee arrangements, and apply segregation and accounting duties. Model Rule 1.15 addresses safeguarding property and disputed funds; state rules often specify interest-bearing pooled trust accounts, reconciliation, notifications and record retention. Rule 1.5 demands reasonable fees and communication, but a signed agreement does not automatically make every charge proper. On termination counsel may need to return unearned fees and property, taking lawful liens into account. Avoid treating fee labels alone as dispositive. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Lawyer says the contract designated the advance nonrefundable; client alleges no meaningful work was done and requests all funds.",
+      "assignment": "Prepare a 900-word client ledger audit and dispute-resolution plan citing one jurisdiction's current rules.",
+      "question": "Is calling an advance fee nonrefundable enough to defeat all trust-account requirements?",
+      "options": [
+            "Yes",
+            "No; controlling state rules and the transaction's substance matter",
+            "Only if the payment was in cash"
+      ],
+      "answer": 1,
+      "why": "Ethical obligations cannot be resolved merely by contractual labels.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+
       {
         "id": "L3-4-1",
         "title": "Concurrent conflicts and informed consent",
@@ -100,6 +248,43 @@ window.LAW_LEVEL3=[
     "id": "L3-5",
     "title": "Federal Taxation",
     "lessons": [
+{
+      "id": "L3-5-2",
+      "title": "Tax character and holding period",
+      "authority": "Internal Revenue Code §§ 1221–1223; tax-year-specific guidance",
+      "scenario": "A trader sells shares bought nine months ago and land held for investment four years.",
+      "reading": "Identify whether each asset qualifies as a capital asset, whether business inventory or other statutory exceptions apply, and determine holding periods under the rules for the identified tax year. Capital versus ordinary classification can affect rate and treatment of losses, but labels like investment do not substitute for facts. Also distinguish realized, recognized and taxable gains, limitations on capital losses, basis adjustments, and holding-period special rules. A trader's business activity may invite different inquiries from an occasional investor. Calculations should explicitly show assumptions rather than import rates from an outdated schedule. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Taxpayer wants long-term treatment on all transactions; examiner questions whether frequently sold property was held for sale to customers.",
+      "assignment": "Develop a basis-and-character table and 900-word research memo with a conditional conclusion for each asset.",
+      "question": "Does every profitable property sale yield a long-term capital gain?",
+      "options": [
+            "Yes",
+            "No; classification and holding period are separate inquiries",
+            "Only when the proceeds exceed $100,000"
+      ],
+      "answer": 1,
+      "why": "Capital asset status and holding period must both be evaluated.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+{
+      "id": "L3-5-3",
+      "title": "Timing and installment method",
+      "authority": "Internal Revenue Code § 453; § 1001",
+      "scenario": "An individual sells a closely held business for cash now and payments over three years, with contingent interest.",
+      "reading": "An installment sale can spread recognition of eligible gain in certain transactions, but not all sales or components qualify. Determine property type, payment schedule, selling price, contract price, gross profit ratio, liability assumptions and separately stated or imputed interest. Inventory and publicly traded securities often create eligibility limitations; depreciation recapture may have special timing. Students should distinguish recognized gain from cash collected, use tax-year-specific rules, and verify whether a taxpayer elected out. A promissory note's face amount alone does not establish all values and tax treatment. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Buyer wants to reallocate a portion of price to consulting; seller argues for installment treatment and lower current income.",
+      "assignment": "Construct a conditional payment schedule and write a 900-word memo identifying the missing contractual facts.",
+      "question": "Does collecting sale proceeds over three years automatically make all gain installment-reportable?",
+      "options": [
+            "Yes",
+            "No; eligibility, allocations and exceptions must be checked",
+            "Only when interest is zero"
+      ],
+      "answer": 1,
+      "why": "Payment timing is one factor, not a universal eligibility test.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+
       {
         "id": "L3-5-1",
         "title": "Realization, amount realized and adjusted basis",
@@ -124,6 +309,43 @@ window.LAW_LEVEL3=[
     "id": "L3-6",
     "title": "Remedies and Advanced Civil Litigation",
     "lessons": [
+{
+      "id": "L3-6-2",
+      "title": "Compensatory damages and proof",
+      "authority": "State contract and tort remedies; Restatement (Second) of Contracts §§ 347, 350 as secondary authority",
+      "scenario": "A vendor's delayed component delivery shutters a factory for three days. The buyer claims lost profits based on an optimistic forecast.",
+      "reading": "First identify the claim and governing jurisdiction. Expectation damages generally seek the position promised performance would have produced, while tort and statutory measures may differ. Address causation, foreseeability, reasonable certainty and mitigation, avoiding double recovery. Identify actual lost orders, fixed and variable costs, substitute supply, saved expenses and limits in contract terms. A spreadsheet can quantify competing assumptions but should never turn speculative projections into proven loss. Consider incidental and consequential damages, reliance alternatives and whether restitution is appropriate. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Buyer offers sales pipeline and historical margins; vendor argues the downtime arose partly from an unrelated power outage and buyer rejected available cover.",
+      "assignment": "Create an evidence-linked loss model and opposing 1,000-word damages memoranda using best and worst supported cases.",
+      "question": "Are optimistic projected profits by themselves sufficient proof of consequential damages?",
+      "options": [
+            "Always",
+            "No; causation, foreseeability and reasonable certainty matter",
+            "Only in federal cases"
+      ],
+      "answer": 1,
+      "why": "Recovery is grounded in applicable rules and admissible evidence.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+{
+      "id": "L3-6-3",
+      "title": "Permanent injunctions and equitable relief",
+      "authority": "eBay Inc. v. MercExchange, 547 U.S. 388 (2006); applicable subject-specific law",
+      "scenario": "After trial, a company proves wrongful use of a proprietary design but cannot demonstrate measurable future losses.",
+      "reading": "Distinguish preliminary from permanent injunctions: relief after merits adjudication requires its own equitable analysis. The eBay framework considers irreparable injury, inadequacy of legal remedies, balance of hardships, and public interest in its governing context; state law and subject-matter statutes may alter details. Examine precisely what conduct would be restrained, evidence of continuing risk, duration, territorial scope and enforceability. An infringement or breach finding does not itself compel an injunction. Consider restitution, damages and other remedies before selecting the narrowest supported measure. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Plaintiff argues disclosure destroys exclusivity; defendant says a broad prohibition will shut down unrelated manufacturing activity.",
+      "assignment": "Draft a 1,000-word proposed permanent injunction and competing opposition, showing narrower alternatives.",
+      "question": "Does prevailing on the merits automatically entitle a party to a permanent injunction?",
+      "options": [
+            "Yes",
+            "No; the applicable equitable test must be satisfied",
+            "Only if the plaintiff is a company"
+      ],
+      "answer": 1,
+      "why": "A merits victory and entitlement to equitable relief are distinct issues.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+
       {
         "id": "L3-6-1",
         "title": "Preliminary injunctions and Rule 65",
@@ -148,6 +370,43 @@ window.LAW_LEVEL3=[
     "id": "L3-7",
     "title": "Criminal Procedure and Constitutional Litigation",
     "lessons": [
+{
+      "id": "L3-7-2",
+      "title": "Search warrants and digital scope",
+      "authority": "U.S. Constitution Amend. IV; Riley v. California, 573 U.S. 373 (2014)",
+      "scenario": "Officers lawfully arrest a suspect and search every file on the suspect's phone without a warrant.",
+      "reading": "Under Riley, a search incident to arrest generally does not authorize searching digital contents of a seized phone without a warrant, subject to recognized exceptions. Separate seizure of the physical device from examination of its data. Investigate consent, exigent circumstances, warrant terms, particularity, scope, good-faith arguments and the relevant timeline. Whether a warrant later obtained cures an earlier constitutional problem requires independent analysis of evidence and exclusion doctrines. Students must distinguish constitutional violation from remedy, including standing, causation and exceptions to suppression. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Government argues immediate risk of remote deletion; defense points to available preservation steps and lack of concrete exigency.",
+      "assignment": "Write a 1,000-word suppression motion and response with a chronological evidence inventory.",
+      "question": "Does lawful arrest by itself normally authorize a full search of phone contents?",
+      "options": [
+            "Yes",
+            "No, a warrant is generally required absent a valid exception",
+            "Yes, if the phone is locked"
+      ],
+      "answer": 1,
+      "why": "Riley recognizes substantial privacy in digital phone contents.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+{
+      "id": "L3-7-3",
+      "title": "Exclusionary rule and good faith",
+      "authority": "United States v. Leon, 468 U.S. 897 (1984); Herring v. United States, 555 U.S. 135 (2009)",
+      "scenario": "Police execute a search warrant later held insufficiently particular after relying on a magistrate's authorization.",
+      "reading": "The exclusionary rule is a judicial remedy for certain unconstitutional searches, not an automatic finding for every Fourth Amendment defect. Leon recognizes a good-faith exception where reliance on a warrant is objectively reasonable, subject to limitations such as misleading affidavits, wholly abandoned judicial role, plainly unsupported probable cause or facially deficient warrants. Herring emphasizes culpability and deterrence in its context. Students should examine officer conduct, warrant language and information available before the search. Analyze other doctrines—independent source, inevitable discovery and attenuation—separately instead of treating them as one generalized exception. In the written analysis, identify the applicable jurisdiction and operative date, state each rule in your own words, apply every material fact, separate strongest competing arguments, explain what evidence is missing, and identify the primary authority that could change the conclusion. A conclusion without those steps is not a complete legal analysis. This instructional draft is not legal advice, an automatic grade, or proof of current-law accuracy.",
+      "counterarguments": "Defense argues the warrant's sweeping terms were clearly defective; prosecution points to judicial authorization and precedent suggesting reasonable reliance.",
+      "assignment": "Develop a suppression hearing question plan and draft 950-word opinions for both outcomes.",
+      "question": "Is every constitutional search violation followed by suppression of evidence?",
+      "options": [
+            "Yes, automatically",
+            "No; remedy and exceptions require separate analysis",
+            "Only if police acted at night"
+      ],
+      "answer": 1,
+      "why": "The exclusionary remedy has limits and distinct exceptions.",
+      "status": "draft—requires primary-source currency review and qualified assessment"
+},
+
       {
         "id": "L3-7-1",
         "title": "Custody, interrogation and Miranda",
