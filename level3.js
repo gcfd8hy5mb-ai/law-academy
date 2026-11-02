@@ -148,6 +148,42 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-1-9",
+        "title": "Standards of proof, burdens, and appellate evidentiary review",
+        "authority": "Trial court allocation of proof, FRE 104, 301, 403; applicable appellate standards",
+        "scenario": "At trial the court excludes a technical witness but admits disputed documentary evidence; the verdict turns on the distinction between burden of production and burden of persuasion.",
+        "reading": "Identify each party's substantive burden and the allocation of preliminary admissibility findings. Distinguish sufficiency of proof, admissibility, preservation of objections and harmless error. Explain that appellate courts apply different standards to legal conclusions, factual findings and discretionary evidentiary decisions. Construct an exhibit-by-exhibit table showing objection, response, ruling, preservation and claimed prejudice. Worked process: (1) identify which facts are stipulated and which need proof; (2) list precise statutory or doctrinal elements; (3) present the proponent's reasoning; (4) construct the strongest opposing theory; (5) explain the required evidentiary or procedural decision; (6) verify jurisdiction and time-specific controlling law. A conclusory response is inadequate.",
+        "counterarguments": "One party argues the governing threshold and evidence justify immediate relief; the opponent contests the legal standard, characterization of disputed facts and available remedy. Provide both positions without inventing record facts.",
+        "assignment": "Submit a 1,300–1,700-word research memorandum, annotated timeline, fact-to-element grid and competing rulings. Use at least three independently verified primary authorities. Human review rubric: governing law 25, application 30, counterargument 15, citation validity 20, written organization 10.",
+        "question": "How should a disputed legal issue be evaluated?",
+        "options": [
+          "Apply an unsourced universal rule",
+          "Verify controlling law, burden, facts and competing arguments",
+          "Treat prior quiz completion as a final written grade"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal review depends on authority, procedural posture and reasoned factual application.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-1-10",
+        "title": "Evidence — Second-Year Final Examination",
+        "authority": "All primary authorities taught in this course; verify the applicable jurisdiction and law as of the assessment date.",
+        "scenario": "Integrated final: a multi-party dispute combines the issues from Authentication of digital and physical exhibits; Hearsay: purpose, declarants and exceptions; Relevance, Rule 403 and foundational proof; Expert evidence reliability; Hearsay and expert proof integrated examination; Privileges and waiver; Character evidence and permissible purposes; Judicial notice and evidentiary presumptions; Standards of proof, burdens, and appellate evidentiary review. Student acts as counsel preparing both a client memorandum and a contested-motion outline. Facts must be drawn from the studied scenarios, explicitly labeled hypothetical, and supplemented with stated assumptions only.",
+        "reading": "Examination instructions: begin with a jurisdictional and procedural statement. Make an issue tree connecting at least four previously studied doctrines. For each doctrine, articulate elements and burdens, apply the material facts, test a plausible opposing interpretation and state the strongest supported outcome. Identify controlling authority, distinguish binding from persuasive sources and verify later negative treatment. Give remedies and procedural steps separately. A written examination cannot be passed automatically by answering a multiple-choice question. The grading rubric is: issue identification and rule accuracy 25 points; detailed fact application 30; persuasive counterarguments 15; authentic and current primary citations 20; structure and professional clarity 10. Cite all factual assumptions and use an uncertainty register. Work should be checked by a qualified human reviewer before recording mastery.",
+        "counterarguments": "The examiner must challenge the candidate's selected rule, burden, key factual assumption, proposed remedy and reliance on a seemingly analogous precedent. Student must respond to five fact variations and explain why at least one initially attractive answer fails.",
+        "assignment": "FINAL: Write 2,000–2,500 words comprising a researched legal memorandum, adverse position, decision tree, evidence table and recommendation. Produce a five-minute oral argument outline and a 100-point self-review, then submit for human substantive review. This final remains ungraded until a qualified reviewer approves it.",
+        "question": "Which requirement is necessary before recording this final as substantively passed?",
+        "options": [
+          "Answer its single quiz question",
+          "Obtain qualified review of the written legal analysis and verified authorities",
+          "Simply open the lesson"
+        ],
+        "answer": 1,
+        "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -298,6 +334,42 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-2-9",
+        "title": "Closely held corporation deadlock and oppression",
+        "authority": "Chosen state's close-corporation statutes and controlling opinions",
+        "scenario": "Two equal shareholders cannot approve financing, one excludes the other from payroll and they dispute dissolution.",
+        "reading": "Define entity rights, voting requirements, fiduciary arrangements, buy-sell provisions and judicial remedies. Some states permit oppression or deadlock remedies while others apply narrower statutory routes. Separate employment rights from ownership and assess contractual exits, court-ordered buyout, receivership or dissolution. Avoid promising a particular remedy without selected state law. Worked process: (1) identify which facts are stipulated and which need proof; (2) list precise statutory or doctrinal elements; (3) present the proponent's reasoning; (4) construct the strongest opposing theory; (5) explain the required evidentiary or procedural decision; (6) verify jurisdiction and time-specific controlling law. A conclusory response is inadequate.",
+        "counterarguments": "One party argues the governing threshold and evidence justify immediate relief; the opponent contests the legal standard, characterization of disputed facts and available remedy. Provide both positions without inventing record facts.",
+        "assignment": "Submit a 1,300–1,700-word research memorandum, annotated timeline, fact-to-element grid and competing rulings. Use at least three independently verified primary authorities. Human review rubric: governing law 25, application 30, counterargument 15, citation validity 20, written organization 10.",
+        "question": "How should a disputed legal issue be evaluated?",
+        "options": [
+          "Apply an unsourced universal rule",
+          "Verify controlling law, burden, facts and competing arguments",
+          "Treat prior quiz completion as a final written grade"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal review depends on authority, procedural posture and reasoned factual application.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-2-10",
+        "title": "Business Organizations — Second-Year Final Examination",
+        "authority": "All primary authorities taught in this course; verify the applicable jurisdiction and law as of the assessment date.",
+        "scenario": "Integrated final: a multi-party dispute combines the issues from Board fiduciary duties and business judgment; Derivative suits and demand; Actual, apparent authority and fiduciary conflicts; Board conflicts and care; Corporate acquisition conflict simulation; Securities disclosure and corporate governance; Partnership fiduciary duty and dissolution; Corporate veil piercing and entity separateness; Closely held corporation deadlock and oppression. Student acts as counsel preparing both a client memorandum and a contested-motion outline. Facts must be drawn from the studied scenarios, explicitly labeled hypothetical, and supplemented with stated assumptions only.",
+        "reading": "Examination instructions: begin with a jurisdictional and procedural statement. Make an issue tree connecting at least four previously studied doctrines. For each doctrine, articulate elements and burdens, apply the material facts, test a plausible opposing interpretation and state the strongest supported outcome. Identify controlling authority, distinguish binding from persuasive sources and verify later negative treatment. Give remedies and procedural steps separately. A written examination cannot be passed automatically by answering a multiple-choice question. The grading rubric is: issue identification and rule accuracy 25 points; detailed fact application 30; persuasive counterarguments 15; authentic and current primary citations 20; structure and professional clarity 10. Cite all factual assumptions and use an uncertainty register. Work should be checked by a qualified human reviewer before recording mastery.",
+        "counterarguments": "The examiner must challenge the candidate's selected rule, burden, key factual assumption, proposed remedy and reliance on a seemingly analogous precedent. Student must respond to five fact variations and explain why at least one initially attractive answer fails.",
+        "assignment": "FINAL: Write 2,000–2,500 words comprising a researched legal memorandum, adverse position, decision tree, evidence table and recommendation. Produce a five-minute oral argument outline and a 100-point self-review, then submit for human substantive review. This final remains ungraded until a qualified reviewer approves it.",
+        "question": "Which requirement is necessary before recording this final as substantively passed?",
+        "options": [
+          "Answer its single quiz question",
+          "Obtain qualified review of the written legal analysis and verified authorities",
+          "Simply open the lesson"
+        ],
+        "answer": 1,
+        "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -450,6 +522,42 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-3-9",
+        "title": "Judicial remedies against regulators",
+        "authority": "APA 5 U.S.C. §§ 702–706 and applicable equity and jurisdiction statutes",
+        "scenario": "A manufacturer wins a challenge to an unlawful rule but disputes whether the agency must refund paid charges.",
+        "reading": "Separate vacatur, remand, injunction and money relief, examining sovereign immunity and the scope of statutory authorization. Winning on legal interpretation does not automatically establish a damages remedy. Review standing, mootness, final agency action, remedial discretion and governing precedent. Consider how a remand without vacatur or prospective relief would operate. Worked process: (1) identify which facts are stipulated and which need proof; (2) list precise statutory or doctrinal elements; (3) present the proponent's reasoning; (4) construct the strongest opposing theory; (5) explain the required evidentiary or procedural decision; (6) verify jurisdiction and time-specific controlling law. A conclusory response is inadequate.",
+        "counterarguments": "One party argues the governing threshold and evidence justify immediate relief; the opponent contests the legal standard, characterization of disputed facts and available remedy. Provide both positions without inventing record facts.",
+        "assignment": "Submit a 1,300–1,700-word research memorandum, annotated timeline, fact-to-element grid and competing rulings. Use at least three independently verified primary authorities. Human review rubric: governing law 25, application 30, counterargument 15, citation validity 20, written organization 10.",
+        "question": "How should a disputed legal issue be evaluated?",
+        "options": [
+          "Apply an unsourced universal rule",
+          "Verify controlling law, burden, facts and competing arguments",
+          "Treat prior quiz completion as a final written grade"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal review depends on authority, procedural posture and reasoned factual application.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-3-10",
+        "title": "Administrative Law — Second-Year Final Examination",
+        "authority": "All primary authorities taught in this course; verify the applicable jurisdiction and law as of the assessment date.",
+        "scenario": "Integrated final: a multi-party dispute combines the issues from Statutory interpretation after Chevron; Notice-and-comment record and exceptions; Agency rulemaking and judicial review after Loper Bright; Agency adjudication; Agency enforcement and emergency rule challenge; Regulatory enforcement discretion and review; Agency investigations and subpoenas; Rulemaking record and reasoned explanation; Judicial remedies against regulators. Student acts as counsel preparing both a client memorandum and a contested-motion outline. Facts must be drawn from the studied scenarios, explicitly labeled hypothetical, and supplemented with stated assumptions only.",
+        "reading": "Examination instructions: begin with a jurisdictional and procedural statement. Make an issue tree connecting at least four previously studied doctrines. For each doctrine, articulate elements and burdens, apply the material facts, test a plausible opposing interpretation and state the strongest supported outcome. Identify controlling authority, distinguish binding from persuasive sources and verify later negative treatment. Give remedies and procedural steps separately. A written examination cannot be passed automatically by answering a multiple-choice question. The grading rubric is: issue identification and rule accuracy 25 points; detailed fact application 30; persuasive counterarguments 15; authentic and current primary citations 20; structure and professional clarity 10. Cite all factual assumptions and use an uncertainty register. Work should be checked by a qualified human reviewer before recording mastery.",
+        "counterarguments": "The examiner must challenge the candidate's selected rule, burden, key factual assumption, proposed remedy and reliance on a seemingly analogous precedent. Student must respond to five fact variations and explain why at least one initially attractive answer fails.",
+        "assignment": "FINAL: Write 2,000–2,500 words comprising a researched legal memorandum, adverse position, decision tree, evidence table and recommendation. Produce a five-minute oral argument outline and a 100-point self-review, then submit for human substantive review. This final remains ungraded until a qualified reviewer approves it.",
+        "question": "Which requirement is necessary before recording this final as substantively passed?",
+        "options": [
+          "Answer its single quiz question",
+          "Obtain qualified review of the written legal analysis and verified authorities",
+          "Simply open the lesson"
+        ],
+        "answer": 1,
+        "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -600,6 +708,42 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-4-9",
+        "title": "Malpractice, discipline and professional accountability",
+        "authority": "Applicable jurisdiction malpractice law, adopted rules and professional standards",
+        "scenario": "A lawyer misses a limitations deadline and fails to tell the client, who later rejects a settlement based on incomplete advice.",
+        "reading": "Distinguish professional discipline, malpractice liability and breach of fiduciary duty. Analyze duty, breach, causation including the underlying case, damages, conflicts and communication obligations. An ethics rule violation does not always create an independent private cause of action. Form a corrective plan, consider insurance and professional obligations without suggesting concealment. Worked process: (1) identify which facts are stipulated and which need proof; (2) list precise statutory or doctrinal elements; (3) present the proponent's reasoning; (4) construct the strongest opposing theory; (5) explain the required evidentiary or procedural decision; (6) verify jurisdiction and time-specific controlling law. A conclusory response is inadequate.",
+        "counterarguments": "One party argues the governing threshold and evidence justify immediate relief; the opponent contests the legal standard, characterization of disputed facts and available remedy. Provide both positions without inventing record facts.",
+        "assignment": "Submit a 1,300–1,700-word research memorandum, annotated timeline, fact-to-element grid and competing rulings. Use at least three independently verified primary authorities. Human review rubric: governing law 25, application 30, counterargument 15, citation validity 20, written organization 10.",
+        "question": "How should a disputed legal issue be evaluated?",
+        "options": [
+          "Apply an unsourced universal rule",
+          "Verify controlling law, burden, facts and competing arguments",
+          "Treat prior quiz completion as a final written grade"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal review depends on authority, procedural posture and reasoned factual application.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-4-10",
+        "title": "Professional Responsibility — Second-Year Final Examination",
+        "authority": "All primary authorities taught in this course; verify the applicable jurisdiction and law as of the assessment date.",
+        "scenario": "Integrated final: a multi-party dispute combines the issues from Confidentiality and mandatory candor; Client trust accounts and fee disputes; Concurrent conflicts and informed consent; Candor and confidentiality; Multiclient legal-ethics crisis; Former-client conflicts and disqualification; Organizational clients and internal investigations; Lawyer advertising, solicitation and client intake; Malpractice, discipline and professional accountability. Student acts as counsel preparing both a client memorandum and a contested-motion outline. Facts must be drawn from the studied scenarios, explicitly labeled hypothetical, and supplemented with stated assumptions only.",
+        "reading": "Examination instructions: begin with a jurisdictional and procedural statement. Make an issue tree connecting at least four previously studied doctrines. For each doctrine, articulate elements and burdens, apply the material facts, test a plausible opposing interpretation and state the strongest supported outcome. Identify controlling authority, distinguish binding from persuasive sources and verify later negative treatment. Give remedies and procedural steps separately. A written examination cannot be passed automatically by answering a multiple-choice question. The grading rubric is: issue identification and rule accuracy 25 points; detailed fact application 30; persuasive counterarguments 15; authentic and current primary citations 20; structure and professional clarity 10. Cite all factual assumptions and use an uncertainty register. Work should be checked by a qualified human reviewer before recording mastery.",
+        "counterarguments": "The examiner must challenge the candidate's selected rule, burden, key factual assumption, proposed remedy and reliance on a seemingly analogous precedent. Student must respond to five fact variations and explain why at least one initially attractive answer fails.",
+        "assignment": "FINAL: Write 2,000–2,500 words comprising a researched legal memorandum, adverse position, decision tree, evidence table and recommendation. Produce a five-minute oral argument outline and a 100-point self-review, then submit for human substantive review. This final remains ungraded until a qualified reviewer approves it.",
+        "question": "Which requirement is necessary before recording this final as substantively passed?",
+        "options": [
+          "Answer its single quiz question",
+          "Obtain qualified review of the written legal analysis and verified authorities",
+          "Simply open the lesson"
+        ],
+        "answer": 1,
+        "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -752,6 +896,42 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-5-9",
+        "title": "Tax audit procedure and taxpayer rights",
+        "authority": "Internal Revenue Code §§ 6212–6213, 6501, 7803; applicable IRS procedures",
+        "scenario": "A taxpayer receives a proposed deficiency after claiming a deduction, but the assessment period and administrative record are disputed.",
+        "reading": "Determine the notice type, relevant tax year, statutory deadline, deficiency procedures and available administrative or judicial forum. Distinguish a proposed adjustment from a statutory notice of deficiency. Verify the correct limitation period and exceptions, and explain why missing an operative filing date can forfeit an option. Use a chronology, not a guessed deadline. Worked process: (1) identify which facts are stipulated and which need proof; (2) list precise statutory or doctrinal elements; (3) present the proponent's reasoning; (4) construct the strongest opposing theory; (5) explain the required evidentiary or procedural decision; (6) verify jurisdiction and time-specific controlling law. A conclusory response is inadequate.",
+        "counterarguments": "One party argues the governing threshold and evidence justify immediate relief; the opponent contests the legal standard, characterization of disputed facts and available remedy. Provide both positions without inventing record facts.",
+        "assignment": "Submit a 1,300–1,700-word research memorandum, annotated timeline, fact-to-element grid and competing rulings. Use at least three independently verified primary authorities. Human review rubric: governing law 25, application 30, counterargument 15, citation validity 20, written organization 10.",
+        "question": "How should a disputed legal issue be evaluated?",
+        "options": [
+          "Apply an unsourced universal rule",
+          "Verify controlling law, burden, facts and competing arguments",
+          "Treat prior quiz completion as a final written grade"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal review depends on authority, procedural posture and reasoned factual application.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-5-10",
+        "title": "Federal Taxation — Second-Year Final Examination",
+        "authority": "All primary authorities taught in this course; verify the applicable jurisdiction and law as of the assessment date.",
+        "scenario": "Integrated final: a multi-party dispute combines the issues from Tax character and holding period; Timing and installment method; Realization, amount realized and adjusted basis; Capital gains classification; Business sale taxation case assessment; Payroll tax and worker classification; Depreciation and cost recovery; International tax residence and source fundamentals; Tax audit procedure and taxpayer rights. Student acts as counsel preparing both a client memorandum and a contested-motion outline. Facts must be drawn from the studied scenarios, explicitly labeled hypothetical, and supplemented with stated assumptions only.",
+        "reading": "Examination instructions: begin with a jurisdictional and procedural statement. Make an issue tree connecting at least four previously studied doctrines. For each doctrine, articulate elements and burdens, apply the material facts, test a plausible opposing interpretation and state the strongest supported outcome. Identify controlling authority, distinguish binding from persuasive sources and verify later negative treatment. Give remedies and procedural steps separately. A written examination cannot be passed automatically by answering a multiple-choice question. The grading rubric is: issue identification and rule accuracy 25 points; detailed fact application 30; persuasive counterarguments 15; authentic and current primary citations 20; structure and professional clarity 10. Cite all factual assumptions and use an uncertainty register. Work should be checked by a qualified human reviewer before recording mastery.",
+        "counterarguments": "The examiner must challenge the candidate's selected rule, burden, key factual assumption, proposed remedy and reliance on a seemingly analogous precedent. Student must respond to five fact variations and explain why at least one initially attractive answer fails.",
+        "assignment": "FINAL: Write 2,000–2,500 words comprising a researched legal memorandum, adverse position, decision tree, evidence table and recommendation. Produce a five-minute oral argument outline and a 100-point self-review, then submit for human substantive review. This final remains ungraded until a qualified reviewer approves it.",
+        "question": "Which requirement is necessary before recording this final as substantively passed?",
+        "options": [
+          "Answer its single quiz question",
+          "Obtain qualified review of the written legal analysis and verified authorities",
+          "Simply open the lesson"
+        ],
+        "answer": 1,
+        "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -903,6 +1083,42 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-6-9",
+        "title": "Complex litigation discovery and proportionality",
+        "authority": "Federal Rules of Civil Procedure 26, 34, 37",
+        "scenario": "A technology company seeks millions of archived communications, while the opponent alleges missing records after preservation notice.",
+        "reading": "Scope and proportionality require relevance and attention to importance, access, resources, burden and benefits. Identify preservation triggers, litigation holds, defensible searches, privilege review and sanctions requirements for lost electronically stored information. Rule 37(e) distinguishes prejudice remedies from intent-to-deprive sanctions. Draft a concrete preservation and production protocol. Worked process: (1) identify which facts are stipulated and which need proof; (2) list precise statutory or doctrinal elements; (3) present the proponent's reasoning; (4) construct the strongest opposing theory; (5) explain the required evidentiary or procedural decision; (6) verify jurisdiction and time-specific controlling law. A conclusory response is inadequate.",
+        "counterarguments": "One party argues the governing threshold and evidence justify immediate relief; the opponent contests the legal standard, characterization of disputed facts and available remedy. Provide both positions without inventing record facts.",
+        "assignment": "Submit a 1,300–1,700-word research memorandum, annotated timeline, fact-to-element grid and competing rulings. Use at least three independently verified primary authorities. Human review rubric: governing law 25, application 30, counterargument 15, citation validity 20, written organization 10.",
+        "question": "How should a disputed legal issue be evaluated?",
+        "options": [
+          "Apply an unsourced universal rule",
+          "Verify controlling law, burden, facts and competing arguments",
+          "Treat prior quiz completion as a final written grade"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal review depends on authority, procedural posture and reasoned factual application.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-6-10",
+        "title": "Remedies and Advanced Civil Litigation — Second-Year Final Examination",
+        "authority": "All primary authorities taught in this course; verify the applicable jurisdiction and law as of the assessment date.",
+        "scenario": "Integrated final: a multi-party dispute combines the issues from Compensatory damages and proof; Permanent injunctions and equitable relief; Preliminary injunctions and Rule 65; Damages proof; Trade-secret injunction and damage model; Restitution and unjust enrichment; Judgment enforcement and creditor remedies; Declaratory judgment and justiciability; Complex litigation discovery and proportionality. Student acts as counsel preparing both a client memorandum and a contested-motion outline. Facts must be drawn from the studied scenarios, explicitly labeled hypothetical, and supplemented with stated assumptions only.",
+        "reading": "Examination instructions: begin with a jurisdictional and procedural statement. Make an issue tree connecting at least four previously studied doctrines. For each doctrine, articulate elements and burdens, apply the material facts, test a plausible opposing interpretation and state the strongest supported outcome. Identify controlling authority, distinguish binding from persuasive sources and verify later negative treatment. Give remedies and procedural steps separately. A written examination cannot be passed automatically by answering a multiple-choice question. The grading rubric is: issue identification and rule accuracy 25 points; detailed fact application 30; persuasive counterarguments 15; authentic and current primary citations 20; structure and professional clarity 10. Cite all factual assumptions and use an uncertainty register. Work should be checked by a qualified human reviewer before recording mastery.",
+        "counterarguments": "The examiner must challenge the candidate's selected rule, burden, key factual assumption, proposed remedy and reliance on a seemingly analogous precedent. Student must respond to five fact variations and explain why at least one initially attractive answer fails.",
+        "assignment": "FINAL: Write 2,000–2,500 words comprising a researched legal memorandum, adverse position, decision tree, evidence table and recommendation. Produce a five-minute oral argument outline and a 100-point self-review, then submit for human substantive review. This final remains ungraded until a qualified reviewer approves it.",
+        "question": "Which requirement is necessary before recording this final as substantively passed?",
+        "options": [
+          "Answer its single quiz question",
+          "Obtain qualified review of the written legal analysis and verified authorities",
+          "Simply open the lesson"
+        ],
+        "answer": 1,
+        "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -1053,6 +1269,42 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-7-9",
+        "title": "Criminal trial rights and confrontation",
+        "authority": "Sixth Amendment; Crawford v. Washington, 541 U.S. 36 (2004); controlling subsequent cases",
+        "scenario": "The prosecutor offers a recorded forensic conclusion through a colleague who did not perform the testing.",
+        "reading": "Analyze whether an out-of-court statement is testimonial, whether offered for truth, and whether confrontation is required. Distinguish expert reliance questions, hearsay exceptions, live testimony and the accused's opportunity for cross-examination. Forensic reports present complex, evolving doctrine; check current controlling law, including subsequent Supreme Court developments, before deciding admissibility. Worked process: (1) identify which facts are stipulated and which need proof; (2) list precise statutory or doctrinal elements; (3) present the proponent's reasoning; (4) construct the strongest opposing theory; (5) explain the required evidentiary or procedural decision; (6) verify jurisdiction and time-specific controlling law. A conclusory response is inadequate.",
+        "counterarguments": "One party argues the governing threshold and evidence justify immediate relief; the opponent contests the legal standard, characterization of disputed facts and available remedy. Provide both positions without inventing record facts.",
+        "assignment": "Submit a 1,300–1,700-word research memorandum, annotated timeline, fact-to-element grid and competing rulings. Use at least three independently verified primary authorities. Human review rubric: governing law 25, application 30, counterargument 15, citation validity 20, written organization 10.",
+        "question": "How should a disputed legal issue be evaluated?",
+        "options": [
+          "Apply an unsourced universal rule",
+          "Verify controlling law, burden, facts and competing arguments",
+          "Treat prior quiz completion as a final written grade"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal review depends on authority, procedural posture and reasoned factual application.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-7-10",
+        "title": "Criminal Procedure and Constitutional Litigation — Second-Year Final Examination",
+        "authority": "All primary authorities taught in this course; verify the applicable jurisdiction and law as of the assessment date.",
+        "scenario": "Integrated final: a multi-party dispute combines the issues from Search warrants and digital scope; Exclusionary rule and good faith; Custody, interrogation and Miranda; Digital search warrants; Digital search, interrogation and disclosure hearing; Plea negotiations and voluntariness; Sentencing and constitutional limits; Post-conviction relief and habeas fundamentals; Criminal trial rights and confrontation. Student acts as counsel preparing both a client memorandum and a contested-motion outline. Facts must be drawn from the studied scenarios, explicitly labeled hypothetical, and supplemented with stated assumptions only.",
+        "reading": "Examination instructions: begin with a jurisdictional and procedural statement. Make an issue tree connecting at least four previously studied doctrines. For each doctrine, articulate elements and burdens, apply the material facts, test a plausible opposing interpretation and state the strongest supported outcome. Identify controlling authority, distinguish binding from persuasive sources and verify later negative treatment. Give remedies and procedural steps separately. A written examination cannot be passed automatically by answering a multiple-choice question. The grading rubric is: issue identification and rule accuracy 25 points; detailed fact application 30; persuasive counterarguments 15; authentic and current primary citations 20; structure and professional clarity 10. Cite all factual assumptions and use an uncertainty register. Work should be checked by a qualified human reviewer before recording mastery.",
+        "counterarguments": "The examiner must challenge the candidate's selected rule, burden, key factual assumption, proposed remedy and reliance on a seemingly analogous precedent. Student must respond to five fact variations and explain why at least one initially attractive answer fails.",
+        "assignment": "FINAL: Write 2,000–2,500 words comprising a researched legal memorandum, adverse position, decision tree, evidence table and recommendation. Produce a five-minute oral argument outline and a 100-point self-review, then submit for human substantive review. This final remains ungraded until a qualified reviewer approves it.",
+        "question": "Which requirement is necessary before recording this final as substantively passed?",
+        "options": [
+          "Answer its single quiz question",
+          "Obtain qualified review of the written legal analysis and verified authorities",
+          "Simply open the lesson"
+        ],
+        "answer": 1,
+        "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
