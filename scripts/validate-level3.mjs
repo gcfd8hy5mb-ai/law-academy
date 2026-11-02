@@ -7,16 +7,16 @@ new Script(source,{filename:'level3.js'});
 const courses=runInNewContext('const window={};'+source+'\nwindow.LAW_LEVEL3');
 assert.equal(courses.length,7);
 const all=courses.flatMap(c=>c.lessons);
-assert.equal(all.length,35);
-assert.equal(new Set(all.map(x=>x.id)).size,35);
-for(const course of courses){assert.equal(course.lessons.length,5,'Expected five authored lessons in '+course.id);for(const lesson of course.lessons){
+assert.equal(all.length,42);
+assert.equal(new Set(all.map(x=>x.id)).size,42);
+for(const course of courses){assert.equal(course.lessons.length,6,'Expected six authored lessons in '+course.id);for(const lesson of course.lessons){
  assert.ok(lesson.title&&lesson.authority&&lesson.scenario&&lesson.reading&&lesson.counterarguments&&lesson.assignment);
  assert.ok(lesson.reading.split(/\s+/).length>=110,'Instruction too brief '+lesson.id);
  assert.equal(lesson.options.length,3);
  assert.ok(Number.isInteger(lesson.answer)&&lesson.answer>=0&&lesson.answer<3);
  assert.ok(lesson.status.includes('review'));
 }}
-console.log('PASS: 35 Level 3 authored lessons across seven courses and draft review warnings. This does not establish legal currency or academic approval.');
+console.log('PASS: 42 Level 3 authored lessons across seven courses and draft review warnings. This does not establish legal currency or academic approval.');
 
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
