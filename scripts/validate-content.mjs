@@ -243,3 +243,7 @@ assert.equal(level2Courses.filter(c=>c.lessons[7].reading.includes('TOPIC-FOCUSE
 assert.equal(level2Courses.filter(c=>c.lessons[8].reading.includes('ADVANCED SUBJECT CHAPTER')&&c.lessons[8].problem.includes('COURSE APPLICATION')).length,7,'All seven ninth lessons require focused doctrinal applications');
 
 assert.equal(level2Courses.filter(c=>c.lessons[9].reading.includes('TOPIC-SPECIFIC CASE LAB')&&c.lessons[9].problem.includes('WRITTEN CASE EXAM')).length,7,'Seven tenth lessons require case labs and writing exams');
+
+// Advanced primary-authority extensions must remain available in every course.
+const advancedCaseTopics=['Consequential damages: Hadley and proof','Relational duty and pure economic loss','Erie and the Rules Enabling Act','Searches of smartphones after arrest','Equal protection: sex classifications and neutral policies','Adverse possession and tacking','Authority checking and negative treatment'];
+assert.equal(level2Courses.filter((c,i)=>c.lessons.some(l=>l.title===advancedCaseTopics[i] && l.problem.includes('900–1,200') && l.options.length===3)).length,7,'All seven authority-based case examinations must be present');
