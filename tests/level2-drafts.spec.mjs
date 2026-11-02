@@ -1,0 +1,29 @@
+import { test, expect } from '@playwright/test';
+
+test('Level 2 capstone draft survives navigation and offers a copy control', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => renderLevel2());
+  await expect(page.locator('[data-l2course]')).toHaveCount(7);
+  await page.locator('[data-l2course="0"]').click();
+  await expect(page.locator('[data-l2lesson]')).toHaveCount(18);
+  await page.getByRole('button', { name: /Capstone: Commercial agreement and breach/ }).click();
+  await expect(page.getByText('Written examination notice:', { exact: false })).toBeVisible();
+  const draft = page.locator('#l2draft');
+  const content = 'Contracts capstone analysis — identify UCC applicability, liability, remedies, and counterarguments.';
+  await draft.fill(content);
+  await expect(page.locator('#l2saveStatus')).toContainText('Draft saved on this device.');
+  await page.locator('#l2back').click();
+  await page.getByRole('button', { name: /Capstone: Commercial agreement and breach/ }).click();
+  await expect(page.locator('#l2draft')).toHaveValue(content);
+  await expect(page.locator('#l2saveStatus')).toContainText('Previously saved draft loaded');
+  await expect(page.locator('#l2copyDraft')).toBeVisible();
+});
+
+test('Level 2 empty draft copy gives clear feedback', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => renderLevel2());
+  await page.locator('[data-l2course="1"]').click();
+  await page.locator('[data-l2lesson="0"]').click();
+  await page.locator('#l2copyDraft').click();
+  await expect(page.locator('#l2copyStatus')).toContainText('There is no written draft to copy yet.');
+});
