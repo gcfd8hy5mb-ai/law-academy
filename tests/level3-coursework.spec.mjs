@@ -153,3 +153,31 @@ test('Level 3 exports all saved lesson and capstone writing for device backup',a
  await expect(page.locator('#l3exportFallback')).toHaveValue(/My evidence lesson notes/);
  await expect(page.locator('#l3exportFallback')).toHaveValue(/My capstone evidence section/);
 });
+
+test('Level 3 restores a portable backup without overwriting existing writing',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ const payload=JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-1':'Restored lesson analysis','L3-CAP-0':'Restored capstone answer'}});
+ await page.locator('#l3restoreInput').fill(payload);
+ await page.locator('#l3restore').click();
+ await expect(page.locator('#l3restoreStatus')).toContainText('2 missing drafts restored');
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await expect(page.locator('#l3draft')).toHaveValue('Restored lesson analysis');
+ await page.locator('#l3draft').fill('Existing answer takes precedence');
+ await page.locator('#l3back').click();
+ await page.locator('#l3back').click();
+ await page.locator('#l3restoreInput').fill(payload);
+ await page.locator('#l3restore').click();
+ await expect(page.locator('#l3restoreStatus')).toContainText('0 missing drafts restored');
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await expect(page.locator('#l3draft')).toHaveValue('Existing answer takes precedence');
+});
+test('Level 3 refuses unknown identifiers in transferred backups',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('#l3restoreInput').fill(JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'UNKNOWN-ID':'unsafe'}}));
+ await page.locator('#l3restore').click();
+ await expect(page.locator('#l3restoreStatus')).toContainText('Nothing was changed');
+});
