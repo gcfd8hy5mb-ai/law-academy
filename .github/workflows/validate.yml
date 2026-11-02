@@ -90,11 +90,17 @@ jobs:
           npx playwright install --with-deps webkit
       - name: Test iPhone-sized WebKit interactions
         run: npx playwright test --reporter=line,html --trace=retain-on-failure
-      - name: Upload browser test report on failure
-        if: failure()
+      - name: Record browser test completion status
+        if: always()
+        run: |
+          echo '### Law Academy browser verification' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Commit: \`${{ github.sha }}\`' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The browser-smoke job result and uploaded Playwright report are the authoritative pass/fail evidence.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload browser test diagnostics
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: law-academy-browser-report
+          name: law-academy-browser-report-${{ github.run_id }}
           path: |
             playwright-report/
             test-results/
