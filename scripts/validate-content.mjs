@@ -293,3 +293,10 @@ for(const [id,phrase] of [['L2-1-10','PRECISION CHECK L2-1-10'],['L2-5-19','PREC
  assert.ok(lesson&&lesson.reading.includes(phrase),'Missing source-grounded correction: '+id);
 }
 console.log('PASS: UCC assurance and equal-protection doctrinal clarifications are present.');
+
+// Five newly refined authority lessons must remain available.
+for(const id of ['L2-2-18','L2-3-18','L2-4-18','L2-6-19','L2-7-18']){
+ const lesson=level2Courses.flatMap(c=>c.lessons).find(l=>l.id===id);
+ assert.ok(lesson&&lesson.reading.includes('PRECISION REVIEW '+id),'Missing primary-law refinement '+id);
+}
+console.log('PASS: Five supplemental doctrinal precision notes are present.');
