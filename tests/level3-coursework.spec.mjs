@@ -81,3 +81,5 @@ test('Academy catalog opens authored Level 3 instead of a future placeholder',as
  await expect(page.locator('[data-l3course]')).toHaveCount(7);
  await expect(page.locator('#l3capstone')).toBeVisible();
 });
+
+test('Capstone readiness tracks sections and actual words without awarding a grade',async({page})=>{await page.goto('/');await page.evaluate(()=>renderLevel3());await page.locator('#l3capstone').click();await expect(page.locator('#l3capReadiness')).toContainText('0 of 7 sections drafted · 0 words');await page.locator('#l3cap0').fill('First legal issue and competing argument');await expect(page.locator('#l3capReadiness')).toContainText('1 of 7 sections drafted · 6 words');await expect(page.locator('#l3capReadiness')).toContainText('not a grade');});
