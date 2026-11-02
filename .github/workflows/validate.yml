@@ -7,6 +7,7 @@ on:
       - 'app.js'
       - 'prelaw-applied.js'
       - 'level2.js'
+      - 'level3.js'
       - 'index.html'
       - 'styles.css'
       - 'scripts/**'
@@ -19,6 +20,7 @@ on:
       - 'app.js'
       - 'prelaw-applied.js'
       - 'level2.js'
+      - 'level3.js'
       - 'index.html'
       - 'styles.css'
       - 'scripts/**'
@@ -44,6 +46,8 @@ jobs:
         run: |
           node scripts/validate-content.mjs
           node --check level2.js
+          node --check level3.js
+          node scripts/validate-level3.mjs
       - name: Generate 85-lesson legal-source review inventory
         run: node scripts/audit-prelaw-sources.mjs
       - name: Upload source audit inventory
