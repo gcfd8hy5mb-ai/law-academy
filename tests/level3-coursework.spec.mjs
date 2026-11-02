@@ -85,3 +85,16 @@ test('Academy catalog opens authored Level 3 instead of a future placeholder',as
 test('Capstone readiness tracks sections and actual words without awarding a grade',async({page})=>{await page.goto('/');await page.evaluate(()=>renderLevel3());await page.locator('#l3capstone').click();await expect(page.locator('#l3capReadiness')).toContainText('0 of 7 sections drafted · 0 words');await page.locator('#l3cap0').fill('First legal issue and competing argument');await expect(page.locator('#l3capReadiness')).toContainText('1 of 7 sections drafted · 6 words');await expect(page.locator('#l3capReadiness')).toContainText('not a grade');});
 
 test('Capstone tracker flags writing beyond seven thousand words',async({page})=>{await page.goto('/');await page.evaluate(()=>renderLevel3());await page.locator('#l3capstone').click();await page.locator('#l3cap0').fill(Array(7001).fill('analysis').join(' '));await expect(page.locator('#l3capReadiness')).toContainText('Above the 7,000-word target');});
+
+test('Final reviewer packet is available only on course finals and requires a draft',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel3());
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await expect(page.locator('#l3reviewPacket')).toHaveCount(0);
+ await page.locator('#l3back').click();
+ await page.locator('[data-l3lesson="9"]').click();
+ await expect(page.locator('#l3reviewPacket')).toBeVisible();
+ await page.locator('#l3reviewPacket').click();
+ await expect(page.locator('#l3reviewPacketStatus')).toContainText('Write your final examination');
+});
