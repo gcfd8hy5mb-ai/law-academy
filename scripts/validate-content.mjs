@@ -235,3 +235,5 @@ assert.equal(level2Courses.filter(c=>c.lessons[3].reading.includes('SUBJECT-SPEC
 assert.equal(level2Courses.filter(c=>c.lessons[4].reading.includes('INTEGRATED CASE TEACHING CHAPTER')&&c.lessons[4].problem.includes('human substantive grading')).length,7,'Seven integrated cases must include detailed teaching and substantive written analysis');
 
 assert.equal(level2Courses.filter(c=>c.lessons[5].reading.includes('DETAILED DOCTRINAL CHAPTER')&&c.lessons[5].problem.includes('WRITTEN EVALUATION')).length,7,'Seven sixth lessons must include a full doctrinal application section');
+
+assert.equal(level2Courses.filter(c=>c.lessons[6].reading.includes('DOCTRINAL MASTERCLASS')&&c.lessons[6].problem.includes('INDEPENDENT CASE ANALYSIS')).length,7,'All seven seventh lessons require masterclass and case analysis');
