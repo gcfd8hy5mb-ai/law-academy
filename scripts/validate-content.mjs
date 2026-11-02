@@ -258,3 +258,12 @@ for(const [i,id] of rubricIds.entries()){
  assert.ok(lesson.problem.includes('GRADING LIMITATION'),'Independent writing review warning missing '+id);
 }
 console.log('PASS: Seven advanced essay exams include issue checklists, scoring criteria and independent review warnings.');
+
+const capstoneIds=['L2-1-17','L2-2-17','L2-3-17','L2-4-17','L2-5-18','L2-6-18','L2-7-17'];
+for(const [i,id] of capstoneIds.entries()){
+ const capstone=level2Courses[i].lessons.find(l=>l.id===id);
+ assert.ok(capstone,'Missing first-year capstone '+id);
+ assert.ok(capstone.reading.includes('CAPSTONE FINAL EXAM '+id),'Integrated capstone scenario missing '+id);
+ for(const token of ['1,500–2,000-word','CAPSTONE RUBRIC','human substantive reviewer','four primary authorities'])assert.ok(capstone.problem.includes(token),'Capstone grading/source requirement missing: '+id+' '+token);
+}
+console.log('PASS: All seven first-year capstones contain integrated scenarios, source verification and substantive written-exam rubrics.');
