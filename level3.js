@@ -75,6 +75,25 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal work combines authority, factual application and competing interpretations.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-1-5",
+        "title": "Hearsay and expert proof integrated examination",
+        "authority": "Federal Rules of Evidence 403, 702, 801–805, 901",
+        "scenario": "In a chemical exposure trial, a laboratory analyst used an unvalidated sampling method. The plaintiff offers a supervisor's email summarizing a worker's account and a spreadsheet whose author is unknown.",
+        "reading": "Integrated advanced legal examination. First identify the parties, forum, operative date and controlling legal authority. Create an issue tree with each required element, mark disputed and missing facts, and determine which side bears the burden. Draft a position for each side before selecting a reasoned outcome. Different doctrines require separate analyses even when a narrative connects them. Do not rely on the multiple-choice result as a grade for independent writing. Source citations must be verified against primary documents and later controlling developments.",
+        "worked": "Identify each distinct proposed exhibit, foundation and purpose. The spreadsheet may need authentication under Rule 901. The supervisor's email may contain two hearsay layers: the email statement and worker's statement. Proponent must explain an admissible path for each layer or a genuinely nontruth purpose. The expert's qualifications are insufficient without reliable data, methods and application under Rule 702. Then balance any Rule 403 dangers against probative value, rather than equating unfavorable evidence with unfair prejudice.",
+        "counterarguments": "Plaintiff argues business records and notice; defense challenges embedded statements, method reliability and possible misleading presentation.",
+        "assignment": "Produce a 1,500–2,000-word memorandum with facts and assumptions, issue map, rule statements with verified citations, two-sided application, proposed rulings or business advice, a table of missing proof, and a reflective revision. Evaluate using: issues/doctrine 25, application 30, opposing positions 15, source accuracy 20, clarity 10. Human written review required.",
+        "question": "Which submission best meets this integrated-exam standard?",
+        "options": [
+          "A conclusory answer with one remembered case",
+          "A structured, sourced analysis including both sides and uncertainties",
+          "A passing multiple-choice result alone"
+        ],
+        "answer": 1,
+        "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -152,6 +171,25 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Sound legal work combines authority, factual application and competing interpretations.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-2-5",
+        "title": "Corporate acquisition conflict simulation",
+        "authority": "Applicable state corporate law and governing entity statute",
+        "scenario": "A director owns 15% of a supplier acquired by the corporation. Minutes show the director participated in pricing negotiations but abstained from the final vote.",
+        "reading": "Integrated advanced legal examination. First identify the parties, forum, operative date and controlling legal authority. Create an issue tree with each required element, mark disputed and missing facts, and determine which side bears the burden. Draft a position for each side before selecting a reasoned outcome. Different doctrines require separate analyses even when a narrative connects them. Do not rely on the multiple-choice result as a grade for independent writing. Source citations must be verified against primary documents and later controlling developments.",
+        "worked": "Identify corporation's state of incorporation, directors' relationships, material disclosures, financial interests, independence, approvals and governing standards. Abstention from a final vote does not necessarily cure a conflict. Distinguish approval mechanics from substantive fairness and remedies. Examine whether board members had reliable valuation information and whether the interested director influenced negotiations.",
+        "counterarguments": "Directors argue independent approval on informed advice; shareholders claim concealment and an unfair price.",
+        "assignment": "Produce a 1,500–2,000-word memorandum with facts and assumptions, issue map, rule statements with verified citations, two-sided application, proposed rulings or business advice, a table of missing proof, and a reflective revision. Evaluate using: issues/doctrine 25, application 30, opposing positions 15, source accuracy 20, clarity 10. Human written review required.",
+        "question": "Which submission best meets this integrated-exam standard?",
+        "options": [
+          "A conclusory answer with one remembered case",
+          "A structured, sourced analysis including both sides and uncertainties",
+          "A passing multiple-choice result alone"
+        ],
+        "answer": 1,
+        "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -231,6 +269,25 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal work combines authority, factual application and competing interpretations.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-3-5",
+        "title": "Agency enforcement and emergency rule challenge",
+        "authority": "APA 5 U.S.C. §§ 553, 704, 706; relevant statutory authorization",
+        "scenario": "A federal agency requires all operators to buy a monitoring device immediately after issuing a public bulletin. It cites safety and starts imposing fines within a week.",
+        "reading": "Integrated advanced legal examination. First identify the parties, forum, operative date and controlling legal authority. Create an issue tree with each required element, mark disputed and missing facts, and determine which side bears the burden. Draft a position for each side before selecting a reasoned outcome. Different doctrines require separate analyses even when a narrative connects them. Do not rely on the multiple-choice result as a grade for independent writing. Source citations must be verified against primary documents and later controlling developments.",
+        "worked": "Analyze statutory authorization, the bulletin's binding effect and whether it constitutes a legislative rule. Evaluate notice-and-comment requirements, justified exceptions, final agency action, Article III injury and possible judicial review. Do not equate the agency's claimed expertise with judicial deference on legal meaning. Identify administrative record evidence on urgency and distinguish remedy from jurisdiction.",
+        "counterarguments": "Agency cites emergency conditions and delegated discretion; regulated entities dispute both factual urgency and legal authority.",
+        "assignment": "Produce a 1,500–2,000-word memorandum with facts and assumptions, issue map, rule statements with verified citations, two-sided application, proposed rulings or business advice, a table of missing proof, and a reflective revision. Evaluate using: issues/doctrine 25, application 30, opposing positions 15, source accuracy 20, clarity 10. Human written review required.",
+        "question": "Which submission best meets this integrated-exam standard?",
+        "options": [
+          "A conclusory answer with one remembered case",
+          "A structured, sourced analysis including both sides and uncertainties",
+          "A passing multiple-choice result alone"
+        ],
+        "answer": 1,
+        "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -308,6 +365,25 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Sound legal work combines authority, factual application and competing interpretations.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-4-5",
+        "title": "Multiclient legal-ethics crisis",
+        "authority": "Adopted state professional conduct rules corresponding to ABA Model Rules 1.6, 1.7, 1.9, 3.3",
+        "scenario": "A law firm represents a company and its CEO. The CEO privately admits misleading auditors, while corporate counsel asks the firm to deny the allegation in a court filing.",
+        "reading": "Integrated advanced legal examination. First identify the parties, forum, operative date and controlling legal authority. Create an issue tree with each required element, mark disputed and missing facts, and determine which side bears the burden. Draft a position for each side before selecting a reasoned outcome. Different doctrines require separate analyses even when a narrative connects them. Do not rely on the multiple-choice result as a grade for independent writing. Source citations must be verified against primary documents and later controlling developments.",
+        "worked": "Identify each client and who can direct the representation. Analyze present adversity and material limitations, confidentiality, lawyer knowledge, candor to tribunal and whether continued joint representation is permissible. Do not automatically disclose the CEO's statements or file a denial that counsel knows is false. Check informed consent and withdrawal under the adopted jurisdiction's rules.",
+        "counterarguments": "Company expects loyal disclosure; CEO invokes confidentiality. Lawyer must distinguish organizational representation from individual representation.",
+        "assignment": "Produce a 1,500–2,000-word memorandum with facts and assumptions, issue map, rule statements with verified citations, two-sided application, proposed rulings or business advice, a table of missing proof, and a reflective revision. Evaluate using: issues/doctrine 25, application 30, opposing positions 15, source accuracy 20, clarity 10. Human written review required.",
+        "question": "Which submission best meets this integrated-exam standard?",
+        "options": [
+          "A conclusory answer with one remembered case",
+          "A structured, sourced analysis including both sides and uncertainties",
+          "A passing multiple-choice result alone"
+        ],
+        "answer": 1,
+        "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -387,6 +463,25 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal work combines authority, factual application and competing interpretations.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-5-5",
+        "title": "Business sale taxation case assessment",
+        "authority": "IRC §§ 1001, 1012, 1221, 453 and applicable tax-year authorities",
+        "scenario": "An owner sells closely held shares for $100,000 down and a $300,000 note over three years. Adjusted basis is disputed and sale documents allocate $30,000 to consulting.",
+        "reading": "Integrated advanced legal examination. First identify the parties, forum, operative date and controlling legal authority. Create an issue tree with each required element, mark disputed and missing facts, and determine which side bears the burden. Draft a position for each side before selecting a reasoned outcome. Different doctrines require separate analyses even when a narrative connects them. Do not rely on the multiple-choice result as a grade for independent writing. Source citations must be verified against primary documents and later controlling developments.",
+        "worked": "Identify nature of transferred assets, tax year, amount realized and verified adjusted basis. Evaluate note terms, interest, eligibility for installment method and allocation to services. Characterize possible capital gain separately from ordinary income; disclose assumptions and exclusions. Prepare a conditional gain worksheet instead of claiming a certain tax bill.",
+        "counterarguments": "Taxpayer argues installment deferral; examiner contests basis substantiation and consulting allocation.",
+        "assignment": "Produce a 1,500–2,000-word memorandum with facts and assumptions, issue map, rule statements with verified citations, two-sided application, proposed rulings or business advice, a table of missing proof, and a reflective revision. Evaluate using: issues/doctrine 25, application 30, opposing positions 15, source accuracy 20, clarity 10. Human written review required.",
+        "question": "Which submission best meets this integrated-exam standard?",
+        "options": [
+          "A conclusory answer with one remembered case",
+          "A structured, sourced analysis including both sides and uncertainties",
+          "A passing multiple-choice result alone"
+        ],
+        "answer": 1,
+        "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -465,6 +560,25 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal work combines authority, factual application and competing interpretations.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-6-5",
+        "title": "Trade-secret injunction and damage model",
+        "authority": "Fed. R. Civ. P. 65; governing state trade-secret law; Winter v. NRDC",
+        "scenario": "A former executive downloads a customer database and joins a competitor. Employer seeks a broad two-year employment ban and $2 million in projected losses.",
+        "reading": "Integrated advanced legal examination. First identify the parties, forum, operative date and controlling legal authority. Create an issue tree with each required element, mark disputed and missing facts, and determine which side bears the burden. Draft a position for each side before selecting a reasoned outcome. Different doctrines require separate analyses even when a narrative connects them. Do not rely on the multiple-choice result as a grade for independent writing. Source citations must be verified against primary documents and later controlling developments.",
+        "worked": "Distinguish whether the information is protectable, evidence of misappropriation, threatened irreparable harm, causation and monetary damages. Address all preliminary injunction factors and Rule 65 requirements. Analyze feasibility of narrowly preventing use or disclosure rather than barring all employment. Build loss figures from identified customers, margins, expenses and mitigation.",
+        "counterarguments": "Employer stresses imminent disclosure; employee says data is public and broad relief prevents earning a livelihood.",
+        "assignment": "Produce a 1,500–2,000-word memorandum with facts and assumptions, issue map, rule statements with verified citations, two-sided application, proposed rulings or business advice, a table of missing proof, and a reflective revision. Evaluate using: issues/doctrine 25, application 30, opposing positions 15, source accuracy 20, clarity 10. Human written review required.",
+        "question": "Which submission best meets this integrated-exam standard?",
+        "options": [
+          "A conclusory answer with one remembered case",
+          "A structured, sourced analysis including both sides and uncertainties",
+          "A passing multiple-choice result alone"
+        ],
+        "answer": 1,
+        "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -542,6 +656,25 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Sound legal work combines authority, factual application and competing interpretations.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-7-5",
+        "title": "Digital search, interrogation and disclosure hearing",
+        "authority": "Fourth, Fifth and Sixth Amendments; Riley, Miranda, Brady/Giglio",
+        "scenario": "Officers arrest a suspect, browse a phone without warrant, then elicit location information during custody. Prosecutors later learn a key witness received undisclosed benefits.",
+        "reading": "Integrated advanced legal examination. First identify the parties, forum, operative date and controlling legal authority. Create an issue tree with each required element, mark disputed and missing facts, and determine which side bears the burden. Draft a position for each side before selecting a reasoned outcome. Different doctrines require separate analyses even when a narrative connects them. Do not rely on the multiple-choice result as a grade for independent writing. Source citations must be verified against primary documents and later controlling developments.",
+        "worked": "Sequence each event. Assess warrant requirement and exceptions for digital contents separately from custody and interrogation standards. Distinguish whether counsel rights had attached and whether Brady/Giglio duties apply to the prosecution team's knowledge. Analyze suppression, reliability, disclosure timing and remedies independently. Avoid assuming exclusion of one item defeats every other charge.",
+        "counterarguments": "Government claims exigent circumstances and spontaneous statements; defense challenges factual basis and fairness of withheld impeachment evidence.",
+        "assignment": "Produce a 1,500–2,000-word memorandum with facts and assumptions, issue map, rule statements with verified citations, two-sided application, proposed rulings or business advice, a table of missing proof, and a reflective revision. Evaluate using: issues/doctrine 25, application 30, opposing positions 15, source accuracy 20, clarity 10. Human written review required.",
+        "question": "Which submission best meets this integrated-exam standard?",
+        "options": [
+          "A conclusory answer with one remembered case",
+          "A structured, sourced analysis including both sides and uncertainties",
+          "A passing multiple-choice result alone"
+        ],
+        "answer": 1,
+        "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
