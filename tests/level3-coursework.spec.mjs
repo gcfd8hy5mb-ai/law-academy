@@ -193,3 +193,15 @@ test('Level 3 restore does not change in-memory drafts when browser storage fail
  await page.locator('[data-l3lesson="0"]').click();
  await expect(page.locator('#l3draft')).toHaveValue('');
 });
+
+test('Backup restoration preserves writing saved by another tab after this view loaded',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Fresh writing from another tab'}})));
+ await page.locator('#l3restoreInput').fill(JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-1':'Older backup text','L3-CAP-0':'Incoming capstone analysis'}}));
+ await page.locator('#l3restore').click();
+ await expect(page.locator('#l3restoreStatus')).toContainText('1 missing drafts restored');
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(saved['L3-1-1'].draft).toBe('Fresh writing from another tab');
+ expect(saved['L3-CAP-0'].draft).toBe('Incoming capstone analysis');
+});
