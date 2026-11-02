@@ -31,7 +31,7 @@ for(const course of courses){const exam=course.lessons[4];assert.ok(exam.worked?
 assert.ok(ui.includes('Worked issue map and model reasoning'),'Worked solutions not wired to UI');
 assert.ok(ui.includes('id=\"l3worked\" hidden'),'Worked solutions must start hidden');
 assert.ok(ui.includes('id=\"l3reveal\"'),'Missing explicit reveal control');
-assert.ok(ui.includes('length<100'),'Reveal must require a substantive writing attempt');
+assert.ok(ui.includes('length:0)<100'),'Reveal must require a substantive writing attempt');
 assert.ok(!ui.includes('...(l.worked?'),'Model reasoning must not be rendered in public lesson sections');
 
 for(const id of ['l3feedback','l3feedbackResult','l3copy','l3copyStatus'])assert.ok(ui.includes(id),'Missing Level 3 writing aid '+id);
