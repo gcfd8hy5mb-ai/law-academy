@@ -130,6 +130,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-1-8",
+        "title": "Judicial notice and evidentiary presumptions",
+        "authority": "Federal Rules of Evidence 201 and 301",
+        "scenario": "At trial, one party asks a judge to treat a disputed internet article as an indisputable fact and invokes a statutory presumption concerning mailed notice.",
+        "reading": "Judicial notice of an adjudicative fact requires that it cannot reasonably be questioned, either because it is generally known in the territory or accurately determined from sources whose accuracy cannot reasonably be questioned. A website's existence does not make its factual assertions indisputable. Rule 301 generally shifts the production burden for a civil presumption without shifting persuasion unless another rule governs. Distinguish admissibility, judicial notice, and evidentiary burdens. In criminal trials a noticed fact cannot be forced on the jury as conclusive. To work this problem, identify the relevant forum and controlling date, diagram the required doctrinal elements, list specific supporting and adverse facts, and examine at least two changes to the facts. Distinguish what a cited primary authority actually holds from assumptions about its reach. Treat statutory changes and later decisions as necessary research checks, not matters of guesswork.",
+        "counterarguments": "The proponent relies on a government record; opponent distinguishes the record's existence from its contested conclusions.",
+        "assignment": "Prepare a 1,200–1,600-word memorandum with an issue tree, authority table, point-by-point application, best opposing argument, two fact variations and recommended disposition. Score guide: law 25, application 30, counterarguments 15, verified sources 20, clarity 10. Written work requires qualified review.",
+        "question": "Which approach best handles uncertainty in this legal problem?",
+        "options": [
+          "Treat any cited case as universally controlling",
+          "Identify jurisdiction, verify sources and analyze plausible opposing conclusions",
+          "Skip unclear facts and give a certain answer"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -262,6 +280,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-2-8",
+        "title": "Corporate veil piercing and entity separateness",
+        "authority": "Governing state corporate and LLC statutes and controlling decisions",
+        "scenario": "An owner commingles company funds, signs customer contracts under the entity's name and transfers its assets before a large judgment.",
+        "reading": "Limited liability is a starting rule, not an unqualified shield for misconduct. Veil-piercing standards differ across jurisdictions and entity types; examine ownership, control, recordkeeping, undercapitalization, misuse and the injustice alleged. Mere sole ownership or business failure is not automatically enough. Distinguish direct personal tort liability, contractual guaranties, successor liability and fraudulent-transfer remedies from veil piercing. To work this problem, identify the relevant forum and controlling date, diagram the required doctrinal elements, list specific supporting and adverse facts, and examine at least two changes to the facts. Distinguish what a cited primary authority actually holds from assumptions about its reach. Treat statutory changes and later decisions as necessary research checks, not matters of guesswork.",
+        "counterarguments": "Claimant identifies personal withdrawals and missing records; owner says the company remained a genuine separate enterprise.",
+        "assignment": "Prepare a 1,200–1,600-word memorandum with an issue tree, authority table, point-by-point application, best opposing argument, two fact variations and recommended disposition. Score guide: law 25, application 30, counterarguments 15, verified sources 20, clarity 10. Written work requires qualified review.",
+        "question": "Which approach best handles uncertainty in this legal problem?",
+        "options": [
+          "Treat any cited case as universally controlling",
+          "Identify jurisdiction, verify sources and analyze plausible opposing conclusions",
+          "Skip unclear facts and give a certain answer"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -396,6 +432,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-3-8",
+        "title": "Rulemaking record and reasoned explanation",
+        "authority": "5 U.S.C. §706; Motor Vehicle Manufacturers Association v. State Farm, 463 U.S. 29 (1983)",
+        "scenario": "A transportation agency reverses a safety requirement without evaluating a major alternative that commenters documented.",
+        "reading": "Arbitrary-and-capricious review examines whether the agency considered important aspects of the problem, explained its decision and connected facts to its choice. Courts do not substitute preferred policy merely because they disagree. Policy changes may be permissible but require reasoned acknowledgment and evaluation under governing precedents. Separate review of policy judgment from legal authorization and compliance with APA procedures; identify the contents of the administrative record. To work this problem, identify the relevant forum and controlling date, diagram the required doctrinal elements, list specific supporting and adverse facts, and examine at least two changes to the facts. Distinguish what a cited primary authority actually holds from assumptions about its reach. Treat statutory changes and later decisions as necessary research checks, not matters of guesswork.",
+        "counterarguments": "Agency argues the old rule was expensive; challengers point to ignored safety data and unexplained reversal.",
+        "assignment": "Prepare a 1,200–1,600-word memorandum with an issue tree, authority table, point-by-point application, best opposing argument, two fact variations and recommended disposition. Score guide: law 25, application 30, counterarguments 15, verified sources 20, clarity 10. Written work requires qualified review.",
+        "question": "Which approach best handles uncertainty in this legal problem?",
+        "options": [
+          "Treat any cited case as universally controlling",
+          "Identify jurisdiction, verify sources and analyze plausible opposing conclusions",
+          "Skip unclear facts and give a certain answer"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -528,6 +582,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-4-8",
+        "title": "Lawyer advertising, solicitation and client intake",
+        "authority": "ABA Model Rules 7.1–7.3 and jurisdiction-specific advertising rules",
+        "scenario": "A law firm sends direct messages promising guaranteed multimillion-dollar verdicts to people identified through recent accident reports.",
+        "reading": "Lawyer communications cannot be materially false or misleading under governing professional rules. Solicitation restrictions depend on medium, purpose, recipient and constitutional limits; jurisdictional rules vary. Identify factual support for claimed results, required disclosures, privacy risks and vulnerable recipients. A disclaimer does not necessarily cure a misleading guarantee. Distinguish permissible public education from targeted solicitation and improper contact. To work this problem, identify the relevant forum and controlling date, diagram the required doctrinal elements, list specific supporting and adverse facts, and examine at least two changes to the facts. Distinguish what a cited primary authority actually holds from assumptions about its reach. Treat statutory changes and later decisions as necessary research checks, not matters of guesswork.",
+        "counterarguments": "Firm argues the messages are protected commercial speech; regulator points to unsupported guarantees and coercive timing.",
+        "assignment": "Prepare a 1,200–1,600-word memorandum with an issue tree, authority table, point-by-point application, best opposing argument, two fact variations and recommended disposition. Score guide: law 25, application 30, counterarguments 15, verified sources 20, clarity 10. Written work requires qualified review.",
+        "question": "Which approach best handles uncertainty in this legal problem?",
+        "options": [
+          "Treat any cited case as universally controlling",
+          "Identify jurisdiction, verify sources and analyze plausible opposing conclusions",
+          "Skip unclear facts and give a certain answer"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -662,6 +734,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-5-8",
+        "title": "International tax residence and source fundamentals",
+        "authority": "Internal Revenue Code §§ 61, 861–865; treaties and current regulations where applicable",
+        "scenario": "A US-based corporation earns subscription fees from customers abroad using servers and employees in several countries.",
+        "reading": "Begin with taxpayer identity, residence, nature of income, source rules, applicable tax year and any relevant treaties. Cross-border taxation requires separating US domestic-law sourcing from treaty allocation, foreign tax credits and possible effectively connected income or permanent establishment concepts. Digital activities complicate factual classification. Do not assume customer location alone fixes tax source or that a treaty applies without eligibility. To work this problem, identify the relevant forum and controlling date, diagram the required doctrinal elements, list specific supporting and adverse facts, and examine at least two changes to the facts. Distinguish what a cited primary authority actually holds from assumptions about its reach. Treat statutory changes and later decisions as necessary research checks, not matters of guesswork.",
+        "counterarguments": "Taxpayer argues foreign-source revenue; examiner requests contracts, service locations, legal entity records and payment terms.",
+        "assignment": "Prepare a 1,200–1,600-word memorandum with an issue tree, authority table, point-by-point application, best opposing argument, two fact variations and recommended disposition. Score guide: law 25, application 30, counterarguments 15, verified sources 20, clarity 10. Written work requires qualified review.",
+        "question": "Which approach best handles uncertainty in this legal problem?",
+        "options": [
+          "Treat any cited case as universally controlling",
+          "Identify jurisdiction, verify sources and analyze plausible opposing conclusions",
+          "Skip unclear facts and give a certain answer"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -795,6 +885,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-6-8",
+        "title": "Declaratory judgment and justiciability",
+        "authority": "28 U.S.C. §§ 2201–2202; Article III and applicable precedent",
+        "scenario": "Two competitors dispute whether a license covers a planned product, but neither has yet brought an infringement claim.",
+        "reading": "Declaratory relief is a remedy conditioned on a concrete controversy and independent jurisdiction; the Declaratory Judgment Act does not itself supply subject matter jurisdiction. Evaluate adversity, immediacy, practical legal consequences and the court's discretion where authorized. Differentiate advisory legal opinions from justiciable disputes and account for possible alternative state remedies. To work this problem, identify the relevant forum and controlling date, diagram the required doctrinal elements, list specific supporting and adverse facts, and examine at least two changes to the facts. Distinguish what a cited primary authority actually holds from assumptions about its reach. Treat statutory changes and later decisions as necessary research checks, not matters of guesswork.",
+        "counterarguments": "Licensee seeks certainty before launch; licensor calls the product hypothetical and facts insufficiently fixed.",
+        "assignment": "Prepare a 1,200–1,600-word memorandum with an issue tree, authority table, point-by-point application, best opposing argument, two fact variations and recommended disposition. Score guide: law 25, application 30, counterarguments 15, verified sources 20, clarity 10. Written work requires qualified review.",
+        "question": "Which approach best handles uncertainty in this legal problem?",
+        "options": [
+          "Treat any cited case as universally controlling",
+          "Identify jurisdiction, verify sources and analyze plausible opposing conclusions",
+          "Skip unclear facts and give a certain answer"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -927,6 +1035,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-7-8",
+        "title": "Post-conviction relief and habeas fundamentals",
+        "authority": "28 U.S.C. §§ 2254–2255; applicable constitutional and procedural law",
+        "scenario": "A convicted defendant discovers previously unavailable exculpatory records several years after a final judgment.",
+        "reading": "Separate direct appeal, state collateral proceedings, federal habeas review and statutory time limits. Identify custody, exhaustion, procedural default, preservation, standards of review and possible exceptions without assuming a new document automatically grants relief. Distinguish innocence assertions, constitutional violations, prejudice and the effect of prior petitions. The remedy depends on the forum and case history. To work this problem, identify the relevant forum and controlling date, diagram the required doctrinal elements, list specific supporting and adverse facts, and examine at least two changes to the facts. Distinguish what a cited primary authority actually holds from assumptions about its reach. Treat statutory changes and later decisions as necessary research checks, not matters of guesswork.",
+        "counterarguments": "Petitioner argues the new records undermine the verdict; state argues procedural bars and cumulative evidence.",
+        "assignment": "Prepare a 1,200–1,600-word memorandum with an issue tree, authority table, point-by-point application, best opposing argument, two fact variations and recommended disposition. Score guide: law 25, application 30, counterarguments 15, verified sources 20, clarity 10. Written work requires qualified review.",
+        "question": "Which approach best handles uncertainty in this legal problem?",
+        "options": [
+          "Treat any cited case as universally controlling",
+          "Identify jurisdiction, verify sources and analyze plausible opposing conclusions",
+          "Skip unclear facts and give a certain answer"
+        ],
+        "answer": 1,
+        "why": "Rigorous legal analysis is jurisdictional, evidence-sensitive and transparent about limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
