@@ -39,3 +39,16 @@ For each authority: `Course | Lesson ID | Proposition | Jurisdiction | Primary c
 For each capstone: `Course | ID | Scoring rubric reviewed | Model analysis reviewed | Writing graded by | Evidence of review | Defects | Outcome`.
 
 Any unresolved defect affecting a material legal rule or examination answer blocks academic sign-off.
+
+
+## Primary-source spot checks — November 2, 2026 (partial; not final sign-off)
+
+These are bounded spot checks of named authorities, not full legal currency or subsequent-treatment certifications. The full lesson-by-lesson audit remains pending.
+
+| Subject / lesson | Primary source checked | Supported point | Limits still requiring review |
+| --- | --- | --- | --- |
+| Civil Procedure L2-3-18 | 28 U.S.C. § 1332, Office of the Law Revision Counsel, https://uscode.house.gov/us/usc/119-118/t28/s1332/ (text through Pub. L. 119-120, October 7, 2026) | Diversity amount must exceed $75,000 exclusive of interest and costs; corporate citizenship must be separately analyzed under subsection (c). | Fact-specific complete diversity, case law on principal place of business, and later statutory updates not certified. |
+| Civil Procedure L2-3-10 | U.S. Courts, current Federal Rules of Civil Procedure landing page, https://www.uscourts.gov/forms-rules/current-rules-practice-procedure/federal-rules-civil-procedure (consulted November 2, 2026) | Official rules compilation identifies Civil Rules as last amended in 2025; Rule 15 should be verified against the current full text before instructing on relation back. | Current Rule 15(c) text, relevant interpretations and subsequent cases still pending detailed checking. |
+| Criminal Law L2-4-18 | Riley v. California, 573 U.S. 373 (2014), Supreme Court opinion reproduced at https://supreme.justia.com/cases/federal/us/573/373/ (consulted November 2, 2026) | Search incident to arrest generally does not justify searching digital contents of a seized cell phone without a warrant; genuine exigent circumstances may provide a distinct exception. | Later Supreme Court/circuit/state treatment, suppression exceptions and scenario-specific emergency facts not yet fully checked. |
+
+**Audit methodology:** For each claim distinguish the actual source text from a syllabus or summary; note court hierarchy and jurisdiction; search later binding authority before certifying currency. No reviewer has signed off on these entries. Remaining first-year courses and case examples are unreviewed, and the table must not be treated as an exhaustive audit.
