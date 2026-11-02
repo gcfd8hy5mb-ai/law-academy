@@ -38,3 +38,6 @@ for(const id of ['l3feedback','l3feedbackResult','l3copy','l3copyStatus'])assert
 assert.ok(ui.includes('not a grade'),'Writing feedback must not imply assessment credit');
 
 for(const c of courses){const final=c.lessons[9];assert.ok(final.title.includes('Final Examination'),'Missing Level 3 course final '+c.id);assert.ok(final.assignment.includes('2,000–2,500'),'Final writing assignment too limited '+c.id);assert.ok(final.reading.includes('qualified human reviewer'),'Written mastery must require human review '+c.id)}
+
+for(const token of ['l3capstone','showCapstone','data-capdraft','l3capCopy','L3-CAP-'])assert.ok(ui.includes(token),'Integrated Level 3 capstone UI missing '+token);
+assert.ok(ui.includes('70 authored lessons'),'Stale Level 3 home lesson count');
