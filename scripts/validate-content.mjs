@@ -324,3 +324,5 @@ assert.ok(level2Source.includes('no essay grade or academic certification is awa
 
 assert.ok(level2Source.includes('l2saveStatus'),'Missing Level 2 draft persistence status');
 assert.ok(level2Source.includes('Draft could not be saved on this device'),'Students must be warned of failed local draft storage');
+
+assert.ok(level2Source.includes('Previously saved draft loaded from this device.'),'Returning students need visible draft restoration confirmation');
