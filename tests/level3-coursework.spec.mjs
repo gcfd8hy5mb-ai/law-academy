@@ -66,3 +66,5 @@ test('Integrated capstone warns rather than copying empty submissions',async({pa
  await page.locator('#l3capCopy').click();
  await expect(page.locator('#l3capStatus')).toContainText('Write at least one capstone section before copying.');
 });
+
+test('Capstone displays all seven subject-specific essay prompts',async({page})=>{await page.goto('/');await page.evaluate(()=>renderLevel3());await page.locator('#l3capstone').click();await expect(page.getByText('Assess authentication, hearsay and expert reliability.')).toBeVisible();await expect(page.getByText('Assess searches, interrogation and suppression.')).toBeVisible();await expect(page.locator('[data-capdraft]')).toHaveCount(7);});
