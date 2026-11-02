@@ -94,6 +94,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-1-6",
+        "title": "Privileges and waiver",
+        "authority": "Federal Rules of Evidence 501 and 502; governing common law",
+        "scenario": "Corporate counsel interviews employees following a product recall; notes are circulated to public-relations consultants.",
+        "reading": "Attorney-client privilege protects qualifying confidential legal communications, not every communication involving a lawyer. Identify client, counsel role, legal advice purpose, confidentiality, third-party presence and waiver. Work-product protection is distinct and may attach to documents prepared in anticipation of litigation. Rule 502 addresses some effects of disclosure. Do not assume corporate investigations are all privileged or that naming a document confidential creates privilege. Worked method: identify the procedural posture, list the rule elements, write a fact-supported argument for each side, evaluate missing evidence, and explain the possible outcomes without claiming that jurisdictional questions are settled. Confirm the controlling versions of primary authorities before using this work in practice.",
+        "counterarguments": "Company claims legal advice and work product; claimant asserts business purpose and disclosure outside a protected relationship.",
+        "assignment": "Draft a 1,000–1,400-word two-sided legal memorandum and a 200-word client advisory. Include verified citations, a fact-to-element matrix, limitations, and a conclusion. Apply a 100-point rubric: issue spotting 20, law 20, factual analysis 30, adverse arguments 15, citations and presentation 15.",
+        "question": "What must a professionally defensible memorandum include?",
+        "options": [
+          "Only the favored client's conclusion",
+          "Verified law, disputed facts, competing arguments and limitations",
+          "A citation without applying facts"
+        ],
+        "answer": 1,
+        "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -190,6 +208,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-2-6",
+        "title": "Securities disclosure and corporate governance",
+        "authority": "Securities Exchange Act of 1934; Rule 10b-5; governing case law",
+        "scenario": "Executives discuss a significant production problem shortly before issuing favorable investor statements.",
+        "reading": "Separate actual statement, omission, duty to speak, materiality, scienter, connection to securities transaction, reliance and loss causation in private antifraud litigation. Public companies also have specific disclosure obligations depending on filings and circumstances. Avoid claiming every missed forecast is fraud. Assess what management knew, when it knew it and how reasonable investors could react. Worked method: identify the procedural posture, list the rule elements, write a fact-supported argument for each side, evaluate missing evidence, and explain the possible outcomes without claiming that jurisdictional questions are settled. Confirm the controlling versions of primary authorities before using this work in practice.",
+        "counterarguments": "Investors argue knowingly misleading optimism; company points to uncertainty and accurate risk disclosures.",
+        "assignment": "Draft a 1,000–1,400-word two-sided legal memorandum and a 200-word client advisory. Include verified citations, a fact-to-element matrix, limitations, and a conclusion. Apply a 100-point rubric: issue spotting 20, law 20, factual analysis 30, adverse arguments 15, citations and presentation 15.",
+        "question": "What must a professionally defensible memorandum include?",
+        "options": [
+          "Only the favored client's conclusion",
+          "Verified law, disputed facts, competing arguments and limitations",
+          "A citation without applying facts"
+        ],
+        "answer": 1,
+        "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -288,6 +324,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-3-6",
+        "title": "Regulatory enforcement discretion and review",
+        "authority": "APA 5 U.S.C. §701(a)(2); Heckler v. Chaney, 470 U.S. 821 (1985)",
+        "scenario": "An agency refuses to prosecute a facility after receiving complaints, but separately issues a binding industry-wide enforcement directive.",
+        "reading": "Agency decisions not to enforce often have a presumption against judicial review, subject to statutory constraints and limited exceptions. Distinguish an individual declination from affirmative rulemaking or a directive imposing present obligations. Analyze finality, jurisdiction, statutory guidelines, standing and potential alternative remedies. Avoid treating every agency inaction as either categorically reviewable or categorically exempt. Worked method: identify the procedural posture, list the rule elements, write a fact-supported argument for each side, evaluate missing evidence, and explain the possible outcomes without claiming that jurisdictional questions are settled. Confirm the controlling versions of primary authorities before using this work in practice.",
+        "counterarguments": "Neighbors invoke a mandatory duty to inspect; agency argues prioritization and resource allocation.",
+        "assignment": "Draft a 1,000–1,400-word two-sided legal memorandum and a 200-word client advisory. Include verified citations, a fact-to-element matrix, limitations, and a conclusion. Apply a 100-point rubric: issue spotting 20, law 20, factual analysis 30, adverse arguments 15, citations and presentation 15.",
+        "question": "What must a professionally defensible memorandum include?",
+        "options": [
+          "Only the favored client's conclusion",
+          "Verified law, disputed facts, competing arguments and limitations",
+          "A citation without applying facts"
+        ],
+        "answer": 1,
+        "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -384,6 +438,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-4-6",
+        "title": "Former-client conflicts and disqualification",
+        "authority": "ABA Model Rules 1.9 and 1.10; adopted state rules",
+        "scenario": "A lawyer moves to a competitor's law firm and joins a lawsuit involving a transaction previously handled for the former client.",
+        "reading": "Define former-client relationships, substantial relationship between matters, material adversity and use of protected information. Analyze personal disqualification, possible imputation and whether screening or consent is available under the controlling jurisdiction. Distinguish ethics violations from the court's separate discretion over litigation disqualification. Worked method: identify the procedural posture, list the rule elements, write a fact-supported argument for each side, evaluate missing evidence, and explain the possible outcomes without claiming that jurisdictional questions are settled. Confirm the controlling versions of primary authorities before using this work in practice.",
+        "counterarguments": "Former client argues the lawyer learned confidential strategy; new firm maintains the matters differ and a compliant screen protects information.",
+        "assignment": "Draft a 1,000–1,400-word two-sided legal memorandum and a 200-word client advisory. Include verified citations, a fact-to-element matrix, limitations, and a conclusion. Apply a 100-point rubric: issue spotting 20, law 20, factual analysis 30, adverse arguments 15, citations and presentation 15.",
+        "question": "What must a professionally defensible memorandum include?",
+        "options": [
+          "Only the favored client's conclusion",
+          "Verified law, disputed facts, competing arguments and limitations",
+          "A citation without applying facts"
+        ],
+        "answer": 1,
+        "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -482,6 +554,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-5-6",
+        "title": "Payroll tax and worker classification",
+        "authority": "Internal Revenue Code; applicable Treasury and IRS employment tax rules",
+        "scenario": "A delivery company pays drivers as contractors while exercising extensive control over routes, schedules and equipment.",
+        "reading": "Worker status for federal employment tax can depend on the applicable statutory and common-law framework, including behavioral and financial control and the parties' relationship. Labels in agreements do not determine status. Distinguish employment tax issues from wage law tests and independent state frameworks. Explain withholding, reporting, relief provisions and potential exposure without fabricating a tax amount. Worked method: identify the procedural posture, list the rule elements, write a fact-supported argument for each side, evaluate missing evidence, and explain the possible outcomes without claiming that jurisdictional questions are settled. Confirm the controlling versions of primary authorities before using this work in practice.",
+        "counterarguments": "Company emphasizes independent scheduling; drivers point to control, supervision and inability to negotiate rates.",
+        "assignment": "Draft a 1,000–1,400-word two-sided legal memorandum and a 200-word client advisory. Include verified citations, a fact-to-element matrix, limitations, and a conclusion. Apply a 100-point rubric: issue spotting 20, law 20, factual analysis 30, adverse arguments 15, citations and presentation 15.",
+        "question": "What must a professionally defensible memorandum include?",
+        "options": [
+          "Only the favored client's conclusion",
+          "Verified law, disputed facts, competing arguments and limitations",
+          "A citation without applying facts"
+        ],
+        "answer": 1,
+        "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -579,6 +669,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-6-6",
+        "title": "Restitution and unjust enrichment",
+        "authority": "Applicable state restitution law; Restatement (Third) of Restitution and Unjust Enrichment as secondary authority",
+        "scenario": "A contractor improves a property under a contract later held unenforceable, and the owner retains the improvements.",
+        "reading": "Restitution focuses on unjust retention of benefits under governing law, and is distinct from expectation damages. Identify benefit conferred, valuation, defenses, change of position and interplay with failed contracts or statutory restrictions. Recovery is not always the invoice or the claimant's costs. Consider whether an enforceable agreement precludes the proposed unjust enrichment theory. Worked method: identify the procedural posture, list the rule elements, write a fact-supported argument for each side, evaluate missing evidence, and explain the possible outcomes without claiming that jurisdictional questions are settled. Confirm the controlling versions of primary authorities before using this work in practice.",
+        "counterarguments": "Contractor claims market value of improvements; owner argues poor workmanship and that the benefit was not requested.",
+        "assignment": "Draft a 1,000–1,400-word two-sided legal memorandum and a 200-word client advisory. Include verified citations, a fact-to-element matrix, limitations, and a conclusion. Apply a 100-point rubric: issue spotting 20, law 20, factual analysis 30, adverse arguments 15, citations and presentation 15.",
+        "question": "What must a professionally defensible memorandum include?",
+        "options": [
+          "Only the favored client's conclusion",
+          "Verified law, disputed facts, competing arguments and limitations",
+          "A citation without applying facts"
+        ],
+        "answer": 1,
+        "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -675,6 +783,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Integrated examinations require independent reasoning, evidence and legal authority.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-7-6",
+        "title": "Plea negotiations and voluntariness",
+        "authority": "Federal Rules of Criminal Procedure 11 and applicable constitutional cases",
+        "scenario": "A defendant accepts a plea after counsel fails to investigate a surveillance recording and the prosecutor threatens a lawful additional charge.",
+        "reading": "A guilty plea generally requires knowing, voluntary and intelligent decision-making. Examine counsel performance, disclosure, lawful bargaining pressure, Rule 11 safeguards and the applicable prejudice standard for ineffective-assistance claims. A severe charging threat is not automatically unconstitutional, but misrepresentation or unlawful coercion may matter. Distinguish direct appeal and post-conviction routes. Worked method: identify the procedural posture, list the rule elements, write a fact-supported argument for each side, evaluate missing evidence, and explain the possible outcomes without claiming that jurisdictional questions are settled. Confirm the controlling versions of primary authorities before using this work in practice.",
+        "counterarguments": "Defendant argues deficient advice changed the decision; prosecution emphasizes sworn colloquy and strength of admissible evidence.",
+        "assignment": "Draft a 1,000–1,400-word two-sided legal memorandum and a 200-word client advisory. Include verified citations, a fact-to-element matrix, limitations, and a conclusion. Apply a 100-point rubric: issue spotting 20, law 20, factual analysis 30, adverse arguments 15, citations and presentation 15.",
+        "question": "What must a professionally defensible memorandum include?",
+        "options": [
+          "Only the favored client's conclusion",
+          "Verified law, disputed facts, competing arguments and limitations",
+          "A citation without applying facts"
+        ],
+        "answer": 1,
+        "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
