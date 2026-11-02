@@ -223,3 +223,5 @@ console.log('PASS: 21 enhanced early-course lessons retain written legal analysi
 assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(4,7).filter(l=>l.reading.includes('LEGAL REASONING PRACTICUM')&&l.problem.includes('WRITTEN WORK')).length,0),21,'21 mid-course lessons must have reasoning practicums');
 
 assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(7,11).filter(l=>l.reading.includes('ADVANCED DOCTRINAL APPLICATION')&&l.problem.includes('WRITTEN ANALYSIS')).length,0),28,'28 intermediate lessons require written legal analysis');
+
+assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(11,-1).filter(l=>l.reading.includes('DOCTRINE-TO-CASE WORKSHOP')&&l.problem.includes('INDEPENDENT WRITING TASK')).length,0),37,'37 later Level 2 lessons require legal memorandum assignments');
