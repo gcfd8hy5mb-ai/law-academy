@@ -315,3 +315,6 @@ assert.ok(level2Source.includes('b.onclick=()=>showLesson(i,+b.dataset.l2lesson)
 console.log('PASS: All seven course catalogs include supplemental essay, capstone and expected lesson counts.');
 
 assert.ok(level2Source.includes('white-space:pre-line'),'Multi-paragraph readings must remain readable');
+
+assert.ok(level2Source.includes('Capstone · written work needs independent review'),'Capstone labels must not imply automatic essay grading');
+assert.ok(level2Source.includes('Advanced written examination · independent review required'),'Written examination labels must require independent assessment');
