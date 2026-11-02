@@ -33,3 +33,6 @@ assert.ok(ui.includes('id=\"l3worked\" hidden'),'Worked solutions must start hid
 assert.ok(ui.includes('id=\"l3reveal\"'),'Missing explicit reveal control');
 assert.ok(ui.includes('length<100'),'Reveal must require a substantive writing attempt');
 assert.ok(!ui.includes('...(l.worked?'),'Model reasoning must not be rendered in public lesson sections');
+
+for(const id of ['l3feedback','l3feedbackResult','l3copy','l3copyStatus'])assert.ok(ui.includes(id),'Missing Level 3 writing aid '+id);
+assert.ok(ui.includes('not a grade'),'Writing feedback must not imply assessment credit');
