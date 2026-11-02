@@ -98,3 +98,23 @@ test('Final reviewer packet is available only on course finals and requires a dr
  await page.locator('#l3reviewPacket').click();
  await expect(page.locator('#l3reviewPacketStatus')).toContainText('Write your final examination');
 });
+
+test('Final reviewer packet contains the student answer, case facts and 100-point rubric',async({page})=>{
+ await page.goto('/');
+ await page.addInitScript(()=>{
+   window.__copiedPacket='';
+   Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.__copiedPacket=text;}}});
+ });
+ await page.evaluate(()=>renderLevel3());
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="9"]').click();
+ await page.locator('#l3draft').fill('My independently written legal analysis of hearsay and admissibility.');
+ await page.locator('#l3reviewPacket').click();
+ await expect(page.locator('#l3reviewPacketStatus')).toContainText('Reviewer packet copied');
+ const packet=await page.evaluate(()=>window.__copiedPacket);
+ expect(packet).toContain('CASE FACTS:');
+ expect(packet).toContain('AUTHORITIES TO VERIFY:');
+ expect(packet).toContain('My independently written legal analysis');
+ expect(packet).toContain('REVIEWER RUBRIC (100)');
+ expect(packet).toContain('Qualified reviewer must check sources');
+});
