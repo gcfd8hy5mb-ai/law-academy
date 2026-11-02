@@ -231,3 +231,5 @@ assert.equal(level2Courses.filter(c=>c.lessons[1].reading.includes('TEACHING CHA
 assert.equal(level2Courses.filter(c=>c.lessons[2].reading.includes('TOPIC-SPECIFIC WORKED OPINION LAB')&&c.lessons[2].problem.includes('MODEL-ANSWER TASK')).length,7,'Seven second-stage 1L lessons require worked opinion labs');
 
 assert.equal(level2Courses.filter(c=>c.lessons[3].reading.includes('SUBJECT-SPECIFIC DOCTRINAL CHAPTER')&&c.lessons[3].problem.includes('CHAPTER WRITING EXAM')).length,7,'Seven fourth lessons require specific doctrinal chapters');
+
+assert.equal(level2Courses.filter(c=>c.lessons[4].reading.includes('INTEGRATED CASE TEACHING CHAPTER')&&c.lessons[4].problem.includes('human substantive grading')).length,7,'Seven integrated cases must include detailed teaching and substantive written analysis');
