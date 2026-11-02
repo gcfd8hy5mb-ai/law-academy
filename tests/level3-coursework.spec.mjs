@@ -181,3 +181,15 @@ test('Level 3 refuses unknown identifiers in transferred backups',async({page})=
  await page.locator('#l3restore').click();
  await expect(page.locator('#l3restoreStatus')).toContainText('Nothing was changed');
 });
+
+test('Level 3 restore does not change in-memory drafts when browser storage fails',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('#l3restoreInput').fill(JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-1':'Unsaved incoming writing'}}));
+ await page.evaluate(()=>{const set=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k==='law-academy-level3-v1')throw new Error('Quota exceeded');return set.call(this,k,v)}});
+ await page.locator('#l3restore').click();
+ await expect(page.locator('#l3restoreStatus')).toContainText('Nothing was changed');
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await expect(page.locator('#l3draft')).toHaveValue('');
+});
