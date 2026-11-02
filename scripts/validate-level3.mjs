@@ -44,6 +44,6 @@ assert.ok(ui.includes('70 authored lessons'),'Stale Level 3 home lesson count');
 assert.ok(app.includes('70 lessons and capstone available'),'Academy catalog must reflect published Level 3 draft coursework');
 assert.ok(app.includes('Open to study the authored coursework'),'Catalog should not call the Level 3 syllabus unimplemented');
 
-console.log('Level 3 authored lesson count: '+all.length+'; shortest doctrinal reading: '+Math.min(...all.map(l=>l.reading.trim().split(/\\s+/).length))+' words. Content review remains separate from structural validation.');
+console.log('Level 3 authored lesson count: '+all.length+'; shortest doctrinal reading: '+Math.min(...all.map(l=>l.reading.trim().split(/\s+/).length))+' words. Content review remains separate from structural validation.');
 
 for(const c of courses){const final=c.lessons[9];assert.ok(final.scenario.startsWith('FICTIONAL FINAL CASE FILE:'),'Final needs its own fact pattern '+c.id);assert.ok(final.scenario.length>350,'Final case file too shallow '+c.id);assert.ok(!final.scenario.startsWith('Integrated final: a multi-party dispute combines'),'Final cannot be a topic list '+c.id)}
