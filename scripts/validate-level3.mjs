@@ -11,7 +11,7 @@ assert.equal(all.length,70);
 assert.equal(new Set(all.map(x=>x.id)).size,70);
 for(const course of courses){assert.equal(course.lessons.length,10,'Expected ten authored lessons in '+course.id);for(const lesson of course.lessons){
  assert.ok(lesson.title&&lesson.authority&&lesson.scenario&&lesson.reading&&lesson.counterarguments&&lesson.assignment);
- assert.ok(lesson.reading.split(/\s+/).length>=110,'Instruction too brief '+lesson.id);
+ assert.ok(lesson.reading.trim().split(/\s+/).length>=110,'Instruction too brief '+lesson.id);
  assert.equal(lesson.options.length,3);
  assert.ok(Number.isInteger(lesson.answer)&&lesson.answer>=0&&lesson.answer<3);
  assert.ok(lesson.status.includes('review'));
@@ -43,3 +43,5 @@ for(const token of ['l3capstone','showCapstone','data-capdraft','l3capCopy','L3-
 assert.ok(ui.includes('70 authored lessons'),'Stale Level 3 home lesson count');
 assert.ok(app.includes('70 lessons and capstone available'),'Academy catalog must reflect published Level 3 draft coursework');
 assert.ok(app.includes('Open to study the authored coursework'),'Catalog should not call the Level 3 syllabus unimplemented');
+
+console.log('Level 3 authored lesson count: '+all.length+'; shortest doctrinal reading: '+Math.min(...all.map(l=>l.reading.trim().split(/\\s+/).length))+' words. Content review remains separate from structural validation.');
