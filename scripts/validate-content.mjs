@@ -286,3 +286,10 @@ for(const course of level2Courses){
 assert.equal(totalLevel2Lessons,128,'Unexpected total Level 2 lessons');
 console.log('PASS: 128 unique Level 2 lessons, valid answer indices, required writing prompts and source-review notices.');
 console.log('ACADEMIC REVIEW OUTSTANDING: Script checks structural completeness, not citation currency, substantive legal accuracy or grading of essays.');
+
+// Guard primary-source corrections against accidental regression.
+for(const [id,phrase] of [['L2-1-10','PRECISION CHECK L2-1-10'],['L2-5-19','PRECISION CHECK L2-5-19']]){
+ const lesson=level2Courses.flatMap(c=>c.lessons).find(l=>l.id===id);
+ assert.ok(lesson&&lesson.reading.includes(phrase),'Missing source-grounded correction: '+id);
+}
+console.log('PASS: UCC assurance and equal-protection doctrinal clarifications are present.');
