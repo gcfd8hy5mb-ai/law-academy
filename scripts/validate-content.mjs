@@ -313,3 +313,5 @@ for(const [i,course] of level2Courses.entries()){
 assert.ok(level2Source.includes('courses.map((c,i)')&&level2Source.includes('c.lessons.length'),'Course navigation must derive lesson counts from current curriculum');
 assert.ok(level2Source.includes('b.onclick=()=>showLesson(i,+b.dataset.l2lesson)'),'Lesson list must open the selected lesson');
 console.log('PASS: All seven course catalogs include supplemental essay, capstone and expected lesson counts.');
+
+assert.ok(level2Source.includes('white-space:pre-line'),'Multi-paragraph readings must remain readable');
