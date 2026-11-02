@@ -135,3 +135,21 @@ test('Reviewer packet remains copyable when clipboard permission is unavailable'
  await expect(page.locator('#l3reviewPacketFallback')).toContainText('REVIEWER RUBRIC (100)');
  await expect(page.locator('#l3reviewPacketFallback')).toContainText('Analysis with factual application');
 });
+
+test('Level 3 exports all saved lesson and capstone writing for device backup',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await page.locator('#l3draft').fill('My evidence lesson notes');
+ await page.locator('#l3back').click();
+ await page.locator('#l3back').click();
+ await page.locator('#l3capstone').click();
+ await page.locator('#l3cap0').fill('My capstone evidence section');
+ await page.locator('#l3capBack').click();
+ await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('blocked')}}})});
+ await page.locator('#l3export').click();
+ await expect(page.locator('#l3exportFallback')).toBeVisible();
+ await expect(page.locator('#l3exportFallback')).toHaveValue(/My evidence lesson notes/);
+ await expect(page.locator('#l3exportFallback')).toHaveValue(/My capstone evidence section/);
+});
