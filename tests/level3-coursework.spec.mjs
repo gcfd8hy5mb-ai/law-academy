@@ -46,3 +46,15 @@ test('Level 3 counts actual words and unlocks model reasoning after 100 words',a
  await expect(page.locator('#l3worked')).toBeVisible();
  await expect(page.locator('#l3revealStatus')).toContainText('not an independent grade');
 });
+
+test('Level 3 cannot reveal worked reasoning with 99 actual words',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel3());
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="4"]').click();
+ const answer=Array.from({length:99},(_,i)=>'word'+i).join(' ')+'   ';
+ await page.locator('#l3draft').fill(answer);
+ await page.locator('#l3reveal').click();
+ await expect(page.locator('#l3worked')).toBeHidden();
+ await expect(page.locator('#l3revealStatus')).toContainText('at least 100 words');
+});
