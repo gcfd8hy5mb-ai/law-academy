@@ -205,3 +205,15 @@ test('Backup restoration preserves writing saved by another tab after this view 
  expect(saved['L3-1-1'].draft).toBe('Fresh writing from another tab');
  expect(saved['L3-CAP-0'].draft).toBe('Incoming capstone analysis');
 });
+
+test('Saving one lesson preserves a different lesson updated in another tab',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-2-1':{draft:'Another tab already saved this'}})));
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await page.locator('#l3draft').fill('My current lesson answer');
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(saved['L3-2-1'].draft).toBe('Another tab already saved this');
+ expect(saved['L3-1-1'].draft).toBe('My current lesson answer');
+});
