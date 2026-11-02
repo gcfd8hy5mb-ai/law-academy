@@ -227,3 +227,5 @@ assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(7,11).filter(l=>l.rea
 assert.equal(level2Courses.reduce((n,c)=>n+c.lessons.slice(11,-1).filter(l=>l.reading.includes('DOCTRINE-TO-CASE WORKSHOP')&&l.problem.includes('INDEPENDENT WRITING TASK')).length,0),37,'37 later Level 2 lessons require legal memorandum assignments');
 
 assert.equal(level2Courses.filter(c=>c.lessons[1].reading.includes('TEACHING CHAPTER')&&c.lessons[1].problem.includes('CHAPTER EXAM')).length,7,'Require all seven doctrine-specific teaching chapters');
+
+assert.equal(level2Courses.filter(c=>c.lessons[2].reading.includes('TOPIC-SPECIFIC WORKED OPINION LAB')&&c.lessons[2].problem.includes('MODEL-ANSWER TASK')).length,7,'Seven second-stage 1L lessons require worked opinion labs');
