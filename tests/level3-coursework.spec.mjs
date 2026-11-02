@@ -101,11 +101,11 @@ test('Final reviewer packet is available only on course finals and requires a dr
 
 test('Final reviewer packet contains the student answer, case facts and 100-point rubric',async({page})=>{
  await page.goto('/');
- await page.addInitScript(()=>{
+ await page.evaluate(()=>{
    window.__copiedPacket='';
    Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.__copiedPacket=text;}}});
+   renderLevel3();
  });
- await page.evaluate(()=>renderLevel3());
  await page.locator('[data-l3course="0"]').click();
  await page.locator('[data-l3lesson="9"]').click();
  await page.locator('#l3draft').fill('My independently written legal analysis of hearsay and admissibility.');
