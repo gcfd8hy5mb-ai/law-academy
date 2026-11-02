@@ -326,3 +326,7 @@ assert.ok(level2Source.includes('l2saveStatus'),'Missing Level 2 draft persisten
 assert.ok(level2Source.includes('Draft could not be saved on this device'),'Students must be warned of failed local draft storage');
 
 assert.ok(level2Source.includes('Previously saved draft loaded from this device.'),'Returning students need visible draft restoration confirmation');
+
+assert.ok(level2Source.includes('id="l2copyDraft"'),'Written drafts must offer a portable copy control');
+assert.ok(level2Source.includes('Draft copied to clipboard.'),'Draft copy success feedback missing');
+assert.ok(level2Source.includes('Automatic copy unavailable.'),'Draft copy fallback missing');
