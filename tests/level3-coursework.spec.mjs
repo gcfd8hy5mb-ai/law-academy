@@ -68,3 +68,5 @@ test('Integrated capstone warns rather than copying empty submissions',async({pa
 });
 
 test('Capstone displays all seven subject-specific essay prompts',async({page})=>{await page.goto('/');await page.evaluate(()=>renderLevel3());await page.locator('#l3capstone').click();await expect(page.getByText('Assess authentication, hearsay and expert reliability.')).toBeVisible();await expect(page.getByText('Assess searches, interrogation and suppression.')).toBeVisible();await expect(page.locator('[data-capdraft]')).toHaveCount(7);});
+
+test('Course finals are explicitly labeled as requiring qualified written review',async({page})=>{await page.goto('/');await page.evaluate(()=>renderLevel3());for(let i=0;i<7;i++){await page.locator('[data-l3course="'+i+'"]').click();await expect(page.locator('[data-l3lesson="9"]')).toContainText('Course final · written work requires qualified review');await page.locator('#l3back').click();}});
