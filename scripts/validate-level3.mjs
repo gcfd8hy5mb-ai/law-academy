@@ -17,3 +17,12 @@ for(const course of courses)for(const lesson of course.lessons){
  assert.ok(lesson.status.includes('review'));
 }
 console.log('PASS: Seven Level 3 course foundations and draft review warnings. This does not establish legal currency or academic approval.');
+
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
+const ui=readFileSync(new URL('../level3-ui.js',import.meta.url),'utf8');
+new Script(ui,{filename:'level3-ui.js'});
+assert.ok(html.includes('src="./level3.js"')&&html.includes('src="./level3-ui.js"'),'Missing Level 3 page assets');
+assert.ok(app.includes('typeof renderLevel3==="function"'),'Level 3 route is not wired');
+for(const token of ['data-l3course','data-l3lesson','l3draft','l3check','law-academy-level3-v1'])assert.ok(ui.includes(token),'Missing Level 3 teaching feature '+token);
+console.log('PASS: Level 3 scripts, course navigation, drafts and knowledge-check controls are configured.');
