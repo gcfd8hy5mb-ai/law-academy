@@ -321,3 +321,6 @@ assert.ok(level2Source.includes('Advanced written examination · independent rev
 
 assert.ok(level2Source.includes('Written examination notice:'),'Missing explicit advanced essay review notice');
 assert.ok(level2Source.includes('no essay grade or academic certification is awarded here'),'Written exam must not imply automatic academic sign-off');
+
+assert.ok(level2Source.includes('l2saveStatus'),'Missing Level 2 draft persistence status');
+assert.ok(level2Source.includes('Draft could not be saved on this device'),'Students must be warned of failed local draft storage');
