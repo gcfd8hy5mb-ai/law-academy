@@ -47,3 +47,11 @@ assert.ok(app.includes('Open to study the authored coursework'),'Catalog should 
 console.log('Level 3 authored lesson count: '+all.length+'; shortest doctrinal reading: '+Math.min(...all.map(l=>l.reading.trim().split(/\s+/).length))+' words. Content review remains separate from structural validation.');
 
 for(const c of courses){const final=c.lessons[9];assert.ok(final.scenario.startsWith('FICTIONAL FINAL CASE FILE:'),'Final needs its own fact pattern '+c.id);assert.ok(final.scenario.length>350,'Final case file too shallow '+c.id);assert.ok(!final.scenario.startsWith('Integrated final: a multi-party dispute combines'),'Final cannot be a topic list '+c.id)}
+
+for(const token of ['l3reviewPacket','l3reviewPacketStatus','REVIEWER RUBRIC (100)','CASE FACTS:','AUTHORITIES TO VERIFY:','Qualified reviewer must check sources']){
+ assert.ok(ui.includes(token),'Level 3 final reviewer handoff missing '+token);
+}
+for(const token of ['l3capReadiness','Above the 7,000-word target','5,000–7,000 words']){
+ assert.ok(ui.includes(token),'Level 3 capstone readiness missing '+token);
+}
+console.log('PASS: final reviewer packets and capstone readiness controls are present; functionality requires browser-test confirmation.');
