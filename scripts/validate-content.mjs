@@ -176,7 +176,7 @@ assert.ok(level2Source.includes('b.onclick=()=>showLesson(i,+b.dataset.l2lesson)
 console.log('PASS: Level 2 lesson navigation click handlers are deferred.');
 
 for(const c of level2Courses)assert.ok(c.lessons.length>=5,'Each 1L subject needs five or more lessons: '+c.title);
-console.log('PASS: Seven 1L subjects have three authored lessons apiece.');
+console.log('PASS: Seven 1L subjects meet the minimum authored-lesson threshold.');
 
 for(const c of level2Courses){const assigned=c.lessons.find(l=>l.id===c.id+'-5');assert.ok(assigned&&assigned.problem.includes('Written assignment:'),'Integrated case writing task missing: '+c.title)}
 console.log('PASS: Seven Level 2 integrated cases include substantive writing tasks.');
@@ -267,3 +267,22 @@ for(const [i,id] of capstoneIds.entries()){
  for(const token of ['1,500–2,000-word','CAPSTONE RUBRIC','human substantive reviewer','four primary authorities'])assert.ok(capstone.problem.includes(token),'Capstone grading/source requirement missing: '+id+' '+token);
 }
 console.log('PASS: All seven first-year capstones contain integrated scenarios, source verification and substantive written-exam rubrics.');
+
+const level2LessonIds=new Set();
+let totalLevel2Lessons=0;
+for(const course of level2Courses){
+ assert.ok(course.lessons.length>=18,'Level 2 lesson-depth floor is 18: '+course.title);
+ for(const lesson of course.lessons){
+  assert.ok(!level2LessonIds.has(lesson.id),'Duplicate Level 2 lesson ID: '+lesson.id);
+  level2LessonIds.add(lesson.id);
+  totalLevel2Lessons++;
+  assert.ok(typeof lesson.reading==='string'&&lesson.reading.trim(),'Missing Level 2 reading '+lesson.id);
+  assert.ok(typeof lesson.problem==='string'&&lesson.problem.trim(),'Missing Level 2 assignment '+lesson.id);
+  assert.ok(Array.isArray(lesson.options)&&lesson.options.length>=3,'Missing multiple-choice options '+lesson.id);
+  assert.ok(Number.isInteger(lesson.answer)&&lesson.answer>=0&&lesson.answer<lesson.options.length,'Invalid answer index '+lesson.id);
+  assert.ok(typeof lesson.why==='string'&&lesson.why.trim(),'Missing feedback '+lesson.id);
+ }
+}
+assert.equal(totalLevel2Lessons,128,'Unexpected total Level 2 lessons');
+console.log('PASS: 128 unique Level 2 lessons, valid answer indices, required writing prompts and source-review notices.');
+console.log('ACADEMIC REVIEW OUTSTANDING: Script checks structural completeness, not citation currency, substantive legal accuracy or grading of essays.');
