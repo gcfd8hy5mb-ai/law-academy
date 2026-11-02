@@ -105,8 +105,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-1-8",
         "title": "UCC warranties and limitations",
-        "reading": "The UCC recognizes express warranties, an implied warranty of merchantability where applicable, and a warranty of fitness for a particular purpose under specified conditions. Disclaimers and remedy limitations face statutory constraints. Evaluate descriptions, merchant status, reliance, notice and the specific state enactment.",
-        "problem": "A restaurant buys a commercial freezer after a seller promises it will hold food at a specified temperature. It repeatedly fails. Identify express and implied warranties, the need for notice, available repair obligations and disputed limitations.",
+        "reading": "The UCC recognizes express warranties, an implied warranty of merchantability where applicable, and a warranty of fitness for a particular purpose under specified conditions. Disclaimers and remedy limitations face statutory constraints. Evaluate descriptions, merchant status, reliance, notice and the specific state enactment.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A restaurant buys a commercial freezer after a seller promises it will hold food at a specified temperature. It repeatedly fails. Identify express and implied warranties, the need for notice, available repair obligations and disputed limitations.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which evidence directly supports an express warranty claim?",
         "options": [
           "A seller's affirmation about a promised product performance",
@@ -119,8 +119,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-1-9",
         "title": "Contract modification and good faith",
-        "reading": "A modification of a contract for goods can be binding without new consideration under UCC § 2-209, but good faith and any applicable signed-writing requirements matter. Common-law modifications may follow different consideration or reliance standards. Analyze whether pressure, threats, waiver, course of performance or changed circumstances alter enforceability.",
-        "problem": "After a supply shortage, a seller demands a price increase under an existing goods contract. The buyer signs while fearing immediate closure. Analyze applicable modification law, good faith, duress and any written no-modification clause.",
+        "reading": "A modification of a contract for goods can be binding without new consideration under UCC § 2-209, but good faith and any applicable signed-writing requirements matter. Common-law modifications may follow different consideration or reliance standards. Analyze whether pressure, threats, waiver, course of performance or changed circumstances alter enforceability.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "After a supply shortage, a seller demands a price increase under an existing goods contract. The buyer signs while fearing immediate closure. Analyze applicable modification law, good faith, duress and any written no-modification clause.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What matters most for a modification under UCC Article 2?",
         "options": [
           "That every change has fresh consideration",
@@ -133,8 +133,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-1-10",
         "title": "Anticipatory repudiation and adequate assurances",
-        "reading": "Under UCC Article 2, a party facing reasonable grounds for insecurity may demand adequate assurances of due performance in writing; a clear repudiation may permit remedies without waiting for the performance date. Distinguish a doubtful statement, a request to renegotiate, actual repudiation, suspension of performance, and retraction under applicable statutory rules.",
-        "problem": "A seller warns that inventory shortages may prevent delivery, then stops answering requests for confirmation. Analyze whether the buyer has reasonable grounds for insecurity, whether a proper assurance request was made, and whether the response amounts to repudiation.",
+        "reading": "Under UCC Article 2, a party facing reasonable grounds for insecurity may demand adequate assurances of due performance in writing; a clear repudiation may permit remedies without waiting for the performance date. Distinguish a doubtful statement, a request to renegotiate, actual repudiation, suspension of performance, and retraction under applicable statutory rules.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A seller warns that inventory shortages may prevent delivery, then stops answering requests for confirmation. Analyze whether the buyer has reasonable grounds for insecurity, whether a proper assurance request was made, and whether the response amounts to repudiation.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which fact best determines the buyer's next lawful step?",
         "options": [
           "Whether reasonable grounds justify a proper request for adequate assurances",
@@ -147,8 +147,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-1-11",
         "title": "Specific performance and equitable remedies",
-        "reading": "Specific performance is an equitable remedy generally available where damages are inadequate, often for unique real property or goods under appropriate statutory conditions. Courts consider certainty, fairness, feasibility of supervision and equitable defenses. An injunction and restitution have different requirements; an ordinary breach does not automatically warrant an order to perform.",
-        "problem": "A gallery contracts to sell an identified original painting then attempts to sell it to another buyer. Compare damages, specific performance, mutual obligations and equitable defenses, and identify necessary facts.",
+        "reading": "Specific performance is an equitable remedy generally available where damages are inadequate, often for unique real property or goods under appropriate statutory conditions. Courts consider certainty, fairness, feasibility of supervision and equitable defenses. An injunction and restitution have different requirements; an ordinary breach does not automatically warrant an order to perform.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A gallery contracts to sell an identified original painting then attempts to sell it to another buyer. Compare damages, specific performance, mutual obligations and equitable defenses, and identify necessary facts.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which consideration especially supports specific performance?",
         "options": [
           "That all contracts require personal service",
@@ -349,8 +349,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-2-8",
         "title": "Intentional infliction of emotional distress",
-        "reading": "Intentional infliction of emotional distress ordinarily requires extreme and outrageous conduct and severe emotional distress, with intent or recklessness depending on jurisdiction. Mere insults or ordinary workplace conflict usually do not suffice. The tort must be distinguished from negligence and statutory harassment claims.",
-        "problem": "An employee alleges months of humiliating threats by a supervisor. Evaluate severity, proof, intent or recklessness, other claims and jurisdiction-specific limitations.",
+        "reading": "Intentional infliction of emotional distress ordinarily requires extreme and outrageous conduct and severe emotional distress, with intent or recklessness depending on jurisdiction. Mere insults or ordinary workplace conflict usually do not suffice. The tort must be distinguished from negligence and statutory harassment claims.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "An employee alleges months of humiliating threats by a supervisor. Evaluate severity, proof, intent or recklessness, other claims and jurisdiction-specific limitations.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What must be assessed beyond ordinary offensiveness?",
         "options": [
           "Whether the remarks were online",
@@ -363,8 +363,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-2-9",
         "title": "Vicarious liability and scope of employment",
-        "reading": "Respondeat superior may make an employer liable for torts committed by an employee within the scope of employment, depending on local law. Distinguish employees from independent contractors and exceptions; intentional torts may or may not fall within scope. Direct negligent hiring or supervision remains analytically distinct.",
-        "problem": "A delivery employee detours to shop for personal items and then causes a crash. Identify employment relationship, business purpose, scope factors, frolic versus detour, and potential independent employer fault.",
+        "reading": "Respondeat superior may make an employer liable for torts committed by an employee within the scope of employment, depending on local law. Distinguish employees from independent contractors and exceptions; intentional torts may or may not fall within scope. Direct negligent hiring or supervision remains analytically distinct.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A delivery employee detours to shop for personal items and then causes a crash. Identify employment relationship, business purpose, scope factors, frolic versus detour, and potential independent employer fault.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What is central to respondeat superior?",
         "options": [
           "Whether the employee acted within the legally defined scope of employment",
@@ -377,8 +377,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-2-10",
         "title": "Negligence and emotional injury",
-        "reading": "Negligent infliction of emotional distress is not uniformly defined. Jurisdictions may require physical impact, a zone-of-danger showing, bystander relationship, direct-duty circumstances, or other limits. Distinguish emotional distress damages associated with physical injury from stand-alone NIED claims and avoid treating distress alone as automatically compensable.",
-        "problem": "A passenger witnesses a nearby crash involving a family member but is uninjured. Analyze possible emotional injury theories, proximity, perception, relationship, foreseeability and controlling state rules.",
+        "reading": "Negligent infliction of emotional distress is not uniformly defined. Jurisdictions may require physical impact, a zone-of-danger showing, bystander relationship, direct-duty circumstances, or other limits. Distinguish emotional distress damages associated with physical injury from stand-alone NIED claims and avoid treating distress alone as automatically compensable.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A passenger witnesses a nearby crash involving a family member but is uninjured. Analyze possible emotional injury theories, proximity, perception, relationship, foreseeability and controlling state rules.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What is essential before predicting recovery?",
         "options": [
           "Assuming severe distress always establishes negligence",
@@ -391,8 +391,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-2-11",
         "title": "Conversion and trespass to chattels",
-        "reading": "Conversion is a serious interference with another's possessory rights in personal property, often supporting recovery of the item's value. Trespass to chattels may address lesser interference or actual dispossession, impairment or loss of use depending on jurisdiction. Intent generally concerns doing the act of dominion, not necessarily knowing ownership is wrongful.",
-        "problem": "A repair shop mistakenly sells a customer's stored instrument, while another worker briefly borrows the customer's tool without damage. Evaluate interference severity, ownership, defenses and remedies.",
+        "reading": "Conversion is a serious interference with another's possessory rights in personal property, often supporting recovery of the item's value. Trespass to chattels may address lesser interference or actual dispossession, impairment or loss of use depending on jurisdiction. Intent generally concerns doing the act of dominion, not necessarily knowing ownership is wrongful.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A repair shop mistakenly sells a customer's stored instrument, while another worker briefly borrows the customer's tool without damage. Evaluate interference severity, ownership, defenses and remedies.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What distinguishes conversion from lesser interference?",
         "options": [
           "Serious interference with dominion over the personal property",
@@ -593,8 +593,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-3-8",
         "title": "Motions to dismiss and pleading plausibility",
-        "reading": "Federal Rule 12(b)(6) examines legal sufficiency of a complaint. Under Twombly and Iqbal, well-pleaded facts must plausibly support a claim; mere conclusory statements do not receive the same presumption. Distinguish legal sufficiency from proving a case at trial and examine any opportunity to amend.",
-        "problem": "A complaint states only that a company 'violated all laws' without identifying the transaction or actionable acts. Apply Rule 8 and Rule 12(b)(6), distinguish factual allegations from labels, and consider leave to amend.",
+        "reading": "Federal Rule 12(b)(6) examines legal sufficiency of a complaint. Under Twombly and Iqbal, well-pleaded facts must plausibly support a claim; mere conclusory statements do not receive the same presumption. Distinguish legal sufficiency from proving a case at trial and examine any opportunity to amend.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A complaint states only that a company 'violated all laws' without identifying the transaction or actionable acts. Apply Rule 8 and Rule 12(b)(6), distinguish factual allegations from labels, and consider leave to amend.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What is the correct role of a 12(b)(6) motion?",
         "options": [
           "Weigh all witness credibility",
@@ -607,8 +607,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-3-9",
         "title": "Summary judgment: evidence and burden",
-        "reading": "Under Federal Rule 56, summary judgment is appropriate where the record shows no genuine dispute of material fact and the movant is entitled to judgment as a matter of law. Courts do not ordinarily weigh competing credible testimony as a trial jury would. Evaluate what facts are material under substantive law and admissible evidentiary support.",
-        "problem": "A discrimination plaintiff offers sworn testimony contradicting the employer's explanation. Examine whether the conflict is genuinely material under the governing legal elements and which evidence can be considered.",
+        "reading": "Under Federal Rule 56, summary judgment is appropriate where the record shows no genuine dispute of material fact and the movant is entitled to judgment as a matter of law. Courts do not ordinarily weigh competing credible testimony as a trial jury would. Evaluate what facts are material under substantive law and admissible evidentiary support.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A discrimination plaintiff offers sworn testimony contradicting the employer's explanation. Examine whether the conflict is genuinely material under the governing legal elements and which evidence can be considered.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What should the court avoid at summary judgment?",
         "options": [
           "Identifying material factual disputes",
@@ -621,8 +621,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-3-10",
         "title": "Federal pleading amendments and relation back",
-        "reading": "Federal Rule 15 generally permits certain amendments and provides relation-back rules for claims or party changes arising from the same conduct, transaction or occurrence. Changing defendants has additional notice and mistake requirements under Rule 15(c). Statutes of limitations and service timing can determine whether amendments succeed.",
-        "problem": "A plaintiff sues the wrong corporate entity and discovers the mistake after the limitations deadline. Analyze original allegations, timely notice, knowledge of mistake, prejudice and the Rule 4(m) period.",
+        "reading": "Federal Rule 15 generally permits certain amendments and provides relation-back rules for claims or party changes arising from the same conduct, transaction or occurrence. Changing defendants has additional notice and mistake requirements under Rule 15(c). Statutes of limitations and service timing can determine whether amendments succeed.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A plaintiff sues the wrong corporate entity and discovers the mistake after the limitations deadline. Analyze original allegations, timely notice, knowledge of mistake, prejudice and the Rule 4(m) period.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which question is crucial for relation back when changing defendants?",
         "options": [
           "Whether the plaintiff prefers the new defendant",
@@ -635,8 +635,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-3-11",
         "title": "Class certification and common questions",
-        "reading": "Rule 23 class actions require numerosity, commonality, typicality and adequacy under Rule 23(a), plus the relevant Rule 23(b) pathway. Commonality is not established merely by many people alleging different injuries. Evaluate shared answers capable of resolving common contentions and the demands of Rule 23(b)(3) predominance and superiority when seeking damages.",
-        "problem": "Employees at different facilities allege unfair decisions by different supervisors and seek certification of a nationwide damages class. Identify common policy evidence, individual variation and certification requirements.",
+        "reading": "Rule 23 class actions require numerosity, commonality, typicality and adequacy under Rule 23(a), plus the relevant Rule 23(b) pathway. Commonality is not established merely by many people alleging different injuries. Evaluate shared answers capable of resolving common contentions and the demands of Rule 23(b)(3) predominance and superiority when seeking damages.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "Employees at different facilities allege unfair decisions by different supervisors and seek certification of a nationwide damages class. Identify common policy evidence, individual variation and certification requirements.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What is needed beyond numerous plaintiffs?",
         "options": [
           "An automatic certification for national employers",
@@ -837,8 +837,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-4-8",
         "title": "Double jeopardy and successive prosecutions",
-        "reading": "The Fifth Amendment Double Jeopardy Clause protects against multiple prosecutions and punishments for the same offense within its scope. Blockburger compares statutory elements for separate offenses, subject to legislative intent and other doctrine. Separate sovereigns, mistrials and appeals introduce exceptions and nuances.",
-        "problem": "After a jury acquittal, a state prosecutor files a second charge arising from the same episode under another statutory provision. Compare legal elements, sovereign, disposition and any issue-preclusion concerns.",
+        "reading": "The Fifth Amendment Double Jeopardy Clause protects against multiple prosecutions and punishments for the same offense within its scope. Blockburger compares statutory elements for separate offenses, subject to legislative intent and other doctrine. Separate sovereigns, mistrials and appeals introduce exceptions and nuances.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "After a jury acquittal, a state prosecutor files a second charge arising from the same episode under another statutory provision. Compare legal elements, sovereign, disposition and any issue-preclusion concerns.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What comparison is central under Blockburger?",
         "options": [
           "Whether the offenses occurred at night",
@@ -851,8 +851,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-4-9",
         "title": "Due process, counsel, and custodial questioning",
-        "reading": "The Sixth Amendment right to counsel attaches to qualifying criminal prosecutions at legally defined stages, while Fifth Amendment Miranda protections concern custodial interrogation. Distinguish the constitutional source, timing, waiver and available remedies rather than treating every encounter with police as invoking the same right.",
-        "problem": "A person is questioned at a station before formal charges, later indicted, and interrogated again. Analyze custody, interrogation, warnings, attachment of Sixth Amendment rights and possible suppression.",
+        "reading": "The Sixth Amendment right to counsel attaches to qualifying criminal prosecutions at legally defined stages, while Fifth Amendment Miranda protections concern custodial interrogation. Distinguish the constitutional source, timing, waiver and available remedies rather than treating every encounter with police as invoking the same right.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A person is questioned at a station before formal charges, later indicted, and interrogated again. Analyze custody, interrogation, warnings, attachment of Sixth Amendment rights and possible suppression.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which analysis is most accurate?",
         "options": [
           "Counsel rights arise only upon conviction",
@@ -865,8 +865,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-4-10",
         "title": "Conspiracy and criminal agreement",
-        "reading": "Conspiracy ordinarily requires an unlawful agreement plus a culpable mental state, and some jurisdictions require an overt act. Under federal law, the precise conspiracy statute determines elements. Distinguish evidence of agreement from parallel conduct, mere knowledge, withdrawal and liability for acts of coconspirators.",
-        "problem": "Two individuals discuss transporting contraband; one buys packing supplies, while the other claims they never agreed to proceed. Identify an agreement, intent, any overt act, and evidence supporting contrary inferences.",
+        "reading": "Conspiracy ordinarily requires an unlawful agreement plus a culpable mental state, and some jurisdictions require an overt act. Under federal law, the precise conspiracy statute determines elements. Distinguish evidence of agreement from parallel conduct, mere knowledge, withdrawal and liability for acts of coconspirators.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "Two individuals discuss transporting contraband; one buys packing supplies, while the other claims they never agreed to proceed. Identify an agreement, intent, any overt act, and evidence supporting contrary inferences.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What should be identified before classifying conspiracy?",
         "options": [
           "The governing statute's agreement and intent elements",
@@ -879,8 +879,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-4-11",
         "title": "Burden of proof and reasonable doubt",
-        "reading": "In a criminal prosecution, the state must prove every element beyond a reasonable doubt. Jury instructions must avoid improperly shifting the burden to the defendant. Presumptions, affirmative defenses and evidentiary sufficiency involve distinct rules and can vary by jurisdiction.",
-        "problem": "A jury instruction tells jurors to presume intent from the defendant's act unless the defendant proves innocence. Analyze the constitutional concern and a proper elements-based instruction.",
+        "reading": "In a criminal prosecution, the state must prove every element beyond a reasonable doubt. Jury instructions must avoid improperly shifting the burden to the defendant. Presumptions, affirmative defenses and evidentiary sufficiency involve distinct rules and can vary by jurisdiction.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A jury instruction tells jurors to presume intent from the defendant's act unless the defendant proves innocence. Analyze the constitutional concern and a proper elements-based instruction.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which rule governs the prosecution's case?",
         "options": [
           "Proof of every offense element beyond a reasonable doubt",
@@ -1081,8 +1081,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-5-8",
         "title": "Equal protection: classifications and intent",
-        "reading": "Equal protection analysis requires identifying a governmental classification, whether a protected class or fundamental right is implicated, and the applicable level of scrutiny. Facially neutral laws with unequal impacts ordinarily require additional proof to establish discriminatory purpose under constitutional doctrine; statutory protections can differ.",
-        "problem": "A neutral municipal policy disproportionately burdens one group. Investigate decision history, comparators, stated and actual purposes, available statutory claims and the proper constitutional test.",
+        "reading": "Equal protection analysis requires identifying a governmental classification, whether a protected class or fundamental right is implicated, and the applicable level of scrutiny. Facially neutral laws with unequal impacts ordinarily require additional proof to establish discriminatory purpose under constitutional doctrine; statutory protections can differ.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A neutral municipal policy disproportionately burdens one group. Investigate decision history, comparators, stated and actual purposes, available statutory claims and the proper constitutional test.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which claim needs careful proof beyond disparate impact alone?",
         "options": [
           "A constitutional discriminatory-purpose theory under a neutral rule",
@@ -1095,8 +1095,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-5-9",
         "title": "Commerce Clause and limits of federal authority",
-        "reading": "Congress has enumerated powers, including regulation of interstate commerce. United States v. Lopez identified constitutional limits on regulating noneconomic conduct in the Gun-Free School Zones Act as enacted. Later commerce decisions refine the analysis; students must distinguish statutory text, regulated activity and possible jurisdictional connections.",
-        "problem": "Congress criminalizes possession of a particular object near schools without any interstate-commerce requirement. Analyze whether the federal law fits the commerce power and what drafting changes could matter.",
+        "reading": "Congress has enumerated powers, including regulation of interstate commerce. United States v. Lopez identified constitutional limits on regulating noneconomic conduct in the Gun-Free School Zones Act as enacted. Later commerce decisions refine the analysis; students must distinguish statutory text, regulated activity and possible jurisdictional connections.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "Congress criminalizes possession of a particular object near schools without any interstate-commerce requirement. Analyze whether the federal law fits the commerce power and what drafting changes could matter.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which fact most directly tests the relevant authority?",
         "options": [
           "Whether the regulated activity has a sufficient interstate-commerce relationship",
@@ -1109,8 +1109,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-5-10",
         "title": "State action and constitutional claims",
-        "reading": "Most constitutional rights constrain government rather than private parties. Identify whether conduct can be fairly attributed to the state under recognized public-function, coercion, joint-action or other doctrines. Mere regulation or government funding generally does not automatically convert a private actor into the state.",
-        "problem": "A private venue receiving a public grant restricts a speaker. Determine who made the decision, public involvement, delegated functions, contractual obligations and potential statutory protections.",
+        "reading": "Most constitutional rights constrain government rather than private parties. Identify whether conduct can be fairly attributed to the state under recognized public-function, coercion, joint-action or other doctrines. Mere regulation or government funding generally does not automatically convert a private actor into the state.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A private venue receiving a public grant restricts a speaker. Determine who made the decision, public involvement, delegated functions, contractual obligations and potential statutory protections.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What must be shown for an ordinary First Amendment claim against a private venue?",
         "options": [
           "Conduct attributable to government under applicable state-action doctrine",
@@ -1123,8 +1123,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-5-11",
         "title": "Judicial review: standing and justiciability",
-        "reading": "Federal Article III standing ordinarily requires a concrete and particularized injury, traceability and likely redressability. Mootness, ripeness and political-question considerations may create separate limits. Distinguish Article III federal-court restrictions from state-court standing rules and any statutory cause of action.",
-        "problem": "An advocacy group seeks a federal ruling on a policy it dislikes but identifies no affected members or concrete harm. Analyze organizational and associational standing, the type of injury alleged and potential redress.",
+        "reading": "Federal Article III standing ordinarily requires a concrete and particularized injury, traceability and likely redressability. Mootness, ripeness and political-question considerations may create separate limits. Distinguish Article III federal-court restrictions from state-court standing rules and any statutory cause of action.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "An advocacy group seeks a federal ruling on a policy it dislikes but identifies no affected members or concrete harm. Analyze organizational and associational standing, the type of injury alleged and potential redress.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which is a necessary Article III standing consideration?",
         "options": [
           "Whether the group has many followers",
@@ -1339,8 +1339,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-6-8",
         "title": "Concurrent estates and partition",
-        "reading": "Co-owners can hold tenancy in common, joint tenancy, or tenancy by the entirety where recognized. Survivorship depends on the estate and governing state law; partition may be in kind or by sale. Analyze deeds, contributions, possession, ouster, accounting and statutory protections.",
-        "problem": "Two siblings inherit an undivided property interest, and one wants to sell while the other wants to live there. Identify ownership form, partition options, occupancy issues and potential accounting.",
+        "reading": "Co-owners can hold tenancy in common, joint tenancy, or tenancy by the entirety where recognized. Survivorship depends on the estate and governing state law; partition may be in kind or by sale. Analyze deeds, contributions, possession, ouster, accounting and statutory protections.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "Two siblings inherit an undivided property interest, and one wants to sell while the other wants to live there. Identify ownership form, partition options, occupancy issues and potential accounting.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What document is central to identifying co-ownership rights?",
         "options": [
           "The last property listing",
@@ -1353,8 +1353,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-6-9",
         "title": "Adverse possession and limitations",
-        "reading": "Adverse possession can transfer title after actual, open and notorious, exclusive, continuous and hostile possession for the statutory period, although specific tests, tolling rules, permissions and taxes vary by state. Hostility often concerns possession without permission rather than personal animosity.",
-        "problem": "A neighbor openly fences and gardens a strip of land for years, but the titled owner says permission was granted. Identify limitations period, possession evidence, permission and any special statute.",
+        "reading": "Adverse possession can transfer title after actual, open and notorious, exclusive, continuous and hostile possession for the statutory period, although specific tests, tolling rules, permissions and taxes vary by state. Hostility often concerns possession without permission rather than personal animosity.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A neighbor openly fences and gardens a strip of land for years, but the titled owner says permission was granted. Identify limitations period, possession evidence, permission and any special statute.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What dispute is especially important for hostility?",
         "options": [
           "The fence color",
@@ -1367,8 +1367,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-6-10",
         "title": "Landlord-tenant: habitability and eviction process",
-        "reading": "Residential leases are affected by mandatory state and local habitability, repair, retaliation, and eviction-process statutes. Rights and remedies vary; evaluate notice, defects, rent duties, possession, available relief, and procedural protections. Self-help eviction may be restricted or prohibited by governing law.",
-        "problem": "A tenant reports serious plumbing failure and the landlord changes locks without a court order. Examine governing statutes, lease terms, notice, habitability, repair opportunity and eviction procedure.",
+        "reading": "Residential leases are affected by mandatory state and local habitability, repair, retaliation, and eviction-process statutes. Rights and remedies vary; evaluate notice, defects, rent duties, possession, available relief, and procedural protections. Self-help eviction may be restricted or prohibited by governing law.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A tenant reports serious plumbing failure and the landlord changes locks without a court order. Examine governing statutes, lease terms, notice, habitability, repair opportunity and eviction procedure.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What should be verified before advising either party?",
         "options": [
           "Only whether rent is late",
@@ -1381,8 +1381,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-6-11",
         "title": "Nuisance and competing land uses",
-        "reading": "Private nuisance ordinarily addresses substantial and unreasonable interference with another's use and enjoyment of land. Courts consider duration, severity, locality, utility and available remedies. Distinguish trespass, nuisance and negligence; injunctive relief is not automatic and can depend on equitable balancing.",
-        "problem": "A factory's nighttime noise affects adjacent homes, but it predates recent residential development. Analyze reasonableness, damages, locality, possible zoning effects and feasible injunctions.",
+        "reading": "Private nuisance ordinarily addresses substantial and unreasonable interference with another's use and enjoyment of land. Courts consider duration, severity, locality, utility and available remedies. Distinguish trespass, nuisance and negligence; injunctive relief is not automatic and can depend on equitable balancing.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A factory's nighttime noise affects adjacent homes, but it predates recent residential development. Analyze reasonableness, damages, locality, possible zoning effects and feasible injunctions.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What is central to private nuisance?",
         "options": [
           "Ownership of every neighboring parcel",
@@ -1597,8 +1597,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-7-8",
         "title": "Statutory interpretation and textual analysis",
-        "reading": "Legal interpretation begins with governing text and relevant definitions, structure, effective date and applicable interpretive principles. Legislative history and canons play different roles across jurisdictions. A court's interpretation must be distinguished from the statute itself, and later amendments must be verified.",
-        "problem": "Two statutory sections appear to conflict over eligibility for a state benefit. Draft an analysis using definitions, exceptions, chronology, context and controlling court interpretations, without assuming legislative history overrides unambiguous text.",
+        "reading": "Legal interpretation begins with governing text and relevant definitions, structure, effective date and applicable interpretive principles. Legislative history and canons play different roles across jurisdictions. A court's interpretation must be distinguished from the statute itself, and later amendments must be verified.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "Two statutory sections appear to conflict over eligibility for a state benefit. Draft an analysis using definitions, exceptions, chronology, context and controlling court interpretations, without assuming legislative history overrides unambiguous text.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which research item should be checked first?",
         "options": [
           "A commentary headline",
@@ -1611,8 +1611,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-7-9",
         "title": "Case briefing: distinguishing holdings and dicta",
-        "reading": "A holding is a proposition necessary to the judgment, read in the setting of material facts and procedural posture. Dicta may be persuasive but usually does not carry the same precedential force. A careful brief distinguishes majority, concurrence and dissent, and checks how later courts characterize the decision.",
-        "problem": "Brief a decision containing a broad discussion of constitutional history but deciding a narrow procedural issue. Identify the necessary ruling, factual setting and statements arguably beyond the holding.",
+        "reading": "A holding is a proposition necessary to the judgment, read in the setting of material facts and procedural posture. Dicta may be persuasive but usually does not carry the same precedential force. A careful brief distinguishes majority, concurrence and dissent, and checks how later courts characterize the decision.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "Brief a decision containing a broad discussion of constitutional history but deciding a narrow procedural issue. Identify the necessary ruling, factual setting and statements arguably beyond the holding.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "How should a lawyer treat a broad sentence in a judicial opinion?",
         "options": [
           "Always treat it as a universally controlling rule",
@@ -1625,8 +1625,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-7-10",
         "title": "Researching appellate standards of review",
-        "reading": "On appeal, questions of law are often reviewed de novo, factual findings may be reviewed for clear error, and many discretionary trial rulings under abuse-of-discretion standards. The precise standard depends on court, procedural setting, and issue. A legal memorandum should connect the standard to the argument rather than assume appeals retry facts.",
-        "problem": "A client challenges a trial judge's fact findings and interpretation of a statute. Separate the appellate standards, identify the record and preservation requirements, and draft distinct arguments.",
+        "reading": "On appeal, questions of law are often reviewed de novo, factual findings may be reviewed for clear error, and many discretionary trial rulings under abuse-of-discretion standards. The precise standard depends on court, procedural setting, and issue. A legal memorandum should connect the standard to the argument rather than assume appeals retry facts.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A client challenges a trial judge's fact findings and interpretation of a statute. Separate the appellate standards, identify the record and preservation requirements, and draft distinct arguments.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "Which is most accurate?",
         "options": [
           "Different appellate issues may receive different standards of review",
@@ -1639,8 +1639,8 @@ window.LAW_LEVEL2=[
       {
         "id": "L2-7-11",
         "title": "Legal citation, quotations and source verification",
-        "reading": "Reliable legal citations identify court, year, reporter or public source, pincite and later treatment when required. Do not present paraphrases as quotations or citations to unread cases as verified. Citation manuals vary by forum. Use the actual opinion to distinguish holdings, dicta, posture and jurisdiction.",
-        "problem": "A colleague submits a memorandum citing a case quotation found on a blog. Locate the original decision, verify the quotation and pincite, check subsequent treatment, and correct any misleading paraphrase.",
+        "reading": "Reliable legal citations identify court, year, reporter or public source, pincite and later treatment when required. Do not present paraphrases as quotations or citations to unread cases as verified. Citation manuals vary by forum. Use the actual opinion to distinguish holdings, dicta, posture and jurisdiction.\n\nADVANCED DOCTRINAL APPLICATION — Isolate each legal element, connect it to facts supporting each side, and distinguish threshold procedural objections from the underlying merits. Identify the applicable jurisdiction and any variations in the governing doctrine. Do not rely on case names without reading the relevant holding, procedural posture, and subsequent treatment.",
+        "problem": "A colleague submits a memorandum citing a case quotation found on a blog. Locate the original decision, verify the quotation and pincite, check subsequent treatment, and correct any misleading paraphrase.\n\nWRITTEN ANALYSIS: Prepare a 450–650 word IRAC or CREAC memorandum with a counterargument, an alternative outcome if key facts change, and a list of two primary authorities to verify. This draft requires substantive review; the multiple-choice check does not grade it.",
         "question": "What must happen before relying on a judicial quotation?",
         "options": [
           "Confirm the actual source text and context",
