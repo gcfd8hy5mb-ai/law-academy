@@ -32,3 +32,17 @@ test('Level 3 course finals are reachable and model reasoning starts hidden',asy
  await expect(page.locator('#l3revealStatus')).toContainText('at least 100 words');
  await expect(page.locator('#l3worked')).toBeHidden();
 });
+
+test('Level 3 counts actual words and unlocks model reasoning after 100 words',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel3());
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="4"]').click();
+ const words=Array.from({length:100},(_,i)=>'analysis'+i).join(' ');
+ await page.locator('#l3draft').fill(words);
+ await page.locator('#l3feedback').click();
+ await expect(page.locator('#l3feedbackResult')).toContainText('100 words.');
+ await page.locator('#l3reveal').click();
+ await expect(page.locator('#l3worked')).toBeVisible();
+ await expect(page.locator('#l3revealStatus')).toContainText('not an independent grade');
+});
