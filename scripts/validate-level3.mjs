@@ -7,16 +7,16 @@ new Script(source,{filename:'level3.js'});
 const courses=runInNewContext('const window={};'+source+'\nwindow.LAW_LEVEL3');
 assert.equal(courses.length,7);
 const all=courses.flatMap(c=>c.lessons);
-assert.equal(all.length,56);
-assert.equal(new Set(all.map(x=>x.id)).size,56);
-for(const course of courses){assert.equal(course.lessons.length,8,'Expected eight authored lessons in '+course.id);for(const lesson of course.lessons){
+assert.equal(all.length,70);
+assert.equal(new Set(all.map(x=>x.id)).size,70);
+for(const course of courses){assert.equal(course.lessons.length,10,'Expected ten authored lessons in '+course.id);for(const lesson of course.lessons){
  assert.ok(lesson.title&&lesson.authority&&lesson.scenario&&lesson.reading&&lesson.counterarguments&&lesson.assignment);
  assert.ok(lesson.reading.split(/\s+/).length>=110,'Instruction too brief '+lesson.id);
  assert.equal(lesson.options.length,3);
  assert.ok(Number.isInteger(lesson.answer)&&lesson.answer>=0&&lesson.answer<3);
  assert.ok(lesson.status.includes('review'));
 }}
-console.log('PASS: 56 Level 3 authored lessons across seven courses and draft review warnings. This does not establish legal currency or academic approval.');
+console.log('PASS: 70 Level 3 authored lessons across seven courses and draft review warnings. This does not establish legal currency or academic approval.');
 
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
@@ -36,3 +36,5 @@ assert.ok(!ui.includes('...(l.worked?'),'Model reasoning must not be rendered in
 
 for(const id of ['l3feedback','l3feedbackResult','l3copy','l3copyStatus'])assert.ok(ui.includes(id),'Missing Level 3 writing aid '+id);
 assert.ok(ui.includes('not a grade'),'Writing feedback must not imply assessment credit');
+
+for(const c of courses){const final=c.lessons[9];assert.ok(final.title.includes('Final Examination'),'Missing Level 3 course final '+c.id);assert.ok(final.assignment.includes('2,000–2,500'),'Final writing assignment too limited '+c.id);assert.ok(final.reading.includes('qualified human reviewer'),'Written mastery must require human review '+c.id)}
