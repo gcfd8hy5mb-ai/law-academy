@@ -300,3 +300,16 @@ for(const id of ['L2-2-18','L2-3-18','L2-4-18','L2-6-19','L2-7-18']){
  assert.ok(lesson&&lesson.reading.includes('PRECISION REVIEW '+id),'Missing primary-law refinement '+id);
 }
 console.log('PASS: Five supplemental doctrinal precision notes are present.');
+
+
+const expectedL2Counts=[18,18,18,18,19,19,18];
+for(const [i,course] of level2Courses.entries()){
+ assert.equal(course.lessons.length,expectedL2Counts[i],'Level 2 course lesson count mismatch: '+course.title);
+ const supplemental=course.lessons.at(-1);
+ assert.ok(supplemental.problem.includes('SUBSTANTIVE RUBRIC (100 POINTS)'),'Newest advanced essay not reachable in '+course.title);
+ const capstone=course.lessons.find(l=>l.title.startsWith('Capstone:'));
+ assert.ok(capstone&&capstone.problem.includes('CAPSTONE RUBRIC'),'Course capstone not reachable in '+course.title);
+}
+assert.ok(level2Source.includes('courses.map((c,i)')&&level2Source.includes('c.lessons.length'),'Course navigation must derive lesson counts from current curriculum');
+assert.ok(level2Source.includes('b.onclick=()=>showLesson(i,+b.dataset.l2lesson)'),'Lesson list must open the selected lesson');
+console.log('PASS: All seven course catalogs include supplemental essay, capstone and expected lesson counts.');
