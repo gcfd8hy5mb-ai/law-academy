@@ -58,3 +58,11 @@ test('Level 3 cannot reveal worked reasoning with 99 actual words',async({page})
  await expect(page.locator('#l3worked')).toBeHidden();
  await expect(page.locator('#l3revealStatus')).toContainText('at least 100 words');
 });
+
+test('Integrated capstone warns rather than copying empty submissions',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel3());
+ await page.locator('#l3capstone').click();
+ await page.locator('#l3capCopy').click();
+ await expect(page.locator('#l3capStatus')).toContainText('Write at least one capstone section before copying.');
+});
