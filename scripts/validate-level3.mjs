@@ -41,3 +41,5 @@ for(const c of courses){const final=c.lessons[9];assert.ok(final.title.includes(
 
 for(const token of ['l3capstone','showCapstone','data-capdraft','l3capCopy','L3-CAP-'])assert.ok(ui.includes(token),'Integrated Level 3 capstone UI missing '+token);
 assert.ok(ui.includes('70 authored lessons'),'Stale Level 3 home lesson count');
+assert.ok(app.includes('70 lessons and capstone available'),'Academy catalog must reflect published Level 3 draft coursework');
+assert.ok(app.includes('Open to study the authored coursework'),'Catalog should not call the Level 3 syllabus unimplemented');
