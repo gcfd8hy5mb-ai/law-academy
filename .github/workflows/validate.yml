@@ -41,7 +41,9 @@ jobs:
         with:
           node-version: '22'
       - name: Validate curricula, quiz integrity, and script syntax
-        run: node scripts/validate-content.mjs
+        run: |
+          node scripts/validate-content.mjs
+          node --check level2.js
       - name: Generate 85-lesson legal-source review inventory
         run: node scripts/audit-prelaw-sources.mjs
       - name: Upload source audit inventory
