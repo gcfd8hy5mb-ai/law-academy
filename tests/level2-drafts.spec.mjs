@@ -59,3 +59,10 @@ test('All seven Level 2 catalogs open their authored lessons', async ({ page }) 
     await page.locator('#l2back').click();
   }
 });
+
+test('Level 2 progress labels distinguish quiz checks from written mastery', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => renderLevel2());
+  await expect(page.locator('[data-l2course="0"]')).toContainText('knowledge checks passed');
+  await expect(page.locator('[data-l2course="0"]')).toContainText('written exams reviewed separately');
+});
