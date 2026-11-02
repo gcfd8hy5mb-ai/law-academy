@@ -112,6 +112,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-1-7",
+        "title": "Character evidence and permissible purposes",
+        "authority": "Federal Rules of Evidence 404, 405, 406 and 403",
+        "scenario": "In a civil fraud trial, plaintiff offers defendant's prior unrelated dishonest conduct, and defendant offers evidence of a consistently followed document-approval routine.",
+        "reading": "Distinguish propensity inferences from potentially legitimate non-character uses, subject to specific exceptions and limiting instructions. Analyze whether routine practice qualifies as habit under Rule 406 rather than broad character claims. When a permitted purpose is asserted, require a chain of relevance and consider Rule 403. Civil and criminal cases have different character-evidence routes. Worked analysis sequence: specify jurisdiction and time, identify the contested element and its burden, list facts supporting and undermining each position, then state a conditional conclusion. Explain how a change in one fact would alter the result. Primary law must be independently checked for currency, subsequent treatment and applicability.",
+        "counterarguments": "Plaintiff argues intent and knowledge; defendant argues disguised propensity and inadequate similarity.",
+        "assignment": "Write competing motions in limine and a proposed limiting instruction. Submit a 1,100–1,500-word research memorandum with a fact-to-rule chart, properly checked primary citations, at least two counterarguments and an explicit uncertainty section. Assessment rubric: law 25, application 30, counterarguments 15, authority verification 20, clarity 10.",
+        "question": "What is essential when resolving this fact-intensive legal problem?",
+        "options": [
+          "Assume one nationally uniform answer without researching jurisdiction",
+          "Compare the controlling rule with disputed facts and opposing positions",
+          "Treat a quiz score as approval of the memorandum"
+        ],
+        "answer": 1,
+        "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -226,6 +244,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-2-7",
+        "title": "Partnership fiduciary duty and dissolution",
+        "authority": "Uniform Partnership Act variants and governing state statutes",
+        "scenario": "Three partners disagree after one secretly diverts a longstanding partnership customer to a new venture.",
+        "reading": "Identify formation, partner authority, fiduciary loyalty, disclosure, property rights, accounting and dissolution triggers under the applicable partnership statute and agreement. Distinguish wrongful dissociation from ordinary withdrawal and avoid assuming any partner owns particular partnership assets individually. Track transactions, benefits diverted and possible remedies. Worked analysis sequence: specify jurisdiction and time, identify the contested element and its burden, list facts supporting and undermining each position, then state a conditional conclusion. Explain how a change in one fact would alter the result. Primary law must be independently checked for currency, subsequent treatment and applicability.",
+        "counterarguments": "Departing partner argues customer followed voluntarily; remaining partners cite confidential records and pre-departure solicitation.",
+        "assignment": "Draft an accounting demand and reasoned dissolution advisory. Submit a 1,100–1,500-word research memorandum with a fact-to-rule chart, properly checked primary citations, at least two counterarguments and an explicit uncertainty section. Assessment rubric: law 25, application 30, counterarguments 15, authority verification 20, clarity 10.",
+        "question": "What is essential when resolving this fact-intensive legal problem?",
+        "options": [
+          "Assume one nationally uniform answer without researching jurisdiction",
+          "Compare the controlling rule with disputed facts and opposing positions",
+          "Treat a quiz score as approval of the memorandum"
+        ],
+        "answer": 1,
+        "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -342,6 +378,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-3-7",
+        "title": "Agency investigations and subpoenas",
+        "authority": "APA, enabling statute, Fourth Amendment administrative-search principles",
+        "scenario": "A commission subpoenas broad customer records from a licensed firm before charging any violation.",
+        "reading": "Identify statutory investigative authority and the permissible purpose, scope and burden of an administrative subpoena. Distinguish document production from physical entry, and administrative processes from criminal warrants. Evaluate relevance, compliance costs, privilege claims, record protection and lawful judicial enforcement. The existence of a subpoena does not automatically resolve every privacy objection. Worked analysis sequence: specify jurisdiction and time, identify the contested element and its burden, list facts supporting and undermining each position, then state a conditional conclusion. Explain how a change in one fact would alter the result. Primary law must be independently checked for currency, subsequent treatment and applicability.",
+        "counterarguments": "Agency argues records establish compliance patterns; firm challenges excessive breadth and seeks narrowing.",
+        "assignment": "Prepare a motion to modify the subpoena and a proportionality-based response. Submit a 1,100–1,500-word research memorandum with a fact-to-rule chart, properly checked primary citations, at least two counterarguments and an explicit uncertainty section. Assessment rubric: law 25, application 30, counterarguments 15, authority verification 20, clarity 10.",
+        "question": "What is essential when resolving this fact-intensive legal problem?",
+        "options": [
+          "Assume one nationally uniform answer without researching jurisdiction",
+          "Compare the controlling rule with disputed facts and opposing positions",
+          "Treat a quiz score as approval of the memorandum"
+        ],
+        "answer": 1,
+        "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -456,6 +510,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-4-7",
+        "title": "Organizational clients and internal investigations",
+        "authority": "ABA Model Rules 1.13 and 1.6; relevant state adoption",
+        "scenario": "In-house counsel interviews an employee about suspected bribery without explaining that counsel represents the company.",
+        "reading": "Clarify the identity of the organizational client and the purpose of an internal interview. Explain warnings about counsel's role, confidentiality limits and possible disclosure to corporate decision-makers. Analyze reporting up within the organization, exceptions and conflict risks. Do not promise an employee personal representation or blanket privilege absent applicable legal support. Worked analysis sequence: specify jurisdiction and time, identify the contested element and its burden, list facts supporting and undermining each position, then state a conditional conclusion. Explain how a change in one fact would alter the result. Primary law must be independently checked for currency, subsequent treatment and applicability.",
+        "counterarguments": "Employee believes the lawyer is personal counsel; company asserts interview notes belong to its legal function.",
+        "assignment": "Create an interview protocol and advice memorandum identifying privilege risks. Submit a 1,100–1,500-word research memorandum with a fact-to-rule chart, properly checked primary citations, at least two counterarguments and an explicit uncertainty section. Assessment rubric: law 25, application 30, counterarguments 15, authority verification 20, clarity 10.",
+        "question": "What is essential when resolving this fact-intensive legal problem?",
+        "options": [
+          "Assume one nationally uniform answer without researching jurisdiction",
+          "Compare the controlling rule with disputed facts and opposing positions",
+          "Treat a quiz score as approval of the memorandum"
+        ],
+        "answer": 1,
+        "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
@@ -572,6 +644,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-5-7",
+        "title": "Depreciation and cost recovery",
+        "authority": "Internal Revenue Code §§167, 168 and relevant tax-year rules",
+        "scenario": "A company installs equipment halfway through a tax year and incorrectly expenses the entire cost without documenting any election.",
+        "reading": "Determine capitalized cost, placed-in-service date, asset classification, applicable recovery system, convention and potential expensing elections. Separate financial statement treatment from federal tax recovery and identify tax-year limits. Avoid inserting unverified current-year rates or assuming bonus depreciation applies universally. Worked analysis sequence: specify jurisdiction and time, identify the contested element and its burden, list facts supporting and undermining each position, then state a conditional conclusion. Explain how a change in one fact would alter the result. Primary law must be independently checked for currency, subsequent treatment and applicability.",
+        "counterarguments": "Taxpayer asserts immediate deduction; examiner challenges eligibility and useful classification.",
+        "assignment": "Prepare a documented depreciation worksheet and memo with alternative treatment. Submit a 1,100–1,500-word research memorandum with a fact-to-rule chart, properly checked primary citations, at least two counterarguments and an explicit uncertainty section. Assessment rubric: law 25, application 30, counterarguments 15, authority verification 20, clarity 10.",
+        "question": "What is essential when resolving this fact-intensive legal problem?",
+        "options": [
+          "Assume one nationally uniform answer without researching jurisdiction",
+          "Compare the controlling rule with disputed facts and opposing positions",
+          "Treat a quiz score as approval of the memorandum"
+        ],
+        "answer": 1,
+        "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -687,6 +777,24 @@ window.LAW_LEVEL3=[
         "answer": 1,
         "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-6-7",
+        "title": "Judgment enforcement and creditor remedies",
+        "authority": "Fed. R. Civ. P. 69 and state enforcement law",
+        "scenario": "A plaintiff wins a monetary judgment against a dissolved company whose assets were transferred to an affiliate.",
+        "reading": "Differentiate obtaining judgment from collection. Under Rule 69, federal money judgments generally use state enforcement procedures unless a federal statute applies. Evaluate asset discovery, liens, garnishment, fraudulent-transfer theories and entity separateness, noting varying state standards and exemptions. A related company is not automatically liable for the judgment. Worked analysis sequence: specify jurisdiction and time, identify the contested element and its burden, list facts supporting and undermining each position, then state a conditional conclusion. Explain how a change in one fact would alter the result. Primary law must be independently checked for currency, subsequent treatment and applicability.",
+        "counterarguments": "Creditor identifies suspicious transfers; affiliate alleges fair-value purchases and independent operations.",
+        "assignment": "Draft an enforcement roadmap, asset inquiry plan and two-sided transfer analysis. Submit a 1,100–1,500-word research memorandum with a fact-to-rule chart, properly checked primary citations, at least two counterarguments and an explicit uncertainty section. Assessment rubric: law 25, application 30, counterarguments 15, authority verification 20, clarity 10.",
+        "question": "What is essential when resolving this fact-intensive legal problem?",
+        "options": [
+          "Assume one nationally uniform answer without researching jurisdiction",
+          "Compare the controlling rule with disputed facts and opposing positions",
+          "Treat a quiz score as approval of the memorandum"
+        ],
+        "answer": 1,
+        "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
   },
@@ -801,6 +909,24 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "Legal reasoning requires authority, factual application and acknowledgement of uncertainty.",
+        "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L3-7-7",
+        "title": "Sentencing and constitutional limits",
+        "authority": "Federal sentencing statutes and guidelines; Sixth and Eighth Amendments",
+        "scenario": "Following a guilty verdict, a court relies on contested conduct to impose an unusually severe sentence.",
+        "reading": "Identify the statutory maximum and mandatory minimum, guideline framework and recognized sentencing factors before assessing factfinding. Constitutional rules can restrict which facts raise authorized sentencing ranges, while advisory guideline calculations involve additional complexities. Distinguish direct appeal, preserved objections and collateral review; use controlling law and current guideline editions. Worked analysis sequence: specify jurisdiction and time, identify the contested element and its burden, list facts supporting and undermining each position, then state a conditional conclusion. Explain how a change in one fact would alter the result. Primary law must be independently checked for currency, subsequent treatment and applicability.",
+        "counterarguments": "Prosecution argues credible evidence supports enhancement; defense challenges proof, statutory authority and proportionality.",
+        "assignment": "Write a sentencing objections memorandum and alternative proposed findings. Submit a 1,100–1,500-word research memorandum with a fact-to-rule chart, properly checked primary citations, at least two counterarguments and an explicit uncertainty section. Assessment rubric: law 25, application 30, counterarguments 15, authority verification 20, clarity 10.",
+        "question": "What is essential when resolving this fact-intensive legal problem?",
+        "options": [
+          "Assume one nationally uniform answer without researching jurisdiction",
+          "Compare the controlling rule with disputed facts and opposing positions",
+          "Treat a quiz score as approval of the memorandum"
+        ],
+        "answer": 1,
+        "why": "Sound legal analysis identifies governing authority, competing factual interpretations and limits.",
         "status": "draft—requires primary-source currency review and qualified assessment"
       }
     ]
