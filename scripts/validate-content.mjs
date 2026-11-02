@@ -163,14 +163,14 @@ const level2Source=readFileSync(new URL('../level2.js',import.meta.url),'utf8');
 new Script(level2Source,{filename:'level2.js'});
 const level2Courses=runInNewContext('const window={};'+level2Source.slice(0,level2Source.indexOf('const L2_KEY='))+'\nwindow.LAW_LEVEL2');
 assert.equal(level2Courses.length,7,'Level 2 must launch with seven academic subjects');
-assert.equal(level2Courses.flatMap(c=>c.lessons).length,121,'Level 2 must include 121 authored lessons');
+assert.equal(level2Courses.flatMap(c=>c.lessons).length,128,'Level 2 must include 128 authored lessons');
 for(const l of level2Courses.flatMap(c=>c.lessons)){
  assert.ok(l.reading.length>170&&l.problem.length>100,'Incomplete 1L doctrine or application: '+l.id);
  assert.ok(Number.isInteger(l.answer)&&l.answer>=0&&l.answer<l.options.length,'Invalid 1L answer: '+l.id);
 }
 assert.ok(html.indexOf('src="./level2.js"')<html.indexOf('src="./app.js"'),'Level 2 module must load before app');
 assert.ok(source.includes('renderLevel2();return'),'Level 2 launch routing missing');
-console.log('PASS: Seven 1L courses, fourteen applied lessons, answer indices and launch routing.');
+console.log('PASS: Seven Level 2 courses, 128 authored lessons, answer indices and launch routing.');
 
 assert.ok(level2Source.includes('b.onclick=()=>showLesson(i,+b.dataset.l2lesson)'),'Level 2 lesson buttons must defer rendering until click');
 console.log('PASS: Level 2 lesson navigation click handlers are deferred.');
