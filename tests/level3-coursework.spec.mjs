@@ -217,3 +217,26 @@ test('Saving one lesson preserves a different lesson updated in another tab',asy
  expect(saved['L3-2-1'].draft).toBe('Another tab already saved this');
  expect(saved['L3-1-1'].draft).toBe('My current lesson answer');
 });
+
+test('Stale lesson editing does not replace newer saved writing',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Newer writing from another tab'}})));
+ await page.locator('#l3draft').fill('Stale edit from this tab');
+ await expect(page.locator('#l3status')).toContainText('changed in another tab');
+ await page.locator('#l3back').click();
+ const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(stored['L3-1-1'].draft).toBe('Newer writing from another tab');
+});
+test('Stale capstone editing does not replace newer saved section',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('#l3capstone').click();
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-CAP-0':{draft:'Newer capstone from another tab'}})));
+ await page.locator('#l3cap0').fill('Old section edit');
+ await expect(page.locator('#l3capStatus')).toContainText('changed in another tab');
+ const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(stored['L3-CAP-0'].draft).toBe('Newer capstone from another tab');
+});
