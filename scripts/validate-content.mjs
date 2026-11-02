@@ -241,3 +241,5 @@ assert.equal(level2Courses.filter(c=>c.lessons[6].reading.includes('DOCTRINAL MA
 assert.equal(level2Courses.filter(c=>c.lessons[7].reading.includes('TOPIC-FOCUSED ADVANCED CHAPTER')&&c.lessons[7].problem.includes('SUBSTANTIVE WRITING ASSESSMENT')).length,7,'All seven eighth lessons require advanced chapters and writing assessments');
 
 assert.equal(level2Courses.filter(c=>c.lessons[8].reading.includes('ADVANCED SUBJECT CHAPTER')&&c.lessons[8].problem.includes('COURSE APPLICATION')).length,7,'All seven ninth lessons require focused doctrinal applications');
+
+assert.equal(level2Courses.filter(c=>c.lessons[9].reading.includes('TOPIC-SPECIFIC CASE LAB')&&c.lessons[9].problem.includes('WRITTEN CASE EXAM')).length,7,'Seven tenth lessons require case labs and writing exams');
