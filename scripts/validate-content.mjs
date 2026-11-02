@@ -318,3 +318,6 @@ assert.ok(level2Source.includes('white-space:pre-line'),'Multi-paragraph reading
 
 assert.ok(level2Source.includes('Capstone · written work needs independent review'),'Capstone labels must not imply automatic essay grading');
 assert.ok(level2Source.includes('Advanced written examination · independent review required'),'Written examination labels must require independent assessment');
+
+assert.ok(level2Source.includes('Written examination notice:'),'Missing explicit advanced essay review notice');
+assert.ok(level2Source.includes('no essay grade or academic certification is awarded here'),'Written exam must not imply automatic academic sign-off');
