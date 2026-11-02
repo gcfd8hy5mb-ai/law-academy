@@ -29,3 +29,7 @@ console.log('PASS: Level 3 scripts, course navigation, drafts and knowledge-chec
 
 for(const course of courses){const exam=course.lessons[4];assert.ok(exam.worked?.length>250,'Missing worked reasoning for '+course.id);assert.ok(exam.assignment.includes('1,500'),'Missing long-form examination '+course.id)}
 assert.ok(ui.includes('Worked issue map and model reasoning'),'Worked solutions not wired to UI');
+assert.ok(ui.includes('id=\"l3worked\" hidden'),'Worked solutions must start hidden');
+assert.ok(ui.includes('id=\"l3reveal\"'),'Missing explicit reveal control');
+assert.ok(ui.includes('length<100'),'Reveal must require a substantive writing attempt');
+assert.ok(!ui.includes('...(l.worked?'),'Model reasoning must not be rendered in public lesson sections');
