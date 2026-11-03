@@ -75,3 +75,11 @@ Committed in `e6f24c1` (curriculum) and `697ee60` (structural checks).
 2. Confirm the newly paired decisions are appropriately sourced and describe their scope accurately; source-link availability and case status were not fully verified in the repository-content checks.
 3. Test `node scripts/validate-level3.mjs`, run browser flows and cloud persistence on iPhone and desktop, inspect exam grading against human-scored samples.
 4. Seek independent professional and academic review. No ABA accreditation, academic equivalency, bar eligibility or mastery certification is claimed.
+
+## Legal currency correction and automated checks — 2026-11-03
+
+**L3-5-9 substantial correction, commit `21d2881`:** The 2022 Tax Court holding in *Hallmark Research Collective* must not be represented as the unqualified national rule for IRC § 6213(a). Appeals courts have since treated the petition-filing deadline as nonjurisdictional; several circuits permit potential equitable tolling (*Culp* (3d Cir. 2023), *Oquendo* (6th Cir. 2025), *Buller* (2d Cir. 2025), *Maniktala* (8th Cir. 2026)). *Kyick Holdings* (1st Cir. 2026) holds it nonjurisdictional but not equitably tollable. The lesson now gives comparative holdings, jurisdiction-specific exercises, and a substantive knowledge check. This is a documented targeted source review, **not** a comprehensive citator report or independent sign-off.
+
+Sources for later decisions: https://law.justia.com/cases/federal/appellate-courts/ca6/24-1205/24-1205-2025-08-25.html ; https://law.justia.com/cases/federal/appellate-courts/ca2/24-1557/24-1557-2025-11-26.html ; https://law.justia.com/cases/federal/appellate-courts/ca8/25-1366/25-1366-2026-08-11.html ; https://www.ca1.uscourts.gov/sites/ca1/files/opnfiles/25-1429P-01A.pdf . Check any subsequently controlling opinion and the relevant year before professional use.
+
+**Automated coverage:** `9847494` adds regression assertions for the updated lesson. `d98ce9b` adds a GitHub Actions workflow for Node syntax checks and the repository's existing Level 3 structural tests. Repository data inspection confirmed 7 courses, 70 unique lessons, valid 3-option question indexes and 100-point rubrics on all 7 course finals. A successful GitHub Actions run and end-to-end browser test have **not** been independently observed in this review.
