@@ -58,3 +58,16 @@ for(const course of courses){
  assert.ok(final.assignment.includes('qualified human substantive review'),'Automated grade may not imply mastery '+course.id);
 }
 console.log('PASS: seven distinct Level 4 written finals contain 100-point rubrics and human assessment gates.');
+
+const finalGuideFields=['status','threshold','analysis','counter','variations','source','exemplar'];
+for(const course of courses){
+ const lesson=course.lessons[9],guide=lesson.workedGuide;
+ assert.ok(guide&&typeof guide==='object','Final lacks worked reasoning guide '+course.id);
+ for(const field of finalGuideFields)assert.ok(typeof guide[field]==='string'&&guide[field].trim().length>=45,'Final guide section missing or too brief '+course.id+': '+field);
+ assert.ok(guide.status.includes('not an official key'),'Do not imply model guide is legally approved '+course.id);
+ assert.ok(lesson.assignment.includes('qualified human substantive review'),'Final human assessment boundary missing '+course.id);
+}
+assert.ok(ui.includes("if(lesson.workedGuide)"),'Guide reveal handler missing');
+assert.ok(ui.includes("if(words<100)"),'Worked reasoning must follow a written attempt');
+assert.ok(ui.includes("l4guideBody")&&ui.includes("l4showGuide"),'Guide display UI missing');
+console.log('PASS: seven complete provisional reasoning comparisons with reveal-after-attempt gate. Does not verify current law, sources or browser persistence.');
