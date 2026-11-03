@@ -57,3 +57,12 @@ The existing `level3-ui.js` uses `localStorage` key `law-academy-level3-v1` for 
 - Level 4 uses only the new browser-local key `law-academy-level4-v1`. **It does not read or change existing Pre-Law, Level 2, or Level 3 progress records.** Level 3 and 4 draft writings are not yet confirmed to synchronize via the existing cloud sign-in.
 - `scripts/validate-level4.mjs` checks structure, navigation assets and draft-storage messaging. The existing GitHub Actions workflow now invokes the Level 4 checks alongside Level 3. A successful CI run or interactive Safari/desktop test remains to be confirmed.
 - Lessons remain draft, not independently checked. A knowledge-check answer must not be presented as legal expertise, a law-school credit, or a certified examination result.
+
+## Practical coursework expansion — 2026-11-03
+
+- Level 4 now contains **21 authored draft lessons: three in each of seven course tracks** (initial seven plus fourteen newly added practical lessons). Main curriculum changes: `432790d`, `833e143`.
+- New practice covers summary judgment and depositions, search suppression and plea counsel, M&A indemnity/clearance, appellate briefing and oral argument, regulatory investigations/settlements, mediation/engagement scope, and parallel proceedings/board crisis briefing.
+- Every added lesson includes a distinct fictional legal scenario, legal concepts to research, opposing positions, practical written deliverables, a fact-sensitive knowledge check, and an explicit qualified-review limitation.
+- `scripts/validate-level4.mjs` now requires 21 unique ordered lessons, substantial instructional readings, drafted deliverables, and 21 distinct questions. The main academy catalog displays 21 draft lessons (`33b2c12`).
+- Repository-content checks passed for lesson counts, distinct questions, assignments, quiz structure, route/script presence, and isolated Level 4 draft-storage key. **GitHub Actions execution, legal source-by-source checking, iPhone Safari and desktop acceptance, and cross-device persistence are not confirmed.**
+- Preserve Level 3 and all older local/cloud data; Level 4 remains under construction and should not be described as completed or academically endorsed.
