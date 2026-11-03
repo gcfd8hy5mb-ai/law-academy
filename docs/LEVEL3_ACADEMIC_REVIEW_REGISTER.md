@@ -89,3 +89,14 @@ Sources for later decisions: https://law.justia.com/cases/federal/appellate-cour
 Repository inspection identified that all seven final-examination readings contained only about 123 words of introductory instruction, despite existing long scenario files, written assignments, and 100-point rubrics. Commit `a0d28a5` added tailored legal research and reasoning guidance to all seven finals: Evidence, Business Organizations, Administrative Law, Professional Responsibility, Federal Taxation, Remedies/Litigation, and Criminal Procedure. Their reading sections now contain approximately 253–261 words each. Commit `9a0b5de` added regression assertions requiring final-specific instructions, at least 240 words of reading, and full 100-point rubrics.
 
 **Verification limits:** JSON structure and lesson counts were checked through repository-content inspection, but the GitHub Actions workflow result could not be retrieved through the available connected GitHub interface. The automated Node suite has not been independently executed, and these wording checks do not establish legal accuracy or assessment validity. Human exam grading calibration and case-status verification remain open.
+
+## Case-study assessment correction — 2026-11-03
+
+A focused audit found that **20 of the 21** authority-expanded lessons reused generic multiple-choice questions and answers. Those questions often measured generic advice to verify law rather than comprehension of the particular ruling, statute, doctrine or procedural rule. The remaining lesson, L3-5-9, had already received a circuit-specific § 6213(a) question.
+
+- Commit `08b9c90` replaced the other 20 generic prompts and answer options with distinct, doctrine-specific legal reasoning checks across all seven courses.
+- Commit `c62729c` added regression coverage requiring all 21 case-study questions to be unique and include meaningful options and explanations. Commit `2ebb589` refined one prompt to meet the new specificity threshold.
+- Repository-content inspection: 70 authored lessons remain, and all 21 authority-study prompts are distinct. This is a **content-structure check**, not a proctored assessment or independent academic equivalency review.
+- Attempt to clone the repository and execute `node scripts/validate-level3.mjs` locally failed because the execution environment could not resolve `github.com`. Do not represent the Node suite or GitHub Actions as passed until a successful run log is actually inspected.
+
+**Pending:** run the automated checks, verify case propositions and later treatment with qualified legal research, then calibrate written-exam grading and browser/cloud-saving workflows.
