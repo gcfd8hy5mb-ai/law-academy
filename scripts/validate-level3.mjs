@@ -107,3 +107,13 @@ for(const token of ['Final examination · assessment rubric (100 points)','EXAMI
  assert.ok(ui.includes(token),'Final exam reviewer UI missing '+token);
 }
 console.log('PASS: seven Level 3 exams include scored rubrics, issue-spotting questions and error guides.');
+
+const expandedShortLessonIds=['L3-1-2','L3-1-3','L3-2-3','L3-2-4','L3-3-2','L3-3-4','L3-4-2','L3-4-4','L3-5-2','L3-5-4','L3-6-2','L3-6-4','L3-7-2','L3-7-4'];
+for(const id of expandedShortLessonIds){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson,'Missing expanded Level 3 lesson '+id);
+ assert.ok(lesson.reading.trim().split(/\s+/).length>=300,'Expanded lesson has insufficient instructional depth '+id);
+ assert.ok(lesson.reading.includes('PRACTICE')||lesson.reading.includes('CASE STUDY')||lesson.reading.includes('DAMAGES MODEL')||lesson.reading.includes('DECISION TREE')||lesson.reading.includes('CLASSIFICATION WORKSHEET')||lesson.reading.includes('DIGITAL SEARCH ANALYSIS'),'Missing applied legal exercise '+id);
+ assert.ok(lesson.assignment.includes('fact-to-rule chart'),'Missing source-verified practical deliverables '+id);
+}
+console.log('PASS: fourteen expanded Level 3 lessons include 300+ words and source-verified applied exercises.');
