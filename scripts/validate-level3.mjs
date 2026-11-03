@@ -93,3 +93,17 @@ for(const c of courses){
  assert.ok(final.assignment.length>=1700,'Final assessment too generic '+c.id);
 }
 console.log('PASS: all seven Level 3 finals include substantive issue maps, fact changes and review standards.');
+
+for(const c of courses){
+ const r=c.lessons[9].examRubric;
+ assert.ok(r&&r.points===100,'Final needs a 100-point examiner rubric '+c.id);
+ assert.equal(r.areas.length,5,'Final needs five scored dimensions '+c.id);
+ assert.equal(r.areas.reduce((total,a)=>total+a.points,0),100,'Rubric does not total 100 points '+c.id);
+ assert.ok(r.areas.every(a=>a.label&&a.checks.length>=2),'Final rubric needs specific review criteria '+c.id);
+ assert.ok(r.examinerQuestions.length>=4,'Final needs issue-spotting review questions '+c.id);
+ assert.ok(r.commonErrors.length>=3,'Final needs common-error examples '+c.id);
+}
+for(const token of ['Final examination · assessment rubric (100 points)','EXAMINER ISSUE-SPOTTING QUESTIONS:','COMMON ERRORS TO WATCH:']){
+ assert.ok(ui.includes(token),'Final exam reviewer UI missing '+token);
+}
+console.log('PASS: seven Level 3 exams include scored rubrics, issue-spotting questions and error guides.');
