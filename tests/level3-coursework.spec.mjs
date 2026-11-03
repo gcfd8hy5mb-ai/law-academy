@@ -300,3 +300,21 @@ test('Capstone retries saving after temporary storage failure without false tab 
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
  expect(saved['L3-CAP-0'].draft).toBe('Second attempt after recovery');
 });
+
+test('Seven worked reasoning exercises require an original written attempt before reveal',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel3());
+ for(let i=0;i<7;i++){
+  await page.locator('[data-l3course="'+i+'"]').click();
+  await page.locator('[data-l3lesson="1"]').click();
+  await expect(page.locator('#l3worked')).toBeHidden();
+  await page.locator('#l3reveal').click();
+  await expect(page.locator('#l3revealStatus')).toContainText('at least 100 words');
+  await page.locator('#l3draft').fill(Array.from({length:100},(_,j)=>'reasoning'+j).join(' '));
+  await page.locator('#l3reveal').click();
+  await expect(page.locator('#l3worked')).toBeVisible();
+  await expect(page.locator('#l3worked')).toContainText('WORKED');
+  await page.locator('#l3back').click();
+  await page.locator('#l3back').click();
+ }
+});
