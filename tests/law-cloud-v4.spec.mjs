@@ -20,10 +20,15 @@ test('Firebase v4 bootstraps the cloud-account interface without writing student
  });
  await page.goto('/');
  await expect(page.locator('#law-cloud-launch')).toContainText('Cloud Account');
+ await expect(page.getByPlaceholder('Email')).toBeHidden();
  await page.locator('#law-cloud-launch').click();
  await expect(page.getByText('Law Academy · Firebase cloud saving')).toBeVisible();
  await expect(page.getByPlaceholder('Email')).toBeVisible();
  await expect(page.getByPlaceholder('Password')).toBeVisible();
+ await page.getByRole('button',{name:'Hide'}).click();
+ await expect(page.getByPlaceholder('Email')).toBeHidden();
+ await page.locator('#law-cloud-launch').click();
+ await expect(page.getByPlaceholder('Email')).toBeVisible();
  expect(requests).toEqual(expect.arrayContaining([
    '/firebasejs/11.10.0/firebase-app.js',
    '/firebasejs/11.10.0/firebase-auth.js',
