@@ -46,3 +46,28 @@ test('Firebase v4 load errors stay visible without modifying local progress',asy
  const saved=await page.evaluate(()=>localStorage.getItem('law-academy-level3-v1'));
  expect(JSON.parse(saved)['L3-1-1'].draft).toBe('Keep this writing');
 });
+
+test('Cloud comparison imports missing progress without overwriting existing answers',async({page})=>{
+ const keys=['law-academy-progress-v1','law-academy-exam-results-v1','law-academy-capstone-v1','law-academy-oral-defense-v1','law-academy-final-essays-v1','law-academy-final-review-v1','law-academy-writing-v1','law-academy-rubric-v1','law-academy-sim-v1','law-academy-sim-branches-v1','law-academy-reasoning-v1','law-academy-research-capstone-v1','law-academy-capstone-audit-v1','law-academy-level2-v1','law-academy-level2-exam-v1','law-academy-level2-exam-timing-v1','law-academy-level3-v1'];
+ const cloud=Object.fromEntries(keys.map(k=>[k,null]));
+ cloud['law-academy-level3-v1']=JSON.stringify({'L3-1-1':{draft:'Cloud answer'},'L3-1-2':{draft:'Cloud only answer'}});
+ await page.addInitScript(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Keep my local answer'}})));
+ await page.addInitScript(()=>{window.confirm=()=>true;window.__cloudWrites=0});
+ await page.route('https://www.gstatic.com/firebasejs/11.10.0/**',async route=>{
+  const name=new URL(route.request().url()).pathname.split('/').pop();
+  let module='';
+  if(name==='firebase-app.js')module="export function getApps(){return []} export function initializeApp(){return {name:'law-academy'}}";
+  if(name==='firebase-auth.js')module="const user={uid:'test-user',emailVerified:true};export function getAuth(){return {currentUser:user}} export function onAuthStateChanged(a,cb){cb(user);return ()=>{}} export async function signInWithEmailAndPassword(){} export async function createUserWithEmailAndPassword(){} export async function sendEmailVerification(){} export async function signOut(){}";
+  if(name==='firebase-firestore.js')module="export function getFirestore(){return {}} export function doc(){return {}} export async function getDoc(){return {exists:()=>true,data:()=>({revision:4,raw:"+JSON.stringify(JSON.stringify(cloud))+"})}} export async function runTransaction(){window.__cloudWrites++;throw Error('Cloud writes forbidden')} export function serverTimestamp(){return null}";
+  await route.fulfill({status:200,contentType:'text/javascript',body:module,headers:{'access-control-allow-origin':'*'}});
+ });
+ await page.goto('/');
+ await page.locator('#law-cloud-launch').click();
+ await page.getByRole('button',{name:'Compare cloud and iPhone'}).click();
+ await expect(page.getByRole('button',{name:'Import missing progress from Firebase'})).toBeVisible();
+ await page.getByRole('button',{name:'Import missing progress from Firebase'}).click();
+ const updated=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(updated['L3-1-1'].draft).toBe('Keep my local answer');
+ expect(updated['L3-1-2'].draft).toBe('Cloud only answer');
+ expect(await page.evaluate(()=>window.__cloudWrites)).toBe(0);
+});
