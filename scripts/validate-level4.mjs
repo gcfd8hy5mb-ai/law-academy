@@ -85,3 +85,18 @@ for(const [id,url,required] of reviewedAuthorityChecks){
  assert.ok(lesson.sourceReview.scope.includes('not a complete subsequent-treatment review'),'Review boundary absent '+id);
 }
 console.log('PASS: four targeted authority checkpoints are recorded, without representing comprehensive legal verification.');
+
+const extendedChecks={
+ 'L4-1-1':'frcp/rule_37','L4-1-2':'frcp/rule_56',
+ 'L4-2-8':'476/79','L4-2-9':'title28-section2254',
+ 'L4-4-7':'436/658','L4-5-2':'449/383','L4-7-2':'frcp/rule_37'
+};
+for(const [id,sourceFragment] of Object.entries(extendedChecks)){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson?.reading.includes('TARGETED PRIMARY-AUTHORITY CROSSCHECK'),'Crosscheck missing '+id);
+ assert.ok(lesson.reading.includes(sourceFragment),'Incorrect source link '+id);
+ assert.equal(lesson.sourceReview?.checkedAsOf,'2026-11-03','Missing dated checkpoint '+id);
+ assert.ok(lesson.sourceReview.scope.includes('not complete subsequent-treatment verification'),'Checkpoint scope is overstated '+id);
+}
+assert.equal(all.filter(l=>l.sourceReview).length,11,'Expected exactly eleven documented targeted source checkpoints');
+console.log('PASS: eleven bounded primary-authority checkpoints; not a citator or full legal accuracy certification.');
