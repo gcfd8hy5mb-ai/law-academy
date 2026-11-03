@@ -48,3 +48,12 @@ The existing `level3-ui.js` uses `localStorage` key `law-academy-level3-v1` for 
 - Human case-law currency / exam calibration: **open**.
 - Level 3 cloud synchronization for written work: **open**.
 - Level 4 source-verified lessons: **not yet developed**.
+
+## Implementation checkpoint — November 3, 2026
+
+- Seven initial Level 4 lessons are authored in `level4.js`.
+- `level4-ui.js` adds navigation from seven course tracks to lessons, scenario and instructional reading, long-form writing, local draft persistence, a multiple-choice knowledge check with explanatory feedback, and manual backup.
+- `app.js` now routes the Third-Year Law School catalog option to Level 4 and advertises the seven authored **draft** lessons. `index.html` loads the new data and UI scripts.
+- Level 4 uses only the new browser-local key `law-academy-level4-v1`. **It does not read or change existing Pre-Law, Level 2, or Level 3 progress records.** Level 3 and 4 draft writings are not yet confirmed to synchronize via the existing cloud sign-in.
+- `scripts/validate-level4.mjs` checks structure, navigation assets and draft-storage messaging. The existing GitHub Actions workflow now invokes the Level 4 checks alongside Level 3. A successful CI run or interactive Safari/desktop test remains to be confirmed.
+- Lessons remain draft, not independently checked. A knowledge-check answer must not be presented as legal expertise, a law-school credit, or a certified examination result.
