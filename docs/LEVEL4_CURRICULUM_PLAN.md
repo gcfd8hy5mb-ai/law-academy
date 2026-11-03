@@ -133,3 +133,23 @@ No migration was deployed in this checkpoint. Written Level 4 drafts remain loca
 
 ### Execution boundary
 The checked-out repository is not available for execution from this runtime (GitHub DNS resolution failed). Connected GitHub content checks and JavaScript parser inspection do not constitute a passed Node test suite or a verified GitHub Actions run. External qualified academic evaluation remains outstanding.
+
+## Source verification expansion — November 3, 2026
+
+Added **seven additional bounded source checks** to `level4.js` (`abdf739`) and corresponding regression assertions (`91f4edf`). The documented targeted checkpoints now total **11 of 70 lessons**, but neither this count nor the checks means full lesson-by-lesson legal accuracy has been certified.
+
+| Lesson | Primary authority checkpoint | Limit still outstanding |
+|---|---|---|
+| L4-1-1 | Fed. R. Civ. P. 37(e), ESI loss and distinction between prejudice and intent-based remedies | Application to actual evidence and current circuit treatment |
+| L4-1-2 | Fed. R. Civ. P. 56(a),(c),(d), genuine material dispute and properly supported record | Local practice, later decisions, underlying merits law |
+| L4-2-8 | *Batson v. Kentucky*, 476 U.S. 79 (1986), discriminatory strikes | Later three-stage doctrine, jurisdictional expansions |
+| L4-2-9 | 28 U.S.C. §§2254(b), 2244(d), state habeas exhaustion and statutory timing | Actual limitations computation, tolling and procedural default |
+| L4-4-7 | *Monell*, 436 U.S. 658 (1978), municipal policy/custom rather than automatic vicarious liability | Later policymaker, training and causation precedent |
+| L4-5-2 | *Upjohn*, 449 U.S. 383 (1981), qualified corporate privilege and distinction from underlying facts | Waiver, local privilege standards, representation details |
+| L4-7-2 | Fed. R. Civ. P. 37(e), preservation/loss across parallel disputes | Forum-specific procedural rules and foreign-law application |
+
+Primary sources: https://www.law.cornell.edu/rules/frcp/rule_37 ; https://www.law.cornell.edu/rules/frcp/rule_56 ; https://www.law.cornell.edu/supremecourt/text/476/79 ; https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title28-section2254 ; https://uscode.house.gov/us/usc/119-124/t28/s2244/ ; https://www.law.cornell.edu/supremecourt/text/436/658 ; https://www.law.cornell.edu/supremecourt/text/449/383 .
+
+Repository-content consistency checks passed: 70 unique lesson IDs, 70 distinct questions, eleven source-review markers, stable final rubrics, and no cloud migration performed. The complete Node CI suite, browser acceptance and qualified external academic sign-off are still **not confirmed**.
+
+**Technical blocker persists:** `law-firebase-cloud-v4.js` uses a fixed snapshot list including Level 3 but not Level 4. Do not add the key and automatically sync to legacy records without implementing and testing backward-compatible, nondestructive migration and conflict resolution.
