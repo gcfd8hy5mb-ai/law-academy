@@ -35,7 +35,7 @@ function renderLevel4(){
  const showLesson=(i,j)=>{
   const lesson=courses[i]?.lessons[j];if(!lesson)return showCourse(i);
   const stored=safeRead()[lesson.id]||{};
-  layout('<div class="pagehead"><span class="gold-label">LEVEL 4 · PRACTICE LESSON</span><h1>'+esc(lesson.title)+'</h1><p>'+esc(lesson.authority)+'</p></div><section class="feature-card"><h2>Client or court scenario</h2><p>'+esc(lesson.scenario)+'</p></section><div class="review-item"><h3>Detailed instruction</h3><p style="white-space:pre-wrap">'+esc(lesson.reading)+'</p></div><div class="review-item"><h3>Competing arguments</h3><p>'+esc(lesson.counterarguments)+'</p></div><div class="review-item"><h3>Written practice</h3><p>'+esc(lesson.assignment)+'</p><label for="l4draft">Your legal analysis</label><textarea id="l4draft" class="writing-field" rows="9" placeholder="Analyze the facts, applicable law, competing arguments and likely outcome..."></textarea><p id="l4draftStatus" role="status">Saved locally when storage is available.</p></div><div class="review-item"><h3>Knowledge check</h3><p>'+esc(lesson.question)+'</p><div role="group" aria-label="Knowledge check options">'+lesson.options.map((option,k)=>'<label style="display:block;padding:9px 0"><input type="radio" name="l4choice" value="'+k+'"> '+esc(option)+'</label>').join('')+'</div><button class="gold-button" id="l4check">Check reasoning</button><p id="l4result" role="status"></p></div><button class="button secondary" id="l4back">Back to course</button>');
+  layout('<div class="pagehead"><span class="gold-label">LEVEL 4 · PRACTICE LESSON</span><h1>'+esc(lesson.title)+'</h1><p>'+esc(lesson.authority)+'</p></div><section class="feature-card"><h2>Client or court scenario</h2><p>'+esc(lesson.scenario)+'</p></section><div class="review-item"><h3>Detailed instruction</h3><p style="white-space:pre-wrap">'+esc(lesson.reading)+'</p></div><div class="review-item"><h3>Competing arguments</h3><p>'+esc(lesson.counterarguments)+'</p></div><div class="review-item"><h3>Written practice</h3><p>'+esc(lesson.assignment)+'</p><label for="l4draft">Your legal analysis</label><textarea id="l4draft" class="writing-field" rows="9" placeholder="Analyze the facts, applicable law, competing arguments and likely outcome..."></textarea><p id="l4draftStatus" role="status">Saved locally when storage is available.</p></div><div class="review-item"><h3>Knowledge check</h3><p>'+esc(lesson.question)+'</p><div role="group" aria-label="Knowledge check options">'+lesson.options.map((option,k)=>'<label style="display:block;padding:9px 0"><input type="radio" name="l4choice" value="'+k+'"> '+esc(option)+'</label>').join('')+'</div><button class="gold-button" id="l4check">Check reasoning</button><p id="l4result" role="status"></p></div>'+(lesson.workedGuide?'<div class="review-item"><h3>Worked reasoning comparison</h3><p>Attempt the written analysis before reviewing this provisional guide. It is not a substitute for verified law or a qualified examiner.</p><button class="button secondary" id="l4showGuide">Reveal after 100 written words</button><p id="l4guideStatus" role="status"></p><div id="l4guideBody" hidden><h4>Threshold issue</h4><p>'+esc(lesson.workedGuide.threshold)+'</p><h4>Reasoned analysis</h4><p>'+esc(lesson.workedGuide.analysis)+'</p><h4>Competing argument</h4><p>'+esc(lesson.workedGuide.counter)+'</p><h4>Changed facts</h4><p>'+esc(lesson.workedGuide.variations)+'</p><h4>Authority and currency checklist</h4><p>'+esc(lesson.workedGuide.source)+'</p><h4>Provisional modeled disposition</h4><p>'+esc(lesson.workedGuide.exemplar)+'</p><p><strong>'+esc(lesson.workedGuide.status)+'</strong></p></div></div>':'')+'<button class="button secondary" id="l4back">Back to course</button>');
   const draft=document.querySelector('#l4draft'),status=document.querySelector('#l4draftStatus');
   draft.value=typeof stored.draft==='string'?stored.draft:'';
   let baseline=draft.value;
@@ -46,6 +46,15 @@ function renderLevel4(){
    status.textContent='Storage unavailable. Copy your work before leaving.';return false
   };
   draft.addEventListener('input',persist);
+  if(lesson.workedGuide){
+   document.querySelector('#l4showGuide').onclick=()=>{
+    const words=draft.value.trim().split(/\s+/).filter(Boolean).length;
+    const msg=document.querySelector('#l4guideStatus');
+    if(words<100){msg.textContent='Write at least 100 words of your own analysis first ('+words+'/100).';return}
+    document.querySelector('#l4guideBody').hidden=false;
+    msg.textContent='Comparison available. Verify the cited law independently and revise your answer before requesting human review.';
+   };
+  }
   document.querySelector('#l4back').onclick=()=>{persist();showCourse(i)};
   document.querySelector('#l4check').onclick=()=>{
    const checked=document.querySelector('input[name="l4choice"]:checked');
