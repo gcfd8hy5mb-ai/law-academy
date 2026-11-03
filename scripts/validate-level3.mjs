@@ -143,3 +143,14 @@ for(const id of realCaseLessons){
  assert.ok(lesson.assignment.includes('holding-versus-hypothetical comparison'),'Missing real-case analysis assignment '+id);
 }
 console.log('PASS: seven Level 3 real-authority studies require case comparison and authority review.');
+
+const secondRealCaseIds=['L3-1-6','L3-2-6','L3-3-6','L3-4-6','L3-5-6','L3-6-6','L3-7-6'];
+for(const id of secondRealCaseIds){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson,'Missing second-batch case study '+id);
+ assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY'),'Missing real-authority comparison '+id);
+ assert.ok(lesson.reading.includes('Source to read: https://'),'Missing case or agency source '+id);
+ assert.ok(lesson.reading.includes('later treatment'),'Missing subsequent-authority check '+id);
+ assert.ok(lesson.assignment.includes('case-to-hypothetical comparison'),'Missing case reasoning assignment '+id);
+}
+console.log('PASS: second seven-case Level 3 authority batch requires source comparison and later-treatment review.');
