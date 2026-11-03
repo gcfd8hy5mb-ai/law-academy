@@ -1,3 +1,18 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101b1c"><meta name="description" content="Law Academy: learn American law from the beginning through guided lessons, cases and mastery checks."><title>Law Academy</title><link rel="stylesheet" href="./styles.css"><link rel="manifest" href="./manifest.webmanifest"></head>
-<body><div id="app"></div><script src="./prelaw-applied.js" defer></script><script src="./level2.js" defer></script><script src="./level3.js" defer></script><script src="./level3-ui.js" defer></script><script src="./app.js" defer></script><script src="./firebase-config.js"></script><script type="module" src="./law-firebase-cloud-v1.js?v=1"></script></body></html>
+<body><div id="app"></div><script src="./prelaw-applied.js" defer></script><script src="./level2.js" defer></script><script src="./level3.js" defer></script><script src="./level3-ui.js" defer></script><script src="./app.js" defer></script><script src="./firebase-config.js"></script><script>
+(function(){
+ const boot=document.createElement('button');
+ boot.id='law-cloud-launch';
+ boot.type='button';boot.textContent='☁ Cloud Sign-in';
+ boot.style.cssText='position:fixed;z-index:100001;top:calc(10px + env(safe-area-inset-top));right:10px;padding:10px 12px;border:1px solid #c5ad77;border-radius:24px;background:#162021;color:#f4e4b8;font:700 13px system-ui;box-shadow:0 4px 12px #0007';
+ boot.onclick=()=>{
+   if(typeof window.openLawCloud==='function'){window.openLawCloud();return}
+   const warning=document.getElementById('law-cloud-startup-warning')||document.createElement('aside');
+   warning.id='law-cloud-startup-warning';warning.style.cssText='position:fixed;z-index:100002;top:80px;right:12px;width:min(310px,calc(100vw - 24px));padding:16px;border:1px solid #c5ad77;border-radius:12px;background:#162021;color:white;font:14px system-ui';
+   warning.textContent='Law Academy cloud sign-in has not loaded. Your saved course progress is unchanged. Reload this page in Safari; if this message remains, send a screenshot.';
+   document.body.append(warning);
+ };
+ document.body.append(boot);
+})();
+</script><script type="module" src="./law-firebase-cloud-v2.js?v=2"></script></body></html>
