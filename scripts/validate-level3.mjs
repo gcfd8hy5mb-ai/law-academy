@@ -227,3 +227,20 @@ for(const exam of finals){
  assert.ok(exam.assignment.includes('human substantive review'),'Final must retain qualified human examiner gate '+exam.id);
 }
 console.log('PASS: seven unique full-length final case files, substantive examiner criteria and human review gates; not a substitute for independent grading.');
+
+const caseStudyQuestionIds=[
+ 'L3-1-6','L3-1-7','L3-1-9','L3-2-6','L3-2-7','L3-2-9',
+ 'L3-3-6','L3-3-7','L3-3-9','L3-4-6','L3-4-7','L3-4-9',
+ 'L3-5-6','L3-5-7','L3-5-9','L3-6-6','L3-6-7','L3-6-9',
+ 'L3-7-6','L3-7-7','L3-7-9'
+];
+const caseStudyQuestions=caseStudyQuestionIds.map(id=>{
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson,'Missing case-specific question lesson '+id);
+ assert.ok(lesson.question.length>=55,'Case question insufficiently specific '+id);
+ assert.ok(lesson.options.every(option=>option.length>=28),'Case answer option insufficiently developed '+id);
+ assert.ok(lesson.why.length>=70,'Case feedback insufficiently developed '+id);
+ return lesson.question;
+});
+assert.equal(new Set(caseStudyQuestions).size,caseStudyQuestionIds.length,'Case studies must not reuse generic quiz questions');
+console.log('PASS: 21 authority-based lessons include distinct, substantive legal knowledge checks. Content still requires human legal-accuracy review.');
