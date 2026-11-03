@@ -215,3 +215,15 @@ for(const course of courses){
  assert.equal(final.examRubric.areas.reduce((sum,area)=>sum+area.points,0),100,'Final rubric points do not total 100 '+course.id);
 }
 console.log('PASS: seven course-specific final exam research methods, each at least 240 words, with 100-point rubrics. Human grading remains required.');
+
+const finals=courses.map(c=>c.lessons[9]);
+assert.equal(new Set(finals.map(f=>f.scenario)).size,7,'Final examinations must have seven different factual scenarios');
+for(const exam of finals){
+ assert.ok(exam.scenario.length>=500,'Final case fact pattern needs adequate detail '+exam.id);
+ assert.ok(exam.assignment.includes('EXAMINER QUALITY CONTROL'),'Missing final-specific assessment controls '+exam.id);
+ assert.ok(exam.examRubric.areas.every(a=>Number.isInteger(a.points)&&a.points>0),'Rubric point allocation invalid '+exam.id);
+ assert.ok(exam.examRubric.areas.every(a=>a.checks.every(x=>typeof x==='string'&&x.trim().length>=15)),'Rubric needs substantive assessment criteria '+exam.id);
+ assert.ok(exam.examRubric.examinerQuestions.every(q=>q.endsWith('?')),'Examiner questions should be answerable questions '+exam.id);
+ assert.ok(exam.assignment.includes('human substantive review'),'Final must retain qualified human examiner gate '+exam.id);
+}
+console.log('PASS: seven unique full-length final case files, substantive examiner criteria and human review gates; not a substitute for independent grading.');
