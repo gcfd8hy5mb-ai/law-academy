@@ -52,7 +52,41 @@ async function review(){
   if(!confirm('Only continue after saving the combined backup. Replace the current FIREBASE copy with this iPhone copy?'))return;
   if(!confirm('Confirm again: overwrite Firebase Law Academy data with this iPhone version?'))return;
   try{status('Verifying cloud revision before saving…');const localCopy=local();const next=await runTransaction(db,async tx=>{const fresh=await tx.get(ref);if(!fresh.exists()||Number(fresh.data().revision)!==remoteRev)throw Error('Firebase changed; compare again');if(uid!==auth.currentUser?.uid)throw Error('Account changed');tx.set(ref,{academy:'law',schemaVersion:1,revision:remoteRev+1,raw:JSON.stringify(localCopy),updatedAt:serverTimestamp()});return remoteRev+1});if(uid!==auth.currentUser?.uid||generation!==gen)return;rev=next;baseline=snapshot();linked=true;mode='ready';localStorage.setItem(key(uid),String(rev));render('Saved iPhone version to Firebase cloud')}catch(e){status('Firebase not changed: '+(e.code||e.message))}}));
- panel.append(button('Restore Firebase to iPhone',()=>{status('Restore is intentionally disabled during initial verification. Both versions are preserved.')}))
+ panel.append(button('Import missing progress from Firebase',async()=>{
+  if(busy||uid!==auth.currentUser?.uid||generation!==gen)return;
+  if(!confirm('Import only progress missing from this device? Existing answers will not be overwritten. A local backup will be downloaded first.'))return;
+  busy=true;
+  try{
+   status('Rechecking both versions before safe import…');
+   const fresh=await getDoc(ref);
+   if(uid!==auth.currentUser?.uid||generation!==gen)return;
+   if(!fresh.exists()||Number(fresh.data().revision)!==remoteRev||!equal(parseCloud(fresh.data()),remote))throw Error('Cloud changed; compare versions again');
+   if(!equal(local(),current))throw Error('Local work changed; compare versions again');
+   const additions={};let items=0;
+   for(const k of KEYS){
+    if(remote[k]===null)continue;
+    if(current[k]===null){additions[k]=remote[k];items++;continue}
+    let existing,incoming;
+    try{existing=JSON.parse(current[k]);incoming=JSON.parse(remote[k])}catch{continue}
+    if(!existing||!incoming||typeof existing!=='object'||typeof incoming!=='object'||Array.isArray(existing)||Array.isArray(incoming))continue;
+    const missing=Object.keys(incoming).filter(field=>!Object.prototype.hasOwnProperty.call(existing,field));
+    if(missing.length){additions[k]=JSON.stringify({...incoming,...existing});items+=missing.length}
+   }
+   if(!items){status('No missing progress to import. Existing differences remain unchanged.');return}
+   download('law-academy-before-import.json',{iphone:current,cloud:remote,cloudRevision:remoteRev});
+   const written=[];
+   try{
+    for(const [k,value] of Object.entries(additions)){localStorage.setItem(k,value);written.push(k)}
+   }catch(error){
+    for(const k of written.reverse()){try{if(current[k]===null)localStorage.removeItem(k);else localStorage.setItem(k,current[k])}catch{}}
+    throw Error('Browser storage failed while importing. Original data backed up; check local progress before retrying.');
+   }
+   const after=local();
+   if(equal(after,remote)){rev=remoteRev;baseline=snapshot();linked=true;mode='ready';localStorage.setItem(key(uid),String(rev));render('Imported '+items+' missing progress entries. Cloud and device now match; sync connected.')}
+   else {mode='conflict';render('Imported '+items+' missing progress entries. Existing differences were preserved; compare again before syncing.')}
+  }catch(error){status('Import stopped: '+(error.code||error.message)+'. No Firebase data was overwritten.')}
+  finally{busy=false}
+ }))
  }catch(e){status('Comparison failed; no changes made: '+(e.code||e.message))}
  finally{busy=false}
 }
