@@ -58,3 +58,20 @@ These are preliminary classifications based on the authored URLs, **not findings
 | Seven final examinations + capstone | Not signed off | Independent examiner required |
 | Runtime, mobile UX and persistence | Not independently retested | Browser test report required |
 | Academic comparability / external evaluation | Not signed off | External academic assessor required |
+
+## Development batch — 2026-11-03: case-review and final-examination strengthening
+
+Committed in `e6f24c1` (curriculum) and `697ee60` (structural checks).
+
+- All 17 remaining judicial-case expansions now contain a court-and-holding review task tailored to the assigned decision. **This adds reviewer instructions; it is NOT evidence that judicial treatment has already been independently checked.**
+- Four previously mislabeled guidance/statute/rule studies retain their source type and contain reported-case comparison assignments (`4b57609`).
+- Current-law crosschecks added to five lessons: the 2023 FRE 702 amendment; `Loper Bright` (2024) and its limits in three administrative-law lessons; and `Smith v. Arizona` (2024) in criminal evidence.
+- All seven course finals now have individually tailored examiner checks without changing the total lesson count or grading status.
+- The review script includes text-presence assertions for these additions. A repository-content inspection confirmed the authored JSON has 7 courses, 70 unique lesson IDs, 17 review-task sections, 5 current-law crosschecks, and 7 examiner-control additions. **The Node test suite was not executed and browser grading/persistence was not tested in this batch.**
+
+### Remaining blockers
+
+1. Independently read and verify every assigned case, appellate history, citations, source link and current binding treatment; counsel/examiner to document findings.
+2. Confirm the newly paired decisions are appropriately sourced and describe their scope accurately; source-link availability and case status were not fully verified in the repository-content checks.
+3. Test `node scripts/validate-level3.mjs`, run browser flows and cloud persistence on iPhone and desktop, inspect exam grading against human-scored samples.
+4. Seek independent professional and academic review. No ABA accreditation, academic equivalency, bar eligibility or mastery certification is claimed.
