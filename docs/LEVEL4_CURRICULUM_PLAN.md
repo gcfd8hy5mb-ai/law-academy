@@ -74,3 +74,12 @@ Level 4 now contains **35 authored draft lessons (five per course)**. Commit `ac
 Every new lesson has an individual fictional fact pattern, primary-law research targets, competing legal positions, a written practice deliverable, and a case-specific multiple-choice explanation. Commit `a1af124` updated the 35-lesson structure checks; `504fd2b` refreshed the course catalog; `826b44f` recognized evidence-model building as a practical assignment type.
 
 **Verification boundary:** Repository-content inspection confirmed seven tracks of five lessons, 35 unique IDs, 35 distinct knowledge-check questions, adequate reading and assignment fields, and intact draft status. The real Node validator, GitHub Actions, deployed browser flows, cloud synchronization, and independent legal case-status verification remain unconfirmed. A 70-lesson Level 4 count is a provisional planning target, not an academic accreditation standard.
+
+## Fourth expansion checkpoint — November 3, 2026
+
+Level 4 now contains **49 authored draft lessons (seven in each of seven courses)**. The 14 newest lessons develop trial preservation and judgment enforcement, sentencing and postconviction procedure, board conflict oversight and earnout interpretation, mootness and municipal liability, administrative hearings and compliance audits, common-interest discussions and negotiation ethics, plus corporate crisis communication and integrated deadline triage. All 49 case knowledge checks are distinct; existing lesson IDs were retained.
+
+- Curriculum commit `32a78ca`; validation update `28e0b2d`; catalog count update `dc9feff`.
+- A repository-content audit checked seven courses, 49 uniquely numbered lessons, 49 distinct questions, substantial reading and written assignment fields, and the interface script references. It passed.
+- **Not yet independently confirmed:** running the full Node validation script in CI, browser and installed iPhone PWA functionality, any cloud sync of Level 4 written drafts, case-citation currency, qualified external academic or legal assessment.
+- The 70-lesson target is provisional; current authoring progress is 49/70, or 70% **by count only**, not by rigor or independently validated instructional hours.
