@@ -15,4 +15,14 @@
  };
  document.body.append(boot);
 })();
-</script><script type="module" src="./law-firebase-cloud-v2.js?v=2"></script></body></html>
+</script><script type="module">
+import('./law-firebase-cloud-v2.js?v=3').then(()=>{
+ const button=document.getElementById('law-cloud-launch');if(button)button.textContent='☁ Cloud Account';
+}).catch(error=>{
+ const button=document.getElementById('law-cloud-launch');if(button)button.textContent='☁ Cloud Load Error';
+ const warning=document.getElementById('law-cloud-startup-warning')||document.createElement('aside');
+ warning.id='law-cloud-startup-warning';
+ warning.style.cssText='position:fixed;z-index:100002;top:82px;right:12px;width:min(340px,calc(100vw - 24px));padding:14px;border:1px solid #c5ad77;border-radius:12px;background:#162021;color:white;font:13px system-ui;overflow-wrap:anywhere';
+ warning.textContent='Law Academy Firebase failed to load: '+(error&&error.message?error.message:String(error))+'. Progress remains on this device; cloud writes are disabled.';
+ document.body.append(warning);
+});</script></body></html>
