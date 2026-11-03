@@ -55,3 +55,13 @@ for(const token of ['l3capReadiness','Above the 7,000-word target','5,000–7,00
  assert.ok(ui.includes(token),'Level 3 capstone readiness missing '+token);
 }
 console.log('PASS: final reviewer packets and capstone readiness controls are present; functionality requires browser-test confirmation.');
+
+const appliedWorkshopIds=['L3-1-8','L3-2-8','L3-3-8','L3-4-8','L3-5-8','L3-6-8','L3-7-8'];
+for(const id of appliedWorkshopIds){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson,'Missing Level 3 applied workshop '+id);
+ assert.ok(lesson.reading.includes('Practical '),'Missing applied problem-solving guidance '+id);
+ assert.ok(lesson.reading.trim().split(/\s+/).length>=250,'Workshop reading under 250 words '+id);
+ assert.ok(lesson.assignment.includes('primary-authority verification log'),'Workshop source verification missing '+id);
+}
+console.log('PASS: seven Level 3 practical workshops and primary-authority assignments are present.');
