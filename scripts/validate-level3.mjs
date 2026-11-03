@@ -84,3 +84,12 @@ for(const id of foundationWorkedIds){
  assert.ok(lesson.assignment.includes('200-word revision'),'Missing written revision activity '+id);
 }
 console.log('PASS: seven foundational case analyses and written revision assignments are present.');
+
+for(const c of courses){
+ const final=c.lessons[9];
+ assert.ok(final.assignment.includes('FINAL EXAMINATION ISSUE-APPLICATION TASKS:'),'Course final needs issue-by-issue analysis '+c.id);
+ assert.ok(final.assignment.includes('FACT CHANGES:'),'Course final must require counterfactual reasoning '+c.id);
+ assert.ok(final.assignment.includes('REVIEW STANDARD:'),'Course final must retain human review boundary '+c.id);
+ assert.ok(final.assignment.length>=1700,'Final assessment too generic '+c.id);
+}
+console.log('PASS: all seven Level 3 finals include substantive issue maps, fact changes and review standards.');
