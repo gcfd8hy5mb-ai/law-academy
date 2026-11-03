@@ -130,6 +130,117 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Execution, separate-entity liability, third-party rights and due process require distinct legal inquiries.",
         "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-1-8",
+        "title": "Pretrial orders and litigation readiness",
+        "authority": "Fed. R. Civ. P. 16(e), 26(a)(3), 37(c)(1); applicable local rules",
+        "scenario": "A court's pretrial order omits the plaintiff's alternative damages theory; counsel discovers the omission four days before trial.",
+        "reading": "A final pretrial order shapes the issues and evidence that will be tried. Identify exactly which theory was pleaded, disclosed, preserved and omitted. Do not assume a late request is automatically granted or that any omission irrevocably waives the argument. Analyze the Rule 16(e) standard and material prejudice, the reasons for omission, available continuance, witness disclosure, and the opposing party's preparation. Compare exclusion to narrower corrective measures. Develop a date-by-date chronology linking counsel's actions with the local schedule. Draft a motion that candidly addresses fault and the adverse party's strongest prejudice argument. Separate the legal standard for modifying a final pretrial order from the standard for admitting a specific late-disclosed exhibit.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Opponent argues surprise and irreparable preparation costs; movant identifies disclosed evidence and a limited cure.",
+        "assignment": "Draft a motion to modify the final pretrial order, an exhibit/witness compliance chart, a hearing outline and proposed alternative ruling. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What must counsel examine when seeking to modify a final pretrial order?",
+        "options": [
+          "Whether counsel now prefers an easier theory",
+          "The controlling modification standard, diligence, prejudice and possible curative measures",
+          "Whether the omission can be ignored without telling the court"
+        ],
+        "answer": 1,
+        "why": "Final pretrial orders matter; modifications require a supported procedural showing and attention to fairness.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-1-9",
+        "title": "Trial verdict, posttrial motions and appeal handoff",
+        "authority": "Fed. R. Civ. P. 50, 59, 60; relevant damages and appellate law",
+        "scenario": "A jury finds liability and awards a figure above what either party supported with trial evidence; counsel considers posttrial relief.",
+        "reading": "Begin with the verdict form and the trial record, not an assumed ceiling on jury awards. Identify timely objections, earlier Rule 50 motions and their renewal requirements, grounds for a new trial, remittitur issues where authorized, and the distinction between correcting clerical error and substantive relief. Separate a claim of insufficient proof from a claim of prejudicial trial error. Calculate postjudgment timing using the actual rules and date of entry, not a guessed deadline. Build alternative dispositions supported by record citations. Analyze postjudgment interest and stay questions separately. Explain why an appellate issue requires a proper notice and record; counsel must not promise reversal merely because a verdict feels disproportionate. Construct an appeal handoff packet that documents issue preservation, exhibits, transcript references and unresolved factual challenges.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Plaintiff supports the award through testimony and inferences; defendant says the record cannot support the amount.",
+        "assignment": "Prepare competing posttrial motions, a verdict-to-evidence table, deadline-verification checklist and appellate issue handoff memorandum. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "Which is a sound first step after a disputed civil jury verdict?",
+        "options": [
+          "File every available motion without checking prerequisites",
+          "Review preserved issues, trial evidence, procedural standards and actual filing deadlines",
+          "Assume an appellate court will automatically rehear all witnesses"
+        ],
+        "answer": 1,
+        "why": "Posttrial options have distinct standards and time limits, and must be grounded in the record.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-1-10",
+        "title": "Third-Year Final Examination — Evidence-centered civil trial and remedies",
+        "authority": "Fed. R. Civ. P. 16, 26, 50, 51, 59 and 69; FRE 103, 702, 803 and 901",
+        "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: An industrial shipment dispute goes to trial. A witness gives inconsistent accounts, the buyer seeks large lost profits without verified costs, a retained expert relies on repaired components, and the parties fight over jury instructions and a posttrial award.",
+        "reading": "Prepare a complete civil-trial case file with exhibits and objections, authentication foundations, discrete hearsay layers, expert admissibility, contract elements, damages proof and alternative rulings. Explain which facts must be proved, what standard governs each motion, and how to preserve objections. Draft jury instructions that do not smuggle in disputed findings, a posttrial motion chart, and a judgment-collection risk map. Calculate damages only from specified evidence or symbolic inputs. Judge each possible disposition against the exact procedural stage, not against a universal sense of fairness.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.",
+        "counterarguments": "Defendant contests expert reliability and mitigation; plaintiff challenges evidentiary exclusions and says undisclosed information prevented a fair trial.",
+        "assignment": "FINAL EXAMINATION — Write a 2,000–2,500-word researched trial memorandum, evidence matrix, damages model, jury-instruction packet, posttrial options and a five-minute oral argument outline. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
+        "question": "Which analytical separation is indispensable in a civil trial final?",
+        "options": [
+          "Treat pleading, proof and appeal as one identical inquiry",
+          "Separate admissibility, merits burden, remedies and preservation at their actual procedural stages",
+          "Assume every trial error is automatically reversible"
+        ],
+        "answer": 1,
+        "why": "Litigation involves different standards for proof, trial management, posttrial relief and appellate preservation.",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Controlling issues and legal rules",
+              "points": 25,
+              "checks": [
+                "Identify each issue, jurisdiction, procedural standard and burden",
+                "Apply actual primary legal authority and current law"
+              ]
+            },
+            {
+              "label": "Factual analysis and professional work product",
+              "points": 30,
+              "checks": [
+                "Apply governing elements to supported and disputed facts",
+                "Produce required records, charts and legal documents"
+              ]
+            },
+            {
+              "label": "Counterarguments and alternatives",
+              "points": 15,
+              "checks": [
+                "Analyze substantial adverse arguments fairly",
+                "Provide alternative outcomes for at least two material fact changes"
+              ]
+            },
+            {
+              "label": "Citation accuracy and legal currency",
+              "points": 20,
+              "checks": [
+                "Verify statute, rule or opinion text and correct source type",
+                "Record subsequent treatment and any unresolved jurisdictional uncertainty"
+              ]
+            },
+            {
+              "label": "Clarity, remedy and ethical judgment",
+              "points": 10,
+              "checks": [
+                "Explain feasible remedies and deadlines without invented facts",
+                "Communicate uncertainty and professional limits"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What facts are supported, disputed or missing?",
+            "What controlling rules, forum and burdens apply?",
+            "What is the strongest argument for the opposing party?",
+            "How would two changed facts alter the remedy?"
+          ],
+          "commonErrors": [
+            "Unsupported primary-law citation or jurisdiction",
+            "Invented dispositive fact or number",
+            "Unanswered serious opposing argument",
+            "Failure to distinguish remedy from liability"
+          ]
+        },
+        "status": "draft—written final subject to qualified human legal review"
       }
     ]
   },
@@ -263,6 +374,117 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Appellate record limits, new-evidence procedures and procedural bars must be distinguished before choosing a remedy.",
         "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-2-8",
+        "title": "Jury selection and discriminatory strikes",
+        "authority": "Batson v. Kentucky; applicable jury-selection and equal-protection decisions; trial procedure",
+        "scenario": "During voir dire, the prosecutor removes several prospective jurors after noting one juror's past disagreement with police practices.",
+        "reading": "Separate a litigant's strategic preferences from constitutional restrictions on discriminatory jury selection. Identify the challenged strikes, comparative juror responses, stated race-neutral explanations, the relevant objection and the trial judge's evaluation of purposeful discrimination. A neutral-sounding explanation is not automatically credible, and a statistical disparity alone may not resolve every question. Analyze whether similarly situated jurors were treated differently and what the contemporaneous record shows. Preserve the objection and requested findings without inventing jurors' identities or answers. Explain that state law may provide additional protections or different procedures. Prepare both the challenge and a fair prosecution response and show how the judge should develop the record before ruling.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Defense points to inconsistent treatment; prosecutor offers a specific explanation based on juror answers.",
+        "assignment": "Create a Batson hearing chart, comparative-juror analysis, proposed rulings, direct questions and ethical trial-preparation memo. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What is the focus of the final Batson inquiry?",
+        "options": [
+          "Whether counsel can state any facially neutral reason regardless of credibility",
+          "Whether purposeful discrimination is shown considering the explanations and full record",
+          "Whether either lawyer prefers a particular verdict"
+        ],
+        "answer": 1,
+        "why": "The court evaluates the genuineness of strike explanations and relevant evidence under governing law.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-2-9",
+        "title": "Appeal, habeas limits and client communication",
+        "authority": "28 U.S.C. §2254; applicable exhaustion, limitation and procedural-default law",
+        "scenario": "A state prisoner asks counsel to file a federal habeas petition while a state postconviction appeal remains pending.",
+        "reading": "Federal habeas review of state convictions is not another ordinary trial. Identify the judgment, direct-review and collateral-review timeline, available state remedies and whether claims were fairly presented through the required channels. Separate federal constitutional claims from state-law errors and distinguish exhaustion, procedural default, limitations and merits deference. Calculating a filing deadline requires verified dates and statutory tolling rules; do not assume a pending state application always saves every filing. Identify whether the record supports any recognized exception or need for fact development, and clarify standards that can bar new evidence in federal court. Counsel must give a careful written explanation of litigation risk and preserve the client's remaining options. Construct an alternative strategy for a potentially unexhausted claim without promising automatic stay or relief.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Prisoner alleges urgency; government contends that state remedies and federal procedural bars preclude immediate relief.",
+        "assignment": "Write a habeas route memorandum, procedural chronology, limitations research checklist, potential claim table and plain-language client letter. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What must be verified before filing a federal habeas petition challenging a state conviction?",
+        "options": [
+          "Only whether the client says the trial was unfair",
+          "Exhaustion, procedural history, statutory limitations, claim posture and current controlling law",
+          "Whether the client can introduce any new witnesses automatically"
+        ],
+        "answer": 1,
+        "why": "Federal postconviction relief has strict procedural gateways separate from the ultimate constitutional claim.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-2-10",
+        "title": "Third-Year Final Examination — Criminal case from investigation to collateral review",
+        "authority": "Fourth, Fifth, Sixth and Fourteenth Amendments; Brady, Giglio, Batson, plea-assistance and postconviction doctrines",
+        "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: Investigators rely on a suggestive identification, a disputed residential search and a witness benefit not timely disclosed. A plea offer expires, a sentencing report contains unsupported loss amounts, and new evidence surfaces during state review.",
+        "reading": "Construct a criminal-case chronology from investigation to postconviction review. Separate search authorization, identification reliability, disclosure duties, plea advice, sentencing findings and procedural appeal bars. Apply each right at its actual triggering event and specify the burden and relevant remedy. Do not equate nondisclosure with automatic dismissal, a warrant defect with automatic suppression, or poor plea advice with automatic relief. Address prosecution ethics and defense counseling independently and fairly. Build an evidentiary record with contradictions and a list of facts necessary to assess materiality, prejudice and postconviction eligibility. Identify state-specific differences and do not fabricate filing deadlines.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.",
+        "counterarguments": "Prosecutor argues good-faith investigation and limited prejudice; defense seeks suppression, disclosure relief, plea remedy or postconviction consideration.",
+        "assignment": "FINAL EXAMINATION — Write a 2,000–2,500-word prosecution/defense case memorandum, suppression hearing outline, disclosure log, plea worksheet, sentencing objection and postconviction path table. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
+        "question": "Which element must be separately analyzed in a multi-stage criminal case?",
+        "options": [
+          "Only whether the ultimate verdict was unpopular",
+          "The constitutional or statutory trigger, record, burden, prejudice and remedy for each stage",
+          "Every asserted error as though it automatically creates the same relief"
+        ],
+        "answer": 1,
+        "why": "Constitutional and procedural rules differ by stage, scope, burden and remedy.",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Controlling issues and legal rules",
+              "points": 25,
+              "checks": [
+                "Identify each issue, jurisdiction, procedural standard and burden",
+                "Apply actual primary legal authority and current law"
+              ]
+            },
+            {
+              "label": "Factual analysis and professional work product",
+              "points": 30,
+              "checks": [
+                "Apply governing elements to supported and disputed facts",
+                "Produce required records, charts and legal documents"
+              ]
+            },
+            {
+              "label": "Counterarguments and alternatives",
+              "points": 15,
+              "checks": [
+                "Analyze substantial adverse arguments fairly",
+                "Provide alternative outcomes for at least two material fact changes"
+              ]
+            },
+            {
+              "label": "Citation accuracy and legal currency",
+              "points": 20,
+              "checks": [
+                "Verify statute, rule or opinion text and correct source type",
+                "Record subsequent treatment and any unresolved jurisdictional uncertainty"
+              ]
+            },
+            {
+              "label": "Clarity, remedy and ethical judgment",
+              "points": 10,
+              "checks": [
+                "Explain feasible remedies and deadlines without invented facts",
+                "Communicate uncertainty and professional limits"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What facts are supported, disputed or missing?",
+            "What controlling rules, forum and burdens apply?",
+            "What is the strongest argument for the opposing party?",
+            "How would two changed facts alter the remedy?"
+          ],
+          "commonErrors": [
+            "Unsupported primary-law citation or jurisdiction",
+            "Invented dispositive fact or number",
+            "Unanswered serious opposing argument",
+            "Failure to distinguish remedy from liability"
+          ]
+        },
+        "status": "draft—written final subject to qualified human legal review"
       }
     ]
   },
@@ -396,6 +618,117 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "An earnout dispute requires interpreting agreed duties and evidence of conduct, not equating a low payout with breach.",
         "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-3-8",
+        "title": "Private equity acquisition: financing and governance",
+        "authority": "Governing entity law; financing agreements; securities and tax rules when applicable",
+        "scenario": "A private equity sponsor acquires a business through a newly formed holding company while managers retain equity.",
+        "reading": "Map the buyer, holding company, lender, management investors and operating subsidiary before allocating obligations. Distinguish lender security from shareholder ownership and contractual governance rights. Read credit covenants, board appointment rights, minority protections, conflicts and equity incentive terms alongside the acquisition agreement. An enterprise valuation is not the same as proceeds distributed to owners after debt, fees and preferences. Build a transparent waterfall using variables and identify how different liquidation preferences change manager incentives. Analyze whether management rollover creates conflicts or disclosure needs. Separate corporate formation and tax consequences for the correct year and jurisdiction; do not assume one financing structure is always superior. Draft a board-level comparison of downside protection, flexibility and financing conditions and explain what requires specialist review.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Sponsor prioritizes downside protections; managers seek fair rollover economics and governance influence.",
+        "assignment": "Prepare a corporate structure chart, debt/equity waterfall, 1,300-word governance memo, rollover term sheet and conflict analysis. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "Why is a capitalization waterfall important in a leveraged acquisition?",
+        "options": [
+          "All equity holders necessarily receive identical proceeds",
+          "Debt, preferences and negotiated rights alter who receives proceeds at different exit values",
+          "It proves the acquisition has no financing risk"
+        ],
+        "answer": 1,
+        "why": "Distribution economics depend on the actual instruments and priority of claims.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-3-9",
+        "title": "Acquisition litigation and deal remedies",
+        "authority": "Governing acquisition contract, equitable remedies and financing covenants",
+        "scenario": "A buyer refuses to close after a lender changes its terms, while the seller seeks specific performance under the signed merger agreement.",
+        "reading": "Identify exact closing conditions, required efforts, financing obligations, termination provisions, cure rights and available remedy limits. A lender withdrawing support does not automatically excuse the buyer if the contract allocates financing risk otherwise. Distinguish breach of an efforts covenant from failure of a closing condition, and examine whether the seller satisfied its own obligations. Specific performance depends on the contractual promise, governing equitable standards and feasibility; a contractual statement that it is available does not eliminate judicial inquiry. Calculate the role of reverse termination fees, limitation-of-liability terms and contractual notice periods using the actual signed text rather than a standard form. Develop two alternative judgments depending on whether the buyer's breach caused failure of financing. Draft advice to each board that considers negotiation and litigation costs without implying the parties have identical incentives.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Seller argues the financing risk was allocated to buyer; buyer points to an unsatisfied condition and disputed efforts standard.",
+        "assignment": "Draft a contractual condition matrix, competing specific-performance briefs, remedy tree and settlement decision memo. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What controls whether a buyer can avoid closing because financing failed?",
+        "options": [
+          "Financing failure always excuses the buyer",
+          "The actual contract, allocated financing risk, efforts covenants, conditions and governing remedial law",
+          "The buyer's preference to renegotiate price"
+        ],
+        "answer": 1,
+        "why": "Transaction-specific contract language and facts determine closing obligations and available remedies.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-3-10",
+        "title": "Third-Year Final Examination — M&A acquisition, financing and post-closing dispute",
+        "authority": "Governing contract and corporate law; relevant antitrust, privacy and securities rules only when triggered",
+        "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: A holding company acquires a supplier; a director has a financial conflict, the buyer's financing changes, an unresolved data incident surfaces, and seller later disputes an earnout calculation.",
+        "reading": "Map legal entities, authority, board conflicts and transaction structure before drafting a remedy. Separate warranties, covenants, conditions, indemnities, financing risks and post-closing earnout terms. Identify which law actually governs each question and how time-dependent statutes affect the transaction. Analyze closing conditions and specific performance independently. Model the purchase-price true-up and earnout with documented inputs, distinguishing valuation uncertainty from legal breach. Address cybersecurity diligence through applicable laws and confirmed incident evidence, not universal notification rules. Prepare competing contract redlines and explain incentives, tax, regulator and insurance issues that require specialist work.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.",
+        "counterarguments": "Seller invokes buyer efforts and earnout promises; buyer asserts changed facts, disclosure qualifications and financial conditions.",
+        "assignment": "FINAL EXAMINATION — Produce a 2,000–2,500-word deal counsel memorandum, transaction chart, revised clauses, financial waterfall, board approval plan and post-closing dispute brief. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
+        "question": "What determines whether a post-closing earnout claim succeeds?",
+        "options": [
+          "Whether the seller expected a larger payment",
+          "The executed agreement, governing law, established conduct and contractually required calculation",
+          "Whether the acquirer later became more profitable"
+        ],
+        "answer": 1,
+        "why": "An earnout claim turns on actual contractual duties, terms and proved facts.",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Controlling issues and legal rules",
+              "points": 25,
+              "checks": [
+                "Identify each issue, jurisdiction, procedural standard and burden",
+                "Apply actual primary legal authority and current law"
+              ]
+            },
+            {
+              "label": "Factual analysis and professional work product",
+              "points": 30,
+              "checks": [
+                "Apply governing elements to supported and disputed facts",
+                "Produce required records, charts and legal documents"
+              ]
+            },
+            {
+              "label": "Counterarguments and alternatives",
+              "points": 15,
+              "checks": [
+                "Analyze substantial adverse arguments fairly",
+                "Provide alternative outcomes for at least two material fact changes"
+              ]
+            },
+            {
+              "label": "Citation accuracy and legal currency",
+              "points": 20,
+              "checks": [
+                "Verify statute, rule or opinion text and correct source type",
+                "Record subsequent treatment and any unresolved jurisdictional uncertainty"
+              ]
+            },
+            {
+              "label": "Clarity, remedy and ethical judgment",
+              "points": 10,
+              "checks": [
+                "Explain feasible remedies and deadlines without invented facts",
+                "Communicate uncertainty and professional limits"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What facts are supported, disputed or missing?",
+            "What controlling rules, forum and burdens apply?",
+            "What is the strongest argument for the opposing party?",
+            "How would two changed facts alter the remedy?"
+          ],
+          "commonErrors": [
+            "Unsupported primary-law citation or jurisdiction",
+            "Invented dispositive fact or number",
+            "Unanswered serious opposing argument",
+            "Failure to distinguish remedy from liability"
+          ]
+        },
+        "status": "draft—written final subject to qualified human legal review"
       }
     ]
   },
@@ -529,6 +862,117 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Monell rejects respondeat superior liability and requires an attributable municipal basis for the constitutional injury.",
         "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-4-8",
+        "title": "Supreme Court certiorari screening and issue selection",
+        "authority": "Supreme Court Rules 10, 13 and 14; 28 U.S.C. §1254; applicable jurisdictional rules",
+        "scenario": "A nonprofit loses in a federal court of appeals and requests a Supreme Court petition based only on its disagreement with the outcome.",
+        "reading": "Distinguish appellate error correction from discretionary certiorari review. Determine whether the judgment is final or otherwise reviewable, calculate the actual petition deadline under applicable rules and identify whether a legal issue was presented and preserved. Assess a genuine conflict among courts, national significance and vehicle defects such as an inadequate record or independent alternative ground. Avoid saying a split exists without identifying holdings that actually conflict on the same legal issue. A persuasive question presented is specific, neutral enough to be credible and linked to a reviewable judgment. Analyze what happens if the Court denies review, including that denial is not an endorsement of the lower court's reasoning. Draft candid advice about low probability and cost without inventing numeric odds.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Petitioner asserts a nationally important question; opposing party emphasizes factual uniqueness and lack of a genuine conflict.",
+        "assignment": "Prepare a certiorari screening memo, question presented, jurisdictional timeline, conflict table and client recommendation. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "Which factor is especially relevant to discretionary Supreme Court certiorari?",
+        "options": [
+          "Any client's belief that the appellate panel was wrong",
+          "A genuine conflict on a federal legal question and a suitable procedural vehicle",
+          "A desire to introduce new trial testimony"
+        ],
+        "answer": 1,
+        "why": "Certiorari is discretionary and calls for a review-worthy federal question and suitable case posture.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-4-9",
+        "title": "Emergency appellate relief and stay motions",
+        "authority": "Fed. R. App. P. 8; Nken v. Holder; applicable injunction and stay decisions",
+        "scenario": "An environmental permit injunction is set to take effect in two days; a government agency seeks an emergency stay pending appeal.",
+        "reading": "Identify the order, exact effective time, procedural path for relief in the trial court, and appellate court authority. Stay relief is not granted solely because compliance costs money or an appeal is filed. Analyze likelihood of success, irreparable harm absent a stay, injury to other parties and the public interest under the applicable standard. Distinguish keeping the status quo from a mandatory alteration of existing legal duties, and examine how the record supports each asserted harm. Explain why a stay pending appeal and an injunction pending appeal may have distinct procedural framing. Present a verifiable emergency schedule with actual deadlines, service requirements and supporting declarations; do not invent an emergency to avoid ordinary process. Draft a narrowly tailored alternative and address potential bond or conditions if relevant.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Agency claims irreparable operational disruption; challengers cite immediate environmental harm and the importance of compliance.",
+        "assignment": "Create a stay application, sworn-facts checklist, four-factor table, adverse response and alternative order. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What is needed beyond a pending appeal for emergency stay relief?",
+        "options": [
+          "Nothing; an appeal automatically suspends every order",
+          "A supported showing under applicable stay factors and procedural rules",
+          "Only a declaration that the applicant disagrees with the decision"
+        ],
+        "answer": 1,
+        "why": "Emergency appellate relief requires a legally supported, record-based showing and proper procedure.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-4-10",
+        "title": "Third-Year Final Examination — Constitutional appellate brief and emergency relief",
+        "authority": "First Amendment, Article III, 42 U.S.C. §1983; appellate review, stays, mootness and immunity doctrine",
+        "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: A city adopts a new demonstration restriction. A plaintiff sues under section 1983; the trial court denies relief on disputed facts, the city changes the policy and a related qualified-immunity appeal follows.",
+        "reading": "Begin with standing, reviewable order, timeliness, preservation and continuing controversy. Identify the government actor, forum, type of speech restriction and factual findings necessary for the constitutional standard. Separate municipal liability from individual immunity. A qualified-immunity interlocutory appeal has limited scope when historical facts are disputed. Evaluate what policy repeal means for mootness and the availability of specific remedies. Prepare legal and factual review standards distinctly, and support each record claim with a citation. An emergency stay must have a record-based explanation of relevant factors; filing an appeal is not itself an automatic stay. Provide alternate relief if the case narrows during review.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.",
+        "counterarguments": "Appellee says factual disputes and changed policy undermine review; appellant argues a preserved legal conflict and urgent harm.",
+        "assignment": "FINAL EXAMINATION — Write a 2,000–2,500-word appellate packet, jurisdictional statement, issue preservation chart, two briefs' argument summaries and seven-minute oral argument outline. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
+        "question": "What is a necessary threshold for a federal appellate court to decide the constitutional merits?",
+        "options": [
+          "The advocate's confidence that the policy is unlawful",
+          "A live, properly reviewable controversy within appellate jurisdiction",
+          "A public statement from one litigant about constitutional rights"
+        ],
+        "answer": 1,
+        "why": "Appellate courts require jurisdiction and a live dispute before deciding substantive constitutional claims.",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Controlling issues and legal rules",
+              "points": 25,
+              "checks": [
+                "Identify each issue, jurisdiction, procedural standard and burden",
+                "Apply actual primary legal authority and current law"
+              ]
+            },
+            {
+              "label": "Factual analysis and professional work product",
+              "points": 30,
+              "checks": [
+                "Apply governing elements to supported and disputed facts",
+                "Produce required records, charts and legal documents"
+              ]
+            },
+            {
+              "label": "Counterarguments and alternatives",
+              "points": 15,
+              "checks": [
+                "Analyze substantial adverse arguments fairly",
+                "Provide alternative outcomes for at least two material fact changes"
+              ]
+            },
+            {
+              "label": "Citation accuracy and legal currency",
+              "points": 20,
+              "checks": [
+                "Verify statute, rule or opinion text and correct source type",
+                "Record subsequent treatment and any unresolved jurisdictional uncertainty"
+              ]
+            },
+            {
+              "label": "Clarity, remedy and ethical judgment",
+              "points": 10,
+              "checks": [
+                "Explain feasible remedies and deadlines without invented facts",
+                "Communicate uncertainty and professional limits"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What facts are supported, disputed or missing?",
+            "What controlling rules, forum and burdens apply?",
+            "What is the strongest argument for the opposing party?",
+            "How would two changed facts alter the remedy?"
+          ],
+          "commonErrors": [
+            "Unsupported primary-law citation or jurisdiction",
+            "Invented dispositive fact or number",
+            "Unanswered serious opposing argument",
+            "Failure to distinguish remedy from liability"
+          ]
+        },
+        "status": "draft—written final subject to qualified human legal review"
       }
     ]
   },
@@ -662,6 +1106,117 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Effective compliance depends on auditable performance, not simply asserted completion.",
         "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-5-8",
+        "title": "Regulatory inspections, warrants and consent",
+        "authority": "Fourth Amendment administrative search doctrine; relevant agency inspection statute and regulations",
+        "scenario": "A safety inspector asks a plant manager to enter locked production areas, and the manager is unsure whether refusal would trigger sanctions.",
+        "reading": "Identify the type of regulated industry, inspection authority, actual statutory conditions and whether a warrant, lawful exception or valid consent is available. Administrative inspections differ from ordinary criminal searches, and special rules may govern closely regulated industries; do not assume either limitless access or an absolute warrant requirement. Distinguish a routine inspection from an emergency and identify who has authority to consent on behalf of the facility. Record the inspection scope, records requested, permitted observation and personnel interviews without coaching employees to obstruct or destroy material. Explain possible administrative and judicial review mechanisms, sanctions for unlawful refusal where applicable and preservation duties. Draft a respectful response that seeks clarification when scope is uncertain rather than giving an unsupported refusal. Provide alternate analysis if an inspector demands unrelated private personnel data.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Agency asserts statutory authority and safety urgency; operator questions scope and the availability of neutral review.",
+        "assignment": "Prepare an inspection authorization matrix, manager response protocol, evidence-handling plan and two-sided legal memo. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What determines whether an administrative inspection may lawfully proceed?",
+        "options": [
+          "An inspector's job title always authorizes every search",
+          "The applicable statutory regime, consent or other lawful basis, scope and constitutional limits",
+          "Whether the business would prefer no inspection"
+        ],
+        "answer": 1,
+        "why": "Inspection authority and constitutional safeguards vary with the statute, industry and circumstances.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-5-9",
+        "title": "Internal controls, director oversight and remediation reporting",
+        "authority": "Corporate oversight duties under governing entity law; agency enforcement terms; relevant compliance statutes",
+        "scenario": "A board committee learns that compliance alerts were dismissed for months and that a regulator is considering a corporate reporting agreement.",
+        "reading": "Prepare a chronology separating what the board knew from what individual employees knew and when escalation should have occurred under actual policies. Corporate oversight analysis is not identical to automatically imposing liability whenever a business has a violation. Identify reporting systems, board minutes, recurring warnings, management responses and control-testing records. Determine whether a proposed remediation agreement requires a monitor, independent validation or defined data reporting, using the actual instrument. Draft a credible corrective-action structure with board ownership, independent review, escalation thresholds and consequences for repeated failures. Consider attorney-client privilege and voluntary disclosure carefully without treating all internal investigation materials as privileged. Analyze how a substantial known defect and a merely speculative warning might produce different fiduciary and regulatory risks. Do not provide false assurance that adopting a policy guarantees compliance.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Committee claims it had inadequate reporting; shareholders argue directors disregarded persistent red flags.",
+        "assignment": "Draft an oversight-memo timeline, board committee charter amendment, regulator report framework and measurable remediation tracker. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What most directly supports a board's defensible compliance oversight process?",
+        "options": [
+          "A promise that the company will never face a violation",
+          "Functional reporting systems, escalations, documented review and responses to credible warning signs",
+          "Delegating every compliance question without receiving information"
+        ],
+        "answer": 1,
+        "why": "Governance oversight depends on actual monitoring and response practices, not a claim of guaranteed outcomes.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-5-10",
+        "title": "Third-Year Final Examination — Regulatory investigation, hearing and corrective action",
+        "authority": "APA where federal, applicable state administrative acts, agency statute, inspection rules, whistleblower provisions, corporate oversight law",
+        "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: A transportation operator faces a subpoena after safety failures. A whistleblower reports altered tests, the agency initiates a licensing hearing and the board promises reforms without documentation.",
+        "reading": "Distinguish regulatory inquiry, compulsory subpoena, inspection and adjudication; each requires its own source of authority and response pathway. Identify the exact regulated entity, statute and jurisdiction before discussing deadlines. Evaluate the evidentiary quality of testing records, investigation interviews and whistleblower chronology. Separate an alleged reporting violation from retaliation and from director oversight questions. Model the hearing's notice, burden, procedural rights, evidentiary rules and remedies under the correct administrative scheme. Draft verifiable corrective actions with owners, dates and controls instead of an assurance of complete compliance. Address limits on privilege, document retention, public comments and truthful agency submissions, and record which specialist legal questions remain open.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.",
+        "counterarguments": "Agency seeks rapid action and a monitor; operator contests the reliability of the findings and the breadth of the order.",
+        "assignment": "FINAL EXAMINATION — Submit a 2,000–2,500-word regulatory response memorandum, hearing script, witness table, compliance tracker, board oversight advice and proposed agency order. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
+        "question": "What establishes credibility in a regulatory remediation plan?",
+        "options": [
+          "A blanket promise of no future breaches",
+          "Documented obligations, verified corrective steps, responsible ownership and lawful oversight",
+          "A confidential statement that the regulator cannot inspect"
+        ],
+        "answer": 1,
+        "why": "Remediation must be documented and measured under applicable agency powers and legal duties.",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Controlling issues and legal rules",
+              "points": 25,
+              "checks": [
+                "Identify each issue, jurisdiction, procedural standard and burden",
+                "Apply actual primary legal authority and current law"
+              ]
+            },
+            {
+              "label": "Factual analysis and professional work product",
+              "points": 30,
+              "checks": [
+                "Apply governing elements to supported and disputed facts",
+                "Produce required records, charts and legal documents"
+              ]
+            },
+            {
+              "label": "Counterarguments and alternatives",
+              "points": 15,
+              "checks": [
+                "Analyze substantial adverse arguments fairly",
+                "Provide alternative outcomes for at least two material fact changes"
+              ]
+            },
+            {
+              "label": "Citation accuracy and legal currency",
+              "points": 20,
+              "checks": [
+                "Verify statute, rule or opinion text and correct source type",
+                "Record subsequent treatment and any unresolved jurisdictional uncertainty"
+              ]
+            },
+            {
+              "label": "Clarity, remedy and ethical judgment",
+              "points": 10,
+              "checks": [
+                "Explain feasible remedies and deadlines without invented facts",
+                "Communicate uncertainty and professional limits"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What facts are supported, disputed or missing?",
+            "What controlling rules, forum and burdens apply?",
+            "What is the strongest argument for the opposing party?",
+            "How would two changed facts alter the remedy?"
+          ],
+          "commonErrors": [
+            "Unsupported primary-law citation or jurisdiction",
+            "Invented dispositive fact or number",
+            "Unanswered serious opposing argument",
+            "Failure to distinguish remedy from liability"
+          ]
+        },
+        "status": "draft—written final subject to qualified human legal review"
       }
     ]
   },
@@ -795,6 +1350,117 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Ethical negotiation permits advocacy but not knowing material factual deception under the governing rules.",
         "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-6-8",
+        "title": "Law practice client intake and conflicts screening",
+        "authority": "Governing state ethics rules on prospective, current and former clients; confidentiality and screening",
+        "scenario": "A firm receives an inquiry from a new corporate client seeking to sue a company that the firm advised three years ago.",
+        "reading": "Before reviewing confidential documents, identify potential adverse parties, firm clients, affiliates and matter relationships. Distinguish a prospective-client inquiry from a full attorney-client relationship and consider what duties attach to information obtained during intake. Former-client adversity may require a substantial-relationship inquiry and limits on use of protected information; not every prior engagement forever bars unrelated adverse work. Document screening, conflict clearance and any informed-consent process under the applicable jurisdiction. Do not assume a conflict is consentable simply because both parties would like the representation. If counsel cannot accept the matter, draft a respectful nonengagement notice that avoids disclosing privileged information and flags urgent deadlines without offering continuing representation. Differentiate operational conflict software from legal judgment and maintain an audit trail that exposes enough information for responsible review without publishing client secrets.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "New client demands immediate acceptance; former client contends the new lawsuit uses confidential strategic information.",
+        "assignment": "Prepare an intake questionnaire, conflict grid, consentability analysis, nonengagement letter and preservation warning. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What should be done before accepting a matter adverse to a former client?",
+        "options": [
+          "Assume the old file is irrelevant because years passed",
+          "Identify the matters, adversity, confidential information and applicable former-client conflict rules",
+          "Accept immediately and resolve ethical issues only if opposing counsel objects"
+        ],
+        "answer": 1,
+        "why": "Conflict decisions require early, jurisdiction-specific analysis and appropriate protection of client information.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-6-9",
+        "title": "Client trust, adverse evidence and withdrawal",
+        "authority": "Applicable professional-conduct rules on candor, fairness to opposing parties, confidentiality and withdrawal; civil discovery duties",
+        "scenario": "During discovery, a commercial client directs counsel to conceal a damaging email and threatens to fire the lawyer if the email is produced.",
+        "reading": "Separate confidential client communications from the underlying email's discoverability. A lawyer's duty to protect confidentiality does not permit unlawful suppression or destruction of responsive evidence. Identify the discovery request, preservation duty, objections genuinely available, court orders and whether the client's instruction contemplates misconduct. Counsel should advise against concealment, explain litigation and ethical consequences and consider lawful protective orders or privilege claims if actually supported. Determine when withdrawal is permitted or required and what notice, court permission or transition steps are necessary. Withdrawal does not retroactively cure a false certification or allow disclosure of every client confidence. Draft an internal documentation record that is accurate but carefully handled, and a court-facing proposal that complies with procedural and ethical duties without gratuitously revealing protected strategy. Analyze separately a merely disputed claim of relevance versus a knowingly responsive document.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Client fears financial collapse if the email is seen; counsel must honor lawful confidentiality while refusing improper concealment.",
+        "assignment": "Prepare a privilege/relevance chart, ethics decision tree, client advice memorandum, draft motion for protective relief and withdrawal contingency plan. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What is the correct response to a client's instruction to hide discoverable evidence?",
+        "options": [
+          "Obey because loyalty overrides court obligations",
+          "Explain legal duties, reject unlawful concealment and pursue lawful protection or withdrawal as appropriate",
+          "Publish all confidential client information immediately"
+        ],
+        "answer": 1,
+        "why": "Confidentiality and loyalty coexist with duties to the court and opposing parties; concealment is not an authorized tactic.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-6-10",
+        "title": "Third-Year Final Examination — Counseling, negotiation and professional ethics portfolio",
+        "authority": "Governing state rules on current/former clients, confidentiality, client property, litigation fairness, mediation and settlement formation",
+        "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: A firm advises a corporation and two founders amid a disputed buyout. A witness email may be discoverable, the parties propose a mediated settlement, and an advance fee is disputed.",
+        "reading": "Identify the client or clients before accepting instructions from company directors. Analyze conflicts and client expectations under the adopted jurisdictional rules and determine whether informed consent or separate counsel is necessary. Distinguish privilege from ethical confidentiality and the underlying discoverability of facts. Counsel may not promise that mediation communication is protected by a universal state rule. Develop truthful negotiation positions and client counseling alternatives without misrepresenting material facts or determining settlement for the client. Assess whether a release waives rights that law prohibits waiving, and whether the engagement's fee terms and trust handling comply with applicable rules. Document steps to correct errors and consider permissible withdrawal while preserving client interests.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.",
+        "counterarguments": "Founders disagree over representation, release breadth and whether counsel may disclose a disputed client communication.",
+        "assignment": "FINAL EXAMINATION — Write a 2,000–2,500-word legal-ethics and counseling portfolio, intake documents, conflict matrix, engagement amendment, negotiation plan, release redlines and client letter. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
+        "question": "What must be settled before counsel acts for both sides of a founder dispute?",
+        "options": [
+          "That both founders have a common business objective",
+          "Identity of clients, conflicts, jurisdictional consentability and whether independent representation is required",
+          "Whether counsel prefers one founder's settlement number"
+        ],
+        "answer": 1,
+        "why": "Representation and conflict decisions precede substantive joint legal advice.",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Controlling issues and legal rules",
+              "points": 25,
+              "checks": [
+                "Identify each issue, jurisdiction, procedural standard and burden",
+                "Apply actual primary legal authority and current law"
+              ]
+            },
+            {
+              "label": "Factual analysis and professional work product",
+              "points": 30,
+              "checks": [
+                "Apply governing elements to supported and disputed facts",
+                "Produce required records, charts and legal documents"
+              ]
+            },
+            {
+              "label": "Counterarguments and alternatives",
+              "points": 15,
+              "checks": [
+                "Analyze substantial adverse arguments fairly",
+                "Provide alternative outcomes for at least two material fact changes"
+              ]
+            },
+            {
+              "label": "Citation accuracy and legal currency",
+              "points": 20,
+              "checks": [
+                "Verify statute, rule or opinion text and correct source type",
+                "Record subsequent treatment and any unresolved jurisdictional uncertainty"
+              ]
+            },
+            {
+              "label": "Clarity, remedy and ethical judgment",
+              "points": 10,
+              "checks": [
+                "Explain feasible remedies and deadlines without invented facts",
+                "Communicate uncertainty and professional limits"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What facts are supported, disputed or missing?",
+            "What controlling rules, forum and burdens apply?",
+            "What is the strongest argument for the opposing party?",
+            "How would two changed facts alter the remedy?"
+          ],
+          "commonErrors": [
+            "Unsupported primary-law citation or jurisdiction",
+            "Invented dispositive fact or number",
+            "Unanswered serious opposing argument",
+            "Failure to distinguish remedy from liability"
+          ]
+        },
+        "status": "draft—written final subject to qualified human legal review"
       }
     ]
   },
@@ -928,6 +1594,117 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Parallel obligations require source-specific deadlines, privilege safeguards and a coordinated but lawful action plan.",
         "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-7-8",
+        "title": "Multi-jurisdiction litigation coordination and settlement allocation",
+        "authority": "Federal and state procedure; applicable contract and product liability laws; settlement and contribution principles",
+        "scenario": "Three customers sue a manufacturer in different states, and a regulator issues a related inquiry while the business negotiates a global resolution.",
+        "reading": "Begin with a separate claim map for each customer, identifying parties, forum, contractual terms, alleged defect, limitations periods and remedial theories. A global strategy must not treat distinct state law as interchangeable. Determine whether any consolidation or coordination is procedurally available; multidistrict litigation can coordinate pretrial matters without guaranteeing a single trial or overriding substantive law. Assess how settlement allocation, insurance coverage and indemnity affect parties differently. Account for regulator obligations independently and avoid promising confidentiality that would defeat lawful disclosures. Build a damages reconciliation to prevent double recovery while preserving legitimate separate claims. Identify corporate approval authority and the risk of conflicting client interests if multiple entities or officers seek advice. Draft a global term sheet with contingencies if one plaintiff refuses to settle and a board briefing addressing incremental litigation exposure.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "Manufacturer favors a global payment cap; one claimant argues its injuries and governing law require distinct treatment.",
+        "assignment": "Prepare a multi-forum issue chart, claimant-specific damages table, global settlement term sheet, consent matrix and board advice memo. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "Why can a global settlement not simply assume one state's liability rules govern every claim?",
+        "options": [
+          "All states automatically apply the same product liability law",
+          "Different forums and choice-of-law rules may govern separate claims and remedies",
+          "A corporation's headquarters always controls every lawsuit"
+        ],
+        "answer": 1,
+        "why": "Coordination must respect each claim's governing law and procedural position.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-7-9",
+        "title": "Capstone portfolio rehearsal and examiner response",
+        "authority": "Governing ethical and procedural standards; independent source verification and course-specific authority",
+        "scenario": "A simulated general counsel submits a board memorandum based on an unverified court citation, incomplete loss estimate and missing regulatory timeline.",
+        "reading": "Treat the portfolio as a professional work product subject to falsifiable review rather than a general writing exercise. Identify each proposition relying on the doubtful case, obtain the actual primary opinion and check that its holding, court, date and jurisdiction fit the assertion; if verification fails, remove or qualify the proposition instead of inventing support. Rebuild financial analysis with inputs, ranges and missing documentation. Assemble a multi-forum deadline chronology from authentic process documents, including any uncertain trigger dates. Develop the best opposing theory and show how it affects the recommended remedy. Draft a revised board-facing summary that identifies what can be done now and which decisions require qualified specialist review. An examiner should evaluate legal issue coverage, factual analysis, counterarguments, primary-source accuracy and professional judgment separately and provide specific remediation. Passing a single multiple-choice question cannot certify the full work.\n\nDETAILED PRACTICE PROTOCOL: Establish the parties, governing jurisdiction, procedural posture and applicable date before choosing the rule. Build a fact-to-element table with columns for supporting evidence, adverse evidence, unknown inputs, burden and possible remedy. State the best legally grounded position for each party, then identify two fact changes that might alter the answer. Use authentic primary sources and check for later changes or controlling local authority. Written submissions must distinguish a sourced legal proposition from a plausible inference and explicitly disclose uncertainty. A qualified human examiner must review the result; a knowledge check is formative feedback, not a professional grade.",
+        "counterarguments": "A reviewer challenges the underlying precedent and calculations; student must correct and defend the reasoning instead of doubling down.",
+        "assignment": "Produce a revised 1,800-word general counsel memorandum, case-validation log, corrected financial scenario model, deadlines register and examiner response sheet. Include verified primary citations, adverse arguments, procedural assumptions, a two-outcome sensitivity analysis, and an evidence inventory for examiner review.",
+        "question": "What should the student do when a capstone relies on a case citation that cannot be verified?",
+        "options": [
+          "Retain it because the conclusion sounds persuasive",
+          "Check the actual primary opinion and remove or qualify unsupported propositions before submitting",
+          "Change the case name to a similar-sounding precedent"
+        ],
+        "answer": 1,
+        "why": "Professional legal research requires authentic sources and transparent correction of errors.",
+        "status": "draft—requires current-law review and qualified human assessment"
+      },
+      {
+        "id": "L4-7-10",
+        "title": "Third-Year Final Examination — Integrated general counsel capstone",
+        "authority": "Applicable civil, corporate, administrative, contract, privacy, insurance and professional-responsibility law by jurisdiction",
+        "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: A multinational manufacturer faces an accident, regulator demands, customer lawsuits in multiple forums, insurer reservations, a director conflict, sensitive cross-border data and an urgent board meeting.",
+        "reading": "Construct a master legal matter map that separates every party, forum, legal issue and deadline; never merge all claims into one generic rule. Identify immediate evidence preservation and safety requirements, regulator response obligations, insurance notices, authority to settle and cross-border data-transfer restrictions. Analyze what the board actually knew and separate known facts, reasonable inferences and unanswered questions. Build a damages and coverage model from specified inputs and label every estimate. Present two defensible strategic approaches, each with contingent decisions after new forensic or financial evidence. Propose a realistic corporate approval path, coordinated negotiation plan, disclosure review and ethical safeguards. Ensure that confidential or sensitive facts are handled appropriately and independently verify all legal authorities. The integrated work is a student portfolio, not a substitute for qualified practice.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.",
+        "counterarguments": "Shareholders demand transparency; customer counsel seeks remedies; insurer challenges coverage; regulator seeks timely records and leadership questions costs.",
+        "assignment": "FINAL EXAMINATION — Draft a 2,500–3,000-word general counsel capstone, board presentation outline, four-forum responsibility matrix, evidence preservation order, risk-adjusted remedies model and adversarial oral briefing. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
+        "question": "What makes a general counsel's integrated crisis recommendation professionally defensible?",
+        "options": [
+          "A single confident conclusion ignoring jurisdictional differences",
+          "Source-verified, forum-specific obligations, fact uncertainty, competing options and a documented decision path",
+          "A guarantee that one settlement ends every regulator and shareholder issue"
+        ],
+        "answer": 1,
+        "why": "Integrated legal practice requires coordinated strategy while preserving distinct legal duties and uncertainties.",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Controlling issues and legal rules",
+              "points": 25,
+              "checks": [
+                "Identify each issue, jurisdiction, procedural standard and burden",
+                "Apply actual primary legal authority and current law"
+              ]
+            },
+            {
+              "label": "Factual analysis and professional work product",
+              "points": 30,
+              "checks": [
+                "Apply governing elements to supported and disputed facts",
+                "Produce required records, charts and legal documents"
+              ]
+            },
+            {
+              "label": "Counterarguments and alternatives",
+              "points": 15,
+              "checks": [
+                "Analyze substantial adverse arguments fairly",
+                "Provide alternative outcomes for at least two material fact changes"
+              ]
+            },
+            {
+              "label": "Citation accuracy and legal currency",
+              "points": 20,
+              "checks": [
+                "Verify statute, rule or opinion text and correct source type",
+                "Record subsequent treatment and any unresolved jurisdictional uncertainty"
+              ]
+            },
+            {
+              "label": "Clarity, remedy and ethical judgment",
+              "points": 10,
+              "checks": [
+                "Explain feasible remedies and deadlines without invented facts",
+                "Communicate uncertainty and professional limits"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What facts are supported, disputed or missing?",
+            "What controlling rules, forum and burdens apply?",
+            "What is the strongest argument for the opposing party?",
+            "How would two changed facts alter the remedy?"
+          ],
+          "commonErrors": [
+            "Unsupported primary-law citation or jurisdiction",
+            "Invented dispositive fact or number",
+            "Unanswered serious opposing argument",
+            "Failure to distinguish remedy from liability"
+          ]
+        },
+        "status": "draft—written final subject to qualified human legal review"
       }
     ]
   }
