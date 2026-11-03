@@ -197,3 +197,12 @@ for(const course of courses){
  assert.ok(final.assignment.includes('Human evaluation required.'),'Human assessment boundary missing '+course.id);
 }
 console.log('PASS: 17 source-review tasks, five doctrine updates and seven final examiner controls are authored. The presence of text is not substantive legal review.');
+
+const taxDeadline=all.find(l=>l.id==='L3-5-9');
+assert.ok(taxDeadline,'Missing tax deadline lesson');
+for(const required of ['CURRENT-LAW CORRECTION','Culp v. Commissioner','Oquendo v. Commissioner','Buller v. Commissioner','Maniktala v. Commissioner','Kyick Holdings','CONTRASTING-HOLDINGS WORKSHOP']){
+ assert.ok(taxDeadline.reading.includes(required),'Tax deadline circuit split is incomplete: '+required);
+}
+assert.ok(taxDeadline.options[1].includes('controlling circuit law'),'Tax deadline multiple-choice answer must reflect circuit split');
+assert.ok(taxDeadline.answer===1,'Tax deadline correct answer changed');
+console.log('PASS: Section 6213(a) lesson includes the later appellate split and a jurisdiction-sensitive question. This does not establish that the cases remain good law.');
