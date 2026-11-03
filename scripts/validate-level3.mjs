@@ -206,3 +206,12 @@ for(const required of ['CURRENT-LAW CORRECTION','Culp v. Commissioner','Oquendo 
 assert.ok(taxDeadline.options[1].includes('controlling circuit law'),'Tax deadline multiple-choice answer must reflect circuit split');
 assert.ok(taxDeadline.answer===1,'Tax deadline correct answer changed');
 console.log('PASS: Section 6213(a) lesson includes the later appellate split and a jurisdiction-sensitive question. This does not establish that the cases remain good law.');
+
+for(const course of courses){
+ const final=course.lessons[9];
+ assert.ok(final.reading.includes('FINAL EXAM RESEARCH METHOD'),'Missing course-specific final exam teaching method '+course.id);
+ assert.ok(final.reading.trim().split(/\s+/).length>=240,'Final exam study guidance too brief '+course.id);
+ assert.ok(final.examRubric?.points===100,'Missing scored final rubric '+course.id);
+ assert.equal(final.examRubric.areas.reduce((sum,area)=>sum+area.points,0),100,'Final rubric points do not total 100 '+course.id);
+}
+console.log('PASS: seven course-specific final exam research methods, each at least 240 words, with 100-point rubrics. Human grading remains required.');
