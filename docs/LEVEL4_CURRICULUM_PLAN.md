@@ -153,3 +153,21 @@ Primary sources: https://www.law.cornell.edu/rules/frcp/rule_37 ; https://www.la
 Repository-content consistency checks passed: 70 unique lesson IDs, 70 distinct questions, eleven source-review markers, stable final rubrics, and no cloud migration performed. The complete Node CI suite, browser acceptance and qualified external academic sign-off are still **not confirmed**.
 
 **Technical blocker persists:** `law-firebase-cloud-v4.js` uses a fixed snapshot list including Level 3 but not Level 4. Do not add the key and automatically sync to legacy records without implementing and testing backward-compatible, nondestructive migration and conflict resolution.
+
+## Fifth authority batch — November 3, 2026
+
+Eight more scoped legal authority reviews were embedded into the relevant coursework (`eacdcccb`) and made regression-checkable (`ddbc0f9`). Total: **19 of 70 lessons with limited primary-source/model-rule checkpoints**. The new checks concern:
+- `L4-1-3`: Fed. R. Civ. P. 30(c)(2), directions not to answer; **Federal Evidence Rule 613(b) amendment effective December 1, 2024**. Specific federal foundation requirements must not be conflated with Texas or other state evidence rules.
+- `L4-1-5`: Fed. R. Civ. P. 68, formal offers of judgment and associated cost consequences, distinct from all settlement negotiations.
+- `L4-1-7`: Fed. R. Civ. P. 69, execution and related state-law procedures; an affiliate is not automatically liable for a corporate judgment.
+- `L4-1-8`: Fed. R. Civ. P. 16(e), **manifest injustice** standard for changes to a final pretrial order, distinguished from scheduling-order good cause.
+- `L4-1-9`: Fed. R. Civ. P. 51(c),(d), instruction requests, objections, definite trial rulings and issue preservation.
+- `L4-4-1`: 28 U.S.C. §1292(a)(1), interlocutory injunction appeal authority and limitations.
+- `L4-4-2`: Fed. R. App. P. 28(a),(e), brief jurisdiction statements, record references and standards of review.
+- `L4-6-7`: ABA Model Rule 4.1, material truthfulness and qualified nondisclosure duty; **state adoption remains to be checked**.
+
+Linked authority texts appear in each lesson's `sourceReview.sourceUrls`. These are bounded checks of selected propositions, **not** complete research on all doctrine in those lessons, academic sign-off, or a certified bar-preparation review.
+
+Repository-content consistency inspection preserved all 70 lesson IDs and distinct quiz questions, with 19 marked source checkpoints. The updated test script's JavaScript syntax was parse-checked with import-module syntax substituted for the parser environment, but the actual Node test suite, GitHub Actions and deployed iPhone/browser acceptance still have **not** been independently confirmed.
+
+The legacy `law-firebase-cloud-v4.js` remains unchanged; migration of Level 4 writing to Firebase is pending a backward-compatible conflict-safe design and real-device verification.
