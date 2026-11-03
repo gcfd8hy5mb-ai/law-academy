@@ -75,3 +75,12 @@ for(const id of workedPracticeIds){
 }
 assert.ok(ui.includes('l3worked')&&ui.includes('l3reveal'),'Worked practice must remain available only through the answer reveal workflow');
 console.log('PASS: seven detailed worked practice examples and self-assessment tasks are present.');
+
+const foundationWorkedIds=['L3-1-1','L3-2-1','L3-3-1','L3-4-1','L3-5-1','L3-6-1','L3-7-1'];
+for(const id of foundationWorkedIds){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson,'Missing foundational worked example '+id);
+ assert.ok(lesson.worked?.trim().split(/\s+/).length>=260,'Foundational worked example too brief '+id);
+ assert.ok(lesson.assignment.includes('200-word revision'),'Missing written revision activity '+id);
+}
+console.log('PASS: seven foundational case analyses and written revision assignments are present.');
