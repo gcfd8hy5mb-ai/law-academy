@@ -100,3 +100,24 @@ for(const [id,sourceFragment] of Object.entries(extendedChecks)){
 }
 assert.equal(all.filter(l=>l.sourceReview).length,11,'Expected exactly eleven documented targeted source checkpoints');
 console.log('PASS: eleven bounded primary-authority checkpoints; not a citator or full legal accuracy certification.');
+
+const newSourceReviewChecks={
+ 'L4-1-3':['frcp/rule_30','fre/rule_613'],
+ 'L4-1-5':['frcp/rule_68'],
+ 'L4-1-7':['frcp/rule_69'],
+ 'L4-1-8':['frcp/rule_16'],
+ 'L4-1-9':['frcp/rule_51'],
+ 'L4-4-1':['uscode/text/28/1292'],
+ 'L4-4-2':['frap/rule_28'],
+ 'L4-6-7':['model_rules_of_professional_conduct/rule_4_1_truthfulness_in_statements_to_others']
+};
+for(const [id,fragments] of Object.entries(newSourceReviewChecks)){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson?.sourceReview,'Dated source checkpoint absent '+id);
+ assert.equal(lesson.sourceReview.checkedAsOf,'2026-11-03','Incorrect source review date '+id);
+ assert.ok(lesson.sourceReview.scope.includes('no complete subsequent-treatment'),'Source review overclaim '+id);
+ for(const fragment of fragments)assert.ok(lesson.reading.includes(fragment)&&lesson.sourceReview.sourceUrls.some(u=>u.includes(fragment)),'Source mismatch '+id+': '+fragment);
+}
+assert.ok(all.find(l=>l.id==='L4-1-3').reading.includes('December 1, 2024'),'FRE 613(b) amendment timing missing');
+assert.equal(all.filter(l=>l.sourceReview).length,19,'Expected nineteen bounded source checkpoints');
+console.log('PASS: nineteen limited authority reviews documented. Neither a comprehensive citator check nor professional sign-off.');
