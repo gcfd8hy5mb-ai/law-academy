@@ -240,7 +240,16 @@ window.LAW_LEVEL4=[
             "Failure to distinguish remedy from liability"
           ]
         },
-        "status": "draft—written final subject to qualified human legal review"
+        "status": "draft—written final subject to qualified human legal review",
+        "workedGuide": {
+          "status": "provisional instructional comparison; not an official key or verified legal opinion",
+          "threshold": "Start with an exhibit-by-exhibit admissibility analysis, not a prediction of who should win the lawsuit.",
+          "analysis": "First distinguish the buyer's breach and causation theories from the defendant's mitigation and limitation-of-liability defenses. For the inconsistent witness, identify the exact inconsistent statements, their admissible uses, and any opportunity to explain. For the repaired component, ask whether a witness can authenticate its condition at the relevant time; repair may change the inference. For the expert, separate qualifications, data sufficiency, methodology reliability and application. Calculate lost profits as a supported measure of expected contribution margin, with avoided costs and mitigation explicitly treated. Under the relevant jury-instruction standard, identify requested element instructions and objections preserved in the record. After verdict, separate a renewed judgment-as-a-matter-of-law motion from a new-trial motion and from ordinary execution procedures.",
+          "counter": "The claimant can argue a combination of competent eyewitness, documentary, and expert evidence establishes causation and expected profit. The defendant can respond that repaired evidence, selected samples, disputed dates and unsupported revenue-to-profit assumptions break that chain. Neither view can be resolved without the underlying exhibits.",
+          "variations": "If the expert used an independently validated sampling protocol, the admissibility analysis may strengthen while the ultimate weight remains contested. If the supplier demonstrably obtained a substitute delivery at no additional cost, consequential lost-profit damages may shrink without resolving breach.",
+          "source": "Verify the operative text and amendments of FRE 103, 702, 803 and 901, FRCP 50, 51, 59 and 69, as well as jurisdiction-specific contract remedies and later judicial treatment. Do not characterize a trial court's Rule 702 burden as the appellate standard.",
+          "exemplar": "Sample provisional ruling: Admit only the portions of the recording authenticated by a witness with adequate knowledge; require an itemized foundation for the repaired component and evaluate each embedded out-of-court statement on its own. The expert's opinion remains subject to a separate Rule 702 gatekeeping determination. Reserve calculation of damages pending admissible support for costs avoided, causation and mitigation. This is a conditional teaching example, not an adjudication on an actual record."
+        }
       }
     ]
   },
@@ -484,7 +493,16 @@ window.LAW_LEVEL4=[
             "Failure to distinguish remedy from liability"
           ]
         },
-        "status": "draft—written final subject to qualified human legal review"
+        "status": "draft—written final subject to qualified human legal review",
+        "workedGuide": {
+          "status": "provisional instructional comparison; not an official key or verified legal opinion",
+          "threshold": "Split the criminal case into constitutional and procedural events; suppression, plea relief, sentencing objection and collateral review are not interchangeable remedies.",
+          "analysis": "Construct a dated sequence of the arrest, premises search, identification procedure, witness-benefit disclosure, plea offer, verdict, presentence report and later new evidence. Identify the authority for the search and the defendant's legitimate privacy interest before assessing exclusionary consequences. For the identification, separate suggestive law-enforcement arrangement from reliability and the actual record. Evaluate witness-benefit evidence under the applicable prosecution disclosure obligations, including timing and prejudice, without presuming perjury. For plea advice, record the precise offer, counsel's statements, defendant's response and the counterfactual chance of an accepted plea. At sentencing, require transaction-level support for the disputed loss amount. Finally distinguish direct appeal from the state and federal postconviction routes and research each specific limitation or exhaustion rule.",
+          "counter": "The government can argue there was a lawful search route, independently reliable identification and disclosure that permitted effective cross-examination. Defense can point to jurisdictionally material suppression evidence, suggestive police action, undisclosed incentives and prejudicial deficient plea advice. The applicable burdens vary by claim.",
+          "variations": "A properly issued warrant encompassing the disputed premises changes the search-scope dispute, not the separate identification or disclosure questions. A contemporaneously documented plea rejection for unrelated reasons may defeat causation even if counsel's advice was deficient.",
+          "source": "Check the controlling court and date for search, identification, Brady/Giglio, effective-assistance, sentencing and postconviction rules; identify whether the case is in state or federal court. Never invent a filing deadline or assume every new item is admissible on direct appeal.",
+          "exemplar": "Sample issue disposition: Order development of the search-warrant record and identification chronology; resolve disclosure materiality only after the witness-benefit communications and trial use are documented. Defer any plea-related remedy until the offer, advice and prejudice findings are established. Separately decide sentencing objections and the proper postconviction procedural gateway. No blanket dismissal or automatic retrial follows from the hypothetical alone."
+        }
       }
     ]
   },
@@ -728,7 +746,16 @@ window.LAW_LEVEL4=[
             "Failure to distinguish remedy from liability"
           ]
         },
-        "status": "draft—written final subject to qualified human legal review"
+        "status": "draft—written final subject to qualified human legal review",
+        "workedGuide": {
+          "status": "provisional instructional comparison; not an official key or verified legal opinion",
+          "threshold": "Identify deal structure, contracting entities, signed documents and the operative transaction date before applying any governance or remedy framework.",
+          "analysis": "Diagram the holding company, target, interested director, lender and seller. For the board conflict, establish material interest, disclosures, decision-maker independence, approval process and entity-specific law; do not assume a director's abstention cures the entire issue. Separate express warranties from covenants, closing conditions and post-closing indemnities. For changes in financing, examine allocation of risk and efforts obligations. For the data incident, build a factual triage and applicable-jurisdiction privacy research matrix, avoiding a universal notification threshold. For the earnout, use the actual definition, measurement period and operating covenant; create alternative formula-based calculations with variables for unknown inputs rather than invented financial results. Finally distinguish a specialized accountant's calculation mandate from a court's contract-interpretation role.",
+          "counter": "Seller may claim buyer-controlled operating decisions undercut the contractual payout and the buyer failed a promised efforts obligation. Buyer may cite express discretion, disclosed risks, unmet conditions and genuinely changed commercial circumstances. The signed terms and actual conduct must determine the result.",
+          "variations": "An express obligation to maintain the product line would strengthen the seller's claim compared with silence plus broad buyer discretion. Verified data exfiltration may trigger different contractual and legal duties than a false-positive alert.",
+          "source": "Verify contract governing law, relevant corporate statute at the transaction date, any applicable antitrust or privacy laws, and actual primary legal holdings on earnout or financing issues. No standard-form clause should be assumed to control.",
+          "exemplar": "Sample board recommendation: Do not authorize a definitive closing or post-closing litigation position until the interested-party process and agreement conditions are charted. Seek an evidence-backed financing status report, investigate the incident under the applicable data laws, and calculate competing earnout outcomes using contract-defined measures. Propose a documented settlement range without implying the matter is legally resolved."
+        }
       }
     ]
   },
@@ -972,7 +999,16 @@ window.LAW_LEVEL4=[
             "Failure to distinguish remedy from liability"
           ]
         },
-        "status": "draft—written final subject to qualified human legal review"
+        "status": "draft—written final subject to qualified human legal review",
+        "workedGuide": {
+          "status": "provisional instructional comparison; not an official key or verified legal opinion",
+          "threshold": "An appellate brief begins with jurisdiction, a live case, a reviewable order and preserved issues—not simply the best First Amendment theory.",
+          "analysis": "Identify the government restriction, forum, regulated speech, injunction sought and particular injury. Test standing and whether a policy change moots each requested remedy; voluntary cessation requires an actual legal inquiry rather than an assumption. Determine interlocutory appeal authority and the actual procedural deadline. Assign standards of review independently to legal conclusions, historical factual disputes and equitable orders. For the city claim, distinguish an officer's individual conduct from Monell's municipal policy or custom requirements. On qualified immunity, identify the relevant constitutional question and whether the appeal improperly asks the court to resolve disputed historical facts. For emergency relief, make a supported showing on stay factors and public impact rather than asserting that an appeal suspends the order.",
+          "counter": "The challenger can assert a live speech injury and insufficiently tailored restriction. The city may claim no live remedy remains after repeal, raise public-safety justifications and contest municipal attribution. Both must ground the legal standard in actual record facts.",
+          "variations": "A binding repeal and a firm bar on reenactment may weaken a prospective-injunction claim; an explicit reservation to reinstate the same policy may change the voluntary-cessation inquiry. A genuine uncontested policy directive may strengthen municipal attribution compared with a rogue employee act.",
+          "source": "Confirm current Article III jurisdiction doctrine, appellate deadlines, public-forum rules, section 1983 municipal liability, qualified-immunity appeal limits and stay procedures. Identify whether the dispute is federal or state before borrowing a procedural rule.",
+          "exemplar": "Sample judicial approach: Resolve appellate jurisdiction and mootness first. If a live reviewable issue remains, state which historical facts must be assumed at this stage and assess the speech restriction under the applicable forum framework. Do not resolve a contested trial fact on an interlocutory immunity appeal without authority. Tailor any remand or interim relief to the proven ongoing harm."
+        }
       }
     ]
   },
@@ -1216,7 +1252,16 @@ window.LAW_LEVEL4=[
             "Failure to distinguish remedy from liability"
           ]
         },
-        "status": "draft—written final subject to qualified human legal review"
+        "status": "draft—written final subject to qualified human legal review",
+        "workedGuide": {
+          "status": "provisional instructional comparison; not an official key or verified legal opinion",
+          "threshold": "Separate a regulator's authority to demand records, the employee's retaliation concern, the adjudicatory case and the board's oversight response.",
+          "analysis": "Identify the regulatory body, enabling statute, operator, subpoena type and response date. Test scope and relevance without assuming all requests are either valid or void. Establish a factual chain from test records to alleged violations, including who altered a result and when. For the whistleblower, identify the actual statute, protected activity, decision-maker knowledge, adverse action, exhaustion and causation requirements. For the licensing hearing, determine whether a federal or state APA applies, the relevant burden, notice, permitted evidence and review path. Draft corrective-action controls with named owners, verifiable tests, independent audit and exception escalation. Board oversight should be assessed from contemporaneous warnings and actual responses rather than a presumption of liability from regulatory noncompliance alone.",
+          "counter": "Agency may stress continuing safety risk and urgency; operator may contest statutory authority, sample quality or procedural fairness. The employee can allege a retaliatory chronology, while employer may present documented independent reasons for reassignment.",
+          "variations": "A warrant or subpoena issued under a clearly applicable statute may narrow the authority defense but not resolve overbreadth. A documented pre-complaint reorganization may change retaliation causation while leaving the underlying testing violation unresolved.",
+          "source": "Check the correct agency statute, federal or state administrative hearing rules, industry safety provisions, applicable retaliation statute and corresponding review periods. Do not invent enforcement powers or treat an informal request as an enforceable order.",
+          "exemplar": "Sample remediation order proposal: Preserve test records, provide lawfully required nonprivileged materials subject to specific objections, appoint an independent technical verifier and report measurable corrective steps by dates established in the applicable proceeding. Reserve contested licensing findings and retaliation relief until the corresponding evidentiary and jurisdictional requirements are satisfied."
+        }
       }
     ]
   },
@@ -1460,7 +1505,16 @@ window.LAW_LEVEL4=[
             "Failure to distinguish remedy from liability"
           ]
         },
-        "status": "draft—written final subject to qualified human legal review"
+        "status": "draft—written final subject to qualified human legal review",
+        "workedGuide": {
+          "status": "provisional instructional comparison; not an official key or verified legal opinion",
+          "threshold": "The most important first step is identifying each client, the representation scope and any conflict before selecting a negotiation position.",
+          "analysis": "Map the corporation, each founder, former clients and the firm. Determine who reasonably believes representation exists and what communications may be privileged; corporate privilege belongs to the organization for qualifying communications and is distinct from professional confidentiality. Evaluate current- and former-client conflicts, consentability and possible independent counsel under the jurisdiction's adopted ethics rules. For the disputed email, decide discoverability separately from privilege and forbid unsupported concealment. Review what negotiation assertions are known to be false, what may lawfully be kept confidential and how client instructions and withdrawal duties interact. In the mediated settlement, assess actual authority, formation, release scope, protections for statutory reporting and the legality of fee/trust-account treatment. Produce distinct client letters where interests diverge.",
+          "counter": "The founders may both want one firm to minimize cost, while a conflict or confidential adverse information makes joint advice untenable. One party may seek a broad confidentiality release while the other requires legally protected agency communication and accurate accounting.",
+          "variations": "An engagement letter clearly limiting representation to the corporation may alter a founder's reasonable expectation, though communications and other duties still need review. Evidence that the email was lawfully privileged changes production analysis; mere embarrassment does not.",
+          "source": "Locate the adopted state professional-conduct rules, local privilege and conflicts decisions, applicable settlement/mediation law, and trust-account requirements. ABA Model Rules are not themselves every jurisdiction's controlling rules.",
+          "exemplar": "Sample client advisory: Do not negotiate on behalf of both founders until client identity and conflicts are resolved. Preserve the disputed email and evaluate legitimate objections; decline any instruction to misstate material facts. Ask the client to authorize a narrow, lawful settlement proposal, with explicit preserved reporting rights and a documented fee accounting. Record when separate counsel or withdrawal is required."
+        }
       }
     ]
   },
@@ -1704,7 +1758,16 @@ window.LAW_LEVEL4=[
             "Failure to distinguish remedy from liability"
           ]
         },
-        "status": "draft—written final subject to qualified human legal review"
+        "status": "draft—written final subject to qualified human legal review",
+        "workedGuide": {
+          "status": "provisional instructional comparison; not an official key or verified legal opinion",
+          "threshold": "For an integrated general counsel assessment, one master chronology is useful, but every forum and party still needs its own legal issue map.",
+          "analysis": "Begin with a 72-hour triage: immediate safety and preservation measures, actual regulator response dates, civil litigation hold duties, insurer notice and board authority. Assign a responsible decision-maker and evidence owner to each item. Map separate customer claims, regulator powers, director conflicts, insurance coverage positions and foreign data-transfer restrictions. Check who holds privilege and how parallel proceedings affect waivers, especially where documents cross corporate entities. For each matter, identify statutory or contractual deadlines from an actual document, not a guessed clock. Create a scenario-based loss and coverage model with explicit assumptions; do not double count payment obligations or claim that the insurer will fund a settlement absent policy analysis. Present competing strategies with trigger points: verified systemic defect, limited isolated failure or inconclusive evidence.",
+          "counter": "Customers and regulator seek urgent disclosure and safety measures; insurer may reserve coverage while directors ask for an affordable settlement. Management may emphasize commercial harm from overdisclosure, but factual and legal duties constrain that position.",
+          "variations": "Verified multi-product failures can materially increase reporting and remediation urgency compared with a test artifact. A policy expressly requiring advance settlement consent changes the negotiation path even if liability analysis is unchanged.",
+          "source": "Verify each forum's governing statute or rule, applicable product law, insurance contract terms, corporate fiduciary standards and cross-border transfer restrictions. Outside qualified specialist review is mandatory for unresolved foreign-law questions in a real matter.",
+          "exemplar": "Sample board recommendation: Order preservation and targeted safety review immediately, preserve insurer notice rights, assign counsel to confirm regulatory obligations and deadlines, and authorize only a scoped negotiation process pending verified financial and technical results. Revisit disclosures, settlement authority and reserves when the two decisive tests return. State precisely which questions are unresolved rather than promising one global outcome."
+        }
       }
     ]
   }
