@@ -94,6 +94,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Lost-profit damages generally require a supported, causally linked net measure rather than unadjusted gross revenue.",
         "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-1-6",
+        "title": "Preserving appellate issues through trial",
+        "authority": "Federal Rules of Civil Procedure 46, 50, 51, 59 and 61; Federal Rules of Evidence 103 and 702",
+        "scenario": "In a complex products trial, counsel disputes a demonstrative chart, a disputed expert conclusion, and a proposed jury instruction. The judge rules orally but the record is ambiguous.",
+        "reading": "An appellate preservation plan begins during trial rather than after an adverse verdict. Identify the exact item, ground, ruling, party harmed, and relevant record citation. Under Evidence Rule 103, analyze whether an objection or offer of proof sufficiently informed the court of the issue and whether the ruling was definitive; do not assume a repeated objection is always necessary or never necessary. Under Civil Rule 51, distinguish an instruction request, objection, and plain-error issues. Rule 50 presents a distinct pathway to challenge evidentiary sufficiency; identify when the required motion is made and renewed. A Rule 59 motion for new trial asks different questions from a judgment-as-a-matter-of-law motion. Describe which procedural options may depend on local rules and current appellate authority. Construct a preservation matrix with alternative rulings: if the expert method is excluded, what proof remains; if the instruction is refused, how does that affect the jury's path to liability? Develop an accurate, contemporaneous trial record without asserting that every alleged error mandates reversal.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Appellant claims that the court's rulings prevented proof of causation; appellee contends the asserted errors were unpreserved or harmless.",
+        "assignment": "Draft a 1,200-word trial-preservation memorandum, objection scripts, a proposed jury-instruction objection, a Rule 50 decision tree, and a fact-to-record matrix. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "Which action is most likely to protect a trial evidentiary issue for appellate review?",
+        "options": [
+          "Wait until the appeal to identify the legal ground",
+          "Make the appropriate timely record, identify the specific ground and secure or clarify the ruling",
+          "Assume any unfavorable result automatically preserves every possible objection"
+        ],
+        "answer": 1,
+        "why": "Preservation depends on procedural timing, specific grounds, the trial record and the governing rule; appellate review is not a fresh trial.",
+        "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-1-7",
+        "title": "Enforcing judgments and challenging collection efforts",
+        "authority": "Federal Rules of Civil Procedure 62 and 69; state judgment-enforcement law; due process and applicable fraudulent-transfer statutes",
+        "scenario": "A plaintiff wins a monetary judgment against a corporation. The company has transferred assets, but a related entity asserts separate ownership and an exemption from execution.",
+        "reading": "Distinguish the existence of a judgment from the court's power to reach particular property. Federal Rule 69 generally makes state execution procedures relevant unless a federal statute governs; identify the enforcement forum and jurisdiction before issuing process. Construct an asset and ownership map that separates the judgment debtor, affiliates, directors and third-party creditors. A corporate affiliation is not itself proof that an affiliate owes the judgment. Assess whether transfers warrant investigation under applicable voidable-transaction law, including dates, consideration, insolvency indicators and the transferee's defenses. Analyze stays and bonds where appropriate, and distinguish ordinary collection discovery from a new claim imposing liability on a stranger to the judgment. Explain notice, opportunity to be heard, exemptions and priority rules. Draft a collection plan that does not direct unlawful account access or substitute suspicion for evidence. Compare negotiated installment payment and properly authorized enforcement, with clear assumptions about interest and collectible value.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Judgment creditor argues the transfer depleted reachable assets; transferee asserts valid consideration and separate legal identity.",
+        "assignment": "Prepare a judgment-enforcement flowchart, 1,300-word memorandum, asset/claimant chart, two alternative proposed orders and a settlement payment schedule. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What is a critical limit when collecting a corporate judgment?",
+        "options": [
+          "Every affiliate automatically becomes liable for the debtor's obligation",
+          "The judgment reaches property through lawful enforcement procedures and does not alone impose new liability on unrelated parties",
+          "Any allegation of asset transfer authorizes immediate seizure without notice"
+        ],
+        "answer": 1,
+        "why": "Execution, separate-entity liability, third-party rights and due process require distinct legal inquiries.",
+        "status": "draft—primary-law currency and qualified assessment pending"
       }
     ]
   },
@@ -191,6 +227,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Witness benefits can bear on bias and disclosure obligations without proving the witness's testimony false.",
         "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-2-6",
+        "title": "Sentencing records, mitigation and objections",
+        "authority": "Applicable federal or state sentencing law; Fed. R. Crim. P. 32; current sentencing guidelines if relevant",
+        "scenario": "A defendant faces sentencing based on a presentence report that attributes additional financial loss to the defendant, but the supporting spreadsheet has missing entries.",
+        "reading": "Sentencing advocacy is evidence-based rather than a request for a sympathetic outcome alone. Begin with conviction offenses, statutory ranges, disputed enhancement factors, burdens and any mandatory limitations. Distinguish the sentencing guideline calculation from the judge's ultimate statutory sentencing obligations when federal law applies; verify current guideline text and effective dates. Test the claimed loss against the record: what transactions are attributable to the offense, what proof supports the amount, and how are offsets treated under the governing rule? Do not fill spreadsheet gaps with a number that produces a desired guideline result. Prepare objections to the presentence report with supporting exhibits and proposed findings. Build an individualized mitigation record identifying verifiable history, restitution, treatment and employment considerations that are lawful and relevant. Explain that restitution, fines, forfeiture and incarceration serve different legal functions and may have separate statutory requirements. Counsel must describe potential collateral consequences and preserved appellate issues without guaranteeing a sentence.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Prosecution relies on the report's aggregate loss; defense challenges attribution and offers a supported alternative range.",
+        "assignment": "Draft a 1,300-word sentencing memorandum, corrected factual appendix, presentence-report objection, guideline issue log, and sentencing-hearing outline. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What should counsel do when a sentencing loss figure lacks supporting transaction data?",
+        "options": [
+          "Accept the estimate because it appears in the presentence report",
+          "Identify disputed inputs, governing standards, available records and request supported findings",
+          "Replace the figure with the defendant's preferred number"
+        ],
+        "answer": 1,
+        "why": "Sentencing decisions should rest on applicable law and a defensible evidentiary record rather than unsupported estimates.",
+        "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-2-7",
+        "title": "Postconviction review and procedural default",
+        "authority": "Direct-appeal rules; applicable postconviction statutes; Brady v. Maryland; governing procedural-default doctrine",
+        "scenario": "After conviction, a defendant uncovers a previously undisclosed interview note and wants the appellate court to hear new testimony immediately.",
+        "reading": "Start with the procedural posture and jurisdiction. A direct appeal ordinarily reviews the trial record; a new factual assertion may require a different procedure rather than attachment to an appellate brief. Identify whether the proposed claim is constitutional, statutory or based on newly discovered evidence and what limitations period, exhaustion rule and procedural gateway might apply. Separate the existence of favorable evidence from materiality, suppression and any prejudice requirement under the controlling doctrine. Ask when counsel learned of the interview note, which persons possessed it, whether the defendant had other access and what use at trial was possible. Analyze whether an evidentiary hearing is permitted and what threshold showing supports one. Do not assume a procedural default is automatically forgiven or that the rules are identical in state and federal collateral review. Draft two possible remedies: a request for further fact development and an alternative petition focused on the existing record. Provide an explicit client-risk explanation about deadlines and preservation.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Petitioner argues nondisclosure undermines confidence in the verdict; state disputes materiality and identifies alleged procedural barriers.",
+        "assignment": "Write a procedural-route map, 1,200-word postconviction issue memorandum, timeline of discovery, evidence proffer, and opposing judicial dispositions. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "Why might newly discovered evidence require a route different from an ordinary direct appeal?",
+        "options": [
+          "An appeal is always a completely new evidentiary trial",
+          "Direct review generally uses the existing record, while fact development depends on distinct postconviction rules",
+          "Any claim of new evidence automatically vacates a conviction"
+        ],
+        "answer": 1,
+        "why": "Appellate record limits, new-evidence procedures and procedural bars must be distinguished before choosing a remedy.",
+        "status": "draft—primary-law currency and qualified assessment pending"
       }
     ]
   },
@@ -288,6 +360,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Notification duties depend on applicable laws and verified incident details rather than the existence of an alert alone.",
         "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-3-6",
+        "title": "Board approval, fiduciary process and deal conflicts",
+        "authority": "Applicable Delaware corporate statutes, charter and fiduciary precedent; transaction-date corporate law",
+        "scenario": "A corporate director owns shares in the acquisition target and participates in negotiations despite a plan for independent director approval.",
+        "reading": "An acquisition approval process must identify the decision-makers, their economic interests, and the exact transaction date. Separate an actual director conflict from a merely alleged relationship and determine which legal framework applies to the entity and deal. A director's abstention, standing alone, does not answer whether negotiations, disclosure and review were appropriately conducted. Analyze board committee independence, access to advisors, price information, fairness opinions and alternative bids without claiming a fairness opinion guarantees an informed decision. Verify relevant statutory developments and effective dates rather than applying a contemporary statute retroactively. Build an authority chart distinguishing board approval, shareholder consent and any special committee powers. Prepare board minutes that accurately document uncertainty, options, material disclosures and reasons for the decision. Contrast a properly supervised independent negotiation with an insider-controlled process and evaluate how the applicable standard of review and potential remedies could change. Client counsel must avoid giving the interested director advice that conflicts with the corporate client's interests.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Buyer argues the board received complete facts and independent advice; minority shareholders challenge the director's role and disclosure timing.",
+        "assignment": "Draft a 1,400-word board-process memorandum, independence matrix, minutes outline, transaction-conflict disclosure and competing shareholder demand analyses. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What is the first question when evaluating an interested director's role in an acquisition?",
+        "options": [
+          "Whether the deal price later rose",
+          "Which governing entity law and transaction-date conflict procedures apply to the director's material interest",
+          "Whether the director abstained from the final vote, which always cures every issue"
+        ],
+        "answer": 1,
+        "why": "Conflict analysis depends on material interests, governing law, procedural safeguards and transaction-specific facts.",
+        "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-3-7",
+        "title": "Contract interpretation and post-closing dispute resolution",
+        "authority": "Governing contract law and forum-selection clause; earnout and implied-covenant provisions of signed agreement",
+        "scenario": "After closing, buyer and seller disagree whether a narrowly drafted earnout requires the buyer to keep operating an acquired product line.",
+        "reading": "Begin with the actual text of the earnout, definitions of revenue or EBITDA, measurement period, buyer operating covenants and dispute resolution mechanism. A hoped-for payout is not itself an express promise to pursue a particular operating strategy. Distinguish an express best-efforts obligation, a discretion clause and a possible implied covenant argument under governing law. Identify what the buyer changed, when it changed, why the change was made and what contemporaneous projections show. Prepare competing financial scenarios using explicit inputs rather than invented sales. Examine expert-accountant resolution clauses separately from claims that require judicial interpretation; some agreements give an accountant a narrow calculation mandate, not general power to decide legal disputes. Address notice, contractual deadlines, audit rights, records access and the interaction with indemnity procedures. Draft a measured demand that identifies alleged breach and evidence requested without asserting fraud from an unfavorable commercial decision alone. Propose improved language that could have reduced this dispute.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Seller argues deliberate operational changes deprived it of an expected earnout; buyer invokes retained business discretion and economic changes.",
+        "assignment": "Produce a two-sided earnout interpretation memo, contract redlines, financial sensitivity table, records request, and structured resolution proposal. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What determines whether a buyer breached an earnout operating covenant?",
+        "options": [
+          "The seller's expectation of a particular payment alone",
+          "The contract's express obligations, governing law, and supported facts about buyer conduct",
+          "Any decline in post-closing revenue"
+        ],
+        "answer": 1,
+        "why": "An earnout dispute requires interpreting agreed duties and evidence of conduct, not equating a low payout with breach.",
+        "status": "draft—primary-law currency and qualified assessment pending"
       }
     ]
   },
@@ -385,6 +493,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Reversal generally depends on the error's legal significance and its effect under the relevant review standard.",
         "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-4-6",
+        "title": "Standing, mootness and justiciability on appeal",
+        "authority": "Article III constitutional case-or-controversy doctrine; voluntary cessation and mootness precedents",
+        "scenario": "A state agency rescinds a challenged permit condition after a preliminary injunction appeal is filed, while reserving the ability to reinstate it.",
+        "reading": "Before arguing the merits, establish whether a federal court still has jurisdiction at the relevant appellate stage. Identify the plaintiff's injury, requested relief, current enforcement policy and whether a concrete dispute persists. A defendant's voluntary cessation of contested behavior does not automatically moot every challenge; analyze whether recurrence remains realistically possible under the controlling standard. Conversely, a merely speculative fear of future harm may not support prospective relief. Distinguish damages for past injury from injunctions against future conduct and determine which claims or parties remain live. Create a record-supported matrix showing formal repeal, policy statements, remaining penalties and the agency's legal power to reinstate the restriction. Discuss vacatur of the lower-court order only after identifying the cause of mootness and applicable equitable doctrine. Prepare a jurisdiction-first appellate brief that states where facts are disputed and what supplemental record procedures may be necessary. Avoid using mootness as an argument for the merits ruling the client hoped to receive.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Government argues no continuing restraint exists; challenger cites prior enforcement and agency authority to resume the challenged action.",
+        "assignment": "Draft a 1,200-word justiciability memorandum, requested-relief table, two mootness dispositions and a short moot court response. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What is central to a voluntary-cessation mootness analysis?",
+        "options": [
+          "Any policy revision automatically ends federal jurisdiction",
+          "Whether the challenged conduct could reasonably recur under the governing doctrine and what relief remains live",
+          "Whether the agency promises to win on the merits"
+        ],
+        "answer": 1,
+        "why": "Mootness asks whether an actual live controversy remains, including the legal consequences of voluntary cessation.",
+        "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-4-7",
+        "title": "Constitutional remedies and municipal liability",
+        "authority": "42 U.S.C. §1983; Monell v. Department of Social Services; governing constitutional and remedial doctrine",
+        "scenario": "A plaintiff alleges that city officers repeatedly used an unconstitutional arrest practice but the record contains only one documented incident and a disputed training memo.",
+        "reading": "Separate an individual officer's potentially unconstitutional conduct from a municipality's separate basis for liability. A city does not become liable under section 1983 solely because it employs an officer. Identify the asserted constitutional violation, any official policy, custom or final policymaker decision and the causal link required by the governing law. A single incident can raise complex questions about policymaker authority and deliberate indifference but cannot simply be renamed a widespread custom. Test the training memo for authorship, operative authority, implementation and actual impact. Analyze whether plaintiff has evidence of prior incidents, complaints, disciplinary action or notice sufficient to support an asserted failure-to-train theory under current precedent. Address qualified immunity, municipal liability and prospective relief in separate sections; a city cannot automatically borrow an individual's immunity defense. Prepare appropriate jury questions and a narrower remedy if only an individual violation is proved.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Plaintiff points to an official training choice; city argues the incident was unauthorized misconduct and no policy caused the harm.",
+        "assignment": "Draft a policy-or-custom evidence matrix, 1,300-word civil-rights memo, proposed jury interrogatories and two alternative judgments. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "Which statement most accurately describes municipal liability under Monell?",
+        "options": [
+          "Cities are automatically liable whenever a city employee violates the Constitution",
+          "A plaintiff needs a legally sufficient municipal policy or custom theory tied causally to the violation",
+          "Qualified immunity for an officer always extinguishes any municipal claim"
+        ],
+        "answer": 1,
+        "why": "Monell rejects respondeat superior liability and requires an attributable municipal basis for the constitutional injury.",
+        "status": "draft—primary-law currency and qualified assessment pending"
       }
     ]
   },
@@ -482,6 +626,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Specific, reasoned comments can help shape the record and frame later review issues.",
         "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-5-6",
+        "title": "Administrative hearing and agency evidence",
+        "authority": "Applicable state administrative procedure act, licensing statute, agency rules and constitutional due process",
+        "scenario": "A professional licensing board schedules a contested hearing and proposes revocation based on an anonymous complaint and business records of uncertain origin.",
+        "reading": "Determine whether the agency is conducting an adjudication rather than a general rulemaking and identify the governing jurisdiction. The licensing statute and procedural rules control notice, disclosure, hearing rights, burden of proof and any exceptions; do not assume federal civil trial rules apply automatically to a state agency. Analyze what property or liberty interest is implicated and what process is due in light of the nature of the deprivation and risk of error. Evaluate the anonymous complaint as a lead, a potentially admissible item, or insufficient proof depending on the applicable evidence standards. Trace each business record to a custodian, source system and disputed inference. Distinguish investigative staff, hearing officer, board decision-maker and avenues for reconsideration or review. Draft a hearing plan with witness order, stipulated uncontested facts, preservation of objections and precise proposed findings. Explain what remedies and stays could be available during administrative or judicial review without promising an automatic stay.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Board argues immediate consumer protection requires license action; professional contests the reliability of anonymous allegations and requests disclosure.",
+        "assignment": "Prepare a procedural-rights checklist, administrative hearing script, evidentiary objections, findings template and review-route memorandum. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What should counsel confirm before applying courtroom evidence rules to an agency licensing hearing?",
+        "options": [
+          "That every administrative hearing automatically follows the Federal Rules of Evidence",
+          "The governing agency statute, procedural rules, hearing type and due process requirements",
+          "That anonymous complaints conclusively establish licensing violations"
+        ],
+        "answer": 1,
+        "why": "Administrative adjudications are controlled by jurisdiction-specific procedural authority and applicable constitutional safeguards.",
+        "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-5-7",
+        "title": "Compliance monitoring, audits and remediation evidence",
+        "authority": "Applicable regulatory order and industry rules; contractually or legally required recordkeeping and audit standards",
+        "scenario": "A transportation company says it completed a promised corrective-action program, but internal auditors found missing testing logs and no designated owner for several tasks.",
+        "reading": "A credible remediation program is a set of verifiable controls rather than a presentation claiming success. Convert each binding order term into a measurable requirement, owner, due date, proof of completion and escalation path. Confirm which records are legally required to exist and how long they must be preserved. When logs are missing, distinguish a failure to perform a test from a failure to document a completed test; both may have consequences, but they are not the same factual proposition. Construct a sampling plan that can reveal systematic gaps without pretending a convenience sample represents all equipment. Prepare a transparent exception register with discovered date, root-cause hypothesis, corrective action, responsible person and retest evidence. Address employee incentives, whistleblower channels and independent verification so management does not mark an unchecked task complete. Draft a regulator update that accurately reports gaps and asks for lawful adjustments when needed instead of manufacturing records. Consider legal hold requirements if a dispute is foreseeable.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Regulator seeks verified completion; operator emphasizes substantial effort and disputes whether every gap violates the order.",
+        "assignment": "Create a 30/60/90-day audit plan, evidence-based compliance dashboard specification, exception register and two-sided agency status memo. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What is the strongest evidence that a corrective-action commitment was fulfilled?",
+        "options": [
+          "Management's general assurance without records",
+          "Traceable testing, responsible ownership, documented exceptions and independent verification",
+          "A statement that future incidents are impossible"
+        ],
+        "answer": 1,
+        "why": "Effective compliance depends on auditable performance, not simply asserted completion.",
+        "status": "draft—primary-law currency and qualified assessment pending"
       }
     ]
   },
@@ -579,6 +759,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Carefully defined scope and statutory constraints reduce invalid or misunderstood settlement terms.",
         "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-6-6",
+        "title": "Confidentiality, privilege and common-interest discussions",
+        "authority": "Attorney-client privilege, work-product doctrine, applicable common-interest law and professional-conduct rules",
+        "scenario": "Two separately represented companies consider sharing internal legal assessments during negotiations over a potential joint defense, but no agreement defines the exchange.",
+        "reading": "Distinguish privileged legal advice from underlying business facts and from attorney work product prepared for litigation. Sharing information with another company can create waiver questions; a claim of shared commercial incentives is not necessarily enough for common-interest protection under governing jurisdictional law. Identify who holds each privilege, the purpose and timing of the exchange, the legal interests purportedly aligned and the entities authorized to disclose. A written confidentiality or common-interest agreement may help define expectations but does not magically create a privilege that controlling law does not recognize. Evaluate whether the exchange serves a joint legal strategy or ordinary deal negotiations. Draft a data-sharing protocol with document categories, secure access, limits on forwarding and plans if interests diverge. Explain potential conflict and antitrust risks from sharing competitively sensitive business data. Counsel should also clarify what can be disclosed to independent directors, regulators or a court and how the client can make informed decisions.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Participants argue that they need candid legal planning; an opposing litigant asserts the exchange waived otherwise protected material.",
+        "assignment": "Prepare a privilege map, proposed common-interest term sheet, risk-ranked disclosure schedule and short client advice letter. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "Does signing a common-interest agreement automatically make exchanged business records privileged?",
+        "options": [
+          "Yes, any written agreement transforms ordinary facts into privilege",
+          "No; protection depends on underlying privilege, purpose, governing law and the nature of shared legal interests",
+          "Yes, whenever companies are negotiating the same transaction"
+        ],
+        "answer": 1,
+        "why": "Privilege cannot be created by label alone, and common-interest protection varies by jurisdiction and context.",
+        "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-6-7",
+        "title": "Negotiation ethics, truthfulness and client decisions",
+        "authority": "Applicable state professional rules including truthfulness in statements to others; Rules 1.2, 1.4, 1.6 and 4.1 as educational references",
+        "scenario": "In settlement talks, one attorney knows that a client witness's prior statement was materially inaccurate, while the client instructs counsel to say the evidence is undisputed.",
+        "reading": "Client loyalty does not authorize a lawyer to make knowingly false material factual statements. Separate permissible negotiation positions and value estimates from assertions about presently known facts. Identify exactly what the attorney knows about the prior statement, whether the evidence concerns a material fact, and whether correction is legally required or permitted within the client's confidentiality obligations. Do not assume the lawyer may reveal all confidential information; evaluate applicable ethics exceptions and the selected jurisdiction's adopted rules. Explain to the client the risks of a false representation, available truthful framing, and the need to withdraw from misconduct when required. Determine who has settlement authority and distinguish legal advice from the client's choice to accept an offer. Draft a negotiation script that accurately presents uncertainty and does not hide behind an invented evidentiary certainty. Build a decision tree for changing circumstances, including discovery of a merely mistaken memory versus knowledge of deliberate fabrication.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Client seeks leverage and privacy; opposing counsel demands a representation that the witness account has never changed.",
+        "assignment": "Draft a 1,100-word ethics memo, lawful negotiation script, client consultation outline and alternative response to a direct question about the statement. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "Which negotiation statement creates the clearest professional-conduct problem?",
+        "options": [
+          "A supported prediction about the trial result",
+          "Knowingly misrepresenting a material existing fact to opposing counsel",
+          "A good-faith estimate of settlement value"
+        ],
+        "answer": 1,
+        "why": "Ethical negotiation permits advocacy but not knowing material factual deception under the governing rules.",
+        "status": "draft—primary-law currency and qualified assessment pending"
       }
     ]
   },
@@ -676,6 +892,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Settlement planning must integrate policy language and separate forum duties instead of assuming payment.",
         "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-7-6",
+        "title": "Crisis management: insurance, directors and public disclosures",
+        "authority": "Governing securities disclosure and antifraud law when applicable; corporate fiduciary duties; regulatory reporting and insurance contracts",
+        "scenario": "After a safety investigation, executives consider public statements that describe defects as isolated, while an internal test suggests the problem may affect several product lines.",
+        "reading": "A corporate crisis response begins by distinguishing verified facts, preliminary findings, legal reporting triggers and reasonable areas of uncertainty. Determine whether the business is public or private, what disclosures are actually required and which persons control statements. Do not automatically apply securities reporting rules to a privately held company, nor treat uncertainty as permission for a known false assertion. Coordinate a legal investigation, product safety evaluation, insurance-notice inquiry and board reporting plan while preserving source records. Build a cross-functional timeline that traces when executives learned of the second test and what had already been communicated to regulators, customers and investors. Analyze how a broader defect could alter mitigation duties, contract claims, shareholder issues or settlement decisions. Draft statements that avoid unsupported assurances and clearly explain what additional tests are pending. Discuss confidentiality and privilege without assuming every internal email becomes protected by involving a lawyer. Provide two decision paths if the preliminary signal is disproved or confirmed.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Management wants a concise reassuring statement; directors and compliance staff worry that it understates a potentially material known risk.",
+        "assignment": "Prepare a 1,500-word general counsel crisis memo, board risk chronology, revised public statement, legal-hold plan and disclosure decision table. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What is a sound approach to a preliminary safety signal in a corporate public statement?",
+        "options": [
+          "Describe it as disproved when the investigation is incomplete",
+          "Separate established facts from open testing and apply actual reporting and truthfulness obligations",
+          "Assume every company must file identical securities disclosures"
+        ],
+        "answer": 1,
+        "why": "Accurate crisis communication depends on the entity's obligations, verified facts and appropriate disclosure of uncertainty.",
+        "status": "draft—primary-law currency and qualified assessment pending"
+      },
+      {
+        "id": "L4-7-7",
+        "title": "Integrated capstone rehearsal: competing legal deadlines",
+        "authority": "Applicable regulator-specific procedural law; civil discovery and preservation standards; insurance contract notices; corporate governance law",
+        "scenario": "A multinational corporation receives a short regulatory response deadline, a discovery preservation demand, an insurer's notice request and a request for urgent board advice on the same day.",
+        "reading": "Build a legal triage model that distinguishes hard deadlines, recommended internal milestones and tasks that need specialist confirmation. An agency notice can impose a different response window from a litigation discovery request; an insurance policy may have its own notice terms, and a board cannot waive duties imposed by statute. Create a dependency graph linking custodians, responsible legal specialists, decision authority and potential conflicts. Prioritize preservation and immediate safety measures without assuming every client document must be disclosed to all requesters. Identify which records are privileged, factual or regulated personal data under the applicable forum. Provide alternatives when the company cannot simultaneously complete all requests: lawful extension requests, protective relief, staged submissions and transparent status updates. Construct a simple risk register separating probability judgments from known legal requirements; do not invent legal deadlines or monetary exposures. The exercise must integrate legal doctrine, negotiation, client counseling and operational execution while acknowledging limits of the student role.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.",
+        "counterarguments": "Agency urges immediate submission; litigation counsel seeks broad preservation; insurer conditions potential coverage on prompt notice; board wants a single confident answer.",
+        "assignment": "Prepare a 72-hour action plan, four-forum deadline matrix, counsel responsibility chart, document-preservation notice, and 1,500-word board briefing with contingency options. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
+        "question": "What should counsel do first when several legal deadlines and preservation duties arise together?",
+        "options": [
+          "Assume one deadline replaces all the others",
+          "Verify each source of obligation, preserve relevant evidence and triage independently required actions",
+          "Send every confidential document to every requester without review"
+        ],
+        "answer": 1,
+        "why": "Parallel obligations require source-specific deadlines, privilege safeguards and a coordinated but lawful action plan.",
+        "status": "draft—primary-law currency and qualified assessment pending"
       }
     ]
   }
