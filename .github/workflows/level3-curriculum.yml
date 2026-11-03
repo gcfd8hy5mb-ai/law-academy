@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - 'level3.js'
+      - 'level4.js'
+      - 'level4-ui.js'
+      - 'scripts/validate-level4.mjs'
       - 'level3-ui.js'
       - 'app.js'
       - 'index.html'
@@ -13,6 +16,9 @@ on:
   pull_request:
     paths:
       - 'level3.js'
+      - 'level4.js'
+      - 'level4-ui.js'
+      - 'scripts/validate-level4.mjs'
       - 'level3-ui.js'
       - 'app.js'
       - 'index.html'
@@ -36,9 +42,14 @@ jobs:
         run: |
           node --check level3.js
           node --check level3-ui.js
+          node --check level4.js
+          node --check level4-ui.js
+          node --check scripts/validate-level4.mjs
           node --check scripts/validate-level3.mjs
       - name: Curriculum structural regression tests
-        run: node scripts/validate-level3.mjs
+        run: |
+          node scripts/validate-level3.mjs
+          node scripts/validate-level4.mjs
       - name: Human review boundary
         run: |
           echo 'Automated structure tests do not verify legal currency, case treatment, academic comparability, or bar eligibility.'
