@@ -31,3 +31,13 @@ test('Firebase v4 bootstraps the cloud-account interface without writing student
  ]));
  await expect(page.locator('#law-cloud-startup-warning')).toHaveCount(0);
 });
+
+test('Firebase v4 load errors stay visible without modifying local progress',async({page})=>{
+ await page.addInitScript(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Keep this writing'}})));
+ await page.route('https://www.gstatic.com/firebasejs/11.10.0/**',route=>route.abort('failed'));
+ await page.goto('/');
+ await expect(page.locator('#law-cloud-launch')).toContainText('Cloud Load Error v4');
+ await expect(page.locator('#law-cloud-startup-warning')).toContainText('Cloud v4 failed');
+ const saved=await page.evaluate(()=>localStorage.getItem('law-academy-level3-v1'));
+ expect(JSON.parse(saved)['L3-1-1'].draft).toBe('Keep this writing');
+});
