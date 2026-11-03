@@ -185,7 +185,63 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
-        "status": "draft—requires primary-source currency review and qualified assessment"
+        "status": "draft—requires primary-source currency review and qualified assessment",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Issue spotting and governing legal standards",
+              "points": 25,
+              "checks": [
+                "Identify each offered exhibit, purpose, and objection",
+                "Separate hearsay layers, Rule 805 and documented exceptions"
+              ]
+            },
+            {
+              "label": "Application to disputed facts and calculations",
+              "points": 30,
+              "checks": [
+                "Evaluate Rule 901 foundation, Rule 403 dangers and Rule 105 limits",
+                "Apply amended Rule 702 reliability requirements and Rule 104(a) gatekeeping"
+              ]
+            },
+            {
+              "label": "Counterarguments and fact variations",
+              "points": 15,
+              "checks": [
+                "Address the strongest adverse position",
+                "Analyze all three prescribed fact changes"
+              ]
+            },
+            {
+              "label": "Primary source accuracy and jurisdiction",
+              "points": 20,
+              "checks": [
+                "Verify each controlling statute, rule or decision for jurisdiction and date",
+                "Check later treatment, procedural posture, and citation precision"
+              ]
+            },
+            {
+              "label": "Organization, judgment and professional clarity",
+              "points": 10,
+              "checks": [
+                "Analyze impeachment, preservation and alternative rulings",
+                "Communicate a qualified conclusion, missing facts, and actionable next steps"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What does the cropped video actually establish about the accident time?",
+            "Whose statement is repeated in the chart, and why is each layer offered?",
+            "What methods, underlying samples, and omitted tests support the expert opinion?",
+            "Which objections and offers of proof must appear on the trial record?"
+          ],
+          "commonErrors": [
+            "Admitting an embedded assertion because the outer document is a business record",
+            "Treating all expert reliability weaknesses as weight-only",
+            "Treating later footage as indisputable proof of earlier conditions"
+          ]
+        }
       }
     ]
   },
@@ -374,7 +430,63 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
-        "status": "draft—requires primary-source currency review and qualified assessment"
+        "status": "draft—requires primary-source currency review and qualified assessment",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Issue spotting and governing legal standards",
+              "points": 25,
+              "checks": [
+                "Distinguish the CEO's actual and apparent contract authority",
+                "Apply Delaware interested-party transaction rules to correct effective dates"
+              ]
+            },
+            {
+              "label": "Application to disputed facts and calculations",
+              "points": 30,
+              "checks": [
+                "Analyze board disinterest, independence, disclosure and loyalty",
+                "Distinguish direct and derivative claims and demand futility"
+              ]
+            },
+            {
+              "label": "Counterarguments and fact variations",
+              "points": 15,
+              "checks": [
+                "Address the strongest adverse position",
+                "Analyze all three prescribed fact changes"
+              ]
+            },
+            {
+              "label": "Primary source accuracy and jurisdiction",
+              "points": 20,
+              "checks": [
+                "Verify each controlling statute, rule or decision for jurisdiction and date",
+                "Check later treatment, procedural posture, and citation precision"
+              ]
+            },
+            {
+              "label": "Organization, judgment and professional clarity",
+              "points": 10,
+              "checks": [
+                "Separate LLC asset transfer theories and available remedies",
+                "Communicate a qualified conclusion, missing facts, and actionable next steps"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What manifestations did the corporation make to the vendor?",
+            "Which material facts were disclosed to which decision-makers, and when?",
+            "Which directors would evaluate demand and what interests affect independence?",
+            "Is there a distinct voidable transfer, direct tort, or veil-piercing claim?"
+          ],
+          "commonErrors": [
+            "Assuming a director's abstention alone resolves loyalty conflicts",
+            "Equating a drop in share value with a direct shareholder injury",
+            "Treating LLC owners as automatically liable for entity debts"
+          ]
+        }
       }
     ]
   },
@@ -563,7 +675,63 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
-        "status": "draft—requires primary-source currency review and qualified assessment"
+        "status": "draft—requires primary-source currency review and qualified assessment",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Issue spotting and governing legal standards",
+              "points": 25,
+              "checks": [
+                "Identify statutory fee authority and rule legal effect",
+                "Apply APA § 553, exceptions and effective-date requirements"
+              ]
+            },
+            {
+              "label": "Application to disputed facts and calculations",
+              "points": 30,
+              "checks": [
+                "Explain statutory interpretation under Loper Bright and § 706",
+                "Analyze standing, finality and the administrative record separately"
+              ]
+            },
+            {
+              "label": "Counterarguments and fact variations",
+              "points": 15,
+              "checks": [
+                "Address the strongest adverse position",
+                "Analyze all three prescribed fact changes"
+              ]
+            },
+            {
+              "label": "Primary source accuracy and jurisdiction",
+              "points": 20,
+              "checks": [
+                "Verify each controlling statute, rule or decision for jurisdiction and date",
+                "Check later treatment, procedural posture, and citation precision"
+              ]
+            },
+            {
+              "label": "Organization, judgment and professional clarity",
+              "points": 10,
+              "checks": [
+                "Assess reasoned explanation, prejudice and tailored relief",
+                "Communicate a qualified conclusion, missing facts, and actionable next steps"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "Does the message bind licensees or simply interpret an existing obligation?",
+            "What contemporaneous findings support a good-cause exception?",
+            "Which petitioner suffered what concrete injury and when?",
+            "What relief is justified if only procedure, not statutory power, is defective?"
+          ],
+          "commonErrors": [
+            "Applying Chevron deference after Loper Bright",
+            "Assuming an agency's 'emergency' label alone establishes good cause",
+            "Skipping jurisdiction or remedy because a procedure appears flawed"
+          ]
+        }
       }
     ]
   },
@@ -752,7 +920,63 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
-        "status": "draft—requires primary-source currency review and qualified assessment"
+        "status": "draft—requires primary-source currency review and qualified assessment",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Issue spotting and governing legal standards",
+              "points": 25,
+              "checks": [
+                "Identify each client, interview role and confidentiality duty",
+                "Separate concurrent and former-client conflicts and consentability"
+              ]
+            },
+            {
+              "label": "Application to disputed facts and calculations",
+              "points": 30,
+              "checks": [
+                "Analyze false affidavit duties and corrective measures",
+                "Evaluate fabricated citations, supervision and tribunal candor"
+              ]
+            },
+            {
+              "label": "Counterarguments and fact variations",
+              "points": 15,
+              "checks": [
+                "Address the strongest adverse position",
+                "Analyze all three prescribed fact changes"
+              ]
+            },
+            {
+              "label": "Primary source accuracy and jurisdiction",
+              "points": 20,
+              "checks": [
+                "Verify each controlling statute, rule or decision for jurisdiction and date",
+                "Check later treatment, procedural posture, and citation precision"
+              ]
+            },
+            {
+              "label": "Organization, judgment and professional clarity",
+              "points": 10,
+              "checks": [
+                "Recommend lawful remediation, withdrawal and client communication",
+                "Communicate a qualified conclusion, missing facts, and actionable next steps"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "Did the CEO have a reasonable basis to think counsel represented the CEO individually?",
+            "What facts trigger Rule 1.13(f) warnings or escalation?",
+            "What must counsel do before and after discovering an actually false filing?",
+            "Which state-specific rules govern, rather than ABA model rules automatically?"
+          ],
+          "commonErrors": [
+            "Assuming any conflict is cured by a signed waiver",
+            "Disclosing every suspected falsehood without checking confidentiality exceptions",
+            "Treating machine-generated citations as authorities without verification"
+          ]
+        }
       }
     ]
   },
@@ -941,7 +1165,63 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
-        "status": "draft—requires primary-source currency review and qualified assessment"
+        "status": "draft—requires primary-source currency review and qualified assessment",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Issue spotting and governing legal standards",
+              "points": 25,
+              "checks": [
+                "Characterize disposition and compute documented adjusted basis",
+                "Distinguish amount realized, realized gain and recognized gain"
+              ]
+            },
+            {
+              "label": "Application to disputed facts and calculations",
+              "points": 30,
+              "checks": [
+                "Apply installment eligibility, contract price, interest and timing",
+                "Test wash-sale timing, substantially identical property and loss limits"
+              ]
+            },
+            {
+              "label": "Counterarguments and fact variations",
+              "points": 15,
+              "checks": [
+                "Address the strongest adverse position",
+                "Analyze all three prescribed fact changes"
+              ]
+            },
+            {
+              "label": "Primary source accuracy and jurisdiction",
+              "points": 20,
+              "checks": [
+                "Verify each controlling statute, rule or decision for jurisdiction and date",
+                "Check later treatment, procedural posture, and citation precision"
+              ]
+            },
+            {
+              "label": "Organization, judgment and professional clarity",
+              "points": 10,
+              "checks": [
+                "Analyze capitalization, placed-in-service timing and tax-year law",
+                "Communicate a qualified conclusion, missing facts, and actionable next steps"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "How does note value and a contingent payment affect calculations?",
+            "Which gains might be eligible for installment reporting and which are not?",
+            "What exact dates and securities support or defeat a wash-sale determination?",
+            "Which depreciation regime applies to a production line in this tax year?"
+          ],
+          "commonErrors": [
+            "Assuming every promissory note equals cash received",
+            "Applying installment treatment automatically to all property",
+            "Claiming depreciation on equipment merely ordered, but not placed in service"
+          ]
+        }
       }
     ]
   },
@@ -1130,7 +1410,63 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
-        "status": "draft—requires primary-source currency review and qualified assessment"
+        "status": "draft—requires primary-source currency review and qualified assessment",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Issue spotting and governing legal standards",
+              "points": 25,
+              "checks": [
+                "Build an evidence-linked lost-profit and mitigation model",
+                "Analyze preliminary relief under applicable injunction standards"
+              ]
+            },
+            {
+              "label": "Application to disputed facts and calculations",
+              "points": 30,
+              "checks": [
+                "Specify narrowly tailored restraints and Rule 65 safeguards",
+                "Separate settlement enforcement jurisdiction from merits liability"
+              ]
+            },
+            {
+              "label": "Counterarguments and fact variations",
+              "points": 15,
+              "checks": [
+                "Address the strongest adverse position",
+                "Analyze all three prescribed fact changes"
+              ]
+            },
+            {
+              "label": "Primary source accuracy and jurisdiction",
+              "points": 20,
+              "checks": [
+                "Verify each controlling statute, rule or decision for jurisdiction and date",
+                "Check later treatment, procedural posture, and citation precision"
+              ]
+            },
+            {
+              "label": "Organization, judgment and professional clarity",
+              "points": 10,
+              "checks": [
+                "Address preclusion and alternative remedies without double recovery",
+                "Communicate a qualified conclusion, missing facts, and actionable next steps"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "Which variable costs were avoided during the interruption?",
+            "What evidence of ongoing misuse supports irreparable harm?",
+            "What exact acts would an injunction prohibit and for how long?",
+            "Did the dismissal incorporate the settlement or retain enforcement jurisdiction?"
+          ],
+          "commonErrors": [
+            "Equating gross revenue loss with lost profit",
+            "Assuming liability automatically warrants a broad employment injunction",
+            "Assuming federal settlement enforcement jurisdiction always survives dismissal"
+          ]
+        }
       }
     ]
   },
@@ -1319,7 +1655,63 @@ window.LAW_LEVEL3=[
         ],
         "answer": 1,
         "why": "A multiple-choice checkpoint does not evaluate the independent written final.",
-        "status": "draft—requires primary-source currency review and qualified assessment"
+        "status": "draft—requires primary-source currency review and qualified assessment",
+        "examRubric": {
+          "points": 100,
+          "areas": [
+            {
+              "label": "Issue spotting and governing legal standards",
+              "points": 25,
+              "checks": [
+                "Analyze cell-phone search separately from seizure and arrest",
+                "Distinguish Miranda custody, interrogation, waiver and voluntariness"
+              ]
+            },
+            {
+              "label": "Application to disputed facts and calculations",
+              "points": 30,
+              "checks": [
+                "Apply the post-charge Sixth Amendment deliberate-elicitation framework",
+                "Identify material impeachment disclosure and timing obligations"
+              ]
+            },
+            {
+              "label": "Counterarguments and fact variations",
+              "points": 15,
+              "checks": [
+                "Address the strongest adverse position",
+                "Analyze all three prescribed fact changes"
+              ]
+            },
+            {
+              "label": "Primary source accuracy and jurisdiction",
+              "points": 20,
+              "checks": [
+                "Verify each controlling statute, rule or decision for jurisdiction and date",
+                "Check later treatment, procedural posture, and citation precision"
+              ]
+            },
+            {
+              "label": "Organization, judgment and professional clarity",
+              "points": 10,
+              "checks": [
+                "Separate admissibility of statements, physical evidence and remedies",
+                "Communicate a qualified conclusion, missing facts, and actionable next steps"
+              ]
+            }
+          ],
+          "examinerQuestions": [
+            "What precisely was searched, when, and under which asserted exception?",
+            "Were police comments reasonably likely to elicit an incriminating response?",
+            "Did the informant act as a government agent after the right attached?",
+            "When did prosecutors know of the payment and when could defense use it?"
+          ],
+          "commonErrors": [
+            "Assuming arrest permits a full phone-content search without a warrant",
+            "Conflating an unwarned but voluntary statement with coercion",
+            "Treating every undisclosed payment as automatic case dismissal"
+          ]
+        }
       }
     ]
   }
