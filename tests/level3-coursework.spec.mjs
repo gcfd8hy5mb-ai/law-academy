@@ -240,3 +240,27 @@ test('Stale capstone editing does not replace newer saved section',async({page})
  const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
  expect(stored['L3-CAP-0'].draft).toBe('Newer capstone from another tab');
 });
+
+test('Level 3 quiz completion does not overwrite a newer draft in the same lesson',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Newer draft in another tab'}})));
+ await page.locator('input[name="l3choice"]').first().check();
+ await page.locator('#l3check').click();
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(saved['L3-1-1'].draft).toBe('Newer draft in another tab');
+ expect(typeof saved['L3-1-1'].correct).toBe('boolean');
+});
+test('Level 3 saves only changed fields rather than replacing another tab progress',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-2-1':{draft:'Recently edited other course',correct:true}})));
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await page.locator('#l3draft').fill('New answer in this course');
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(saved['L3-2-1']).toEqual({draft:'Recently edited other course',correct:true});
+ expect(saved['L3-1-1'].draft).toBe('New answer in this course');
+});
