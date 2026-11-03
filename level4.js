@@ -58,6 +58,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Federal deposition rules limit instructions not to answer and discourage speaking objections.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L4-1-4",
+        "title": "Trial exhibits, objections and jury instructions",
+        "authority": "Federal Rules of Evidence 401–403, 602, 701–703, 801–805 and 901; Federal Rules of Civil Procedure 51",
+        "scenario": "A defective-valve trial involves a repaired component, an engineer's reconstruction, and a witness who heard an account from a shift manager.",
+        "reading": "For every proposed exhibit, first identify the inference that counsel wants the jury to draw and the link in the chain of proof. Authentication establishes that an item is what its proponent claims, but does not automatically resolve hearsay, relevance or reliability. The repaired component may require chain-of-custody testimony and a documented comparison to its earlier state. Distinguish a witness's firsthand observations from a secondhand narrative about the accident; analyze each statement separately for hearsay and any exception. For the engineer, determine qualifications, sufficient data, reliable principles and reliable application under current Rule 702, rather than assuming credentials settle admissibility. Rule 403 objections must identify a genuine risk of unfair prejudice, confusion or waste rather than general disagreement. Build proposed jury instructions from actual elements and burdens and preserve objections under Rule 51. Do not tell a jury that a lawyer's argument is evidence. If an exhibit is excluded, consider an accurate offer of proof and the standard for appellate review. Compare a full admission, a limited-purpose admission and exclusion on a disputed foundation.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "The plaintiff emphasizes that the repaired valve and engineer explain causation; the defense challenges changed conditions, hearsay foundations and the method's sensitivity.",
+        "assignment": "Draft a ten-item exhibit chart with purpose and objections, three proposed rulings, two jury instructions, a 1,200-word trial memo and an appellate preservation checklist. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "What does authentication under Rule 901 establish about offered evidence?",
+        "options": [
+          "It guarantees the evidence is reliable and admissible for every purpose",
+          "There is sufficient support to find the item is what its proponent claims, with other objections still open",
+          "It replaces the need for firsthand testimony and hearsay analysis"
+        ],
+        "answer": 1,
+        "why": "Authentication addresses identity; admissibility may still depend on relevance, hearsay, expert and other evidentiary rules.",
+        "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-1-5",
+        "title": "Settlement conferences, offers and trial risk",
+        "authority": "Federal Rule of Civil Procedure 68 where applicable; governing contract damages law; applicable court settlement rules",
+        "scenario": "A plaintiff demands the full projected revenue of a cancelled contract, while the defendant offers a smaller sum tied to documentary proof of lost profit.",
+        "reading": "Begin with a realistic damages model rather than attaching a single probability to winning. Separate gross receipts, costs avoided, incremental contribution margin, mitigation expenses and contract limitation clauses. Document which components could be proved by competent evidence. Explore liability risk and collection risk independently: a favorable verdict is not the same as receiving payment. Identify who has actual settlement authority and whether a client needs insurer or board approval. Rule 68 has particular scope and cost consequences; do not assume it applies identically to a defendant's offer or to all fee-shifting claims. Prepare a confidentiality and enforcement analysis for any proposed terms, including release scope, payment schedule, default, retained jurisdiction and appropriate dismissal language. A judge or mediator may facilitate discussion but does not replace the client's informed choice. Model how a newly discovered substitute supplier affects mitigation and the recommended range. Use ranges with transparent assumptions, not fabricated certainty.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Claimant values prospective business losses; defendant argues the lost-profit projection ignores variable costs and substitute work.",
+        "assignment": "Build a three-scenario damages worksheet with variables, two settlement term sheets, a client risk letter and a 1,000-word judicial settlement-conference statement. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "What is the first adjustment when estimating lost profits for a failed delivery contract?",
+        "options": [
+          "Treat total projected revenue as profit",
+          "Identify avoided costs and mitigation while connecting claimed loss to provable causation",
+          "Ignore the contract and accept the party's preferred forecast"
+        ],
+        "answer": 1,
+        "why": "Lost-profit damages generally require a supported, causally linked net measure rather than unadjusted gross revenue.",
+        "status": "draft—legal currency and qualified human review pending"
       }
     ]
   },
@@ -119,6 +155,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Prejudice must be connected to the plea process and a plausible different result, not regret alone.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L4-2-4",
+        "title": "Witness identification, confrontation and trial preparation",
+        "authority": "Due Process Clause; Perry v. New Hampshire; Manson v. Brathwaite; Sixth Amendment confrontation law",
+        "scenario": "A government eyewitness first described a tall stranger but later selected a suspect in a one-person identification arranged by officers.",
+        "reading": "Separate the witness's actual opportunity to observe from the procedures used by police to elicit an identification. Create a timeline of the first description, subsequent exposure to the suspect, any suggestive police actions and the final identification. The due-process screening of identifications involves particular attention to improper law-enforcement arrangement and reliability; not every unreliable identification is automatically excluded under the same constitutional test. Evaluate lighting, duration, attention, description accuracy, certainty at the relevant time and time between the event and identification, without falsely treating witness confidence as infallible science. Identify possible motions, evidentiary objections, expert testimony and instructions subject to governing jurisdiction. Counsel must prepare examination fairly without coaching a witness to change an account. For confrontation, distinguish in-court witness examination from an unavailable declarant's testimonial out-of-court statement; one doctrine does not replace the other. Prepare a neutral chronology before choosing an adversarial position.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Prosecution emphasizes the eyewitness's proximity; defense focuses on a one-person procedure and inconsistencies in the original description.",
+        "assignment": "Draft a hearing motion, direct and cross-examination outlines, an identification reliability chart and proposed jury instruction with state-law caveats. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "Which issue matters in assessing a police-arranged identification procedure?",
+        "options": [
+          "Any witness uncertainty automatically makes an identification unconstitutional",
+          "Whether improper police suggestion occurred and how the applicable reliability and due-process standards apply",
+          "The officer's sincere belief that the suspect was guilty"
+        ],
+        "answer": 1,
+        "why": "Constitutional screening requires the proper due-process framework, not a conclusory claim about witness confidence.",
+        "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-2-5",
+        "title": "Charging discretion, Brady disclosure and trial ethics",
+        "authority": "Brady v. Maryland; Giglio v. United States; applicable criminal disclosure and professional-conduct rules",
+        "scenario": "An assistant prosecutor learns that a key witness received travel reimbursement and a promise of future assistance but the file sent to defense counsel omits the arrangement.",
+        "reading": "Distinguish favorable exculpatory evidence from impeachment material, both of which can matter to the defense. Record the witness benefits precisely and identify who knew, when disclosure was made, and what the defense could still accomplish before trial. Prosecutorial ethical and procedural duties may require disclosure beyond constitutional materiality floors; research the governing criminal procedural rules and jurisdiction. A reimbursement is not automatically a corrupt bargain, and the existence of a benefit does not establish that testimony is false, but the jury may need to evaluate potential bias. Develop a remediation plan: preserve all communications, consult supervisors, provide required disclosures, evaluate continuance or other remedies and avoid making inaccurate representations to the court. Analyze the materiality question for postconviction relief separately from pretrial disclosure obligations. Draft the defense's appropriate response without assuming it is entitled to dismissal for every error. Build an impeachment sequence grounded in documents rather than insinuation alone.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Prosecutor emphasizes the benefit's limited value; defense argues the omission deprived the jury of a bias assessment.",
+        "assignment": "Prepare a disclosure memorandum, chronological event table, cross-examination questions, defense remedial motion and prosecution response. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "What is the legally sound approach to undisclosed witness benefits?",
+        "options": [
+          "Assume all reimbursed witnesses have committed perjury",
+          "Assess disclosure duties and impeachment significance, document timing and consider proportionate remedies",
+          "Ignore the information unless the witness was formally paid for testimony"
+        ],
+        "answer": 1,
+        "why": "Witness benefits can bear on bias and disclosure obligations without proving the witness's testimony false.",
+        "status": "draft—legal currency and qualified human review pending"
       }
     ]
   },
@@ -180,6 +252,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Signing does not remove antitrust obligations or automatically permit preclosing coordination.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L4-3-4",
+        "title": "Financing conditions and purchase-price adjustment disputes",
+        "authority": "Governing acquisition agreement; applicable contract law; financing commitments and accounting principles agreed by the parties",
+        "scenario": "A buyer claims inventory values dropped after signing; the seller disputes the methodology and lenders demand a revised closing certificate.",
+        "reading": "Analyze the operative purchase-price mechanism before discussing whether a result is fair. Distinguish an estimate at closing, post-closing true-up, dispute accountant appointment, earnout and separate indemnity. Work a miniature example with symbols: estimated net working capital E, final agreed net working capital F, and contractual target T; the adjustment may follow a defined formula rather than market value alone. Accounting principles must follow the agreement's order of precedence and consistent practices where specified. Identify what qualifies as inventory, obsolete stock, reserves and debt-like items. Separately read the financing condition, efforts covenant and remedies for buyer nonperformance; financing failure does not automatically excuse closing if the agreement allocates that risk differently. Develop two neutral schedules to reveal each side's assumptions without inventing underlying values. Consider fraud allegations and limitation provisions only with supporting facts and enforceable governing law.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Buyer demands a reduction for obsolete inventory; seller argues the methodology changed from established accounting practice.",
+        "assignment": "Create a working-capital adjustment table with variables, sample dispute notice, financing-risk board brief and draft neutral accountant instructions. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "How should a post-closing working-capital adjustment be computed?",
+        "options": [
+          "By choosing whichever value seems more favorable to the buyer",
+          "Using the agreement's defined accounts, hierarchy of accounting rules and adjustment formula",
+          "By treating every accounting reserve as fraud"
+        ],
+        "answer": 1,
+        "why": "Contractually specified metrics and calculation procedures govern a purchase-price adjustment.",
+        "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-3-5",
+        "title": "Data privacy, cybersecurity diligence and transaction risk",
+        "authority": "Applicable state breach-notification statutes; FTC Act where applicable; relevant privacy and security contracts; sector-specific law",
+        "scenario": "During an acquisition, diligence reveals an uninvestigated system intrusion involving personal information from customers in three states.",
+        "reading": "Scope the transaction's data environment before assuming a legal conclusion. Identify the categories of personal information, affected persons, systems, geographic reach, dates, possible access or exfiltration and contractual processor relationships. Different state statutes and sector laws may define personal information, breach triggers, reasonable investigation and notice timing differently; there is no single universal U.S. breach-notification deadline. Separate forensic findings from unconfirmed alerts and maintain a clear preservation trail. In the acquisition, evaluate disclosure schedules, information-security representations, indemnity, cyber-insurance notice, remediation covenants and conditions tied to unresolved incidents. Determine which party controls the notification decision before and after closing, subject to applicable law. Avoid transferring restricted sensitive records indiscriminately during diligence: adopt limited access and confidentiality safeguards. Model a scenario in which the intrusion was only attempted and one where verified exfiltration occurred, with different legal consequences.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Seller points to incomplete forensic evidence; buyer argues a specific indemnity and closing holdback are necessary.",
+        "assignment": "Draft an incident diligence checklist, state-law research matrix, remediation covenant, indemnity allocation and redacted board briefing. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "What should counsel establish before deciding whether state breach-notification duties apply?",
+        "options": [
+          "That any software alert always requires identical notices nationwide",
+          "The data and persons affected, incident evidence, applicable jurisdiction and statutory triggers",
+          "Only whether the seller's insurer will cover the incident"
+        ],
+        "answer": 1,
+        "why": "Notification duties depend on applicable laws and verified incident details rather than the existence of an alert alone.",
+        "status": "draft—legal currency and qualified human review pending"
       }
     ]
   },
@@ -241,6 +349,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Effective advocacy depends on candor, precise answers and a legally supportable remedy.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L4-4-4",
+        "title": "Qualified immunity and interlocutory appeal posture",
+        "authority": "42 U.S.C. §1983; Mitchell v. Forsyth; Johnson v. Jones; controlling constitutional precedent",
+        "scenario": "An officer appeals a denial of qualified immunity, asserting that disputed facts should be viewed in the officer's favor.",
+        "reading": "Begin by identifying the government actor, right allegedly violated and conduct relevant to the constitutional claim. Qualified-immunity doctrine and appellate jurisdiction are not interchangeable questions. Interlocutory appeals may address certain legal qualified-immunity questions, but appellate courts ordinarily cannot reweigh a district court's finding that the record contains genuine disputes about what occurred. Separate the plaintiff-favorable version of facts assumed at the summary-judgment stage from the ultimate factfinder's resolution. Identify the applicable law as of the alleged conduct and whether precedent clearly established the particular right in context. Examine whether a categorical legal argument is truly independent of a factual challenge. The appellant needs precise record citations and a statement of the reviewable legal issue; do not fabricate admissions to obtain jurisdiction. Discuss potential remand and how a later trial may change the procedural route.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Officer frames the appeal as purely legal; plaintiff argues it challenges disputed historical events.",
+        "assignment": "Prepare a jurisdictional screening memorandum, statement of assumed facts, alternative appellate disposition and five-minute oral answer to a jurisdiction question. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "Which appeal is especially problematic under Johnson v. Jones?",
+        "options": [
+          "A legal question about clearly established law on assumed facts",
+          "An immediate appeal aimed solely at disputing whether evidence establishes certain historical facts",
+          "A final judgment appeal following an ordinary completed trial"
+        ],
+        "answer": 1,
+        "why": "Interlocutory jurisdiction is limited and generally does not allow a new appellate fact trial.",
+        "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-4-5",
+        "title": "Appellate remedies, harmless error and remand",
+        "authority": "28 U.S.C. §2111; Fed. R. Civ. P. 61; applicable appellate standards and evidence law",
+        "scenario": "After a jury verdict, an appellate panel finds that the district court admitted an irrelevant document but the remaining record strongly supports the verdict.",
+        "reading": "A finding of legal error is not the same as entitlement to reversal. Identify whether the alleged error was preserved, the proper standard of review and which party bears the burden under controlling law. Evaluate how the improper material was used, whether it affected a contested element, the prominence of counsel's arguments, limiting instructions and the independently admissible evidence. Avoid inventing a numerical probability of prejudice. Harmless-error doctrines differ across civil and criminal proceedings and among constitutional, statutory and evidentiary errors. Distinguish affirmance despite error, vacatur, limited remand and a new trial; a reviewing court must act within its jurisdiction and applicable mandate rules. Draft alternative holdings for an error central to causation versus a peripheral issue. Use concise, record-anchored reasoning rather than proclaiming that fairness alone demands a new trial.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Appellant argues the document framed the entire case; appellee emphasizes independent proof and limiting instructions.",
+        "assignment": "Write two competing appellate opinions of 800 words each, with a preserved-error chart, prejudice analysis and proposed remand instructions. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "Why does finding an evidentiary error not automatically require a new civil trial?",
+        "options": [
+          "Trial errors are never reviewed",
+          "The reviewing court must assess preservation, applicable harmless-error rules and potential effect on substantial rights",
+          "Every admitted document must have been decisive"
+        ],
+        "answer": 1,
+        "why": "Reversal generally depends on the error's legal significance and its effect under the relevant review standard.",
+        "status": "draft—legal currency and qualified human review pending"
       }
     ]
   },
@@ -302,6 +446,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "Measurable commitments permit verification while legal responsibility remains a separately negotiated issue.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L4-5-4",
+        "title": "Whistleblower allegations, retaliation risk and reporting channels",
+        "authority": "Applicable federal or state whistleblower statutes; employment retaliation frameworks; relevant industry regulations",
+        "scenario": "A compliance employee reports falsified inspection results and is reassigned before the company documents the basis for the decision.",
+        "reading": "Do not begin with a universal retaliation test. Determine the employer's industry, statute, protected activity, knowledge, adverse action, relevant time period and reporting channel. Different statutes have distinct administrative exhaustion, filing windows, causation and remedy standards. Establish the chronology of protected disclosures, decision-maker knowledge, past performance and comparator treatment. Preserve both compliance and personnel documents; do not selectively erase records or coach witnesses. An internal investigation must consider independence and confidentiality but should not promise absolute secrecy or prevent lawful reporting. Evaluate whether the reassignment was genuinely independent of the protected activity, and what contemporaneous documentation supports each position. Develop lawful nonretaliation measures and a separate corrective-action response to the inspection claim. Counsel should identify potential immediate deadlines and refer any real matter to qualified employment counsel.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Employee cites timing and changed duties; company points to a pre-existing reorganization plan whose records are incomplete.",
+        "assignment": "Create a statutory coverage worksheet, timeline, interview plan, nonretaliation directive and two-sided legal risk memorandum. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "What is the appropriate starting point for a whistleblower retaliation analysis?",
+        "options": [
+          "Apply one identical rule to every industry and statute",
+          "Identify governing statute, protected activity, relevant decision-makers, action and applicable deadlines",
+          "Assume any reassignment after a complaint is automatically lawful"
+        ],
+        "answer": 1,
+        "why": "Coverage, causation, administrative procedures and remedies are statute-specific.",
+        "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-5-5",
+        "title": "Rulemaking comments and administrative record building",
+        "authority": "Administrative Procedure Act §553; enabling statute; applicable rulemaking docket procedures",
+        "scenario": "An agency proposes stricter equipment testing after publishing a technical report based on a small sample; a trade group plans a comment.",
+        "reading": "Drafting a comment is not the same as lobbying with a slogan. Read the proposal, identify the agency's statutory basis, docket, comment deadline, requested submissions and the technical report's assumptions. Explain what the data can and cannot support: sample design, comparison group, uncertainty, cost modeling and affected operators. An effective comment provides specific facts and feasible alternatives, recognizes the agency's legitimate safety goals and requests clarifications grounded in the statute. Avoid fabricated data and identify proprietary submissions that may need special handling. Discuss how to preserve substantive objections for potential judicial review and why a failure to engage the record can weaken later challenges under applicable law. Distinguish comments on a proposed rule from petitions for reconsideration and challenges to a final rule. Prepare a proposed regulatory alternative with measurable implementation milestones and a response to the agency's strongest objection.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Agency argues the risk demands action; trade association questions methodology and proposes staged testing.",
+        "assignment": "Draft a 1,200-word docket comment, annotated data-quality appendix, alternative rule text and issue-preservation checklist. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "Which comment is most useful in an APA notice-and-comment process?",
+        "options": [
+          "An unsupported demand that the agency abandon the entire rule",
+          "A timely, evidence-grounded critique tied to statutory issues and concrete alternatives",
+          "A statement that only a court may evaluate technical assumptions"
+        ],
+        "answer": 1,
+        "why": "Specific, reasoned comments can help shape the record and frame later review issues.",
+        "status": "draft—legal currency and qualified human review pending"
       }
     ]
   },
@@ -363,6 +543,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "A clear engagement documents what is and is not included and helps prevent miscommunication.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L4-6-4",
+        "title": "Trust accounts, client funds and billing disputes",
+        "authority": "Jurisdiction's adopted professional rules for client property, fee agreements, trust accounting and dispute resolution",
+        "scenario": "A firm deposits a client's advance fee into its operating account and later disputes whether it was earned after representation ends.",
+        "reading": "Identify the jurisdiction and the nature of the payment before deciding how funds must be handled. Advance fees, true retainers, flat fees and client costs may have different treatments under state rules and engagement language. Compare what was promised, work actually performed, invoices, accounting entries, client authorization and disputed balances. Client property generally demands recordkeeping and segregation where required, while disputed funds may need to remain protected pending resolution under the governing rules. Do not assume every advance fee is earned upon receipt or that all states use identical trust-account mechanics. Prepare a ledger that ties each deposit, fee transfer and refund to supporting records; do not invent amounts where documentation is absent. Explain client communication, complaint pathways and the importance of independent review of potential misconduct. Draft preventive controls so accounting staff cannot treat a lawyer's unsupported instruction as sufficient authority.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Firm contends the contract defines a nonrefundable fee; client questions the reasonableness and timing of work.",
+        "assignment": "Prepare a trust-ledger sample using symbolic amounts, fee classification memo, client accounting response and preventive-control checklist. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "What determines whether an advance client payment may be moved from trust to operating funds?",
+        "options": [
+          "Any lawyer's verbal belief that payment is earned",
+          "The payment's true nature, applicable jurisdictional trust rules and properly documented entitlement",
+          "The size of the law firm's monthly expenses"
+        ],
+        "answer": 1,
+        "why": "Client funds must be treated under the applicable property and fee rules, not internal convenience.",
+        "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-6-5",
+        "title": "Settlement agreement drafting and release scope",
+        "authority": "Applicable state contract law; federal employment statutes and release restrictions where applicable; confidentiality and enforceability law",
+        "scenario": "After resolving an employment dispute, counsel drafts a broad release that may waive claims not identified in the negotiations.",
+        "reading": "Begin with the parties, legal capacity, claims asserted, valuable consideration and exact agreement date. A release should address identified claims and applicable limitations, not assume every conceivable right may be waived. Certain statutory claims and age-discrimination releases have particular requirements; other administrative enforcement rights may not be privately waived. Separate confidentiality, nondisparagement, cooperation, payment timing, breach cure, tax allocation and enforcement jurisdiction. Consider whether a broad provision chills lawful agency reporting or protected communication. Draft the strongest client-side and opposing-side positions regarding future or unknown claims, and check controlling law before using a form clause. A settlement must have a workable method for performance and dispute resolution, including how it interacts with an already pending court case. Identify any term that the client must understand in plain language before deciding whether to sign.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Employer seeks a full release and secrecy; employee wants narrow coverage and preserved reporting rights.",
+        "assignment": "Draft two alternative release clauses, a payment schedule, issue-by-issue redline memo and a plain-language client explanation. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "Why should a settlement release identify the claims and statutory limitations it addresses?",
+        "options": [
+          "Because every release automatically waives all future statutory rights",
+          "Enforceability and scope depend on precise language and legal restrictions on waiver",
+          "Because confidentiality always prohibits agency communication"
+        ],
+        "answer": 1,
+        "why": "Carefully defined scope and statutory constraints reduce invalid or misunderstood settlement terms.",
+        "status": "draft—legal currency and qualified human review pending"
       }
     ]
   },
@@ -424,6 +640,42 @@ window.LAW_LEVEL4=[
         "answer": 1,
         "why": "The board needs verified facts, legal obligations, alternatives and contemporaneous documentation.",
         "status": "draft—requires primary-source currency review and qualified assessment"
+      },
+      {
+        "id": "L4-7-4",
+        "title": "Cross-border documents, data access and conflicting obligations",
+        "authority": "Fed. R. Civ. P. 26, 34 and 37; applicable foreign data protection rules; international discovery procedures",
+        "scenario": "A U.S. parent company faces federal discovery while an overseas subsidiary holds employee messages subject to foreign privacy restrictions.",
+        "reading": "Map who possesses or controls the records before issuing a production command. Corporate ownership does not automatically establish access to every subsidiary document for every procedural purpose. Identify relevant foreign data regimes, employee rights, transfer conditions, litigation exceptions, potential blocking provisions and available protective orders, with expert local legal advice where needed. Begin with preservation and a narrowly defined issue list, then evaluate relevance and proportionality under U.S. rules. Consider staged production, redaction, pseudonymization, secure review or diplomatic and treaty procedures when appropriate. A foreign statute does not always create a blanket U.S. discovery defense; courts may balance competing obligations under controlling law. Do not export private employee data to an open repository or ordinary study app. Draft a defensible explanation to the court identifying what can be produced, legal risks, gaps and next steps. Distinguish a data-access problem from a claim that evidence never existed.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "U.S. litigant seeks immediate full access; subsidiary identifies legal restrictions and proposes a phased protected review.",
+        "assignment": "Prepare a control-of-records matrix, cross-border transfer issue log, proportional production protocol and competing protective-order proposals. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "What is the correct response to discovery involving foreign personal data?",
+        "options": [
+          "Assume U.S. discovery orders erase every foreign legal duty",
+          "Assess document control, competing legal duties and proportionate protected production mechanisms",
+          "Declare all documents held outside the U.S. automatically undiscoverable"
+        ],
+        "answer": 1,
+        "why": "Cross-border discovery requires jurisdiction-specific analysis of access, privacy obligations and lawful production.",
+        "status": "draft—legal currency and qualified human review pending"
+      },
+      {
+        "id": "L4-7-5",
+        "title": "Integrated negotiation: litigation, regulator and insurer",
+        "authority": "Applicable contract and insurance law; procedural settlement rules; agency enforcement statutes; professional responsibility",
+        "scenario": "A corporate defendant considers settling customer litigation while a regulator investigates and an insurer disputes coverage for related losses.",
+        "reading": "Develop a single decision chronology but separate each forum's independent legal standards. Identify insurance notice, defense provisions, exclusions, consent-to-settle language and reservation-of-rights correspondence before promising that a settlement will be funded. Evaluate whether factual admissions in one agreement could affect the agency record or other litigation, without assuming all confidentiality clauses defeat public disclosure duties. Define corporate settlement authority and the potential involvement of independent directors. A realistic board memo compares a trial path, negotiated customer resolution and targeted remediation, listing both likely benefits and unknown costs. Avoid double recovery in damages models and distinguish coverage disputes from the underlying liability claim. Create a layered negotiation strategy that respects lawful regulator cooperation and avoids misleading other parties. Include a trigger for re-evaluating positions if testing establishes additional product failures.\n\nAPPLIED PRACTICE AND RESEARCH: Establish the controlling jurisdiction, procedural setting and date before making a legal claim. Create an evidence-to-element matrix distinguishing established facts, allegations, missing records and competing inferences. Cite the exact language of the relevant rule, statute or court decision rather than relying on a secondary summary. Assess how a different material fact would change the likely remedy or professional recommendation. Draft both sides fairly and record unresolved primary-source and later-treatment questions for review by a qualified legal examiner. This is a fictional educational scenario and does not establish personal legal advice or independent competency.",
+        "counterarguments": "Customers want rapid payment; regulator seeks disclosures and preventive measures; insurer insists on conditions before consent.",
+        "assignment": "Create an integrated three-forum decision map, settlement authority matrix, insurer notice checklist, board memorandum and alternative outcomes. Include a source-verification table, opposing legal theory, two alternative fact findings and a conclusion identifying professional and procedural limitations. Submit for qualified human review before recording mastery.",
+        "question": "Why should corporate counsel analyze insurance consent provisions before accepting a global settlement?",
+        "options": [
+          "Insurance always pays any agreed settlement automatically",
+          "Coverage, notice, and consent obligations may affect who funds or controls the resolution",
+          "The insurer controls every corporate decision regardless of the policy"
+        ],
+        "answer": 1,
+        "why": "Settlement planning must integrate policy language and separate forum duties instead of assuming payment.",
+        "status": "draft—legal currency and qualified human review pending"
       }
     ]
   }
