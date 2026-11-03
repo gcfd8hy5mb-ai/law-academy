@@ -65,3 +65,13 @@ for(const id of appliedWorkshopIds){
  assert.ok(lesson.assignment.includes('primary-authority verification log'),'Workshop source verification missing '+id);
 }
 console.log('PASS: seven Level 3 practical workshops and primary-authority assignments are present.');
+
+const workedPracticeIds=['L3-1-3','L3-2-3','L3-3-3','L3-4-3','L3-5-3','L3-6-3','L3-7-3'];
+for(const id of workedPracticeIds){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson,'Missing worked practice lesson '+id);
+ assert.ok(lesson.worked?.trim().split(/\s+/).length>=240,'Worked reasoning lacks sufficient instructional depth '+id);
+ assert.ok(lesson.assignment.includes('200-word error analysis'),'Missing student self-assessment '+id);
+}
+assert.ok(ui.includes('l3worked')&&ui.includes('l3reveal'),'Worked practice must remain available only through the answer reveal workflow');
+console.log('PASS: seven detailed worked practice examples and self-assessment tasks are present.');
