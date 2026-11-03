@@ -10,7 +10,7 @@ const ids=new Set();
 for(const course of courses){
   assert.ok(course.id && course.title && Array.isArray(course.lessons),'Missing course metadata');
   assert.ok(course.status.includes('draft'),'Unreviewed course must remain draft');
-  assert.ok(course.lessons.length>=5,'Each track requires five substantive practical lessons');
+  assert.ok(course.lessons.length>=7,'Each track requires seven substantive practical lessons');
   for(const lesson of course.lessons){
     assert.ok(!ids.has(lesson.id),'Duplicate lesson id '+lesson.id);
     ids.add(lesson.id);
@@ -23,8 +23,8 @@ for(const course of courses){
     assert.ok(lesson.status.includes('draft'),'Unreviewed lesson must remain draft');
   }
 }
-assert.equal(ids.size,35,'Expected 35 authored Level 4 lessons across the seven course tracks');
-console.log('PASS: seven Level 4 draft courses with five practice lessons each. Independent source verification and academic sign-off are outstanding.');
+assert.equal(ids.size,49,'Expected 49 authored Level 4 lessons across the seven course tracks');
+console.log('PASS: seven Level 4 draft courses with seven practice lessons each. Independent source verification and academic sign-off are outstanding.');
 
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
@@ -38,12 +38,12 @@ assert.ok(ui.includes('not yet cloud-synchronized'),'Must accurately warn about 
 console.log('PASS: Level 4 curriculum and student navigation assets configured. Browser functionality, cloud synchronization and legal accuracy remain unverified.');
 
 const all=courses.flatMap(c=>c.lessons);
-assert.equal(new Set(all.map(l=>l.question)).size,35,'Level 4 questions must not duplicate across lessons');
+assert.equal(new Set(all.map(l=>l.question)).size,49,'Level 4 questions must not duplicate across lessons');
 for(const course of courses){
- for(let index=0;index<5;index++){
+ for(let index=0;index<7;index++){
   const lesson=course.lessons[index];
   assert.equal(lesson.id,course.id+'-'+(index+1),'Level 4 lesson order should remain stable '+course.id);
   assert.ok(lesson.assignment.includes('Build')||lesson.assignment.includes('Draft')||lesson.assignment.includes('Create')||lesson.assignment.includes('Prepare')||lesson.assignment.includes('Write')||lesson.assignment.includes('Produce')||lesson.assignment.includes('Develop')||lesson.assignment.includes('Rewrite'),'Lesson needs a practical document deliverable '+lesson.id);
  }
 }
-console.log('PASS: 35 distinct Level 4 quizzes and ordered legal-writing assignments. This does not establish substantive case-law accuracy.');
+console.log('PASS: 49 distinct Level 4 quizzes and ordered legal-writing assignments. This does not establish substantive case-law accuracy.');
