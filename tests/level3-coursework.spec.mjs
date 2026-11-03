@@ -132,7 +132,7 @@ test('Reviewer packet remains copyable when clipboard permission is unavailable'
  await expect(page.locator('#l3reviewPacketStatus')).toContainText('complete reviewer packet');
  await expect(page.locator('#l3reviewPacketFallback')).toBeVisible();
  await expect(page.locator('#l3reviewPacketFallback')).toHaveValue(/CASE FACTS:/);
- await expect(page.locator('#l3reviewPacketFallback')).toHaveValue(/REVIEWER RUBRIC (100)/);
+ await expect(page.locator('#l3reviewPacketFallback')).toHaveValue(/REVIEWER RUBRIC \(100\)/);
  await expect(page.locator('#l3reviewPacketFallback')).toHaveValue(/Analysis with factual application/);
 });
 
