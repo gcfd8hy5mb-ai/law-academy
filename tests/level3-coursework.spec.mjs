@@ -336,3 +336,27 @@ test('Foundational case examples in all seven courses stay hidden until student 
   await page.locator('#l3back').click();
  }
 });
+
+test('All seven course finals show scoring criteria and include examiner issue maps in the review packet',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{
+  window.__reviewPacket='';
+  Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value=>{window.__reviewPacket=value;}}});
+  renderLevel3();
+ });
+ for(let i=0;i<7;i++){
+  await page.locator('[data-l3course="'+i+'"]').click();
+  await page.locator('[data-l3lesson="9"]').click();
+  await expect(page.getByText('Final examination · assessment rubric (100 points)')).toBeVisible();
+  await expect(page.getByText('Issue spotting and governing legal standards')).toBeVisible();
+  await page.locator('#l3draft').fill('Assessment draft on issue identification, factual application, authority and competing arguments.');
+  await page.locator('#l3reviewPacket').click();
+  const packet=await page.evaluate(()=>window.__reviewPacket);
+  expect(packet).toContain('REVIEWER RUBRIC (100)');
+  expect(packet).toContain('EXAMINER ISSUE-SPOTTING QUESTIONS:');
+  expect(packet).toContain('COMMON ERRORS TO WATCH:');
+  expect(packet).toContain('Qualified reviewer must check sources');
+  await page.locator('#l3back').click();
+  await page.locator('#l3back').click();
+ }
+});
