@@ -131,9 +131,9 @@ test('Reviewer packet remains copyable when clipboard permission is unavailable'
  await page.locator('#l3reviewPacket').click();
  await expect(page.locator('#l3reviewPacketStatus')).toContainText('complete reviewer packet');
  await expect(page.locator('#l3reviewPacketFallback')).toBeVisible();
- await expect(page.locator('#l3reviewPacketFallback')).toContainText('CASE FACTS:');
- await expect(page.locator('#l3reviewPacketFallback')).toContainText('REVIEWER RUBRIC (100)');
- await expect(page.locator('#l3reviewPacketFallback')).toContainText('Analysis with factual application');
+ await expect(page.locator('#l3reviewPacketFallback')).toHaveValue(/CASE FACTS:/);
+ await expect(page.locator('#l3reviewPacketFallback')).toHaveValue(/REVIEWER RUBRIC (100)/);
+ await expect(page.locator('#l3reviewPacketFallback')).toHaveValue(/Analysis with factual application/);
 });
 
 test('Level 3 exports all saved lesson and capstone writing for device backup',async({page})=>{
