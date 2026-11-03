@@ -66,3 +66,11 @@ The existing `level3-ui.js` uses `localStorage` key `law-academy-level3-v1` for 
 - `scripts/validate-level4.mjs` now requires 21 unique ordered lessons, substantial instructional readings, drafted deliverables, and 21 distinct questions. The main academy catalog displays 21 draft lessons (`33b2c12`).
 - Repository-content checks passed for lesson counts, distinct questions, assignments, quiz structure, route/script presence, and isolated Level 4 draft-storage key. **GitHub Actions execution, legal source-by-source checking, iPhone Safari and desktop acceptance, and cross-device persistence are not confirmed.**
 - Preserve Level 3 and all older local/cloud data; Level 4 remains under construction and should not be described as completed or academically endorsed.
+
+## Third instructional batch — November 3, 2026
+
+Level 4 now contains **35 authored draft lessons (five per course)**. Commit `ac69dcc` added fourteen lessons in trial exhibits and settlements, identification and criminal disclosure, purchase adjustments and cybersecurity diligence, qualified-immunity appeals and harmless error, retaliation and agency rulemaking comments, trust-account safeguards and release drafting, and cross-border production/insurance negotiation. The seven previous tracks and all existing lesson IDs remain unchanged.
+
+Every new lesson has an individual fictional fact pattern, primary-law research targets, competing legal positions, a written practice deliverable, and a case-specific multiple-choice explanation. Commit `a1af124` updated the 35-lesson structure checks; `504fd2b` refreshed the course catalog; `826b44f` recognized evidence-model building as a practical assignment type.
+
+**Verification boundary:** Repository-content inspection confirmed seven tracks of five lessons, 35 unique IDs, 35 distinct knowledge-check questions, adequate reading and assignment fields, and intact draft status. The real Node validator, GitHub Actions, deployed browser flows, cloud synchronization, and independent legal case-status verification remain unconfirmed. A 70-lesson Level 4 count is a provisional planning target, not an academic accreditation standard.
