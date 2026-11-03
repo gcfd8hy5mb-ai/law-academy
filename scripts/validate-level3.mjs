@@ -148,7 +148,7 @@ const secondRealCaseIds=['L3-1-6','L3-2-6','L3-3-6','L3-4-6','L3-5-6','L3-6-6','
 for(const id of secondRealCaseIds){
  const lesson=all.find(item=>item.id===id);
  assert.ok(lesson,'Missing second-batch case study '+id);
- assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY'),'Missing real-authority comparison '+id);
+ assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY')||lesson.reading.includes('PRIMARY-AUTHORITY SOURCE ANALYSIS'),'Missing authority comparison '+id);
  assert.ok(lesson.reading.includes('Source to read: https://'),'Missing case or agency source '+id);
  assert.ok(lesson.reading.includes('later treatment'),'Missing subsequent-authority check '+id);
  assert.ok(lesson.assignment.includes('case-to-hypothetical comparison'),'Missing case reasoning assignment '+id);
@@ -159,9 +159,25 @@ const thirdRealCaseIds=['L3-1-9','L3-2-9','L3-3-9','L3-4-9','L3-5-9','L3-6-9','L
 for(const id of thirdRealCaseIds){
  const lesson=all.find(item=>item.id===id);
  assert.ok(lesson,'Missing advanced Level 3 real-authority case '+id);
- assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY'),'Missing real-case analysis '+id);
+ assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY')||lesson.reading.includes('PRIMARY-AUTHORITY SOURCE ANALYSIS'),'Missing real-source analysis '+id);
  assert.ok(lesson.reading.includes('Source to read: https://'),'Missing source URL '+id);
  assert.ok(lesson.reading.includes('later treatment'),'Missing later-treatment warning '+id);
  assert.ok(lesson.assignment.includes('400-word holding-and-application memorandum'),'Missing comparative case-analysis assignment '+id);
 }
 console.log('PASS: third seven-course real-case batch requires holding application and primary-law verification.');
+
+const updatedSourceIds=['L3-5-6','L3-5-7','L3-5-9','L3-6-9'];
+for(const id of updatedSourceIds){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY SOURCE ANALYSIS'),'Original authority must be labeled by its true source type '+id);
+ assert.ok(lesson.reading.includes('REPORTED DECISION CASE BRIEF'),'Reported judicial decision must be added '+id);
+ assert.ok(lesson.reading.includes('Source to read: https://'),'Public source URL missing '+id);
+ assert.ok(lesson.assignment.includes('separate 400-word case-to-hypothetical brief'),'Case-analysis assignment missing '+id);
+}
+for(const [id,caseName] of [
+ ['L3-5-6','Weber v. Commissioner'],
+ ['L3-5-7','INDOPCO, Inc. v. Commissioner'],
+ ['L3-5-9','Hallmark Research Collective v. Commissioner'],
+ ['L3-6-9','GN Netcom, Inc. v. Plantronics, Inc.']
+])assert.ok(all.find(x=>x.id===id).reading.includes(caseName),'Wrong reported decision in '+id);
+console.log('PASS: four previously mislabeled guidance/statute/rule sources now distinguish their types from reported judicial opinions. This is a structural check, not case-history verification.');
