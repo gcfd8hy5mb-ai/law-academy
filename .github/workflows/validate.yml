@@ -11,6 +11,7 @@ on:
       - 'level3-ui.js'
       - 'index.html'
       - 'law-firebase-cloud-v3.js'
+      - 'law-firebase-cloud-v4.js'
       - 'firebase-config.js'
       - 'styles.css'
       - 'scripts/**'
@@ -27,6 +28,7 @@ on:
       - 'level3-ui.js'
       - 'index.html'
       - 'law-firebase-cloud-v3.js'
+      - 'law-firebase-cloud-v4.js'
       - 'firebase-config.js'
       - 'styles.css'
       - 'scripts/**'
@@ -80,6 +82,7 @@ jobs:
           node --check prelaw-applied.js
           node --check level2.js
           node --check law-firebase-cloud-v3.js
+          node --check law-firebase-cloud-v4.js
           node --check firebase-config.js
           node scripts/validate-firebase-entrypoint.mjs
 
