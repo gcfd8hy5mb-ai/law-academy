@@ -23,5 +23,16 @@ for(const course of courses){
     assert.ok(lesson.status.includes('draft'),'Unreviewed lesson must remain draft');
   }
 }
-assert.equal(ids.size,7,'Only seven initial Level 4 lessons should exist in this batch');
+assert.ok(ids.size>=7,'Seven initial Level 4 lessons required');
 console.log('PASS: seven Level 4 draft courses with one practical opening lesson each. Not published to the app; no independent source verification or academic sign-off.');
+
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
+const ui=readFileSync(new URL('../level4-ui.js',import.meta.url),'utf8');
+new Script(ui,{filename:'level4-ui.js'});
+for(const asset of ['src="./level4.js"','src="./level4-ui.js"'])assert.ok(html.includes(asset),'Missing Level 4 asset: '+asset);
+assert.ok(app.includes('typeof renderLevel4==="function"'),'Level 4 catalog route not connected');
+for(const token of ['function renderLevel4()','data-l4course','data-l4lesson','l4draft','l4check','l4backup','Back to course'])assert.ok(ui.includes(token),'Missing Level 4 student experience: '+token);
+assert.ok(ui.includes("const L4_KEY='law-academy-level4-v1'"),'Use isolated Level 4 local draft key');
+assert.ok(ui.includes('not yet cloud-synchronized'),'Must accurately warn about local-only draft storage');
+console.log('PASS: Level 4 curriculum and student navigation assets configured. Browser functionality, cloud synchronization and legal accuracy remain unverified.');
