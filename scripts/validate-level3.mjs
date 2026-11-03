@@ -181,3 +181,19 @@ for(const [id,caseName] of [
  ['L3-6-9','GN Netcom, Inc. v. Plantronics, Inc.']
 ])assert.ok(all.find(x=>x.id===id).reading.includes(caseName),'Wrong reported decision in '+id);
 console.log('PASS: four previously mislabeled guidance/statute/rule sources now distinguish their types from reported judicial opinions. This is a structural check, not case-history verification.');
+
+const reviewTaskIds=['L3-1-6','L3-1-7','L3-1-9','L3-2-6','L3-2-7','L3-2-9','L3-3-6','L3-3-7','L3-3-9','L3-4-6','L3-4-7','L3-4-9','L3-6-6','L3-6-7','L3-7-6','L3-7-7','L3-7-9'];
+for(const id of reviewTaskIds){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson&&lesson.reading.includes('PRIMARY-AUTHORITY REVIEW TASK'),'Missing focused case review task '+id);
+ assert.ok(lesson.reading.includes('subsequent treatment'),'Missing subsequent treatment review '+id);
+}
+for(const id of ['L3-1-9','L3-3-6','L3-3-7','L3-3-9','L3-7-9']){
+ assert.ok(all.find(item=>item.id===id).reading.includes('CURRENT-LAW CROSSCHECK'),'Missing legal-development guidance '+id);
+}
+for(const course of courses){
+ const final=course.lessons[9];
+ assert.ok(final.assignment.includes('EXAMINER QUALITY CONTROL'),'Missing specialized final examination check '+course.id);
+ assert.ok(final.assignment.includes('Human evaluation required.'),'Human assessment boundary missing '+course.id);
+}
+console.log('PASS: 17 source-review tasks, five doctrine updates and seven final examiner controls are authored. The presence of text is not substantive legal review.');
