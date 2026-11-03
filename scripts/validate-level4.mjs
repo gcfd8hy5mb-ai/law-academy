@@ -71,3 +71,17 @@ assert.ok(ui.includes("if(lesson.workedGuide)"),'Guide reveal handler missing');
 assert.ok(ui.includes("if(words<100)"),'Worked reasoning must follow a written attempt');
 assert.ok(ui.includes("l4guideBody")&&ui.includes("l4showGuide"),'Guide display UI missing');
 console.log('PASS: seven complete provisional reasoning comparisons with reveal-after-attempt gate. Does not verify current law, sources or browser persistence.');
+
+const reviewedAuthorityChecks=[
+ ['L4-1-4','https://www.law.cornell.edu/rules/fre/rule_702','more likely than not'],
+ ['L4-1-6','https://www.law.cornell.edu/rules/frcp/rule_50','28-day'],
+ ['L4-4-5','https://supreme.justia.com/cases/federal/us/515/304/','Johnson v. Jones'],
+ ['L4-4-9','https://supreme.justia.com/cases/federal/us/556/418/','Nken v. Holder']
+];
+for(const [id,url,required] of reviewedAuthorityChecks){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson&&lesson.reading.includes(url)&&lesson.reading.includes(required),'Primary-authority checkpoint absent '+id);
+ assert.equal(lesson.sourceReview?.checkedAsOf,'2026-11-03','Checkpoint date absent '+id);
+ assert.ok(lesson.sourceReview.scope.includes('not a complete subsequent-treatment review'),'Review boundary absent '+id);
+}
+console.log('PASS: four targeted authority checkpoints are recorded, without representing comprehensive legal verification.');
