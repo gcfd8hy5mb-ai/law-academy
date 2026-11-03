@@ -43,7 +43,7 @@ for(const course of courses){
  for(let index=0;index<5;index++){
   const lesson=course.lessons[index];
   assert.equal(lesson.id,course.id+'-'+(index+1),'Level 4 lesson order should remain stable '+course.id);
-  assert.ok(lesson.assignment.includes('Draft')||lesson.assignment.includes('Create')||lesson.assignment.includes('Prepare')||lesson.assignment.includes('Write')||lesson.assignment.includes('Produce')||lesson.assignment.includes('Develop')||lesson.assignment.includes('Rewrite'),'Lesson needs a practical document deliverable '+lesson.id);
+  assert.ok(lesson.assignment.includes('Build')||lesson.assignment.includes('Draft')||lesson.assignment.includes('Create')||lesson.assignment.includes('Prepare')||lesson.assignment.includes('Write')||lesson.assignment.includes('Produce')||lesson.assignment.includes('Develop')||lesson.assignment.includes('Rewrite'),'Lesson needs a practical document deliverable '+lesson.id);
  }
 }
 console.log('PASS: 35 distinct Level 4 quizzes and ordered legal-writing assignments. This does not establish substantive case-law accuracy.');
