@@ -264,3 +264,39 @@ test('Level 3 saves only changed fields rather than replacing another tab progre
  expect(saved['L3-2-1']).toEqual({draft:'Recently edited other course',correct:true});
  expect(saved['L3-1-1'].draft).toBe('New answer in this course');
 });
+
+test('Level 3 lesson retries writing after a temporary storage failure without false conflict',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('[data-l3course="0"]').click();
+ await page.locator('[data-l3lesson="0"]').click();
+ await page.evaluate(()=>{
+   const original=Storage.prototype.setItem;
+   window.__restoreStorage=()=>{Storage.prototype.setItem=original};
+   Storage.prototype.setItem=function(k,v){if(k==='law-academy-level3-v1')throw new Error('Simulated quota error');return original.call(this,k,v)};
+ });
+ await page.locator('#l3draft').fill('First attempt');
+ await expect(page.locator('#l3status')).toContainText('Saving unavailable');
+ await page.evaluate(()=>window.__restoreStorage());
+ await page.locator('#l3draft').fill('Second attempt after recovery');
+ await expect(page.locator('#l3status')).toContainText('Draft saved on this device');
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(saved['L3-1-1'].draft).toBe('Second attempt after recovery');
+});
+test('Capstone retries saving after temporary storage failure without false tab conflict',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
+ await page.locator('#l3capstone').click();
+ await page.evaluate(()=>{
+   const original=Storage.prototype.setItem;
+   window.__restoreStorage=()=>{Storage.prototype.setItem=original};
+   Storage.prototype.setItem=function(k,v){if(k==='law-academy-level3-v1')throw new Error('Simulated quota error');return original.call(this,k,v)};
+ });
+ await page.locator('#l3cap0').fill('First attempt');
+ await expect(page.locator('#l3capStatus')).toContainText('Storage unavailable');
+ await page.evaluate(()=>window.__restoreStorage());
+ await page.locator('#l3cap0').fill('Second attempt after recovery');
+ await expect(page.locator('#l3capStatus')).toContainText('Capstone draft saved on this device');
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
+ expect(saved['L3-CAP-0'].draft).toBe('Second attempt after recovery');
+});
