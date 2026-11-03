@@ -83,3 +83,15 @@ Level 4 now contains **49 authored draft lessons (seven in each of seven courses
 - A repository-content audit checked seven courses, 49 uniquely numbered lessons, 49 distinct questions, substantial reading and written assignment fields, and the interface script references. It passed.
 - **Not yet independently confirmed:** running the full Node validation script in CI, browser and installed iPhone PWA functionality, any cloud sync of Level 4 written drafts, case-citation currency, qualified external academic or legal assessment.
 - The 70-lesson target is provisional; current authoring progress is 49/70, or 70% **by count only**, not by rigor or independently validated instructional hours.
+
+## Level 4 lesson-count authoring milestone — November 3, 2026
+
+The provisional Level 4 **70-lesson authoring target has been reached**: seven courses with ten drafted lessons each, including one written course final per course. This is an authored-content milestone, not equivalent to completion of substantive review.
+
+- Coursework commit: `6aad765`; regulatory-exam deliverable refinement: `6991866`.
+- Validation requirements updated in `387c09e`: 70 unique ordered lessons, 70 distinct knowledge questions, substantial writing and reading fields, seven course finals with 100-point assessment rubrics, and human substantive-review gates.
+- App catalog updated in `2fa4643` to show 70 draft lessons and written finals available.
+- Repository-content inspection after the refinement passed for course/lesson counts, IDs, quiz uniqueness, writing deliverables, and final rubric totals. A **successful execution** of the Node test suite and deployed browser workflow has not yet been confirmed.
+- **Remaining substantive work:** provide independently verified primary-source citations and current-law review for each lesson, deeper model answers and individualized rubric exemplars, qualified exam calibration, integrated Level 4 capstone assessment, accessibility and iPhone/desktop acceptance checks, and non-destructive cloud synchronization of Level 3/4 written drafts. External academic review is independent of course authoring.
+
+Status wording: **70/70 lessons authored as drafts; not academically verified, not independently approved and not a representation of law school credit, degree or bar eligibility.**
