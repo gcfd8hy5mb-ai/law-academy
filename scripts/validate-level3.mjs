@@ -117,3 +117,18 @@ for(const id of expandedShortLessonIds){
  assert.ok(lesson.assignment.includes('fact-to-rule chart'),'Missing source-verified practical deliverables '+id);
 }
 console.log('PASS: fourteen expanded Level 3 lessons include 300+ words and source-verified applied exercises.');
+
+const lastShortDoctrineIds=['L3-3-3','L3-4-3','L3-6-3','L3-7-3'];
+for(const id of lastShortDoctrineIds){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson,'Missing expanded doctrine lesson '+id);
+ assert.ok(lesson.reading.trim().split(/\s+/).length>=350,'Remaining doctrine lesson lacks depth '+id);
+ assert.ok(lesson.assignment.includes('competing proposed outcomes'),'Doctrine lesson missing opposing judgments '+id);
+}
+for(const course of courses){
+ for(const lesson of course.lessons){
+  if(lesson.title.includes('Final Examination'))continue;
+  assert.ok(lesson.reading.trim().split(/\s+/).length>=200,'Short doctrinal reading still present: '+lesson.id);
+ }
+}
+console.log('PASS: all 63 non-final Level 3 readings exceed 200 words; four final short readings expanded.');
