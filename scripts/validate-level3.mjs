@@ -132,3 +132,14 @@ for(const course of courses){
  }
 }
 console.log('PASS: all 63 non-final Level 3 readings exceed 200 words; four final short readings expanded.');
+
+const realCaseLessons=['L3-1-7','L3-2-7','L3-3-7','L3-4-7','L3-5-7','L3-6-7','L3-7-7'];
+for(const id of realCaseLessons){
+ const lesson=all.find(item=>item.id===id);
+ assert.ok(lesson,'Missing real-authority case lesson '+id);
+ assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY'),'Missing case brief and factual comparison '+id);
+ assert.ok(lesson.reading.includes('Source to read: https://'),'Missing public authority link '+id);
+ assert.ok(lesson.reading.includes('later treatment'),'Missing precedential-validity warning '+id);
+ assert.ok(lesson.assignment.includes('holding-versus-hypothetical comparison'),'Missing real-case analysis assignment '+id);
+}
+console.log('PASS: seven Level 3 real-authority studies require case comparison and authority review.');
