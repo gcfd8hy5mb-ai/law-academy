@@ -10,7 +10,7 @@ const ids=new Set();
 for(const course of courses){
   assert.ok(course.id && course.title && Array.isArray(course.lessons),'Missing course metadata');
   assert.ok(course.status.includes('draft'),'Unreviewed course must remain draft');
-  assert.ok(course.lessons.length>=7,'Each track requires seven substantive practical lessons');
+  assert.ok(course.lessons.length===10,'Each track requires ten authored practical lessons including a final');
   for(const lesson of course.lessons){
     assert.ok(!ids.has(lesson.id),'Duplicate lesson id '+lesson.id);
     ids.add(lesson.id);
@@ -23,8 +23,8 @@ for(const course of courses){
     assert.ok(lesson.status.includes('draft'),'Unreviewed lesson must remain draft');
   }
 }
-assert.equal(ids.size,49,'Expected 49 authored Level 4 lessons across the seven course tracks');
-console.log('PASS: seven Level 4 draft courses with seven practice lessons each. Independent source verification and academic sign-off are outstanding.');
+assert.equal(ids.size,70,'Expected 70 authored Level 4 lessons across seven course tracks');
+console.log('PASS: seven Level 4 draft courses with ten lessons each. Independent source verification and academic sign-off are outstanding.');
 
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const app=readFileSync(new URL('../app.js',import.meta.url),'utf8');
@@ -38,12 +38,23 @@ assert.ok(ui.includes('not yet cloud-synchronized'),'Must accurately warn about 
 console.log('PASS: Level 4 curriculum and student navigation assets configured. Browser functionality, cloud synchronization and legal accuracy remain unverified.');
 
 const all=courses.flatMap(c=>c.lessons);
-assert.equal(new Set(all.map(l=>l.question)).size,49,'Level 4 questions must not duplicate across lessons');
+assert.equal(new Set(all.map(l=>l.question)).size,70,'Level 4 questions must not duplicate across lessons');
 for(const course of courses){
- for(let index=0;index<7;index++){
+ for(let index=0;index<10;index++){
   const lesson=course.lessons[index];
   assert.equal(lesson.id,course.id+'-'+(index+1),'Level 4 lesson order should remain stable '+course.id);
   assert.ok(lesson.assignment.includes('Build')||lesson.assignment.includes('Draft')||lesson.assignment.includes('Create')||lesson.assignment.includes('Prepare')||lesson.assignment.includes('Write')||lesson.assignment.includes('Produce')||lesson.assignment.includes('Develop')||lesson.assignment.includes('Rewrite'),'Lesson needs a practical document deliverable '+lesson.id);
  }
 }
-console.log('PASS: 49 distinct Level 4 quizzes and ordered legal-writing assignments. This does not establish substantive case-law accuracy.');
+console.log('PASS: 70 distinct Level 4 quizzes and ordered legal-writing assignments. This does not establish substantive case-law accuracy.');
+
+for(const course of courses){
+ const final=course.lessons[9];
+ assert.ok(final.title.includes('Final Examination'),'Final exam title missing '+course.id);
+ assert.ok(final.scenario.startsWith('FICTIONAL THIRD-YEAR FINAL CASE FILE:'),'Final needs a marked hypothetical '+course.id);
+ assert.ok(final.examRubric?.points===100,'Final exam rubric missing '+course.id);
+ assert.equal(final.examRubric.areas.reduce((sum,a)=>sum+a.points,0),100,'Final rubric allocation mismatch '+course.id);
+ assert.ok(final.examRubric.examinerQuestions.length>=4,'Missing examiner prompts '+course.id);
+ assert.ok(final.assignment.includes('qualified human substantive review'),'Automated grade may not imply mastery '+course.id);
+}
+console.log('PASS: seven distinct Level 4 written finals contain 100-point rubrics and human assessment gates.');
