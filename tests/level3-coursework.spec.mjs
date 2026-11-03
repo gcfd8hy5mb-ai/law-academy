@@ -318,3 +318,21 @@ test('Seven worked reasoning exercises require an original written attempt befor
   await page.locator('#l3back').click();
  }
 });
+
+test('Foundational case examples in all seven courses stay hidden until student writing',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel3());
+ for(let i=0;i<7;i++){
+  await page.locator('[data-l3course="'+i+'"]').click();
+  await page.locator('[data-l3lesson="2"]').click();
+  await expect(page.locator('#l3worked')).toBeHidden();
+  await page.locator('#l3reveal').click();
+  await expect(page.locator('#l3revealStatus')).toContainText('at least 100 words');
+  await page.locator('#l3draft').fill(Array.from({length:100},(_,n)=>'argument'+n).join(' '));
+  await page.locator('#l3reveal').click();
+  await expect(page.locator('#l3worked')).toBeVisible();
+  await expect(page.locator('#l3worked')).toContainText('WORKED');
+  await page.locator('#l3back').click();
+  await page.locator('#l3back').click();
+ }
+});
