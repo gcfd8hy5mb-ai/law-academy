@@ -106,3 +106,30 @@ Seven provisional `workedGuide` reasoning comparisons have been added to Level 4
 - Connected-repository content checks confirmed 70 lesson IDs, seven final guides, required guide sections and valid JavaScript parsing. **These checks are not an executed Node CI run, deployed browser acceptance test, professional legal citation/citator review, or academic sign-off.**
 
 **Next quality gates:** source-by-source law-currency verification with qualified reviewers; calibrated exemplar scoring by two human examiners; iPhone/desktop browser and cloud-draft persistence tests. The `law-academy-level4-v1` browser-local draft key remains unchanged.
+
+## Verification batch — November 3, 2026: primary authority and cloud compatibility
+
+### Authority review (scoped, not comprehensive)
+Four lessons gained explicit source review records, linked controlling texts, and jurisdiction/procedural qualifications (curriculum commit `cf22add`; regression assertions `b94b719`):
+- `L4-1-4`: Rule 702 as amended in 2023; distinguish Rule 104(a) proponent's burden from jury weight and appellate review. Reference: https://www.uscourts.gov/forms-rules/current-rules-practice-procedure/federal-rules-evidence and https://www.law.cornell.edu/rules/fre/rule_702
+- `L4-1-6`: Rule 50(a)/(b), renewed motion requirements, and 28-day deadline in the stated circumstances. Reference: https://www.law.cornell.edu/rules/frcp/rule_50
+- `L4-4-5`: *Johnson v. Jones*, 515 U.S. 304 (1995), with the distinction between interlocutory legal review and factual sufficiency disputes. Reference: https://supreme.justia.com/cases/federal/us/515/304/
+- `L4-4-9`: *Nken v. Holder*, 556 U.S. 418 (2009), four-factor stay standard and actual immigration-removal procedural context. Reference: https://supreme.justia.com/cases/federal/us/556/418/
+
+These checks establish initial accuracy of cited propositions, **not** complete treatment/citator checks for every jurisdiction or all 70 lessons.
+
+### Cloud migration blocker (identified by inspection)
+The current `law-firebase-cloud-v4.js` includes the Level 3 browser key `law-academy-level3-v1` in its fixed `KEYS` snapshot schema but omits `law-academy-level4-v1`. Its `valid()` requires a fixed key set, and `parseCloud()`, `equal()` and initial comparison operate across that set. Simply appending the Level 4 key risks invalidating legacy snapshots or producing a conflict state if one device runs an earlier build.
+
+**Required migration design before any cloud write change:**
+1. Preserve the existing Firebase record and local device versions; export backups on both devices.
+2. Introduce a schema version that recognizes both legacy snapshots and the new optional Level 4 key, normalizing *missing* keys to null without replacing real values. Do not interpret an absent key as permission to erase local drafts.
+3. Validate each known key's storage type and enforce bounded payload size; prevent untrusted keys from being introduced via backup restore.
+4. On initial migration, compare device/cloud differences explicitly and use additive, field-level merges only when nonconflicting. Preserve both copies and stop on same-lesson differing nonempty draft content.
+5. Use Firebase transaction revision guards and verify login identity, plus test sign-out, two devices, offline changes, iOS Home Screen versus Safari, concurrent edits and schema rollback.
+6. Deploy only after tests against old and new snapshots, including non-destructive failure paths. Keep manual local backup during migration.
+
+No migration was deployed in this checkpoint. Written Level 4 drafts remain local until compatibility and persistence acceptance tests pass.
+
+### Execution boundary
+The checked-out repository is not available for execution from this runtime (GitHub DNS resolution failed). Connected GitHub content checks and JavaScript parser inspection do not constitute a passed Node test suite or a verified GitHub Actions run. External qualified academic evaluation remains outstanding.
