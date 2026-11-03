@@ -95,3 +95,14 @@ The provisional Level 4 **70-lesson authoring target has been reached**: seven c
 - **Remaining substantive work:** provide independently verified primary-source citations and current-law review for each lesson, deeper model answers and individualized rubric exemplars, qualified exam calibration, integrated Level 4 capstone assessment, accessibility and iPhone/desktop acceptance checks, and non-destructive cloud synchronization of Level 3/4 written drafts. External academic review is independent of course authoring.
 
 Status wording: **70/70 lessons authored as drafts; not academically verified, not independently approved and not a representation of law school credit, degree or bar eligibility.**
+
+## Worked-final examiner-aid batch — November 3, 2026
+
+Seven provisional `workedGuide` reasoning comparisons have been added to Level 4's written finals, one per course. Each guide distinguishes threshold procedure, stepwise application, the adverse position, changed facts, legal source verification, and an explicitly **conditional** model disposition. These are educational aids rather than reviewed answer keys or independently assessed candidate submissions.
+
+- Curriculum update `4a58eee`: adds the seven case-specific reasoning guides without changing lesson IDs or existing completion/draft records.
+- Interface update `52d93d5`: displays a comparison only after the student writes at least 100 words; it does not overwrite the student's draft and does not represent an independent grade.
+- Validator update `244f7bb`: requires all seven guide sections, clear draft status, human-assessment boundary, and the reveal-after-attempt control.
+- Connected-repository content checks confirmed 70 lesson IDs, seven final guides, required guide sections and valid JavaScript parsing. **These checks are not an executed Node CI run, deployed browser acceptance test, professional legal citation/citator review, or academic sign-off.**
+
+**Next quality gates:** source-by-source law-currency verification with qualified reviewers; calibrated exemplar scoring by two human examiners; iPhone/desktop browser and cloud-draft persistence tests. The `law-academy-level4-v1` browser-local draft key remains unchanged.
