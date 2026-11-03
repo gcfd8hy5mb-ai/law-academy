@@ -1,0 +1,44 @@
+name: Level 3 curriculum verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'level3.js'
+      - 'level3-ui.js'
+      - 'app.js'
+      - 'index.html'
+      - 'scripts/validate-level3.mjs'
+      - '.github/workflows/level3-curriculum.yml'
+  pull_request:
+    paths:
+      - 'level3.js'
+      - 'level3-ui.js'
+      - 'app.js'
+      - 'index.html'
+      - 'scripts/validate-level3.mjs'
+      - '.github/workflows/level3-curriculum.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-level3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check Level 3 files
+        run: |
+          node --check level3.js
+          node --check level3-ui.js
+          node --check scripts/validate-level3.mjs
+      - name: Curriculum structural regression tests
+        run: node scripts/validate-level3.mjs
+      - name: Human review boundary
+        run: |
+          echo 'Automated structure tests do not verify legal currency, case treatment, academic comparability, or bar eligibility.'
