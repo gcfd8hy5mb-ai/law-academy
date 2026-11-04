@@ -310,7 +310,41 @@ window.LAW_LEVEL4=[
             "Invented dispositive fact or number",
             "Unanswered serious opposing argument",
             "Failure to distinguish remedy from liability"
-          ]
+          ],
+          "calibration": {
+            "version": "1.0-draft",
+            "anchors": [
+              {
+                "area": "Controlling issues and legal rules",
+                "fullCredit": "Civil trial: identify the cause of action, elements, causation and damages separately from admissibility; apply FRE 702 and applicable FRCP 50/51/59 standards to the correct stage.",
+                "lowCredit": "Recites legal rules without jurisdiction, posture, elements or linked authority."
+              },
+              {
+                "area": "Factual analysis and professional work product",
+                "fullCredit": "Build exhibit-by-exhibit foundations and objections, quantify lost-profit assumptions with costs avoided, and distinguish a repaired physical exhibit from its condition at the event.",
+                "lowCredit": "Summarizes allegations without evidence or the required professional documents."
+              },
+              {
+                "area": "Counterarguments and alternatives",
+                "fullCredit": "Explain how the defendant challenges methodology, mitigation and preservation, then test whether an additional authenticated record changes the evidentiary or damages outcome.",
+                "lowCredit": "Ignores the strongest adverse case or changes facts without showing the effect."
+              },
+              {
+                "area": "Citation accuracy and legal currency",
+                "fullCredit": "Verify FRE 702's current proponent burden, Rule 51 instruction objection, Rule 50 prerequisite and posttrial timing; avoid citing one procedural standard for every motion.",
+                "lowCredit": "Relies on unchecked citations or fails to identify controlling authority and legal currency."
+              },
+              {
+                "area": "Clarity, remedy and ethical judgment",
+                "fullCredit": "Recommend admissibility and verdict or posttrial paths separately, with accurate jury instructions and no unsupported declaration that errors require reversal.",
+                "lowCredit": "Offers a confident remedy despite unresolved duties, timing or material factual gaps."
+              }
+            ],
+            "criticalErrorExample": "Award full projected revenue as profits without deducting avoided costs or evaluating mitigation.",
+            "scoringProtocol": "Two qualified, independent legal examiners score each area within its allotted points using the evidence in the submitted work; reconcile material differences and document reasons. Source authenticity and material legal mistakes receive specific written remediation. No numeric grade is generated from quiz answers or this guide.",
+            "moderation": "After independent marking, identify criteria with material disagreement (more than 10 points total or 50% of any criterion's available points), compare cited evidence and record a consensus or escalation to a third qualified examiner. Keep the original scores and the explanation; this is a proposed process, not academic sign-off.",
+            "selfReviewPrompt": "Mark every legal proposition requiring a primary source, the strongest omitted fact or adverse argument, two changes in facts, and one reason a qualified reviewer might disagree."
+          }
         },
         "status": "draft—written final subject to qualified human legal review",
         "workedGuide": {
@@ -644,7 +678,41 @@ window.LAW_LEVEL4=[
             "Invented dispositive fact or number",
             "Unanswered serious opposing argument",
             "Failure to distinguish remedy from liability"
-          ]
+          ],
+          "calibration": {
+            "version": "1.0-draft",
+            "anchors": [
+              {
+                "area": "Controlling issues and legal rules",
+                "fullCredit": "Criminal case: organize warrant, identification, disclosure, plea, sentencing and postconviction issues into distinct procedural stages and remedies.",
+                "lowCredit": "Recites legal rules without jurisdiction, posture, elements or linked authority."
+              },
+              {
+                "area": "Factual analysis and professional work product",
+                "fullCredit": "Prepare warrant-premises map, police identification chronology, witness-benefit documentary log, exact plea offer, sentencing transaction ledger and review timeline.",
+                "lowCredit": "Summarizes allegations without evidence or the required professional documents."
+              },
+              {
+                "area": "Counterarguments and alternatives",
+                "fullCredit": "Present prosecutorial defenses to suppression and Brady materiality and defense arguments on prejudice, then test an independent source or documented plea rejection.",
+                "lowCredit": "Ignores the strongest adverse case or changes facts without showing the effect."
+              },
+              {
+                "area": "Citation accuracy and legal currency",
+                "fullCredit": "Verify Fourth Amendment doctrine, Perry, Brady/Giglio, Padilla/Lafler, relevant sentencing rule and the postconviction forum's filing and exhaustion rules.",
+                "lowCredit": "Relies on unchecked citations or fails to identify controlling authority and legal currency."
+              },
+              {
+                "area": "Clarity, remedy and ethical judgment",
+                "fullCredit": "Recommend separate hearing, disclosure, plea, sentencing and collateral relief options, acknowledging bars and burdens instead of demanding automatic dismissal.",
+                "lowCredit": "Offers a confident remedy despite unresolved duties, timing or material factual gaps."
+              }
+            ],
+            "criticalErrorExample": "Treat every disclosure delay as automatic reversal or collapse all constitutional issues into one remedy.",
+            "scoringProtocol": "Two qualified, independent legal examiners score each area within its allotted points using the evidence in the submitted work; reconcile material differences and document reasons. Source authenticity and material legal mistakes receive specific written remediation. No numeric grade is generated from quiz answers or this guide.",
+            "moderation": "After independent marking, identify criteria with material disagreement (more than 10 points total or 50% of any criterion's available points), compare cited evidence and record a consensus or escalation to a third qualified examiner. Keep the original scores and the explanation; this is a proposed process, not academic sign-off.",
+            "selfReviewPrompt": "Mark every legal proposition requiring a primary source, the strongest omitted fact or adverse argument, two changes in facts, and one reason a qualified reviewer might disagree."
+          }
         },
         "status": "draft—written final subject to qualified human legal review",
         "workedGuide": {
@@ -979,7 +1047,41 @@ window.LAW_LEVEL4=[
             "Invented dispositive fact or number",
             "Unanswered serious opposing argument",
             "Failure to distinguish remedy from liability"
-          ]
+          ],
+          "calibration": {
+            "version": "1.0-draft",
+            "anchors": [
+              {
+                "area": "Controlling issues and legal rules",
+                "fullCredit": "M&A: separate corporate authority and director conflicts from contract clauses, closing conditions, indemnity, financing and earnout disputes.",
+                "lowCredit": "Recites legal rules without jurisdiction, posture, elements or linked authority."
+              },
+              {
+                "area": "Factual analysis and professional work product",
+                "fullCredit": "Map entities, interested directors, signed clauses, condition status, actual security or breach evidence and a formula-driven earnout and working-capital model.",
+                "lowCredit": "Summarizes allegations without evidence or the required professional documents."
+              },
+              {
+                "area": "Counterarguments and alternatives",
+                "fullCredit": "Develop seller arguments over efforts and operation changes and buyer arguments about discretion, qualified disclosures, and enforceable conditions.",
+                "lowCredit": "Ignores the strongest adverse case or changes facts without showing the effect."
+              },
+              {
+                "area": "Citation accuracy and legal currency",
+                "fullCredit": "Check applicable transaction-date Delaware law, including §144 amendments, agreement governing law, HSR applicability/form guidance and jurisdiction-specific privacy law.",
+                "lowCredit": "Relies on unchecked citations or fails to identify controlling authority and legal currency."
+              },
+              {
+                "area": "Clarity, remedy and ethical judgment",
+                "fullCredit": "Produce a decision-ready closing-versus-litigation recommendation with price adjustment scenarios, conflict mitigation and an executable fallback term sheet.",
+                "lowCredit": "Offers a confident remedy despite unresolved duties, timing or material factual gaps."
+              }
+            ],
+            "criticalErrorExample": "Claim an interested director's abstention always cures conflicts or an HSR filing is required for every acquisition.",
+            "scoringProtocol": "Two qualified, independent legal examiners score each area within its allotted points using the evidence in the submitted work; reconcile material differences and document reasons. Source authenticity and material legal mistakes receive specific written remediation. No numeric grade is generated from quiz answers or this guide.",
+            "moderation": "After independent marking, identify criteria with material disagreement (more than 10 points total or 50% of any criterion's available points), compare cited evidence and record a consensus or escalation to a third qualified examiner. Keep the original scores and the explanation; this is a proposed process, not academic sign-off.",
+            "selfReviewPrompt": "Mark every legal proposition requiring a primary source, the strongest omitted fact or adverse argument, two changes in facts, and one reason a qualified reviewer might disagree."
+          }
         },
         "status": "draft—written final subject to qualified human legal review",
         "workedGuide": {
@@ -1310,7 +1412,41 @@ window.LAW_LEVEL4=[
             "Invented dispositive fact or number",
             "Unanswered serious opposing argument",
             "Failure to distinguish remedy from liability"
-          ]
+          ],
+          "calibration": {
+            "version": "1.0-draft",
+            "anchors": [
+              {
+                "area": "Controlling issues and legal rules",
+                "fullCredit": "Constitutional appeals: resolve standing, mootness, appealable order and review standard before addressing the merits or emergency remedies.",
+                "lowCredit": "Recites legal rules without jurisdiction, posture, elements or linked authority."
+              },
+              {
+                "area": "Factual analysis and professional work product",
+                "fullCredit": "Tie forum restriction, injury, policy changes, officer action and municipal attribution to the existing lower-court record and precise record citations.",
+                "lowCredit": "Summarizes allegations without evidence or the required professional documents."
+              },
+              {
+                "area": "Counterarguments and alternatives",
+                "fullCredit": "Address city public-safety arguments, voluntary cessation and plaintiff's live injury; analyze fact-bound qualified-immunity disputes without appellate factfinding.",
+                "lowCredit": "Ignores the strongest adverse case or changes facts without showing the effect."
+              },
+              {
+                "area": "Citation accuracy and legal currency",
+                "fullCredit": "Verify FRAP 8/28, Article III doctrine, Monell and Johnson, and distinguish the removal setting of Nken before applying stay factors.",
+                "lowCredit": "Relies on unchecked citations or fails to identify controlling authority and legal currency."
+              },
+              {
+                "area": "Clarity, remedy and ethical judgment",
+                "fullCredit": "Propose jurisdiction-first affirmance, reversal, limited remand or tailored interim relief with stated legal and evidentiary predicates.",
+                "lowCredit": "Offers a confident remedy despite unresolved duties, timing or material factual gaps."
+              }
+            ],
+            "criticalErrorExample": "Assume a changed policy automatically moots all claims or ask an interlocutory panel to redetermine disputed trial facts.",
+            "scoringProtocol": "Two qualified, independent legal examiners score each area within its allotted points using the evidence in the submitted work; reconcile material differences and document reasons. Source authenticity and material legal mistakes receive specific written remediation. No numeric grade is generated from quiz answers or this guide.",
+            "moderation": "After independent marking, identify criteria with material disagreement (more than 10 points total or 50% of any criterion's available points), compare cited evidence and record a consensus or escalation to a third qualified examiner. Keep the original scores and the explanation; this is a proposed process, not academic sign-off.",
+            "selfReviewPrompt": "Mark every legal proposition requiring a primary source, the strongest omitted fact or adverse argument, two changes in facts, and one reason a qualified reviewer might disagree."
+          }
         },
         "status": "draft—written final subject to qualified human legal review",
         "workedGuide": {
@@ -1644,7 +1780,41 @@ window.LAW_LEVEL4=[
             "Invented dispositive fact or number",
             "Unanswered serious opposing argument",
             "Failure to distinguish remedy from liability"
-          ]
+          ],
+          "calibration": {
+            "version": "1.0-draft",
+            "anchors": [
+              {
+                "area": "Controlling issues and legal rules",
+                "fullCredit": "Administrative practice: identify actual agency enabling statute, investigation, enforcement, hearing forum, appellate route and whistleblower regime.",
+                "lowCredit": "Recites legal rules without jurisdiction, posture, elements or linked authority."
+              },
+              {
+                "area": "Factual analysis and professional work product",
+                "fullCredit": "Create test-record provenance, report chronology, employee disclosure and reassignment timeline, notice and preservation records and a control owner register.",
+                "lowCredit": "Summarizes allegations without evidence or the required professional documents."
+              },
+              {
+                "area": "Counterarguments and alternatives",
+                "fullCredit": "Present the agency's safety urgency and the operator's statutory-scope and reliability objections, including independent retaliation causation questions.",
+                "lowCredit": "Ignores the strongest adverse case or changes facts without showing the effect."
+              },
+              {
+                "area": "Citation accuracy and legal currency",
+                "fullCredit": "Distinguish federal APA §§553/704/706 from state administrative acts, agency-specific powers and statute-specific retaliation deadlines.",
+                "lowCredit": "Relies on unchecked citations or fails to identify controlling authority and legal currency."
+              },
+              {
+                "area": "Clarity, remedy and ethical judgment",
+                "fullCredit": "Draft proportionate responses, proposed hearing findings, measurable remedial milestones, protected-reporting safeguards and realistic escalation.",
+                "lowCredit": "Offers a confident remedy despite unresolved duties, timing or material factual gaps."
+              }
+            ],
+            "criticalErrorExample": "Treat a federal APA provision as automatically regulating every state board or creating every whistleblower cause of action.",
+            "scoringProtocol": "Two qualified, independent legal examiners score each area within its allotted points using the evidence in the submitted work; reconcile material differences and document reasons. Source authenticity and material legal mistakes receive specific written remediation. No numeric grade is generated from quiz answers or this guide.",
+            "moderation": "After independent marking, identify criteria with material disagreement (more than 10 points total or 50% of any criterion's available points), compare cited evidence and record a consensus or escalation to a third qualified examiner. Keep the original scores and the explanation; this is a proposed process, not academic sign-off.",
+            "selfReviewPrompt": "Mark every legal proposition requiring a primary source, the strongest omitted fact or adverse argument, two changes in facts, and one reason a qualified reviewer might disagree."
+          }
         },
         "status": "draft—written final subject to qualified human legal review",
         "workedGuide": {
@@ -1978,7 +2148,41 @@ window.LAW_LEVEL4=[
             "Invented dispositive fact or number",
             "Unanswered serious opposing argument",
             "Failure to distinguish remedy from liability"
-          ]
+          ],
+          "calibration": {
+            "version": "1.0-draft",
+            "anchors": [
+              {
+                "area": "Controlling issues and legal rules",
+                "fullCredit": "Professional ethics: identify each client, prospective or former representation, conflicts and actual authorization before advising negotiation strategy.",
+                "lowCredit": "Recites legal rules without jurisdiction, posture, elements or linked authority."
+              },
+              {
+                "area": "Factual analysis and professional work product",
+                "fullCredit": "Document intake and past engagements, the disputed email, trust-account ledger, mediation instructions, release terms and client settlement authority.",
+                "lowCredit": "Summarizes allegations without evidence or the required professional documents."
+              },
+              {
+                "area": "Counterarguments and alternatives",
+                "fullCredit": "Fairly analyze each founder's representation expectations and confidentiality needs without assuming a firm's preferred joint representation is ethically acceptable.",
+                "lowCredit": "Ignores the strongest adverse case or changes facts without showing the effect."
+              },
+              {
+                "area": "Citation accuracy and legal currency",
+                "fullCredit": "Check the jurisdiction's adopted rules corresponding to ABA Models 1.2, 1.7, 1.9, 1.13, 1.15 and 1.16 and relevant waiver or employment-release statutes.",
+                "lowCredit": "Relies on unchecked citations or fails to identify controlling authority and legal currency."
+              },
+              {
+                "area": "Clarity, remedy and ethical judgment",
+                "fullCredit": "Recommend conflict screening, independent counsel if needed, lawful discovery response, ethically accurate negotiation and client-centered settlement options.",
+                "lowCredit": "Offers a confident remedy despite unresolved duties, timing or material factual gaps."
+              }
+            ],
+            "criticalErrorExample": "Assume ABA Model Rules bind all states or that a client may require a lawyer to hide responsive evidence.",
+            "scoringProtocol": "Two qualified, independent legal examiners score each area within its allotted points using the evidence in the submitted work; reconcile material differences and document reasons. Source authenticity and material legal mistakes receive specific written remediation. No numeric grade is generated from quiz answers or this guide.",
+            "moderation": "After independent marking, identify criteria with material disagreement (more than 10 points total or 50% of any criterion's available points), compare cited evidence and record a consensus or escalation to a third qualified examiner. Keep the original scores and the explanation; this is a proposed process, not academic sign-off.",
+            "selfReviewPrompt": "Mark every legal proposition requiring a primary source, the strongest omitted fact or adverse argument, two changes in facts, and one reason a qualified reviewer might disagree."
+          }
         },
         "status": "draft—written final subject to qualified human legal review",
         "workedGuide": {
@@ -2313,7 +2517,41 @@ window.LAW_LEVEL4=[
             "Invented dispositive fact or number",
             "Unanswered serious opposing argument",
             "Failure to distinguish remedy from liability"
-          ]
+          ],
+          "calibration": {
+            "version": "1.0-draft",
+            "anchors": [
+              {
+                "area": "Controlling issues and legal rules",
+                "fullCredit": "General counsel: distinguish corporate, regulator, civil claimant, insurer and cross-border obligations while coordinating one incident chronology.",
+                "lowCredit": "Recites legal rules without jurisdiction, posture, elements or linked authority."
+              },
+              {
+                "area": "Factual analysis and professional work product",
+                "fullCredit": "Build 72-hour triage and preservation plans, parties/forums map, insurer notice records, board conflict register, jurisdiction-specific data log and supported financial scenarios.",
+                "lowCredit": "Summarizes allegations without evidence or the required professional documents."
+              },
+              {
+                "area": "Counterarguments and alternatives",
+                "fullCredit": "Address rapid disclosure and consumer safety against costs, insurance limitations and factual uncertainty; model confirmed systemic defect versus false-positive test.",
+                "lowCredit": "Ignores the strongest adverse case or changes facts without showing the effect."
+              },
+              {
+                "area": "Citation accuracy and legal currency",
+                "fullCredit": "Identify exact governing agency statute, civil procedure, entity law, insurance terms, foreign privacy constraints and applicable state breach laws; do not invent deadlines.",
+                "lowCredit": "Relies on unchecked citations or fails to identify controlling authority and legal currency."
+              },
+              {
+                "area": "Clarity, remedy and ethical judgment",
+                "fullCredit": "Offer two actionable board strategies, conditional triggers, named decision owners and a non-destructive evidence and notification plan.",
+                "lowCredit": "Offers a confident remedy despite unresolved duties, timing or material factual gaps."
+              }
+            ],
+            "criticalErrorExample": "Promise a single global settlement extinguishes claims from absent parties and independent regulators or automatically guarantees insurance coverage.",
+            "scoringProtocol": "Two qualified, independent legal examiners score each area within its allotted points using the evidence in the submitted work; reconcile material differences and document reasons. Source authenticity and material legal mistakes receive specific written remediation. No numeric grade is generated from quiz answers or this guide.",
+            "moderation": "After independent marking, identify criteria with material disagreement (more than 10 points total or 50% of any criterion's available points), compare cited evidence and record a consensus or escalation to a third qualified examiner. Keep the original scores and the explanation; this is a proposed process, not academic sign-off.",
+            "selfReviewPrompt": "Mark every legal proposition requiring a primary source, the strongest omitted fact or adverse argument, two changes in facts, and one reason a qualified reviewer might disagree."
+          }
         },
         "status": "draft—written final subject to qualified human legal review",
         "workedGuide": {
