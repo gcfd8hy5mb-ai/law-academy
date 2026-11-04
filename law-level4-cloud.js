@@ -42,6 +42,7 @@ export function openLevel4Cloud({auth,db}){
   actions.replaceChildren(close);
   actions.append(control('Download device backup',()=>{try{downloadBackup({device:snapshot(localStorage),cloud:latest?.raw??null,cloudRevision:latest?.revision??null,exportedAt:new Date().toISOString()});set('Backup download initiated. Verify the file is saved before changing any data.')}catch(e){set('Backup failed: '+e.message)}}));
   actions.append(control('Read and compare (no changes)',review));
+  actions.append(control('Test Level 4 Firebase read access',review));
   if(latest!==null)actions.append(control('Merge nonconflicting copies (confirm first)',merge));
   if(latest?.missing)actions.append(control('Create first Level 4 cloud copy (confirm first)',create));
  }
@@ -53,15 +54,15 @@ export function openLevel4Cloud({auth,db}){
    const snap=await getDoc(ref);if(!active())throw Error('Account changed');
    if(!snap.exists()){
     latest={missing:true,raw:null,revision:null};viewedLocal=device;
-    set('No separate Level 4 cloud record. Existing local work unchanged. You may create the first copy after downloading a backup.');
+    set('Firebase read access succeeded. No separate Level 4 cloud record exists. Local work unchanged; download a backup before considering a first upload.');
    }else{
     const remote=readRemote(snap.data());latest=remote;viewedLocal=device;
     const result=compare(device,remote.raw);
     if(!result.safe)set('Conflict detected. '+result.conflicts.map(x=>x.key+(x.entry?': '+x.entry:'')).join('; ')+'. No changes made. Export both copies before editing.');
-    else set(result.additions.length?'Nonconflicting differences found ('+result.additions.length+'). Review and back up both copies before merging.':'Device and Level 4 cloud copies match. No action needed.');
+    else set(result.additions.length?'Firebase read access succeeded. Nonconflicting differences found ('+result.additions.length+'). Review and back up both copies before merging.':'Firebase read access succeeded. Device and Level 4 cloud copies match. No action needed.');
    }
    renderButtons();
-  }catch(e){latest=null;set('Read stopped: '+e.message+'. No changes made.');renderButtons()}
+  }catch(e){latest=null;viewedLocal=null;const reason=e.code?e.code+': '+e.message:e.message;set('Read-only Firebase access check failed: '+reason+'. No changes made. A permission-denied result requires checking Firestore rules for the separate Level 4 snapshot.');renderButtons()}
   finally{busy=false}
  }
  async function create(){
