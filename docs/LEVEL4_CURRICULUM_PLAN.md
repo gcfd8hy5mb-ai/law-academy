@@ -249,3 +249,27 @@ Connected GitHub content inspection passed for 70 unchanged lessons, 70 source m
 **No production migration performed.** `law-firebase-cloud-v4.js` and its fixed legacy `KEYS` and Firestore data writes are unchanged. Therefore Level 4 lesson drafts remain device-local and do not yet synchronize to a second device.
 
 **Release gates before wiring into Firebase:** test true Node CI execution, ensure backward-compatible schema version handling and backups of existing snapshots, test Firestore transaction revision protection, explicitly reconcile both-version conflicts without deleting existing records, verify first sign-in after rollout and old-client behavior, test Safari versus installed PWA and a second computer, and confirm draft restoration under offline/concurrent edits. After real acceptance, revise the UI warning and document the new backed-up keys.
+
+## Optional manual Level 4 cloud backup integration — November 3, 2026
+
+A guarded **separate Level 4 Firestore snapshot** has been wired into the existing verified-account panel. This is a manual, opt-in beta path, not background sync. The existing `law-firebase-cloud-v4.js` legacy list of 17 keys and original `snapshots/progress-v1` document is unchanged.
+
+### GitHub implementation
+- `law-level4-cloud.js` (`e09fc2b`) contains the manual Level 4 backup dialog. It uses `users/{uid}/academies/law/snapshots/level4-v1`, separate from `progress-v1`. After verified account sign-in it can read/compare, create the first snapshot with confirmation, and merge only nonconflicting Level 4 lesson records. It uses the pure snapshot planner, preserves local device work, downloads a before-action combined backup, and protects writes with Firebase transaction revision checks, UID checks and local edit checks.
+- `law-firebase-cloud-v4.js` (`73f6c2b`) adds a **Level 4 manual cloud backup** control for verified accounts; it does NOT append Level 4 to the legacy cloud `KEYS` array.
+- `level4-ui.js` (`aefaf6c`) explains the optional manual backup and continues to warn that Level 4 is **not cloud-synchronized automatically**.
+- `index.html` (`d398aba`) refreshes the cloud module import cache string.
+- `scripts/validate-level4-cloud-bridge.mjs` (`4374656`) adds static separation/no-background-write/regression assertions.
+- `scripts/validate-level4-cloud-behavior.mjs` (`5b17e7d`) simulates manual first upload, two nonconflicting draft merges, same-lesson conflict, local edit between compare/write, and remote revision conflict.
+- GitHub Actions updated (`49e5b50`) to run both bridge tests as well as the eleven pure migration tests and curriculum checks.
+
+### Testing scope
+Direct JS evaluation of the five simulated bridge behaviors passed, along with safety checks and source syntax inspection. The eleven pure migration scenarios passed in the earlier batch. **No verified deployed Firebase read/write, Firestore permissions inspection, successful GitHub Actions run or real iPhone/PWA and desktop cross-device acceptance test is yet recorded.** A Firestore permission rejection must leave the existing cloud and local data unchanged. Do not describe cross-device saving as fully operational until verified on both devices.
+
+### Release/test protocol
+1. Save Level 4 writing backups and the existing Law Academy cloud backup first.
+2. Sign in to the same **verified** account on both devices. In Cloud Account, open **Level 4 manual cloud backup**.
+3. On the original device select **Read and compare**, then with the downloaded backup saved, explicitly opt in to create a first separate Level 4 snapshot if none exists.
+4. On the second device compare before any merge. A disjoint lesson set may merge after confirmation; different work for the *same lesson* is a hard conflict to resolve manually using downloaded copies.
+5. Check actual Firestore security rules for the new `level4-v1` document, verify two-device read/write and exact restoration, test sign-out, concurrent edits, offline service interruptions and installed Home Screen browser storage; ensure no prelaw/Level 1–3 data changes. Existing cloud progress is never silently replaced by this new dialog.
+6. Only after acceptance should Level 4 be considered cross-device-capable or upgraded to automatic sync; for now manual operation and local backups remain the default.
