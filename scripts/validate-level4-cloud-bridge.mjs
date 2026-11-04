@@ -1,0 +1,27 @@
+// Static safety regression for isolated manual Level 4 cloud operations.
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {Script} from 'node:vm';
+const bridge=readFileSync(new URL('../law-level4-cloud.js',import.meta.url),'utf8');
+const legacy=readFileSync(new URL('../law-firebase-cloud-v4.js',import.meta.url),'utf8');
+const ui=readFileSync(new URL('../level4-ui.js',import.meta.url),'utf8');
+let checks=0;
+function check(condition,message){assert.ok(condition,message);checks++}
+check(bridge.includes("'snapshots','level4-v1'"),'Level 4 must use separate cloud snapshot');
+check(!bridge.includes("'snapshots','progress-v1'"),'Level 4 may not write legacy snapshot');
+check(bridge.includes("planSnapshotMerge(wrapped(device),wrapped(cloud))"),'Must use conservative merge planner');
+check(bridge.includes('if(!proposal.safe)throw Error'), 'Conflicting copies must block cloud writes');
+check(bridge.includes('if(current.revision!==expected||current.raw!==remoteOriginal)'), 'Must guard cloud concurrency');
+check(bridge.includes('snapshot(localStorage)!==before'), 'Must guard local edit concurrency');
+check(bridge.includes("if(snap.exists())throw Error"), 'First upload must not replace existing document');
+check(bridge.includes("runTransaction(db,async tx=>"),'Writes must use Firebase transactions');
+check(bridge.includes("downloadBackup({device:before,cloud:latest.raw"),'Merge must export both versions before write');
+check(bridge.includes("if(!confirm("),'Manual write requires explicit confirmation');
+check(!/setInterval\(|visibilitychange|addEventListener\('online'/.test(bridge),'Manual Level 4 bridge must not background sync');
+check(legacy.includes("'law-academy-level3-v1'];"),'Prior snapshot key list must remain intact');
+check(!legacy.includes("'law-academy-level4-v1'"),'Legacy sync must not silently add Level 4 key');
+check(legacy.includes("openLevel4Cloud({auth,db})"),'Signed-in account panel must open Level 4 tool');
+check(ui.includes('not yet cloud-synchronized automatically'), 'User-facing Level 4 storage warning must be accurate');
+new Script(bridge.replace(/^import .*$/gm,'').replace(/^export /gm,''),{filename:'law-level4-cloud.js'});
+new Script(ui,{filename:'level4-ui.js'});
+console.log('PASS: '+checks+' isolated manual cloud safety assertions and two JavaScript parse checks. Firebase permissions and browser behaviour require acceptance tests.');
