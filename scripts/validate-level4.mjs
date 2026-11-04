@@ -176,3 +176,20 @@ assert.equal(all.filter(l=>l.sourceReview).length,70,'All 70 lessons must contai
 assert.ok(all.find(l=>l.id==='L4-3-6').reading.includes('2025'),'DGCL 144 amendment warning absent');
 assert.ok(all.find(l=>l.id==='L4-6-5').reading.includes('45-day'),'ADEA group waiver distinction absent');
 console.log('PASS: 70 of 70 lessons include a limited authority marker; this does NOT constitute independent exhaustive verification.');
+
+for(const course of courses){
+ const final=course.lessons[9],rubric=final.examRubric,cal=rubric.calibration;
+ assert.ok(cal&&cal.version==='1.0-draft','Calibration missing '+course.id);
+ assert.equal(cal.anchors.length,rubric.areas.length,'Calibration area count mismatch '+course.id);
+ rubric.areas.forEach((area,i)=>{
+  assert.equal(cal.anchors[i].area,area.label,'Calibration criterion differs '+course.id+': '+area.label);
+  assert.ok(cal.anchors[i].fullCredit.length>=70,'Full-credit example too short '+course.id);
+  assert.ok(cal.anchors[i].lowCredit.length>=50,'Low-credit example too short '+course.id);
+ });
+ assert.ok(cal.criticalErrorExample.length>=50,'Missing material-error example '+course.id);
+ assert.ok(cal.scoringProtocol.includes('Two qualified')&&cal.moderation.includes('third qualified examiner'),'Independent examiner moderation required '+course.id);
+ assert.ok(cal.selfReviewPrompt.length>=100,'Self-review prompt missing '+course.id);
+}
+assert.ok(ui.includes('Written final · examiner criteria')&&ui.includes('lesson.examRubric.calibration.anchors'),'Rubric must appear in final lesson UI');
+assert.ok(ui.includes('no examiner has certified these criteria'),'Must state draft rubric limitation');
+console.log('PASS: 7 calibrated examination rubrics show criterion anchors and human two-examiner moderation requirements. No scores or academic approval implied.');
