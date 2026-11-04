@@ -67,13 +67,12 @@ export function openLevel4Cloud({auth,db}){
  }
  async function create(){
   if(busy||!active()||!latest?.missing)return;
-  if(!confirm('Save a device backup first. Create a SEPARATE Level 4 cloud record? This does not modify earlier-level progress.'))return;
+  if(!confirm('Have you ALREADY saved your Level 4 device backup (or confirmed there is no Level 4 work to preserve)? Tap Cancel to use Download device backup first. OK creates a separate Level 4 cloud record and does not replace Levels 1–3.'))return;
   busy=true;
   try{
    if(snapshot(localStorage)!==viewedLocal)throw Error('Local writing changed; compare again');
    const device=snapshot(localStorage),raw=device??'{}';
    if(raw.length>LIMIT)throw Error('Draft too large for a single cloud document');
-   downloadBackup({device,cloud:null,exportedAt:new Date().toISOString()});
    const result=await runTransaction(db,async tx=>{
     const snap=await tx.get(ref);
     if(snap.exists())throw Error('Another Level 4 cloud copy appeared. Compare again.');
@@ -97,8 +96,7 @@ export function openLevel4Cloud({auth,db}){
    if(proposal.merged===null)throw Error('No valid combined draft to save');
    if(proposal.merged.length>LIMIT)throw Error('Combined draft exceeds cloud size guard');
    if(proposal.additions.length===0){set('No different work to merge; both copies match.');return}
-   downloadBackup({device:before,cloud:latest.raw,cloudRevision:latest.revision,exportedAt:new Date().toISOString()});
-   if(!confirm('Back up both copies and confirm they are saved. Merge ONLY nonconflicting Level 4 lesson entries into the separate Level 4 cloud document and this device?'))return;
+   if(!confirm('Have you ALREADY downloaded and saved a backup of BOTH copies using Download device backup? Tap Cancel to save it first. OK merges ONLY nonconflicting Level 4 entries; existing conflicting drafts are never overwritten.'))return;
    const expected=latest.revision,remoteOriginal=latest.raw,combined=proposal.merged;
    const next=await runTransaction(db,async tx=>{
     const snap=await tx.get(ref);
