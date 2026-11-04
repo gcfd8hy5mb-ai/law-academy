@@ -163,3 +163,16 @@ for(const id of auditBatchEight){
 }
 assert.equal(all.filter(l=>l.sourceReview).length,53,'Expected 53 limited authority checkpoints');
 console.log('PASS: 53 marked, narrowly scoped source checks; independent legal and academic assessment remains outstanding.');
+
+const finalSourceAuditIds=['L4-2-2','L4-3-5','L4-3-6','L4-3-7','L4-3-8','L4-3-9','L4-3-10','L4-5-8','L4-5-9','L4-5-10','L4-6-5','L4-6-6','L4-6-10','L4-7-3','L4-7-6','L4-7-7','L4-7-10'];
+for(const id of finalSourceAuditIds){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson?.sourceReview&&lesson.reading.includes('TARGETED SOURCE REVIEW'),'Missing final source note '+id);
+ assert.equal(lesson.sourceReview.checkedAsOf,'2026-11-03','Wrong source-check date '+id);
+ assert.ok(lesson.sourceReview.sourceUrls?.length>0&&lesson.sourceReview.sourceUrls.every(u=>u.startsWith('https://')),'Missing source link '+id);
+ assert.ok(lesson.sourceReview.scope.includes('no exhaustive legal accuracy'),'Source review scope missing '+id);
+}
+assert.equal(all.filter(l=>l.sourceReview).length,70,'All 70 lessons must contain a bounded source checkpoint');
+assert.ok(all.find(l=>l.id==='L4-3-6').reading.includes('2025'),'DGCL 144 amendment warning absent');
+assert.ok(all.find(l=>l.id==='L4-6-5').reading.includes('45-day'),'ADEA group waiver distinction absent');
+console.log('PASS: 70 of 70 lessons include a limited authority marker; this does NOT constitute independent exhaustive verification.');
