@@ -121,3 +121,14 @@ for(const [id,fragments] of Object.entries(newSourceReviewChecks)){
 assert.ok(all.find(l=>l.id==='L4-1-3').reading.includes('December 1, 2024'),'FRE 613(b) amendment timing missing');
 assert.equal(all.filter(l=>l.sourceReview).length,19,'Expected nineteen bounded source checkpoints');
 console.log('PASS: nineteen limited authority reviews documented. Neither a comprehensive citator check nor professional sign-off.');
+
+const recentReviewIds=['L4-2-1','L4-2-5','L4-3-1','L4-3-3','L4-5-1','L4-5-5','L4-6-1','L4-6-3','L4-6-4','L4-6-8','L4-7-1','L4-7-4','L4-7-5','L4-7-8'];
+for(const id of recentReviewIds){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson?.sourceReview&&lesson.reading.includes('TARGETED LEGAL-AUTHORITY CROSSCHECK'),'Missing current batch source review '+id);
+ assert.equal(lesson.sourceReview.checkedAsOf,'2026-11-03','Incorrect dated review '+id);
+ assert.ok(lesson.sourceReview.sourceUrls?.length>=1 && lesson.sourceReview.sourceUrls.every(u=>u.startsWith('https://')),'Missing primary source or agency link '+id);
+}
+assert.ok(all.find(l=>l.id==='L4-3-3').reading.includes('March 19, 2026'),'2026 HSR regulatory procedural update missing');
+assert.equal(all.filter(l=>l.sourceReview).length,33,'Expected 33 targeted source checks');
+console.log('PASS: 33 limited legal-source checks, including the March 2026 HSR form change; external substantive review remains pending.');
