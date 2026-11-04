@@ -3,6 +3,7 @@
 import {initializeApp,getApps} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,signOut} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
 import {getFirestore,doc,getDoc,runTransaction,serverTimestamp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+import {openLevel4Cloud} from './law-level4-cloud.js';
 const cfg=window.ACADEMY_FIREBASE_CONFIG;
 const app=getApps().find(a=>a.name==='law-academy')||initializeApp(cfg,'law-academy');
 const auth=getAuth(app),db=getFirestore(app);
@@ -36,6 +37,7 @@ function render(message){
  if(!user.emailVerified){line('Please verify your account email before cloud access.');panel.append(button('Sign out',()=>signOut(auth)),button('Hide',()=>{panel.style.display='none';handle.style.display='block'}));return}
  if(linked){panel.append(button('Sync now',sync),button('Download iPhone backup',()=>download('law-academy-iphone-backup.json',local())))}
  else {panel.append(button('Compare cloud and iPhone',review),button('Download iPhone backup',()=>download('law-academy-iphone-backup.json',local())));if(mode==='empty')panel.append(button('Enable first cloud save',enable))}
+ panel.append(button('Level 4 manual cloud backup',()=>openLevel4Cloud({auth,db})));
  panel.append(button('Sign out',()=>signOut(auth)),button('Hide',()=>{panel.style.display='none';handle.style.display='block'}));
 }
 async function review(){
