@@ -132,3 +132,23 @@ for(const id of recentReviewIds){
 assert.ok(all.find(l=>l.id==='L4-3-3').reading.includes('March 19, 2026'),'2026 HSR regulatory procedural update missing');
 assert.equal(all.filter(l=>l.sourceReview).length,33,'Expected 33 targeted source checks');
 console.log('PASS: 33 limited legal-source checks, including the March 2026 HSR form change; external substantive review remains pending.');
+
+const auditBatchSeven={
+ 'L4-2-3':['559/356','566/156'],
+ 'L4-2-4':['565/228'],
+ 'L4-2-6':['2026-guidelines-manual/annotated-2026-chapter-6'],
+ 'L4-4-6':['528/167'],
+ 'L4-4-8':['supct/rule_10'],
+ 'L4-5-3':['t5/s706'],
+ 'L4-5-6':['t5/s706'],
+ 'L4-7-9':['449/383']
+};
+for(const [id,fragments] of Object.entries(auditBatchSeven)){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson?.sourceReview,'Source review marker missing '+id);
+ assert.equal(lesson.sourceReview.checkedAsOf,'2026-11-03','Source review date missing '+id);
+ for(const fragment of fragments)assert.ok(lesson.sourceReview.sourceUrls.some(u=>u.includes(fragment)),'Expected source absent '+id+': '+fragment);
+ assert.ok(lesson.reading.includes('Bounded rule/opinion review only'),'Legal review must disclose limited scope '+id);
+}
+assert.equal(all.filter(l=>l.sourceReview).length,41,'Expected 41 bounded source checkpoints');
+console.log('PASS: 41 targeted authority checkpoints, no comprehensive legal accuracy or qualified academic review implied.');
