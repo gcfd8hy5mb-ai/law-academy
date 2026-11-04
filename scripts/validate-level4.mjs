@@ -152,3 +152,14 @@ for(const [id,fragments] of Object.entries(auditBatchSeven)){
 }
 assert.equal(all.filter(l=>l.sourceReview).length,41,'Expected 41 bounded source checkpoints');
 console.log('PASS: 41 targeted authority checkpoints, no comprehensive legal accuracy or qualified academic review implied.');
+
+const auditBatchEight=['L4-1-10','L4-2-7','L4-2-10','L4-3-2','L4-3-4','L4-4-3','L4-4-4','L4-4-10','L4-5-4','L4-5-7','L4-6-2','L4-6-9'];
+for(const id of auditBatchEight){
+ const lesson=all.find(l=>l.id===id);
+ assert.ok(lesson?.sourceReview&&lesson.reading.includes('TARGETED PRIMARY-SOURCE RESEARCH NOTE'),'Missing eighth audit note '+id);
+ assert.equal(lesson.sourceReview.checkedAsOf,'2026-11-03','Review date missing '+id);
+ assert.ok(lesson.sourceReview.sourceUrls?.every(url=>url.startsWith('https://')),'Unsafe or missing source '+id);
+ assert.ok(lesson.sourceReview.scope.includes('independent citation currency'),'Legal accuracy qualification absent '+id);
+}
+assert.equal(all.filter(l=>l.sourceReview).length,53,'Expected 53 limited authority checkpoints');
+console.log('PASS: 53 marked, narrowly scoped source checks; independent legal and academic assessment remains outstanding.');
