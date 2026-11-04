@@ -293,3 +293,14 @@ User's iPhone screenshot confirmed that the **original Law Academy cloud account
 - `da59d00`: Cloud module cache hint updated so refreshed Safari/Home Screen sessions load the new UI.
 
 **User acceptance:** Download the Level 4 device backup and verify it was saved. In Cloud Account → Level 4 manual cloud backup, tap **Read and compare**. If **NOT CREATED**, select **Create first Level 4 cloud copy (confirm first)**. Expect **CREATED (revision 1)** on success; report the full exact error if not. Do not infer Level 4 cloud backup success from the original panel's "Cloud up to date" text. No existing cloud record was overwritten by these source changes. Actual write permissions and cross-device restore remain outstanding.
+
+## iPhone first-upload backup prompt loop fix — November 4, 2026
+
+A device report identified that pressing **Create first Level 4 cloud copy** repeatedly triggered the iOS save/download dialog because `create()` called `downloadBackup()` immediately before its Firestore transaction, even after the user had independently saved a backup. The same automatic download was also present before merge.
+
+- `af06ac1`: Removed automatic downloads from **Create** and **Merge** actions. Both now explicitly ask the user to confirm they have *already* saved the separate backup (or have no Level 4 writing to preserve for first creation), then continue directly to the guarded transaction. **Download device backup** remains separately available and is not silently skipped on behalf of the user.
+- `74972e3`: Static regression checks now reject automatic download invocation within the first-upload procedure and require pre-action backup acknowledgments.
+- `a566551`: The simulated first-write behavior explicitly asserts that Create performs **zero** download prompts and still writes revision 1 to a separate Level 4 record. All six simulated bridge tests passed after the change.
+- `c947228`: Updated the module import cache hint for iPhone Safari/Home Screen refresh.
+
+**Actual Firebase first-write permission and completion remain unverified.** On iPhone, save the backup independently once, open Cloud Account → Level 4 manual cloud backup, press Read and compare; if NOT CREATED, press Create, accept the prior-backup confirmation, and look for CREATED (revision 1). If an error appears, copy its exact text. This path leaves the legacy Levels 1–3 cloud record unchanged.
