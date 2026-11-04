@@ -171,3 +171,20 @@ Linked authority texts appear in each lesson's `sourceReview.sourceUrls`. These 
 Repository-content consistency inspection preserved all 70 lesson IDs and distinct quiz questions, with 19 marked source checkpoints. The updated test script's JavaScript syntax was parse-checked with import-module syntax substituted for the parser environment, but the actual Node test suite, GitHub Actions and deployed iPhone/browser acceptance still have **not** been independently confirmed.
 
 The legacy `law-firebase-cloud-v4.js` remains unchanged; migration of Level 4 writing to Firebase is pending a backward-compatible conflict-safe design and real-device verification.
+
+## Sixth legal-authority expansion — November 3, 2026
+
+This batch added 14 more **scoped** authority checkpoints, increasing the total from 19 to **33 of 70 Level 4 lessons**. Curriculum commits: `445e760` (twelve legal and ethics notes), `231859a` (two M&A guidance updates). Test extension: `e79b36d`.
+
+**Authorities and practical corrections:**
+- `L4-2-1`, `L4-2-5`: *Brady v. Maryland*, 373 U.S. 83 (1963); distinguish favorable evidence, materiality, pretrial disclosure obligations and the standard for postconviction relief.
+- `L4-3-1`, `L4-3-3`: FTC Hart–Scott–Rodino notification; applicable thresholds, filing triggers, waiting periods and the **March 19, 2026 change back to the pre-February 2025 HSR form** following a district court vacatur and denial of a stay. Current official filing guidance must be rechecked at the transaction date.
+- `L4-5-1`, `L4-5-5`: 5 U.S.C. §553(b)-(c), applicable federal notice-and-comment rulemaking, exceptions and difference from agency subpoena/adjudication authority.
+- `L4-6-1`, `L4-6-3`, `L4-6-4`, `L4-6-8`: ABA Model Rules 1.7, 1.2, 1.15 and 1.9, including nonconsentable conflicts, reasonable limited scope and client settlement authority, advance fee safeguarding, former-client material adversity. Model rules are not automatically the adopted law in each state.
+- `L4-7-1`: ABA Model Rule 1.13, entity client and constituent relationships.
+- `L4-7-4`, `L4-7-8`: Federal Rules of Civil Procedure 26 and 34, relevance/proportionality and possession/custody/control in complex and cross-border discovery.
+- `L4-7-5`: Federal Rule of Civil Procedure 41, dismissal by stipulation and the distinction between private settlement and court-filed dismissal.
+
+Official or legal primary texts: https://www.law.cornell.edu/supremecourt/text/373/83 ; https://www.ftc.gov/enforcement/premerger-notification-program ; https://search.ftc.gov/enforcement/premerger-notification-program/hsr-notification-forms-instructions-guidance ; https://www.law.cornell.edu/uscode/text/5/553 ; https://www.law.cornell.edu/rules/frcp/rule_26 ; https://www.law.cornell.edu/rules/frcp/rule_34 ; https://www.law.cornell.edu/rules/frcp/rule_41 ; official ABA Model Rules at https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/ .
+
+Repository-content checks passed for seven courses, seventy stable lesson IDs, seventy distinct knowledge checks, thirty-three targeted review markers, and syntactic validation of the amended regression script (parser substitution for module syntax, **not** Node test execution). No Firebase migration or cloud-data write was performed. Independent academic review, primary-law citator checks, full automated test execution and iPhone/desktop acceptance remain outstanding.
