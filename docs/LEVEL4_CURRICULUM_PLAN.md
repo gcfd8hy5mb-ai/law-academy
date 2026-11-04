@@ -188,3 +188,18 @@ This batch added 14 more **scoped** authority checkpoints, increasing the total 
 Official or legal primary texts: https://www.law.cornell.edu/supremecourt/text/373/83 ; https://www.ftc.gov/enforcement/premerger-notification-program ; https://search.ftc.gov/enforcement/premerger-notification-program/hsr-notification-forms-instructions-guidance ; https://www.law.cornell.edu/uscode/text/5/553 ; https://www.law.cornell.edu/rules/frcp/rule_26 ; https://www.law.cornell.edu/rules/frcp/rule_34 ; https://www.law.cornell.edu/rules/frcp/rule_41 ; official ABA Model Rules at https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/ .
 
 Repository-content checks passed for seven courses, seventy stable lesson IDs, seventy distinct knowledge checks, thirty-three targeted review markers, and syntactic validation of the amended regression script (parser substitution for module syntax, **not** Node test execution). No Firebase migration or cloud-data write was performed. Independent academic review, primary-law citator checks, full automated test execution and iPhone/desktop acceptance remain outstanding.
+
+## Seventh scoped legal-source audit — November 3, 2026
+
+Eight case-specific source checks added (`09d5733`) and protected by structural assertions (`08653c6`). **41 of 70 lessons** now carry a limited authority checkpoint; these markers do not mean the lessons have undergone comprehensive independent review.
+
+New checkpoints:
+- `L4-2-3`: *Padilla v. Kentucky*, 559 U.S. 356 (2010), immigration advice and prejudice; *Lafler v. Cooper*, 566 U.S. 156 (2012), the rejected plea's outcome and prejudice requirements.
+- `L4-2-4`: *Perry v. New Hampshire*, 565 U.S. 228 (2012), improperly police-arranged suggestive identification and scope of mandatory due-process reliability screening.
+- `L4-2-6`: Fed. R. Crim. P. 32 procedures restated in the U.S. Sentencing Commission's 2026 guidance, including federal presentence-report timing and objections.
+- `L4-4-6`: *Friends of the Earth v. Laidlaw*, 528 U.S. 167 (2000), voluntary cessation and continuing case-or-controversy requirements.
+- `L4-4-8`: U.S. Supreme Court Rule 10, discretionary certiorari and significant federal legal questions.
+- `L4-5-3`, `L4-5-6`: 5 U.S.C. §706, federal agency review grounds, whole record and administrative standards.
+- `L4-7-9`: *Upjohn*, 449 U.S. 383 (1981), corporate legal-advice communications versus underlying discoverable facts.
+
+Reference URLs are maintained in the affected lessons' `sourceReview.sourceUrls`. Content inspection confirmed 70 unique IDs, 70 distinct knowledge questions, and 41 limited source annotations. The validator script passed a parser-only check with module syntax substituted; this does not establish actual Node/CI execution. Browser acceptance, independent academic review, and safe Firebase migration remain pending. Previous cloud schema and progress keys are untouched.
