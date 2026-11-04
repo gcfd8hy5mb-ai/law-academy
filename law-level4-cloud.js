@@ -31,7 +31,7 @@ export function openLevel4Cloud({auth,db}){
  panel.setAttribute('role','dialog');panel.setAttribute('aria-label','Level 4 manual cloud backup');
  panel.append(label('h2','Level 4 · Manual Cloud Backup'));
  panel.append(label('p','Optional and manual. This uses a separate Firebase record and never edits the older Law Academy cloud snapshot. Existing lesson drafts are never overwritten silently.'));
- const status=label('p','No cloud data has been read yet.');status.setAttribute('role','status');panel.append(status);
+ const status=label('p','Level 4 backup status: Not checked yet. The main Law Academy cloud connection does not confirm a Level 4 backup.');status.setAttribute('role','status');panel.append(status);
  const actions=document.createElement('div');panel.append(actions);
  let busy=false,latest=null,viewedLocal=null;
  const active=()=>auth.currentUser?.uid===uid&&auth.currentUser.emailVerified;
@@ -43,7 +43,7 @@ export function openLevel4Cloud({auth,db}){
   actions.append(control('Download device backup',()=>{try{downloadBackup({device:snapshot(localStorage),cloud:latest?.raw??null,cloudRevision:latest?.revision??null,exportedAt:new Date().toISOString()});set('Backup download initiated. Verify the file is saved before changing any data.')}catch(e){set('Backup failed: '+e.message)}}));
   actions.append(control('Read and compare (no changes)',review));
   actions.append(control('Test Level 4 Firebase read access',review));
-  if(latest!==null)actions.append(control('Merge nonconflicting copies (confirm first)',merge));
+  if(latest!==null&&!latest.missing)actions.append(control('Merge nonconflicting copies (confirm first)',merge));
   if(latest?.missing)actions.append(control('Create first Level 4 cloud copy (confirm first)',create));
  }
  async function review(){
@@ -54,12 +54,12 @@ export function openLevel4Cloud({auth,db}){
    const snap=await getDoc(ref);if(!active())throw Error('Account changed');
    if(!snap.exists()){
     latest={missing:true,raw:null,revision:null};viewedLocal=device;
-    set('Firebase read access succeeded. No separate Level 4 cloud record exists. Local work unchanged; download a backup before considering a first upload.');
+    set('Level 4 backup status: NOT CREATED. Firebase read access succeeded, but the separate Level 4 cloud record does not exist. The main Law Academy sync status is independent. Download your device backup before first upload.');
    }else{
     const remote=readRemote(snap.data());latest=remote;viewedLocal=device;
     const result=compare(device,remote.raw);
-    if(!result.safe)set('Conflict detected. '+result.conflicts.map(x=>x.key+(x.entry?': '+x.entry:'')).join('; ')+'. No changes made. Export both copies before editing.');
-    else set(result.additions.length?'Firebase read access succeeded. Nonconflicting differences found ('+result.additions.length+'). Review and back up both copies before merging.':'Firebase read access succeeded. Device and Level 4 cloud copies match. No action needed.');
+    if(!result.safe)set('Level 4 backup status: CONFLICT. Firebase record revision '+remote.revision+' exists, but '+result.conflicts.map(x=>x.key+(x.entry?': '+x.entry:'')).join('; ')+' differs between devices. No changes made. Export both copies before editing.');
+    else set(result.additions.length?'Level 4 backup status: EXISTS (revision '+remote.revision+'). Firebase read succeeded; '+result.additions.length+' nonconflicting difference(s) detected. Back up both copies before any merge.':'Level 4 backup status: EXISTS (revision '+remote.revision+'). Firebase read succeeded and the Level 4 device and cloud copies match.');
    }
    renderButtons();
   }catch(e){latest=null;viewedLocal=null;const reason=e.code?e.code+': '+e.message:e.message;set('Read-only Firebase access check failed: '+reason+'. No changes made. A permission-denied result requires checking Firestore rules for the separate Level 4 snapshot.');renderButtons()}
@@ -82,7 +82,7 @@ export function openLevel4Cloud({auth,db}){
     return 1;
    });
    latest={revision:result,raw};viewedLocal=device;
-   set('First separate Level 4 cloud copy created. Older academy progress was not touched.');renderButtons();
+   set('Level 4 backup status: CREATED (revision 1). First separate Level 4 cloud copy created. Older academy progress was not touched. This is manual backup, not automatic synchronization.');renderButtons();
   }catch(e){set('Creation stopped: '+e.message+'. No earlier-level data was modified.')}
   finally{busy=false}
  }
@@ -117,7 +117,7 @@ export function openLevel4Cloud({auth,db}){
     latest={revision:next,raw:combined};viewedLocal=null;renderButtons();return;
    }
    latest={revision:next,raw:combined};viewedLocal=combined;
-   set('Merged only nonconflicting Level 4 entries. Cloud revision '+next+'. Reload the Level 4 lesson to view any newly imported writing.');renderButtons();
+   set('Level 4 backup status: MERGED (revision '+next+'). Only nonconflicting Level 4 entries were merged. Reload the Level 4 lesson to view any newly imported writing.');renderButtons();
   }catch(e){set('Merge stopped: '+e.message+'. Recompare before another attempt. No existing drafts were deliberately overwritten.')}
   finally{busy=false}
  }
