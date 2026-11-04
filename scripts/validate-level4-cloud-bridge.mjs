@@ -15,7 +15,11 @@ check(bridge.includes('if(current.revision!==expected||current.raw!==remoteOrigi
 check(bridge.includes('snapshot(localStorage)!==before'), 'Must guard local edit concurrency');
 check(bridge.includes("if(snap.exists())throw Error"), 'First upload must not replace existing document');
 check(bridge.includes("runTransaction(db,async tx=>"),'Writes must use Firebase transactions');
-check(bridge.includes("downloadBackup({device:before,cloud:latest.raw"),'Merge must export both versions before write');
+check(bridge.includes("downloadBackup({device:snapshot(localStorage),cloud:latest?.raw"),'Separate backup action must include both versions when available');
+check(bridge.includes("Have you ALREADY saved your Level 4 device backup"),'First upload must explicitly confirm prior backup without triggering another download');
+check(bridge.includes("Have you ALREADY downloaded and saved a backup of BOTH copies"),'Merge must confirm independent backup without triggering another download');
+const createBlock=bridge.split('async function create(){')[1].split('async function merge(){')[0];
+check(!createBlock.includes('downloadBackup('),'Creating a cloud record must not force a repeated iPhone save dialog');
 check(bridge.includes("if(!confirm("),'Manual write requires explicit confirmation');
 check(!/setInterval\(|visibilitychange|addEventListener\('online'/.test(bridge),'Manual Level 4 bridge must not background sync');
 check(legacy.includes("'law-academy-level3-v1'];"),'Prior snapshot key list must remain intact');
