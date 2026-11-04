@@ -13,6 +13,7 @@ on:
       - 'law-level4-cloud.js'
       - 'law-firebase-cloud-v4.js'
       - 'scripts/validate-level4-cloud-bridge.mjs'
+      - 'scripts/validate-level4-cloud-behavior.mjs'
       - 'level3-ui.js'
       - 'app.js'
       - 'index.html'
@@ -29,6 +30,7 @@ on:
       - 'law-level4-cloud.js'
       - 'law-firebase-cloud-v4.js'
       - 'scripts/validate-level4-cloud-bridge.mjs'
+      - 'scripts/validate-level4-cloud-behavior.mjs'
       - 'level3-ui.js'
       - 'app.js'
       - 'index.html'
@@ -59,6 +61,7 @@ jobs:
           node --check scripts/validate-law-cloud-migration.mjs
           node --check law-level4-cloud.js
           node --check scripts/validate-level4-cloud-bridge.mjs
+          node --check scripts/validate-level4-cloud-behavior.mjs
           node --check scripts/validate-level3.mjs
       - name: Curriculum structural regression tests
         run: |
@@ -66,6 +69,7 @@ jobs:
           node scripts/validate-level4.mjs
           node scripts/validate-law-cloud-migration.mjs
           node scripts/validate-level4-cloud-bridge.mjs
+          node scripts/validate-level4-cloud-behavior.mjs
       - name: Human review boundary
         run: |
           echo 'Automated structure tests do not verify legal currency, case treatment, academic comparability, or bar eligibility.'
