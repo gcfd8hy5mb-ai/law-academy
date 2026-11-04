@@ -33,7 +33,7 @@ async function scenario({device=null,cloud=null,denyRead=false}={}){
  const context={document,auth,localStorage,alert:x=>alerts.push(x),confirm:x=>{confirmations.push(x);return true},
   doc:(_db,...path)=>{assert.equal(path.at(-1),'level4-v1');return {path}},getDoc,runTransaction,
   serverTimestamp:()=> 'mock-server-time',planSnapshotMerge,LEGACY_KEYS,LEVEL4_KEY,normalizeSnapshot,
-  Blob:class{constructor(parts){this.parts=parts}},URL:{createObjectURL:()=> 'blob:mock',revokeObjectURL:()=>{}},
+  Blob:class{constructor(parts){this.parts=parts}},URL:{createObjectURL:()=>{downloads.push('download');return 'blob:mock'},revokeObjectURL:()=>{}},
   setTimeout:fn=>{},Date,JSON,Error,Object,Array,Number,String,RegExp,console};
  runInNewContext(script,context);
  context.launch({auth,db:{}});
@@ -57,10 +57,12 @@ function pass(name){passed++;console.log('PASS: '+name)}
  assert.ok(!x.dialog.children.find(n=>n.tag==='div').children.some(b=>b.textContent==='Merge nonconflicting copies (confirm first)'));
  assert.equal(x.documents.size,0);
  await x.press('Create first Level 4 cloud copy (confirm first)');
+ assert.equal(x.downloads.length,0,'Create must not trigger another iPhone save popup');
  assert.equal(x.documents.get('level4-v1').revision,1);
  assert.match(x.status(),/CREATED \(revision 1\)/);
  assert.equal(x.documents.get('level4-v1').raw,d({'L4-1-1':{draft:'Local legal memo'}}));
  pass('First create uses isolated Level 4 document and explicit approval');
+ assert.match(x.confirmations[0],/ALREADY saved/);
 }
 {
  const x=await scenario({device:d({'L4-1-1':{draft:'Phone memo'}}),cloud:{raw:d({'L4-1-1':{draft:'Computer memo'}})}});
