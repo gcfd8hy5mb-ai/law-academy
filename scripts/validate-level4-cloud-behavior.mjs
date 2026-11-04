@@ -53,9 +53,12 @@ function pass(name){passed++;console.log('PASS: '+name)}
 {
  const x=await scenario({device:d({'L4-1-1':{draft:'Local legal memo'}})});
  await x.press('Read and compare (no changes)');
+ assert.match(x.status(),/NOT CREATED/);
+ assert.ok(!x.dialog.children.find(n=>n.tag==='div').children.some(b=>b.textContent==='Merge nonconflicting copies (confirm first)'));
  assert.equal(x.documents.size,0);
  await x.press('Create first Level 4 cloud copy (confirm first)');
  assert.equal(x.documents.get('level4-v1').revision,1);
+ assert.match(x.status(),/CREATED \(revision 1\)/);
  assert.equal(x.documents.get('level4-v1').raw,d({'L4-1-1':{draft:'Local legal memo'}}));
  pass('First create uses isolated Level 4 document and explicit approval');
 }
