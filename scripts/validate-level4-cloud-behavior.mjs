@@ -15,14 +15,14 @@ class Node {
  focus(){}
  click(){return this.events.click?.()}
 }
-async function scenario({device=null,cloud=null}={}){
+async function scenario({device=null,cloud=null,denyRead=false}={}){
  const documents=new Map(),initial=cloud?{level:4,schemaVersion:1,revision:cloud.revision??1,raw:cloud.raw,updatedAt:null}:null;
  if(initial)documents.set('level4-v1',initial);
  const storage=new Map(device===null?[]:[[LEVEL4_KEY,device]]),downloads=[],alerts=[],confirmations=[];
  const localStorage={getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v),removeItem:k=>storage.delete(k)};
  const document={body:new Node('body'),createElement:tag=>new Node(tag)};
  const auth={currentUser:{uid:'test-user',emailVerified:true}};
- const getDoc=async()=>({exists:()=>documents.has('level4-v1'),data:()=>documents.get('level4-v1')});
+ const getDoc=async()=>{if(denyRead){const error=Error('Missing or insufficient permissions');error.code='permission-denied';throw error}return {exists:()=>documents.has('level4-v1'),data:()=>documents.get('level4-v1')};};
  const runTransaction=async(_db,fn)=>{
   let writes=[];
   const tx={get:async()=>getDoc(),set:(_ref,value)=>writes.push(value)};
@@ -95,5 +95,13 @@ function pass(name){passed++;console.log('PASS: '+name)}
  assert.equal(x.documents.get('level4-v1').revision,2);
  assert.equal(JSON.parse(x.documents.get('level4-v1').raw)['L4-2-1'].draft,'Cloud updated');
  pass('Cloud revision changes prevent stale transactional overwrite');
+}
+{
+ const x=await scenario({device:d({'L4-1-1':{draft:'Safe local essay'}}),denyRead:true});
+ await x.press('Test Level 4 Firebase read access');
+ assert.match(x.status(),/permission-denied/);
+ assert.equal(x.documents.size,0);
+ assert.equal(x.storage.get(LEVEL4_KEY),d({'L4-1-1':{draft:'Safe local essay'}}));
+ pass('Read-only permission rejection reports the Firestore error and preserves device writing');
 }
 console.log('PASS: '+passed+' simulated Level 4 bridge operations. This is not actual Firebase rules or iPhone browser testing.');
