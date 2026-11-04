@@ -235,3 +235,17 @@ Level 4's seven final-examination drafts now include **five course-specific scor
 **Important:** These rubrics and worked examples were written as draft examiner aids; no two qualified examiners have calibrated or scored actual submissions and no legal/academic expert has signed off. The UI does not auto-award final-exam mastery. A future independent calibration study should blind-score multiple real student scripts, measure between-rater reliability, record disagreements, refine descriptors, and confirm acceptable source currency.
 
 Connected GitHub content inspection passed for 70 unchanged lessons, 70 source markers and distinct IDs, 7 aligned 100-point finals and valid JavaScript syntax of the UI and validator (the latter parser-check substitutes module syntax). Full Node CI run, deployed browser navigation, accessible interactive exam acceptance and cloud saving were not independently confirmed. The Firebase snapshot key list remains unchanged, so Level 4 drafts remain browser-local.
+
+## Cloud compatibility preparation — November 3, 2026
+
+**Read-only migration compatibility module added, not connected to live Firebase.**
+
+- `scripts/law-cloud-migration-plan.mjs` (`5ac4dd1`) exports a pure, data-only migration planner. It recognizes all 17 existing cloud snapshot keys plus the optional `law-academy-level4-v1` key, normalizes legacy snapshots with no Level 4 field, validates storage types and Level 4 lesson/field shapes, and identifies conflicts rather than overwriting divergent answers.
+- `scripts/validate-law-cloud-migration.mjs` (`1400253`) exercises 11 cases: old cloud snapshot, Level 4 present only on the device, Level 4 present only in cloud, disjoint lesson merges, conflicting same-lesson drafts, conflicting quiz entries, conflicting Level 3 data, order-independent JSON comparisons, malformed/oversized/unrecognized snapshots, invalid progress fields, and a no-external-side-effects check.
+- `.github/workflows/level3-curriculum.yml` (`6099299`) now triggers on the new migration files and includes `node --check` and `node scripts/validate-law-cloud-migration.mjs` alongside existing curriculum checks.
+
+**Execution evidence:** all 11 migration tests passed using a JavaScript execution of the fetched source and tests with a minimal local assertion adapter. This is not evidence of a completed GitHub Actions run, iPhone/desktop browser acceptance, or actual Firebase transaction behavior.
+
+**No production migration performed.** `law-firebase-cloud-v4.js` and its fixed legacy `KEYS` and Firestore data writes are unchanged. Therefore Level 4 lesson drafts remain device-local and do not yet synchronize to a second device.
+
+**Release gates before wiring into Firebase:** test true Node CI execution, ensure backward-compatible schema version handling and backups of existing snapshots, test Firestore transaction revision protection, explicitly reconcile both-version conflicts without deleting existing records, verify first sign-in after rollout and old-client behavior, test Safari versus installed PWA and a second computer, and confirm draft restoration under offline/concurrent edits. After real acceptance, revise the UI warning and document the new backed-up keys.
