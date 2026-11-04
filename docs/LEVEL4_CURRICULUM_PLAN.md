@@ -223,3 +223,15 @@ Primary sources include Delaware's online corporate code https://delcode.delawar
 **Repository inspection result:** seven courses, 70 uniquely indexed lessons, 70 distinct questions, 70 dated source markers, and a parser-only check of the expanded validator all passed. No full Node test-suite execution, deployed iOS/desktop browser acceptance, professional citation treatment review, independent exam calibration or academic sign-off has been completed. No change was made to the fixed Firebase snapshot schema; Level 4 written drafts remain device-local pending nondestructive migration testing.
 
 **The next quality phase is comprehensive cross-jurisdiction legal accuracy and assessment calibration, followed by functional acceptance and safe cloud saving.** Do not equate source-reference completion with accreditation, transferable academic credit, or bar examination eligibility.
+
+## Final examination calibration preparation — November 3, 2026
+
+Level 4's seven final-examination drafts now include **five course-specific scoring anchors** aligned to their existing 100-point rubric criteria (25 points legal rules, 30 evidence and practice work, 15 counterarguments, 20 source accuracy, 10 professional judgment). They provide observable strong- and low-credit performance descriptions and one subject-specific critical-error example. Seven subjects: civil trial, criminal case, M&A, constitutional appeals, regulatory enforcement, ethics/counseling, and integrated general counsel.
+
+- `b2385f4`: Added `examRubric.calibration` to the seven finals with case-specific criterion anchors, self-review prompts, proposed independent double marking and escalation to a third qualified examiner for material disagreement.
+- `1a8f54c`: Added a student-visible **Written final · examiner criteria** section showing rubric weights, strong/weak answer distinctions and serious error examples. The existing worked-guide reveal still requires a 100-word written attempt.
+- `6fe1595`: Added structural regression assertions for all seven five-criterion calibration rubrics, explicit human grading requirements, and student-visible review boundaries.
+
+**Important:** These rubrics and worked examples were written as draft examiner aids; no two qualified examiners have calibrated or scored actual submissions and no legal/academic expert has signed off. The UI does not auto-award final-exam mastery. A future independent calibration study should blind-score multiple real student scripts, measure between-rater reliability, record disagreements, refine descriptors, and confirm acceptable source currency.
+
+Connected GitHub content inspection passed for 70 unchanged lessons, 70 source markers and distinct IDs, 7 aligned 100-point finals and valid JavaScript syntax of the UI and validator (the latter parser-check substitutes module syntax). Full Node CI run, deployed browser navigation, accessible interactive exam acceptance and cloud saving were not independently confirmed. The Firebase snapshot key list remains unchanged, so Level 4 drafts remain browser-local.
