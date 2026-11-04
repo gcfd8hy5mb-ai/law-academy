@@ -8,6 +8,8 @@ on:
       - 'level4.js'
       - 'level4-ui.js'
       - 'scripts/validate-level4.mjs'
+      - 'scripts/law-cloud-migration-plan.mjs'
+      - 'scripts/validate-law-cloud-migration.mjs'
       - 'level3-ui.js'
       - 'app.js'
       - 'index.html'
@@ -45,11 +47,14 @@ jobs:
           node --check level4.js
           node --check level4-ui.js
           node --check scripts/validate-level4.mjs
+          node --check scripts/law-cloud-migration-plan.mjs
+          node --check scripts/validate-law-cloud-migration.mjs
           node --check scripts/validate-level3.mjs
       - name: Curriculum structural regression tests
         run: |
           node scripts/validate-level3.mjs
           node scripts/validate-level4.mjs
+          node scripts/validate-law-cloud-migration.mjs
       - name: Human review boundary
         run: |
           echo 'Automated structure tests do not verify legal currency, case treatment, academic comparability, or bar eligibility.'
