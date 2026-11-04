@@ -283,3 +283,13 @@ Added a mocked `permission-denied` scenario (`d5f6775`), bringing the simulated 
 **Safe real-device acceptance action:** In the updated Law Academy app, sign in with the verified account, open Cloud Account → Level 4 manual cloud backup → **Test Level 4 Firebase read access**. This is a read-only action. Record whether it says access succeeded or returns an exact Firebase error code. Do not create or merge cloud copies until that check passes and the user has downloaded backups. The separately configured Firebase security rules for `users/{uid}/academies/law/snapshots/level4-v1` still need to be inspected and verified.
 
 **CI visibility boundary:** the GitHub connector returned no combined status checks or PR-triggered workflow runs for commit `d12df17886c68f5e613b082e5503ec96056086ee`. Its PR workflow-run retrieval does not establish the absence or success of push-triggered runs. Full Actions CI results and actual deployed browser/Firebase operations have not been independently confirmed.
+
+## First-upload status clarity — November 3, 2026
+
+User's iPhone screenshot confirmed that the **original Law Academy cloud account** reported its legacy progress up to date, but that screen alone does **not** prove a separate Level 4 cloud document exists. Earlier read-only Level 4 diagnostics successfully found no Level 4 document. A successful Level 4 first-write confirmation has not yet been observed.
+
+- `344dd48`: Manual Level 4 backup dialog now clearly reports **NOT CREATED**, **CREATED (revision 1)**, **EXISTS (revision N)**, **CONFLICT**, or **MERGED (revision N)** based on the actual separate-record read/write result; when a record is absent the unavailable merge action is hidden.
+- `f30a8df`, `f670b45`: Simulated tests now explicitly require the first-upload status and verify the merge action stays hidden before first upload. All six simulated operations passed after updates; this does not constitute live Firestore write confirmation.
+- `da59d00`: Cloud module cache hint updated so refreshed Safari/Home Screen sessions load the new UI.
+
+**User acceptance:** Download the Level 4 device backup and verify it was saved. In Cloud Account → Level 4 manual cloud backup, tap **Read and compare**. If **NOT CREATED**, select **Create first Level 4 cloud copy (confirm first)**. Expect **CREATED (revision 1)** on success; report the full exact error if not. Do not infer Level 4 cloud backup success from the original panel's "Cloud up to date" text. No existing cloud record was overwritten by these source changes. Actual write permissions and cross-device restore remain outstanding.
