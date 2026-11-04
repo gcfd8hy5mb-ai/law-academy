@@ -203,3 +203,11 @@ New checkpoints:
 - `L4-7-9`: *Upjohn*, 449 U.S. 383 (1981), corporate legal-advice communications versus underlying discoverable facts.
 
 Reference URLs are maintained in the affected lessons' `sourceReview.sourceUrls`. Content inspection confirmed 70 unique IDs, 70 distinct knowledge questions, and 41 limited source annotations. The validator script passed a parser-only check with module syntax substituted; this does not establish actual Node/CI execution. Browser acceptance, independent academic review, and safe Firebase migration remain pending. Previous cloud schema and progress keys are untouched.
+
+## Eighth source-review batch — November 3, 2026
+
+Twelve additional **bounded** rule/opinion/model-rule research notes were committed to `level4.js` (`c2d0fc3`) and added to structural checks (`ec6103d`). **53 of 70 Level 4 lessons** now contain `sourceReview` markers. This is not a claim that 53 lessons have been exhaustively or independently verified.
+
+New checkpoints: `L4-1-10` (FRE 408 permitted and prohibited uses of compromise evidence); `L4-2-7` (28 U.S.C. §2254 exhaustion and merits deference); `L4-2-10` (*Lafler* plea representation and prejudice); `L4-3-2`, `L4-3-4` (DGCL §141(a) board authority versus agreed private M&A contract terms); `L4-4-3` (FRAP 28 arguments and record), `L4-4-4` (*Johnson* qualified-immunity factual appeal limits), `L4-4-10` (FRAP 8 motion for stay procedure); `L4-5-4` (5 U.S.C. §704 final agency action is separate from whistleblower-retaliation coverage); `L4-5-7` (5 U.S.C. §706 judicial review versus compliance testing); `L4-6-2` (FRE 408 does not create universal mediation privilege); `L4-6-9` (ABA Model Rule 1.16 withdrawal responsibilities subject to state adoption).
+
+Repository-content checks passed for 70 unchanged lesson IDs, 70 distinct knowledge questions, 53 review annotations, and parser-level syntax of the extended validator. No complete Node test, deployment/browser acceptance, live Firebase migration, law citator audit or independent academic approval was performed. The cloud schema has not been changed, and Level 4 student writing remains browser-local. **Seventeen lessons still lack even a targeted source note**; all lessons still require qualified comprehensive review.
