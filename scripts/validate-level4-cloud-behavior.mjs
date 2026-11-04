@@ -65,7 +65,7 @@ function pass(name){passed++;console.log('PASS: '+name)}
 {
  const x=await scenario({device:d({'L4-1-1':{draft:'Phone memo'}}),cloud:{raw:d({'L4-1-1':{draft:'Computer memo'}})}});
  await x.press('Read and compare (no changes)');
- assert.match(x.status(),/Conflict detected/);
+ assert.match(x.status(),/CONFLICT/);
  await x.press('Merge nonconflicting copies (confirm first)');
  assert.equal(x.documents.get('level4-v1').revision,1);
  assert.equal(x.storage.get(LEVEL4_KEY),d({'L4-1-1':{draft:'Phone memo'}}));
