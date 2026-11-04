@@ -273,3 +273,13 @@ Direct JS evaluation of the five simulated bridge behaviors passed, along with s
 4. On the second device compare before any merge. A disjoint lesson set may merge after confirmation; different work for the *same lesson* is a hard conflict to resolve manually using downloaded copies.
 5. Check actual Firestore security rules for the new `level4-v1` document, verify two-device read/write and exact restoration, test sign-out, concurrent edits, offline service interruptions and installed Home Screen browser storage; ensure no prelaw/Level 1–3 data changes. Existing cloud progress is never silently replaced by this new dialog.
 6. Only after acceptance should Level 4 be considered cross-device-capable or upgraded to automatic sync; for now manual operation and local backups remain the default.
+
+## Read-only live-access diagnostic preparation — November 3, 2026
+
+Added a clearly labeled **Test Level 4 Firebase read access** button to the opt-in Level 4 cloud dialog (`c077dc6`). It uses the existing read-only comparison route and displays either successful access with snapshot presence/differences, or the exact Firebase error code such as `permission-denied`. The error state clears stale cloud comparison state, preserves device drafts, and makes no Firestore writes.
+
+Added a mocked `permission-denied` scenario (`d5f6775`), bringing the simulated manual-bridge cases to **six**. All six passed a direct JavaScript execution of the repository source with mocked Firestore, document and storage. This is **not a live Firebase request**, actual Firestore rules validation, or iOS PWA acceptance. The cloud loader cache hint was updated (`2091a0e`).
+
+**Safe real-device acceptance action:** In the updated Law Academy app, sign in with the verified account, open Cloud Account → Level 4 manual cloud backup → **Test Level 4 Firebase read access**. This is a read-only action. Record whether it says access succeeded or returns an exact Firebase error code. Do not create or merge cloud copies until that check passes and the user has downloaded backups. The separately configured Firebase security rules for `users/{uid}/academies/law/snapshots/level4-v1` still need to be inspected and verified.
+
+**CI visibility boundary:** the GitHub connector returned no combined status checks or PR-triggered workflow runs for commit `d12df17886c68f5e613b082e5503ec96056086ee`. Its PR workflow-run retrieval does not establish the absence or success of push-triggered runs. Full Actions CI results and actual deployed browser/Firebase operations have not been independently confirmed.
