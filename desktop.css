@@ -1,0 +1,25 @@
+/* Desktop workspace for Law Academy; mobile styling remains unchanged. */
+@media (min-width:960px){
+ body{background:radial-gradient(circle at 78% 10%,#17395a 0%,transparent 45%),linear-gradient(145deg,#070e1b,#0a1830 70%,#060d18)}
+ .shell.app-shell{max-width:1340px;width:calc(100% - 282px);margin:0 36px 0 246px;padding:32px clamp(24px,3vw,52px) 90px}
+ .app-shell .court-hero{height:318px;margin:0 0 22px;border:1px solid #9d7a49;border-radius:22px;padding:36px 46px;background:radial-gradient(circle at 75% 27%,#51422d 0,transparent 34%),linear-gradient(110deg,#0c1d34,#0a1628)}
+ .app-shell .court-hero:after{right:55px;top:15px;height:295px;width:265px;opacity:.34}
+ .app-shell .brandtitle{font-size:clamp(35px,3vw,52px)}
+ .app-shell .hero-copy{font-size:20px;max-width:440px}
+ .app-shell .progress-panel{margin:0 0 22px;padding:27px 30px;border-radius:16px;grid-template-columns:minmax(0,1fr) 110px}
+ .app-shell .progress-panel h2{font-size:31px}
+ .app-shell .ring{width:96px;height:96px}
+ .app-shell .quick-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:24px 0}
+ .app-shell .quick-card{min-height:120px;padding:15px 10px}
+ .app-shell .quick-card small{font-size:14px}
+ .app-shell .feature-card{min-height:200px;padding:32px}
+ .app-shell .feature-card h2{font-size:32px}
+ .app-shell .level-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+ .app-shell .level-row{min-height:88px;padding:15px}
+ .app-shell .reading{font-size:18px;line-height:1.85;max-width:85ch}
+ .bottom-nav{position:fixed!important;top:0!important;bottom:0!important;left:0!important;right:auto!important;width:226px!important;height:100vh!important;padding:102px 14px 24px!important;background:linear-gradient(180deg,#101d30,#070d19)!important;border-right:1px solid #8a6c43!important;border-top:0!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:10px!important;transform:none!important;z-index:100!important}
+ .bottom-nav:before{content:"LAW ACADEMY";position:absolute;top:45px;left:23px;font:18px Georgia,serif;color:#edd09c;letter-spacing:1.5px}
+ .bottom-nav .navitem{width:100%!important;min-height:56px!important;padding:12px 16px!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;border-radius:11px!important;font-size:14px!important;text-align:left!important}
+ .bottom-nav .navitem.on{background:#293a51}
+ #law-cloud-launch{top:17px!important;right:24px!important}
+}
