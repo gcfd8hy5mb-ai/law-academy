@@ -103,3 +103,12 @@ Nine lessons received dated supplementary legal instruction and applied assignme
 - The preexisting legal text remains intact in versioned addenda for traceability; future reviewers must evaluate potential contradictions, not assume the supplement by itself fixes every sentence.
 - Internal integration checks: 100 unique lessons loaded, nine targeted addenda present, audit inventory still has 100 records, JavaScript syntax and script order passed.
 - Review closure: **Not closed.** No independent attorney/academic confirmation, comprehensive legal cite check, live mobile-browser acceptance, or student-outcome validation occurred. Remaining unreviewed lessons and older prior-source check dates stay in the backlog.
+
+## Formative written-rubric coverage — November 8, 2026
+- Added `level4-formative-rubrics-2026.js`: 93 missing lesson-specific **formative** writing rubrics were attached without rewriting existing lessons, preserving 7 pre-existing more detailed `examRubric` objects.
+- Rubrics address issue spotting (15), operative primary authority (20), factual application and professional deliverables (30), adverse arguments and missing evidence (20), and client advice/ethics/clarity (15), totaling 100 points per lesson.
+- Criteria include lesson-specific titles, listed authorities, required deliverables, and adverse positions. This **does not** represent 93 human-calibrated grading standards. It is structured self-review scaffolding with no automated essay score or independent examiner validation.
+- Level 4 UI displays the new rubrics in expandable sections while retaining prior dedicated final-exam and worked-guide displays.
+- Internal test: 100 authored lessons, 7 preexisting examiner-style rubrics, 93 new formative rubric records, all 93 numeric totals 100; JavaScript syntax and script order passed.
+- Remaining P1 ASSESSMENT: obtain human review of grading anchors and full model answers, inter-rater calibration, actual performance grading and student remediation validation. Existing student drafts/keys remain unchanged.
+- Remaining P0: verify legal authorities and current amendments by a qualified independent legal editor and document per-course sign-off. No academic equivalence or bar readiness certification.
