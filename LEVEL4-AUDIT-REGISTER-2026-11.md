@@ -140,3 +140,21 @@ Nine lessons received dated supplementary legal instruction and applied assignme
 - **Remaining P0:** full independently researched and cited authority checks; effective-date and subsequent-treatment verification; corrections for state-specific rules and hypothetical materials; qualified academic/legal reviewer sign-off.
 - **Remaining P1:** richer full model memoranda and genuinely calibrated grading anchors, human scoring reliability, app behavior on Safari and desktop, and cross-device sync testing.
 - Do **not** equate 100% worked-guide structural coverage with accredited academic equivalence, legal correctness, validated bar readiness, or demonstrated practical competence.
+
+## Source verification + integration pass, November 8, 2026
+**Review status:** seven narrow rule/holding checks completed against publicly available U.S. Courts, Supreme Court, Cornell LII rule text and the ABA Model Rules; **zero** whole-lesson academic approvals or qualified independent reviews.
+
+### Bounded authority checkpoints (lesson IDs)
+- `L4-1-3`: then-operative FRE 801(d)(1)(A) requirements distinguished from the amendment projected for December 1, 2026. References: https://www.law.cornell.edu/rules/fre/rule_801 and https://www.uscourts.gov/forms-rules/pending-rules-and-forms-amendments.
+- `L4-1-6`, `L4-1-9`, `L4-1-14`: FRCP 50(a) preverdict motion requirements, renewal under Rule 50(b), ordinary **28-day** deadline, Rule 50(c) conditional new-trial handling. Reference: https://www.law.cornell.edu/rules/frcp/rule_50. Local rules, interpretation and full Rule 59 treatment remain outstanding.
+- `L4-5-1`, `L4-5-11`: Loper Bright requires independent judicial judgment on statutes while respecting lawful delegations; the example agency fee statute is fictional and not validated. Reference: https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf.
+- `L4-6-2`: ABA Model Rule 1.2(a) allocates settlement decision to the client; local adopted ethics law and contract/mediation enforcement still require checking. Reference: https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_2_scope_of_representation_allocation_of_authority_between_client_lawyer/.
+
+Each named lesson now displays a dated, narrowly scoped authority note and application exercise via `level4-authority-checks-batch1-2026.js`. Each check is tagged `independentlyApproved:false` and is not a statement that the whole lesson is legally correct.
+
+### Technical integration evidence
+- Loaded 100 Level 4 lessons with **100 unique IDs**, 100 populated worked-guide structures, 100 lesson-specific rubric objects, and 100 source-audit inventory records.
+- All fetched JavaScript parsed successfully in an isolated JavaScript syntax and curriculum-data test.
+- Seven specific lesson notes loaded, source links populated, and script load order confirmed. No saved-progress key changed.
+- **Not a completed browser acceptance test.** Real iPhone Safari/desktop interaction, sign-in, storage quota, manual cloud backup, asynchronous navigation and accessibility remain to be tested manually or with a browser automation runner.
+- Remaining source work must cover substantial legal propositions across the other lessons, citation validity and subsequent case treatment, jurisdiction-specific differences and qualified reviewer sign-off. **The fact that every lesson has a source link is not source verification.**
