@@ -186,3 +186,19 @@ Each named lesson now displays a dated, narrowly scoped authority note and appli
 - These are **structural tests only**. Browser behavior, local storage persistence, iPhone Safari/PWA, desktop keyboard and screenreader, cloud backup/merge and draft conflict handling have **not** been fully acceptance-tested in this pass.
 - **External academic/legal review remains unresolved:** qualified reviewers must validate material propositions and citations, verify subsequent case treatment and jurisdiction-specific law, evaluate instructional rigor, provide human-calibrated exam grades, and sign dated reports.
 - **Do not display 100% legally verified or professional mastery** on the basis of 100% structural curriculum authoring.
+
+## Assessment validity audit — November 8, 2026
+
+**Issue A1: Predictable correct answer placement (fixed in code, not yet live-device tested).**
+- Before this pass the 100 Level 4 knowledge-check answer positions were 26 first / 74 second / 0 third. A learner could exploit this distribution without mastering doctrine.
+- The seven stand-alone Level 4 practical-final checkpoint keys were all in the first position (7 / 0 / 0).
+- `level4-assessment-key-balance-2026.js` now deterministically rotates each three-choice knowledge check to produce **34 / 33 / 33** correct answers in first / second / third positions. It preserves each correct answer's wording and lesson ID and never updates draft storage.
+- The seven stand-alone finals were corrected in `level4-practical-finals-data.js` to yield **2 / 2 / 3** first / second / third correct positions. The correct answer text and examiner requirements are preserved.
+- Repeatable `scripts/verify-level4.cjs` tests both distributions, all seven final identifiers and 100-point rubrics, in addition to curriculum coverage. Freshly loaded source modules passed an in-process syntax and coverage test.
+
+**Open assessment concerns**
+- Many distractors remain visibly implausible and knowledge checks are one-item, three-option exercises. Balanced answer position does **not** demonstrate validity, reliability, or mastery.
+- Seven finals have relatively short fictional case summaries and abbreviated provisional reasoning anchors, not fact-complete files or calibrated 1,800–2,500-word examiner model answers.
+- Written responses are self-rated rather than independently graded; answer scoring quality, inter-rater reliability and grading keys need experienced legal academic reviewers.
+- Browser-based acceptance tests, original localStorage migrations/legacy answer-index display and cross-device cloud saving still need manual QA.
+- External sign-off: **none**. These are internal assessment design fixes only.
