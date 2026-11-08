@@ -120,3 +120,13 @@ Nine lessons received dated supplementary legal instruction and applied assignme
 - Automated structural checks found 100 unique lessons, 100 lessons with formative or existing examination rubrics, and **21 lessons with worked reasoning guides** (7 earlier plus 14 new). **79 lessons still lack a worked guide.**
 - The model reasoning is provisional educational guidance. It is neither a qualified attorney's review nor a validated mark scheme, and should not be presented as proof of legal correctness or bar readiness.
 - Outstanding: 79 substantive worked analyses; item-by-item primary authority validation; academic grading calibration; browser-based acceptance and manual cloud backup testing; independent professional review and sign-off.
+
+## Worked reasoning expansion — Batch 3, November 8, 2026
+- Added `level4-worked-guides-batch3-2026.js` (24 detailed, case-specific worked examples in L4-1 through L4-6).
+- Added `level4-worked-guides-batch3-capstone-2026.js` (4 integrated general-counsel examples in L4-7). **28 new worked guides** total, two files, additive and idempotent.
+- Coverage increased from **21/100 to 49/100**, with exactly **7 worked guides in each of the 7 third-year tracks**. **51 lessons still lack worked guides.**
+- Every added guide contains threshold issue, substantive case-specific rule/fact application, counterargument, changed-facts consequences, provisional disposition and source-currency caution.
+- The existing reveal-after-100-words interface presents the guides; new scripts are loaded after prior guides and before the Level 4 UI. Existing IDs, student drafts and progress keys were not changed.
+- Internal checks: all ten audited script/data files parse; 100 total unique lesson IDs; 49 complete worked guide structures; no duplicate IDs, script load order correct.
+- **Open:** Independent legal verification of every rule and factual conclusion, full case-law subsequent-treatment review, comprehensive model answers for remaining 51 lessons, qualified essay marking/calibration, Safari acceptance, and academic sign-off.
+- These guides are authoring drafts, not examiner-validated model answers, official bar material or evidence of accreditation.
