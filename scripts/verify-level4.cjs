@@ -28,7 +28,17 @@ const finals=finalsSandbox.window.LAW_LEVEL4_FINALS;
 assert.equal(finals.length,7,'Missing Level 4 course final');
 assert.equal(new Set(finals.map(f=>f.id)).size,7,'Duplicate final IDs');
 const finalsDistribution=[0,1,2].map(k=>finals.filter(f=>f.answer===k).length);
-assert.deepEqual(finalsDistribution,[2,2,3],'Predictable correct-answer position in finals');
+assert.deepEqual(finalsDistribution,[2,3,2],'Predictable correct-answer position in finals');
+const packetWindow={window:finalsSandbox.window};vm.createContext(packetWindow);
+vm.runInContext(fs.readFileSync('level4-practical-final-case-packets-2026.js','utf8'),packetWindow);
+for(const f of finals){
+ const p=f.casePacket;
+ assert.ok(p,'Missing practical final evidence packet '+f.id);
+ assert.equal(p.exhibits.length,6,'Expected six exhibits '+f.id);
+ assert.ok(p.timeline.length>=6,'Missing chronological evidence '+f.id);
+ assert.ok(p.unknowns.length>=5,'Missing unresolved fact prompts '+f.id);
+ assert.ok(p.changedFacts.length>=2&&p.benchmarks.length>=4,'Missing changed facts or benchmarks '+f.id);
+}
 for(const f of finals){
  assert.ok(f.options[f.answer]&&f.why&&f.modelReasoning,'Missing checkpoint answer or rationale '+f.id);
  assert.equal(f.rubric.reduce((n,r)=>n+r.points,0),100,'Final rubric total invalid '+f.id);
