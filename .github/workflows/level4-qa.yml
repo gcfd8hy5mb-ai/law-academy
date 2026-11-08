@@ -1,0 +1,31 @@
+name: Level 4 Curriculum and Exam QA
+on:
+  push:
+    paths:
+      - 'level4*.js'
+      - 'index.html'
+      - 'scripts/verify-level4*.cjs'
+      - '.github/workflows/level4-qa.yml'
+  pull_request:
+    paths:
+      - 'level4*.js'
+      - 'index.html'
+      - 'scripts/verify-level4*.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-level4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check all 100 lessons, answer keys, and rubrics
+        run: node scripts/verify-level4.cjs
+      - name: Simulate all seven exam flows
+        run: node scripts/verify-level4-final-interactions.cjs
