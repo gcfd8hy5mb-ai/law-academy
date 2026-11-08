@@ -4,7 +4,7 @@
  */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const files=['level4-practical-finals-data.js','level4-practical-final-case-packets-2026.js','level4-final-examiner-calibration-2026.js','level4-independent-review-export-2026.js','level4-practical-finals-ui.js'];
-const db=new Map(),runtime={els:new Map(),html:'',copied:''};
+const db=new Map(),runtime={els:new Map(),collections:new Map(),html:'',copied:''};
 const fakeElement=(attrs={})=>({
  value:attrs.value||'',hidden:attrs.hidden===true,textContent:'',innerHTML:'',
  dataset:attrs.dataset||{},checked:false,onclick:null,focus(){this.focused=true;},
@@ -16,13 +16,16 @@ const document={
   return runtime.els.get(selector.slice(1))||null;
  },
  querySelectorAll(selector){
-  if(selector==='[data-final]')return Array.from(runtime.html.matchAll(/data-final="([^"]+)"/g),m=>fakeElement({dataset:{final:m[1]}}));
-  if(selector==='[data-final-restore]')return Array.from(runtime.html.matchAll(/data-final-restore="([^"]+)"/g),m=>fakeElement({dataset:{finalRestore:m[1]}}));
-  return [];
+  if(runtime.collections.has(selector))return runtime.collections.get(selector);
+  let results=[];
+  if(selector==='[data-final]')results=Array.from(runtime.html.matchAll(/data-final="([^"]+)"/g),m=>fakeElement({dataset:{final:m[1]}}));
+  if(selector==='[data-final-restore]')results=Array.from(runtime.html.matchAll(/data-final-restore="([^"]+)"/g),m=>fakeElement({dataset:{finalRestore:m[1]}}));
+  runtime.collections.set(selector,results);
+  return results;
  }
 };
 function shell(html){
- runtime.html=html;runtime.els.clear();
+ runtime.html=html;runtime.els.clear();runtime.collections.clear();
  for(const m of html.matchAll(/<([a-z]+)\b([^>]*\bid="([^"]+)"[^>]*)>/gi)){
   const attrs=m[2],id=m[3],value=(attrs.match(/\bvalue="([^"]*)"/)||[])[1]||'';
   runtime.els.set(id,fakeElement({value,hidden:/\bhidden(?:\s|>|$)/.test(attrs)}));
