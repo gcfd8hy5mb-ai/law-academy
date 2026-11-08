@@ -53,3 +53,14 @@ For each of seven Level 4 tracks, obtain:
 - A signed written conclusion, with limits of equivalency and scope explicitly stated.
 
 Do not represent this document as a completed accreditation or a qualified independent review.
+
+## Assessment expansion — November 8, 2026
+- Added seven separate course-specific Level 4 practical finals (L4-1-FINAL2 to L4-7-FINAL2).
+- Each final requires an extended written memorandum, primary-authority ledger, competing arguments, changed-facts analysis, oral-defense outline, a check question and a six-part rubric totaling 100.
+- Written answers, self-ratings and up to eight local snapshots use `law-academy-level4-finals-v1`; **do not** convert self-ratings to legally certified marks or mastery.
+- Data-structure checks: seven IDs unique; answer indices valid; all rubrics sum to 100; HTML load order and Exam Center integration checked.
+- Outstanding acceptance tests: start/pause/restore/write/submit on mobile Safari, desktop keyboard accessibility, browser-storage quota and cross-device sync.
+- Authority desk-check sampling: U.S. Courts identifies **2025 amendments to Civil Rules 16 and 26** and new Rule 16.1; reviewers must use the currently applicable versions, including applicability of amendments. Reference: https://www.uscourts.gov/forms-rules/current-rules-practice-procedure
+- Authority desk-check sampling: Loper Bright (2024) rejects mandatory Chevron deference because a statute is ambiguous, but does not categorically invalidate lawful agency discretion. Reference: https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf
+- Authority desk-check sampling: ABA Model Rule 1.2(a) allocates settlement decisions to the client; Model Rule 1.13 represents the organization as client. Actual jurisdiction-specific ethics rules remain to be verified. References: https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_2_scope_of_representation_allocation_of_authority_between_client_lawyer/ and https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_13_organization_as_client/
+- These checks cover selected propositions, **not** an entire lesson-by-lesson citation audit. No external examiner engaged or sign-off granted.
