@@ -112,3 +112,11 @@ Nine lessons received dated supplementary legal instruction and applied assignme
 - Internal test: 100 authored lessons, 7 preexisting examiner-style rubrics, 93 new formative rubric records, all 93 numeric totals 100; JavaScript syntax and script order passed.
 - Remaining P1 ASSESSMENT: obtain human review of grading anchors and full model answers, inter-rater calibration, actual performance grading and student remediation validation. Existing student drafts/keys remain unchanged.
 - Remaining P0: verify legal authorities and current amendments by a qualified independent legal editor and document per-course sign-off. No academic equivalence or bar readiness certification.
+
+## Worked reasoning expansion — November 8, 2026
+- Added `level4-worked-guides-batch2-2026.js`: fourteen **distinct authored legal-analysis comparisons**, two per Level 4 course, without modifying older lesson IDs, source notices, or learner storage.
+- Each new comparison addresses threshold issue, fact-to-rule reasoning, opposing position, changed-facts analysis, authority-currency verification checklist and conditional disposition.
+- The existing Level 4 interface already requires a student to write at least 100 words before revealing worked guides. The new entries use that established display path.
+- Automated structural checks found 100 unique lessons, 100 lessons with formative or existing examination rubrics, and **21 lessons with worked reasoning guides** (7 earlier plus 14 new). **79 lessons still lack a worked guide.**
+- The model reasoning is provisional educational guidance. It is neither a qualified attorney's review nor a validated mark scheme, and should not be presented as proof of legal correctness or bar readiness.
+- Outstanding: 79 substantive worked analyses; item-by-item primary authority validation; academic grading calibration; browser-based acceptance and manual cloud backup testing; independent professional review and sign-off.
