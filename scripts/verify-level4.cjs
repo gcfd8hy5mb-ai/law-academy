@@ -3,7 +3,7 @@
  * DOES NOT validate substantive legal accuracy, source holdings or browser persistence.
  */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const paths=['level4.js','level4-case-labs-2026.js','level4-case-labs-batch2-2026.js','level4-case-labs-batch3-2026.js','level4-case-labs-batch4-2026.js','level4-assessment-key-balance-2026.js','level4-advanced-questions-batch1-2026.js','level4-advanced-questions-course1-2026.js','level4-advanced-questions-course2-2026.js','level4-advanced-questions-course3-2026.js','level4-advanced-questions-course4-2026.js','level4-advanced-questions-course5-2026.js','level4-advanced-questions-course6-2026.js','level4-advanced-questions-course7-2026.js','level4-advanced-questions-balance-2026.js','level4-rule-currency-2026.js','level4-formative-rubrics-2026.js','level4-worked-guides-batch2-2026.js','level4-worked-guides-batch3-2026.js','level4-worked-guides-batch3-capstone-2026.js','level4-worked-guides-batch4a-2026.js','level4-worked-guides-batch4b-2026.js','level4-authority-checks-batch1-2026.js','level4-legal-updates-final-2026.js','level4-100-lesson-completion-audit-2026.js','level4-audit-inventory-2026.js'];
+const paths=['level4.js','level4-case-labs-2026.js','level4-case-labs-batch2-2026.js','level4-case-labs-batch3-2026.js','level4-case-labs-batch4-2026.js','level4-assessment-key-balance-2026.js','level4-advanced-questions-batch1-2026.js','level4-advanced-questions-course1-2026.js','level4-advanced-questions-course2-2026.js','level4-advanced-questions-course3-2026.js','level4-advanced-questions-course4-2026.js','level4-advanced-questions-course5-2026.js','level4-advanced-questions-course6-2026.js','level4-advanced-questions-course7-2026.js','level4-advanced-questions-balance-2026.js','level4-advanced-question-authority-audit-batch1-2026.js','level4-rule-currency-2026.js','level4-formative-rubrics-2026.js','level4-worked-guides-batch2-2026.js','level4-worked-guides-batch3-2026.js','level4-worked-guides-batch3-capstone-2026.js','level4-worked-guides-batch4a-2026.js','level4-worked-guides-batch4b-2026.js','level4-authority-checks-batch1-2026.js','level4-legal-updates-final-2026.js','level4-100-lesson-completion-audit-2026.js','level4-audit-inventory-2026.js'];
 const sandbox={window:{}};vm.createContext(sandbox);
 for(const file of paths){vm.runInContext(fs.readFileSync(file,'utf8'),sandbox,{filename:file,timeout:3000})}
 const courses=sandbox.window.LAW_LEVEL4,lessons=courses.flatMap(c=>c.lessons),ids=lessons.map(l=>l.id);
@@ -34,6 +34,10 @@ for(const l of advanced){
 assert.deepEqual([0,1,2].map(k=>advanced.filter(l=>l.advancedQuiz2026.answer===k).length),[34,33,33]);
 assert.deepEqual(Array.from(courses,c=>c.lessons.filter(l=>l.advancedQuiz2026).length),[14,14,14,14,14,14,16]);
 assert.equal(advanced.filter(l=>l.advancedQuiz2026.rebalanced2026).length,86,'Must preserve earlier 14 question-key positions');
+const authorityChecks=advanced.filter(l=>l.advancedQuiz2026.authorityReview);
+assert.equal(authorityChecks.length,8,'Expected eight bounded authority checks');
+assert.ok(authorityChecks.every(l=>l.advancedQuiz2026.authorityReview.sourceUrls.length>0),'Missing sources');
+assert.ok(authorityChecks.every(l=>l.advancedQuiz2026.authorityReview.independentApproval===false),'False professional signoff');
 const distribution=[0,1,2].map(k=>lessons.filter(l=>l.answer===k).length);
 assert.deepEqual(distribution,[34,33,33],'Unbalanced course quiz correct-option indices');
 assert.ok(lessons.every(l=>l.answerOrderBalanced2026===true),'Unbalanced assessment module not loaded');
