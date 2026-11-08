@@ -56,6 +56,21 @@ assert.deepEqual(finalsDistribution,[2,3,2],'Predictable correct-answer position
 const packetWindow={window:finalsSandbox.window};vm.createContext(packetWindow);
 vm.runInContext(fs.readFileSync('level4-practical-final-case-packets-2026.js','utf8'),packetWindow);
 vm.runInContext(fs.readFileSync('level4-final-examiner-calibration-2026.js','utf8'),packetWindow);
+vm.runInContext(fs.readFileSync('level4-independent-review-export-2026.js','utf8'),packetWindow);
+const exportReview=packetWindow.window.LAW_LEVEL4_REVIEW_PACKET.generate;
+assert.equal(typeof exportReview,'function','Reviewer packet exporter absent');
+for(const f of finals){
+ const distinctive='CANDIDATE ANSWER TEST: '+f.id+' legal analysis with citations.';
+ const sheet=exportReview(f,distinctive);
+ assert.ok(sheet.includes(distinctive),'Student answer not exported '+f.id);
+ assert.ok(sheet.includes('Awarded points: ______'),'Blind reviewer blank scores missing '+f.id);
+ assert.ok(sheet.includes(f.casePacket.exhibits[0][0]),'Evidence exhibit absent '+f.id);
+ assert.ok(sheet.includes(f.rubric[0].name),'Review rubric absent '+f.id);
+ assert.ok(!sheet.includes(f.modelReasoning),'Model reasoning leaked into blind reviewer packet '+f.id);
+ assert.ok(!sheet.includes('Provisional self-rating: '),'Self-assessment leaked '+f.id);
+ assert.ok(sheet.includes('Reviewer identifier: __________'),'Reviewer identity field missing '+f.id);
+}
+
 for(const f of finals){
  const p=f.casePacket;
  assert.ok(p,'Missing practical final evidence packet '+f.id);
@@ -93,6 +108,7 @@ assert.ok(ui.includes('completionPanel')&&ui.includes('legalUpdates'),'Missing s
 const finalsUi=fs.readFileSync('level4-practical-finals-ui.js','utf8');
 new Function(finalsUi);
 assert.ok(finalsUi.includes('finalCalibration')&&finalsUi.includes('saved.finished'),'Missing post-submission examiner comparison');
+assert.ok(finalsUi.includes('finalCopyReviewer')&&finalsUi.includes('finalReviewerFallback'),'Reviewer export and fallback missing');
 assert.ok(ui.includes('l4AdvancedCheck')&&ui.includes('advancedQuiz2026Choice'),'Supplemental case quiz is not wired into lesson view');
 console.log('PASS — 100 distinct Level 4 lessons and advanced questions; all rubrics and guides; balanced answer positions; seven final exams; script load order');
-console.log('NOT TESTED — live Safari/desktop UX, cloud/local persistence, independent legal sources or grading');
+console.log('NOT TESTED — live Safari/desktop clipboard UX, cloud/local persistence, independent legal sources or grading');
