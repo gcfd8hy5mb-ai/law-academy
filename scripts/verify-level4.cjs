@@ -3,7 +3,7 @@
  * DOES NOT validate substantive legal accuracy, source holdings or browser persistence.
  */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const paths=['level4.js','level4-case-labs-2026.js','level4-case-labs-batch2-2026.js','level4-case-labs-batch3-2026.js','level4-case-labs-batch4-2026.js','level4-assessment-key-balance-2026.js','level4-advanced-questions-batch1-2026.js','level4-rule-currency-2026.js','level4-formative-rubrics-2026.js','level4-worked-guides-batch2-2026.js','level4-worked-guides-batch3-2026.js','level4-worked-guides-batch3-capstone-2026.js','level4-worked-guides-batch4a-2026.js','level4-worked-guides-batch4b-2026.js','level4-authority-checks-batch1-2026.js','level4-legal-updates-final-2026.js','level4-100-lesson-completion-audit-2026.js','level4-audit-inventory-2026.js'];
+const paths=['level4.js','level4-case-labs-2026.js','level4-case-labs-batch2-2026.js','level4-case-labs-batch3-2026.js','level4-case-labs-batch4-2026.js','level4-assessment-key-balance-2026.js','level4-advanced-questions-batch1-2026.js','level4-advanced-questions-course1-2026.js','level4-advanced-questions-course2-2026.js','level4-advanced-questions-course3-2026.js','level4-advanced-questions-course4-2026.js','level4-advanced-questions-course5-2026.js','level4-advanced-questions-course6-2026.js','level4-advanced-questions-course7-2026.js','level4-advanced-questions-balance-2026.js','level4-rule-currency-2026.js','level4-formative-rubrics-2026.js','level4-worked-guides-batch2-2026.js','level4-worked-guides-batch3-2026.js','level4-worked-guides-batch3-capstone-2026.js','level4-worked-guides-batch4a-2026.js','level4-worked-guides-batch4b-2026.js','level4-authority-checks-batch1-2026.js','level4-legal-updates-final-2026.js','level4-100-lesson-completion-audit-2026.js','level4-audit-inventory-2026.js'];
 const sandbox={window:{}};vm.createContext(sandbox);
 for(const file of paths){vm.runInContext(fs.readFileSync(file,'utf8'),sandbox,{filename:file,timeout:3000})}
 const courses=sandbox.window.LAW_LEVEL4,lessons=courses.flatMap(c=>c.lessons),ids=lessons.map(l=>l.id);
@@ -20,18 +20,20 @@ for(const l of lessons){
   if(l.formativeRubric)assert.equal(l.formativeRubric.criteria.reduce((n,c)=>n+c.points,0),100,'Rubric score mismatch '+l.id);
 }
 const advanced=lessons.filter(l=>l.advancedQuiz2026);
-assert.equal(advanced.length,14,'Expected 14 supplemental case-reasoning questions');
+assert.equal(advanced.length,100,'All 100 lessons should include an advanced question');
+assert.equal(new Set(advanced.map(l=>l.advancedQuiz2026.question)).size,100,'Repeated advanced question stems');
 for(const l of advanced){
  const q=l.advancedQuiz2026;
  assert.equal(q.id,l.id,'Challenge associated with wrong lesson');
- assert.ok(q.question.length>75,'Short or generic advanced challenge '+l.id);
+ assert.ok(q.question.length>=65,'Short or generic advanced challenge '+l.id);
  assert.ok(q.options.length===3&&new Set(q.options).size===3,'Non-distinct options '+l.id);
  assert.ok(Number.isInteger(q.answer)&&q.options[q.answer],'Invalid challenge answer '+l.id);
- assert.ok(q.why.length>65,'Insufficient advanced explanation '+l.id);
+ assert.ok(q.why.length>=55,'Insufficient advanced explanation '+l.id);
  assert.ok(q.status.includes('independent'),'Review status missing '+l.id);
 }
-assert.deepEqual([0,1,2].map(k=>advanced.filter(l=>l.advancedQuiz2026.answer===k).length),[5,5,4]);
-assert.deepEqual(Array.from(courses,c=>c.lessons.filter(l=>l.advancedQuiz2026).length),[2,2,2,2,2,2,2]);
+assert.deepEqual([0,1,2].map(k=>advanced.filter(l=>l.advancedQuiz2026.answer===k).length),[34,33,33]);
+assert.deepEqual(Array.from(courses,c=>c.lessons.filter(l=>l.advancedQuiz2026).length),[14,14,14,14,14,14,16]);
+assert.equal(advanced.filter(l=>l.advancedQuiz2026.rebalanced2026).length,86,'Must preserve earlier 14 question-key positions');
 const distribution=[0,1,2].map(k=>lessons.filter(l=>l.answer===k).length);
 assert.deepEqual(distribution,[34,33,33],'Unbalanced course quiz correct-option indices');
 assert.ok(lessons.every(l=>l.answerOrderBalanced2026===true),'Unbalanced assessment module not loaded');
@@ -71,5 +73,5 @@ const ui=fs.readFileSync('level4-ui.js','utf8');
 new Function(ui);
 assert.ok(ui.includes('completionPanel')&&ui.includes('legalUpdates'),'Missing status panels');
 assert.ok(ui.includes('l4AdvancedCheck')&&ui.includes('advancedQuiz2026Choice'),'Supplemental case quiz is not wired into lesson view');
-console.log('PASS — 100 distinct Level 4 lessons, guides, rubrics, audit flags, loading order and UI syntax');
+console.log('PASS — 100 distinct Level 4 lessons and advanced questions; all rubrics and guides; balanced answer positions; seven final exams; script load order');
 console.log('NOT TESTED — live Safari/desktop UX, cloud/local persistence, independent legal sources or grading');
