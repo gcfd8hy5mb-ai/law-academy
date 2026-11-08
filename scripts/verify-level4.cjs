@@ -3,7 +3,7 @@
  * DOES NOT validate substantive legal accuracy, source holdings or browser persistence.
  */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const paths=['level4.js','level4-case-labs-2026.js','level4-case-labs-batch2-2026.js','level4-case-labs-batch3-2026.js','level4-case-labs-batch4-2026.js','level4-rule-currency-2026.js','level4-formative-rubrics-2026.js','level4-worked-guides-batch2-2026.js','level4-worked-guides-batch3-2026.js','level4-worked-guides-batch3-capstone-2026.js','level4-worked-guides-batch4a-2026.js','level4-worked-guides-batch4b-2026.js','level4-authority-checks-batch1-2026.js','level4-legal-updates-final-2026.js','level4-100-lesson-completion-audit-2026.js','level4-audit-inventory-2026.js'];
+const paths=['level4.js','level4-case-labs-2026.js','level4-case-labs-batch2-2026.js','level4-case-labs-batch3-2026.js','level4-case-labs-batch4-2026.js','level4-assessment-key-balance-2026.js','level4-rule-currency-2026.js','level4-formative-rubrics-2026.js','level4-worked-guides-batch2-2026.js','level4-worked-guides-batch3-2026.js','level4-worked-guides-batch3-capstone-2026.js','level4-worked-guides-batch4a-2026.js','level4-worked-guides-batch4b-2026.js','level4-authority-checks-batch1-2026.js','level4-legal-updates-final-2026.js','level4-100-lesson-completion-audit-2026.js','level4-audit-inventory-2026.js'];
 const sandbox={window:{}};vm.createContext(sandbox);
 for(const file of paths){vm.runInContext(fs.readFileSync(file,'utf8'),sandbox,{filename:file,timeout:3000})}
 const courses=sandbox.window.LAW_LEVEL4,lessons=courses.flatMap(c=>c.lessons),ids=lessons.map(l=>l.id);
@@ -18,6 +18,21 @@ for(const l of lessons){
   for(const key of ['threshold','analysis','counter','variations','source','exemplar','status']) assert.ok(typeof l.workedGuide[key]==='string'&&l.workedGuide[key].length>=20,'Incomplete guide '+l.id+':'+key);
   assert.ok(l.formativeRubric||l.examRubric,'Missing written review rubric '+l.id);
   if(l.formativeRubric)assert.equal(l.formativeRubric.criteria.reduce((n,c)=>n+c.points,0),100,'Rubric score mismatch '+l.id);
+}
+const distribution=[0,1,2].map(k=>lessons.filter(l=>l.answer===k).length);
+assert.deepEqual(distribution,[34,33,33],'Unbalanced course quiz correct-option indices');
+assert.ok(lessons.every(l=>l.answerOrderBalanced2026===true),'Unbalanced assessment module not loaded');
+const finalsSandbox={window:{}};vm.createContext(finalsSandbox);
+vm.runInContext(fs.readFileSync('level4-practical-finals-data.js','utf8'),finalsSandbox);
+const finals=finalsSandbox.window.LAW_LEVEL4_FINALS;
+assert.equal(finals.length,7,'Missing Level 4 course final');
+assert.equal(new Set(finals.map(f=>f.id)).size,7,'Duplicate final IDs');
+const finalsDistribution=[0,1,2].map(k=>finals.filter(f=>f.answer===k).length);
+assert.deepEqual(finalsDistribution,[2,2,3],'Predictable correct-answer position in finals');
+for(const f of finals){
+ assert.ok(f.options[f.answer]&&f.why&&f.modelReasoning,'Missing checkpoint answer or rationale '+f.id);
+ assert.equal(f.rubric.reduce((n,r)=>n+r.points,0),100,'Final rubric total invalid '+f.id);
+ assert.equal(f.requirements.length,5,'Final submission instructions missing '+f.id);
 }
 const audit=sandbox.window.LAW_LEVEL4_COMPLETION_AUDIT.records;
 assert.equal(audit.length,100);assert.deepEqual(new Set(audit.map(r=>r.id)),new Set(ids));
