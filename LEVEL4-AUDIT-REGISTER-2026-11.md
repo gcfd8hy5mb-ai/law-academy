@@ -91,3 +91,15 @@ Do not represent this document as a completed accreditation or a qualified indep
 - **P1-F:** Preserve separate exam/student storage keys, and verify sync before claiming cloud support.
 
 **Conclusion:** This is an automated structural audit and a limited official-source currency check. No full doctrinal validation, accreditation or external academic review has been conducted.
+
+## Targeted corrective addenda — November 8, 2026
+**Committed extension:** `level4-rule-currency-2026.js`, rendered inside the affected Level 4 lessons.
+
+Nine lessons received dated supplementary legal instruction and applied assignments: `L4-1-1`, `L4-1-2`, `L4-1-3`, `L4-1-4`, `L4-1-8`, `L4-1-10`, `L4-1-12`, `L4-7-4`, `L4-7-8`.
+
+- Federal Civil Rules 16 and 26 and new Rule 16.1 are in effect from December 1, 2025. Corrective sections emphasize privilege-log planning, initial case management, and distinct MDL procedures. Source: https://www.uscourts.gov/forms-rules/current-rules-practice-procedure
+- FRE 801(d)(1)(A) has a projected December 1, 2026 amendment. This November 8, 2026 instructional update explicitly distinguishes the then-operative sworn-statement requirement for substantive use under that subdivision from impeachment-only use, and does not treat the scheduled amendment as presently effective. Source: https://www.uscourts.gov/forms-rules/pending-rules-and-forms-amendments
+- Additional written tasks test dated sources, evidentiary purposes, and differing procedural responsibilities.
+- The preexisting legal text remains intact in versioned addenda for traceability; future reviewers must evaluate potential contradictions, not assume the supplement by itself fixes every sentence.
+- Internal integration checks: 100 unique lessons loaded, nine targeted addenda present, audit inventory still has 100 records, JavaScript syntax and script order passed.
+- Review closure: **Not closed.** No independent attorney/academic confirmation, comprehensive legal cite check, live mobile-browser acceptance, or student-outcome validation occurred. Remaining unreviewed lessons and older prior-source check dates stay in the backlog.
