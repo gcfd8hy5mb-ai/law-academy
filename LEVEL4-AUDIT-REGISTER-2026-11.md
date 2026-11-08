@@ -242,3 +242,31 @@ Each named lesson now displays a dated, narrowly scoped authority note and appli
 - Displayed dated rule/holding summaries and source links alongside the checked advanced questions in `level4-ui.js`. No existing baseline questions, answers, or student work were overwritten.
 - Internal module integration passed: **100/100 advanced questions, 8 bounded source review records, 92 still awaiting keyed-authority review**, valid JavaScript, balanced 34/33/33 keys, note load-order correct. Added assertions to `scripts/verify-level4.cjs`.
 - **Scope limit:** Bounded review supports only the narrow recorded propositions. It does not entail verification of the complete lesson, every distractor, effective law in all jurisdictions, subsequent appellate treatment, psychometric assessment, bar readiness or independent reviewer certification. Zero independent approvals.
+
+## All 92 remaining advanced question audit records — November 8, 2026
+
+### Scope and status
+- Added `level4-advanced-question-authority-audit-remaining92-2026.js`: 92 *individual internal keyed-answer review records*, covering the entire balance of the 100-question advanced item bank. Existing eight narrower primary-law source checks remain unchanged.
+- **Audit-record coverage is 100/100**: 8 bounded source-based principle checks plus 92 source-family checks. This is an **internal audit completion** milestone, *not* a finding that the 92 keys have each been exhaustively checked against all applicable primary law or independently certified.
+- For each of the 92, documented the exact question, the keyed answer text, authored rationale, issue-specific caution, source-family starting links, unresolved substantive legal review tasks, and a clearly provisional disposition. The integration refuses to attach the review if the original answer or question text changed.
+- Several high-risk topics were explicitly flagged: 2025 Delaware §144 effective/applicability rules; operative 2025 federal procedural amendments; 2026 sentencing manual with required scope/furtherance/foreseeability for relevant conduct; forthcoming December 2026 FRE 801 change; Supreme Court certiorari Rule 10; state-adopted ethics and administrative law; fictional family-law fact patterns; foreign privacy, sanctions, and breach-notification differences.
+- Current-law anchor points consulted in this pass:
+  * US Courts current rules: https://www.uscourts.gov/forms-rules/current-rules-practice-procedure
+  * Pending December 2026 Evidence Rule 801: https://www.uscourts.gov/forms-rules/pending-rules-and-forms-amendments
+  * 2026 U.S. Sentencing Commission chapter one: https://www.ussc.gov/guidelines/2026-guidelines-manual/annotated-2026-chapter-1
+  * Signed Delaware SS1/SB21: https://www.legis.delaware.gov/BillDetail/141930
+  * Federal Appellate Rules: https://www.uscourts.gov/forms-rules/current-rules-practice-procedure/federal-rules-appellate-procedure
+  * ABA Model Rules (not state law): https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/
+  * 5 U.S.C. §706: https://uscode.house.gov/view.xhtml?edition=prelim&hl=false&num=0&req=granuleid%3AUSC-2000-title5-section706
+- Lesson UI now distinguishes the 92 "Internal key review (source-family only)" labels from eight "Bounded authority fact-check" notes. Every record expressly states no independent legal approval or full key certification.
+
+### QA
+- Retrieved and syntax-checked curriculum scripts, all advanced question scripts, both audit datasets, index and UI. All parsed without errors; **100 advanced questions / 100 review entries**, 92 source-family records and 8 bounded rule checks, no key mismatches, 34/33/33 correct-answer distribution.
+- 211 review-source-link associations across 20 distinct source URLs; these are source *leads*, **not** proof of 211 individually audited citations or verified legal conclusions.
+- All 100 reviews have `independentApproval:false`; none should be displayed as certified.
+- Extended `scripts/verify-level4.cjs` to require 100 review records, verify original keyed-answer text against new records, 92/8 separation, valid links and no professional-signoff flags.
+- Existing student drafts, base quizzes, lesson IDs, previous 14 advanced question keys and seven practical finals were preserved. No live Safari/desktop or cloud-persistence acceptance test was performed.
+
+### Still blocking academic/legal sign-off
+- Source-family corroboration is not item-by-item validation of every answer and distractor. Human qualified legal reviewers must examine each governing jurisdiction, actual statutes and cases including subsequent treatment, application of exceptions, item ambiguity, and grading standards.
+- These educational quizzes remain self-checked practice; psychometric validity, independent moderation, external legal review, professional bar preparation equivalence and accreditation have **not** been established.
