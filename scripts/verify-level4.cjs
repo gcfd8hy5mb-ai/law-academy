@@ -55,9 +55,18 @@ const finalsDistribution=[0,1,2].map(k=>finals.filter(f=>f.answer===k).length);
 assert.deepEqual(finalsDistribution,[2,3,2],'Predictable correct-answer position in finals');
 const packetWindow={window:finalsSandbox.window};vm.createContext(packetWindow);
 vm.runInContext(fs.readFileSync('level4-practical-final-case-packets-2026.js','utf8'),packetWindow);
+vm.runInContext(fs.readFileSync('level4-final-examiner-calibration-2026.js','utf8'),packetWindow);
 for(const f of finals){
  const p=f.casePacket;
  assert.ok(p,'Missing practical final evidence packet '+f.id);
+ const calibration=f.examinerCalibration2026;
+ assert.ok(calibration,'Missing examiner calibration '+f.id);
+ assert.equal(calibration.criteria.length,6,'Must have six domain-specific scoring anchors '+f.id);
+ assert.equal(calibration.criteria.reduce((n,c)=>n+c.maxPoints,0),100,'Calibration total mismatch '+f.id);
+ assert.ok(calibration.criteria.every((c,i)=>c.name===f.rubric[i].name&&c.maxPoints===f.rubric[i].points),'Calibration not matched to rubric '+f.id);
+ assert.ok(calibration.criteria.every(c=>c.strong.length>90&&c.developing.length>65&&c.inadequate.length>65),'Weak provisional anchor '+f.id);
+ assert.equal(calibration.externallyApproved,false,'False external approval '+f.id);
+ assert.ok(calibration.errorFlag.length>80&&calibration.uncertainty.length>80,'Missing critical-error guidance '+f.id);
  assert.equal(p.exhibits.length,6,'Expected six exhibits '+f.id);
  assert.ok(p.timeline.length>=6,'Missing chronological evidence '+f.id);
  assert.ok(p.unknowns.length>=5,'Missing unresolved fact prompts '+f.id);
@@ -81,6 +90,9 @@ assert.ok(ix.indexOf('level4-legal-updates-final-2026.js')<ix.indexOf('level4-ui
 const ui=fs.readFileSync('level4-ui.js','utf8');
 new Function(ui);
 assert.ok(ui.includes('completionPanel')&&ui.includes('legalUpdates'),'Missing status panels');
+const finalsUi=fs.readFileSync('level4-practical-finals-ui.js','utf8');
+new Function(finalsUi);
+assert.ok(finalsUi.includes('finalCalibration')&&finalsUi.includes('saved.finished'),'Missing post-submission examiner comparison');
 assert.ok(ui.includes('l4AdvancedCheck')&&ui.includes('advancedQuiz2026Choice'),'Supplemental case quiz is not wired into lesson view');
 console.log('PASS — 100 distinct Level 4 lessons and advanced questions; all rubrics and guides; balanced answer positions; seven final exams; script load order');
 console.log('NOT TESTED — live Safari/desktop UX, cloud/local persistence, independent legal sources or grading');
