@@ -77,7 +77,7 @@ function renderLevel4(){
     const result=document.querySelector('#l4AdvancedResult');
     if(!chosen){result.textContent='Choose an answer first.';return}
     const idx=Number(chosen.value),correct=idx===lesson.advancedQuiz2026.answer;
-    result.textContent=(correct?'Correct. ':'Not quite. ')+lesson.advancedQuiz2026.why+' Verify the linked authority before relying on this educational explanation.';
+    result.textContent=(correct?'Correct. ':'Not quite. Better answer: '+lesson.advancedQuiz2026.options[lesson.advancedQuiz2026.answer]+'. ')+lesson.advancedQuiz2026.why+' Verify the linked authority before relying on this educational explanation.';
     save(lesson.id,{advancedQuiz2026Choice:idx,advancedQuiz2026Correct:correct});
    };
   }
@@ -86,7 +86,7 @@ function renderLevel4(){
    const checked=document.querySelector('input[name="l4choice"]:checked');
    if(!checked){document.querySelector('#l4result').textContent='Choose an answer first.';return}
    const correct=Number(checked.value)===lesson.answer;
-   document.querySelector('#l4result').textContent=(correct?'Correct. ':'Review the explanation. ')+lesson.why+' This is practice feedback, not a certified examination grade.';
+   document.querySelector('#l4result').textContent=(correct?'Correct. ':'Review the explanation. Best answer: '+lesson.options[lesson.answer]+'. ')+lesson.why+' This is practice feedback, not a certified examination grade.';
    save(lesson.id,{lastAnswer:Number(checked.value),practiceCorrect:correct});
   };
  };
