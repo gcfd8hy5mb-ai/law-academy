@@ -10,7 +10,7 @@ const courses=sandbox.window.LAW_LEVEL4,lessons=courses.flatMap(c=>c.lessons),id
 assert.equal(courses.length,7);
 assert.equal(lessons.length,100);
 assert.equal(new Set(ids).size,100,'Duplicate lesson IDs');
-assert.deepEqual(courses.map(c=>c.lessons.length),[14,14,14,14,14,14,16]);
+assert.deepEqual(Array.from(courses,c=>c.lessons.length),[14,14,14,14,14,14,16]);
 for(const l of lessons){
   assert.ok(l.title&&l.authority&&l.scenario&&l.reading&&l.assignment&&l.counterarguments,'Missing content '+l.id);
   assert.ok(l.question&&Array.isArray(l.options)&&l.options.length>=3&&Number.isInteger(l.answer)&&l.options[l.answer]&&l.why,'Incomplete MCQ '+l.id);
