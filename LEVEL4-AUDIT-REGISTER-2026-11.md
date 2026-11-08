@@ -64,3 +64,30 @@ Do not represent this document as a completed accreditation or a qualified indep
 - Authority desk-check sampling: Loper Bright (2024) rejects mandatory Chevron deference because a statute is ambiguous, but does not categorically invalidate lawful agency discretion. Reference: https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf
 - Authority desk-check sampling: ABA Model Rule 1.2(a) allocates settlement decisions to the client; Model Rule 1.13 represents the organization as client. Actual jurisdiction-specific ethics rules remain to be verified. References: https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_2_scope_of_representation_allocation_of_authority_between_client_lawyer/ and https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_13_organization_as_client/
 - These checks cover selected propositions, **not** an entire lesson-by-lesson citation audit. No external examiner engaged or sign-off granted.
+
+## All-lesson structural audit and current-law checkpoint — November 8, 2026
+
+### Results
+- 100 Level 4 lesson IDs unique across 7 courses (14 each in L4-1 to L4-6; 16 in L4-7).
+- 100/100 include an authority, scenario, reading, counterarguments, written assignment, knowledge-check answer and explanation.
+- 100/100 contain at least one source-review URL. Such links do not establish independently verified citations or holdings.
+- 86 older lessons have bounded internal source-check dates/scopes; 14 newer lessons request current-law and jurisdiction verification. Neither counts as independent academic or legal approval.
+- Only 7/100 lessons have a dedicated `examRubric` field. The other 93 have writing prompts but no lesson-specific calibrated examiner rubric. The separately created seven practical finals have self-rating rubrics.
+- A per-lesson audit inventory (`level4-audit-inventory-2026.js`) sets `approved:false` and `reviewer:null` on every record.
+- The lesson UI now displays limitations and links to the author's review-source leads. No existing learner storage keys have been changed.
+
+### Official-site legal currency checkpoints
+1. **2025 civil procedure amendments.** The U.S. Courts current rules page confirms Civil Rules 16 and 26 were amended, and new Rule 16.1 took effect December 1, 2025. Lessons involving case management, privilege logs, discovery planning and MDLs need text-by-text review against the operative provisions. Source: https://www.uscourts.gov/forms-rules/current-rules-practice-procedure
+2. **Pending 2026 evidence change.** As of this audit's November 8, 2026 cutoff, the U.S. Courts pending amendments page lists an amendment to FRE 801 with projected December 1, 2026 effectiveness. It could alter substantive treatment of certain prior inconsistent statements. Do not teach the amendment as already effective; review all affected FRE 801/613 content again after the actual effective date is established. Source: https://www.uscourts.gov/forms-rules/pending-rules-and-forms-amendments
+3. **State ethics and entity law.** ABA Model Rules do not replace the state's adopted ethical requirements. Confirm jurisdiction, effective date, statutory changes and controlling judicial gloss for each rule.
+4. **Legal case holdings.** Each proposition still requires independent confirmation of the source text, controlling status, subsequent treatment and facts. A reachable URL does not equal qualified legal review.
+
+### Open fixes
+- **P0-A:** Complete a qualified, cited review of doctrine and substantive holdings for each Level 4 lesson.
+- **P0-B:** Correct and retest every relevant Civil Rules 16/26/16.1 and FRE 801/613 lesson against applicable effective dates.
+- **P0-C:** Obtain dated independent reviewer identity, credentials, jurisdiction, recommendations and sign-off per course.
+- **P1-D:** Expand essay assessments with calibrated human-grading rubrics, excluding purely formative lessons as appropriate.
+- **P1-E:** Test mobile Safari, desktop, source links, user drafts, local backup and manual cloud backup.
+- **P1-F:** Preserve separate exam/student storage keys, and verify sync before claiming cloud support.
+
+**Conclusion:** This is an automated structural audit and a limited official-source currency check. No full doctrinal validation, accreditation or external academic review has been conducted.
