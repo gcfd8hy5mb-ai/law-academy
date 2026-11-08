@@ -130,3 +130,13 @@ Nine lessons received dated supplementary legal instruction and applied assignme
 - Internal checks: all ten audited script/data files parse; 100 total unique lesson IDs; 49 complete worked guide structures; no duplicate IDs, script load order correct.
 - **Open:** Independent legal verification of every rule and factual conclusion, full case-law subsequent-treatment review, comprehensive model answers for remaining 51 lessons, qualified essay marking/calibration, Safari acceptance, and academic sign-off.
 - These guides are authoring drafts, not examiner-validated model answers, official bar material or evidence of accreditation.
+
+## Complete Level 4 worked-guide coverage — November 8, 2026
+- Added `level4-worked-guides-batch4a-2026.js` with 26 remaining lesson guides, and `level4-worked-guides-batch4b-2026.js` with 25 guides.
+- **Total worked-guide coverage is 100/100 authored Level 4 lessons.** Prior 49 were retained and not overwritten. Distribution: L4-1 through L4-6 each have 14/14; L4-7 has 16/16.
+- Every newly supplied guide has seven populated fields: threshold, analysis, counterposition, changed-facts variants, primary-law research instructions, conditional exemplar and review-status notice. The batch combines case-specific legal-issue analysis with material already authored in the original lesson. These guides are **provisional teaching comparisons**, not independently researched or fully validated reference opinions.
+- The lesson UI still requires students to draft at least 100 words before revealing comparisons. Existing progress keys and lesson identifiers are unchanged.
+- Automated checks: all included scripts parse; 100 IDs unique; all 100 lessons have formative or existing essay rubric; 100/100 have complete worked-guide structures; 100 source-audit records retained; new scripts load before the UI.
+- **Remaining P0:** full independently researched and cited authority checks; effective-date and subsequent-treatment verification; corrections for state-specific rules and hypothetical materials; qualified academic/legal reviewer sign-off.
+- **Remaining P1:** richer full model memoranda and genuinely calibrated grading anchors, human scoring reliability, app behavior on Safari and desktop, and cross-device sync testing.
+- Do **not** equate 100% worked-guide structural coverage with accredited academic equivalence, legal correctness, validated bar readiness, or demonstrated practical competence.
