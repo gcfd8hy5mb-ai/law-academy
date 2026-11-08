@@ -202,3 +202,13 @@ Each named lesson now displays a dated, narrowly scoped authority note and appli
 - Written responses are self-rated rather than independently graded; answer scoring quality, inter-rater reliability and grading keys need experienced legal academic reviewers.
 - Browser-based acceptance tests, original localStorage migrations/legacy answer-index display and cross-device cloud saving still need manual QA.
 - External sign-off: **none**. These are internal assessment design fixes only.
+
+## Seven-final assessment file upgrade — November 8, 2026
+
+**Progress:** Seven Level 4 written practical finals now include expanded *fictional* evidence packets without changing storage keys or the seven exam identifiers.
+- Added `level4-practical-final-case-packets-2026.js`: each final receives named fictional parties, specific procedural posture and jurisdiction questions, six dated chronological events, six issue-annotated exhibits, at least five unresolved factual/research questions, two changed-fact scenarios and four or more provisional examiner issue benchmarks.
+- Updated `level4-practical-finals-ui.js`: each packet displays in the final, with expandable timeline, exhibits, gaps and changed-facts areas, plus a clearly labeled expandable examiner checklist. Data saved as `law-academy-level4-finals-v1` is unchanged. **Important limitation:** the checklist is an ungraded teaching prompt, not a full model answer or qualified grading key.
+- Revised the seven one-item practical-final checkpoints to use more plausible alternatives requiring distinction between nearby doctrines and procedural thresholds. The correct-option distribution is now **2 first / 3 middle / 2 last**. These answers remain teacher-authored and not independently psychometrically calibrated.
+- Updated `scripts/verify-level4.cjs` to test all seven packets, six exhibits each, timelines, unresolved factual issues, changed-facts prompts, 100-point exam rubrics and revised answer distribution.
+- Fresh connector-level module checks: 7/7 packets attached; 42 exhibits; 42+ chronology events; every rubric sums to 100; JavaScript syntax valid and data scripts load before final UI.
+- **Not completed:** live browser or device execution of finals, signed independent attorney/academic exam review, human marking of submitted essays, empirical item discrimination, full controlling-case verification or proof of bar examination readiness.
