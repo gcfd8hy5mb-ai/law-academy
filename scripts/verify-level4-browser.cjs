@@ -21,6 +21,7 @@ async function scenario(browser,label,viewport){
  const ctx=await browser.newContext({viewport,...(label==='mobile'?{isMobile:true,hasTouch:true,deviceScaleFactor:2}:{})});
  if(engine==='chromium')await ctx.grantPermissions(['clipboard-read','clipboard-write'],{origin:global.origin});
  const page=await ctx.newPage();
+ if(engine==='webkit')await page.addInitScript(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:()=>Promise.reject(new Error('Clipboard not available in this WebKit test'))}})});
  const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept().catch(()=>{}));
  const url=global.origin+'/scripts/fixtures/level4-final-browser.html';
  await page.goto(url,{waitUntil:'load'});
@@ -47,7 +48,8 @@ async function scenario(browser,label,viewport){
  await page.locator('#finalCopyReviewer').click();
  await page.waitForFunction(()=>{const t=document.querySelector('#finalReviewerStatus')?.textContent||'';return t.includes('copied')||t.includes('selected below')});
  const status=await page.locator('#finalReviewerStatus').textContent();
- const copied=status.includes('copied')?await page.evaluate(()=>navigator.clipboard.readText()):await page.locator('#finalReviewerFallback').inputValue();
+ const copied=engine==='webkit'?await page.locator('#finalReviewerFallback').inputValue():(status.includes('copied')?await page.evaluate(()=>navigator.clipboard.readText()):await page.locator('#finalReviewerFallback').inputValue());
+ if(engine==='webkit')assert.ok(status.includes('selected below'),label+' clipboard fallback not activated');
  assert.ok(copied.includes(essay)&&copied.includes('Awarded points: ______'),label+' reviewer contents');
  assert.ok(!copied.includes('The trial record needs factual findings on preservation'),label+' model leaked');
  await page.locator('#finalStart').click();
