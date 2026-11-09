@@ -35,6 +35,12 @@ async function scenario(browser,label,viewport){
  assert.equal(await page.locator('#finalFeedback').isVisible(),true,label+' feedback');
  assert.equal(await page.locator('#finalCalibration').isVisible(),true,label+' calibration');
  await page.reload({waitUntil:'load'});
+ await page.locator('#finalBackup').click();
+ const backupRaw=await page.locator('#finalBackupData').inputValue();
+ const backup=JSON.parse(backupRaw);
+ assert.equal(backup.format,'law-academy-level4-finals-v1',label+' missing backup key');
+ assert.equal(backup.finals['L4-1-FINAL2'].draft,essay,label+' backup missing saved exam');
+ assert.ok(Array.isArray(backup.finals['L4-1-FINAL2'].snapshots),label+' backup excludes snapshots');
  await page.locator('[data-final]').first().click();
  assert.equal(await page.locator('#finalDraft').inputValue(),essay,label+' reload persistence');
  assert.equal(await page.locator('#finalFeedback').isVisible(),true,label+' reload feedback');
