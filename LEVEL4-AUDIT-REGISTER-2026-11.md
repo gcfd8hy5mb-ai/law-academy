@@ -314,3 +314,7 @@ Each named lesson now displays a dated, narrowly scoped authority note and appli
 - Added **Prepare all seven finals for a local backup** in the practical finals home screen; it produces a selectable JSON copy of local practical-final records (drafts, snapshots, self-scores). It does not sync or send them to Firebase, and should be stored privately. No cloud restoration/import was silently added.
 - Added browser-level tests for that backup containing the previously saved essay and snapshot and updated the home screen to state the cloud distinction clearly.
 - Outstanding: verify live iPhone Safari and installed PWA, independently test actual Firestore permissions and cross-device manual Level 4 lesson backup, and implement final-exam cloud saving only with a safe separate schema, explicit user approval and conflict protection. Do not describe finals as cloud-backed.
+
+### WebKit CI result
+- GitHub Actions run `42548160124`, job `128937574125`, completed the curriculum test, seven-exam simulated test, Chromium desktop/mobile real-browser test, and **WebKit desktop/mobile-emulation real-browser test successfully** on commit `87715ae16d4fbf389f30cd6935f09dae559dcec1`. WebKit clipboard-denial fallback was verified by intentionally blocking clipboard write and selecting manual-copy text. An additional local JSON backup coverage assertion was included in this run.
+- These results **do not** certify iPhone Safari or installed-PWA behavior, independent legal marking, nor practical-final Firebase backup; all remain open.
