@@ -1,8 +1,9 @@
-/* Real Chromium regression of actual Level 4 final HTML, scripts and DOM.
+/* Real Chromium / WebKit regression of actual Level 4 final HTML, scripts and DOM.
  * Run: node scripts/verify-level4-browser.cjs (requires playwright and chromium).
  * Server uses only local repo files; browser fixture intentionally excludes authentication.
  */
-const { chromium }=require('playwright');
+const { chromium,webkit }=require('playwright');
+const engine=process.env.LAW_QA_BROWSER==='webkit'?'webkit':'chromium';
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=process.cwd();
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.webmanifest':'application/manifest+json'};
@@ -18,7 +19,7 @@ const stop=()=>new Promise(resolve=>server.close(resolve));
 const essay=Array(170).fill('Analysis').join(' ');
 async function scenario(browser,label,viewport){
  const ctx=await browser.newContext({viewport,...(label==='mobile'?{isMobile:true,hasTouch:true,deviceScaleFactor:2}:{})});
- await ctx.grantPermissions(['clipboard-read','clipboard-write'],{origin:global.origin});
+ if(engine==='chromium')await ctx.grantPermissions(['clipboard-read','clipboard-write'],{origin:global.origin});
  const page=await ctx.newPage();
  const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept().catch(()=>{}));
  const url=global.origin+'/scripts/fixtures/level4-final-browser.html';
@@ -38,8 +39,9 @@ async function scenario(browser,label,viewport){
  assert.equal(await page.locator('#finalDraft').inputValue(),essay,label+' reload persistence');
  assert.equal(await page.locator('#finalFeedback').isVisible(),true,label+' reload feedback');
  await page.locator('#finalCopyReviewer').click();
- await page.waitForFunction(()=>document.querySelector('#finalReviewerStatus')?.textContent.includes('copied'));
- const copied=await page.evaluate(()=>navigator.clipboard.readText());
+ await page.waitForFunction(()=>{const t=document.querySelector('#finalReviewerStatus')?.textContent||'';return t.includes('copied')||t.includes('selected below')});
+ const status=await page.locator('#finalReviewerStatus').textContent();
+ const copied=status.includes('copied')?await page.evaluate(()=>navigator.clipboard.readText()):await page.locator('#finalReviewerFallback').inputValue();
  assert.ok(copied.includes(essay)&&copied.includes('Awarded points: ______'),label+' reviewer contents');
  assert.ok(!copied.includes('The trial record needs factual findings on preservation'),label+' model leaked');
  await page.locator('#finalStart').click();
@@ -57,13 +59,13 @@ async function scenario(browser,label,viewport){
   assert.equal(await page.locator('#finalCopyReviewer').isVisible(),true,'Reviewer action not accessible on mobile');
  }
  assert.deepEqual(errors,[],label+' JS errors');
- console.log('PASS — real Chromium '+label+': 7 exam links, draft, reload, submit/review, copy, reset, snapshot');
+ console.log('PASS — real '+engine+' '+label+': 7 exam links, draft, reload, submit/review, copy, reset, snapshot');
  await ctx.close();
 }
 (async()=>{
  await listen();const address=server.address();global.origin='http://127.0.0.1:'+address.port;
  let browser;
- try{browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+ try{browser=await (engine==='webkit'?webkit:chromium).launch({headless:true,...(engine==='webkit'?{}:{args:['--no-sandbox']})});
  await scenario(browser,'desktop',{width:1440,height:900});
  await scenario(browser,'mobile',{width:390,height:844});}
  finally{if(browser)await browser.close();await stop()}
