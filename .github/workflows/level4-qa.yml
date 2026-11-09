@@ -3,6 +3,10 @@ on:
   push:
     paths:
       - 'level4*.js'
+      - 'law-level4-finals-cloud.js'
+      - 'law-firebase-cloud-v4.js'
+      - 'scripts/law-finals-cloud-plan.mjs'
+      - 'scripts/verify-level4-finals-cloud.mjs'
       - 'index.html'
       - 'scripts/verify-level4*.cjs'
       - 'scripts/fixtures/level4-final-browser.html'
@@ -28,6 +32,8 @@ jobs:
           node-version: '22'
       - name: Check all 100 lessons, answer keys, and rubrics
         run: node scripts/verify-level4.cjs
+      - name: Verify practical final cloud merge safety
+        run: node scripts/verify-level4-finals-cloud.mjs
       - name: Simulate all seven exam flows
         run: node scripts/verify-level4-final-interactions.cjs
       - name: Install browser test dependency
