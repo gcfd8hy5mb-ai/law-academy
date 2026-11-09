@@ -16,6 +16,18 @@ test('a device-only Level 4 draft survives legacy cloud import',()=>{
  assert.equal(result.safe,true);assert.equal(result.merged[LEVEL4_KEY],device[LEVEL4_KEY]);
  assert.equal(JSON.parse(encodeMigratedSnapshot(result.merged))[LEVEL4_KEY],device[LEVEL4_KEY]);
 });
+test('advanced questions are retained in the separate lesson cloud snapshot',()=>{
+ const raw=makeLevel4({'L4-1-11':{draft:'Legal answer',lastAnswer:1,practiceCorrect:true,advancedQuiz2026Choice:2,advancedQuiz2026Correct:false}});
+ const device={...blank(),[LEVEL4_KEY]:raw};
+ assert.equal(planSnapshotMerge(device,blank()).merged[LEVEL4_KEY],raw);
+ assert.equal(normalizeSnapshot(device)[LEVEL4_KEY],raw);
+});
+test('invalid advanced question state cannot be uploaded',()=>{
+ const invalid={...blank(),[LEVEL4_KEY]:makeLevel4({'L4-1-11':{advancedQuiz2026Choice:7}})};
+ assert.throws(()=>normalizeSnapshot(invalid),/advanced quiz choice/);
+ const malformed={...blank(),[LEVEL4_KEY]:makeLevel4({'L4-1-11':{advancedQuiz2026Correct:'yes'}})};
+ assert.throws(()=>normalizeSnapshot(malformed),/advanced quiz result/);
+});
 test('cloud-only drafts and older course progress coexist',()=>{
  const device={...blank(),[LEGACY_KEYS[0]]:JSON.stringify({older:{done:true}})};
  const cloud={...blank(),[LEVEL4_KEY]:makeLevel4({'L4-2-3':{draft:'Cloud essay'}})};
