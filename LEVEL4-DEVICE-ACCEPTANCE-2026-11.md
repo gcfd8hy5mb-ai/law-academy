@@ -30,3 +30,21 @@ Date prepared: November 8, 2026
 - No live iPhone Safari, iOS PWA or desktop browser acceptance was completed by the assistant on November 8, 2026.
 - Structural/virtual-DOM tests are not independent legal review, independent examiner marking, accreditation, bar eligibility or a cloud backup verification.
 - Do not clear browser storage or delete a saved home-screen app before exporting/backing up student work and separately checking its persistence.
+
+## Updated cloud acceptance — November 9, 2026
+
+The Level 4 cloud work now has **two separate manual** Firebase backup records under the verified Law Academy account: lesson drafts at `snapshots/level4-v1` and practical finals at `snapshots/finals-v1`. The other course levels remain on `snapshots/progress-v1`. No record is silently imported or overwritten by the new finals function.
+
+The practical-final backup is opened through **Cloud Account → Level 4 finals manual cloud backup**. It first offers **Compare finals copies (read-only)** and **Download backup of visible copies**. Only after checking the remote snapshot and expressly confirming a previously saved backup may a signed-in user create the first cloud copy or merge nonconflicting final records. Conflicts in the same exam are blocked; a separate document and revision checks protect existing work.
+
+For actual Firebase and physical-device acceptance, manually perform the following using a verified account and ordinary (non-sensitive) test answers:
+
+1. On Safari with a completed trial essay, download a local backup before any cloud operation. Confirm the backup JSON can be opened independently.
+2. In Cloud Account, select **Level 4 finals manual cloud backup**, choose **Compare** and record whether Firebase read succeeds or returns `permission-denied`. An unsuccessful read is **not** evidence that cloud backup is connected. Firestore rules for `snapshots/finals-v1` may need deployment or modification.
+3. If no cloud record exists, create the first copy after saving the backup and confirming. Recompare; verify that a revision is present.
+4. Sign into the same verified account on a computer, compare finals without importing automatically, and merge only when there are no conflicting exam records. Confirm the computer's draft matches the original iPhone draft after reopening.
+5. Edit the *same* exam independently on both devices, compare again, and confirm conflict detection blocks overwriting. Preserve both responses.
+6. Repeat the separate lesson backup with a completed advanced knowledge check. Verify `advancedQuiz2026Choice` and `advancedQuiz2026Correct` survive comparison, along with IDs through `L4-7-16`.
+7. Recheck the app after restarting Safari and the installed Home Screen app. Only mark actual-device acceptance once the user confirms the results.
+
+**Test status:** The repository includes simulated Firebase transactions and real Chromium/WebKit browser tests, but it cannot prove the production Firestore permission rules, an actual account's state or an iPhone's installed PWA behavior. Do not clear the app or trust finals as automatically synchronized.
