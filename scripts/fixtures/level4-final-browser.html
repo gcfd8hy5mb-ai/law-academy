@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Level 4 Practical Final QA Fixture</title><link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="../../desktop.css"></head>
+<body><main id="app" style="max-width:1100px;margin:auto"></main>
+<script>
+window.shell=(html)=>{document.getElementById('app').innerHTML=html;};
+window.renderExams=()=>window.renderLevel4PracticalFinals?.();
+</script>
+<script src="../../level4-practical-finals-data.js" defer></script>
+<script src="../../level4-practical-final-case-packets-2026.js" defer></script>
+<script src="../../level4-final-examiner-calibration-2026.js" defer></script>
+<script src="../../level4-independent-review-export-2026.js" defer></script>
+<script src="../../level4-practical-finals-ui.js" defer></script>
+<script defer>document.addEventListener('DOMContentLoaded',()=>window.renderLevel4PracticalFinals?.());</script>
+</body></html>
