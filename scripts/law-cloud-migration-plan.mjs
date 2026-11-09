@@ -41,7 +41,7 @@ export function normalizeSnapshot(input){
   const parsed=parseStored(output[LEVEL4_KEY],LEVEL4_KEY);
   safeRecord(parsed,'Level 4 progress');
   for(const [id,value] of Object.entries(parsed)){
-   if(!/^L4-[1-7]-(10|[1-9])$/.test(id))throw Error('Unexpected Level 4 lesson id: '+id);
+   if(!/^L4-(?:[1-6]-(?:1[0-4]|[1-9])|7-(?:1[0-6]|[1-9]))$/.test(id))throw Error('Unexpected Level 4 lesson id: '+id);
    safeRecord(value,'Level 4 lesson progress');
    for(const k of Object.keys(value))if(!['draft','lastAnswer','practiceCorrect','advancedQuiz2026Choice','advancedQuiz2026Correct'].includes(k))throw Error('Unexpected Level 4 field: '+k);
    if(Object.hasOwn(value,'draft')&&typeof value.draft!=='string')throw Error('Invalid Level 4 draft');
