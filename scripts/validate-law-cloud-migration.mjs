@@ -28,6 +28,14 @@ test('invalid advanced question state cannot be uploaded',()=>{
  const malformed={...blank(),[LEVEL4_KEY]:makeLevel4({'L4-1-11':{advancedQuiz2026Correct:'yes'}})};
  assert.throws(()=>normalizeSnapshot(malformed),/advanced quiz result/);
 });
+test('all 100 valid lesson IDs are permitted, but impossible IDs are rejected',()=>{
+ const entries={};
+ for(let course=1;course<=7;course++)for(let n=1;n<=(course===7?16:14);n++)entries['L4-'+course+'-'+n]={draft:'Valid'};
+ const raw=makeLevel4(entries);
+ assert.equal(Object.keys(JSON.parse(normalizeSnapshot({...blank(),[LEVEL4_KEY]:raw})[LEVEL4_KEY])).length,100);
+ assert.throws(()=>normalizeSnapshot({...blank(),[LEVEL4_KEY]:makeLevel4({'L4-1-15':{draft:'Out of range'}})}),/Unexpected Level 4 lesson id/);
+ assert.throws(()=>normalizeSnapshot({...blank(),[LEVEL4_KEY]:makeLevel4({'L4-7-17':{draft:'Out of range'}})}),/Unexpected Level 4 lesson id/);
+});
 test('cloud-only drafts and older course progress coexist',()=>{
  const device={...blank(),[LEGACY_KEYS[0]]:JSON.stringify({older:{done:true}})};
  const cloud={...blank(),[LEVEL4_KEY]:makeLevel4({'L4-2-3':{draft:'Cloud essay'}})};
