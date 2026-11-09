@@ -318,3 +318,27 @@ Each named lesson now displays a dated, narrowly scoped authority note and appli
 ### WebKit CI result
 - GitHub Actions run `42548160124`, job `128937574125`, completed the curriculum test, seven-exam simulated test, Chromium desktop/mobile real-browser test, and **WebKit desktop/mobile-emulation real-browser test successfully** on commit `87715ae16d4fbf389f30cd6935f09dae559dcec1`. WebKit clipboard-denial fallback was verified by intentionally blocking clipboard write and selecting manual-copy text. An additional local JSON backup coverage assertion was included in this run.
 - These results **do not** certify iPhone Safari or installed-PWA behavior, independent legal marking, nor practical-final Firebase backup; all remain open.
+
+## Engineering and legal review consolidation — November 9, 2026
+
+### 1. Separate final-exam Firebase saving — implemented, deployment access not confirmed
+- Created `scripts/law-finals-cloud-plan.mjs` with a strict seven-exam schema and conservative merge planner. Same-exam data differences block the entire merge; unrelated finals can combine. Malformed drafts, scores and snapshots are rejected.
+- Created `law-level4-finals-cloud.js` with a **separate** `users/{uid}/academies/law/snapshots/finals-v1` Firestore document. It uses signed-in verified account checks, read-only comparison, manual downloadable backup, explicit approval, revision-checked Firebase transactions, and a local-change guard. Neither lessons nor Levels 1–3 are overwritten. No silent sync/import.
+- Linked **Level 4 finals manual cloud backup** to the verified account panel in `law-firebase-cloud-v4.js`. Updated `index.html` query version and practical-final UI to explain local-first persistence and manual cloud behavior.
+- Corrected `scripts/law-cloud-migration-plan.mjs` to preserve all advanced quiz result fields and the entire 100-lesson ID range (courses 1–6 IDs 1–14; course 7 IDs 1–16). The earlier code rejected lessons 11–16 and advanced quiz fields.
+- Automated CI added schema, merge, concurrency and denied-permission checks, plus original Level 4 migration regressions. **Live Firestore permission rules and user account interoperability have not been verified**; production availability cannot yet be asserted.
+
+### 2. Device and navigation acceptance — automated desktop/WebKit completed, physical devices outstanding
+- Existing Chromium and WebKit browser exercises already passed on phone-size and desktop-size screens. Added a full original-application-shell navigation and draft-save smoke check to `scripts/verify-level4-browser.cjs` in addition to the original isolated fixture.
+- Manual acceptance instructions now include verified-account Firefox/Chrome/Safari or installed iOS PWA (where applicable), cloud-first comparison, stale revision conflicts, saved drafts, and permissions. A physical iPhone/installed PWA was **not** operated by the assistant.
+
+### 3. Legal accuracy — enhanced internal source controls, full verification outstanding
+- Added `level4-current-law-checks-nov2026.js` and loaded it in the app for focused primary-source-informed corrections concerning *Trump v. CASA* (2025) and universal relief, *Rahimi*, 2026 USSG relevant conduct, FRAP 8, and Model Rule 1.8(g).
+- Added `LEVEL4-LEGAL-ACCURACY-SOURCE-REGISTER-2026-11.md`: **100 lesson-specific** sources and exception/jurisdiction checks. Each lesson explicitly remains unverified for complete legal accuracy; 8 original bounded advanced-question primary-law checks and 92 source-family audits retain their narrow meanings.
+- Important standing alerts remain for 2025 Delaware DGCL §144 amendments, current FRE 702, pending December 1, 2026 FRE 801 changes and the 2025 federal procedural-rule amendments.
+- A source register and automated structural checks are **not** equivalent to a qualified legal editor checking every paragraph, original/advanced distractor, explanatory key, modeled essay, jurisdiction, effective date and subsequent opinion. Independent approval remains zero; do not call the curriculum legally signed off.
+
+### Current outstanding blockers
+1. Actual Firestore `finals-v1` document read/write permissions and verified-account cloud acceptance on two devices.
+2. Physical iPhone Safari and installed Home Screen PWA tests (and any bugs those reveal).
+3. Comprehensive substantive source/citator review by qualified legal academics/practitioners, plus independent grading calibration.
