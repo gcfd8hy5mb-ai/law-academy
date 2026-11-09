@@ -5,6 +5,7 @@ on:
       - 'level4*.js'
       - 'index.html'
       - 'scripts/verify-level4*.cjs'
+      - 'scripts/fixtures/level4-final-browser.html'
       - '.github/workflows/level4-qa.yml'
   pull_request:
     paths:
@@ -19,7 +20,7 @@ permissions:
 jobs:
   verify-level4:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,3 +30,9 @@ jobs:
         run: node scripts/verify-level4.cjs
       - name: Simulate all seven exam flows
         run: node scripts/verify-level4-final-interactions.cjs
+      - name: Install browser test dependency
+        run: npm install --no-save --no-package-lock playwright@1.58.2
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run desktop and mobile Chromium practical final tests
+        run: node scripts/verify-level4-browser.cjs
