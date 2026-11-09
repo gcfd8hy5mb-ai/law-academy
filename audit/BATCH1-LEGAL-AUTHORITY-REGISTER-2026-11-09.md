@@ -57,3 +57,12 @@
 - Check production rule changes on the applicable date and retain effective-date history per lesson.
 
 **Outcome for this batch:** Three *narrow legal rule/rulemaking propositions checked*, two inventory/register classifications assessed, and one sign-off blocker recorded. **Zero lessons wholly certified; zero independent sign-offs; zero live device tests.**
+
+## Batch 1 follow-up: inspected actual lesson and assessment records (2026-11-09)
+
+Actual lesson source locations:
+- L4-1-11: `level4-case-labs-2026.js`; its scenario, reading, multiple-choice distractors, keyed answer and explanatory rationale explicitly distinguish Rule 37(e)(1) prejudice remedies from (e)(2) intent-to-deprive sanctions. Compared against federal rule text. **No correction warranted on the inspected narrow point**, but full citator and multi-asset review remain pending.
+- L4-1-12: `level4-case-labs-batch3-2026.js`; the reported warehouse video is a fictional assessment, not a reported case. The embedded-hearsay answer requires separately evaluating each layer, consistent with FRE 805. Source-review URLs previously supplied a general rules landing page and Rule 805, but not the other specifically invoked authentication, business-record, balancing and summary-judgment provisions. **Corrected source-review URLs** to include FRE 901, 803, 403 and FRCP 56. Commit `99f8411`. The changed URLs constitute a better research trail, not certification of all answers.
+- L4-1-14: `level4-case-labs-batch4-2026.js`; verified scenario, question choices and key correctly identify a prior Rule 50(a) motion as normally necessary before Rule 50(b). **Corrected erroneous expert-evidence Rule 702 source reference** to the relevant Rules 50, 59 and FRE 103. Clarified when a Rule 50(a) motion is made and Rule 50(b)'s ordinary 28-day judgment deadline (including rule's special discharged-jury provision). Commit `485f3da`. Subsequent treatment, alternate grounds and case-law qualifications still need legal-editor verification.
+
+**Precise limits:** the source links and focused text now better match the exercises; no full independent substantive verification of the worked guides, 100-lesson advanced-question bank, all distractors, legal updates, or nonfederal jurisdictions has occurred. No browser or automated test was executed in this follow-up. The draft PR must be reviewed and merged before these changes can affect `main` or deployment.
