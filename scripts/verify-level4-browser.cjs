@@ -20,7 +20,7 @@ async function scenario(browser,label,viewport){
  const ctx=await browser.newContext({viewport,...(label==='mobile'?{isMobile:true,hasTouch:true,deviceScaleFactor:2}:{})});
  await ctx.grantPermissions(['clipboard-read','clipboard-write'],{origin:global.origin});
  const page=await ctx.newPage();
- const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept().catch(()=>{}));
  const url=global.origin+'/scripts/fixtures/level4-final-browser.html';
  await page.goto(url,{waitUntil:'load'});
  await page.locator('[data-final]').first().waitFor();
@@ -42,13 +42,11 @@ async function scenario(browser,label,viewport){
  const copied=await page.evaluate(()=>navigator.clipboard.readText());
  assert.ok(copied.includes(essay)&&copied.includes('Awarded points: ______'),label+' reviewer contents');
  assert.ok(!copied.includes('The trial record needs factual findings on preservation'),label+' model leaked');
- page.once('dialog',d=>d.accept());
  await page.locator('#finalStart').click();
  assert.equal(await page.locator('#finalFeedback').isVisible(),false,label+' reset leaves feedback visible');
  assert.equal(await page.locator('#finalCalibration').isVisible(),false,label+' reset leaves calibration visible');
  assert.equal(await page.locator('#finalDraft').inputValue(),essay,label+' reset erased draft');
  await page.locator('#finalSubmit').click();
- page.once('dialog',d=>d.accept());
  await page.locator('[data-final-restore="0"]').click();
  assert.equal(await page.locator('#finalFeedback').isVisible(),false,label+' snapshot restore left comparison visible');
  assert.equal(await page.locator('#finalCalibration').isVisible(),false,label+' snapshot restore left calibration visible');
