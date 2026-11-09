@@ -70,11 +70,32 @@ async function scenario(browser,label,viewport){
  console.log('PASS — real '+engine+' '+label+': 7 exam links, draft, reload, submit/review, copy, reset, snapshot');
  await ctx.close();
 }
+async function fullAppCheck(browser){
+ const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+ const page=await context.newPage();
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ // The Firebase client may require live auth/network. This integration check deliberately does not sign in or write remote data.
+ await page.goto(global.origin+'/index.html',{waitUntil:'load'});
+ await page.waitForFunction(()=>typeof window.renderLevel4PracticalFinals==='function');
+ await page.evaluate(()=>window.renderLevel4PracticalFinals());
+ assert.equal(await page.locator('[data-final]').count(),7,'Production app shell missing seven final links');
+ await page.locator('[data-final]').first().click();
+ assert.ok(await page.locator('#finalDraft').isVisible(),'Production exam editor not shown');
+ await page.locator('#finalDraft').fill('Integration response from main law academy page');
+ assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level4-finals-v1'))['L4-1-FINAL2'].draft),'Integration response from main law academy page');
+ const box=await page.locator('#finalDraft').boundingBox();
+ assert.ok(box&&box.x>=-2&&box.x+box.width<=392,'Main academy exam editor horizontal overflow');
+ // Authentication loads from an external module and is not part of this local fixture's acceptance result.
+ assert.ok(!errors.some(e=>/renderLevel4PracticalFinals|shell is not defined/.test(e)),'App shell integration error: '+errors.join('; '));
+ console.log('PASS — real '+engine+' production-shell integration: seven final links, navigation and locally saved editor');
+ await context.close();
+}
 (async()=>{
  await listen();const address=server.address();global.origin='http://127.0.0.1:'+address.port;
  let browser;
  try{browser=await (engine==='webkit'?webkit:chromium).launch({headless:true,...(engine==='webkit'?{}:{args:['--no-sandbox']})});
  await scenario(browser,'desktop',{width:1440,height:900});
- await scenario(browser,'mobile',{width:390,height:844});}
+ await scenario(browser,'mobile',{width:390,height:844});
+ await fullAppCheck(browser);}
  finally{if(browser)await browser.close();await stop()}
 })().catch(e=>{console.error(e);process.exitCode=1});
