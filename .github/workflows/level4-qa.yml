@@ -33,6 +33,8 @@ jobs:
       - name: Install browser test dependency
         run: npm install --no-save --no-package-lock playwright@1.58.2
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium webkit
       - name: Run desktop and mobile Chromium practical final tests
         run: node scripts/verify-level4-browser.cjs
+      - name: Run Safari-engine WebKit practical final tests
+        run: LAW_QA_BROWSER=webkit node scripts/verify-level4-browser.cjs
