@@ -6,6 +6,8 @@ on:
       - 'law-level4-finals-cloud.js'
       - 'law-firebase-cloud-v4.js'
       - 'scripts/law-finals-cloud-plan.mjs'
+      - 'scripts/law-cloud-migration-plan.mjs'
+      - 'scripts/validate-law-cloud-migration.mjs'
       - 'scripts/verify-level4-finals-cloud.mjs'
       - 'scripts/validate-level4-finals-cloud-behavior.mjs'
       - 'index.html'
@@ -33,6 +35,8 @@ jobs:
           node-version: '22'
       - name: Check all 100 lessons, answer keys, and rubrics
         run: node scripts/verify-level4.cjs
+      - name: Verify lesson cloud and advanced quiz fields
+        run: node scripts/validate-law-cloud-migration.mjs
       - name: Verify practical final cloud merge safety
         run: node scripts/verify-level4-finals-cloud.mjs
       - name: Simulate six finals-only Firestore paths
