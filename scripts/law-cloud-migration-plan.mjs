@@ -43,10 +43,12 @@ export function normalizeSnapshot(input){
   for(const [id,value] of Object.entries(parsed)){
    if(!/^L4-[1-7]-(10|[1-9])$/.test(id))throw Error('Unexpected Level 4 lesson id: '+id);
    safeRecord(value,'Level 4 lesson progress');
-   for(const k of Object.keys(value))if(!['draft','lastAnswer','practiceCorrect'].includes(k))throw Error('Unexpected Level 4 field: '+k);
+   for(const k of Object.keys(value))if(!['draft','lastAnswer','practiceCorrect','advancedQuiz2026Choice','advancedQuiz2026Correct'].includes(k))throw Error('Unexpected Level 4 field: '+k);
    if(Object.hasOwn(value,'draft')&&typeof value.draft!=='string')throw Error('Invalid Level 4 draft');
    if(Object.hasOwn(value,'lastAnswer')&&(!Number.isInteger(value.lastAnswer)||value.lastAnswer<0||value.lastAnswer>2))throw Error('Invalid Level 4 quiz choice');
    if(Object.hasOwn(value,'practiceCorrect')&&typeof value.practiceCorrect!=='boolean')throw Error('Invalid Level 4 practice result');
+   if(Object.hasOwn(value,'advancedQuiz2026Choice')&&(!Number.isInteger(value.advancedQuiz2026Choice)||value.advancedQuiz2026Choice<0||value.advancedQuiz2026Choice>2))throw Error('Invalid Level 4 advanced quiz choice');
+   if(Object.hasOwn(value,'advancedQuiz2026Correct')&&typeof value.advancedQuiz2026Correct!=='boolean')throw Error('Invalid Level 4 advanced quiz result');
   }
  }
  return output;
