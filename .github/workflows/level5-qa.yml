@@ -14,6 +14,7 @@ on:
       - 'app.js'
       - 'index.html'
       - 'scripts/verify-level5.cjs'
+      - 'scripts/audit-level5-academic-coverage.cjs'
       - '.github/workflows/level5-qa.yml'
   pull_request:
     paths:
@@ -29,6 +30,7 @@ on:
       - 'app.js'
       - 'index.html'
       - 'scripts/verify-level5.cjs'
+      - 'scripts/audit-level5-academic-coverage.cjs'
       - '.github/workflows/level5-qa.yml'
   workflow_dispatch:
 permissions:
@@ -44,6 +46,8 @@ jobs:
           node-version: '22'
       - name: Inspect Level 5 lesson structures, originals, UI and legacy saving isolation
         run: node scripts/verify-level5.cjs
+      - name: Audit lesson, case, question, final and reviewer coverage
+        run: node scripts/audit-level5-academic-coverage.cjs
       - name: Parse authored Level 5 assets
         run: |
           node --check level5.js
