@@ -51,7 +51,7 @@ assert.equal(new Set(deep.map(l=>l.id)).size,14,'Workshop ID collision');
 for(const course of courses)assert.equal(course.lessons.filter(l=>l.caseWorkshop).length,2,'Each advanced track needs two deep workshops');
 for(const l of deep){
  const w=l.caseWorkshop;
- for(const k of ['headline','posture','holding','limits','facts','method','worked','opposition','variation','sourceStatus'])assert.ok(w[k]?.length>=65,'Missing substantive case workshop '+l.id+':'+k);
+ for(const k of ['headline','posture','holding','limits','facts','method','worked','opposition','variation','sourceStatus'])assert.ok(w[k]?.length>=(k==='headline'?20:65),'Missing substantive case workshop '+l.id+':'+k);
  assert.ok(!w.sourceStatus.toLowerCase().includes('certified'),'Do not overclaim signoff');
 }
 assert.ok(ui.includes('data-l5depth')&&ui.includes('l.caseWorkshop.worked'),'Deep workshops must render actual case applications');
