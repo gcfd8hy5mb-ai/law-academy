@@ -4,6 +4,8 @@ on:
     paths:
       - 'level5.js'
       - 'level5-ui.js'
+      - 'level5-capstone-case-packet.js'
+      - 'level5-bar-diagnostic.js'
       - 'app.js'
       - 'index.html'
       - 'scripts/verify-level5.cjs'
@@ -12,6 +14,8 @@ on:
     paths:
       - 'level5.js'
       - 'level5-ui.js'
+      - 'level5-capstone-case-packet.js'
+      - 'level5-bar-diagnostic.js'
       - 'app.js'
       - 'index.html'
       - 'scripts/verify-level5.cjs'
@@ -34,6 +38,8 @@ jobs:
         run: |
           node --check level5.js
           node --check level5-ui.js
+          node --check level5-capstone-case-packet.js
+          node --check level5-bar-diagnostic.js
           node --check app.js
       - name: Verify existing Level 4 structural course data is unchanged
         run: node scripts/verify-level4.cjs
