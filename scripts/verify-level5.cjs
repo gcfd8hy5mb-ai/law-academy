@@ -12,11 +12,14 @@ new vm.Script(thirdSrc,{filename:'level5-batch3-coursework.js'});
 const fourthSrc=fs.readFileSync('level5-final-module-coursework.js','utf8');new vm.Script(fourthSrc,{filename:'level5-final-module-coursework.js'});
 const depthSrc=fs.readFileSync('level5-depth-workshops-batch1.js','utf8');new vm.Script(depthSrc,{filename:'level5-depth-workshops-batch1.js'});
 const depth2Src=fs.readFileSync('level5-depth-workshops-batch2.js','utf8');new vm.Script(depth2Src,{filename:'level5-depth-workshops-batch2.js'});
+const depth3Src=fs.readFileSync('level5-depth-workshops-batch3.js','utf8');new vm.Script(depth3Src,{filename:'level5-depth-workshops-batch3.js'});
+const depth4Src=fs.readFileSync('level5-depth-workshops-batch4.js','utf8');new vm.Script(depth4Src,{filename:'level5-depth-workshops-batch4.js'});
+const depth5Src=fs.readFileSync('level5-depth-workshops-batch5.js','utf8');new vm.Script(depth5Src,{filename:'level5-depth-workshops-batch5.js'});
 const reviewSrc=fs.readFileSync('level5-written-final-review-export.js','utf8');
 new vm.Script(reviewSrc,{filename:'level5-written-final-review-export.js'});
 const caseSrc=fs.readFileSync('level5-capstone-case-packet.js','utf8'),diagSrc=fs.readFileSync('level5-bar-diagnostic.js','utf8');
 new vm.Script(caseSrc,{filename:'level5-capstone-case-packet.js'});new vm.Script(diagSrc,{filename:'level5-bar-diagnostic.js'});
-const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(extraSrc,box,{timeout:4000});vm.runInContext(thirdSrc,box,{timeout:4000});vm.runInContext(fourthSrc,box,{timeout:4000});vm.runInContext(depthSrc,box,{timeout:4000});vm.runInContext(depth2Src,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});vm.runInContext(reviewSrc,box,{timeout:4000});
+const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(extraSrc,box,{timeout:4000});vm.runInContext(thirdSrc,box,{timeout:4000});vm.runInContext(fourthSrc,box,{timeout:4000});vm.runInContext(depthSrc,box,{timeout:4000});vm.runInContext(depth2Src,box,{timeout:4000});vm.runInContext(depth3Src,box,{timeout:4000});vm.runInContext(depth4Src,box,{timeout:4000});vm.runInContext(depth5Src,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});vm.runInContext(reviewSrc,box,{timeout:4000});
 const courses=box.window.LAW_LEVEL5,lessons=courses.flatMap(c=>c.lessons);
 assert.equal(courses.length,7,'Expected seven original advanced tracks');
 assert.equal(lessons.length,140,'Four modules require 140 authored lessons');
@@ -47,16 +50,17 @@ for(const [ci,c] of courses.entries()){
 }
 assert.equal(finals,28,'Four modules require 28 written finals');
 const deep=lessons.filter(l=>l.caseWorkshop);
-assert.equal(deep.length,49,'Expected forty-nine distinct case-specific depth workshops');
-assert.equal(new Set(deep.map(l=>l.id)).size,49,'Workshop ID collision');
-for(const course of courses)assert.equal(course.lessons.filter(l=>l.caseWorkshop).length,7,'Each advanced track needs seven deep workshops');
+assert.equal(deep.length,140,'Every Level 5 lesson must have a case-specific depth workshop');
+assert.equal(box.window.LAW_LEVEL5_DEPTH_WORKSHOPS.length,140,'Workshop manifest must include 140 original lessons');
+assert.equal(new Set(deep.map(l=>l.id)).size,140,'Workshop ID collision');
+for(const course of courses)assert.equal(course.lessons.filter(l=>l.caseWorkshop).length,20,'Every course must have twenty case-specific deep workshops');
 for(const l of deep){
  const w=l.caseWorkshop;
  for(const k of ['headline','posture','holding','limits','facts','method','worked','opposition','variation','sourceStatus'])assert.ok(w[k]?.length>=(k==='headline'?20:65),'Missing substantive case workshop '+l.id+':'+k);
  assert.ok(!w.sourceStatus.toLowerCase().includes('certified'),'Do not overclaim signoff');
 }
 assert.ok(ui.includes('data-l5depth')&&ui.includes('l.caseWorkshop.worked'),'Deep workshops must render actual case applications');
-assert.ok(html.includes('src="./level5-depth-workshops-batch1.js"')&&html.includes('src="./level5-depth-workshops-batch2.js"'),'Deep workshop scripts not loaded');
+assert.ok([1,2,3,4,5].every(i=>html.includes('src="./level5-depth-workshops-batch'+i+'.js"')),'All five depth workshop batches must load');
 
 const reviewCSV=fs.readFileSync('audit/LEVEL5_140_LESSON_INDEPENDENT_REVIEW_REGISTER.csv','utf8');
 const rows=reviewCSV.trimEnd().split(/\r?\n/);
