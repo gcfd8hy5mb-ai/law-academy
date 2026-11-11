@@ -14,7 +14,7 @@ assert.ok(first>=0 && last>first,'Level 4 scripts not found in the actual page')
 const scripts=sources.slice(first,last+1);
 const ctx={window:{}};vm.createContext(ctx);
 for(const path of scripts){
-  assert.ok(path.startsWith('level4-'),'Unexpected script in curriculum load window: '+path);
+  assert.ok(path==='level4.js'||path.startsWith('level4-'),'Unexpected script in curriculum load window: '+path);
   vm.runInContext(fs.readFileSync(path,'utf8'),ctx,{filename:path,timeout:5000});
 }
 const lessons=ctx.window.LAW_LEVEL4.flatMap(course=>course.lessons);
