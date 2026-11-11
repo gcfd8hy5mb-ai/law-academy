@@ -66,3 +66,34 @@ Actual lesson source locations:
 - L4-1-14: `level4-case-labs-batch4-2026.js`; verified scenario, question choices and key correctly identify a prior Rule 50(a) motion as normally necessary before Rule 50(b). **Corrected erroneous expert-evidence Rule 702 source reference** to the relevant Rules 50, 59 and FRE 103. Clarified when a Rule 50(a) motion is made and Rule 50(b)'s ordinary 28-day judgment deadline (including rule's special discharged-jury provision). Commit `485f3da`. Subsequent treatment, alternate grounds and case-law qualifications still need legal-editor verification.
 
 **Precise limits:** the source links and focused text now better match the exercises; no full independent substantive verification of the worked guides, 100-lesson advanced-question bank, all distractors, legal updates, or nonfederal jurisdictions has occurred. No browser or automated test was executed in this follow-up. The draft PR must be reviewed and merged before these changes can affect `main` or deployment.
+
+## Large-batch follow-up — 2026-11-10
+
+### Audited scope and reproducible inventory
+
+A cross-file repository examination reconciled 100/100 distinct Level 4 authored lesson IDs among `level4-100-lesson-completion-audit-2026.js`, `level4-audit-inventory-2026.js`, and the 100-row source register, distributed across seven tracks as 14,14,14,14,14,14,16. The 100 advanced-answer authority review records consist of **8 narrowly checked primary-law propositions** and **92 source-family-level checks**. These are already-documented classifications, *not* 100 verified legal answer keys. All completion-register flags for legal proposition accuracy, subsequent authority treatment, jurisdiction/effective date, qualified human grading, independent reviewer approval and live browser acceptance remain **false** until supported.
+
+Added `scripts/audit-level4-traceability.cjs` and wired it into `.github/workflows/level4-qa.yml` to enforce source/completion inventory alignment, 100 advanced-answer metadata/fingerprints, 30 supplemental-case question/source structures, and non-certification status across all records. On the 2026-11-10 batch, GitHub Actions Level 4 curriculum QA successfully ran at commit `597bc3b` (runs 42945913243 / 42945908791), confirming internal automated structural and scripted browser checks at *that commit*. **This is not physical-device acceptance nor legal verification.** Later commits require their own successful workflow evidence.
+
+### Correction and teaching-quality register
+
+| ID | Finding | Correction / supporting authority | Commit | Status |
+|---|---|---|---|---|
+| L4-3-12 | Merger statute §251 alone is an inapt source for a **fictional contract-defined** postclosing net-working-capital adjustment | Linked *Chicago Bridge & Iron Company N.V. v. Westinghouse Electric Co. LLC*, 166 A.3d 912 (Del. 2017), as a purchase-agreement interpretation comparison; clarified the fictional contract's definitions still govern | `b7af37f` | targeted source repair, full case citator pending |
+| L4-5-12 | APA §706 judicial review and an FTC business-guidance landing page do not by themselves grant an unnamed agency investigative-demand authority | Added FTC Act §20, 15 U.S.C. §57b-1 as **expressly illustrative**, and FTC enforcement overview; differentiated FTC CIDs from subpoenas; requires actual agency organic statute and notice | `d42e98b` | targeted rule source repair, full agency-specific legal review pending |
+| L4-3-11 | Generic choice tested whether fiduciary duty analysis is separate from DGCL §251 | Replaced with fact-dependent Delaware merger/conflict application | `85e2af2` | question improved; qualification and human calibration pending |
+| L4-4-12 | Generic stay question did not test FRAP 8(a)(1)-(2) prerequisite | Replaced with first-motion-in-district-court/impracticability-or-denial application | `85e2af2` | question improved; legal examiner validation pending |
+| L4-6-12 | Generic settlement-control question missed specific aggregate-settlement consent requirements | Replaced with Model Rule 1.8(g) signed-writing/disclosure scenario, while requiring state-adopted-rule check | `1ca84b2` | question improved; jurisdiction-specific review pending |
+| L4-7-14 | Generic apparent-authority question insufficiently distinguished principal from agent assertions | Replaced with principal-linked manifestations and supplier reasonable-reliance scenario | `1ca84b2` | question improved; governing state agency law pending |
+| L4-5-13 | Generic agency/FRE comparison did not test formal adjudication statute | Replaced with specific 5 U.S.C. §556(d) evidence admissibility and exclusion standards | `02e351a` | question improved; agency organic-statute applicability pending |
+
+Supporting research snapshots: [Delaware Supreme Court decision](https://law.justia.com/cases/delaware/supreme-court/2017/573-2016.html), [FTC §57b-1 official US Code](https://uscode.house.gov/us/usc/119-120/t15/s57b-1/), [FRAP Rule 8](https://www.law.cornell.edu/rules/frap/rule_8), [ABA Model Rule 1.8(g)](https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_8_current_clients_specific_rules/), [APA §556(d) official US Code](https://uscode.house.gov/us/usc/119-134/t5/s556/). Verifying one proposition and suitable source does **not** constitute opinion-wide holding-and-citator validation.
+
+### Remaining Level 4 acceptance blockers
+
+1. **92 source-family-only advanced-question checks and all lesson-wide narratives, alternatives, case labs and worked guides** still need rule-by-rule substantive legal verification, competing authorities, jurisdiction/operative-date checking and dated evidence for each legal proposition.
+2. A qualified reviewer must assess all items and written rubrics, and a qualified independent examiner must calibrate human grading. **No independent legal/faculty approval exists.**
+3. Physical iPhone Safari / PWA and two-account/device Firestore production rules acceptance remain to be performed. Automated Chromium/WebKit browser checks do not substitute for these.
+4. Branch changes require complete CI green on the final head SHA, reviewer approval and merge/deployment checks. Do not describe the audit branch as live before merge.
+
+**Status decision:** Level 4 *authoring and structural inventory* are complete, with a meaningful additional batch of targeted source and assessment corrections. **Level 4 has NOT met full legal accuracy, academic approval, or live-device release acceptance gates.**
