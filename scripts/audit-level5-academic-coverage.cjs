@@ -31,7 +31,7 @@ for(const [i,c] of cs.entries()){
 }
 assert.equal(diag.length,21,'Original diagnostic bank must remain available');
 assert.equal(all.filter(l=>l.graduationAssessment).length,7,'Seven terminal exit assignments required');
-assert.equal(new Set(all.map(l=>l.sourceUrl)).size>=100,'Insufficient diversity of primary research starting points');
+assert.ok(new Set(all.map(l=>l.sourceUrl)).size>=100,'Insufficient diversity of research starting points');
 const answers=[0,1,2].map(k=>all.filter(l=>l.answer===k).length);
 assert.ok(Math.max(...answers)-Math.min(...answers)<=2,'In-lesson key positions unbalanced');
 const review=fs.readFileSync('audit/LEVEL5_140_LESSON_INDEPENDENT_REVIEW_REGISTER.csv','utf8');
