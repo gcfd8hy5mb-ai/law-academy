@@ -26,7 +26,8 @@ const byId=new Map(lessons.map(l=>[l.id,l]));
 const completed=ctx.window.LAW_LEVEL4_COMPLETION_AUDIT?.records||[];
 const inventory=ctx.window.LAW_LEVEL4_AUDIT?.records||[];
 const sourceRegister=fs.readFileSync('LEVEL4-LEGAL-ACCURACY-SOURCE-REGISTER-2026-11.md','utf8');
-const sourceRows=sourceRegister.split(/\r?\n/).filter(line=>/^\| L4-\d+-\d+ \|/.test(line));
+const canonicalSourceTable=sourceRegister.split('## Reviewer acceptance criteria')[0];
+const sourceRows=canonicalSourceTable.split(/\r?\n/).filter(line=>/^\| L4-\d+-\d+ \|/.test(line));
 function exactSet(items,label){
  assert.equal(items.length,100,label+' does not have exactly 100 entries');
  const keys=items.map(i=>typeof i==='string'?i:i.id);
