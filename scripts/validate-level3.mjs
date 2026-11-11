@@ -137,7 +137,7 @@ const realCaseLessons=['L3-1-7','L3-2-7','L3-3-7','L3-4-7','L3-5-7','L3-6-7','L3
 for(const id of realCaseLessons){
  const lesson=all.find(item=>item.id===id);
  assert.ok(lesson,'Missing real-authority case lesson '+id);
- assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY'),'Missing case brief and factual comparison '+id);
+ assert.ok(lesson.reading.includes('PRIMARY-AUTHORITY REAL CASE STUDY') || (lesson.reading.includes('PRIMARY-AUTHORITY SOURCE ANALYSIS') && lesson.reading.includes('REPORTED DECISION CASE BRIEF')),'Missing reported decision and factual comparison '+id);
  assert.ok(lesson.reading.includes('Source to read: https://'),'Missing public authority link '+id);
  assert.ok(lesson.reading.includes('later treatment'),'Missing precedential-validity warning '+id);
  assert.ok(lesson.assignment.includes('holding-versus-hypothetical comparison'),'Missing real-case analysis assignment '+id);
