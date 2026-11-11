@@ -44,6 +44,16 @@ for(const [ci,c] of courses.entries()){
  }
 }
 assert.equal(finals,28,'Four modules require 28 written finals');
+const reviewCSV=fs.readFileSync('audit/LEVEL5_140_LESSON_INDEPENDENT_REVIEW_REGISTER.csv','utf8');
+const rows=reviewCSV.trimEnd().split(/\r?\n/);
+assert.equal(rows.length,141,'Expected a header and 140 independent review register rows');
+assert.ok(rows[0].includes('later_treatment_verified')&&rows[0].includes('independent_examiner'),'Missing reviewer fields');
+for(const lesson of lessons){
+ const matching=rows.slice(1).filter(row=>row.includes('"'+lesson.id+'"'));
+ assert.equal(matching.length,1,'Missing/duplicated source-review register record '+lesson.id);
+ assert.ok(matching[0].includes('"UNREVIEWED"')&&matching[0].includes('"PENDING"'),'Incorrectly claiming review approval '+lesson.id);
+}
+
 const packetGenerator=box.window.LAW_LEVEL5_REVIEW_PACKET;
 assert.equal(packetGenerator.independentApproval,false,'Review exporter must never imply external approval');
 assert.equal(lessons.filter(l=>l.graduationAssessment===true).length,7,'Seven human-scored exit finals required');
