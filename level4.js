@@ -234,8 +234,12 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "selected rule text or ABA Model Rule only; no complete subsequent-treatment or state-adoption review",
           "sourceUrls": [
-            "https://www.law.cornell.edu/rules/frcp/rule_51"
-          ],
+            "https://www.law.cornell.edu/rules/frcp/rule_51",
+            "https://www.law.cornell.edu/rules/frcp/rule_50",
+            "https://www.law.cornell.edu/rules/frcp/rule_59",
+            "https://www.law.cornell.edu/rules/frcp/rule_60"
+          ]
+          ,"sourceScopeQualification": "FRCP 51 concerns jury instructions; Rules 50, 59 and 60 govern distinct posttrial remedies; choice-of-law and appeal standards still need review.",
           "reviewTopic": "Trial verdict, posttrial motions and appeal handoff"
         }
       },
@@ -360,8 +364,14 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "limited specific provision/holding and educational application; independent citation currency and jurisdiction review outstanding",
           "sourceUrls": [
-            "https://www.law.cornell.edu/rules/fre/rule_408"
-          ],
+            "https://www.law.cornell.edu/rules/fre/rule_408",
+            "https://www.law.cornell.edu/rules/frcp/rule_50",
+            "https://www.law.cornell.edu/rules/frcp/rule_59",
+            "https://www.law.cornell.edu/rules/fre/rule_702",
+            "https://www.law.cornell.edu/rules/fre/rule_803",
+            "https://www.law.cornell.edu/rules/fre/rule_901"
+          ]
+          ,"sourceScopeQualification": "FRE 408 alone is not a complete source for this evidence-centered final; additional pinpoint procedure and evidence texts are research references, not item-level legal approval.",
           "reviewTopic": "Third-Year Final Examination — Evidence-centered civil trial and remedies"
         }
       }
@@ -841,8 +851,10 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "limited specific provision/holding and educational application; independent citation currency and jurisdiction review outstanding",
           "sourceUrls": [
-            "https://delcode.delaware.gov/title8/c001/sc04/index.html"
-          ],
+            "https://delcode.delaware.gov/title8/c001/sc04/index.html",
+            "https://law.justia.com/cases/delaware/supreme-court/2017/573-2016.html"
+          ]
+          ,"sourceScopeQualification": "DGCL 141(a) is governance background, not a net working-capital adjustment formula; Chicago Bridge & Iron v. Westinghouse provides a comparative Delaware purchase-agreement interpretation; fictional contract and chosen law govern.",
           "reviewTopic": "Financing conditions and purchase-price adjustment disputes"
         }
       },
@@ -1234,8 +1246,11 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "rule text or identified Supreme Court holding only; not a complete subsequent-treatment review",
           "sourceUrls": [
-            "https://supreme.justia.com/cases/federal/us/515/304/"
+            "https://supreme.justia.com/cases/federal/us/515/304/",
+            "https://www.law.cornell.edu/uscode/text/28/2111",
+            "https://www.law.cornell.edu/rules/frcp/rule_61"
           ]
+          ,"sourceScopeQualification": "Johnson v. Jones concerns interlocutory qualified-immunity appealability, not a general harmless-error holding; 28 USC 2111 and FRCP 61 address this lesson's principal issue, subject to controlling appellate law."
         }
       },
       {
@@ -1625,8 +1640,10 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "selected primary statute, rule or opinion; not comprehensive citator or local-law review",
           "sourceUrls": [
-            "https://uscode.house.gov/us/usc/t5/s706/"
-          ],
+            "https://uscode.house.gov/us/usc/t5/s706/",
+            "https://www.law.cornell.edu/uscode/text/5/556"
+          ]
+          ,"sourceScopeQualification": "5 USC 556(d) illustrates applicable federal formal hearing evidence standards, but a fictional state licensing hearing requires its own administrative procedure and organic statutes.",
           "reviewTopic": "Administrative hearing and agency evidence"
         }
       },
@@ -1864,8 +1881,9 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "bounded primary text/model-rule review; not a complete legal accuracy or later-treatment review",
           "sourceUrls": [
-            "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_7_conflict_of_interest_current_clients.ssologout/"
-          ],
+            "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_7_conflict_of_interest_current_clients/"
+          ]
+          ,"sourceScopeQualification": "Fixed malformed ABA Model Rule 1.7 source URL. ABA model rules are not automatically operative state ethics rules.",
           "reviewTopic": "Initial interview, conflicts and settlement advice"
         }
       },
