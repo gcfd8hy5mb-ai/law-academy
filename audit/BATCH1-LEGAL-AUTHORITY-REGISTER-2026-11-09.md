@@ -112,3 +112,38 @@ Committed as `acde278` to `level4.js`, while preserving all 70 original lesson I
 | L4-6-1 | Repaired an obviously malformed ABA Rule 1.7 `.ssologout/` URL | ABA rule is illustrative until the jurisdiction's adopted version is checked |
 
 The full 70-original-lesson `window.LAW_LEVEL4` JSON data parsed after the patch. This is a **data syntax/inventory check**, not proof the browser or Node suite passed on the final commit. Outstanding sign-off and device gates are unchanged.
+
+## Batch 1 — QA failure triage, practical exams and PR readiness (2026-11-10)
+
+### GitHub Actions failure investigation
+
+The earlier repository-wide **Validate Law Academy** run 42946846089 failed in `browser-smoke`: **six tests** in `tests/level3-coursework.spec.mjs` relating to restored lesson drafts, concurrent-tab writes, stale-draft protection, quiz/draft coexistence and retry after a storage error. The job's content-and-runtime check **passed**. The prior Level 3 source validator also failed on an outdated expectation that a depreciation lesson's source section be labeled a reported case, despite its separately identified IRS guidance and reported decision; `scripts/validate-level3.mjs` now accepts correctly separated source types.
+
+- **Fix attempted:** `level3-ui.js` now rereads persisted lesson entries when opening a lesson (`dfab5005`), so the UI does not rely exclusively on progress cached before a backup restore or another-tab update. Existing save logic retains field-level merging and changed-elsewhere safeguards. **This fix is provisional until browser tests pass.**
+- On `dfab5005`, the dedicated Level 3 curriculum workflow **passed**; repository-wide mobile-WebKit validation and Level 4 QA were still in progress at time of this note. Exact QA runs: [Level 3](https://github.com/gcfd8hy5mb-ai/law-academy/actions/runs/42948516690), [overall browser workflow](https://github.com/gcfd8hy5mb-ai/law-academy/actions/runs/42948516731).
+- The dedicated Level 4 curriculum workflow was **green on `ee0db48`** ([run 42946846081](https://github.com/gcfd8hy5mb-ai/law-academy/actions/runs/42946846081)), and also passed on earlier reviewed commits. That does not make later commits tested.
+
+### Seven practical-final content spot-checks
+
+Inspected all seven `level4-practical-finals-data.js` records (`L4-1-FINAL2` through `L4-7-FINAL2`) for case framing, three-option checkpoint questions, correct index, rationale, source starting link, five required submissions and six-category 100-point scoring rubrics. The matching examiner calibration file contains seven separate rubrics and **externallyApproved=false**; their grading has not been externally calibrated or authenticated.
+
+**Three actual content corrections committed as `1033674`:**
+
+| Practical final | Observed defect | Narrow correction | Review limitation |
+|---|---|---|---|
+| L4-1-FINAL2 | Correct Rule 37(e)(2) choice had a generic rationale overlapping unrelated expert/hearsay topics and rule-family landing page | Explanation now states restoration/loss predicates and intent-to-deprive difference from subsection (e)(1); primary citation linked to FRCP 37 | Jurisdictional subsequent case law and full written assessment still pending |
+| L4-2-FINAL2 | Sentencing-loss question's explanation spoke about unrelated disclosure/materiality instead of the three relevant-conduct factors | Explanation now explicitly states **scope, furtherance, foreseeability** under USSG §1B1.3(a)(1)(B) and limits broad conspiracy inference; source to official 2026 Chapter 1 | Applicable manual, ex post facto and loss reliability need human case-specific review |
+| L4-6-FINAL2 | Settlement-decision question linked only to organizational-client Rule 1.13, with a rationale mixing multiple representation topics | Explanation now ties client decision to ABA Model Rule 1.2(a), separate lawyer communication duties under Rule 1.4 and Model Rule 1.8(g) for aggregate settlements; source directly to Rule 1.2 | Binding jurisdiction's adopted ethics rule and actual client identity remain unresolved |
+
+The four other practical finals had plausible answer indices on this bounded screen; this does **not** constitute complete independently verified case-law/exam approval. Existing reviewer packet exporter still provides spaces for independent blind grading rather than fabricated scores.
+
+### Status / release decision
+
+- Authored Level 4 inventory: **100/100 records aligned**, seven original practical finals and 100 advanced-question records exist; this is a verified inventory statement, **not** 100 source-verified or human-graded lessons.
+- Focused source and assessment corrections: committed to draft PR #3.
+- Complete citations, subsequent treatment, all distractors and worked-guide legal conclusions: **OPEN**.
+- Mobile WebKit repository-wide regression: **pending retest as of this record**.
+- Real Firebase two-device and iPhone Home Screen PWA acceptance: **OPEN**.
+- Independent legal/academic source review, written grading calibration, accreditation/equivalency: **NOT APPROVED**.
+
+**Draft PR can be reviewed for code correctness, but should not be merged until the latest relevant Actions runs pass and a reviewer accepts the modifications.** This does not require presenting the curriculum as accredited or certified.
