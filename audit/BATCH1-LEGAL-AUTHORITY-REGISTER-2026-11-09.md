@@ -147,3 +147,14 @@ The four other practical finals had plausible answer indices on this bounded scr
 - Independent legal/academic source review, written grading calibration, accreditation/equivalency: **NOT APPROVED**.
 
 **Draft PR can be reviewed for code correctness, but should not be merged until the latest relevant Actions runs pass and a reviewer accepts the modifications.** This does not require presenting the curriculum as accredited or certified.
+
+### Browser failure root cause and corrected lesson sequencing (2026-11-10)
+
+Further examination of `level3.js` identified the real cause of six Level 3 WebKit draft test failures: in **all seven Level 3 course arrays**, the first three original lesson entries were ordered `-2, -3, -1` rather than `-1, -2, -3`. Each browser test navigated to the first displayed lesson but correctly expected storage under `L3-N-1`. The displayed lesson was actually `L3-N-2`, causing test assertions on restored writing, concurrent changes, quiz persistence, changed fields and retry to target the wrong ID. Existing autosave/key code was operating on the ID of the **displayed** lesson.
+
+- Fix `e93f006`: sort each Level 3 course's displayed lessons by the **numeric suffix** in `renderLevel3`, retaining underlying authored arrays, stable IDs, storage keys and draft structures. The earlier `dfab500` storage-refresh-on-open check also remains, so stale in-memory snapshots cannot mask newer saved work.
+- Regression test `15efb1b`: for all seven courses, assert the first rendered lesson matches the actual `L3-N-1` title and that editing it persists under the original stable lesson ID. This is a software acceptance fix, not legal content certification.
+- Corrected the Level 4 traceability script after its original check counted **eight amendment-table references** as extra lesson IDs following a documentation appendix. Fix `d857e6b` now scopes exact-100 assertions to the original canonical register table; later audit notes remain allowed. The earlier failure was a **test/parser bug**, not a loss or addition of source-register lessons.
+- Earlier repo-wide failed run `42948516731` still reports six Level 3 mobile-WebKit tests failed on the pre-sequencing fix commit. **Do not state the current head is green until the post-fix GitHub Actions runs actually complete and pass.**
+
+Release remains gated on full CI passing and independent acceptance. Nothing above alters student records or grants any professional sign-off.
