@@ -104,3 +104,30 @@ Each new record includes a named judicial opinion or properly labeled official s
 **Existing defects outside Level 5:** The Level 3 curriculum workflow has previously failed on the separate unmerged Level 4-audit branch and on this branch built from `main`; Level 4 audit PR #3 remains separate. This third authoring batch does not alter old Level 3 lessons, cloud settings or Level 4 audit flags. Do not merge this draft PR solely because Level 5 structural QA succeeds.
 
 **Release requirements still open:** complete doctrine review of all 98 lessons, independent score calibration across 21 written finals, real iPhone and desktop acceptance, production-safe cloud sync if requested, passing applicable repository-wide CI, and separately approved merge/deployment.
+
+## Module IV and authoring closeout — 140 lessons (2026-11-10)
+
+**Authoring scope completed:** seven Level 5 courses have 20 lessons each (140 total), comprised of four modules per course. New fourth-module course material is in `level5-final-module-coursework.js`. The first three module files, early student drafts, lesson IDs, the existing six-exhibit general counsel capstone, the 21 separate bar-style questions, CSS/approved academy design and prior cloud configuration were not replaced.
+
+**Final authored inventory**
+- 140 distinct case- or rule-based lessons with extensive reading, authority starting points, factual hypotheticals, opposing arguments, changed-fact exercises, written assignments and individual formative MCQs
+- 28 written course finals, **four per course**, requiring qualified human examiners; the last lesson of each course (`L5-N-20`) is an original exit final
+- 140 formative in-lesson MCQs; 21 additional original diagnostic items (161 formative items total)
+- An integrated six-exhibit fictional enterprise legal capstone and its professional source/evidence analysis tasks
+- Existing blind qualified-examiner packet export, without student PII or fictional scores, supports all **28** written finals
+- `audit/LEVEL5_140_LESSON_INDEPENDENT_REVIEW_REGISTER.csv` tracks all 140 lessons, authority category, sourced link, precise legal holdings, subsequent treatment, jurisdiction, rule effective date, scenario consistency, question key, 28 written-exam rubrics and signatures. **Every independent sign-off field is PENDING/UNREVIEWED.**
+
+**Fourth-module focus by track**
+1. Civil rights, First Amendment restrictions, public employment speech, due process, voting and tailored equitable relief
+2. Registration-by-consent jurisdiction, forum clauses, arbitration, ESI preservation, Rule 68 and complex federal proceedings
+3. Securities pleading/disclosures, transnational discovery and trade/sanctions compliance
+4. Trial and appellate jury instructions, forensic confrontation, business records, impeachment and sentencing review
+5. Candor, client property, joint representation, lawyer advertising, multijurisdictional practice and firm leadership
+6. APA rationality, agency benefits hearings, removal, reliance interests, statutory review and judicial opinion writing
+7. Contract remedies, negligence, property, criminal attempts, mixed civil procedure and an original cross-subject exit examination
+
+**Structural controls:** `scripts/verify-level5.cjs` evaluates four cumulative modules, 140 IDs, seven exit finals, 28 human-scored written finals, 140 substantial scenarios and source links, quiz keys, rubric totals, unchanged older-progress storage, original 21 diagnostic items and reviewer exports. `tests/level5-coursework.spec.mjs` checks fourth-module navigation/draft recovery and prior 1–3 module exams in mobile WebKit.
+
+**Authoring closed; approval remains open.** These records are **not** a qualified law school, a diploma, a fully Shepardized corpus, verified correct bar-examination scoring, professional legal advice or confirmation of eligibility to sit for the bar exam. Historical authorities, evolving Supreme Court holdings, Delaware corporate legislation, state variations and current agency rules require substantive external rechecking. URL presence and programmatic structure do not prove a case citation's factual correctness or the validity of its legal statement. No automatic course-completion or graduation certificate has been issued.
+
+**Remaining acceptance work:** (1) browser and real-device PWA QA, (2) manual reviewed-source signoff and correction tracking for every row, (3) calibrated human written exam review for 28 finals, (4) Level 5 cloud persistence implementation and verification if demanded, and (5) independent academic equivalency or accreditation opinion if desired. The separate Level 4 audit and sign-off stay in their own PR.
