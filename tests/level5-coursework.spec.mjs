@@ -111,3 +111,24 @@ test('Third advanced module shows all seven new finals and preserves stable less
    await page.locator('#l5back').click();
  }
 });
+
+test('Original 21 written finals offer an ungraded independent reviewer packet without changing student progress',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel5());
+ await page.locator('[data-l5course="0"]').click();
+ await page.locator('[data-l5lesson="13"]').click();
+ await expect(page.locator('#l5reviewExport')).toBeVisible();
+ await page.locator('#l5reviewExport').click();
+ await expect(page.locator('#l5reviewStatus')).toContainText('Write a response');
+ await page.locator('#l5draft').fill('My independently prepared constitutional analysis and remedial alternatives.');
+ await page.locator('#l5reviewExport').click();
+ await expect(page.locator('#l5reviewStatus')).toContainText(/review packet|Review packet/i);
+ const packet=await page.evaluate(()=>window.LAW_LEVEL5_REVIEW_PACKET.generate(window.LAW_LEVEL5[0].lessons[13],'My independently prepared constitutional analysis and remedial alternatives.'));
+ expect(packet).toContain('L5-1-14');
+ expect(packet).toContain('My independently prepared constitutional analysis');
+ expect(packet).toContain('NO AUTOMATED PASS/FAIL');
+ expect(packet).toContain('Examiner signature');
+ const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level5-v1')));
+ expect(progress['L5-1-14'].draft).toBe('My independently prepared constitutional analysis and remedial alternatives.');
+ expect(progress['L5-1-14'].examScore).toBeUndefined();
+});
