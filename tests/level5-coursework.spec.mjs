@@ -169,3 +169,26 @@ test('Case-specific deeper legal workshops appear in each advanced track without
   await page.locator('#l5back').click();await page.locator('#l5back').click();
  }
 });
+
+test('Second substantive depth batch: all seven course cases and attempt-gated worked examples',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel5());
+ const targets=[0,0,0,0,1,0,0];
+ for(let i=0;i<7;i++){
+   await page.locator('[data-l5course="'+i+'"]').click();
+   const id='L5-'+(i+1)+'-'+(targets[i]+1);
+   await page.locator('[data-l5lesson="'+targets[i]+'"]').click();
+   await expect(page.locator('[data-l5depth="'+id+'"]')).toBeVisible();
+   await expect(page.locator('[data-l5depth="'+id+'"] summary')).toHaveCount(8);
+   await expect(page.locator('#l5worked')).toBeHidden();
+   await page.locator('#l5guide').click();
+   await expect(page.locator('#l5guideStatus')).toContainText('at least 100 words');
+   await page.locator('#l5draft').fill(Array(105).fill('independent').join(' '));
+   await page.locator('#l5guide').click();
+   await expect(page.locator('#l5worked')).toBeVisible();
+   await expect(page.locator('#l5worked')).toContainText('Case-specific worked application');
+   const originalId=id;
+   expect(await page.evaluate(id=>JSON.parse(localStorage.getItem('law-academy-level5-v1'))[id]?.guideViewed,originalId)).toBe(true);
+   await page.locator('#l5back').click();await page.locator('#l5back').click();
+ }
+});
