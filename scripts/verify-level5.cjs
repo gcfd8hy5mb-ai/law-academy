@@ -9,19 +9,20 @@ const extraSrc=fs.readFileSync('level5-batch2-coursework.js','utf8');
 new vm.Script(extraSrc,{filename:'level5-batch2-coursework.js'});
 const thirdSrc=fs.readFileSync('level5-batch3-coursework.js','utf8');
 new vm.Script(thirdSrc,{filename:'level5-batch3-coursework.js'});
+const fourthSrc=fs.readFileSync('level5-final-module-coursework.js','utf8');new vm.Script(fourthSrc,{filename:'level5-final-module-coursework.js'});
 const reviewSrc=fs.readFileSync('level5-written-final-review-export.js','utf8');
 new vm.Script(reviewSrc,{filename:'level5-written-final-review-export.js'});
 const caseSrc=fs.readFileSync('level5-capstone-case-packet.js','utf8'),diagSrc=fs.readFileSync('level5-bar-diagnostic.js','utf8');
 new vm.Script(caseSrc,{filename:'level5-capstone-case-packet.js'});new vm.Script(diagSrc,{filename:'level5-bar-diagnostic.js'});
-const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(extraSrc,box,{timeout:4000});vm.runInContext(thirdSrc,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});vm.runInContext(reviewSrc,box,{timeout:4000});
+const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(extraSrc,box,{timeout:4000});vm.runInContext(thirdSrc,box,{timeout:4000});vm.runInContext(fourthSrc,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});vm.runInContext(reviewSrc,box,{timeout:4000});
 const courses=box.window.LAW_LEVEL5,lessons=courses.flatMap(c=>c.lessons);
 assert.equal(courses.length,7,'Expected seven original advanced tracks');
-assert.equal(lessons.length,98,'Three batches require 98 authored lessons');
-assert.equal(new Set(lessons.map(l=>l.id)).size,98,'Duplicate lesson ID');
+assert.equal(lessons.length,140,'Four modules require 140 authored lessons');
+assert.equal(new Set(lessons.map(l=>l.id)).size,140,'Duplicate lesson ID');
 let finals=0;
 for(const [ci,c] of courses.entries()){
  assert.equal(c.id,'L5-'+(ci+1));
- assert.equal(c.lessons.length,14,'Each course must include three substantial modules');
+ assert.equal(c.lessons.length,20,'Each course must include four substantial modules');
  for(const [li,l] of c.lessons.entries()){
   assert.equal(l.id,c.id+'-'+(li+1),'Lesson ID and order mismatch');
   for(const field of ['title','authority','sourceUrl','scenario','reading','rule','counterarguments','assignment','variation','question','why','sourceCheck','status'])assert.ok(typeof l[field]==='string' && l[field].trim().length >= (['reading','scenario','rule','counterarguments','assignment','variation','why'].includes(field)?45:4),'Missing substantial lesson field '+l.id+':'+field);
@@ -39,12 +40,13 @@ for(const [ci,c] of courses.entries()){
   assert.equal(l.review.legalAccuracyCertified,false,'False legal accuracy certification '+l.id);
   assert.equal(l.review.humanGraded,false,'Unverified grading '+l.id);
   assert.equal(l.barPractice.officialNCBE,false,'Misrepresented exam source '+l.id);
-  if(l.exam){finals++;assert.ok(li===3||li===8||li===13,'Written final should close module I, II or III '+l.id);assert.equal(l.exam.points,100);assert.equal(l.exam.humanReviewRequired,true);assert.equal(l.exam.independentApproval,false)}
+  if(l.exam){finals++;assert.ok(li===3||li===8||li===13||li===19,'Written final should close module I, II, III or IV '+l.id);assert.equal(l.exam.points,100);assert.equal(l.exam.humanReviewRequired,true);assert.equal(l.exam.independentApproval,false)}
  }
 }
-assert.equal(finals,21,'Three modules require 21 written finals');
+assert.equal(finals,28,'Four modules require 28 written finals');
 const packetGenerator=box.window.LAW_LEVEL5_REVIEW_PACKET;
 assert.equal(packetGenerator.independentApproval,false,'Review exporter must never imply external approval');
+assert.equal(lessons.filter(l=>l.graduationAssessment===true).length,7,'Seven human-scored exit finals required');
 assert.equal(packetGenerator.automatedScoring,false,'Review exporter must not score essays');
 for(const l of lessons.filter(v=>v.exam)){
  const packet=packetGenerator.generate(l,'Original anonymous candidate analysis.');
@@ -56,7 +58,7 @@ assert.ok(ui.includes('l5reviewExport')&&ui.includes('LAW_LEVEL5_REVIEW_PACKET')
 
 const distribution=[0,1,2].map(k=>lessons.filter(l=>l.answer===k).length);
 assert.ok(Math.max(...distribution)-Math.min(...distribution)<=1,'Advanced lesson answer positions should be balanced');
-assert.ok(html.includes('src="./level5.js"')&&html.includes('src="./level5-batch2-coursework.js"')&&html.includes('src="./level5-batch3-coursework.js"')&&html.includes('src="./level5-ui.js"'),'Missing page script references');
+assert.ok(html.includes('src="./level5.js"')&&html.includes('src="./level5-batch2-coursework.js"')&&html.includes('src="./level5-batch3-coursework.js"')&&html.includes('src="./level5-final-module-coursework.js"')&&html.includes('src="./level5-ui.js"'),'Missing page script references');
 assert.ok(html.includes('src="./level5-capstone-case-packet.js"')&&html.includes('src="./level5-bar-diagnostic.js"'),'Missing assessment scripts');
 const capstone=lessons.find(l=>l.id==='L5-7-4').casePacket;
 assert.ok(capstone&&capstone.fictional&&capstone.timeline.length>=7&&capstone.exhibits.length===6&&capstone.unknowns.length>=6&&capstone.variations.length>=3,'Incomplete interdisciplinary final capstone dossier');
@@ -78,6 +80,6 @@ assert.ok(ui.includes("changed()"),'Missing stale-write guard');
 assert.ok(ui.includes('renderBarSimulator()'),'Existing bar simulator link lost');
 assert.ok(ui.includes('const words=field.value.trim()'),'Missing worked guide attempt gate');
 for(const oldKey of ['law-academy-level3-v1','law-academy-level4-v1','law-academy-level4-finals-v1'])assert.ok(!js.includes(oldKey)&&!ui.includes(oldKey),'Legacy storage key touched '+oldKey);
-console.log('PASS: 7 courses, 98 complete lesson records, 21 100-point written finals, one six-exhibit capstone and 21 original diagnostic prompts.');
+console.log('PASS: 7 courses, 140 complete lesson records, 28 100-point written finals, one six-exhibit capstone and 21 original diagnostic prompts.');
 console.log('PASS: Level 5 catalog assets, independent local draft key, conflict guard and existing bar simulator route.');
 console.log('NOT TESTED: legal holdings/subsequent treatment, physical device, live Firebase, human grading or accreditation.');
