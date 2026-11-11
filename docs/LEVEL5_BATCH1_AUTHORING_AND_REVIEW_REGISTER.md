@@ -78,3 +78,29 @@ Each new record includes a named judicial opinion or properly labeled official s
 2. Inspect substantive legal precision of all 63 lesson briefs and the 14 finals, especially reported holdings, subsequent history, current jurisdiction, model rules and forfeiture/confrontation nuance.
 3. Extend original timed exams and independent examiner packets; preserve actual written attempts rather than issuing fabricated passing grades.
 4. Obtain qualified legal accuracy and academic review, device acceptance and merge approval before presenting Level 5 as production-complete.
+
+## Batch 3 — constitutional remedies, jurisdiction, governance and forensic evidence (2026-11-10)
+
+**New source:** `level5-batch3-coursework.js`; append-only after Batches 1 and 2. Adds **35 original advanced lessons** across the same seven courses, including seven third-module written finals, case comparisons, disputed-fact exercises, professional deliverables, primary-law research starting points, opposing briefs and provisional worked reasoning. Original IDs and drafts from Batches 1–2 remain unchanged.
+
+| Course | Module III lessons |
+|---|---|
+| L5-1 | Bivens, Ziglar v. Abbasi, Egbert v. Boule, City of Los Angeles v. Lyons; Brown v. Plata structural-relief final |
+| L5-2 | Bristol-Myers specific jurisdiction; Ford relatedness; Daimler corporate general jurisdiction; Amchem settlement class; Matsushita coordinated litigation final |
+| L5-3 | Marchand board oversight; Zuckerberg demand futility; Corwin informed stockholder approval; MFW controller processes; Caremark governance final |
+| L5-4 | Davis v. Washington; Michigan v. Bryant; Ohio v. Clark; Hemphill v. New York; Crawford statement-by-statement evidence final |
+| L5-5 | ABA Model Rules 1.10, 1.11, 4.2, 8.4 and 1.16 professional withdrawal final |
+| L5-6 | Skidmore interpretive weight; Mead and later deference changes; West Virginia v. EPA; Sackett wetlands; Loper Bright judicial opinion final |
+| L5-7 | 28 USC 1332 federal diversity; FRCP 12 defenses; FRE 801 hearsay definition; 28 USC 2255 collateral constraints; original integrated bar final |
+
+**Current authored inventory:** 98 unique lessons across seven courses, each with 14 lessons; 21 written finals (three per course); 98 lesson knowledge checks; 21 additional original cross-course diagnostic questions; and existing six-exhibit fictional integrated counsel capstone. These are **authored practice records**, not 98 independently verified legal source conclusions.
+
+**Additional practical assessment export:** `level5-written-final-review-export.js` creates a student-initiated *blind review packet* for each of the 21 written finals. It includes a fictional fact pattern, deliverables, the student's original answer, a human-only 100-point scoring grid, source-checking prompts, reviewer qualifications, conflict-of-interest check and empty examiner approval fields. It deliberately excludes hidden multiple-choice answers, student account IDs and fabricated scores. It does not transmit anything by itself; clipboard copy or manual copying is initiated by the student. Written exams remain ungraded until a qualified examiner actually assesses them.
+
+**QA updates:** `scripts/verify-level5.cjs` now loads all three coursework modules and reviewer exporter; validates 98 unique IDs, 21 finals, 21-item diagnostic, the existing fictional capstone packet, balanced keyed answers and no false approval flags. Mobile WebKit regressions navigate the third-module finals for every course and exercise examiner export without writing an exam score. Latest branch-head GitHub Actions must be checked before a release claim.
+
+**Caution on legal research:** Bivens/ATS, statutory administrative deference, controller Delaware fiduciary law, testimonial forensic statements and federal jurisdiction are dynamic and intensely fact-specific. Many linked opinions predate subsequent Supreme Court or statutory developments. Model Rules are not binding in a jurisdiction until adopted in governing form. The teaching notes contain cautionary language but **do not constitute a later-treatment citator audit**. A qualified lawyer or law-faculty reviewer must identify material later authority, controlling effective dates, accurate holdings, and any corrections before sign-off.
+
+**Existing defects outside Level 5:** The Level 3 curriculum workflow has previously failed on the separate unmerged Level 4-audit branch and on this branch built from `main`; Level 4 audit PR #3 remains separate. This third authoring batch does not alter old Level 3 lessons, cloud settings or Level 4 audit flags. Do not merge this draft PR solely because Level 5 structural QA succeeds.
+
+**Release requirements still open:** complete doctrine review of all 98 lessons, independent score calibration across 21 written finals, real iPhone and desktop acceptance, production-safe cloud sync if requested, passing applicable repository-wide CI, and separately approved merge/deployment.
