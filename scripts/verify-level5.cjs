@@ -9,9 +9,11 @@ const extraSrc=fs.readFileSync('level5-batch2-coursework.js','utf8');
 new vm.Script(extraSrc,{filename:'level5-batch2-coursework.js'});
 const thirdSrc=fs.readFileSync('level5-batch3-coursework.js','utf8');
 new vm.Script(thirdSrc,{filename:'level5-batch3-coursework.js'});
+const reviewSrc=fs.readFileSync('level5-written-final-review-export.js','utf8');
+new vm.Script(reviewSrc,{filename:'level5-written-final-review-export.js'});
 const caseSrc=fs.readFileSync('level5-capstone-case-packet.js','utf8'),diagSrc=fs.readFileSync('level5-bar-diagnostic.js','utf8');
 new vm.Script(caseSrc,{filename:'level5-capstone-case-packet.js'});new vm.Script(diagSrc,{filename:'level5-bar-diagnostic.js'});
-const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(extraSrc,box,{timeout:4000});vm.runInContext(thirdSrc,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});
+const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(extraSrc,box,{timeout:4000});vm.runInContext(thirdSrc,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});vm.runInContext(reviewSrc,box,{timeout:4000});
 const courses=box.window.LAW_LEVEL5,lessons=courses.flatMap(c=>c.lessons);
 assert.equal(courses.length,7,'Expected seven original advanced tracks');
 assert.equal(lessons.length,98,'Three batches require 98 authored lessons');
@@ -41,6 +43,17 @@ for(const [ci,c] of courses.entries()){
  }
 }
 assert.equal(finals,21,'Three modules require 21 written finals');
+const packetGenerator=box.window.LAW_LEVEL5_REVIEW_PACKET;
+assert.equal(packetGenerator.independentApproval,false,'Review exporter must never imply external approval');
+assert.equal(packetGenerator.automatedScoring,false,'Review exporter must not score essays');
+for(const l of lessons.filter(v=>v.exam)){
+ const packet=packetGenerator.generate(l,'Original anonymous candidate analysis.');
+ assert.ok(packet.includes(l.id)&&packet.includes('Original anonymous candidate analysis.'),'Missing lesson or original answer '+l.id);
+ assert.ok(packet.includes('NO AUTOMATED PASS/FAIL')&&packet.includes('signature'),'Missing independent reviewer safeguards '+l.id);
+ assert.ok(!packet.includes(l.options[l.answer]),'Do not include hidden multiple-choice answer in blind reviewer packet '+l.id);
+}
+assert.ok(ui.includes('l5reviewExport')&&ui.includes('LAW_LEVEL5_REVIEW_PACKET'),'Reviewer export not wired');
+
 const distribution=[0,1,2].map(k=>lessons.filter(l=>l.answer===k).length);
 assert.ok(Math.max(...distribution)-Math.min(...distribution)<=1,'Advanced lesson answer positions should be balanced');
 assert.ok(html.includes('src="./level5.js"')&&html.includes('src="./level5-batch2-coursework.js"')&&html.includes('src="./level5-batch3-coursework.js"')&&html.includes('src="./level5-ui.js"'),'Missing page script references');
