@@ -4,6 +4,8 @@ on:
     paths:
       - 'level5.js'
       - 'level5-batch2-coursework.js'
+      - 'level5-batch3-coursework.js'
+      - 'level5-written-final-review-export.js'
       - 'level5-ui.js'
       - 'level5-capstone-case-packet.js'
       - 'level5-bar-diagnostic.js'
@@ -15,6 +17,8 @@ on:
     paths:
       - 'level5.js'
       - 'level5-batch2-coursework.js'
+      - 'level5-batch3-coursework.js'
+      - 'level5-written-final-review-export.js'
       - 'level5-ui.js'
       - 'level5-capstone-case-packet.js'
       - 'level5-bar-diagnostic.js'
@@ -40,6 +44,8 @@ jobs:
         run: |
           node --check level5.js
           node --check level5-batch2-coursework.js
+          node --check level5-batch3-coursework.js
+          node --check level5-written-final-review-export.js
           node --check level5-ui.js
           node --check level5-capstone-case-packet.js
           node --check level5-bar-diagnostic.js
