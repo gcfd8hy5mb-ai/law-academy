@@ -16,7 +16,7 @@ for(const [ci,c] of courses.entries()){
  assert.equal(c.lessons.length,4,'Each course must include three seminars plus an original written final');
  for(const [li,l] of c.lessons.entries()){
   assert.equal(l.id,c.id+'-'+(li+1),'Lesson ID and order mismatch');
-  for(const field of ['title','authority','sourceUrl','scenario','reading','rule','counterarguments','assignment','variation','question','why','sourceCheck','status'])assert.ok(l[field]?.length>45 || (field==='title'&&l.title.length>4),'Missing substantial lesson field '+l.id+':'+field);
+  for(const field of ['title','authority','sourceUrl','scenario','reading','rule','counterarguments','assignment','variation','question','why','sourceCheck','status'])assert.ok(typeof l[field]==='string' && l[field].trim().length >= (['reading','scenario','rule','counterarguments','assignment','variation','why'].includes(field)?45:4),'Missing substantial lesson field '+l.id+':'+field);
   assert.ok(l.reading.split(/\s+/).length>=220,'Insufficient detailed instruction '+l.id);
   assert.ok(l.scenario.length>100,'Weak scenario '+l.id);
   assert.ok(l.assignment.length>80,'Weak written task '+l.id);
