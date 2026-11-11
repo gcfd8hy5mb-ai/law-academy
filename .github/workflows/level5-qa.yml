@@ -1,0 +1,39 @@
+name: Level 5 Draft Curriculum QA
+on:
+  push:
+    paths:
+      - 'level5.js'
+      - 'level5-ui.js'
+      - 'app.js'
+      - 'index.html'
+      - 'scripts/verify-level5.cjs'
+      - '.github/workflows/level5-qa.yml'
+  pull_request:
+    paths:
+      - 'level5.js'
+      - 'level5-ui.js'
+      - 'app.js'
+      - 'index.html'
+      - 'scripts/verify-level5.cjs'
+      - '.github/workflows/level5-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-level5:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Inspect Level 5 lesson structures, originals, UI and legacy saving isolation
+        run: node scripts/verify-level5.cjs
+      - name: Parse authored Level 5 assets
+        run: |
+          node --check level5.js
+          node --check level5-ui.js
+          node --check app.js
+      - name: Verify existing Level 4 structural course data is unchanged
+        run: node scripts/verify-level4.cjs
