@@ -159,9 +159,10 @@ test('Case-specific deeper legal workshops appear in each advanced track without
   await page.locator('[data-l5lesson="'+targets[i]+'"]').click();
   await expect(page.locator('[data-l5depth="'+id+'"]')).toBeVisible();
   const summaries=page.locator('[data-l5depth="'+id+'"] summary');
-  await expect(summaries).toHaveCount(9);
-  await summaries.nth(5).click();
-  await expect(page.locator('[data-l5depth="'+id+'"]')).toContainText('Worked case application');
+  await expect(summaries).toHaveCount(8);
+  await summaries.nth(4).click();
+  await expect(page.locator('[data-l5depth="'+id+'"]')).toContainText('Step-by-step lawyering method');
+  await expect(page.locator('#l5worked')).toBeHidden();
   await page.locator('#l5draft').fill('Original application for '+id);
   const draft=await page.evaluate(id=>JSON.parse(localStorage.getItem('law-academy-level5-v1'))[id]?.draft,id);
   expect(draft).toBe('Original application for '+id);
