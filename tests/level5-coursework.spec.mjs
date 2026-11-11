@@ -148,3 +148,23 @@ test('Fourth and final Level 5 module preserves 140 distinct lesson IDs and seve
  }
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level5-v1'))['L5-1-1'].draft)).toBe('Original early lesson');
 });
+
+test('Case-specific deeper legal workshops appear in each advanced track without interfering with saved drafts',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel5());
+ const targets=[1,1,9,6,0,1,9];
+ for(let i=0;i<7;i++){
+  await page.locator('[data-l5course="'+i+'"]').click();
+  const id='L5-'+(i+1)+'-'+(targets[i]+1);
+  await page.locator('[data-l5lesson="'+targets[i]+'"]').click();
+  await expect(page.locator('[data-l5depth="'+id+'"]')).toBeVisible();
+  const summaries=page.locator('[data-l5depth="'+id+'"] summary');
+  await expect(summaries).toHaveCount(9);
+  await summaries.nth(5).click();
+  await expect(page.locator('[data-l5depth="'+id+'"]')).toContainText('Worked case application');
+  await page.locator('#l5draft').fill('Original application for '+id);
+  const draft=await page.evaluate(id=>JSON.parse(localStorage.getItem('law-academy-level5-v1'))[id]?.draft,id);
+  expect(draft).toBe('Original application for '+id);
+  await page.locator('#l5back').click();await page.locator('#l5back').click();
+ }
+});
