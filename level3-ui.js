@@ -1,7 +1,7 @@
 // Level 3 student navigation — draft coursework with device-local practice drafts.
 const L3_KEY='law-academy-level3-v1';
 function renderLevel3(){
- const courses=window.LAW_LEVEL3||[];
+ const courses=(window.LAW_LEVEL3||[]).map(course=>({...course,lessons:[...course.lessons].sort((a,b)=>Number(a.id.split('-').at(-1))-Number(b.id.split('-').at(-1)))}));
  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
  let progress={};try{progress=JSON.parse(localStorage.getItem(L3_KEY)||'{}')||{}}catch(e){}
  const save=(id,fields)=>{try{const latest=JSON.parse(localStorage.getItem(L3_KEY)||'{}')||{};if(typeof latest!=='object'||Array.isArray(latest)||!latest)return false;const entry={...(latest[id]||{})};for(const field of fields)entry[field]=progress[id]?.[field];const merged={...latest,[id]:entry};localStorage.setItem(L3_KEY,JSON.stringify(merged));progress=merged;return true}catch(e){return false}};
