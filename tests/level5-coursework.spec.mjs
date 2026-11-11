@@ -192,3 +192,27 @@ test('Second substantive depth batch: all seven course cases and attempt-gated w
    await page.locator('#l5back').click();await page.locator('#l5back').click();
  }
 });
+
+test('All 140 Level 5 lessons now expose independent depth study without altering original IDs and finals',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel5());
+ const audit=await page.evaluate(()=>({
+  tracks:window.LAW_LEVEL5.map(c=>({id:c.id,total:c.lessons.length,deep:c.lessons.filter(l=>l.caseWorkshop).length,finals:c.lessons.filter(l=>l.exam).length})),
+  ids:window.LAW_LEVEL5.flatMap(c=>c.lessons.map(l=>l.id)),
+  manifest:window.LAW_LEVEL5_DEPTH_WORKSHOPS
+ }));
+ expect(audit.tracks).toHaveLength(7);
+ for(const c of audit.tracks){expect(c.total).toBe(20);expect(c.deep).toBe(20);expect(c.finals).toBe(4)}
+ expect(audit.ids).toHaveLength(140);
+ expect(new Set(audit.ids).size).toBe(140);
+ expect(audit.manifest).toHaveLength(140);
+ expect(new Set(audit.manifest).size).toBe(140);
+ for(let i=0;i<7;i++){
+  await page.locator('[data-l5course="'+i+'"]').click();
+  await page.locator('[data-l5lesson="19"]').click();
+  await expect(page.locator('[data-l5depth="L5-'+(i+1)+'-20"]')).toBeVisible();
+  await expect(page.locator('#l5worked')).toBeHidden();
+  await expect(page.locator('#l5reviewExport')).toBeVisible();
+  await page.locator('#l5back').click();await page.locator('#l5back').click();
+ }
+});
