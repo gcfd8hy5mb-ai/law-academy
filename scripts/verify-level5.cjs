@@ -37,6 +37,7 @@ for(const [ci,c] of courses.entries()){
  }
 }
 assert.equal(finals,7,'Seven written finals are required');
+assert.deepEqual([0,1,2].map(k=>lessons.filter(l=>l.answer===k).length),[10,9,9],'Advanced lesson answer positions should be balanced');
 assert.ok(html.includes('src="./level5.js"')&&html.includes('src="./level5-ui.js"'),'Missing page script references');
 assert.ok(html.includes('src="./level5-capstone-case-packet.js"')&&html.includes('src="./level5-bar-diagnostic.js"'),'Missing assessment scripts');
 const capstone=lessons.find(l=>l.id==='L5-7-4').casePacket;
