@@ -5,17 +5,19 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const js=fs.readFileSync('level5.js','utf8'),ui=fs.readFileSync('level5-ui.js','utf8'),app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8');
 new vm.Script(js,{filename:'level5.js'});new vm.Script(ui,{filename:'level5-ui.js'});new vm.Script(app,{filename:'app.js'});
+const extraSrc=fs.readFileSync('level5-batch2-coursework.js','utf8');
+new vm.Script(extraSrc,{filename:'level5-batch2-coursework.js'});
 const caseSrc=fs.readFileSync('level5-capstone-case-packet.js','utf8'),diagSrc=fs.readFileSync('level5-bar-diagnostic.js','utf8');
 new vm.Script(caseSrc,{filename:'level5-capstone-case-packet.js'});new vm.Script(diagSrc,{filename:'level5-bar-diagnostic.js'});
-const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});
+const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(extraSrc,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});
 const courses=box.window.LAW_LEVEL5,lessons=courses.flatMap(c=>c.lessons);
 assert.equal(courses.length,7,'Expected seven original advanced tracks');
-assert.equal(lessons.length,28,'Batch 1 needs 28 authored lessons');
-assert.equal(new Set(lessons.map(l=>l.id)).size,28,'Duplicate lesson ID');
+assert.equal(lessons.length,63,'Two batches require 63 authored lessons');
+assert.equal(new Set(lessons.map(l=>l.id)).size,63,'Duplicate lesson ID');
 let finals=0;
 for(const [ci,c] of courses.entries()){
  assert.equal(c.id,'L5-'+(ci+1));
- assert.equal(c.lessons.length,4,'Each course must include three seminars plus an original written final');
+ assert.equal(c.lessons.length,9,'Each course must include two substantial modules');
  for(const [li,l] of c.lessons.entries()){
   assert.equal(l.id,c.id+'-'+(li+1),'Lesson ID and order mismatch');
   for(const field of ['title','authority','sourceUrl','scenario','reading','rule','counterarguments','assignment','variation','question','why','sourceCheck','status'])assert.ok(typeof l[field]==='string' && l[field].trim().length >= (['reading','scenario','rule','counterarguments','assignment','variation','why'].includes(field)?45:4),'Missing substantial lesson field '+l.id+':'+field);
@@ -33,12 +35,13 @@ for(const [ci,c] of courses.entries()){
   assert.equal(l.review.legalAccuracyCertified,false,'False legal accuracy certification '+l.id);
   assert.equal(l.review.humanGraded,false,'Unverified grading '+l.id);
   assert.equal(l.barPractice.officialNCBE,false,'Misrepresented exam source '+l.id);
-  if(l.exam){finals++;assert.equal(li,3,'Written final must be last '+l.id);assert.equal(l.exam.points,100);assert.equal(l.exam.humanReviewRequired,true);assert.equal(l.exam.independentApproval,false)}
+  if(l.exam){finals++;assert.ok(li===3||li===8,'Written final should close module I or II '+l.id);assert.equal(l.exam.points,100);assert.equal(l.exam.humanReviewRequired,true);assert.equal(l.exam.independentApproval,false)}
  }
 }
-assert.equal(finals,7,'Seven written finals are required');
-assert.deepEqual([0,1,2].map(k=>lessons.filter(l=>l.answer===k).length),[10,9,9],'Advanced lesson answer positions should be balanced');
-assert.ok(html.includes('src="./level5.js"')&&html.includes('src="./level5-ui.js"'),'Missing page script references');
+assert.equal(finals,14,'Two modules require 14 written finals');
+const distribution=[0,1,2].map(k=>lessons.filter(l=>l.answer===k).length);
+assert.ok(Math.max(...distribution)-Math.min(...distribution)<=1,'Advanced lesson answer positions should be balanced');
+assert.ok(html.includes('src="./level5.js"')&&html.includes('src="./level5-batch2-coursework.js"')&&html.includes('src="./level5-ui.js"'),'Missing page script references');
 assert.ok(html.includes('src="./level5-capstone-case-packet.js"')&&html.includes('src="./level5-bar-diagnostic.js"'),'Missing assessment scripts');
 const capstone=lessons.find(l=>l.id==='L5-7-4').casePacket;
 assert.ok(capstone&&capstone.fictional&&capstone.timeline.length>=7&&capstone.exhibits.length===6&&capstone.unknowns.length>=6&&capstone.variations.length>=3,'Incomplete interdisciplinary final capstone dossier');
@@ -60,6 +63,6 @@ assert.ok(ui.includes("changed()"),'Missing stale-write guard');
 assert.ok(ui.includes('renderBarSimulator()'),'Existing bar simulator link lost');
 assert.ok(ui.includes('const words=field.value.trim()'),'Missing worked guide attempt gate');
 for(const oldKey of ['law-academy-level3-v1','law-academy-level4-v1','law-academy-level4-finals-v1'])assert.ok(!js.includes(oldKey)&&!ui.includes(oldKey),'Legacy storage key touched '+oldKey);
-console.log('PASS: 7 courses, 28 complete lesson records, 7 100-point written finals, one six-exhibit capstone and 21 original diagnostic prompts.');
+console.log('PASS: 7 courses, 63 complete lesson records, 14 100-point written finals, one six-exhibit capstone and 21 original diagnostic prompts.');
 console.log('PASS: Level 5 catalog assets, independent local draft key, conflict guard and existing bar simulator route.');
 console.log('NOT TESTED: legal holdings/subsequent treatment, physical device, live Firebase, human grading or accreditation.');
