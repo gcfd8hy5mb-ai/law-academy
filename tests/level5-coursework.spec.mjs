@@ -6,7 +6,7 @@ test('Level 5 shows seven authored tracks, four lessons each, and the existing s
  await expect(page.locator('[data-l5course]')).toHaveCount(7);
  await expect(page.locator('#l5bar')).toBeVisible();
  await page.locator('[data-l5course="0"]').click();
- await expect(page.locator('[data-l5lesson]')).toHaveCount(14);
+ await expect(page.locator('[data-l5lesson]')).toHaveCount(20);
  await page.locator('[data-l5lesson="0"]').click();
  await expect(page.locator('#l5draft')).toBeVisible();
  await expect(page.getByText('Spokeo, Inc. v. Robins (2016)',{exact:false}).first()).toBeVisible();
@@ -78,10 +78,10 @@ test('Integrated final includes six evidentiary exhibits and the student final r
 test('Both Level 5 modules are visible in all seven tracks and second-module finals retain draft IDs',async({page})=>{
  await page.goto('/');
  await page.evaluate(()=>renderLevel5());
- await expect(page.getByText('98 authored draft lessons',{exact:false})).toBeVisible();
+ await expect(page.getByText('140 authored draft lessons',{exact:false})).toBeVisible();
  for(let i=0;i<7;i++){
    await page.locator('[data-l5course="'+i+'"]').click();
-   await expect(page.locator('[data-l5lesson]')).toHaveCount(14);
+   await expect(page.locator('[data-l5lesson]')).toHaveCount(20);
    await expect(page.locator('[data-l5lesson="8"]')).toContainText('Written final');
    await page.locator('[data-l5lesson="8"]').click();
    await expect(page.locator('#l5draft')).toBeVisible();
@@ -99,7 +99,7 @@ test('Third advanced module shows all seven new finals and preserves stable less
  await page.evaluate(()=>{localStorage.removeItem('law-academy-level5-v1');renderLevel5()});
  for(let i=0;i<7;i++){
    await page.locator('[data-l5course="'+i+'"]').click();
-   await expect(page.locator('[data-l5lesson]')).toHaveCount(14);
+   await expect(page.locator('[data-l5lesson]')).toHaveCount(20);
    await expect(page.locator('[data-l5lesson="13"]')).toContainText('Written final');
    await page.locator('[data-l5lesson="13"]').click();
    await expect(page.locator('#l5draft')).toBeVisible();
@@ -112,7 +112,7 @@ test('Third advanced module shows all seven new finals and preserves stable less
  }
 });
 
-test('Original 21 written finals offer an ungraded independent reviewer packet without changing student progress',async({page})=>{
+test('Original 28 written finals offer an ungraded independent reviewer packet without changing student progress',async({page})=>{
  await page.goto('/');
  await page.evaluate(()=>renderLevel5());
  await page.locator('[data-l5course="0"]').click();
@@ -131,4 +131,20 @@ test('Original 21 written finals offer an ungraded independent reviewer packet w
  const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level5-v1')));
  expect(progress['L5-1-14'].draft).toBe('My independently prepared constitutional analysis and remedial alternatives.');
  expect(progress['L5-1-14'].examScore).toBeUndefined();
+});
+
+test('Fourth and final Level 5 module preserves 140 distinct lesson IDs and seven exit drafts',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>{localStorage.setItem('law-academy-level5-v1',JSON.stringify({'L5-1-1':{draft:'Original early lesson'}}));renderLevel5()});
+ for(let i=0;i<7;i++){
+  await page.locator('[data-l5course="'+i+'"]').click();
+  await expect(page.locator('[data-l5lesson]')).toHaveCount(20);
+  await expect(page.locator('[data-l5lesson="19"]')).toContainText('Written final');
+  await page.locator('[data-l5lesson="19"]').click();
+  await expect(page.locator('#l5reviewExport')).toBeVisible();
+  await page.locator('#l5draft').fill('Exit examination draft '+(i+1));
+  expect(await page.evaluate(id=>JSON.parse(localStorage.getItem('law-academy-level5-v1'))[id].draft,'L5-'+(i+1)+'-20')).toBe('Exit examination draft '+(i+1));
+  await page.locator('#l5back').click();await page.locator('#l5back').click();
+ }
+ expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level5-v1'))['L5-1-1'].draft)).toBe('Original early lesson');
 });
