@@ -8,6 +8,9 @@ on:
       - 'level5-final-module-coursework.js'
       - 'level5-depth-workshops-batch1.js'
       - 'level5-depth-workshops-batch2.js'
+      - 'level5-depth-workshops-batch3.js'
+      - 'level5-depth-workshops-batch4.js'
+      - 'level5-depth-workshops-batch5.js'
       - 'audit/LEVEL5_140_LESSON_INDEPENDENT_REVIEW_REGISTER.csv'
       - 'level5-written-final-review-export.js'
       - 'level5-ui.js'
@@ -26,6 +29,9 @@ on:
       - 'level5-final-module-coursework.js'
       - 'level5-depth-workshops-batch1.js'
       - 'level5-depth-workshops-batch2.js'
+      - 'level5-depth-workshops-batch3.js'
+      - 'level5-depth-workshops-batch4.js'
+      - 'level5-depth-workshops-batch5.js'
       - 'audit/LEVEL5_140_LESSON_INDEPENDENT_REVIEW_REGISTER.csv'
       - 'level5-written-final-review-export.js'
       - 'level5-ui.js'
@@ -60,6 +66,9 @@ jobs:
           node --check level5-final-module-coursework.js
           node --check level5-depth-workshops-batch1.js
           node --check level5-depth-workshops-batch2.js
+          node --check level5-depth-workshops-batch3.js
+          node --check level5-depth-workshops-batch4.js
+          node --check level5-depth-workshops-batch5.js
           node --check level5-written-final-review-export.js
           node --check level5-ui.js
           node --check level5-capstone-case-packet.js
