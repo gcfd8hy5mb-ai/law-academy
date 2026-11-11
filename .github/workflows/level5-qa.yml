@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'level5.js'
+      - 'level5-batch2-coursework.js'
       - 'level5-ui.js'
       - 'level5-capstone-case-packet.js'
       - 'level5-bar-diagnostic.js'
@@ -13,6 +14,7 @@ on:
   pull_request:
     paths:
       - 'level5.js'
+      - 'level5-batch2-coursework.js'
       - 'level5-ui.js'
       - 'level5-capstone-case-packet.js'
       - 'level5-bar-diagnostic.js'
@@ -37,6 +39,7 @@ jobs:
       - name: Parse authored Level 5 assets
         run: |
           node --check level5.js
+          node --check level5-batch2-coursework.js
           node --check level5-ui.js
           node --check level5-capstone-case-packet.js
           node --check level5-bar-diagnostic.js
