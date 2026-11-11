@@ -45,3 +45,36 @@ The reported-opinion links are **source starting points**. Lesson text includes 
 ## Merge boundary
 
 Do not merge this Level 5 branch merely because a draft curriculum is structurally complete. Confirm latest branch-head checks, complete a human diff review, preserve production and existing progress, and label any academic/independent legal certification as pending.
+
+## Batch 2 — Seven additional advanced modules (2026-11-10)
+
+**Source file:** `level5-batch2-coursework.js`. Appended to the seven original course records after `level5.js`, with stable new IDs **L5-1-5 through L5-7-9**. The original 28 `L5-*-1..4` records, original written exams, established device-local storage key and existing Level 1–4 assets are unchanged.
+
+| Track | Advanced seminars and second-module final (5 new lessons each) |
+|---|---|
+| L5-1 constitutional | Ex parte Young prospective relief; Monell municipal policy; Pearson qualified immunity; Arlington Heights discriminatory purpose; Harlow integrated litigation final |
+| L5-2 complex litigation | Wal-Mart v Dukes class proof; Twombly pleadings; Carpenter historical location records; Kyles cumulative Brady review; Nixon parallel proceedings final |
+| L5-3 multinational corporate | Morrison transaction reach; RJR Nabisco private civil RICO domestic injury; Kiobel and ATS extraterritoriality; Digital Realty SEC-reporting whistleblower framework; Basic securities-disclosure final |
+| L5-4 evidence and trial | Melendez-Diaz forensic certificates; Bullcoming surrogate witnesses; Smith v Arizona 2024 forensic expert testimony; Giles forfeiture-by-wrongdoing intent; Crawford integrated forensic-trial final |
+| L5-5 legal ethics | ABA Model Rules 1.5 legal fees, 1.6 confidentiality/technology, 1.9 former clients, 5.3 nonlawyer supervision; 1.18 prospective clients capstone |
+| L5-6 research and judicial writing | Already covenant/mootness; Steel Co Article III sequence; Arbaugh statutory jurisdictional clear statement; Kisor regulatory interpretation; FRAP 28 judicial-writing final |
+| L5-7 bar integration | FRCP 56 summary judgment; FRE 403 trial proof; 18 USC 3553 sentencing; ABA 1.7 conflict remediation; original mixed NextGen-format-informed practice final |
+
+**Batch 2 additions:** 35 original advanced applied lessons, including seven new written finals; 35 additional 3-option formative assessments with answer-position balancing; 35 written assignments, source-comparison guides and changed-fact exercises. **Overall Level 5 authoring totals:** 63 lessons (9 in each of 7 courses), 14 original written finals (two modules per course), 63 lesson knowledge checks, plus the existing 21-item cross-course diagnostic. A drafted exercise or correct index does *not* establish doctrinal correctness or human-graded mastery.
+
+Each new record includes a named judicial opinion or properly labeled official statute, federal procedural rule, ABA model rule, or NCBE public-information starting source. Model Rules and bar-exam guidance are not judicial opinions; historical opinions require contemporaneous citator and governing-law verification. The primary-link assignments are starting points **only**. No lawyer/faculty has signed off on the holdings, later treatment, answer keys, exam rubrics or selected citations. The new second-module finals remain ungraded; do not infer professional licensure, academic credit or bar eligibility.
+
+### Second-batch QA and compatibility
+
+- `scripts/verify-level5.cjs` now loads the batch-two overlay before the existing case dossier and diagnostic overlays and checks 63 distinct lesson IDs, nine authored lessons per course, 14 100-point written finals, current answer distributions, existing 21 diagnostic questions, and all non-certification flags.
+- `tests/level5-coursework.spec.mjs` includes a regression that navigates all seven course lists, validates nine lessons in each course, and checks draft saves under every new `L5-N-9` final ID. The app's course-home count is computed from the actual loaded array; it is no longer hardcoded to Batch 1.
+- The new overlay is loaded **after** `level5.js` and **before** capstone/diagnostic/UI from `index.html`. It checks for duplicate IDs before appending and never resets earlier levels or local progress.
+- Physical device, Safari Home Screen/PWA and Level 5 cloud-sync tests remain separate and **unverified**. Production Firebase configuration remains untouched.
+- Earlier Law Academy Level 3 and repository-wide QA failures were inherited from `main` and are not evidence of Level 5 legal-content failures. They must still be resolved before merge or release.
+
+### Next gates
+
+1. Inspect final GitHub Actions runs **for the final head SHA**, not only intermediate green runs. Record outstanding failures without attributing inherited failures to the new module.
+2. Inspect substantive legal precision of all 63 lesson briefs and the 14 finals, especially reported holdings, subsequent history, current jurisdiction, model rules and forfeiture/confrontation nuance.
+3. Extend original timed exams and independent examiner packets; preserve actual written attempts rather than issuing fabricated passing grades.
+4. Obtain qualified legal accuracy and academic review, device acceptance and merge approval before presenting Level 5 as production-complete.
