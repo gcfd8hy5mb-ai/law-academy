@@ -5,7 +5,9 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const js=fs.readFileSync('level5.js','utf8'),ui=fs.readFileSync('level5-ui.js','utf8'),app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8');
 new vm.Script(js,{filename:'level5.js'});new vm.Script(ui,{filename:'level5-ui.js'});new vm.Script(app,{filename:'app.js'});
-const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});
+const caseSrc=fs.readFileSync('level5-capstone-case-packet.js','utf8'),diagSrc=fs.readFileSync('level5-bar-diagnostic.js','utf8');
+new vm.Script(caseSrc,{filename:'level5-capstone-case-packet.js'});new vm.Script(diagSrc,{filename:'level5-bar-diagnostic.js'});
+const box={window:{}};vm.createContext(box);vm.runInContext(js,box,{timeout:4000});vm.runInContext(caseSrc,box,{timeout:4000});vm.runInContext(diagSrc,box,{timeout:4000});
 const courses=box.window.LAW_LEVEL5,lessons=courses.flatMap(c=>c.lessons);
 assert.equal(courses.length,7,'Expected seven original advanced tracks');
 assert.equal(lessons.length,28,'Batch 1 needs 28 authored lessons');
@@ -36,6 +38,18 @@ for(const [ci,c] of courses.entries()){
 }
 assert.equal(finals,7,'Seven written finals are required');
 assert.ok(html.includes('src="./level5.js"')&&html.includes('src="./level5-ui.js"'),'Missing page script references');
+assert.ok(html.includes('src="./level5-capstone-case-packet.js"')&&html.includes('src="./level5-bar-diagnostic.js"'),'Missing assessment scripts');
+const capstone=lessons.find(l=>l.id==='L5-7-4').casePacket;
+assert.ok(capstone&&capstone.fictional&&capstone.timeline.length>=7&&capstone.exhibits.length===6&&capstone.unknowns.length>=6&&capstone.variations.length>=3,'Incomplete interdisciplinary final capstone dossier');
+assert.equal(capstone.reviewRubric.reduce((n,x)=>n+x.maxPoints,0),100,'Capstone independent scoring rubric should total 100');
+assert.equal(capstone.independentExaminerApproved,false,'Do not imply approved examiner');
+const bank=box.window.LAW_LEVEL5_DIAGNOSTIC;
+assert.equal(bank.length,21,'Expected 21 original diagnostic prompts');
+assert.equal(new Set(bank.map(x=>x.id)).size,21,'Duplicate diagnostic ID');
+for(const item of bank){assert.ok(courses.some(c=>c.id===item.course),'Question assigned to missing course');assert.ok(item.options.length===3&&new Set(item.options).size===3,'Invalid distinct diagnostic options');assert.ok(Number.isInteger(item.answer)&&item.options[item.answer],'Missing keyed diagnostic answer');assert.ok(item.why.length>45,'Insufficient rule-application feedback')}
+assert.ok(ui.includes("const diagnostic=")&&ui.includes("l5dxcheck")&&ui.includes("l5diagnostic"),'Diagnostic navigation not connected');
+assert.ok(ui.includes("l.casePacket")&&ui.includes("l.casePacket.exhibits"),'Capstone dossier UI missing');
+
 assert.ok(html.indexOf('src="./level5.js"')<html.indexOf('src="./level5-ui.js"')&&html.indexOf('src="./level5-ui.js"')<html.indexOf('src="./app.js"'),'Incorrect boot order');
 assert.ok(app.includes('renderLevel5();return'),'Level 5 catalog route missing');
 assert.ok(app.includes('Advanced Law & Bar Capstone'),'Level 5 catalog name absent');
@@ -45,6 +59,6 @@ assert.ok(ui.includes("changed()"),'Missing stale-write guard');
 assert.ok(ui.includes('renderBarSimulator()'),'Existing bar simulator link lost');
 assert.ok(ui.includes('const words=field.value.trim()'),'Missing worked guide attempt gate');
 for(const oldKey of ['law-academy-level3-v1','law-academy-level4-v1','law-academy-level4-finals-v1'])assert.ok(!js.includes(oldKey)&&!ui.includes(oldKey),'Legacy storage key touched '+oldKey);
-console.log('PASS: 7 courses, 28 distinct complete lesson records, 7 original 100-point written finals and correct answer indices.');
+console.log('PASS: 7 courses, 28 complete lesson records, 7 100-point written finals, one six-exhibit capstone and 21 original diagnostic prompts.');
 console.log('PASS: Level 5 catalog assets, independent local draft key, conflict guard and existing bar simulator route.');
 console.log('NOT TESTED: legal holdings/subsequent treatment, physical device, live Firebase, human grading or accreditation.');
