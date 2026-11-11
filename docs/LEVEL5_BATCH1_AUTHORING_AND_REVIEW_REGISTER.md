@@ -131,3 +131,21 @@ Each new record includes a named judicial opinion or properly labeled official s
 **Authoring closed; approval remains open.** These records are **not** a qualified law school, a diploma, a fully Shepardized corpus, verified correct bar-examination scoring, professional legal advice or confirmation of eligibility to sit for the bar exam. Historical authorities, evolving Supreme Court holdings, Delaware corporate legislation, state variations and current agency rules require substantive external rechecking. URL presence and programmatic structure do not prove a case citation's factual correctness or the validity of its legal statement. No automatic course-completion or graduation certificate has been issued.
 
 **Remaining acceptance work:** (1) browser and real-device PWA QA, (2) manual reviewed-source signoff and correction tracking for every row, (3) calibrated human written exam review for 28 finals, (4) Level 5 cloud persistence implementation and verification if demanded, and (5) independent academic equivalency or accreditation opinion if desired. The separate Level 4 audit and sign-off stay in their own PR.
+
+## Substantive depth improvement — case-specific workshop batch 1 (2026-11-10)
+
+The prior `140`-lesson authoring total is unchanged. A separate non-destructive overlay, `level5-depth-workshops-batch1.js`, attaches **14 individualized case-reasoning workshops**, exactly two per Level 5 course. Each covers (1) actual procedural setting, (2) a bounded holding and legal reasoning, (3) what the decision does **not** establish, (4) a new evidentiary fact file, (5) a procedural legal-work sequence, (6) a worked conclusion, (7) an adverse brief, (8) a changed-fact problem, and (9) limitations of source review. The teaching view renders each section as expandable text adjacent to the original reading and assignment, without replacing old lesson IDs, drafts or assessment questions.
+
+| Course | Individually developed workshops |
+| --- | --- |
+| Constitutional litigation | `L5-1-2` Rahimi and historical analogues; `L5-1-13` Lyons and prospective standing |
+| Complex litigation | `L5-2-2` Brady favorable evidence; `L5-2-10` Bristol-Myers forum contacts |
+| Corporate governance | `L5-3-10` Marchand board oversight; `L5-3-11` Zuckerberg director-specific demand futility |
+| Evidence and trial | `L5-4-7` Smith forensic substitute experts; `L5-4-13` Hemphill open-door confrontation |
+| Ethics | `L5-5-1` Upjohn organizational privilege; `L5-5-16` model trust-account and lien dispute |
+| Judicial writing | `L5-6-2` Loper Bright independent statutory judgment; `L5-6-15` State Farm record review |
+| Bar capstone | `L5-7-10` diversity citizenship of LLCs; `L5-7-12` human hearsay versus machine output |
+
+**Purpose and remaining gap:** This is a focused **14/140 = 10%** in-depth teaching upgrade; the other 126 records still have their original substantive readings, individual scenarios and rubric scaffolding, but do not yet have this enhanced case-specific workshop. A substantial individualized deepening of all 140 lessons is **not** finished. The comparison between levels should not be represented as independent academic equivalency.
+
+**Source and academic warnings:** These study sections use reported case law and model/federal rules as *teaching starting points*, not certified later-treatment searches. In particular, state-law ethics adoption, Delaware statutory changes, case disposition versus later merits, and 2024–2026 Supreme Court doctrine must be independently reviewed. No existing legal certification flags or human grade claims were altered. `scripts/verify-level5.cjs` checks exact workshop coverage and substantive fields; mobile WebKit tests check seven lesson displays and device-local draft continuity. A passing build is not a signed professional legal audit.
