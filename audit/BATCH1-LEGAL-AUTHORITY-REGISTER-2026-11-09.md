@@ -97,3 +97,18 @@ Supporting research snapshots: [Delaware Supreme Court decision](https://law.jus
 4. Branch changes require complete CI green on the final head SHA, reviewer approval and merge/deployment checks. Do not describe the audit branch as live before merge.
 
 **Status decision:** Level 4 *authoring and structural inventory* are complete, with a meaningful additional batch of targeted source and assessment corrections. **Level 4 has NOT met full legal accuracy, academic approval, or live-device release acceptance gates.**
+
+### Original-core lesson citations — second source repair set (2026-11-10)
+
+Committed as `acde278` to `level4.js`, while preserving all 70 original lesson IDs, question keys and draft status:
+
+| ID | Bounded correction | Open limitation |
+|---|---|---|
+| L4-1-9 | Added FRCP 50, 59, 60 alongside existing Rule 51, so the posttrial lesson distinguishes verdict motions and instruction preservation | Current controlling circuit timing/case law and all original/advanced answers not independently verified |
+| L4-1-10 | Added FRCP 50, 59 and FRE 702, 803, 901 alongside existing FRE 408 for the multi-stage evidence and trial final | This is a research crosswalk, not a complete final-exam content review |
+| L4-3-4 | Added the Delaware Supreme Court purchase-agreement opinion *Chicago Bridge & Iron v. Westinghouse* to the working-capital case alongside governance-background DGCL §141 | Governing fictional contract, transaction date, jurisdiction and subsequent treatment remain open |
+| L4-4-5 | Distinguished *Johnson v. Jones*'s qualified-immunity interlocutory-appeal question from **harmless error**; added 28 U.S.C. §2111 and FRCP 61 as primary research references | Lesson's full appellate review and cited decision treatment remain open |
+| L4-5-6 | Added federal APA §556(d) as an analogy for administrative-hearing proof, warning that the scenario is a **state** licensing hearing and the state's applicable law is controlling | State and agency unidentified; no legal conclusion can be certified |
+| L4-6-1 | Repaired an obviously malformed ABA Rule 1.7 `.ssologout/` URL | ABA rule is illustrative until the jurisdiction's adopted version is checked |
+
+The full 70-original-lesson `window.LAW_LEVEL4` JSON data parsed after the patch. This is a **data syntax/inventory check**, not proof the browser or Node suite passed on the final commit. Outstanding sign-off and device gates are unchanged.
