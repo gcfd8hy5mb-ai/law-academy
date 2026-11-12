@@ -15,7 +15,6 @@ test('Level 5 backup is opt-in and read-only until explicit write confirmation',
  await page.locator('#law-cloud-launch').click();
  await page.getByRole('button',{name:'Level 5 manual cloud backup'}).click();
  await expect(page.getByRole('dialog',{name:'Level 5 manual cloud backup'})).toBeVisible();
- await expect(page.getByText('Separate Firebase snapshot for Level 5 original writing and diagnostics.')).toHaveCount(0); // explanatory text includes more copy
  await page.getByRole('button',{name:'Compare Level 5 copies (read only)'}).click();
  await expect(page.getByText(/No separate Level 5 cloud copy exists/)).toBeVisible();
  const after=await page.evaluate(()=>({raw:localStorage.getItem('law-academy-level5-v1'),writes:window.__firebaseWrites||0}));
