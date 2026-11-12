@@ -6,12 +6,12 @@
 - Level 5 draft authored: 7 courses, 140 lessons, 140 case-specific depth workshops, 28 original written finals, and 21 additional diagnostic items. These figures are documented in draft PR #4 and verified structurally, **not** certified as accurate legal instruction.
 - Level 4 base includes 100 lessons; corrective Level 4 legal audit is in **separate** draft PR #3. Do not assume PR #3 is merged into PR #4.
 - On 2026-11-12, commit `9867768892d771bfb6535d30e22a53829baf4097` corrected Level 3 browser worked-exercise tests to use numerically sorted lesson positions after the UI began displaying stable lesson IDs in numeric order. No original lesson or saved ID was modified.
-- On that commit, Level 3 curriculum verification, Level 4 curriculum/exam QA, Level 5 draft curriculum QA, and Level 5 mobile-browser acceptance workflows **passed**. Repository-wide Validate Law Academy content-and-runtime job **passed**; its browser-smoke result was **still running when last inspected**. Do not mark it PASS based on other suites.
+- On that commit, Level 3 curriculum verification, Level 4 curriculum/exam QA, Level 5 draft curriculum QA, and Level 5 mobile-browser acceptance workflows **passed**. Repository-wide **Validate Law Academy passed in full** on the tested code commit: content-and-runtime and browser-smoke jobs both completed successfully (run 43296675320). This is automated browser evidence, not physical iPhone or Firebase acceptance.
 
 ## Unfinished gates — no false clearance
 | Gate | Status | Clear only with |
 |---|---|---|
-| Full repository WebKit browser suite | IN PROGRESS / NOT YET CERTIFIED | Completed green run on exact target SHA, or corrected and retested defects |
+| Full repository WebKit browser suite | **PASS** on tested code commit \`9867768\` | Re-run when candidate code changes; physical device acceptance remains separate |
 | Level 4 PR #3 integration | OPEN IN SEPARATE DRAFT | Conflict and content review, targeted QA, authorized integration without altering historic student progress |
 | Current law and cited case holdings | UNVERIFIED IN FULL | Dated, jurisdiction-specific primary-source and subsequent-treatment verification lesson by lesson |
 | Written exams / bar-style validation | UNGRADED BY EXPERT | Human examination rubric calibration, blinded work samples, remediation validity and realistic bar blueprint; no guarantee of bar admission/pass |
