@@ -112,3 +112,28 @@ For each lesson, a qualified reviewer must check the lesson narrative, original 
 ## Bounded primary-law updates performed in this pass
 
 Source-grounded addenda address the 2025 *Trump v. CASA* injunction-scope decision, *United States v. Rahimi*, 2026 sentencing relevant-conduct rules, FRAP 8 stay requirements and ABA Model Rule 1.8(g) aggregate settlements. Existing Rule 37(e), Rule 50, Rule 702, 2025 Delaware §144 and pending 2026 FRE 801 cautions remain in the curriculum. These checks do not independently validate all applications.
+
+## November 10, 2026 — targeted curriculum and assessment repairs (draft PR #3)
+
+The original table above is an historical November 9 source-assignment snapshot. **Do not interpret an older generic "source-family only" cell as a revised or certified per-proposition check.** This addendum records actual corrections on `audit/legal-batch1-2026-11-09`, with precise affected files and remaining verification.
+
+| Record(s) | Actual asset(s) changed | Bounded correction | Legal-accuracy state |
+|---|---|---|---|
+| L4-1-12 | `level4-case-labs-batch3-2026.js` | Added pinpoint evidence/human-record and summary-judgment authorities (FRE 403, 803, 805, 901; FRCP 56) | Partial source correction only |
+| L4-1-13 | `level4-case-labs-batch4-2026.js` | Added Rules 602, 701, 702, 703, 901, 403; revised question to test Rule 702's operative admission burden | Partial source/question check only |
+| L4-1-14 | `level4-case-labs-batch4-2026.js` | Fixed unrelated Rule 702 citation; linked FRCP 50, 59 and FRE 103; clarified procedural timing | Partial source/question check only |
+| L4-2-13; L4-2-14 | `level4-case-labs-batch4-2026.js` | Replaced unrelated Strickland or sentencing links with topic-relevant guideline, statutory and habeas starting points | Source selection only |
+| L4-3-12 | `level4-case-labs-batch2-2026.js` | Added *Chicago Bridge & Iron v. Westinghouse* purchase-agreement interpretation comparator; §251 merger source not suitable for price-adjustment calculations | Focused comparison only |
+| L4-3-13; L4-3-14 | `level4-case-labs-batch4-2026.js` | Corrected source families for transaction disclosure and cross-border acquisition (SEC/Delaware and OFAC/BIS/DOJ) | Official-domain starting points, not exact regulation audit |
+| L4-4-14 | `level4-case-labs-batch4-2026.js` | Replaced unrelated 28 U.S.C. §2111 citation with Supreme Court procedure/jurisdiction research leads | Partial source selection only |
+| L4-5-12 | `level4-case-labs-batch3-2026.js` | Distinguished FTC 15 U.S.C. §57b-1 CIDs from fictitious unidentified agency demand and from APA §706 judicial review | Agency-specific applicability **unverified** |
+| L4-5-14 | `level4-case-labs-batch4-2026.js` | Replaced hearing-statute mismatch with preservation and whistleblower research leads | Partial selection only |
+| L4-6-14 | `level4-case-labs-batch4-2026.js` | Corrected client-settlement source family from organizational-client Rule 1.13 to Model Rules 1.2, 1.4, 1.7 | State adoption **unverified** |
+| L4-7-15; L4-7-16 | `level4-case-labs-batch4-2026.js` | Added governance, discovery, entity representation, appellate and evidence research sources matching integrated factual questions | Partial selection only |
+| L4-1-9; L4-1-10; L4-3-4; L4-4-5; L4-5-6; L4-6-1 | `level4.js` | Corrected missing or off-topic research links and added narrow use cautions, including state hearing law and ABA model-rule status | Source mapping, **not** all narrated legal conclusions |
+| L4-3-11; L4-4-12; L4-6-12; L4-7-14; L4-5-13 | Appended case-lab modules | Replaced generic checks with fact-dependent questions about fiduciary review, FRAP 8, Model Rule 1.8(g), apparent authority and APA 556(d) | Provisional assessment revision, independent exam calibration pending |
+| L4-1-FINAL2; L4-2-FINAL2; L4-6-FINAL2 | `level4-practical-finals-data.js` | Corrected Rule 37(e), 2026 USSG §1B1.3 and ABA settlement-control rationales and exact topic source URL | Provisional model explanations; never a signed examiner grade |
+
+Reviewers must evaluate old and new sources **against the applicable jurisdiction, date and all question distractors**. Broad home-page URLs may support navigation to official rules but not precise assertions. No subsequent-treatment citator, licensed practitioner signoff or academic accreditation has been completed in this batch.
+
+**QA trail:** `scripts/audit-level4-traceability.cjs` aligns 100 lessons, 100 source rows, 100 advanced-key review records, and 30 supplemental labs. Latest successful Level 4 automated run before this addendum: [42948646785](https://github.com/gcfd8hy5mb-ai/law-academy/actions/runs/42948646785) on `1033674`. Repository-wide WebKit local-draft acceptance requires separate green final-head evidence; a structural pass never proves it.
