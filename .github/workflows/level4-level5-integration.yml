@@ -30,5 +30,10 @@ jobs:
           node scripts/validate-law-cloud-migration.mjs
           node scripts/verify-level4-finals-cloud.mjs
           node scripts/validate-level4-finals-cloud-behavior.mjs
+      - name: Verify Level 5 manual cloud backup parser and conflicts
+        run: |
+          node --check law-level5-cloud.js
+          node --check law-firebase-cloud-v4.js
+          node --test tests/level5-cloud-plan.test.mjs
       - name: Explicit limits
         run: echo 'Structural tests cannot certify legal accuracy, independent grading, cloud device acceptance, or bar readiness.'
