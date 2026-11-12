@@ -1,0 +1,34 @@
+name: Law Academy Level 4–5 Integration Gate
+on:
+  push:
+    branches: [integration/level4-audit-level5-20261112]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  combined-curriculum:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Level 3 navigation and curriculum
+        run: node scripts/validate-level3.mjs
+      - name: Verify integrated Level 4 content and traceability
+        run: |
+          node scripts/validate-level4.mjs
+          node scripts/verify-level4.cjs
+          node scripts/audit-level4-traceability.cjs
+      - name: Verify integrated Level 5 complete lessons and workshops
+        run: |
+          node scripts/verify-level5.cjs
+          node scripts/audit-level5-academic-coverage.cjs
+      - name: Verify cloud migration and finals simulations
+        run: |
+          node scripts/validate-law-cloud-migration.mjs
+          node scripts/verify-level4-finals-cloud.mjs
+          node scripts/validate-level4-finals-cloud-behavior.mjs
+      - name: Explicit limits
+        run: echo 'Structural tests cannot certify legal accuracy, independent grading, cloud device acceptance, or bar readiness.'
