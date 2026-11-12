@@ -306,7 +306,8 @@ test('Seven worked reasoning exercises require an original written attempt befor
  await page.evaluate(()=>renderLevel3());
  for(let i=0;i<7;i++){
   await page.locator('[data-l3course="'+i+'"]').click();
-  await page.locator('[data-l3lesson="1"]').click();
+  // The UI sorts by stable numeric lesson ID; L3-N-1 is the first worked case.
+  await page.locator('[data-l3lesson="0"]').click();
   await expect(page.locator('#l3worked')).toBeHidden();
   await page.locator('#l3reveal').click();
   await expect(page.locator('#l3revealStatus')).toContainText('at least 100 words');
@@ -324,6 +325,7 @@ test('Foundational case examples in all seven courses stay hidden until student 
  await page.evaluate(()=>renderLevel3());
  for(let i=0;i<7;i++){
   await page.locator('[data-l3course="'+i+'"]').click();
+  // L3-N-3, not the non-worked L3-N-2, is the foundational worked case.
   await page.locator('[data-l3lesson="2"]').click();
   await expect(page.locator('#l3worked')).toBeHidden();
   await page.locator('#l3reveal').click();
