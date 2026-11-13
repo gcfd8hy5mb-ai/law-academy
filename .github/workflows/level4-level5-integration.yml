@@ -51,6 +51,14 @@ jobs:
         run: node scripts/verify-level2-depth-batch7.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
+      - name: Produce 34-course examination blueprint review register
+        run: node scripts/audit-five-level-exam-blueprint.cjs
+      - name: Upload 34-course exam coverage review register
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-level-exam-blueprint-review
+          path: audit/five-level-exam-blueprint-screen.csv
+          retention-days: 30
       - name: Upload 523-lesson academic review queue
         uses: actions/upload-artifact@v4
         with:
