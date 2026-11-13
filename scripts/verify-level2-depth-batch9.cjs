@@ -13,7 +13,7 @@ const files=[...html.matchAll(/src="\.\/(level2-[^"]+\.js)"/g)].map(m=>m[1]);
 assert.ok(files.includes('level2-instructional-depth-batch9-2026.js'));
 for(const path of files)vm.runInContext(text(path),ctx,{filename:path,timeout:10000});
 const ids=Array.from(ctx.window.LAW_LEVEL2_DEPTH_BATCH9_IDS);
-assert.equal(ids.length,27);assert.equal(new Set(ids).size,27);
+assert.equal(ids.length,29);assert.equal(new Set(ids).size,27);
 assert.equal(items().length,128);assert.equal(new Set(items().map(l=>l.id)).size,128);
 for(const l of items()){
  const old=original.get(l.id);assert.ok(old,'Unexpected student progress identifier '+l.id);
@@ -27,9 +27,9 @@ for(const l of items()){
 }
 const under=items().filter(l=>l.reading.trim().split(/\s+/).length<220).map(l=>l.id);
 console.log('Level 2 remaining primary-reading screening flags: '+under.length+' — '+under.join(', '));
-assert.ok(under.length<=3,'Unresolved short primary readings beyond review target: '+under.join(', '));
+assert.ok(under.length===0,'Unresolved short primary readings beyond review target: '+under.join(', '));
 const previous=ids.map(id=>items().find(l=>l.id===id).reading);
 vm.runInContext(text('level2-instructional-depth-batch9-2026.js'),ctx);
 assert.deepEqual(ids.map(id=>items().find(l=>l.id===id).reading),previous,'Double inclusion duplicates reading');
-console.log('PASS: 27 targeted case studies, stable 128 lesson IDs, original cases, MCQs and answer keys preserved.');
+console.log('PASS: 29 targeted case studies, stable 128 lesson IDs, original cases, MCQs and answer keys preserved.');
 console.log('PENDING: legal currency, independent legal accuracy, human exam scoring.');
