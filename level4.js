@@ -234,8 +234,12 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "selected rule text or ABA Model Rule only; no complete subsequent-treatment or state-adoption review",
           "sourceUrls": [
-            "https://www.law.cornell.edu/rules/frcp/rule_51"
-          ],
+            "https://www.law.cornell.edu/rules/frcp/rule_51",
+            "https://www.law.cornell.edu/rules/frcp/rule_50",
+            "https://www.law.cornell.edu/rules/frcp/rule_59",
+            "https://www.law.cornell.edu/rules/frcp/rule_60"
+          ]
+          ,"sourceScopeQualification": "FRCP 51 concerns jury instructions; Rules 50, 59 and 60 govern distinct posttrial remedies; choice-of-law and appeal standards still need review.",
           "reviewTopic": "Trial verdict, posttrial motions and appeal handoff"
         }
       },
@@ -360,8 +364,14 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "limited specific provision/holding and educational application; independent citation currency and jurisdiction review outstanding",
           "sourceUrls": [
-            "https://www.law.cornell.edu/rules/fre/rule_408"
-          ],
+            "https://www.law.cornell.edu/rules/fre/rule_408",
+            "https://www.law.cornell.edu/rules/frcp/rule_50",
+            "https://www.law.cornell.edu/rules/frcp/rule_59",
+            "https://www.law.cornell.edu/rules/fre/rule_702",
+            "https://www.law.cornell.edu/rules/fre/rule_803",
+            "https://www.law.cornell.edu/rules/fre/rule_901"
+          ]
+          ,"sourceScopeQualification": "FRE 408 alone is not a complete source for this evidence-centered final; additional pinpoint procedure and evidence texts are research references, not item-level legal approval.",
           "reviewTopic": "Third-Year Final Examination — Evidence-centered civil trial and remedies"
         }
       }
@@ -841,8 +851,10 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "limited specific provision/holding and educational application; independent citation currency and jurisdiction review outstanding",
           "sourceUrls": [
-            "https://delcode.delaware.gov/title8/c001/sc04/index.html"
-          ],
+            "https://delcode.delaware.gov/title8/c001/sc04/index.html",
+            "https://law.justia.com/cases/delaware/supreme-court/2017/573-2016.html"
+          ]
+          ,"sourceScopeQualification": "DGCL 141(a) is governance background, not a net working-capital adjustment formula; Chicago Bridge & Iron v. Westinghouse provides a comparative Delaware purchase-agreement interpretation; fictional contract and chosen law govern.",
           "reviewTopic": "Financing conditions and purchase-price adjustment disputes"
         }
       },
@@ -877,7 +889,7 @@ window.LAW_LEVEL4=[
         "title": "Board approval, fiduciary process and deal conflicts",
         "authority": "Applicable Delaware corporate statutes, charter and fiduciary precedent; transaction-date corporate law",
         "scenario": "A corporate director owns shares in the acquisition target and participates in negotiations despite a plan for independent director approval.",
-        "reading": "An acquisition approval process must identify the decision-makers, their economic interests, and the exact transaction date. Separate an actual director conflict from a merely alleged relationship and determine which legal framework applies to the entity and deal. A director's abstention, standing alone, does not answer whether negotiations, disclosure and review were appropriately conducted. Analyze board committee independence, access to advisors, price information, fairness opinions and alternative bids without claiming a fairness opinion guarantees an informed decision. Verify relevant statutory developments and effective dates rather than applying a contemporary statute retroactively. Build an authority chart distinguishing board approval, shareholder consent and any special committee powers. Prepare board minutes that accurately document uncertainty, options, material disclosures and reasons for the decision. Contrast a properly supervised independent negotiation with an insider-controlled process and evaluate how the applicable standard of review and potential remedies could change. Client counsel must avoid giving the interested director advice that conflicts with the corporate client's interests.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.\n\nTARGETED SOURCE REVIEW (2026-11-03): Delaware DGCL §144 was substantially amended in 2025 with distinct conditions and protections regarding interested-director/officer and controlling-stockholder transactions. Identify the entity type, effective-date and transaction-time applicability before analyzing board safe harbors or independent committees. Abstention alone is not a universal statutory cure, and §144 does not replace all fiduciary duties. Sources: https://delcode.delaware.gov/title8/c001/sc04/. Scope: limited identified primary-law or agency-reference check; not a full case citator, state-law verification, individualized legal opinion, or academic sign-off.",
+        "reading": "An acquisition approval process must identify the decision-makers, their economic interests, and the exact transaction date. Separate an actual director conflict from a merely alleged relationship and determine which legal framework applies to the entity and deal. A director's abstention, standing alone, does not answer whether negotiations, disclosure and review were appropriately conducted. Analyze board committee independence, access to advisors, price information, fairness opinions and alternative bids without claiming a fairness opinion guarantees an informed decision. Verify the enacted statute's express applicability and transition clauses before making assumptions about retroactivity; in particular, Delaware's 2025 §144 amendments generally reach pre-enactment transactions subject to specified February 17, 2025 proceeding and inspection-demand exceptions. Build an authority chart distinguishing board approval, shareholder consent and any special committee powers. Prepare board minutes that accurately document uncertainty, options, material disclosures and reasons for the decision. Contrast a properly supervised independent negotiation with an insider-controlled process and evaluate how the applicable standard of review and potential remedies could change. Client counsel must avoid giving the interested director advice that conflicts with the corporate client's interests.\n\nPRACTICE METHOD — This is an educational hypothetical, not advice for a real client. Create a chronology and an evidence matrix before reaching a conclusion. Identify legal elements and burdens, jurisdiction, operative date, unresolved facts and source hierarchy. Research any changed statute or precedent and record the date checked. Distinguish what a party alleged from what testimony or documents actually establish. Present a reasonable adverse argument and identify how at least one different fact would affect the legal conclusion or remedy. Prepare your written deliverable for a qualified human examiner rather than treating a successful quiz response as mastery.\n\nTARGETED SOURCE REVIEW (2026-11-03): Delaware DGCL §144 was substantially amended in 2025 with distinct conditions and protections regarding interested-director/officer and controlling-stockholder transactions. Identify the entity type, effective-date and transaction-time applicability before analyzing board safe harbors or independent committees. Abstention alone is not a universal statutory cure, and §144 does not replace all fiduciary duties. Sources: https://delcode.delaware.gov/title8/c001/sc04/. Scope: limited identified primary-law or agency-reference check; not a full case citator, state-law verification, individualized legal opinion, or academic sign-off.",
         "counterarguments": "Buyer argues the board received complete facts and independent advice; minority shareholders challenge the director's role and disclosure timing.",
         "assignment": "Draft a 1,400-word board-process memorandum, independence matrix, minutes outline, transaction-conflict disclosure and competing shareholder demand analyses. Include a verified-source table, factual uncertainties, a second legally plausible outcome and the limits of your chosen remedy. Submit this draft for qualified human review.",
         "question": "What is the first question when evaluating an interested director's role in an acquisition?",
@@ -981,7 +993,7 @@ window.LAW_LEVEL4=[
         "title": "Third-Year Final Examination — M&A acquisition, financing and post-closing dispute",
         "authority": "Governing contract and corporate law; relevant antitrust, privacy and securities rules only when triggered",
         "scenario": "FICTIONAL THIRD-YEAR FINAL CASE FILE: A holding company acquires a supplier; a director has a financial conflict, the buyer's financing changes, an unresolved data incident surfaces, and seller later disputes an earnout calculation.",
-        "reading": "Map legal entities, authority, board conflicts and transaction structure before drafting a remedy. Separate warranties, covenants, conditions, indemnities, financing risks and post-closing earnout terms. Identify which law actually governs each question and how time-dependent statutes affect the transaction. Analyze closing conditions and specific performance independently. Model the purchase-price true-up and earnout with documented inputs, distinguishing valuation uncertainty from legal breach. Address cybersecurity diligence through applicable laws and confirmed incident evidence, not universal notification rules. Prepare competing contract redlines and explain incentives, tax, regulator and insurance issues that require specialist work.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.\n\nTARGETED SOURCE REVIEW (2026-11-03): An integrated acquisition case must distinguish DGCL §141 board authority and amended §144 conflict protections from separate contractual closing, indemnity, earnout and financing obligations. Use the statute effective for the transaction date and avoid claiming the 2025 §144 amendment applies retroactively without investigating the statutory applicability provision. Sources: https://delcode.delaware.gov/title8/c001/sc04/. Scope: limited identified primary-law or agency-reference check; not a full case citator, state-law verification, individualized legal opinion, or academic sign-off.",
+        "reading": "Map legal entities, authority, board conflicts and transaction structure before drafting a remedy. Separate warranties, covenants, conditions, indemnities, financing risks and post-closing earnout terms. Identify which law actually governs each question and how time-dependent statutes affect the transaction. Analyze closing conditions and specific performance independently. Model the purchase-price true-up and earnout with documented inputs, distinguishing valuation uncertainty from legal breach. Address cybersecurity diligence through applicable laws and confirmed incident evidence, not universal notification rules. Prepare competing contract redlines and explain incentives, tax, regulator and insurance issues that require specialist work.\n\nEXAMINATION METHOD: Treat the written answer as a legal research and practice portfolio, not an automatically scored quiz. Define the legal question, exact forum, jurisdiction and operative date. Build an annotated chronology and a fact-to-element matrix, keeping facts supported by the record separate from disputed allegations and unknowns. Verify all primary authorities, actual holdings, current rules and any subsequent treatment; do not invent evidence to fill gaps. Address the strongest adverse legal theory, analyze two significant fact changes, and provide a realistic client or court-facing recommendation. The five rubric dimensions total 100 points. A qualified human examiner must evaluate the substantive written submission and its citations before any mastery determination.\n\nTARGETED SOURCE REVIEW (2026-11-03): An integrated acquisition case must distinguish DGCL §141 board authority and amended §144 conflict protections from separate contractual closing, indemnity, earnout and financing obligations. For Delaware §144, check the 2025 act's express applicability provision rather than selecting law solely by the transaction date: sections 1 and 2 generally apply to acts and transactions before, on, or after enactment, with exceptions for qualifying proceedings commenced or inspection demands made on or before February 17, 2025. Identify the procedural history and actual transaction facts before choosing a statutory safe harbor. Sources: https://delcode.delaware.gov/title8/c001/sc04/. Scope: limited identified primary-law or agency-reference check; not a full case citator, state-law verification, individualized legal opinion, or academic sign-off.",
         "counterarguments": "Seller invokes buyer efforts and earnout promises; buyer asserts changed facts, disclosure qualifications and financial conditions.",
         "assignment": "FINAL EXAMINATION — Produce a 2,000–2,500-word deal counsel memorandum, transaction chart, revised clauses, financial waterfall, board approval plan and post-closing dispute brief. Submit all referenced materials, a primary-source verification log, two competing positions and a reflection on unresolved issues. This examination remains ungraded until qualified human substantive review; a quiz response alone does not establish mastery.",
         "question": "What determines whether a post-closing earnout claim succeeds?",
@@ -1234,8 +1246,11 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "rule text or identified Supreme Court holding only; not a complete subsequent-treatment review",
           "sourceUrls": [
-            "https://supreme.justia.com/cases/federal/us/515/304/"
+            "https://supreme.justia.com/cases/federal/us/515/304/",
+            "https://www.law.cornell.edu/uscode/text/28/2111",
+            "https://www.law.cornell.edu/rules/frcp/rule_61"
           ]
+          ,"sourceScopeQualification": "Johnson v. Jones concerns interlocutory qualified-immunity appealability, not a general harmless-error holding; 28 USC 2111 and FRCP 61 address this lesson's principal issue, subject to controlling appellate law."
         }
       },
       {
@@ -1625,8 +1640,10 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "selected primary statute, rule or opinion; not comprehensive citator or local-law review",
           "sourceUrls": [
-            "https://uscode.house.gov/us/usc/t5/s706/"
-          ],
+            "https://uscode.house.gov/us/usc/t5/s706/",
+            "https://www.law.cornell.edu/uscode/text/5/556"
+          ]
+          ,"sourceScopeQualification": "5 USC 556(d) illustrates applicable federal formal hearing evidence standards, but a fictional state licensing hearing requires its own administrative procedure and organic statutes.",
           "reviewTopic": "Administrative hearing and agency evidence"
         }
       },
@@ -1864,8 +1881,9 @@ window.LAW_LEVEL4=[
           "checkedAsOf": "2026-11-03",
           "scope": "bounded primary text/model-rule review; not a complete legal accuracy or later-treatment review",
           "sourceUrls": [
-            "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_7_conflict_of_interest_current_clients.ssologout/"
-          ],
+            "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_7_conflict_of_interest_current_clients/"
+          ]
+          ,"sourceScopeQualification": "Fixed malformed ABA Model Rule 1.7 source URL. ABA model rules are not automatically operative state ethics rules.",
           "reviewTopic": "Initial interview, conflicts and settlement advice"
         }
       },
