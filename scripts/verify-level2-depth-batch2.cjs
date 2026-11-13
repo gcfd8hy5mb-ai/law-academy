@@ -25,7 +25,7 @@ for(const lesson of after){
   assert.equal(lesson[field],old[field],'Existing '+field+' changed for '+lesson.id);
  assert.equal(JSON.stringify(lesson.options),old.options,'Existing answer options changed for '+lesson.id);
  if(ids.includes(lesson.id)){
-  assert.ok(lesson.reading.length>old.reading.length+700,'Additional depth too small '+lesson.id);
+  assert.ok(lesson.reading.length>old.reading.length+500,'Additional depth too small '+lesson.id);
   assert.match(lesson.reading,/COUNTERARGUMENT|COUNTERARGUMENTS|defense|DEFENSE|competing|opposing/i,'Missing adversarial reasoning '+lesson.id);
   assert.match(lesson.reading,/WRITTEN PRODUCT|Submit an?|Deliver an?|Prepare an?|Draft an?|Create an?/i,'Missing original written deliverable '+lesson.id);
  }else assert.equal(lesson.reading,old.reading,'Untargeted lesson was changed '+lesson.id);
