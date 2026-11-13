@@ -16,11 +16,16 @@ function load(files,end){
 }
 const l2src=file('level2.js'),l2end=l2src.indexOf('const L2_KEY=');
 assert.ok(l2end>0,'Level 2 data boundary missing');
-contexts.l2=loadSource(l2src.slice(0,l2end),'LAW_LEVEL2');
-function loadSource(source,key){const ctx={window:{}};vm.runInNewContext(source,ctx);return ctx.window[key]}
-contexts.l3=load(['level3.js'],'LAW_LEVEL3');
 const html=file('index.html');
 const sources=[...html.matchAll(/<script[^>]*src="\.\/([^"]+)"[^>]*>/g)].map(x=>x[1]);
+const l2ctx={window:{}};vm.createContext(l2ctx);
+vm.runInContext(l2src.slice(0,l2end),l2ctx,{filename:'level2.js',timeout:10000});
+const l2SourcePos=sources.indexOf('level2.js'),l2AppPos=sources.indexOf('app.js');
+assert.ok(l2SourcePos>=0&&l2AppPos>l2SourcePos,'Level 2 source and app script order missing');
+const l2Overlays=sources.slice(l2SourcePos+1,l2AppPos).filter(name=>name.startsWith('level2-')&&name.endsWith('.js'));
+for(const name of l2Overlays)vm.runInContext(file(name),l2ctx,{filename:name,timeout:10000});
+contexts.l2=l2ctx.window.LAW_LEVEL2;
+contexts.l3=load(['level3.js'],'LAW_LEVEL3');
 const first=sources.indexOf('level4.js'),last=sources.indexOf('level4-audit-inventory-2026.js');
 assert.ok(first>=0&&last>first,'Level 4 module window missing');
 contexts.l4=load(sources.slice(first,last+1),'LAW_LEVEL4');
