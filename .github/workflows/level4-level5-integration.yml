@@ -1,0 +1,113 @@
+name: Law Academy Level 4–5 Integration Gate
+on:
+  push:
+    branches: [integration/level4-audit-level5-20261112]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  combined-curriculum:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Level 3 navigation and curriculum
+        run: node scripts/validate-level3.mjs
+      - name: Verify integrated Level 4 content and traceability
+        run: |
+          node scripts/validate-level4.mjs
+          node scripts/verify-level4.cjs
+          node scripts/audit-level4-traceability.cjs
+      - name: Verify integrated Level 5 complete lessons and workshops
+        run: |
+          node scripts/verify-level5.cjs
+          node scripts/audit-level5-academic-coverage.cjs
+      - name: Verify cloud migration and finals simulations
+        run: |
+          node scripts/validate-law-cloud-migration.mjs
+          node scripts/verify-level4-finals-cloud.mjs
+          node scripts/validate-level4-finals-cloud-behavior.mjs
+      - name: Verify Level 5 manual cloud backup parser and conflicts
+        run: |
+          node --check law-level5-cloud.js
+          node --check law-firebase-cloud-v4.js
+          node --test tests/level5-cloud-plan.test.mjs
+      - name: Verify Level 2 case-specific seminars and unchanged progress IDs
+        run: node scripts/verify-level2-depth-batch2.cjs
+      - name: Verify 23 advanced Level 5 written assignments preserve original assessment keys
+        run: node scripts/verify-level5-assignment-depth-batch2.cjs
+      - name: Verify seven Level 2 capstone teaching dossiers preserve exam keys
+        run: node scripts/verify-level2-capstone-depth-batch3.cjs
+      - name: Verify fourteen additional Level 2 legal analysis seminars
+        run: node scripts/verify-level2-depth-batch4.cjs
+      - name: Verify fourteen new criminal civil and constitutional teaching seminars
+        run: node scripts/verify-level2-depth-batch5.cjs
+      - name: Verify fifteen property and legal research teaching seminars
+        run: node scripts/verify-level2-depth-batch6.cjs
+      - name: Verify fourteen additional Level 2 teaching seminars in Batch 7
+        run: node scripts/verify-level2-depth-batch7.cjs
+      - name: Verify twelve criminal and constitutional seminars in Level 2 Batch 8
+        run: node scripts/verify-level2-depth-batch8.cjs
+      - name: Verify final 27 Level 2 depth targets and loaded chapter coverage
+        run: node scripts/verify-level2-depth-batch9.cjs
+      - name: Generate 100-lesson Level 4 contextual reading and worked-guide review
+        run: node scripts/audit-level4-contextual-depth.cjs
+      - name: Upload Level 4 contextual depth review
+        uses: actions/upload-artifact@v4
+        with:
+          name: level4-contextual-depth-review
+          path: audit/level4-100-lesson-contextual-depth-register.csv
+          retention-days: 30
+      - name: Audit seven Level 4 practical finals exam packets and calibrated rubrics
+        run: node scripts/audit-level4-practical-final-examiner-queue.cjs
+      - name: Upload seven Level 4 final examiner review dossiers
+        uses: actions/upload-artifact@v4
+        with:
+          name: level4-practical-final-examiner-queue
+          path: audit/level4-seven-practical-finals-examiner-queue.csv
+          retention-days: 30
+      - name: Audit substantive scaffolding in 24 Level 4 worked guides
+        run: node scripts/audit-level4-24-worked-guides-substance.cjs
+      - name: Upload detailed 24-guide Level 4 academic review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: level4-worked-guides-substance-queue
+          path: audit/level4-24-worked-guides-substantive-triage.csv
+          retention-days: 30
+      - name: Verify source-checked current-law notes and original advanced lesson IDs
+        run: node scripts/verify-crosslevel-source-crosschecks-20261113.cjs
+      - name: Verify eleven Smith Jarkesy and CASA source notes preserve examination integrity
+        run: node scripts/verify-crosslevel-primary-source-batch2-20261113.cjs
+      - name: Verify sixteen Corner Post Macquarie and Delaware notes preserve advanced coursework
+        run: node scripts/verify-crosslevel-primary-source-batch3-20261113.cjs
+      - name: Verify direct Delaware law and 2026 evidence rule contradiction corrections
+        run: node scripts/verify-legal-currency-contradictions-20261113.cjs
+      - name: Produce all five levels academic review inventory
+        run: node scripts/audit-five-level-curriculum.cjs
+      - name: Produce 34-course examination blueprint review register
+        run: node scripts/audit-five-level-exam-blueprint.cjs
+      - name: Upload 34-course exam coverage review register
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-level-exam-blueprint-review
+          path: audit/five-level-exam-blueprint-screen.csv
+          retention-days: 30
+      - name: Produce 523-lesson qualified primary-law review queue
+        run: node scripts/audit-five-level-primary-law-review.cjs
+      - name: Upload whole-academy primary law review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-level-primary-law-523-lesson-review
+          path: audit/five-level-primary-law-523-lesson-review-register.csv
+          retention-days: 30
+      - name: Upload 523-lesson academic review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-level-curriculum-review-inventory
+          path: audit/five-level-academic-review-inventory.csv
+          retention-days: 30
+      - name: Explicit limits
+        run: echo 'Structural tests cannot certify legal accuracy, independent grading, cloud device acceptance, or bar readiness.'

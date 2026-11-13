@@ -306,7 +306,8 @@ test('Seven worked reasoning exercises require an original written attempt befor
  await page.evaluate(()=>renderLevel3());
  for(let i=0;i<7;i++){
   await page.locator('[data-l3course="'+i+'"]').click();
-  await page.locator('[data-l3lesson="1"]').click();
+  // The UI sorts by stable numeric lesson ID; L3-N-1 is the first worked case.
+  await page.locator('[data-l3lesson="0"]').click();
   await expect(page.locator('#l3worked')).toBeHidden();
   await page.locator('#l3reveal').click();
   await expect(page.locator('#l3revealStatus')).toContainText('at least 100 words');
@@ -324,6 +325,7 @@ test('Foundational case examples in all seven courses stay hidden until student 
  await page.evaluate(()=>renderLevel3());
  for(let i=0;i<7;i++){
   await page.locator('[data-l3course="'+i+'"]').click();
+  // L3-N-3, not the non-worked L3-N-2, is the foundational worked case.
   await page.locator('[data-l3lesson="2"]').click();
   await expect(page.locator('#l3worked')).toBeHidden();
   await page.locator('#l3reveal').click();
@@ -358,5 +360,22 @@ test('All seven course finals show scoring criteria and include examiner issue m
   expect(packet).toContain('Qualified reviewer must check sources');
   await page.locator('#l3back').click();
   await page.locator('#l3back').click();
+ }
+});
+
+test('Level 3 courses display numbered lesson one before lessons two and three without changing IDs',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>renderLevel3());
+ for(let i=0;i<7;i++){
+   const expected=await page.evaluate(i=>window.LAW_LEVEL3[i].lessons.find(l=>l.id==='L3-'+(i+1)+'-1').title,i);
+   await page.locator('[data-l3course="'+i+'"]').click();
+   await expect(page.locator('[data-l3lesson="0"]')).toContainText(expected);
+   await page.locator('[data-l3lesson="0"]').click();
+   await expect(page.locator('#l3draft')).toBeVisible();
+   await page.locator('#l3draft').fill('Numbered first lesson '+(i+1));
+   const entry=await page.evaluate(id=>JSON.parse(localStorage.getItem('law-academy-level3-v1')||'{}')[id],'L3-'+(i+1)+'-1');
+   expect(entry?.draft).toBe('Numbered first lesson '+(i+1));
+   await page.locator('#l3back').click();
+   await page.locator('#l3back').click();
  }
 });
