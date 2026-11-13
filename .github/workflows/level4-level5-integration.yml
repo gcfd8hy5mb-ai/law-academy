@@ -89,6 +89,14 @@ jobs:
           name: five-level-exam-blueprint-review
           path: audit/five-level-exam-blueprint-screen.csv
           retention-days: 30
+      - name: Produce 523-lesson qualified primary-law review queue
+        run: node scripts/audit-five-level-primary-law-review.cjs
+      - name: Upload whole-academy primary law review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-level-primary-law-523-lesson-review
+          path: audit/five-level-primary-law-523-lesson-review-register.csv
+          retention-days: 30
       - name: Upload 523-lesson academic review queue
         uses: actions/upload-artifact@v4
         with:
