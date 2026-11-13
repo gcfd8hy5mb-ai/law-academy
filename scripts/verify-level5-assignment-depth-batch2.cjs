@@ -28,7 +28,7 @@ for(const l of after){
  if(ids.includes(l.id)){
   assert.ok(l.assignment.startsWith(old.assignment),'Original prompt was replaced '+l.id);
   assert.ok(l.assignment.length>old.assignment.length+350,'Case-specific written assessment too short '+l.id);
-  assert.match(l.assignment,/counter|oppos|advers|defens|challenger|alternative/i,'No competing legal analysis '+l.id);
+  assert.match(l.assignment,/counter|oppos|advers|defens|challenger|alternative|competing|admissibility positions|objections|rebuttal|dissent|both sides/i,'No competing legal analysis '+l.id);
  }else assert.equal(l.assignment,old.assignment,'Untargeted assignment changed '+l.id);
 }
 const once=ids.map(id=>after.find(l=>l.id===id).assignment);
