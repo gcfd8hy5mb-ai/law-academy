@@ -69,6 +69,14 @@ jobs:
           name: level4-practical-final-examiner-queue
           path: audit/level4-seven-practical-finals-examiner-queue.csv
           retention-days: 30
+      - name: Audit substantive scaffolding in 24 Level 4 worked guides
+        run: node scripts/audit-level4-24-worked-guides-substance.cjs
+      - name: Upload detailed 24-guide Level 4 academic review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: level4-worked-guides-substance-queue
+          path: audit/level4-24-worked-guides-substantive-triage.csv
+          retention-days: 30
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Produce 34-course examination blueprint review register
