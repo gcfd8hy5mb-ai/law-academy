@@ -61,6 +61,14 @@ jobs:
           name: level4-contextual-depth-review
           path: audit/level4-100-lesson-contextual-depth-register.csv
           retention-days: 30
+      - name: Audit seven Level 4 practical finals exam packets and calibrated rubrics
+        run: node scripts/audit-level4-practical-final-examiner-queue.cjs
+      - name: Upload seven Level 4 final examiner review dossiers
+        uses: actions/upload-artifact@v4
+        with:
+          name: level4-practical-final-examiner-queue
+          path: audit/level4-seven-practical-finals-examiner-queue.csv
+          retention-days: 30
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Produce 34-course examination blueprint review register
