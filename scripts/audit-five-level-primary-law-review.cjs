@@ -37,7 +37,7 @@ const narrow={
  'L4-5-5':'Corner Post (2024): rulemaking injury and special filing deadlines',
  'L4-5-10':'Corner Post (2024): special statute versus default six-year limitation',
  'L3-2-6':'Macquarie (2024): Rule 10b-5(b) requires misleading statement for omission liability',
- 'L4-3-10':'Macquarie (2024): private half-truth claim versus SEC filing duty; DGCL 144 (2025): ordinary conflicted approval',
+ 'L4-3-10':'Macquarie (2024): private half-truth claim versus SEC filing duty',
  'L5-3-4':'Macquarie (2024): private statement-based securities omission; DGCL 144 (2025): going-private versus non-going-private',
  'L3-2-2':'DGCL 144 (2025): conflicted director and controller safe harbor categories',
  'L3-2-3':'DGCL 144 (2025): substantive transaction protection distinct from derivative demand',
@@ -66,9 +66,9 @@ for(const row of records){
  out.push([row[col.level],row[col.course_id],id,row[col.lesson_title],row[col.source_starting_point_not_verified],detail,sourceUrl,'NO — PENDING QUALIFIED REVIEW','NO — PENDING QUALIFIED REVIEW','NO — PENDING QUALIFIED REVIEW','NO — PENDING QUALIFIED REVIEW','',detail?'Verify full doctrinal context, controlling forum and later negative treatment despite bounded source note':'Find operative primary authorities, controlling forum and dates; verify exact holdings/negative treatment and review case application']);
 }
 assert.equal(seen.size,523);
-assert.equal(Object.keys(narrow).filter(id=>seen.has(id)).length,33,'Unmatched bounded-source-review ID');
+assert.equal(Object.keys(narrow).filter(id=>seen.has(id)).length,34,'Unmatched bounded-source-review ID');
 const quote=v=>'"'+String(v??'').replace(/"/g,'""').replace(/[\r\n]+/g,' ')+'"';
 const path='audit/five-level-primary-law-523-lesson-review-register.csv';
 fs.writeFileSync(path,out.map(r=>r.map(quote).join(',')).join('\n')+'\n');
-console.log('PASS: 523-lesson five-level primary-law review queue; 33 lesson-level bounded source references identified and all full/current-law/legal-signoff fields PENDING.');
+console.log('PASS: 523-lesson five-level primary-law review queue; 34 lesson-level bounded source references identified and all full/current-law/legal-signoff fields PENDING.');
 console.log('Generated '+path+'. Does not certify citation currentness or independently validate curricula.');
