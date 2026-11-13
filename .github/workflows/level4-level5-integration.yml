@@ -39,6 +39,8 @@ jobs:
         run: node scripts/verify-level2-depth-batch2.cjs
       - name: Verify 23 advanced Level 5 written assignments preserve original assessment keys
         run: node scripts/verify-level5-assignment-depth-batch2.cjs
+      - name: Verify seven Level 2 capstone teaching dossiers preserve exam keys
+        run: node scripts/verify-level2-capstone-depth-batch3.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Upload 523-lesson academic review queue
