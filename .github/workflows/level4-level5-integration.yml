@@ -47,6 +47,8 @@ jobs:
         run: node scripts/verify-level2-depth-batch5.cjs
       - name: Verify fifteen property and legal research teaching seminars
         run: node scripts/verify-level2-depth-batch6.cjs
+      - name: Verify fourteen additional Level 2 teaching seminars in Batch 7
+        run: node scripts/verify-level2-depth-batch7.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Upload 523-lesson academic review queue
