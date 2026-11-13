@@ -81,6 +81,8 @@ jobs:
         run: node scripts/verify-crosslevel-source-crosschecks-20261113.cjs
       - name: Verify eleven Smith Jarkesy and CASA source notes preserve examination integrity
         run: node scripts/verify-crosslevel-primary-source-batch2-20261113.cjs
+      - name: Verify sixteen Corner Post Macquarie and Delaware notes preserve advanced coursework
+        run: node scripts/verify-crosslevel-primary-source-batch3-20261113.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Produce 34-course examination blueprint review register
