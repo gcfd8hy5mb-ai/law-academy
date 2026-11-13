@@ -29,7 +29,22 @@ const narrow={
  'L4-5-3':'Jarkesy (2024): civil-fraud penalty versus ordinary agency adjudication',
  'L5-1-3':'CASA (2025): universal preliminary injunction versus underlying merits',
  'L4-4-9':'CASA (2025): stay and injunction scope, class distinction',
- 'L4-4-10':'CASA (2025): appellate relief without deciding merits'
+ 'L4-4-10':'CASA (2025): appellate relief without deciding merits',
+ 'L3-3-3':'Corner Post (2024): plaintiff-specific accrual versus rule promulgation',
+ 'L3-3-6':'Corner Post (2024): accrual distinguished from agency enforcement discretion',
+ 'L3-3-8':'Corner Post (2024): APA rulemaking record and claim timing',
+ 'L3-3-9':'Corner Post (2024): APA accrual distinct from monetary remedies',
+ 'L4-5-5':'Corner Post (2024): rulemaking injury and special filing deadlines',
+ 'L4-5-10':'Corner Post (2024): special statute versus default six-year limitation',
+ 'L3-2-6':'Macquarie (2024): Rule 10b-5(b) requires misleading statement for omission liability',
+ 'L4-3-10':'Macquarie (2024): private half-truth claim versus SEC filing duty; DGCL 144 (2025): ordinary conflicted approval',
+ 'L5-3-4':'Macquarie (2024): private statement-based securities omission; DGCL 144 (2025): going-private versus non-going-private',
+ 'L3-2-2':'DGCL 144 (2025): conflicted director and controller safe harbor categories',
+ 'L3-2-3':'DGCL 144 (2025): substantive transaction protection distinct from derivative demand',
+ 'L4-3-1':'DGCL 144 (2025): contract-consent versus corporate conflicted approval',
+ 'L4-3-6':'DGCL 144 (2025): controller going-private committee and minority vote',
+ 'L5-3-1':'DGCL 144 (2025): independent board oversight claim versus deal approval',
+ 'L5-3-13':'DGCL 144 (2025): controller cash-out and statutory transition'
 };
 const source={
  'Loper Bright':'https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf',
@@ -37,20 +52,23 @@ const source={
  'FRE 702':'https://www.law.cornell.edu/rules/fre/rule_702',
  'Smith':'https://www.law.cornell.edu/supremecourt/text/22-899',
  'Jarkesy':'https://www.law.cornell.edu/supremecourt/text/22-859',
- 'CASA':'https://www.law.cornell.edu/supremecourt/text/24A884'
+ 'CASA':'https://www.law.cornell.edu/supremecourt/text/24A884',
+ 'Corner Post':'https://www.law.cornell.edu/supremecourt/text/22-1008',
+ 'Macquarie':'https://www.law.cornell.edu/supremecourt/text/22-1165',
+ 'DGCL 144':'https://legis.delaware.gov/SessionLaws/Chapter?id=42168'
 };
 const header=['level','course_id','lesson_id','lesson_title','existing_authority_or_research_starting_point','narrow_bounded_review_note','specific_source_for_bounded_review','jurisdiction_specific_source_validated','effective_date_validated','subsequent_treatment_validated','written_legal_reasoning_human_reviewed','reviewer_and_review_date','required_next_action'];
 const out=[header],seen=new Set();
 for(const row of records){
  assert.equal(row.length,keys.length,'Malformed lesson queue row');
  const id=row[col.lesson_id];assert.ok(!seen.has(id),'Duplicate lesson '+id);seen.add(id);
- const detail=narrow[id]||'',sourceUrl=detail.startsWith('Loper Bright')?source['Loper Bright']:detail.startsWith('Rahimi')?source['Rahimi']:detail.startsWith('FRE 702')?source['FRE 702']:detail.startsWith('Smith')?source['Smith']:detail.startsWith('Jarkesy')?source['Jarkesy']:detail.startsWith('CASA')?source['CASA']:'';
+ const detail=narrow[id]||'',sourceUrl=Object.entries(source).filter(([name])=>detail.startsWith(name+' ')||detail.includes('; '+name+' ')||detail.includes('; '+name+':')).map(([,url])=>url).join(' ; ');
  out.push([row[col.level],row[col.course_id],id,row[col.lesson_title],row[col.source_starting_point_not_verified],detail,sourceUrl,'NO — PENDING QUALIFIED REVIEW','NO — PENDING QUALIFIED REVIEW','NO — PENDING QUALIFIED REVIEW','NO — PENDING QUALIFIED REVIEW','',detail?'Verify full doctrinal context, controlling forum and later negative treatment despite bounded source note':'Find operative primary authorities, controlling forum and dates; verify exact holdings/negative treatment and review case application']);
 }
 assert.equal(seen.size,523);
-assert.equal(Object.keys(narrow).filter(id=>seen.has(id)).length,19,'Unmatched bounded-source-review ID');
+assert.equal(Object.keys(narrow).filter(id=>seen.has(id)).length,33,'Unmatched bounded-source-review ID');
 const quote=v=>'"'+String(v??'').replace(/"/g,'""').replace(/[\r\n]+/g,' ')+'"';
 const path='audit/five-level-primary-law-523-lesson-review-register.csv';
 fs.writeFileSync(path,out.map(r=>r.map(quote).join(',')).join('\n')+'\n');
-console.log('PASS: 523-lesson five-level primary-law review queue; 19 bounded source propositions identified and all full/current-law/legal-signoff fields PENDING.');
+console.log('PASS: 523-lesson five-level primary-law review queue; 33 lesson-level bounded source references identified and all full/current-law/legal-signoff fields PENDING.');
 console.log('Generated '+path+'. Does not certify citation currentness or independently validate curricula.');
