@@ -77,6 +77,8 @@ jobs:
           name: level4-worked-guides-substance-queue
           path: audit/level4-24-worked-guides-substantive-triage.csv
           retention-days: 30
+      - name: Verify source-checked current-law notes and original advanced lesson IDs
+        run: node scripts/verify-crosslevel-source-crosschecks-20261113.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Produce 34-course examination blueprint review register
