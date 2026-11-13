@@ -19,7 +19,7 @@ assert.ok(scripts.indexOf(file)>scripts.indexOf('law-crosslevel-primary-source-c
 assert.ok(scripts.indexOf(file)<scripts.indexOf('level5-ui.js'));
 vm.runInContext(code,ctx,{filename:file,timeout:10000});
 const ids=Array.from(ctx.window.LAW_CROSSLEVEL_PRIMARY_SOURCE_BATCH3_IDS);
-assert.equal(ids.length,16);assert.equal(new Set(ids).size,14,'Sixteen source notes cover fourteen distinct lessons');
+assert.equal(ids.length,16);assert.equal(new Set(ids).size,15,'Sixteen source notes cover fifteen distinct lessons');
 const sourceGroup=ids.filter(x=>x.startsWith('L3-')).length;
 assert.ok(sourceGroup>=5,'Level 3 not well represented');
 const covered=ids.filter(id=>id.startsWith('L4-')).length;
