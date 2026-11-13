@@ -29,7 +29,7 @@ contexts.l3=load(['level3.js'],'LAW_LEVEL3');
 const first=sources.indexOf('level4.js'),last=sources.indexOf('level4-audit-inventory-2026.js');
 assert.ok(first>=0&&last>first,'Level 4 module window missing');
 contexts.l4=load(sources.slice(first,last+1),'LAW_LEVEL4');
-const l5files=['level5.js','level5-batch2-coursework.js','level5-batch3-coursework.js','level5-final-module-coursework.js','level5-depth-workshops-batch1.js','level5-depth-workshops-batch2.js','level5-depth-workshops-batch3.js','level5-depth-workshops-batch4.js','level5-depth-workshops-batch5.js'];
+const l5files=['level5.js','level5-batch2-coursework.js','level5-batch3-coursework.js','level5-final-module-coursework.js','level5-depth-workshops-batch1.js','level5-depth-workshops-batch2.js','level5-depth-workshops-batch3.js','level5-depth-workshops-batch4.js','level5-depth-workshops-batch5.js','level5-written-assignment-depth-batch2-2026.js'];
 contexts.l5=load(l5files,'LAW_LEVEL5');
 const shapes=[
  {key:'l1',label:'Pre-Law',courses:6,lessons:85,prefix:null},
