@@ -13,7 +13,7 @@ const files=[...html.matchAll(/src="\.\/(level2-[^"]+\.js)"/g)].map(m=>m[1]);
 assert.ok(files.includes('level2-instructional-depth-batch9-2026.js'));
 for(const path of files)vm.runInContext(text(path),ctx,{filename:path,timeout:10000});
 const ids=Array.from(ctx.window.LAW_LEVEL2_DEPTH_BATCH9_IDS);
-assert.equal(ids.length,29);assert.equal(new Set(ids).size,27);
+assert.equal(ids.length,29);assert.equal(new Set(ids).size,29);
 assert.equal(items().length,128);assert.equal(new Set(items().map(l=>l.id)).size,128);
 for(const l of items()){
  const old=original.get(l.id);assert.ok(old,'Unexpected student progress identifier '+l.id);
