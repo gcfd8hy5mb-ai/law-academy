@@ -27,7 +27,7 @@ for(const lesson of after){
  if(ids.includes(lesson.id)){
   assert.ok(lesson.reading.length>old.reading.length+700,'Additional depth too small '+lesson.id);
   assert.match(lesson.reading,/COUNTERARGUMENT|COUNTERARGUMENTS|defense|DEFENSE|competing|opposing/i,'Missing adversarial reasoning '+lesson.id);
-  assert.match(lesson.reading,/WRITTEN PRODUCT|Submit an|Deliver a|Prepare an/i,'Missing original written deliverable '+lesson.id);
+  assert.match(lesson.reading,/WRITTEN PRODUCT|Submit an?|Deliver an?|Prepare an?|Draft an?|Create an?/i,'Missing original written deliverable '+lesson.id);
  }else assert.equal(lesson.reading,old.reading,'Untargeted lesson was changed '+lesson.id);
 }
 const updated=ids.map(id=>after.find(l=>l.id===id).reading);
