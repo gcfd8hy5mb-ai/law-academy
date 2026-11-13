@@ -7,7 +7,11 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
 const src=p=>fs.readFileSync(p,'utf8');
 const original=src('level4.js'),start=original.indexOf('window.LAW_LEVEL4=');
 assert.ok(start>=0);
-const ctx={window:{}};vm.createContext(ctx);vm.runInContext(original,ctx,{filename:'level4.js',timeout:15000});
+const ctx={window:{}};vm.createContext(ctx);
+const html=src('index.html'),files=[...html.matchAll(/<script[^>]*src="\\.\\/([^"]+\\.js)"/g)].map(x=>x[1]);
+const first=files.indexOf('level4.js'),last=files.indexOf('level4-audit-inventory-2026.js');
+assert.ok(first>=0&&last>first,'Full Level 4 course scripts not available');
+for(const file of files.slice(first,last+1))vm.runInContext(src(file),ctx,{filename:file,timeout:15000});
 const all=ctx.window.LAW_LEVEL4.flatMap(c=>c.lessons);
 assert.equal(all.length,100);assert.equal(new Set(all.map(l=>l.id)).size,100);
 const final=all.find(l=>l.id==='L4-3-10');
