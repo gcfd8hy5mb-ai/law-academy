@@ -53,6 +53,14 @@ jobs:
         run: node scripts/verify-level2-depth-batch8.cjs
       - name: Verify final 27 Level 2 depth targets and loaded chapter coverage
         run: node scripts/verify-level2-depth-batch9.cjs
+      - name: Generate 100-lesson Level 4 contextual reading and worked-guide review
+        run: node scripts/audit-level4-contextual-depth.cjs
+      - name: Upload Level 4 contextual depth review
+        uses: actions/upload-artifact@v4
+        with:
+          name: level4-contextual-depth-review
+          path: audit/level4-100-lesson-contextual-depth-register.csv
+          retention-days: 30
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Produce 34-course examination blueprint review register
