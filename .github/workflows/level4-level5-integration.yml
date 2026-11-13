@@ -35,6 +35,8 @@ jobs:
           node --check law-level5-cloud.js
           node --check law-firebase-cloud-v4.js
           node --test tests/level5-cloud-plan.test.mjs
+      - name: Verify Level 2 case-specific seminars and unchanged progress IDs
+        run: node scripts/verify-level2-depth-batch2.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Upload 523-lesson academic review queue
