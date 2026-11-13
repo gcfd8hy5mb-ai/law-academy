@@ -43,6 +43,8 @@ jobs:
         run: node scripts/verify-level2-capstone-depth-batch3.cjs
       - name: Verify fourteen additional Level 2 legal analysis seminars
         run: node scripts/verify-level2-depth-batch4.cjs
+      - name: Verify fourteen new criminal civil and constitutional teaching seminars
+        run: node scripts/verify-level2-depth-batch5.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Upload 523-lesson academic review queue
