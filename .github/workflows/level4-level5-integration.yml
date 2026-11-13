@@ -49,6 +49,8 @@ jobs:
         run: node scripts/verify-level2-depth-batch6.cjs
       - name: Verify fourteen additional Level 2 teaching seminars in Batch 7
         run: node scripts/verify-level2-depth-batch7.cjs
+      - name: Verify twelve criminal and constitutional seminars in Level 2 Batch 8
+        run: node scripts/verify-level2-depth-batch8.cjs
       - name: Produce all five levels academic review inventory
         run: node scripts/audit-five-level-curriculum.cjs
       - name: Produce 34-course examination blueprint review register
