@@ -6,7 +6,7 @@ const portal=read('desktop-learning-portal.js');
 const workspace=read('desktop-legal-workspace.js');
 const base=read('desktop-approved-layout.css');
 const level=read('desktop-advanced-levels.css');
-for(const name of ['desktop-refinement.css','desktop-approved-layout.css','desktop-legal-workspace.js','desktop-learning-portal.css','desktop-learning-portal.js','desktop-advanced-levels.css','desktop-chapter-navigation.js','desktop-chapter-navigation.css','desktop-study-workspaces.js']){
+for(const name of ['desktop-refinement.css','desktop-approved-layout.css','desktop-legal-workspace.js','desktop-learning-portal.css','desktop-learning-portal.js','desktop-advanced-levels.css','desktop-chapter-navigation.js','desktop-chapter-navigation.css','desktop-study-workspaces.js','desktop-interior-pages.css','desktop-interior-pages.js']){
  assert.ok(index.includes('./'+name),name+' must load in HTML');
  assert.ok(fs.existsSync(name),name+' must exist');
 }
@@ -32,5 +32,11 @@ assert.match(outline,/law-chapter-outline/);
 assert.match(outline,/Previous lesson/);
 assert.match(outline,/Next lesson/);
 assert.doesNotMatch(scoped,/firebase\.firestore|updateDoc|setDoc/);
+const interior=read('desktop-interior-pages.js');
+assert.match(interior,/Case Studies/);
+assert.match(interior,/My Progress/);
+assert.match(interior,/Practice Exams|exams/);
+assert.match(interior,/renderCatalog/);
+assert.doesNotMatch(interior,/localStorage\.setItem|updateDoc|setDoc/);
 console.log('PASS: Desktop assets, responsive conditions, dynamic progress, isolated local workspace.');
 console.log('NOTE: This is source-level validation, not a browser screenshot or functional cloud test.');
