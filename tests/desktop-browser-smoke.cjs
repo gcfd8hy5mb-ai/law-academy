@@ -38,6 +38,20 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'Practice Exams');
     await menu.locator('[data-law-interior-nav="cases"]').click();
     assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'Case Studies & Writing');
+    const reasoningCards=page.locator('.law-interior-page [data-reason]');
+    const caseCards=page.locator('.law-interior-page [data-sim]');
+    const writingCards=page.locator('.law-interior-page [data-write]');
+    assert.ok(await reasoningCards.count()>0,'reasoning lab entries are present');
+    assert.ok(await caseCards.count()>0,'interactive case study entries are present');
+    assert.ok(await writingCards.count()>0,'writing assignments are present');
+    assert.equal(await reasoningCards.first().isVisible(),true,'reasoning labs are visible');
+    assert.equal(await caseCards.first().isVisible(),true,'case study cards are visible');
+    assert.equal(await writingCards.first().isVisible(),true,'writing assignment cards are visible');
+    await caseCards.first().click();
+    assert.equal(await page.locator('.pagehead h1').count()>0,true,'case simulation actually opens');
+    await menu.locator('[data-law-interior-nav="cases"]').click();
+    assert.equal(await page.locator('[data-sim]').first().isVisible(),true,'case cards restore after returning');
+
     await menu.locator('[data-law-interior-nav="progress"]').click();
     assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'My Progress');
     await menu.locator('[data-nav="home"]').click();
