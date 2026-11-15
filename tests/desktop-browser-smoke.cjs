@@ -25,6 +25,26 @@ const server=http.createServer((req,res)=>{
    const gallery=page.locator('.law-course-gallery');
    assert.equal(await gallery.count(),1,'course gallery exists @'+width);
    const n=await page.locator('.law-gallery-card').count();assert.ok(n>=1,'actual course cards @'+width);
+   assert.equal(await page.locator('#law-study-picker').count(),1,'workspace selector @'+width);
+   if(width===1440){
+    await page.locator('.law-gallery-card').first().click();
+    await page.locator('[data-lesson]').first().click();
+    assert.equal(await page.locator('.law-chapter-outline').count(),1,'lesson chapter outline');
+    const firstTitle=await page.locator('.law-reader-shell>h2').textContent();
+    await page.locator('[data-law-tab="notes"]').click();
+    await page.locator('#law-notes').fill('Desktop QA test: first lesson draft');
+    await page.locator('#law-save-notes').click();
+    await page.locator('.law-chapter-pager button').filter({hasText:'Next lesson'}).click();
+    const secondTitle=await page.locator('.law-reader-shell>h2').textContent();
+    assert.notEqual(firstTitle,secondTitle,'next lesson opens');
+    assert.equal(await page.locator('#law-notes').inputValue(),'','lesson-specific draft separation');
+    await page.locator('#law-notes').fill('Desktop QA test: second lesson draft');
+    await page.locator('#law-save-notes').click();
+    await page.locator('.law-chapter-pager button').filter({hasText:'Previous lesson'}).click();
+    assert.equal(await page.locator('#law-notes').inputValue(),'Desktop QA test: first lesson draft','original lesson notes restored');
+    assert.equal(await page.locator('#law-study-picker option').count()>=2,true,'saved lesson picker entries');
+    console.log('PASS: Lesson chapter navigation and separate saved research drafts');
+   }
    const out='artifacts/law-desktop-'+width+'.png';fs.mkdirSync('artifacts',{recursive:true});
    await page.screenshot({path:out,fullPage:true});
    await page.close();
