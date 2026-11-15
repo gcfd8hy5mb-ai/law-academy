@@ -1,0 +1,22 @@
+/* Desktop coverage for advanced-level course screens and legal writing labs */
+@media(min-width:960px){
+ .shell.app-shell .pagehead{padding:24px 30px;background:linear-gradient(105deg,#0c1d33,#182a40 76%,#322d27);border:1px solid #695a45;border-radius:12px;margin:0 0 22px}
+ .shell.app-shell .pagehead h1{color:#f0d5a3;letter-spacing:.012em}
+ .shell.app-shell .level-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .shell.app-shell .level-list .level-row{min-height:90px;padding:15px 17px}
+ .shell.app-shell .level-row .level-icon{background:#192b40;color:#f1ca84}
+ .shell.app-shell .review-item{background:linear-gradient(140deg,#122339,#0b172a);border:1px solid #746144;border-radius:12px}
+ .shell.app-shell .reading,.shell:not(.app-shell) .reading{overflow-wrap:break-word}
+ .shell.app-shell .writing-field,.shell:not(.app-shell) .writing-field{min-height:290px;resize:vertical}
+ .shell.app-shell .question,.shell:not(.app-shell) .question{background:#101f32;border-color:#756247}
+ .shell.app-shell .option:hover,.shell:not(.app-shell) .option:hover{border-color:#e0b977}
+ .shell.app-shell .gold-button:focus-visible,.law-gallery-card:focus-visible,.law-reader-tab:focus-visible,.law-work-tabs button:focus-visible{outline:3px solid #f6dba4;outline-offset:3px}
+ .shell.app-shell input,.shell.app-shell textarea,.shell.app-shell select{max-width:100%}
+ .shell.app-shell .level-row{overflow-wrap:anywhere}
+}
+@media(min-width:960px) and (max-width:1550px){
+ .shell.app-shell .level-list{grid-template-columns:minmax(0,1fr)}
+}
+@media(min-width:960px) and (max-width:1100px){
+ .shell.app-shell .pagehead{padding:20px}
+}
