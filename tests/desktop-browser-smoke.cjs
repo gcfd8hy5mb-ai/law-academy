@@ -26,6 +26,9 @@ const server=http.createServer((req,res)=>{
    assert.equal(await gallery.count(),1,'course gallery exists @'+width);
    const n=await page.locator('.law-gallery-card').count();assert.ok(n>=1,'actual course cards @'+width);
    assert.equal(await page.locator('#law-study-picker').count(),1,'workspace selector @'+width);
+   // This static fixture has no Firebase module endpoint. Dismiss only its local cloud-load notice
+   // so it cannot block clicks on the independent desktop study workspace.
+   await page.locator('#law-cloud-startup-warning').evaluateAll(els=>els.forEach(el=>el.remove()));
    if(width===1440){
     await page.locator('.law-gallery-card').first().click();
     await page.locator('[data-lesson]').first().click();
