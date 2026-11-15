@@ -47,6 +47,6 @@ function decorateLesson(shell){
   title.scrollIntoView({behavior:'smooth',block:'start'});
  });
 }
-function decorate(){if(!desktop())return;const shell=app.querySelector('.shell');if(!shell)return;const home=shell.querySelector('.court-hero');if(home)decorateHome(shell);else if(shell.querySelector('.reading'))decorateLesson(shell)}
+function decorate(){if(!desktop())return;const shell=app.querySelector('.shell');if(!shell)return;if(!app.querySelector('.bottom-nav')&&typeof nav==='function'&&typeof bindNav==='function'){app.insertAdjacentHTML('beforeend',nav(shell.querySelector('.reading')?'courses':'home'));bindNav()}const home=shell.querySelector('.court-hero');if(home)decorateHome(shell);else if(shell.querySelector('.reading'))decorateLesson(shell)}
 let busy=false;const obs=new MutationObserver(()=>{if(busy)return;busy=true;queueMicrotask(()=>{try{decorate()}finally{busy=false}})});obs.observe(app,{childList:true,subtree:false});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',decorate);else decorate();window.addEventListener('resize',decorate);
 })();
