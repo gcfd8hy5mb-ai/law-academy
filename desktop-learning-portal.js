@@ -31,6 +31,8 @@ function decorateLesson(shell){
  if(shell.querySelector('.law-reader-toolbar'))return;
  const reading=shell.querySelector('.reading');if(!reading)return;
  shell.classList.add('law-reader-shell');
+ const lessonHeading=shell.querySelector('h2')?.textContent?.trim()||'';
+ if(lessonHeading)window.dispatchEvent(new CustomEvent('lawacademy:lesson',{detail:{title:lessonHeading}}));
  const title=shell.querySelector('h2');if(!title)return;
  const toolbar=document.createElement('nav');toolbar.className='law-reader-toolbar';toolbar.setAttribute('aria-label','Lesson navigation');
  toolbar.innerHTML='<button type="button" class="law-reader-tab is-active" data-reader-target="lesson">Lesson</button><button type="button" class="law-reader-tab" data-reader-target="case">Case Materials</button><button type="button" class="law-reader-tab" data-reader-target="analysis">Analysis</button><button type="button" class="law-reader-tab" data-reader-target="check">Knowledge Check</button>';
