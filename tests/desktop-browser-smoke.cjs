@@ -30,6 +30,20 @@ const server=http.createServer((req,res)=>{
    // so it cannot block clicks on the independent desktop study workspace.
    await page.locator('#law-cloud-startup-warning').evaluateAll(els=>els.forEach(el=>el.remove()));
    if(width===1440){
+    const menu=page.locator('.bottom-nav');
+    await menu.locator('[data-nav="courses"]').click();
+    assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'Courses');
+    assert.equal(await page.locator('.law-interior-stats').count(),1,'actual course summary exists');
+    await page.locator('.law-interior-shortcuts [data-law-destination="exams"]').click();
+    assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'Practice Exams');
+    await menu.locator('[data-law-interior-nav="cases"]').click();
+    assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'Case Studies & Writing');
+    await menu.locator('[data-law-interior-nav="progress"]').click();
+    assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'My Progress');
+    await menu.locator('[data-nav="home"]').click();
+    console.log('PASS: Desktop courses, exams, cases and progress navigation');
+   }
+   if(width===1440){
     await page.locator('.law-gallery-card').first().click();
     await page.locator('[data-lesson]').first().click();
     assert.equal(await page.locator('.law-chapter-outline').count(),1,'lesson chapter outline');
