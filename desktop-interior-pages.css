@@ -47,3 +47,14 @@
  body.law-desk-enabled .law-interior-heading{padding:19px!important}
 }
 @media(max-width:959px){.law-interior-shortcuts,.law-interior-stats,.law-interior-kicker,.law-detail-bar,.law-detail-count{display:none!important}}
+
+/* BUGFIX: the homepage-only mockup rule in desktop-approved-v2.css hides every
+ * direct .level-list and .feature-card throughout the app. Explicitly restore
+ * real academic content on non-home interior routes. */
+@media(min-width:960px){
+ body.law-desk-enabled .law-interior-page>.level-list{display:grid!important;visibility:visible!important}
+ body.law-desk-enabled .law-interior-page>.feature-card{display:block!important;visibility:visible!important}
+ body.law-desk-enabled .law-interior-page>.case-home-link{display:block!important}
+ body.law-desk-enabled .law-interior-page>.future-levels{display:grid!important}
+ body.law-desk-enabled .law-interior-page>.section{display:flex!important}
+}
