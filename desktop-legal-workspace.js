@@ -24,8 +24,8 @@ function init(){
  $('law-save-brief').onclick=()=>{$('law-brief-status').textContent=save()?'Brief saved in this browser.':'Save unavailable; copy your work.'};
  $('law-save-notes').onclick=()=>{$('law-notes-status').textContent=save()?'Notes saved in this browser.':'Save unavailable; copy your work.'};
  function briefText(){return 'LAW ACADEMY — CASE BRIEF\n'+$('law-case-title').value+'\n\n'+fields.map(([k,n])=>n+'\n'+$('law-field-'+k).value).join('\n\n')+'\n\nEducational notes; verify authorities independently.'}
- $('law-copy-brief').onclick=()=>{navigator.clipboard?.writeText(briefText()).then(()=>{$('law-brief-status').textContent='Copied.'}).catch(()=>{$('law-brief-status').textContent='Copy unavailable; select text manually.'})};
- $('law-copy-notes').onclick=()=>{navigator.clipboard?.writeText($('law-notes').value).then(()=>{$('law-notes-status').textContent='Copied.'}).catch(()=>{$('law-notes-status').textContent='Copy unavailable.'})};
+ $('law-copy-brief').onclick=()=>{Promise.resolve(navigator.clipboard?.writeText?.(briefText())||Promise.reject(Error('Clipboard unavailable'))).then(()=>{$('law-brief-status').textContent='Copied.'}).catch(()=>{$('law-brief-status').textContent='Copy unavailable; select text manually.'})};
+ $('law-copy-notes').onclick=()=>{Promise.resolve(navigator.clipboard?.writeText?.($('law-notes').value)||Promise.reject(Error('Clipboard unavailable'))).then(()=>{$('law-notes-status').textContent='Copied.'}).catch(()=>{$('law-notes-status').textContent='Copy unavailable.'})};
  $('law-export-work').onclick=()=>{save();const blob=new Blob([briefText()+'\n\nPERSONAL NOTES\n'+$('law-notes').value],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='law-academy-workspace.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
  function open(){document.body.classList.add('law-desk-open');launch.setAttribute('aria-expanded','true');panel.querySelector('[data-law-tab="'+selected+'"]').focus()}
  function close(){document.body.classList.remove('law-desk-open');launch.setAttribute('aria-expanded','false');launch.focus()}
