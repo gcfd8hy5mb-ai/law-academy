@@ -1,0 +1,16 @@
+/* Academic reader chapter navigation and lesson-scoped legal study files */
+@media(min-width:960px){
+ body.law-desk-enabled .law-chapter-outline{clear:both;margin:10px 0 24px;padding:14px 15px;background:#0a182a;border:1px solid #67583e;border-radius:8px}
+ body.law-desk-enabled .law-chapter-outline>strong{display:block;font:16px Georgia,serif;color:#f0d18d;margin-bottom:10px}
+ body.law-desk-enabled .law-chapter-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:6px}
+ body.law-desk-enabled .law-chapter-links button{color:#e9dfcb;background:#142338;border:1px solid #435066;text-align:left;font:13px/1.4 Georgia,serif;padding:10px 11px;border-radius:5px;cursor:pointer}
+ body.law-desk-enabled .law-chapter-links button:hover{border-color:#e4c17b}
+ body.law-desk-enabled .law-chapter-pager{clear:both;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;padding:17px 0;border-top:1px solid #65583e}
+ body.law-desk-enabled .law-chapter-pager button{background:#18283b;border:1px solid #87704a;border-radius:7px;padding:10px;color:#efd7a3;font:13px Georgia,serif;cursor:pointer}
+ body.law-desk-enabled .law-study-switcher{margin:9px 0 14px;border-bottom:1px solid #66543a;padding-bottom:11px}
+ body.law-desk-enabled .law-study-switcher label{display:block;font:12px Georgia,serif;color:#e7c786;margin-bottom:6px}
+ body.law-desk-enabled .law-study-switcher select{width:100%;padding:9px 8px;background:#102239;color:#f6e9d2;border:1px solid #756346;border-radius:5px;font:12px Georgia,serif}
+ body.law-desk-enabled .law-legacy-work{border-top:1px solid #4b4b4e;margin-top:12px;padding-top:10px}
+ body.law-desk-enabled .law-legacy-work button{border:1px solid #7b6546;background:#182a3c;color:#efd4a3;padding:9px 10px;border-radius:5px;cursor:pointer;font:12px Georgia,serif}
+ body.law-desk-enabled .law-legacy-work p{font:11px/1.5 Georgia,serif;color:#bfc5cb}
+}
