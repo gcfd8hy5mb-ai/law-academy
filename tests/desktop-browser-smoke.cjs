@@ -30,6 +30,31 @@ const server=http.createServer((req,res)=>{
    // so it cannot block clicks on the independent desktop study workspace.
    await page.locator('#law-cloud-startup-warning').evaluateAll(els=>els.forEach(el=>el.remove()));
    if(width===1440){
+    // Five-level desktop navigation inspection uses an isolated browser profile.
+    const expected=[
+      ['Pre-Law Foundations','Courses'],
+      ['1L Core Curriculum','[data-l2course]'],
+      ['2L Coursework','[data-l3course]'],
+      ['3L Practice & Advocacy','[data-l4course]'],
+      ['Bar Exam Simulator','#barStartQ']
+    ];
+    for(let idx=0;idx<expected.length;idx++){
+      await page.locator('.bottom-nav [data-nav="courses"]').click();
+      if(idx>0)await page.locator('[data-planned="'+idx+'"]').click();
+      const [name,selector]=expected[idx];
+      assert.equal(await page.locator('.pagehead h1').textContent(),name,'academic level '+(idx+1)+' opens');
+      if(idx>0){
+        const count=await page.locator(selector).count();
+        assert.ok(count>0,'level '+(idx+1)+' authored content or practice control exists');
+        assert.equal(await page.locator(selector).first().isVisible(),true,'level '+(idx+1)+' content visible');
+      }
+      assert.equal(await page.locator('.law-desktop-workspace').isVisible(),true,'workspace remains visible at level '+(idx+1));
+      assert.equal(await page.locator('.bottom-nav').isVisible(),true,'navigation remains visible at level '+(idx+1));
+    }
+    await page.locator('.bottom-nav [data-nav="home"]').click();
+    console.log('PASS: Pre-Law, 1L, 2L, 3L and bar practice destinations load in desktop layout');
+   }
+   if(width===1440){
     const menu=page.locator('.bottom-nav');
     await menu.locator('[data-nav="courses"]').click();
     assert.equal(await page.locator('.law-interior-page .pagehead h1').textContent(),'Courses');
