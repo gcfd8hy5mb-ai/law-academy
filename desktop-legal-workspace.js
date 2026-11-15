@@ -17,6 +17,8 @@ function init(){
  '<div class="law-work-panel"><h3>Research reminders</h3><p>Check case citations, holdings, court jurisdiction and subsequent treatment against reliable primary sources.</p></div>';
  document.body.append(launch,panel);const $=id=>panel.querySelector('#'+id);
  const storage=()=>{try{return JSON.parse(localStorage.getItem(key)||'{}')}catch{return {}}};
+ const context=document.createElement('p');context.id='law-lesson-context';context.className='law-desk-only-notice';context.textContent='Case brief is independent of course grades and progress.';panel.querySelector('.law-work-head').insertAdjacentElement('afterend',context);
+ window.addEventListener('lawacademy:lesson',e=>{const name=String(e.detail?.title||'').trim();if(!name)return;context.textContent='Current reading: '+name;const title=$('law-case-title');if(!title.value.trim()){title.placeholder='Current reading: '+name;title.setAttribute('aria-description','Enter your own case title. Your saved brief will not be overwritten.')}});
  const data=storage();$('law-case-title').value=data.caseTitle||'';fields.forEach(([k])=>{$('law-field-'+k).value=data[k]||''});$('law-notes').value=data.notes||'';
  function save(){const obj={caseTitle:$('law-case-title').value,notes:$('law-notes').value};fields.forEach(([k])=>obj[k]=$('law-field-'+k).value);try{localStorage.setItem(key,JSON.stringify(obj));return true}catch{return false}}
  function show(tab){selected=tab;panel.querySelectorAll('[data-law-tab]').forEach(el=>{el.setAttribute('aria-selected',String(el.dataset.lawTab===tab))});panel.querySelectorAll('[data-law-section]').forEach(el=>{el.hidden=el.dataset.lawSection!==tab})}
