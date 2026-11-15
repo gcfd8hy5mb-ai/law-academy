@@ -1,0 +1,24 @@
+name: Law Academy desktop static checks
+on:
+  pull_request:
+    paths:
+      - 'desktop-*.css'
+      - 'desktop-*.js'
+      - 'index.html'
+      - 'tests/desktop-layout-smoke.cjs'
+      - '.github/workflows/desktop-layout.yml'
+  workflow_dispatch:
+jobs:
+  desktop-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check desktop JavaScript syntax
+        run: |
+          node --check desktop-legal-workspace.js
+          node --check desktop-learning-portal.js
+      - name: Verify desktop assets and isolation
+        run: node tests/desktop-layout-smoke.cjs

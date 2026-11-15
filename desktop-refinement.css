@@ -1,0 +1,36 @@
+/* Law Academy desktop refinement — isolated, additive; no change to learning records or mobile layout. */
+@media (min-width:960px) {
+  html {scroll-padding-top:24px}
+  body {overflow-x:hidden}
+  .shell.app-shell {min-width:0}
+  .app-shell .court-hero {box-shadow:0 16px 44px rgba(0,0,0,.22)}
+  .app-shell .quick-card,.app-shell .level-row,.app-shell .feature-card,.app-shell .current-level {
+    transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease;
+  }
+  .app-shell .quick-card:hover,.app-shell .level-row:hover {
+    border-color:#d7b879;box-shadow:0 8px 26px rgba(0,0,0,.24);
+  }
+  .bottom-nav {overflow-y:auto;overscroll-behavior:contain}
+  .bottom-nav .navitem {flex-shrink:0}
+  .bottom-nav .navitem:hover {background:#1c2e45;color:#f4ddae}
+  .bottom-nav .navitem.on {border:1px solid rgba(222,188,126,.4)}
+  .app-shell .progress-panel,.app-shell .current-level {max-width:100%}
+  .app-shell .reading,.shell:not(.app-shell) .reading {overflow-wrap:break-word}
+  .app-shell .card,.app-shell .level-row,.app-shell .review-item {min-width:0}
+  .app-shell button,.shell:not(.app-shell) button {cursor:pointer}
+  .app-shell .writing-field,.shell:not(.app-shell) .writing-field {width:100%;max-width:100%}
+}
+@media (min-width:960px) and (max-width:1100px) {
+  .shell.app-shell {width:calc(100% - 246px);margin-left:236px;margin-right:10px;padding:25px 18px 90px}
+  .app-shell .court-hero {padding:30px}
+  .app-shell .quick-grid {gap:8px}
+  .app-shell .quick-card {padding:12px 6px;min-height:105px}
+  .app-shell .quick-card small {font-size:12px}
+}
+@media (min-width:1500px) {
+  .shell.app-shell {max-width:1460px}
+  .app-shell .reading,.shell:not(.app-shell) .reading {max-width:90ch}
+}
+@media (prefers-reduced-motion:reduce) {
+  .app-shell .quick-card,.app-shell .level-row,.app-shell .feature-card,.app-shell .current-level {transition:none}
+}

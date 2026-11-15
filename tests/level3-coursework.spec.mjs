@@ -1,5 +1,9 @@
 import {test,expect} from '@playwright/test';
 
+// The authored Evidence course currently begins with L3-1-2; L3-1-1 is third.
+// Keep test storage identifiers aligned with the actual lesson opened by data-l3lesson=0.
+
+
 test('Level 3 exposes seven courses and integrated capstone with persistent sections',async({page})=>{
  await page.goto('/');
  await page.evaluate(()=>renderLevel3());
@@ -157,7 +161,7 @@ test('Level 3 exports all saved lesson and capstone writing for device backup',a
 test('Level 3 restores a portable backup without overwriting existing writing',async({page})=>{
  await page.goto('/');
  await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
- const payload=JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-1':'Restored lesson analysis','L3-CAP-0':'Restored capstone answer'}});
+ const payload=JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-2':'Restored lesson analysis','L3-CAP-0':'Restored capstone answer'}});
  await page.locator('#l3restoreInput').fill(payload);
  await page.locator('#l3restore').click();
  await expect(page.locator('#l3restoreStatus')).toContainText('2 missing drafts restored');
@@ -185,7 +189,7 @@ test('Level 3 refuses unknown identifiers in transferred backups',async({page})=
 test('Level 3 restore does not change in-memory drafts when browser storage fails',async({page})=>{
  await page.goto('/');
  await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
- await page.locator('#l3restoreInput').fill(JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-1':'Unsaved incoming writing'}}));
+ await page.locator('#l3restoreInput').fill(JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-2':'Unsaved incoming writing'}}));
  await page.evaluate(()=>{const set=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k==='law-academy-level3-v1')throw new Error('Quota exceeded');return set.call(this,k,v)}});
  await page.locator('#l3restore').click();
  await expect(page.locator('#l3restoreStatus')).toContainText('Nothing was changed');
@@ -197,12 +201,12 @@ test('Level 3 restore does not change in-memory drafts when browser storage fail
 test('Backup restoration preserves writing saved by another tab after this view loaded',async({page})=>{
  await page.goto('/');
  await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
- await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Fresh writing from another tab'}})));
- await page.locator('#l3restoreInput').fill(JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-1':'Older backup text','L3-CAP-0':'Incoming capstone analysis'}}));
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-2':{draft:'Fresh writing from another tab'}})));
+ await page.locator('#l3restoreInput').fill(JSON.stringify({format:'law-academy-level3-drafts',version:1,drafts:{'L3-1-2':'Older backup text','L3-CAP-0':'Incoming capstone analysis'}}));
  await page.locator('#l3restore').click();
  await expect(page.locator('#l3restoreStatus')).toContainText('1 missing drafts restored');
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
- expect(saved['L3-1-1'].draft).toBe('Fresh writing from another tab');
+ expect(saved['L3-1-2'].draft).toBe('Fresh writing from another tab');
  expect(saved['L3-CAP-0'].draft).toBe('Incoming capstone analysis');
 });
 
@@ -215,7 +219,7 @@ test('Saving one lesson preserves a different lesson updated in another tab',asy
  await page.locator('#l3draft').fill('My current lesson answer');
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
  expect(saved['L3-2-1'].draft).toBe('Another tab already saved this');
- expect(saved['L3-1-1'].draft).toBe('My current lesson answer');
+ expect(saved['L3-1-2'].draft).toBe('My current lesson answer');
 });
 
 test('Stale lesson editing does not replace newer saved writing',async({page})=>{
@@ -223,12 +227,12 @@ test('Stale lesson editing does not replace newer saved writing',async({page})=>
  await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
  await page.locator('[data-l3course="0"]').click();
  await page.locator('[data-l3lesson="0"]').click();
- await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Newer writing from another tab'}})));
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-2':{draft:'Newer writing from another tab'}})));
  await page.locator('#l3draft').fill('Stale edit from this tab');
  await expect(page.locator('#l3status')).toContainText('changed in another tab');
  await page.locator('#l3back').click();
  const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
- expect(stored['L3-1-1'].draft).toBe('Newer writing from another tab');
+ expect(stored['L3-1-2'].draft).toBe('Newer writing from another tab');
 });
 test('Stale capstone editing does not replace newer saved section',async({page})=>{
  await page.goto('/');
@@ -246,12 +250,12 @@ test('Level 3 quiz completion does not overwrite a newer draft in the same lesso
  await page.evaluate(()=>{localStorage.removeItem('law-academy-level3-v1');renderLevel3()});
  await page.locator('[data-l3course="0"]').click();
  await page.locator('[data-l3lesson="0"]').click();
- await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-1':{draft:'Newer draft in another tab'}})));
+ await page.evaluate(()=>localStorage.setItem('law-academy-level3-v1',JSON.stringify({'L3-1-2':{draft:'Newer draft in another tab'}})));
  await page.locator('input[name="l3choice"]').first().check();
  await page.locator('#l3check').click();
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
- expect(saved['L3-1-1'].draft).toBe('Newer draft in another tab');
- expect(typeof saved['L3-1-1'].correct).toBe('boolean');
+ expect(saved['L3-1-2'].draft).toBe('Newer draft in another tab');
+ expect(typeof saved['L3-1-2'].correct).toBe('boolean');
 });
 test('Level 3 saves only changed fields rather than replacing another tab progress',async({page})=>{
  await page.goto('/');
@@ -262,7 +266,7 @@ test('Level 3 saves only changed fields rather than replacing another tab progre
  await page.locator('#l3draft').fill('New answer in this course');
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
  expect(saved['L3-2-1']).toEqual({draft:'Recently edited other course',correct:true});
- expect(saved['L3-1-1'].draft).toBe('New answer in this course');
+ expect(saved['L3-1-2'].draft).toBe('New answer in this course');
 });
 
 test('Level 3 lesson retries writing after a temporary storage failure without false conflict',async({page})=>{
@@ -281,7 +285,7 @@ test('Level 3 lesson retries writing after a temporary storage failure without f
  await page.locator('#l3draft').fill('Second attempt after recovery');
  await expect(page.locator('#l3status')).toContainText('Draft saved on this device');
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('law-academy-level3-v1')));
- expect(saved['L3-1-1'].draft).toBe('Second attempt after recovery');
+ expect(saved['L3-1-2'].draft).toBe('Second attempt after recovery');
 });
 test('Capstone retries saving after temporary storage failure without false tab conflict',async({page})=>{
  await page.goto('/');

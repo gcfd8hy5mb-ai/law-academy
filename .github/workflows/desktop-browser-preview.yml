@@ -1,0 +1,32 @@
+name: Law Academy desktop browser screenshots
+on:
+  pull_request:
+    paths:
+      - 'desktop-*.css'
+      - 'desktop-*.js'
+      - 'index.html'
+      - 'tests/desktop-browser-smoke.cjs'
+      - '.github/workflows/desktop-browser-preview.yml'
+  workflow_dispatch:
+jobs:
+  desktop-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated browser test dependency
+        run: npm install --no-save --no-package-lock playwright@1.58.2
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run desktop layout browser acceptance
+        run: node tests/desktop-browser-smoke.cjs
+      - name: Upload visual screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: law-academy-desktop-reference-comparison
+          path: artifacts/law-desktop-*.png
+          if-no-files-found: ignore

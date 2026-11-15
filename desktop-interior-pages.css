@@ -1,0 +1,60 @@
+/* Law Academy approved desktop interior design — consistency with book reader and photo portal */
+@media(min-width:960px){
+ body.law-desk-enabled .law-interior-page .law-interior-heading{position:relative!important;overflow:hidden!important;padding:25px 27px!important;min-height:155px;border:1px solid #846c49!important;border-radius:9px!important;margin:0 0 13px!important;background:linear-gradient(90deg,#0d1d31 0%,rgba(13,28,46,.94) 62%,rgba(21,31,42,.58) 100%),url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Exterior_of_Supreme_Court_Building_20240601.jpg") center 40%/cover no-repeat!important;box-shadow:inset 0 0 25px #0005,0 9px 25px #0004}
+ body.law-desk-enabled .law-interior-kicker{font:10px/1.3 Georgia,serif;letter-spacing:.17em;color:#e7bd78;margin-bottom:6px}
+ body.law-desk-enabled .law-interior-heading h1{font:normal clamp(27px,2.5vw,37px)/1.13 Georgia,serif!important;color:#eed8af!important;margin:4px 0 10px!important;max-width:650px}
+ body.law-desk-enabled .law-interior-heading p{font:14px/1.5 Georgia,serif!important;color:#e2ddd4!important;max-width:570px;margin:5px 0!important}
+ body.law-desk-enabled .law-interior-heading .gold-label{display:none}
+ body.law-desk-enabled .law-interior-shortcuts{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 19px;border-bottom:1px solid #6b5940;padding:0 0 12px}
+ body.law-desk-enabled .law-interior-shortcuts button{background:#102033;border:1px solid #67553c;border-radius:5px;color:#e4d5b7;padding:8px 10px;font:12px Georgia,serif;cursor:pointer}
+ body.law-desk-enabled .law-interior-shortcuts button:hover{background:#1c334b;border-color:#e3c07d}
+ body.law-desk-enabled .law-interior-shortcuts button.is-current{background:#4b3e2d;border-color:#d9ac63;color:#ffdf9e}
+ body.law-desk-enabled .law-interior-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:0 0 12px}
+ body.law-desk-enabled .law-interior-stat{display:flex;flex-direction:column;gap:8px;padding:14px;background:linear-gradient(150deg,#11263b,#0c182a);border:1px solid #6c593e;border-radius:8px;min-height:85px}
+ body.law-desk-enabled .law-interior-stat span{font:11px Georgia,serif;color:#c7c6c3}
+ body.law-desk-enabled .law-interior-stat strong{font:normal 24px Georgia,serif;color:#edc77f;line-height:1}
+ body.law-desk-enabled .law-interior-page>.section{margin:24px 0 10px!important}
+ body.law-desk-enabled .law-interior-page .section h3{font:normal 21px Georgia,serif!important;letter-spacing:.02em;color:#edc985!important}
+ body.law-desk-enabled .law-interior-page .level-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ body.law-desk-enabled .law-interior-page .level-row,body.law-desk-enabled .law-interior-page .future-item{background:linear-gradient(145deg,#15273a,#0a1524)!important;border:1px solid #62533e!important;border-radius:7px!important;box-shadow:0 4px 12px #0003;color:#f1e4d0}
+ body.law-desk-enabled .law-interior-page .level-row{min-height:88px;padding:12px;transition:border-color .15s,transform .15s}
+ body.law-desk-enabled .law-interior-page .level-row:hover{border-color:#e1b976!important;transform:translateY(-1px)}
+ body.law-desk-enabled .law-interior-page .level-text strong{font:normal 17px/1.2 Georgia,serif!important;color:#ead8b8!important}
+ body.law-desk-enabled .law-interior-page .level-text small{font:12px/1.45 Georgia,serif!important;color:#bfc6c9!important}
+ body.law-desk-enabled .law-interior-page .level-icon{border-color:#806946!important;background:linear-gradient(135deg,#393122,#0d1929)!important;color:#efca82!important}
+ body.law-desk-enabled .law-interior-page .review-item{background:linear-gradient(145deg,#122336,#0a1828)!important;border:1px solid #65543b!important;border-radius:8px!important;margin:12px 0}
+ body.law-desk-enabled .law-interior-page .review-item h3{font:normal 21px Georgia,serif!important;color:#e9c783!important}
+ body.law-desk-enabled .law-interior-page .current-level{background:linear-gradient(120deg,#15283c,#0b1726)!important;border-color:#806545!important}
+ body.law-desk-enabled .law-interior-page .future-levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ body.law-desk-enabled .law-interior-page .future-item summary{min-height:85px}
+ body.law-desk-enabled .law-interior-page .feature-card{background:linear-gradient(115deg,#162a3c,#0b1727)!important;border-color:#896947!important;min-height:0!important;padding:23px!important}
+ body.law-desk-enabled .law-interior-page .feature-card h2{font:normal 26px Georgia,serif!important}
+ body.law-desk-enabled .law-interior-page .lesson{display:block;width:100%;text-align:left;min-height:94px;background:linear-gradient(135deg,#15283a,#0b1829)!important;border:1px solid #67583f!important;border-radius:7px!important;margin:9px 0!important;padding:18px!important}
+ body.law-desk-enabled .law-interior-page .lesson:hover{border-color:#e0ba77!important}
+ body.law-desk-enabled .law-interior-page .lesson strong{font:normal 18px Georgia,serif;color:#f3d9ab}
+ body.law-desk-enabled .law-interior-page .lesson small{font:12px Georgia,serif}
+ body.law-desk-enabled .law-detail-bar{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #6e5e46;padding:10px 0;font:11px Georgia,serif;letter-spacing:.06em;color:#e2bd79}
+ body.law-desk-enabled .law-detail-count{font:14px Georgia,serif;color:#c7d2d7;margin:20px 0 13px}
+ body.law-desk-enabled .law-interior-nav:focus-visible,body.law-desk-enabled .law-interior-shortcuts button:focus-visible{outline:2px solid #eed092;outline-offset:2px}
+}
+@media(min-width:960px) and (max-width:1600px){
+ body.law-desk-enabled .law-interior-page .level-list,body.law-desk-enabled .law-interior-page .future-levels{grid-template-columns:minmax(0,1fr)}
+}
+@media(min-width:960px) and (max-width:1200px){
+ body.law-desk-enabled .law-interior-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+ body.law-desk-enabled .law-interior-stat{padding:9px;min-height:75px}
+ body.law-desk-enabled .law-interior-stat strong{font-size:19px}
+ body.law-desk-enabled .law-interior-heading{padding:19px!important}
+}
+@media(max-width:959px){.law-interior-shortcuts,.law-interior-stats,.law-interior-kicker,.law-detail-bar,.law-detail-count{display:none!important}}
+
+/* BUGFIX: the homepage-only mockup rule in desktop-approved-v2.css hides every
+ * direct .level-list and .feature-card throughout the app. Explicitly restore
+ * real academic content on non-home interior routes. */
+@media(min-width:960px){
+ body.law-desk-enabled .law-interior-page>.level-list{display:grid!important;visibility:visible!important}
+ body.law-desk-enabled .law-interior-page>.feature-card{display:block!important;visibility:visible!important}
+ body.law-desk-enabled .law-interior-page>.case-home-link{display:block!important}
+ body.law-desk-enabled .law-interior-page>.future-levels{display:grid!important}
+ body.law-desk-enabled .law-interior-page>.section{display:flex!important}
+}

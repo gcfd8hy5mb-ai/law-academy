@@ -1,0 +1,109 @@
+/* Approved visual design: photographic legal imagery, sidebar wordmark, and photographic course tiles.
+  Assets sourced from Wikimedia Commons. Credits in DESKTOP-IMAGE-CREDITS.md. */
+@media(min-width:1180px) {
+ body.law-desk-enabled .bottom-nav{
+   width:205px!important;
+   padding:175px 10px 250px!important;
+   overflow-x:hidden!important;
+   scrollbar-width:thin;
+   background:#081526!important;
+ }
+ body.law-desk-enabled .bottom-nav::before{
+   content:none!important;display:none!important;
+ }
+ body.law-desk-enabled .bottom-nav .law-sidebar-brand{
+   position:absolute;top:14px;left:8px;right:8px;
+   display:flex;flex-direction:column;align-items:center;gap:0;
+   width:auto;min-height:151px;text-align:center;white-space:normal;
+   color:#f0d49b;pointer-events:none;
+ }
+ .law-sidebar-brand .law-sidebar-emblem{
+   font:40px/1 Georgia,serif;color:#e3ba70;letter-spacing:0;margin:0 0 7px;
+ }
+ .law-sidebar-brand .law-sidebar-name{
+   font:normal 23px/.96 Georgia,serif;letter-spacing:1.1px;color:#f6e4c1;
+   overflow-wrap:normal;word-break:normal;max-width:100%;
+ }
+ .law-sidebar-brand .law-sidebar-rule{
+   height:1px;background:linear-gradient(90deg,transparent,#d7aa65,transparent);
+   width:92%;margin:10px auto 8px;
+ }
+ .law-sidebar-brand .law-sidebar-subtitle{
+   font:normal 9px/1.35 Georgia,serif;letter-spacing:.075em;
+   color:#e4bf81;max-width:178px;margin:0 auto;white-space:normal;
+   overflow-wrap:normal;word-break:normal;
+ }
+ body.law-desk-enabled .bottom-nav::after{
+   content:"";pointer-events:none;position:absolute;
+   bottom:0;left:0;right:0;height:230px;
+   background:
+      linear-gradient(0deg,rgba(6,14,26,.48),rgba(5,13,24,.13) 45%,#081526 100%),
+      url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Exterior_of_Supreme_Court_Building_20240601.jpg") center 44%/cover no-repeat;
+   border-top:1px solid #3c372e;z-index:0;
+ }
+ body.law-desk-enabled .bottom-nav .navitem{position:relative;z-index:1}
+ body.law-desk-enabled .shell.app-shell,
+ body.law-desk-enabled .shell:not(.app-shell){
+   width:calc(100% - 552px)!important;
+   margin-left:210px!important;
+   margin-right:342px!important;
+ }
+ body.law-desk-enabled .law-desktop-workspace{width:337px!important}
+ body.law-desk-enabled #law-cloud-launch{right:349px!important}
+ body.law-desk-enabled .app-shell .court-hero{
+   background:
+      linear-gradient(90deg,#0b182c 0%,rgba(10,24,43,.98) 35%,rgba(9,22,38,.72) 58%,rgba(8,18,29,.13) 100%),
+      url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Exterior_of_Supreme_Court_Building_20240601.jpg") center 47%/cover no-repeat!important;
+   border-color:#756349!important;
+ }
+ body.law-desk-enabled .app-shell .court-hero::after{display:none!important}
+ body.law-desk-enabled .law-gallery-art{
+   position:relative;isolation:isolate;
+   color:rgba(243,219,169,.0)!important;
+   font-size:0!important;
+   background-position:center!important;background-size:cover!important;
+ }
+ body.law-desk-enabled .law-gallery-art:after{
+   content:"";position:absolute;inset:0;z-index:-1;
+   background:linear-gradient(0deg,rgba(4,13,25,.80),rgba(6,16,28,.02) 85%);
+ }
+ body.law-desk-enabled .law-gallery-card .law-art-0{
+   background-image:url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Exterior_of_Supreme_Court_Building_20240601.jpg")!important;
+ }
+ body.law-desk-enabled .law-gallery-card .law-art-1{
+   background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Gavel_2016-05-25.jpg?width=700")!important;
+ }
+ body.law-desk-enabled .law-gallery-card .law-art-2{
+   background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Justice_scale_and_flag.jpg?width=700")!important;
+ }
+ body.law-desk-enabled .law-gallery-card .law-art-3{
+   background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Ghalib_Chamber_Law_Library.jpg?width=700")!important;
+ }
+ body.law-desk-enabled .law-gallery-card .law-art-4{
+   background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Wooden_gavel_20170417.jpg?width=700")!important;
+ }
+ body.law-desk-enabled .law-gallery-card .law-art-5{
+   background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Law_Book_shelf_at_the_Ghalib_Chamber_Library.jpg?width=700")!important;
+ }
+ body.law-desk-enabled .law-gallery-card{
+   background:linear-gradient(145deg,#0d1b2e,#0b1524)!important;
+   box-shadow:inset 0 1px #ffffff0e,0 4px 12px #0005;
+ }
+ body.law-desk-enabled .law-gallery-card:hover{
+   transform:translateY(-2px);
+   border-color:#e7bc76!important;
+   box-shadow:0 7px 18px #0008;
+ }
+ body.law-desk-enabled .law-sidebar-brand{z-index:1}
+}
+@media(min-width:960px) and (max-width:1179px){
+ body.law-desk-enabled .bottom-nav:before{content:"⚖ LAW ACADEMY"!important;white-space:normal!important;font:17px/1.15 Georgia,serif!important;left:10px!important;right:10px!important;top:28px!important;text-align:center!important;}
+ body.law-desk-enabled .bottom-nav .law-sidebar-brand{display:none}
+ body.law-desk-enabled .law-gallery-art{background-size:cover!important;background-position:center!important;font-size:0!important}
+ body.law-desk-enabled .law-gallery-card .law-art-0{background-image:url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Exterior_of_Supreme_Court_Building_20240601.jpg")!important}
+ body.law-desk-enabled .law-gallery-card .law-art-1{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Gavel_2016-05-25.jpg?width=700")!important}
+ body.law-desk-enabled .law-gallery-card .law-art-2{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Justice_scale_and_flag.jpg?width=700")!important}
+ body.law-desk-enabled .law-gallery-card .law-art-3{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Ghalib_Chamber_Law_Library.jpg?width=700")!important}
+ body.law-desk-enabled .law-gallery-card .law-art-4{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Wooden_gavel_20170417.jpg?width=700")!important}
+ body.law-desk-enabled .law-gallery-card .law-art-5{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Law_Book_shelf_at_the_Ghalib_Chamber_Library.jpg?width=700")!important}
+}
