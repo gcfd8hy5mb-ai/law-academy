@@ -40,7 +40,7 @@ const server=http.createServer((req,res)=>{
     ];
     for(let idx=0;idx<expected.length;idx++){
       await page.locator('.bottom-nav [data-nav="courses"]').click();
-      if(idx>0)await page.locator('[data-planned="'+idx+'"]').click();
+      if(idx>0){await page.locator(".future-item").nth(idx-1).locator("summary").click();await page.locator('[data-planned="'+idx+'"]').click()}
       const [name,selector]=expected[idx];
       assert.equal(await page.locator('.pagehead h1').textContent(),name,'academic level '+(idx+1)+' opens');
       if(idx>0){
