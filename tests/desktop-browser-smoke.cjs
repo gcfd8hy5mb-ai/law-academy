@@ -32,7 +32,7 @@ const server=http.createServer((req,res)=>{
    if(width===1440){
     // Five-level desktop navigation inspection uses an isolated browser profile.
     const expected=[
-      ['Pre-Law Foundations','Courses'],
+      ['Courses','.level-row[data-course]'],
       ['1L Core Curriculum','[data-l2course]'],
       ['2L Coursework','[data-l3course]'],
       ['3L Practice & Advocacy','[data-l4course]'],
