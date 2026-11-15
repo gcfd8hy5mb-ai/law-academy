@@ -32,7 +32,7 @@ function decorateLesson(shell){
  const reading=shell.querySelector('.reading');if(!reading)return;
  shell.classList.add('law-reader-shell');
  const lessonHeading=shell.querySelector('h2')?.textContent?.trim()||'';
- if(lessonHeading)window.dispatchEvent(new CustomEvent('lawacademy:lesson',{detail:{title:lessonHeading}}));
+ if(lessonHeading){const id=typeof active!=='undefined'&&active?.id?String(active.id):'';const course=typeof COURSES!=='undefined'&&Array.isArray(COURSES)?COURSES.find(c=>c.lessons?.some(l=>l.id===id)):null;window.dispatchEvent(new CustomEvent('lawacademy:lesson',{detail:{id,title:lessonHeading,course:course?.title||''}}))}
  const title=shell.querySelector('h2');if(!title)return;
  const toolbar=document.createElement('nav');toolbar.className='law-reader-toolbar';toolbar.setAttribute('aria-label','Lesson navigation');
  toolbar.innerHTML='<button type="button" class="law-reader-tab is-active" data-reader-target="lesson">Lesson</button><button type="button" class="law-reader-tab" data-reader-target="case">Case Materials</button><button type="button" class="law-reader-tab" data-reader-target="analysis">Analysis</button><button type="button" class="law-reader-tab" data-reader-target="check">Knowledge Check</button>';
